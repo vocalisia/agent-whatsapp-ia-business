@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { resend, TO_EMAIL } from "@/lib/resend";
+import { getResend, TO_EMAIL } from "@/lib/resend";
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
@@ -10,6 +10,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    const resend = getResend();
     await resend.emails.send({
       from: "WhatsAgentIA <noreply@resend.dev>",
       to: TO_EMAIL,
