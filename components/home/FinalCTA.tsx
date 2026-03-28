@@ -31,7 +31,7 @@ export default function FinalCTA() {
 
           <h2
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            style={{ fontFamily: "Onest, sans-serif" }}
           >
             Arrêtez de perdre
             <br />

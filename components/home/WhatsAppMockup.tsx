@@ -55,8 +55,42 @@ function MessageBubble({ msg }: { msg: Message }) {
             <Camera size={14} className="text-wa" />
             <span className="text-xs text-wa font-medium">Photo envoyée</span>
           </div>
-          <div className="w-48 h-28 bg-surface-3 rounded-lg flex items-center justify-center mb-2">
-            <Camera size={24} className="text-slate-500" />
+          {/* Specimen ID card */}
+          <div className="w-48 h-28 rounded-lg overflow-hidden mb-2 relative">
+            <svg viewBox="0 0 192 112" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+              {/* Card background */}
+              <rect width="192" height="112" fill="#1a2744" rx="4" />
+              {/* Top stripe */}
+              <rect y="0" width="192" height="22" fill="#0f3460" />
+              {/* Flag stripe FR */}
+              <rect x="8" y="5" width="5" height="12" fill="#002395" />
+              <rect x="13" y="5" width="5" height="12" fill="#f0f0f0" />
+              <rect x="18" y="5" width="5" height="12" fill="#ED2939" />
+              {/* Title */}
+              <text x="30" y="15" fontSize="7" fill="#c8d8f0" fontFamily="monospace" fontWeight="bold">CARTE NATIONALE D'IDENTITÉ</text>
+              <text x="155" y="15" fontSize="6" fill="#c8d8f0" fontFamily="monospace">FRANCE</text>
+              {/* Photo placeholder */}
+              <rect x="8" y="28" width="36" height="44" fill="#0d2035" rx="2" />
+              <rect x="12" y="32" width="28" height="20" fill="#1e3a5f" rx="10" />
+              <ellipse cx="26" cy="42" rx="8" ry="9" fill="#2a4a6f" />
+              <rect x="14" y="56" width="24" height="16" fill="#2a4a6f" rx="2" />
+              {/* Fields */}
+              <text x="52" y="35" fontSize="5" fill="#8ba8c8" fontFamily="monospace">NOM</text>
+              <text x="52" y="42" fontSize="6.5" fill="#e0eaf8" fontFamily="monospace" fontWeight="bold">DUPONT</text>
+              <text x="52" y="52" fontSize="5" fill="#8ba8c8" fontFamily="monospace">PRÉNOM(S)</text>
+              <text x="52" y="59" fontSize="6.5" fill="#e0eaf8" fontFamily="monospace" fontWeight="bold">MARIE ANNE</text>
+              <text x="52" y="68" fontSize="5" fill="#8ba8c8" fontFamily="monospace">DATE DE NAISSANCE</text>
+              <text x="52" y="75" fontSize="6" fill="#e0eaf8" fontFamily="monospace">12.04.1990</text>
+              {/* Expiry */}
+              <text x="130" y="52" fontSize="5" fill="#8ba8c8" fontFamily="monospace">EXPIRATION</text>
+              <text x="130" y="60" fontSize="6" fill="#25D366" fontFamily="monospace" fontWeight="bold">2028</text>
+              {/* MRZ zone */}
+              <rect x="0" y="78" width="192" height="34" fill="#0a1a2e" />
+              <text x="8" y="90" fontSize="5.5" fill="#4a6a8a" fontFamily="monospace" letterSpacing="1">IDFRADUPONT&lt;&lt;&lt;MARIE&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</text>
+              <text x="8" y="101" fontSize="5.5" fill="#4a6a8a" fontFamily="monospace" letterSpacing="1">9004121F2804120FRA&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;14</text>
+              {/* SPECIMEN watermark */}
+              <text x="96" y="66" fontSize="16" fill="rgba(255,80,80,0.22)" fontFamily="monospace" fontWeight="bold" textAnchor="middle" transform="rotate(-20, 96, 55)">SPÉCIMEN</text>
+            </svg>
           </div>
           <span className="text-xs text-slate-400">{msg.text}</span>
           <div className="flex justify-end mt-1">
@@ -181,7 +215,7 @@ export default function WhatsAppMockup() {
             AI
           </div>
           <div className="flex-1">
-            <div className="text-xs font-semibold text-white" style={{ fontFamily: "Syne, sans-serif" }}>WhatsAgent IA</div>
+            <div className="text-xs font-semibold text-white" style={{ fontFamily: "Onest, sans-serif" }}>WhatsAgent IA</div>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 bg-wa rounded-full animate-pulse-wa" />
               <span className="text-[10px] text-wa">en ligne</span>

@@ -104,7 +104,7 @@ export default function FeaturesGrid() {
                 <f.icon size={22} style={{ color: f.color }} />
               </div>
 
-              <h3 className="font-bold text-white text-lg mb-0.5 relative" style={{ fontFamily: "Syne, sans-serif" }}>
+              <h3 className="font-bold text-white text-lg mb-0.5 relative" style={{ fontFamily: "Onest, sans-serif" }}>
                 {f.title}
               </h3>
               <p className="text-xs font-medium text-wa mb-3 relative">{f.subtitle}</p>

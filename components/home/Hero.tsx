@@ -47,7 +47,7 @@ export default function Hero() {
 
           <h1
             className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] mb-6 tracking-tight"
-            style={{ fontFamily: "Syne, sans-serif" }}
+            style={{ fontFamily: "Onest, sans-serif" }}
           >
             L&apos;agent IA
             <br />

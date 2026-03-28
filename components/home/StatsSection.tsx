@@ -60,7 +60,7 @@ export default function StatsSection() {
             >
               <div
                 className="text-4xl lg:text-5xl font-extrabold text-wa mb-2"
-                style={{ fontFamily: "Syne, sans-serif" }}
+                style={{ fontFamily: "Onest, sans-serif" }}
               >
                 {s.isText ? (
                   "24/7"
