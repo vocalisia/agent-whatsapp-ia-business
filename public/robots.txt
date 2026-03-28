@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://whatsapp-agent-ia.vercel.app/sitemap.xml
