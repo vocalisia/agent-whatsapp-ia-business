@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/mdx";
 
-const BASE_URL = "https://whatsapp-agent-ia.vercel.app";
+const BASE_URL = "https://agentic-whatsup.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogSlugs = getAllSlugs();
