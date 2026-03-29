@@ -122,12 +122,12 @@ export default function TarifsPage() {
       {/* Booking section */}
       <div id="rdv" className="mb-20">
         <div className="text-center mb-10">
-          <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">Diagnostic gratuit</span>
+          <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">Session stratégique</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3" style={{ fontFamily: "Onest, sans-serif" }}>
-            Audit WhatsApp gratuit — 30 minutes
+            Session Stratégique — Votre Agent IA WhatsApp
           </h2>
-          <p className="text-slate-400 max-w-xl mx-auto">
-            On analyse vos besoins, on vous présente une audit live, et on vous envoie une proposition sous 48h.
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            30 minutes pour analyser vos flux, identifier les automatisations possibles et définir votre stratégie. Diagnostic offert, sans engagement.
           </p>
         </div>
         <CalEmbed />
