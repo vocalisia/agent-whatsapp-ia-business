@@ -50,15 +50,13 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          <a
-            href={`https://wa.me/${waNumber}`}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
             className="flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
           >
             <MessageCircle size={16} />
             Audit gratuit
-          </a>
+          </Link>
         </div>
         <MobileNav />
       </div>
