@@ -6,7 +6,7 @@ import Footer from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: {
     default: "Agent IA WhatsApp | Automatisez vos messages clients 24/7",
-    template: "%s | WhatsAgentIA",
+    template: "%s | AgenticWhatsup",
   },
   description:
     "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    siteName: "WhatsAgentIA",
+    siteName: "AgenticWhatsup",
   },
   twitter: {
     card: "summary_large_image",

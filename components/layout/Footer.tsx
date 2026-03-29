@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 font-bold text-lg mb-3">
             <MessageCircle className="text-wa" size={20} />
             <span>
-              WhatsAgent<span className="text-wa">IA</span>
+              Agentic<span className="text-wa">Whatsup</span>
             </span>
           </div>
           <p className="text-slate-400 text-sm">
@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-surface-2 py-4 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} WhatsAgentIA. Tous droits réservés.
+        © {new Date().getFullYear()} AgenticWhatsup. Tous droits réservés.
       </div>
       {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-bg border-t border-surface flex">

@@ -215,7 +215,7 @@ export default function WhatsAppMockup() {
             AI
           </div>
           <div className="flex-1">
-            <div className="text-xs font-semibold text-white" style={{ fontFamily: "Onest, sans-serif" }}>WhatsAgent IA</div>
+            <div className="text-xs font-semibold text-white" style={{ fontFamily: "Onest, sans-serif" }}>AgenticWhatsup</div>
             <div className="flex items-center gap-1">
               <div className="w-1.5 h-1.5 bg-wa rounded-full animate-pulse-wa" />
               <span className="text-[10px] text-wa">en ligne</span>
