@@ -6,6 +6,7 @@ import {
   ChevronRight, Star, AlertCircle, Zap, Shield, Users
 } from "lucide-react";
 import VSLPlayer from "@/components/shared/VSLPlayer";
+import IClosedConfirm from "@/components/shared/IClosedConfirm";
 
 const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER ?? "33600000000";
 
@@ -107,6 +108,9 @@ export default function ConfirmationPage() {
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
+
+        {/* iClosed confirmation widget */}
+        <IClosedConfirm />
 
         {/* VSL animée */}
         <div>
