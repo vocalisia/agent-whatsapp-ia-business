@@ -11,6 +11,12 @@ export const metadata: Metadata = {
   description:
     "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
   metadataBase: new URL("https://agentic-whatsup.com"),
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
