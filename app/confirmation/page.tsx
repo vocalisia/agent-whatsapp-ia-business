@@ -5,6 +5,7 @@ import {
   CheckCircle, Calendar, Clock, MessageCircle,
   ChevronRight, Star, AlertCircle, Zap, Shield, Users
 } from "lucide-react";
+import VSLPlayer from "@/components/shared/VSLPlayer";
 
 const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER ?? "33600000000";
 
@@ -107,41 +108,17 @@ export default function ConfirmationPage() {
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 py-16 space-y-16">
 
-        {/* VSL placeholder */}
+        {/* VSL animée */}
         <div>
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-white mb-2">
-              En attendant, regardez cette vidéo
+              Regardez avant votre session
             </h2>
             <p className="text-slate-400 text-sm">
-              Découvrez en 3 minutes comment l'agent IA WhatsApp transforme la relation client
+              2 minutes pour comprendre exactement ce qu'on va faire ensemble
             </p>
           </div>
-          <div className="relative rounded-2xl overflow-hidden border border-surface-2 bg-surface-2 aspect-video flex items-center justify-center group cursor-pointer">
-            {/* Thumbnail placeholder */}
-            <div className="absolute inset-0 bg-gradient-to-br from-surface via-surface-2 to-bg" />
-            <div
-              className="absolute inset-0 opacity-[0.04]"
-              style={{
-                backgroundImage: "radial-gradient(circle, #25D366 1px, transparent 1px)",
-                backgroundSize: "30px 30px",
-              }}
-            />
-            {/* Play button */}
-            <div className="relative z-10 flex flex-col items-center gap-4">
-              <div className="w-20 h-20 bg-wa rounded-full flex items-center justify-center glow-wa group-hover:scale-110 transition-transform shadow-2xl">
-                <div className="w-0 h-0 border-t-[12px] border-b-[12px] border-l-[20px] border-t-transparent border-b-transparent border-l-white ml-1" />
-              </div>
-              <div className="text-center">
-                <div className="text-white font-semibold">Agent IA WhatsApp — La démo complète</div>
-                <div className="text-slate-400 text-sm">3 min 42 sec</div>
-              </div>
-            </div>
-            {/* Duration badge */}
-            <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-2 py-1 rounded font-mono">
-              3:42
-            </div>
-          </div>
+          <VSLPlayer />
         </div>
 
         {/* Ce qui va se passer */}
