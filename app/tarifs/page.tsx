@@ -3,8 +3,8 @@ import { Check } from "lucide-react";
 import CalEmbed from "@/components/shared/CalEmbed";
 
 export const metadata: Metadata = {
-  title: "Audit gratuit — Agent IA WhatsApp",
-  description: "Réservez un audit WhatsApp gratuit de 30 minutes. On analyse vos besoins et vous propose une solution d'agent IA sur-mesure sous 48h.",
+  title: "Tarifs — Agent IA WhatsApp",
+  description: "Découvrez nos formules Starter, Pro et Enterprise pour votre agent IA WhatsApp. Pas de grille fixe — chaque projet est unique, devis sous 48h.",
 };
 
 const plans = [
