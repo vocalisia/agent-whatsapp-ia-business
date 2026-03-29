@@ -79,7 +79,7 @@ export default function ServiceAgentIAWhatsAppPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton
                 href={calLink}
-                label="Réserver une démo gratuite"
+                label="Audit gratuit"
                 variant="wa"
                 icon={Calendar}
                 size="lg"

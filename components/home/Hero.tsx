@@ -91,7 +91,7 @@ export default function Hero() {
               className="group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
             >
               <Zap size={20} className="group-hover:scale-110 transition-transform" />
-              Réserver une démo
+              Audit gratuit
             </a>
             <a
               href={`https://wa.me/${waNumber}`}

@@ -3,8 +3,8 @@ import { Check } from "lucide-react";
 import CalEmbed from "@/components/shared/CalEmbed";
 
 export const metadata: Metadata = {
-  title: "Réserver une démo — Agent IA WhatsApp",
-  description: "Prenez rendez-vous pour un diagnostic gratuit de 30 minutes. Nous analysons vos besoins et vous proposons une solution d'agent IA WhatsApp adaptée.",
+  title: "Audit gratuit — Agent IA WhatsApp",
+  description: "Réservez un audit WhatsApp gratuit de 30 minutes. On analyse vos besoins et vous propose une solution d'agent IA sur-mesure sous 48h.",
 };
 
 const plans = [
@@ -124,10 +124,10 @@ export default function TarifsPage() {
         <div className="text-center mb-10">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">Diagnostic gratuit</span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-3" style={{ fontFamily: "Onest, sans-serif" }}>
-            Réservez 30 minutes avec nous
+            Audit WhatsApp gratuit — 30 minutes
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto">
-            On analyse vos besoins, on vous présente une démo live, et on vous envoie une proposition sous 48h.
+            On analyse vos besoins, on vous présente une audit live, et on vous envoie une proposition sous 48h.
           </p>
         </div>
         <CalEmbed />

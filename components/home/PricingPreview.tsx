@@ -65,7 +65,7 @@ export default function PricingPreview() {
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-colors text-lg"
         >
           <Calendar size={20} />
-          Réserver une démo gratuite
+          Audit gratuit — 30 min
         </Link>
         <p className="text-slate-500 text-sm mt-3">30 minutes · Sans engagement · Proposition sous 48h</p>
       </div>

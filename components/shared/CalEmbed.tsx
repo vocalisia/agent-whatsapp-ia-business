@@ -10,7 +10,7 @@ export default function CalEmbed() {
         width="100%"
         height="100%"
         frameBorder="0"
-        title="Réserver une démo — Agent IA WhatsApp"
+        title="Audit gratuit — Agent IA WhatsApp"
         allow="camera; microphone"
       />
     </div>
