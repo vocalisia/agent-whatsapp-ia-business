@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Linkedin } from "lucide-react";
 
 export default function Footer() {
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
@@ -15,9 +15,29 @@ export default function Footer() {
               Agentic<span className="text-wa">Whatsup</span>
             </span>
           </div>
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-400 text-sm mb-4">
             Le seul agent IA WhatsApp qui voit, entend et comprend vos clients.
           </p>
+          <div className="flex gap-3">
+            <a
+              href="https://www.linkedin.com/company/agenticwhatsup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-lg bg-surface-2 hover:bg-wa/20 hover:text-wa flex items-center justify-center text-slate-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin size={15} />
+            </a>
+            <a
+              href="https://wa.me/41799394222"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-8 h-8 rounded-lg bg-surface-2 hover:bg-wa/20 hover:text-wa flex items-center justify-center text-slate-400 transition-colors"
+              aria-label="WhatsApp"
+            >
+              <MessageCircle size={15} />
+            </a>
+          </div>
         </div>
         <div>
           <h3 className="font-semibold text-white mb-3">Services</h3>

@@ -10,6 +10,7 @@ export interface PostMeta {
   date: string;
   description: string;
   readTime?: string;
+  author?: string;
 }
 
 export function getAllPosts(): PostMeta[] {
