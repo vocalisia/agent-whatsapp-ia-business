@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MessageCircle, Linkedin } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function Footer() {
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
@@ -26,7 +26,10 @@ export default function Footer() {
               className="w-8 h-8 rounded-lg bg-surface-2 hover:bg-wa/20 hover:text-wa flex items-center justify-center text-slate-400 transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin size={15} />
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
             </a>
             <a
               href="https://wa.me/41799394222"
