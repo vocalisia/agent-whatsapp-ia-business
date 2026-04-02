@@ -1,48 +1,76 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowRight, MessageCircle, Calendar, Clock, RefreshCw } from "lucide-react";
+import { Check, ArrowRight, MessageCircle, Target, Zap, Filter } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Prise de RDV automatisée WhatsApp — Cal.com",
-  description: "Laissez vos clients prendre rendez-vous directement via WhatsApp. Intégration Cal.com v2, disponibilités en temps réel, confirmations automatiques.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+  return {
+    title: t("qualificationLeads.title"),
+    description: t("qualificationLeads.subtitle"),
+  };
+}
 
 const features = [
-  "Prise de RDV directement dans la conversation WhatsApp",
-  "Intégration Cal.com v2 — disponibilités en temps réel",
-  "Confirmations et rappels automatiques",
-  "Annulation et reprogrammation en libre-service",
-  "Synchronisation Google Calendar et Outlook",
-  "Gestion multi-agendas et multi-intervenants",
-  "Fuseau horaire détecté automatiquement",
-  "Envoi de lien de visio (Zoom, Google Meet) automatique",
+  "Questionnaire de qualification automatique",
+  "Scoring IA en temps r\u00e9el selon vos crit\u00e8res",
+  "Transmission automatique au CRM (HubSpot, Salesforce, Notion)",
+  "Relances automatiques des prospects inactifs",
+  "Gestion des vocaux et photos pour qualifier",
+  "Rapports hebdomadaires de performance",
 ];
 
-export default function PriseDeRdvPage() {
+const steps = [
+  {
+    icon: MessageCircle,
+    title: "Le prospect envoie un message",
+    desc: "Via votre num\u00e9ro WhatsApp Business \u2014 texte, vocal ou photo.",
+  },
+  {
+    icon: Filter,
+    title: "L'IA pose les bonnes questions",
+    desc: "Budget, besoin, d\u00e9lai, autorit\u00e9 \u2014 adapt\u00e9 \u00e0 votre secteur.",
+  },
+  {
+    icon: Target,
+    title: "Score de qualification calcul\u00e9",
+    desc: "Chaque prospect re\u00e7oit un score selon vos crit\u00e8res m\u00e9tier.",
+  },
+  {
+    icon: Zap,
+    title: "Transmission au commercial",
+    desc: "Seuls les prospects qualifi\u00e9s arrivent dans votre CRM ou Slack.",
+  },
+];
+
+export default async function QualificationLeadsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
 
       {/* Header */}
       <div className="text-center mb-16">
         <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-          Service
+          {t("common.service")}
         </span>
         <h1
           className="text-4xl sm:text-5xl font-extrabold text-white mb-4"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Prise de RDV via WhatsApp
+          {t("qualificationLeads.title")}
         </h1>
         <p className="text-slate-400 text-xl max-w-2xl mx-auto">
-          Vos clients réservent un créneau sans quitter WhatsApp.
-          Fini les allers-retours pour trouver un horaire.
+          {t("qualificationLeads.subtitle")}
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-6 py-3 font-bold transition-colors"
           >
-            Audit gratuit
+            {t("common.auditGratuit")}
             <ArrowRight size={16} />
           </Link>
           <a
@@ -52,44 +80,25 @@ export default function PriseDeRdvPage() {
             className="inline-flex items-center justify-center gap-2 bg-surface border border-surface-2 hover:border-wa/40 text-white rounded-xl px-6 py-3 font-medium transition-colors"
           >
             <MessageCircle size={16} />
-            Écrire sur WhatsApp
+            {t("common.ecrireWhatsapp")}
           </a>
         </div>
       </div>
 
-      {/* Steps */}
+      {/* How it works */}
       <div className="mb-16">
         <h2
           className="text-2xl font-bold text-white text-center mb-8"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          En 3 étapes
+          {t("qualificationLeads.howTitle")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            {
-              icon: MessageCircle,
-              step: "1",
-              title: "Le client demande un RDV",
-              desc: "\"Je veux prendre un RDV\" — l'agent comprend la demande et propose les créneaux disponibles.",
-            },
-            {
-              icon: Calendar,
-              step: "2",
-              title: "Le client choisit son créneau",
-              desc: "L'agent affiche les disponibilités Cal.com en temps réel. Le client répond avec son choix.",
-            },
-            {
-              icon: Clock,
-              step: "3",
-              title: "Confirmation automatique",
-              desc: "RDV créé dans l'agenda, confirmation WhatsApp + email, rappel 24h avant.",
-            },
-          ].map(({ icon: Icon, step, title, desc }) => (
-            <div key={step} className="bg-surface border border-surface-2 rounded-xl p-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {steps.map(({ icon: Icon, title, desc }, i) => (
+            <div key={title} className="bg-surface border border-surface-2 rounded-xl p-5">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-7 h-7 rounded-full bg-wa/10 border border-wa/30 flex items-center justify-center shrink-0">
-                  <span className="text-wa text-xs font-bold">{step}</span>
+                  <span className="text-wa text-xs font-bold">{i + 1}</span>
                 </div>
                 <Icon size={16} className="text-wa" />
               </div>
@@ -106,7 +115,7 @@ export default function PriseDeRdvPage() {
           className="text-2xl font-bold text-white mb-6"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Ce qui est inclus
+          {t("qualificationLeads.includedTitle")}
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {features.map((f) => (
@@ -124,17 +133,16 @@ export default function PriseDeRdvPage() {
           className="text-2xl font-bold text-white mb-3"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Automatisez vos prises de RDV
+          {t("qualificationLeads.ctaTitle")}
         </h2>
         <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-          Déploiement en moins d'une semaine. Réservez un audit gratuit
-          et on configure tout ensemble.
+          {t("qualificationLeads.ctaSubtitle")}
         </p>
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-8 py-3 font-bold transition-colors"
         >
-          Réserver mon audit gratuit
+          {t("qualificationLeads.ctaButton")}
           <ArrowRight size={16} />
         </Link>
       </div>

@@ -1,10 +1,15 @@
+"use client";
 import Link from "next/link";
 import { PostMeta } from "@/lib/mdx";
 import { Clock, Calendar, User } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function BlogCard({ post }: { post: PostMeta }) {
+  const t = useTranslations("blog");
+  const locale = useLocale();
+
   return (
-    <Link href={`/blog/${post.slug}`} className="block bg-surface rounded-xl border border-surface-2 hover:border-wa/50 transition-all duration-300 group overflow-hidden">
+    <Link href={`/${locale}/blog/${post.slug}`} className="block bg-surface rounded-xl border border-surface-2 hover:border-wa/50 transition-all duration-300 group overflow-hidden">
       {/* Cover banner */}
       <div className="h-32 bg-gradient-to-br from-wa/20 via-surface to-indigo-500/10 flex items-center justify-center px-6 border-b border-surface-2">
         <p className="text-white font-bold text-sm text-center leading-snug line-clamp-3 group-hover:text-wa transition-colors">{post.title}</p>
@@ -28,7 +33,7 @@ export default function BlogCard({ post }: { post: PostMeta }) {
               {post.author}
             </span>
           )}
-          <span className="text-wa text-sm font-medium group-hover:underline ml-auto">Lire l&apos;article →</span>
+          <span className="text-wa text-sm font-medium group-hover:underline ml-auto">{t("readArticle")}</span>
         </div>
       </div>
     </Link>

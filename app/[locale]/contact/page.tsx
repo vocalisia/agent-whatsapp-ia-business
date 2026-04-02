@@ -1,27 +1,27 @@
-import type { Metadata } from "next";
 import { CheckCircle, Clock, Shield, Zap } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 import CalEmbed from "@/components/shared/CalEmbed";
 
-export const metadata: Metadata = {
-  title: "Session Stratégique Gratuite — AgenticWhatsup",
-  description: "Réservez votre session stratégique gratuite de 30 minutes. Diagnostic de vos besoins WhatsApp, proposition personnalisée sous 48h.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+  return {
+    title: t("title"),
+    description: t("subtitle"),
+  };
+}
 
-const bullets = [
-  "Diagnostic de vos flux de messages WhatsApp",
-  "Identification des automatisations possibles",
-  "Étude de faisabilité selon vos outils (CRM, agenda)",
-  "Proposition concrète et chiffrée sous 48h",
-  "Sans engagement — 100% offert",
-];
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "contact" });
+  const bullets = t.raw("bullets") as string[];
 
-const guarantees = [
-  { icon: Clock,   label: "30 minutes",       sub: "chrono respecté" },
-  { icon: Shield,  label: "Confidentiel",      sub: "NDA sur demande" },
-  { icon: Zap,     label: "Réponse sous 48h",  sub: "devis détaillé" },
-];
+  const guarantees = [
+    { icon: Clock,   label: t("guaranteeTime"),         sub: t("guaranteeTimeSub") },
+    { icon: Shield,  label: t("guaranteeConfidential"),  sub: t("guaranteeConfidentialSub") },
+    { icon: Zap,     label: t("guaranteeResponse"),      sub: t("guaranteeResponseSub") },
+  ];
 
-export default function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -30,13 +30,13 @@ export default function ContactPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 text-center">
           <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-5">
             <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-            Session stratégique — 100% gratuite
+            {t("badge")}
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
-            Réservez votre audit WhatsApp
+            {t("title")}
           </h1>
           <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            30 minutes pour analyser votre situation et définir exactement ce qu'un agent IA peut faire pour vous.
+            {t("subtitle")}
           </p>
         </div>
       </div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
             {/* What happens */}
             <div>
               <h2 className="text-xl font-bold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
-                Ce qu'on va faire ensemble
+                {t("whatTitle")}
               </h2>
               <ul className="space-y-3">
                 {bullets.map((b) => (
@@ -75,7 +75,7 @@ export default function ContactPage() {
 
             {/* Contact direct */}
             <div className="bg-surface border border-surface-2 rounded-xl p-5 flex flex-col gap-3">
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Contact direct</p>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider">{t("directContact")}</p>
               <a
                 href="mailto:contact@vocalis.pro"
                 className="flex items-center gap-3 text-sm text-slate-300 hover:text-wa transition-colors"
@@ -106,9 +106,9 @@ export default function ContactPage() {
                 ))}
               </div>
               <p className="text-slate-300 text-sm italic leading-relaxed mb-3">
-                "En 30 minutes ils ont identifié 3 automatisations que je n'avais pas vues. La proposition était précise et réaliste."
+                &quot;{t("testimonial")}&quot;
               </p>
-              <div className="text-xs text-slate-500">Karim B. — E-commerce, Paris</div>
+              <div className="text-xs text-slate-500">{t("testimonialAuthor")}</div>
             </div>
           </div>
 
@@ -117,8 +117,8 @@ export default function ContactPage() {
             <div className="rounded-2xl overflow-hidden border border-wa/20 shadow-[0_0_40px_rgba(37,211,102,0.08)]">
               <div className="bg-surface px-5 py-3 border-b border-surface-2 flex items-center gap-3">
                 <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-white">Choisissez votre créneau</span>
-                <span className="ml-auto text-xs text-slate-500">Powered by iClosed</span>
+                <span className="text-sm font-medium text-white">{t("calTitle")}</span>
+                <span className="ml-auto text-xs text-slate-500">{t("calPowered")}</span>
               </div>
               <CalEmbed />
             </div>

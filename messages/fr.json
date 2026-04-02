@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "services": "Services",
+    "tarifs": "Tarifs",
+    "blog": "Blog",
+    "contact": "Contact",
+    "audit": "Audit gratuit",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Technologie exclusive — Vision IA + Vocaux",
+    "title1": "L'agent IA",
+    "title2": "WhatsApp",
+    "title3": "qui vous voit.",
+    "subtitle": "Vocaux, photos, documents — votre agent répond à tout, 24h/24.",
+    "description": "Le seul agent capable d'analyser les images et de transcrire les messages vocaux de vos clients. En temps réel. Sans intervention humaine.",
+    "pillVision": "Vision IA",
+    "pillVisionDesc": "Analyse les photos",
+    "pillAudio": "Audio IA",
+    "pillAudioDesc": "Transcrit les vocaux",
+    "pillRgpd": "RGPD",
+    "pillRgpdDesc": "Conforme & sécurisé",
+    "ctaAudit": "Audit gratuit",
+    "ctaWhatsapp": "Écrire sur WhatsApp",
+    "trustRgpd": "RGPD compliant",
+    "trustDeployed": "Déployé en 2 semaines",
+    "trustSupport": "Support dédié"
+  },
+  "stats": {
+    "costLabel": "Coûts de gestion client",
+    "productivityLabel": "Productivité des équipes",
+    "responseLabel": "Taux de réponse",
+    "availabilityLabel": "Disponibilité totale"
+  },
+  "problem": {
+    "eyebrow": "Le problème",
+    "title": "Chaque message sans réponse = un client perdu",
+    "items": [
+      { "title": "Vocaux ignorés", "description": "Vos clients envoient des messages vocaux WhatsApp. Personne n'a le temps de les écouter.", "statLabel": "des vocaux non écoutés" },
+      { "title": "Photos non traitées", "description": "Le client envoie une photo de son document. Le traitement manuel prend des heures.", "statLabel": "de traitement moyen" },
+      { "title": "Leads perdus la nuit", "description": "70% des messages arrivent hors horaires. Sans réponse rapide : adieu le prospect.", "statLabel": "des messages hors horaires" },
+      { "title": "Équipe débordée", "description": "Vos équipes gèrent des messages répétitifs au lieu de se concentrer sur la valeur.", "statLabel": "du temps perdu" }
+    ]
+  },
+  "features": {
+    "eyebrow": "Fonctionnalités",
+    "title": "Ce que personne d'autre ne fait",
+    "subtitle": "Des capacités multimodales exclusives sur le marché WhatsApp Business.",
+    "exclusive": "Exclusif",
+    "items": [
+      { "title": "Vision IA", "subtitle": "Analyse les photos", "description": "Le client envoie une photo (document, bien immobilier, problème technique). L'agent voit, comprend et répond via OpenAI Vision / Claude / Gemini." },
+      { "title": "Audio IA", "subtitle": "Transcrit les vocaux", "description": "L'agent transcrit automatiquement les messages vocaux WhatsApp et répond de façon contextuelle, dans la langue du client." },
+      { "title": "Tous les médias", "subtitle": "Images, audio, vidéo, docs", "description": "Tout est géré, stocké et accessible. Les opérateurs peuvent aussi envoyer des fichiers aux clients depuis l'interface." },
+      { "title": "RGPD Auto", "subtitle": "Rétention configurable", "description": "Nettoyage automatique planifié par type de données. Hébergement EU disponible. Conformité sans effort." },
+      { "title": "Cal.com v2", "subtitle": "RDV dans WhatsApp", "description": "Serveurs EU, équipes, champs dynamiques. L'agent prend des RDV directement dans la conversation." },
+      { "title": "Webhooks", "subtitle": "Automatisations infinies", "description": "Transcript complet + évaluation IA à chaque fin de conversation. Connecte HubSpot, Salesforce, Notion." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Architecture IA",
+    "title": "Comment l'agent traite chaque message",
+    "messageLabel": "Message WhatsApp",
+    "messageSub": "client → agent",
+    "typeDetected": "Type de message détecté ?",
+    "photoLabel": "Photo / Doc",
+    "photoSub": "Vision IA",
+    "audioLabel": "Message vocal",
+    "audioSub": "Audio IA",
+    "textLabel": "Texte",
+    "textSub": "NLP Agent",
+    "agentLabel": "Agent IA",
+    "agentSub": "Analyse & génère la réponse",
+    "responseLabel": "Réponse envoyée",
+    "responseSub": "< 3 secondes",
+    "actionsTriggered": "Actions automatiques déclenchées",
+    "crmLabel": "CRM",
+    "crmSub": "Lead créé",
+    "calLabel": "RDV Cal.com",
+    "calSub": "Agenda mis à jour",
+    "notifLabel": "Notification",
+    "notifSub": "Équipe alertée",
+    "legendMain": "Flux principal",
+    "legendAi": "Modules IA",
+    "legendNlp": "Traitement NLP"
+  },
+  "pricing": {
+    "eyebrow": "Formules",
+    "title": "Une solution taillée pour vous",
+    "subtitle": "Pas de prix affiché — chaque projet est unique. On discute.",
+    "recommended": "RECOMMANDÉ",
+    "ctaAudit": "Audit gratuit — 30 min",
+    "ctaSubtitle": "30 minutes · Sans engagement · Proposition sous 48h",
+    "plans": [
+      { "name": "Starter", "features": ["1 agent WhatsApp", "1 scénario", "1 intégration", "Support email"] },
+      { "name": "Pro", "features": ["Multi-scénarios", "Templates Meta", "CRM + Agenda", "Vision IA + Vocaux", "Workflows auto", "Support 48h"] },
+      { "name": "Enterprise", "features": ["Solution sur-mesure", "Multi-numéros", "Intégrations illimitées", "SLA prioritaire", "Support 24h"] }
+    ]
+  },
+  "finalCta": {
+    "badge": "Prêt en 2–3 semaines",
+    "title1": "Arrêtez de perdre",
+    "title2": "des clients",
+    "title3": "à 3h du matin.",
+    "subtitle": "30 minutes pour analyser vos besoins. Proposition sous 48h. Déploiement en 2–3 semaines.",
+    "ctaPrimary": "Réserver un diagnostic gratuit",
+    "ctaSecondary": "Écrire maintenant",
+    "trust1": "Réponse sous 24h",
+    "trust2": "Devis gratuit",
+    "trust3": "Sans engagement"
+  },
+  "footer": {
+    "tagline": "Le seul agent IA WhatsApp qui voit, entend et comprend vos clients.",
+    "servicesTitle": "Services",
+    "serviceAgent": "Agent IA WhatsApp",
+    "serviceLeads": "Qualification de leads",
+    "serviceCampaigns": "Campagnes WhatsApp",
+    "resourcesTitle": "Ressources",
+    "legalTitle": "Légal",
+    "legalMentions": "Mentions légales",
+    "legalPrivacy": "Politique de confidentialité",
+    "copyright": "AgenticWhatsup. Tous droits réservés.",
+    "mobileWhatsapp": "WhatsApp",
+    "mobileBook": "Réserver"
+  },
+  "contact": {
+    "badge": "Session stratégique — 100% gratuite",
+    "title": "Réservez votre audit WhatsApp",
+    "subtitle": "30 minutes pour analyser votre situation et définir exactement ce qu'un agent IA peut faire pour vous.",
+    "whatTitle": "Ce qu'on va faire ensemble",
+    "bullets": [
+      "Diagnostic de vos flux de messages WhatsApp",
+      "Identification des automatisations possibles",
+      "Étude de faisabilité selon vos outils (CRM, agenda)",
+      "Proposition concrète et chiffrée sous 48h",
+      "Sans engagement — 100% offert"
+    ],
+    "guaranteeTime": "30 minutes",
+    "guaranteeTimeSub": "chrono respecté",
+    "guaranteeConfidential": "Confidentiel",
+    "guaranteeConfidentialSub": "NDA sur demande",
+    "guaranteeResponse": "Réponse sous 48h",
+    "guaranteeResponseSub": "devis détaillé",
+    "testimonial": "En 30 minutes ils ont identifié 3 automatisations que je n'avais pas vues. La proposition était précise et réaliste.",
+    "testimonialAuthor": "Karim B. — E-commerce, Paris",
+    "calTitle": "Choisissez votre créneau",
+    "calPowered": "Powered by iClosed",
+    "directContact": "Contact direct"
+  },
+  "tarifs": {
+    "eyebrow": "Formules",
+    "title": "Chaque projet est unique",
+    "subtitle": "Pas de grille tarifaire figée. On discute de vos besoins et on vous propose la solution exacte — ni plus, ni moins.",
+    "recommended": "RECOMMANDÉ",
+    "plans": [
+      { "name": "Starter", "description": "PME qui débutent l'automatisation WhatsApp.", "features": ["1 agent WhatsApp Business", "1 scénario de conversation", "1 intégration (CRM ou agenda)", "Réponses texte automatiques", "Dashboard de monitoring", "Support email", "Formation incluse"] },
+      { "name": "Pro", "description": "La solution complète pour tout automatiser.", "features": ["Multi-scénarios de conversation", "Templates Meta pré-approuvés", "CRM + Agenda (Cal.com)", "Vision IA — analyse des photos", "Transcription vocale automatique", "Workflows & webhooks", "Conformité RGPD", "Support 48h garanti", "Onboarding dédié"] },
+      { "name": "Enterprise", "description": "Solution sur-mesure pour les grandes organisations.", "features": ["Architecture entièrement sur-mesure", "Multi-numéros WhatsApp", "Intégrations illimitées", "SLA garanti et prioritaire", "Hébergement EU dédié", "Support dédié 24h/24", "Audit et optimisation continus", "Formation équipes étendue"] }
+    ],
+    "sessionEyebrow": "Session stratégique",
+    "sessionTitle": "Session Stratégique — Votre Agent IA WhatsApp",
+    "sessionSubtitle": "30 minutes pour analyser vos flux, identifier les automatisations possibles et définir votre stratégie. Diagnostic offert, sans engagement.",
+    "faqTitle": "Questions fréquentes",
+    "faqs": [
+      { "question": "Les tarifs incluent-ils la mise en place ?", "answer": "Oui. Chaque devis inclut le développement, la configuration WhatsApp Business, les tests et le déploiement complet. Pas de surprise." },
+      { "question": "Y a-t-il des frais récurrents ?", "answer": "Oui, un forfait mensuel couvre l'hébergement, les appels API (LLM) et la maintenance. Ce forfait est inclus dans notre proposition." },
+      { "question": "Quel est le délai de mise en production ?", "answer": "En général 2 à 3 semaines pour le plan Pro. Le plan Starter peut être déployé en 1 semaine. L'Enterprise dépend de la complexité." }
+    ]
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Cette page n'existe pas ou a été déplacée. Revenez à l'accueil ou contactez-nous directement.",
+    "home": "Retour à l'accueil",
+    "contact": "Nous contacter"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Guides et conseils pour automatiser votre WhatsApp Business avec l'IA.",
+    "readArticle": "Lire l'article →",
+    "backToBlog": "Retour au blog",
+    "reading": "de lecture",
+    "ctaTitle": "Prêt à automatiser votre WhatsApp ?",
+    "ctaSubtitle": "Audit gratuit de 30 minutes — proposition sous 48h.",
+    "ctaButton": "Réserver mon audit gratuit"
+  },
+  "services": {
+    "qualificationLeads": {
+      "title": "Qualification de leads WhatsApp",
+      "subtitle": "Filtrez vos prospects automatiquement. Votre équipe commerciale ne parle qu'aux leads vraiment intéressés.",
+      "howTitle": "Comment ça fonctionne",
+      "includedTitle": "Ce qui est inclus",
+      "ctaTitle": "Prêt à qualifier vos leads automatiquement ?",
+      "ctaSubtitle": "Réservez un audit gratuit de 30 minutes — on analyse vos flux et on vous propose une solution sur-mesure sous 48h.",
+      "ctaButton": "Réserver mon audit gratuit"
+    },
+    "campagnes": {
+      "title": "Campagnes WhatsApp sortantes",
+      "subtitle": "Touchez vos clients là où ils lisent vraiment. WhatsApp affiche 98 % de taux d'ouverture — 5× plus que l'e-mail.",
+      "useCasesTitle": "Cas d'usage",
+      "includedTitle": "Ce qui est inclus",
+      "ctaTitle": "Lancez votre première campagne WhatsApp",
+      "ctaSubtitle": "On s'occupe de tout : rédaction des templates, validation Meta, segmentation et envoi. Démarrage en 1 à 2 semaines.",
+      "ctaButton": "Réserver mon audit gratuit"
+    },
+    "crm": {
+      "title": "Automatisation CRM",
+      "subtitle": "Votre agent WhatsApp met à jour votre CRM en temps réel. Fini la saisie manuelle — chaque conversation enrichit votre base.",
+      "howTitle": "Comment ça fonctionne",
+      "integrationsTitle": "Intégrations disponibles",
+      "includedTitle": "Ce qui est inclus",
+      "ctaTitle": "Connectez WhatsApp à votre CRM",
+      "ctaSubtitle": "Dites-nous quel CRM vous utilisez et on vous montre exactement comment l'automatiser — audit gratuit de 30 minutes.",
+      "ctaButton": "Réserver mon audit gratuit"
+    },
+    "rdv": {
+      "title": "Prise de RDV via WhatsApp",
+      "subtitle": "Vos clients réservent un créneau sans quitter WhatsApp. Fini les allers-retours pour trouver un horaire.",
+      "stepsTitle": "En 3 étapes",
+      "includedTitle": "Ce qui est inclus",
+      "ctaTitle": "Automatisez vos prises de RDV",
+      "ctaSubtitle": "Déploiement en moins d'une semaine. Réservez un audit gratuit et on configure tout ensemble.",
+      "ctaButton": "Réserver mon audit gratuit"
+    },
+    "common": {
+      "auditGratuit": "Audit gratuit",
+      "ecrireWhatsapp": "Écrire sur WhatsApp",
+      "service": "Service"
+    }
+  }
+}

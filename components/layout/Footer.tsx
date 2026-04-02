@@ -1,9 +1,13 @@
+"use client";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
-  const calLink = process.env.NEXT_PUBLIC_CAL_LINK || "/contact";
+  const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
 
   return (
     <footer className="bg-surface border-t border-surface-2 mt-20">
@@ -16,7 +20,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-slate-400 text-sm mb-4">
-            Le seul agent IA WhatsApp qui voit, entend et comprend vos clients.
+            {t("tagline")}
           </p>
           <div className="flex gap-3">
             <a
@@ -43,78 +47,78 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <h3 className="font-semibold text-white mb-3">Services</h3>
+          <h3 className="font-semibold text-white mb-3">{t("servicesTitle")}</h3>
           <ul className="space-y-2 text-sm text-slate-400">
             <li>
               <Link
-                href="/services/agent-ia-whatsapp"
+                href={`/${locale}/services/agent-ia-whatsapp`}
                 className="hover:text-wa transition-colors"
               >
-                Agent IA WhatsApp
+                {t("serviceAgent")}
               </Link>
             </li>
             <li>
               <Link
-                href="/services/qualification-leads"
+                href={`/${locale}/services/qualification-leads`}
                 className="hover:text-wa transition-colors"
               >
-                Qualification de leads
+                {t("serviceLeads")}
               </Link>
             </li>
             <li>
               <Link
-                href="/services/campagnes-whatsapp"
+                href={`/${locale}/services/campagnes-whatsapp`}
                 className="hover:text-wa transition-colors"
               >
-                Campagnes WhatsApp
+                {t("serviceCampaigns")}
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className="font-semibold text-white mb-3">Ressources</h3>
+          <h3 className="font-semibold text-white mb-3">{t("resourcesTitle")}</h3>
           <ul className="space-y-2 text-sm text-slate-400">
             <li>
-              <Link href="/blog" className="hover:text-wa transition-colors">
+              <Link href={`/${locale}/blog`} className="hover:text-wa transition-colors">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/tarifs" className="hover:text-wa transition-colors">
+              <Link href={`/${locale}/tarifs`} className="hover:text-wa transition-colors">
                 Tarifs
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-wa transition-colors">
+              <Link href={`/${locale}/contact`} className="hover:text-wa transition-colors">
                 Contact
               </Link>
             </li>
           </ul>
         </div>
         <div>
-          <h3 className="font-semibold text-white mb-3">Légal</h3>
+          <h3 className="font-semibold text-white mb-3">{t("legalTitle")}</h3>
           <ul className="space-y-2 text-sm text-slate-400">
             <li>
               <Link
-                href="/mentions-legales"
+                href={`/${locale}/mentions-legales`}
                 className="hover:text-wa transition-colors"
               >
-                Mentions légales
+                {t("legalMentions")}
               </Link>
             </li>
             <li>
               <Link
-                href="/politique-confidentialite"
+                href={`/${locale}/politique-confidentialite`}
                 className="hover:text-wa transition-colors"
               >
-                Politique de confidentialité
+                {t("legalPrivacy")}
               </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="border-t border-surface-2 py-4 text-center text-sm text-slate-500">
-        © {new Date().getFullYear()} AgenticWhatsup. Tous droits réservés.
+        © {new Date().getFullYear()} {t("copyright")}
       </div>
       {/* Sticky mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-bg border-t border-surface flex">
@@ -125,7 +129,7 @@ export default function Footer() {
           className="flex-1 flex items-center justify-center gap-2 bg-wa text-white font-semibold py-4 text-sm"
         >
           <MessageCircle size={18} />
-          WhatsApp
+          {t("mobileWhatsapp")}
         </a>
         <a
           href={calLink}
@@ -133,7 +137,7 @@ export default function Footer() {
           rel="noopener noreferrer"
           className="flex-1 flex items-center justify-center gap-2 bg-indigo-500 text-white font-semibold py-4 text-sm"
         >
-          Réserver
+          {t("mobileBook")}
         </a>
       </div>
     </footer>

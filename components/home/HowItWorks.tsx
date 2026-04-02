@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import SectionTitle from "@/components/shared/SectionTitle";
 
 // ── Flow diagram: how the agent processes a WhatsApp message ──
@@ -100,13 +101,15 @@ function MergeArrows() {
 }
 
 export default function HowItWorks() {
+  const t = useTranslations("howItWorks");
+
   return (
     <section className="py-24 px-4 sm:px-6 bg-surface/30">
       <div className="max-w-4xl mx-auto">
         <motion.div {...fadeUp()}>
           <SectionTitle
-            eyebrow="Architecture IA"
-            title="Comment l'agent traite chaque message"
+            eyebrow={t("eyebrow")}
+            title={t("title")}
           />
         </motion.div>
 
@@ -116,50 +119,50 @@ export default function HowItWorks() {
           className="mt-12 flex flex-col items-center"
         >
           {/* 1 — Incoming message */}
-          <Box icon="💬" label="Message WhatsApp" sub="client → agent" color="wa" />
+          <Box icon="💬" label={t("messageLabel")} sub={t("messageSub")} color="wa" />
           <Arrow vertical />
 
           {/* 2 — Type detection */}
           <div className="border border-slate-600/40 bg-surface-2 rounded-xl px-5 py-2.5 text-xs text-slate-300 font-semibold" style={{ fontFamily: "Onest, sans-serif" }}>
-            🔍 Type de message détecté ?
+            🔍 {t("typeDetected")}
           </div>
           <SplitArrows />
 
           {/* 3 — Three branches */}
           <div className="flex items-start gap-6">
-            <Box icon="📸" label="Photo / Doc" sub="Vision IA" color="indigo" />
-            <Box icon="🎙️" label="Message vocal" sub="Audio IA" color="blue" />
-            <Box icon="✍️" label="Texte" sub="NLP Agent" color="slate" />
+            <Box icon="📸" label={t("photoLabel")} sub={t("photoSub")} color="indigo" />
+            <Box icon="🎙️" label={t("audioLabel")} sub={t("audioSub")} color="blue" />
+            <Box icon="✍️" label={t("textLabel")} sub={t("textSub")} color="slate" />
           </div>
           <MergeArrows />
 
           {/* 4 — AI processing */}
-          <Box icon="🤖" label="Agent IA" sub="Analyse & génère la réponse" color="wa" />
+          <Box icon="🤖" label={t("agentLabel")} sub={t("agentSub")} color="wa" />
           <Arrow vertical />
 
           {/* 5 — Response sent */}
-          <Box icon="✅" label="Réponse envoyée" sub="< 3 secondes" color="wa" />
+          <Box icon="✅" label={t("responseLabel")} sub={t("responseSub")} color="wa" />
           <Arrow vertical />
 
           {/* 6 — Parallel actions */}
           <div className="border border-slate-600/40 bg-surface-2 rounded-xl px-5 py-2.5 text-xs text-slate-300 font-semibold" style={{ fontFamily: "Onest, sans-serif" }}>
-            ⚡ Actions automatiques déclenchées
+            ⚡ {t("actionsTriggered")}
           </div>
           <SplitArrows />
 
           <div className="flex items-start gap-6">
-            <Box icon="📋" label="CRM" sub="Lead créé" color="indigo" />
-            <Box icon="📅" label="RDV Cal.com" sub="Agenda mis à jour" color="indigo" />
-            <Box icon="🔔" label="Notification" sub="Équipe alertée" color="indigo" />
+            <Box icon="📋" label={t("crmLabel")} sub={t("crmSub")} color="indigo" />
+            <Box icon="📅" label={t("calLabel")} sub={t("calSub")} color="indigo" />
+            <Box icon="🔔" label={t("notifLabel")} sub={t("notifSub")} color="indigo" />
           </div>
         </motion.div>
 
         {/* Legend */}
         <motion.div {...fadeUp(0.3)} className="mt-12 flex flex-wrap justify-center gap-6">
           {[
-            { color: "bg-wa", label: "Flux principal" },
-            { color: "bg-indigo-500", label: "Modules IA" },
-            { color: "bg-slate-500", label: "Traitement NLP" },
+            { color: "bg-wa", label: t("legendMain") },
+            { color: "bg-indigo-500", label: t("legendAi") },
+            { color: "bg-slate-500", label: t("legendNlp") },
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-2">
               <div className={`w-3 h-3 rounded-full ${item.color}`} />

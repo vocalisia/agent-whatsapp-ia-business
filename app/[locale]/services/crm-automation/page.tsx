@@ -1,57 +1,64 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, ArrowRight, MessageCircle, Database, RefreshCw, Webhook } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Automatisation CRM WhatsApp — Intégration IA",
-  description: "Connectez votre agent IA WhatsApp à HubSpot, Salesforce, Notion et plus. Mise à jour automatique des contacts, deals et activités depuis WhatsApp.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+  return {
+    title: t("crm.title"),
+    description: t("crm.subtitle"),
+  };
+}
 
 const features = [
   "Synchronisation bidirectionnelle avec HubSpot",
-  "Création automatique de contacts et deals Salesforce",
-  "Mise à jour des propriétés CRM depuis les conversations",
-  "Intégration Notion pour les équipes no-code",
+  "Cr\u00e9ation automatique de contacts et deals Salesforce",
+  "Mise \u00e0 jour des propri\u00e9t\u00e9s CRM depuis les conversations",
+  "Int\u00e9gration Notion pour les \u00e9quipes no-code",
   "Webhooks entrants et sortants personnalisables",
-  "Logs d'activité WhatsApp dans le CRM",
-  "Alertes commerciales en temps réel (Slack, email)",
-  "Mapping champs personnalisé selon votre CRM",
+  "Logs d'activit\u00e9 WhatsApp dans le CRM",
+  "Alertes commerciales en temps r\u00e9el (Slack, email)",
+  "Mapping champs personnalis\u00e9 selon votre CRM",
 ];
 
 const integrations = [
-  { name: "HubSpot", desc: "Contacts, deals, activités, séquences" },
+  { name: "HubSpot", desc: "Contacts, deals, activit\u00e9s, s\u00e9quences" },
   { name: "Salesforce", desc: "Leads, opportunities, tasks, notes" },
-  { name: "Notion", desc: "Bases de données, pages, propriétés" },
-  { name: "Airtable", desc: "Tables, records, vues filtrées" },
+  { name: "Notion", desc: "Bases de donn\u00e9es, pages, propri\u00e9t\u00e9s" },
+  { name: "Airtable", desc: "Tables, records, vues filtr\u00e9es" },
   { name: "Make / Zapier", desc: "Automatisations via webhooks" },
   { name: "Cal.com", desc: "Prise de RDV directement dans WhatsApp" },
 ];
 
-export default function CrmAutomationPage() {
+export default async function CrmAutomationPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
 
       {/* Header */}
       <div className="text-center mb-16">
         <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-          Service
+          {t("common.service")}
         </span>
         <h1
           className="text-4xl sm:text-5xl font-extrabold text-white mb-4"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Automatisation CRM
+          {t("crm.title")}
         </h1>
         <p className="text-slate-400 text-xl max-w-2xl mx-auto">
-          Votre agent WhatsApp met à jour votre CRM en temps réel.
-          Fini la saisie manuelle — chaque conversation enrichit votre base.
+          {t("crm.subtitle")}
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-6 py-3 font-bold transition-colors"
           >
-            Audit gratuit
+            {t("common.auditGratuit")}
             <ArrowRight size={16} />
           </Link>
           <a
@@ -61,7 +68,7 @@ export default function CrmAutomationPage() {
             className="inline-flex items-center justify-center gap-2 bg-surface border border-surface-2 hover:border-wa/40 text-white rounded-xl px-6 py-3 font-medium transition-colors"
           >
             <MessageCircle size={16} />
-            Écrire sur WhatsApp
+            {t("common.ecrireWhatsapp")}
           </a>
         </div>
       </div>
@@ -72,13 +79,13 @@ export default function CrmAutomationPage() {
           className="text-2xl font-bold text-white text-center mb-8"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Comment ça fonctionne
+          {t("crm.howTitle")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { icon: MessageCircle, step: "1", title: "Conversation WhatsApp", desc: "Le client répond à votre agent IA — questions, informations, demandes." },
-            { icon: Webhook, step: "2", title: "Traitement IA", desc: "L'agent extrait les données clés : nom, budget, besoin, qualification." },
-            { icon: Database, step: "3", title: "Mise à jour CRM", desc: "Les données sont poussées dans votre CRM instantanément via webhook." },
+            { icon: MessageCircle, step: "1", title: "Conversation WhatsApp", desc: "Le client r\u00e9pond \u00e0 votre agent IA \u2014 questions, informations, demandes." },
+            { icon: Webhook, step: "2", title: "Traitement IA", desc: "L'agent extrait les donn\u00e9es cl\u00e9s : nom, budget, besoin, qualification." },
+            { icon: Database, step: "3", title: "Mise \u00e0 jour CRM", desc: "Les donn\u00e9es sont pouss\u00e9es dans votre CRM instantan\u00e9ment via webhook." },
           ].map(({ icon: Icon, step, title, desc }) => (
             <div key={step} className="bg-surface border border-surface-2 rounded-xl p-5 text-center">
               <div className="w-10 h-10 rounded-full bg-wa/10 border border-wa/30 flex items-center justify-center mx-auto mb-3">
@@ -98,7 +105,7 @@ export default function CrmAutomationPage() {
           className="text-2xl font-bold text-white text-center mb-8"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Intégrations disponibles
+          {t("crm.integrationsTitle")}
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {integrations.map(({ name, desc }) => (
@@ -116,7 +123,7 @@ export default function CrmAutomationPage() {
           className="text-2xl font-bold text-white mb-6"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Ce qui est inclus
+          {t("crm.includedTitle")}
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {features.map((f) => (
@@ -134,17 +141,16 @@ export default function CrmAutomationPage() {
           className="text-2xl font-bold text-white mb-3"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Connectez WhatsApp à votre CRM
+          {t("crm.ctaTitle")}
         </h2>
         <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-          Dites-nous quel CRM vous utilisez et on vous montre exactement
-          comment l'automatiser — audit gratuit de 30 minutes.
+          {t("crm.ctaSubtitle")}
         </p>
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-8 py-3 font-bold transition-colors"
         >
-          Réserver mon audit gratuit
+          {t("crm.ctaButton")}
           <ArrowRight size={16} />
         </Link>
       </div>

@@ -1,69 +1,55 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowRight, MessageCircle, Target, Zap, Filter } from "lucide-react";
+import { Check, ArrowRight, MessageCircle, Calendar, Clock, RefreshCw } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
-export const metadata: Metadata = {
-  title: "Qualification de leads WhatsApp — Service IA",
-  description: "Qualifiez automatiquement vos leads via WhatsApp grâce à l'IA. Filtrez, scorez et transmettez uniquement les prospects chauds à vos équipes commerciales.",
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+  return {
+    title: t("rdv.title"),
+    description: t("rdv.subtitle"),
+  };
+}
 
 const features = [
-  "Questionnaire de qualification automatique",
-  "Scoring IA en temps réel selon vos critères",
-  "Transmission automatique au CRM (HubSpot, Salesforce, Notion)",
-  "Relances automatiques des prospects inactifs",
-  "Gestion des vocaux et photos pour qualifier",
-  "Rapports hebdomadaires de performance",
+  "Prise de RDV directement dans la conversation WhatsApp",
+  "Int\u00e9gration Cal.com v2 \u2014 disponibilit\u00e9s en temps r\u00e9el",
+  "Confirmations et rappels automatiques",
+  "Annulation et reprogrammation en libre-service",
+  "Synchronisation Google Calendar et Outlook",
+  "Gestion multi-agendas et multi-intervenants",
+  "Fuseau horaire d\u00e9tect\u00e9 automatiquement",
+  "Envoi de lien de visio (Zoom, Google Meet) automatique",
 ];
 
-const steps = [
-  {
-    icon: MessageCircle,
-    title: "Le prospect envoie un message",
-    desc: "Via votre numéro WhatsApp Business — texte, vocal ou photo.",
-  },
-  {
-    icon: Filter,
-    title: "L'IA pose les bonnes questions",
-    desc: "Budget, besoin, délai, autorité — adapté à votre secteur.",
-  },
-  {
-    icon: Target,
-    title: "Score de qualification calculé",
-    desc: "Chaque prospect reçoit un score selon vos critères métier.",
-  },
-  {
-    icon: Zap,
-    title: "Transmission au commercial",
-    desc: "Seuls les prospects qualifiés arrivent dans votre CRM ou Slack.",
-  },
-];
+export default async function PriseDeRdvPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
 
-export default function QualificationLeadsPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
 
       {/* Header */}
       <div className="text-center mb-16">
         <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-          Service
+          {t("common.service")}
         </span>
         <h1
           className="text-4xl sm:text-5xl font-extrabold text-white mb-4"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Qualification de leads WhatsApp
+          {t("rdv.title")}
         </h1>
         <p className="text-slate-400 text-xl max-w-2xl mx-auto">
-          Filtrez vos prospects automatiquement. Votre équipe commerciale ne parle
-          qu'aux leads vraiment intéressés.
+          {t("rdv.subtitle")}
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center mt-8">
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-6 py-3 font-bold transition-colors"
           >
-            Audit gratuit
+            {t("common.auditGratuit")}
             <ArrowRight size={16} />
           </Link>
           <a
@@ -73,25 +59,44 @@ export default function QualificationLeadsPage() {
             className="inline-flex items-center justify-center gap-2 bg-surface border border-surface-2 hover:border-wa/40 text-white rounded-xl px-6 py-3 font-medium transition-colors"
           >
             <MessageCircle size={16} />
-            Écrire sur WhatsApp
+            {t("common.ecrireWhatsapp")}
           </a>
         </div>
       </div>
 
-      {/* How it works */}
+      {/* Steps */}
       <div className="mb-16">
         <h2
           className="text-2xl font-bold text-white text-center mb-8"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Comment ça fonctionne
+          {t("rdv.stepsTitle")}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {steps.map(({ icon: Icon, title, desc }, i) => (
-            <div key={title} className="bg-surface border border-surface-2 rounded-xl p-5">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {[
+            {
+              icon: MessageCircle,
+              step: "1",
+              title: "Le client demande un RDV",
+              desc: "\"Je veux prendre un RDV\" \u2014 l'agent comprend la demande et propose les cr\u00e9neaux disponibles.",
+            },
+            {
+              icon: Calendar,
+              step: "2",
+              title: "Le client choisit son cr\u00e9neau",
+              desc: "L'agent affiche les disponibilit\u00e9s Cal.com en temps r\u00e9el. Le client r\u00e9pond avec son choix.",
+            },
+            {
+              icon: Clock,
+              step: "3",
+              title: "Confirmation automatique",
+              desc: "RDV cr\u00e9\u00e9 dans l'agenda, confirmation WhatsApp + email, rappel 24h avant.",
+            },
+          ].map(({ icon: Icon, step, title, desc }) => (
+            <div key={step} className="bg-surface border border-surface-2 rounded-xl p-5">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-7 h-7 rounded-full bg-wa/10 border border-wa/30 flex items-center justify-center shrink-0">
-                  <span className="text-wa text-xs font-bold">{i + 1}</span>
+                  <span className="text-wa text-xs font-bold">{step}</span>
                 </div>
                 <Icon size={16} className="text-wa" />
               </div>
@@ -108,7 +113,7 @@ export default function QualificationLeadsPage() {
           className="text-2xl font-bold text-white mb-6"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Ce qui est inclus
+          {t("rdv.includedTitle")}
         </h2>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {features.map((f) => (
@@ -126,17 +131,16 @@ export default function QualificationLeadsPage() {
           className="text-2xl font-bold text-white mb-3"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Prêt à qualifier vos leads automatiquement ?
+          {t("rdv.ctaTitle")}
         </h2>
         <p className="text-slate-400 mb-6 max-w-xl mx-auto">
-          Réservez un audit gratuit de 30 minutes — on analyse vos flux et on vous
-          propose une solution sur-mesure sous 48h.
+          {t("rdv.ctaSubtitle")}
         </p>
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-8 py-3 font-bold transition-colors"
         >
-          Réserver mon audit gratuit
+          {t("rdv.ctaButton")}
           <ArrowRight size={16} />
         </Link>
       </div>

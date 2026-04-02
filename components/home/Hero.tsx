@@ -1,7 +1,10 @@
+"use client";
 import { MessageCircle, Zap, Shield } from "lucide-react";
+import { useTranslations } from "next-intl";
 import WhatsAppMockup from "@/components/home/WhatsAppMockup";
 
 export default function Hero() {
+  const t = useTranslations("hero");
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "33600000000";
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || "/contact";
 
@@ -42,34 +45,33 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-8">
             <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-            Technologie exclusive — Vision IA + Vocaux
+            {t("badge")}
           </div>
 
           <h1
             className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] mb-6 tracking-tight"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
-            L&apos;agent IA
+            {t("title1")}
             <br />
-            <span className="text-gradient-wa">WhatsApp</span>
+            <span className="text-gradient-wa">{t("title2")}</span>
             <br />
-            qui vous voit.
+            {t("title3")}
           </h1>
 
           <p className="text-xl text-slate-400 mb-4 leading-relaxed max-w-lg">
-            Vocaux, photos, documents — votre agent répond à tout, 24h/24.
+            {t("subtitle")}
           </p>
           <p className="text-slate-500 mb-10 leading-relaxed max-w-lg">
-            Le seul agent capable d&apos;analyser les images et de transcrire les
-            messages vocaux de vos clients. En temps réel. Sans intervention humaine.
+            {t("description")}
           </p>
 
           {/* Feature pills */}
           <div className="flex flex-wrap gap-3 mb-10">
             {[
-              { label: "Vision IA", color: "wa", desc: "Analyse les photos" },
-              { label: "Audio IA", color: "indigo", desc: "Transcrit les vocaux" },
-              { label: "RGPD", color: "emerald", desc: "Conforme & sécurisé" },
+              { label: t("pillVision"), color: "wa", desc: t("pillVisionDesc") },
+              { label: t("pillAudio"), color: "indigo", desc: t("pillAudioDesc") },
+              { label: t("pillRgpd"), color: "emerald", desc: t("pillRgpdDesc") },
             ].map((f) => (
               <div
                 key={f.label}
@@ -91,7 +93,7 @@ export default function Hero() {
               className="group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
             >
               <Zap size={20} className="group-hover:scale-110 transition-transform" />
-              Audit gratuit
+              {t("ctaAudit")}
             </a>
             <a
               href={`https://wa.me/${waNumber}`}
@@ -100,16 +102,16 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-3 bg-surface border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
             >
               <MessageCircle size={20} className="text-wa" />
-              Écrire sur WhatsApp
+              {t("ctaWhatsapp")}
             </a>
           </div>
 
           {/* Trust badges */}
           <div className="flex items-center gap-6 mt-10 pt-8 border-t border-surface-2">
             {[
-              { icon: Shield, label: "RGPD compliant" },
-              { icon: Zap, label: "Déployé en 2 semaines" },
-              { icon: MessageCircle, label: "Support dédié" },
+              { icon: Shield, label: t("trustRgpd") },
+              { icon: Zap, label: t("trustDeployed") },
+              { icon: MessageCircle, label: t("trustSupport") },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-xs text-slate-500">
                 <Icon size={12} className="text-wa" />

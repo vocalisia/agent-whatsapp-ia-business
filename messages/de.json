@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "services": "Leistungen",
+    "tarifs": "Preise",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "audit": "Kostenloses Audit",
+    "whatsapp": "WhatsApp"
+  },
+  "hero": {
+    "badge": "Exklusive Technologie — KI-Vision + Sprachnachrichten",
+    "title1": "Der KI-Agent",
+    "title2": "WhatsApp",
+    "title3": "der Sie sieht.",
+    "subtitle": "Sprachnachrichten, Fotos, Dokumente — Ihr Agent beantwortet alles, rund um die Uhr.",
+    "description": "Der einzige Agent, der Bilder analysieren und Sprachnachrichten Ihrer Kunden transkribieren kann. In Echtzeit. Ohne menschliches Eingreifen.",
+    "pillVision": "KI-Vision",
+    "pillVisionDesc": "Analysiert Fotos",
+    "pillAudio": "KI-Audio",
+    "pillAudioDesc": "Transkribiert Sprachnachrichten",
+    "pillRgpd": "DSGVO",
+    "pillRgpdDesc": "Konform & sicher",
+    "ctaAudit": "Kostenloses Audit",
+    "ctaWhatsapp": "Auf WhatsApp schreiben",
+    "trustRgpd": "DSGVO-konform",
+    "trustDeployed": "In 2 Wochen einsatzbereit",
+    "trustSupport": "Persönlicher Support"
+  },
+  "stats": {
+    "costLabel": "Kundenmanagement-Kosten",
+    "productivityLabel": "Team-Produktivität",
+    "responseLabel": "Antwortrate",
+    "availabilityLabel": "Gesamtverfügbarkeit"
+  },
+  "problem": {
+    "eyebrow": "Das Problem",
+    "title": "Jede unbeantwortete Nachricht = ein verlorener Kunde",
+    "items": [
+      { "title": "Ignorierte Sprachnachrichten", "description": "Ihre Kunden senden WhatsApp-Sprachnachrichten. Niemand hat Zeit, sie anzuhören.", "statLabel": "der Sprachnachrichten ungehört" },
+      { "title": "Unbearbeitete Fotos", "description": "Der Kunde sendet ein Foto seines Dokuments. Die manuelle Bearbeitung dauert Stunden.", "statLabel": "durchschnittliche Bearbeitungszeit" },
+      { "title": "Nachts verlorene Leads", "description": "70 % der Nachrichten kommen ausserhalb der Geschäftszeiten. Ohne schnelle Antwort: Auf Wiedersehen, Interessent.", "statLabel": "der Nachrichten ausserhalb der Geschäftszeiten" },
+      { "title": "Überlastetes Team", "description": "Ihre Teams bearbeiten sich wiederholende Nachrichten, statt sich auf Wertschöpfung zu konzentrieren.", "statLabel": "verlorene Zeit" }
+    ]
+  },
+  "features": {
+    "eyebrow": "Funktionen",
+    "title": "Was sonst niemand bietet",
+    "subtitle": "Exklusive multimodale Fähigkeiten auf dem WhatsApp Business-Markt.",
+    "exclusive": "Exklusiv",
+    "items": [
+      { "title": "KI-Vision", "subtitle": "Analysiert Fotos", "description": "Der Kunde sendet ein Foto (Dokument, Immobilie, technisches Problem). Der Agent sieht, versteht und antwortet über OpenAI Vision / Claude / Gemini." },
+      { "title": "KI-Audio", "subtitle": "Transkribiert Sprachnachrichten", "description": "Der Agent transkribiert WhatsApp-Sprachnachrichten automatisch und antwortet kontextbezogen in der Sprache des Kunden." },
+      { "title": "Alle Medientypen", "subtitle": "Bilder, Audio, Video, Dokumente", "description": "Alles wird verarbeitet, gespeichert und ist zugänglich. Mitarbeiter können auch Dateien über die Oberfläche an Kunden senden." },
+      { "title": "Auto-DSGVO", "subtitle": "Konfigurierbare Aufbewahrung", "description": "Automatische geplante Bereinigung nach Datentyp. EU-Hosting verfügbar. Mühelose Konformität." },
+      { "title": "Cal.com v2", "subtitle": "Termine in WhatsApp", "description": "EU-Server, Teams, dynamische Felder. Der Agent bucht Termine direkt im Gespräch." },
+      { "title": "Webhooks", "subtitle": "Unbegrenzte Automatisierungen", "description": "Vollständiges Transkript + KI-Bewertung am Ende jedes Gesprächs. Verbindet HubSpot, Salesforce, Notion." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "KI-Architektur",
+    "title": "Wie der Agent jede Nachricht verarbeitet",
+    "messageLabel": "WhatsApp-Nachricht",
+    "messageSub": "Kunde → Agent",
+    "typeDetected": "Nachrichtentyp erkannt?",
+    "photoLabel": "Foto / Dokument",
+    "photoSub": "KI-Vision",
+    "audioLabel": "Sprachnachricht",
+    "audioSub": "KI-Audio",
+    "textLabel": "Text",
+    "textSub": "NLP-Agent",
+    "agentLabel": "KI-Agent",
+    "agentSub": "Analysiert & generiert Antwort",
+    "responseLabel": "Antwort gesendet",
+    "responseSub": "< 3 Sekunden",
+    "actionsTriggered": "Automatische Aktionen ausgelöst",
+    "crmLabel": "CRM",
+    "crmSub": "Lead erstellt",
+    "calLabel": "Cal.com-Termin",
+    "calSub": "Kalender aktualisiert",
+    "notifLabel": "Benachrichtigung",
+    "notifSub": "Team informiert",
+    "legendMain": "Hauptablauf",
+    "legendAi": "KI-Module",
+    "legendNlp": "NLP-Verarbeitung"
+  },
+  "pricing": {
+    "eyebrow": "Pakete",
+    "title": "Eine Lösung, die zu Ihnen passt",
+    "subtitle": "Keine festen Preise — jedes Projekt ist einzigartig. Lassen Sie uns sprechen.",
+    "recommended": "EMPFOHLEN",
+    "ctaAudit": "Kostenloses Audit — 30 Min.",
+    "ctaSubtitle": "30 Minuten · Unverbindlich · Angebot innerhalb 48 Std.",
+    "plans": [
+      { "name": "Starter", "features": ["1 WhatsApp-Agent", "1 Szenario", "1 Integration", "E-Mail-Support"] },
+      { "name": "Pro", "features": ["Mehrere Szenarien", "Meta-Vorlagen", "CRM + Kalender", "KI-Vision + Sprachnachrichten", "Automatische Workflows", "Support 48 Std."] },
+      { "name": "Enterprise", "features": ["Massgeschneiderte Lösung", "Mehrere Nummern", "Unbegrenzte Integrationen", "Prioritäts-SLA", "Support rund um die Uhr"] }
+    ]
+  },
+  "finalCta": {
+    "badge": "Bereit in 2–3 Wochen",
+    "title1": "Hören Sie auf,",
+    "title2": "Kunden zu verlieren",
+    "title3": "um 3 Uhr nachts.",
+    "subtitle": "30 Minuten zur Analyse Ihrer Anforderungen. Angebot innerhalb 48 Std. Bereitstellung in 2–3 Wochen.",
+    "ctaPrimary": "Kostenlose Diagnose buchen",
+    "ctaSecondary": "Jetzt schreiben",
+    "trust1": "Antwort innerhalb 24 Std.",
+    "trust2": "Kostenloses Angebot",
+    "trust3": "Unverbindlich"
+  },
+  "footer": {
+    "tagline": "Der einzige WhatsApp-KI-Agent, der Ihre Kunden sieht, hört und versteht.",
+    "servicesTitle": "Leistungen",
+    "serviceAgent": "WhatsApp-KI-Agent",
+    "serviceLeads": "Lead-Qualifizierung",
+    "serviceCampaigns": "WhatsApp-Kampagnen",
+    "resourcesTitle": "Ressourcen",
+    "legalTitle": "Rechtliches",
+    "legalMentions": "Impressum",
+    "legalPrivacy": "Datenschutzerklärung",
+    "copyright": "AgenticWhatsup. Alle Rechte vorbehalten.",
+    "mobileWhatsapp": "WhatsApp",
+    "mobileBook": "Buchen"
+  },
+  "contact": {
+    "badge": "Strategiegespräch — 100 % kostenlos",
+    "title": "Buchen Sie Ihr WhatsApp-Audit",
+    "subtitle": "30 Minuten, um Ihre Situation zu analysieren und genau zu bestimmen, was ein KI-Agent für Sie tun kann.",
+    "whatTitle": "Was wir gemeinsam machen",
+    "bullets": [
+      "Diagnose Ihrer WhatsApp-Nachrichtenflüsse",
+      "Identifikation möglicher Automatisierungen",
+      "Machbarkeitsstudie basierend auf Ihren Tools (CRM, Kalender)",
+      "Konkretes, detailliertes Angebot innerhalb 48 Std.",
+      "Unverbindlich — 100 % kostenlos"
+    ],
+    "guaranteeTime": "30 Minuten",
+    "guaranteeTimeSub": "Zeit wird eingehalten",
+    "guaranteeConfidential": "Vertraulich",
+    "guaranteeConfidentialSub": "NDA auf Anfrage",
+    "guaranteeResponse": "Antwort innerhalb 48 Std.",
+    "guaranteeResponseSub": "detailliertes Angebot",
+    "testimonial": "In 30 Minuten haben sie 3 Automatisierungen identifiziert, die ich nicht gesehen hatte. Das Angebot war präzise und realistisch.",
+    "testimonialAuthor": "Karim B. — E-Commerce, Paris",
+    "calTitle": "Wählen Sie Ihren Termin",
+    "calPowered": "Powered by iClosed",
+    "directContact": "Direktkontakt"
+  },
+  "tarifs": {
+    "eyebrow": "Pakete",
+    "title": "Jedes Projekt ist einzigartig",
+    "subtitle": "Keine starre Preisliste. Wir besprechen Ihre Anforderungen und schlagen die passende Lösung vor — nicht mehr, nicht weniger.",
+    "recommended": "EMPFOHLEN",
+    "plans": [
+      { "name": "Starter", "description": "KMU, die mit WhatsApp-Automatisierung starten.", "features": ["1 WhatsApp Business-Agent", "1 Gesprächsszenario", "1 Integration (CRM oder Kalender)", "Automatische Textantworten", "Monitoring-Dashboard", "E-Mail-Support", "Schulung inklusive"] },
+      { "name": "Pro", "description": "Die Komplettlösung für vollständige Automatisierung.", "features": ["Mehrere Gesprächsszenarien", "Vorab genehmigte Meta-Vorlagen", "CRM + Kalender (Cal.com)", "KI-Vision — Fotoanalyse", "Automatische Sprachtranskription", "Workflows & Webhooks", "DSGVO-Konformität", "Garantierter Support 48 Std.", "Persönliches Onboarding"] },
+      { "name": "Enterprise", "description": "Massgeschneiderte Lösung für grosse Organisationen.", "features": ["Vollständig individuelle Architektur", "Mehrere WhatsApp-Nummern", "Unbegrenzte Integrationen", "Garantiertes Prioritäts-SLA", "Dediziertes EU-Hosting", "Persönlicher Support rund um die Uhr", "Kontinuierliches Audit und Optimierung", "Erweiterte Teamschulung"] }
+    ],
+    "sessionEyebrow": "Strategiegespräch",
+    "sessionTitle": "Strategiegespräch — Ihr WhatsApp-KI-Agent",
+    "sessionSubtitle": "30 Minuten, um Ihre Abläufe zu analysieren, mögliche Automatisierungen zu identifizieren und Ihre Strategie zu definieren. Kostenlose Diagnose, unverbindlich.",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faqs": [
+      { "question": "Beinhalten die Preise die Einrichtung?", "answer": "Ja. Jedes Angebot umfasst Entwicklung, WhatsApp Business-Konfiguration, Tests und vollständige Bereitstellung. Keine Überraschungen." },
+      { "question": "Gibt es laufende Kosten?", "answer": "Ja, ein monatliches Paket deckt Hosting, API-Aufrufe (LLM) und Wartung ab. Dieses Paket ist in unserem Angebot enthalten." },
+      { "question": "Wie lange dauert die Inbetriebnahme?", "answer": "In der Regel 2 bis 3 Wochen für den Pro-Plan. Der Starter-Plan kann in 1 Woche bereitgestellt werden. Enterprise hängt von der Komplexität ab." }
+    ]
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Diese Seite existiert nicht oder wurde verschoben. Kehren Sie zur Startseite zurück oder kontaktieren Sie uns direkt.",
+    "home": "Zurück zur Startseite",
+    "contact": "Kontaktieren Sie uns"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Anleitungen und Tipps zur Automatisierung Ihres WhatsApp Business mit KI.",
+    "readArticle": "Artikel lesen →",
+    "backToBlog": "Zurück zum Blog",
+    "reading": "Lesezeit",
+    "ctaTitle": "Bereit, Ihr WhatsApp zu automatisieren?",
+    "ctaSubtitle": "Kostenloses 30-Minuten-Audit — Angebot innerhalb 48 Std.",
+    "ctaButton": "Mein kostenloses Audit buchen"
+  },
+  "services": {
+    "qualificationLeads": {
+      "title": "WhatsApp-Lead-Qualifizierung",
+      "subtitle": "Filtern Sie Ihre Interessenten automatisch. Ihr Vertriebsteam spricht nur mit wirklich interessierten Leads.",
+      "howTitle": "So funktioniert es",
+      "includedTitle": "Was enthalten ist",
+      "ctaTitle": "Bereit, Ihre Leads automatisch zu qualifizieren?",
+      "ctaSubtitle": "Buchen Sie ein kostenloses 30-Minuten-Audit — wir analysieren Ihre Abläufe und schlagen eine massgeschneiderte Lösung innerhalb 48 Std. vor.",
+      "ctaButton": "Mein kostenloses Audit buchen"
+    },
+    "campagnes": {
+      "title": "Ausgehende WhatsApp-Kampagnen",
+      "subtitle": "Erreichen Sie Ihre Kunden dort, wo sie wirklich lesen. WhatsApp zeigt 98 % Öffnungsrate — 5x mehr als E-Mail.",
+      "useCasesTitle": "Anwendungsfälle",
+      "includedTitle": "Was enthalten ist",
+      "ctaTitle": "Starten Sie Ihre erste WhatsApp-Kampagne",
+      "ctaSubtitle": "Wir kümmern uns um alles: Vorlagenerstellung, Meta-Genehmigung, Segmentierung und Versand. Start in 1 bis 2 Wochen.",
+      "ctaButton": "Mein kostenloses Audit buchen"
+    },
+    "crm": {
+      "title": "CRM-Automatisierung",
+      "subtitle": "Ihr WhatsApp-Agent aktualisiert Ihr CRM in Echtzeit. Schluss mit manueller Eingabe — jedes Gespräch bereichert Ihre Datenbank.",
+      "howTitle": "So funktioniert es",
+      "integrationsTitle": "Verfügbare Integrationen",
+      "includedTitle": "Was enthalten ist",
+      "ctaTitle": "Verbinden Sie WhatsApp mit Ihrem CRM",
+      "ctaSubtitle": "Sagen Sie uns, welches CRM Sie nutzen, und wir zeigen Ihnen genau, wie Sie es automatisieren — kostenloses 30-Minuten-Audit.",
+      "ctaButton": "Mein kostenloses Audit buchen"
+    },
+    "rdv": {
+      "title": "Terminbuchung über WhatsApp",
+      "subtitle": "Ihre Kunden buchen einen Termin, ohne WhatsApp zu verlassen. Schluss mit dem Hin und Her bei der Terminfindung.",
+      "stepsTitle": "In 3 Schritten",
+      "includedTitle": "Was enthalten ist",
+      "ctaTitle": "Automatisieren Sie Ihre Terminbuchung",
+      "ctaSubtitle": "Bereitstellung in weniger als einer Woche. Buchen Sie ein kostenloses Audit und wir richten alles gemeinsam ein.",
+      "ctaButton": "Mein kostenloses Audit buchen"
+    },
+    "common": {
+      "auditGratuit": "Kostenloses Audit",
+      "ecrireWhatsapp": "Auf WhatsApp schreiben",
+      "service": "Leistung"
+    }
+  }
+}

@@ -4,12 +4,13 @@ import { getAllSlugs, getPostBySlug } from "@/lib/mdx";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import { ArrowLeft, Clock, User } from "lucide-react";
+import { getTranslations } from "next-intl/server";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
   try {
     const { slug } = await params;
     const { meta } = getPostBySlug(slug);
@@ -29,8 +30,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 }
 
-export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "blog" });
+
   let post;
   try {
     post = getPostBySlug(slug);
@@ -66,8 +69,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Link href="/blog" className="inline-flex items-center gap-2 text-slate-400 hover:text-wa transition-colors text-sm mb-8">
-        <ArrowLeft size={16} />Retour au blog
+      <Link href={`/${locale}/blog`} className="inline-flex items-center gap-2 text-slate-400 hover:text-wa transition-colors text-sm mb-8">
+        <ArrowLeft size={16} />{t("backToBlog")}
       </Link>
 
       {/* Cover */}
@@ -81,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {new Date(post.meta.date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
         </span>
         {post.meta.readTime && (
-          <span className="flex items-center gap-1"><Clock size={11} />{post.meta.readTime} de lecture</span>
+          <span className="flex items-center gap-1"><Clock size={11} />{post.meta.readTime} {t("reading")}</span>
         )}
         {post.meta.author && (
           <span className="flex items-center gap-1"><User size={11} />{post.meta.author}</span>
@@ -99,14 +102,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* CTA fin d'article */}
       <div className="mt-16 bg-wa/5 border border-wa/20 rounded-2xl p-8 text-center">
         <p className="text-white font-bold text-lg mb-2" style={{ fontFamily: "Onest, sans-serif" }}>
-          Prêt à automatiser votre WhatsApp ?
+          {t("ctaTitle")}
         </p>
-        <p className="text-slate-400 text-sm mb-5">Audit gratuit de 30 minutes — proposition sous 48h.</p>
+        <p className="text-slate-400 text-sm mb-5">{t("ctaSubtitle")}</p>
         <Link
-          href="/contact"
+          href={`/${locale}/contact`}
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-6 py-3 font-bold text-sm transition-colors"
         >
-          Réserver mon audit gratuit
+          {t("ctaButton")}
         </Link>
       </div>
     </div>

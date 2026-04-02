@@ -1,22 +1,26 @@
+"use client";
 import Link from "next/link";
 import { MessageCircle } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 import MobileNav from "./MobileNav";
 
-const links = [
-  { href: "/services/agent-ia-whatsapp", label: "Services" },
-  { href: "/tarifs", label: "Tarifs" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
-];
-
 export default function Header() {
+  const t = useTranslations("nav");
+  const locale = useLocale();
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
+
+  const links = [
+    { href: `/${locale}/services/agent-ia-whatsapp`, label: t("services") },
+    { href: `/${locale}/tarifs`, label: t("tarifs") },
+    { href: `/${locale}/blog`, label: t("blog") },
+    { href: `/${locale}/contact`, label: t("contact") },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2 font-bold text-xl">
+          <Link href={`/${locale}`} className="flex items-center gap-2 font-bold text-xl">
             <MessageCircle className="text-wa" size={24} />
             <span className="text-white">
               Agentic<span className="text-wa">Whatsup</span>
@@ -50,12 +54,32 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
+          {/* Language switcher */}
+          <div className="flex items-center gap-1 bg-surface border border-surface-2 rounded-lg p-0.5">
+            {([
+              { code: "fr", flag: "🇫🇷" },
+              { code: "en", flag: "🇬🇧" },
+              { code: "de", flag: "🇩🇪" },
+            ] as const).map((l) => (
+              <Link
+                key={l.code}
+                href={`/${l.code}`}
+                className={`px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                  locale === l.code
+                    ? "bg-wa/20 text-wa"
+                    : "text-slate-500 hover:text-white"
+                }`}
+              >
+                {l.flag}
+              </Link>
+            ))}
+          </div>
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
           >
             <MessageCircle size={16} />
-            Audit gratuit
+            {t("audit")}
           </Link>
         </div>
         <MobileNav />

@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 function useCountUp(target: number, duration: number = 2000, start: boolean = false) {
   const [count, setCount] = useState(0);
@@ -21,14 +22,8 @@ function useCountUp(target: number, duration: number = 2000, start: boolean = fa
   return count;
 }
 
-const stats = [
-  { value: 60, prefix: "-", suffix: "%", label: "Coûts de gestion client" },
-  { value: 40, prefix: "+", suffix: "%", label: "Productivité des équipes" },
-  { value: 30, prefix: "+", suffix: "%", label: "Taux de réponse" },
-  { value: 0, prefix: "", suffix: "24/7", label: "Disponibilité totale", isText: true },
-];
-
 export default function StatsSection() {
+  const t = useTranslations("stats");
   const [started, setStarted] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -40,6 +35,13 @@ export default function StatsSection() {
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
   }, []);
+
+  const stats = [
+    { value: 60, prefix: "-", suffix: "%", label: t("costLabel") },
+    { value: 40, prefix: "+", suffix: "%", label: t("productivityLabel") },
+    { value: 30, prefix: "+", suffix: "%", label: t("responseLabel") },
+    { value: 0, prefix: "", suffix: "24/7", label: t("availabilityLabel"), isText: true },
+  ];
 
   return (
     <section ref={ref} className="py-16 relative overflow-hidden">
