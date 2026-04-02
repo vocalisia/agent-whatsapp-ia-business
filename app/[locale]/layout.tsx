@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -7,6 +6,8 @@ import { routing } from "@/lib/i18n/routing";
 import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/shared/CookieBanner";
+import GoogleAnalytics from "@/components/shared/GoogleAnalytics";
 
 const BASE_URL = "https://agentic-whatsup.com";
 
@@ -111,18 +112,12 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1Q10Z6C916"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-1Q10Z6C916');`}
-        </Script>
         <NextIntlClientProvider messages={messages}>
+          <GoogleAnalytics />
           <Header />
           <main className="flex-1 pt-16">{children}</main>
           <Footer />
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -190,7 +190,21 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Prêt à qualifier vos leads automatiquement ?",
       "ctaSubtitle": "Réservez un audit gratuit de 30 minutes — on analyse vos flux et on vous propose une solution sur-mesure sous 48h.",
-      "ctaButton": "Réserver mon audit gratuit"
+      "ctaButton": "Réserver mon audit gratuit",
+      "features": [
+        "Questionnaire de qualification automatique",
+        "Scoring IA en temps réel selon vos critères",
+        "Transmission automatique au CRM (HubSpot, Salesforce, Notion)",
+        "Relances automatiques des prospects inactifs",
+        "Gestion des vocaux et photos pour qualifier",
+        "Rapports hebdomadaires de performance"
+      ],
+      "steps": [
+        { "title": "Le prospect envoie un message", "desc": "Via votre numéro WhatsApp Business — texte, vocal ou photo." },
+        { "title": "L'IA pose les bonnes questions", "desc": "Budget, besoin, délai, autorité — adapté à votre secteur." },
+        { "title": "Score de qualification calculé", "desc": "Chaque prospect reçoit un score selon vos critères métier." },
+        { "title": "Transmission au commercial", "desc": "Seuls les prospects qualifiés arrivent dans votre CRM ou Slack." }
+      ]
     },
     "campagnes": {
       "title": "Campagnes WhatsApp sortantes",
@@ -199,7 +213,23 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Lancez votre première campagne WhatsApp",
       "ctaSubtitle": "On s'occupe de tout : rédaction des templates, validation Meta, segmentation et envoi. Démarrage en 1 à 2 semaines.",
-      "ctaButton": "Réserver mon audit gratuit"
+      "ctaButton": "Réserver mon audit gratuit",
+      "features": [
+        "Templates Meta pré-approuvés pour vos envois",
+        "Personnalisation dynamique (nom, entreprise, produit)",
+        "Segmentation avancée de vos contacts",
+        "Suivi des taux d'ouverture et de réponse",
+        "Automatisation des séquences de relance",
+        "Conformité RGPD et opt-out automatique",
+        "Intégration CRM pour ciblage précis",
+        "Rapports de performance détaillés"
+      ],
+      "useCases": [
+        { "title": "Relance de prospects", "desc": "Réactivez vos leads froids avec des messages personnalisés au bon moment." },
+        { "title": "Onboarding clients", "desc": "Accueillez chaque nouveau client avec une séquence automatisée bienvenue." },
+        { "title": "Promotions & offres", "desc": "Diffusez vos offres ponctuelles à des segments précis de votre base." },
+        { "title": "Notifications transactionnelles", "desc": "Confirmations de commande, livraison, rappels de RDV — automatiquement." }
+      ]
     },
     "crm": {
       "title": "Automatisation CRM",
@@ -209,7 +239,30 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Connectez WhatsApp à votre CRM",
       "ctaSubtitle": "Dites-nous quel CRM vous utilisez et on vous montre exactement comment l'automatiser — audit gratuit de 30 minutes.",
-      "ctaButton": "Réserver mon audit gratuit"
+      "ctaButton": "Réserver mon audit gratuit",
+      "features": [
+        "Synchronisation bidirectionnelle avec HubSpot",
+        "Création automatique de contacts et deals Salesforce",
+        "Mise à jour des propriétés CRM depuis les conversations",
+        "Intégration Notion pour les équipes no-code",
+        "Webhooks entrants et sortants personnalisables",
+        "Logs d'activité WhatsApp dans le CRM",
+        "Alertes commerciales en temps réel (Slack, email)",
+        "Mapping champs personnalisé selon votre CRM"
+      ],
+      "steps": [
+        { "title": "Conversation WhatsApp", "desc": "Le client répond à votre agent IA — questions, informations, demandes." },
+        { "title": "Traitement IA", "desc": "L'agent extrait les données clés : nom, budget, besoin, qualification." },
+        { "title": "Mise à jour CRM", "desc": "Les données sont poussées dans votre CRM instantanément via webhook." }
+      ],
+      "integrations": [
+        { "name": "HubSpot", "desc": "Contacts, deals, activités, séquences" },
+        { "name": "Salesforce", "desc": "Leads, opportunities, tasks, notes" },
+        { "name": "Notion", "desc": "Bases de données, pages, propriétés" },
+        { "name": "Airtable", "desc": "Tables, records, vues filtrées" },
+        { "name": "Make / Zapier", "desc": "Automatisations via webhooks" },
+        { "name": "Cal.com", "desc": "Prise de RDV directement dans WhatsApp" }
+      ]
     },
     "rdv": {
       "title": "Prise de RDV via WhatsApp",
@@ -218,12 +271,155 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Automatisez vos prises de RDV",
       "ctaSubtitle": "Déploiement en moins d'une semaine. Réservez un audit gratuit et on configure tout ensemble.",
-      "ctaButton": "Réserver mon audit gratuit"
+      "ctaButton": "Réserver mon audit gratuit",
+      "features": [
+        "Prise de RDV directement dans la conversation WhatsApp",
+        "Intégration Cal.com v2 — disponibilités en temps réel",
+        "Confirmations et rappels automatiques",
+        "Annulation et reprogrammation en libre-service",
+        "Synchronisation Google Calendar et Outlook",
+        "Gestion multi-agendas et multi-intervenants",
+        "Fuseau horaire détecté automatiquement",
+        "Envoi de lien de visio (Zoom, Google Meet) automatique"
+      ],
+      "steps": [
+        { "title": "Le client demande un RDV", "desc": "\"Je veux prendre un RDV\" — l'agent comprend la demande et propose les créneaux disponibles." },
+        { "title": "Le client choisit son créneau", "desc": "L'agent affiche les disponibilités Cal.com en temps réel. Le client répond avec son choix." },
+        { "title": "Confirmation automatique", "desc": "RDV créé dans l'agenda, confirmation WhatsApp + email, rappel 24h avant." }
+      ]
     },
     "common": {
       "auditGratuit": "Audit gratuit",
       "ecrireWhatsapp": "Écrire sur WhatsApp",
       "service": "Service"
     }
+  },
+  "legal": {
+    "title": "Mentions légales",
+    "metaDescription": "Mentions légales d'AgenticWhatsup — informations légales, éditeur, hébergeur et propriété intellectuelle.",
+    "editorTitle": "Éditeur du site",
+    "editorIntro": "Le site <strong>agentic-whatsup.com</strong> est édité par :",
+    "companyLabel": "Raison sociale",
+    "companyValue": "VAULT 369 LTD",
+    "legalFormLabel": "Forme juridique",
+    "legalFormValue": "Private Limited Company (Ltd)",
+    "regNumberLabel": "Numéro d'immatriculation",
+    "regNumberValue": "16952492",
+    "addressLabel": "Siège social",
+    "addressValue": "128 City Road, EC1V 2NX, Londres, Royaume-Uni",
+    "swissOfficeLabel": "Bureau en Suisse",
+    "swissOfficeValue": "Chem. Saint-Hubert 2, 1950 Sion, Suisse",
+    "contactLabel": "Contact",
+    "whatsappLabel": "WhatsApp",
+    "directorTitle": "Directeur de la publication",
+    "directorText": "Le représentant légal de VAULT 369 LTD.",
+    "hostingTitle": "Hébergement",
+    "hostingIntro": "Le site est hébergé par :",
+    "hostingCompanyLabel": "Société",
+    "hostingCompanyValue": "Vercel Inc.",
+    "hostingAddressLabel": "Adresse",
+    "hostingAddressValue": "340 Pine Street, Suite 900, San Francisco, CA 94104, États-Unis",
+    "hostingSiteLabel": "Site",
+    "ipTitle": "Propriété intellectuelle",
+    "ipText1": "L'ensemble du contenu de ce site (textes, images, graphiques, logo, icônes, sons, logiciels, etc.) est la propriété exclusive de <strong>VAULT 369 LTD</strong> ou de ses partenaires, et est protégé par les lois en vigueur sur la propriété intellectuelle.",
+    "ipText2": "Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite sans autorisation écrite préalable de VAULT 369 LTD.",
+    "liabilityTitle": "Limitation de responsabilité",
+    "liabilityText1": "VAULT 369 LTD s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site, dont elle se réserve le droit de corriger le contenu à tout moment et sans préavis. VAULT 369 LTD ne peut être tenu responsable de l'utilisation faite des informations disponibles sur ce site, ni des dommages directs ou indirects pouvant en résulter.",
+    "liabilityText2": "Les liens hypertextes présents sur le site peuvent renvoyer vers d'autres sites internet. VAULT 369 LTD n'exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "Ce site utilise des cookies à des fins d'analyse d'audience (Google Analytics) et d'amélioration de l'expérience utilisateur. Vous pouvez désactiver les cookies via les paramètres de votre navigateur. Pour plus d'informations, consultez notre",
+    "cookiesLink": "Politique de confidentialité",
+    "lawTitle": "Droit applicable",
+    "lawText": "Les présentes mentions légales sont régies par le droit anglais. En cas de litige, les tribunaux compétents seront ceux de Londres, Royaume-Uni, sauf disposition légale contraire.",
+    "lastUpdate": "Dernière mise à jour : mars 2026"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "metaDescription": "Politique de confidentialité d'AgenticWhatsup — collecte, utilisation et protection de vos données personnelles conformément au RGPD.",
+    "lastUpdate": "Dernière mise à jour : mars 2026",
+    "controllerTitle": "1. Responsable du traitement",
+    "controllerIntro": "Le responsable du traitement des données collectées via le site <strong>agentic-whatsup.com</strong> est :",
+    "companyLabel": "Société",
+    "companyValue": "VAULT 369 LTD",
+    "regLabel": "Immatriculation",
+    "regValue": "16952492 (Companies House, Royaume-Uni)",
+    "addressLabel": "Adresse",
+    "addressValue": "128 City Road, EC1V 2NX, Londres, Royaume-Uni",
+    "dpoLabel": "Contact DPO",
+    "collectedTitle": "2. Données collectées",
+    "collectedIntro": "Nous collectons les données suivantes :",
+    "collectedCategories": [
+      { "cat": "Formulaire de réservation (iClosed)", "items": "Nom, prénom, adresse e-mail, numéro de téléphone, nom de l'entreprise, message." },
+      { "cat": "Navigation (Google Analytics)", "items": "Pages visitées, durée de session, pays, type d'appareil, source de trafic. Données anonymisées." },
+      { "cat": "WhatsApp Business (service client)", "items": "Messages échangés avec l'agent IA : texte, vocaux, photos, documents. Traités uniquement pour répondre à vos demandes." }
+    ],
+    "purposeTitle": "3. Finalités du traitement",
+    "purposes": [
+      "Répondre à vos demandes de devis et sessions stratégiques",
+      "Gérer la relation commerciale et le suivi de projet",
+      "Analyser l'audience du site pour améliorer les contenus (analytics anonymisés)",
+      "Envoyer des communications commerciales avec votre consentement",
+      "Respecter nos obligations légales et contractuelles"
+    ],
+    "legalBasisTitle": "4. Base légale",
+    "legalBases": [
+      { "name": "Consentement", "desc": "pour l'envoi de communications marketing et l'utilisation de cookies non essentiels." },
+      { "name": "Exécution d'un contrat", "desc": "pour traiter vos demandes et délivrer nos services." },
+      { "name": "Intérêt légitime", "desc": "pour l'analyse d'audience anonymisée et la sécurité du site." }
+    ],
+    "retentionTitle": "5. Durée de conservation",
+    "retentionCategoryHeader": "Catégorie de données",
+    "retentionDurationHeader": "Durée",
+    "retentionRows": [
+      { "cat": "Données de contact (formulaire)", "duration": "3 ans à compter du dernier contact" },
+      { "cat": "Données contractuelles (clients)", "duration": "5 ans après la fin du contrat" },
+      { "cat": "Messages WhatsApp (agent IA)", "duration": "Configurable selon le projet (90 jours par défaut)" },
+      { "cat": "Données analytics", "duration": "26 mois (configuration Google Analytics standard)" },
+      { "cat": "Cookies essentiels", "duration": "13 mois maximum" }
+    ],
+    "recipientsTitle": "6. Destinataires des données",
+    "recipientsIntro": "Vos données peuvent être transmises aux sous-traitants suivants, dans le strict cadre de la fourniture des services :",
+    "recipients": [
+      { "name": "iClosed", "desc": "outil de prise de rendez-vous en ligne" },
+      { "name": "Google LLC", "desc": "analytics (données anonymisées, serveurs UE)" },
+      { "name": "Meta Platforms Ireland Ltd", "desc": "infrastructure WhatsApp Business API" },
+      { "name": "Vercel Inc.", "desc": "hébergement du site web" }
+    ],
+    "recipientsNoSale": "Aucune donnée n'est vendue à des tiers. Les transferts hors UE sont encadrés par des clauses contractuelles types (CCT) conformes au RGPD.",
+    "rightsTitle": "7. Vos droits (RGPD)",
+    "rightsIntro": "Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679), vous disposez des droits suivants :",
+    "rights": [
+      { "name": "Droit d'accès", "desc": "obtenir une copie de vos données" },
+      { "name": "Droit de rectification", "desc": "corriger des données inexactes" },
+      { "name": "Droit à l'effacement", "desc": "demander la suppression de vos données" },
+      { "name": "Droit à la portabilité", "desc": "recevoir vos données dans un format structuré" },
+      { "name": "Droit d'opposition", "desc": "vous opposer à certains traitements" },
+      { "name": "Droit à la limitation", "desc": "limiter le traitement dans certains cas" }
+    ],
+    "rightsContact": "Pour exercer ces droits, contactez-nous par e-mail :",
+    "rightsDelay": "Nous nous engageons à répondre dans un délai de <strong>30 jours</strong>.",
+    "rightsAuthority": "Vous disposez également du droit d'introduire une réclamation auprès d'une autorité de contrôle compétente (ICO au Royaume-Uni, CNIL en France, PFPDT en Suisse).",
+    "cookiesTitle": "8. Politique cookies",
+    "cookiesIntro": "Ce site utilise les types de cookies suivants :",
+    "cookiesTypeHeader": "Type",
+    "cookiesPurposeHeader": "Finalité",
+    "cookiesConsentHeader": "Consentement",
+    "cookiesRows": [
+      { "type": "Essentiels", "purpose": "Fonctionnement du site", "consent": "Non requis" },
+      { "type": "Analytics (GA4)", "purpose": "Mesure d'audience anonymisée", "consent": "Requis" },
+      { "type": "Tiers (iClosed)", "purpose": "Prise de rendez-vous", "consent": "Requis" }
+    ],
+    "cookiesManage": "Vous pouvez gérer vos préférences cookies à tout moment depuis les paramètres de votre navigateur.",
+    "securityTitle": "9. Sécurité des données",
+    "securityText": "Nous mettons en œuvre les mesures techniques et organisationnelles appropriées pour protéger vos données contre tout accès non autorisé, perte, destruction ou divulgation : chiffrement HTTPS, accès restreint aux données, hébergement sécurisé et audits réguliers.",
+    "changesTitle": "10. Modifications",
+    "changesText": "Cette politique peut être mise à jour à tout moment. Toute modification substantielle sera notifiée via le site. La version en vigueur est celle affichée sur cette page avec la date de mise à jour.",
+    "footer": "Dernière mise à jour : mars 2026 — VAULT 369 LTD"
+  },
+  "cookies": {
+    "message": "Ce site utilise des cookies pour analyser le trafic.",
+    "accept": "Accepter",
+    "refuse": "Refuser",
+    "link": "En savoir plus"
   }
 }

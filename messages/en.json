@@ -190,7 +190,21 @@
       "includedTitle": "What's included",
       "ctaTitle": "Ready to qualify your leads automatically?",
       "ctaSubtitle": "Book a free 30-minute audit — we analyze your flows and propose a custom solution within 48h.",
-      "ctaButton": "Book my free audit"
+      "ctaButton": "Book my free audit",
+      "features": [
+        "Automatic qualification questionnaire",
+        "Real-time AI scoring based on your criteria",
+        "Automatic CRM forwarding (HubSpot, Salesforce, Notion)",
+        "Automatic follow-ups for inactive prospects",
+        "Voice message and photo handling for qualification",
+        "Weekly performance reports"
+      ],
+      "steps": [
+        { "title": "The prospect sends a message", "desc": "Via your WhatsApp Business number — text, voice or photo." },
+        { "title": "The AI asks the right questions", "desc": "Budget, need, timeline, authority — tailored to your industry." },
+        { "title": "Qualification score calculated", "desc": "Each prospect receives a score based on your business criteria." },
+        { "title": "Forwarded to sales", "desc": "Only qualified prospects land in your CRM or Slack." }
+      ]
     },
     "campagnes": {
       "title": "Outbound WhatsApp campaigns",
@@ -199,7 +213,23 @@
       "includedTitle": "What's included",
       "ctaTitle": "Launch your first WhatsApp campaign",
       "ctaSubtitle": "We handle everything: template writing, Meta approval, segmentation and sending. Start in 1 to 2 weeks.",
-      "ctaButton": "Book my free audit"
+      "ctaButton": "Book my free audit",
+      "features": [
+        "Pre-approved Meta templates for your sends",
+        "Dynamic personalization (name, company, product)",
+        "Advanced contact segmentation",
+        "Open and response rate tracking",
+        "Automated follow-up sequences",
+        "GDPR compliance and automatic opt-out",
+        "CRM integration for precise targeting",
+        "Detailed performance reports"
+      ],
+      "useCases": [
+        { "title": "Prospect follow-up", "desc": "Re-engage cold leads with personalized messages at the right time." },
+        { "title": "Client onboarding", "desc": "Welcome every new client with an automated onboarding sequence." },
+        { "title": "Promotions & offers", "desc": "Broadcast targeted offers to specific segments of your database." },
+        { "title": "Transactional notifications", "desc": "Order confirmations, delivery updates, appointment reminders — automatically." }
+      ]
     },
     "crm": {
       "title": "CRM Automation",
@@ -209,7 +239,30 @@
       "includedTitle": "What's included",
       "ctaTitle": "Connect WhatsApp to your CRM",
       "ctaSubtitle": "Tell us which CRM you use and we'll show you exactly how to automate it — free 30-minute audit.",
-      "ctaButton": "Book my free audit"
+      "ctaButton": "Book my free audit",
+      "features": [
+        "Bidirectional sync with HubSpot",
+        "Automatic Salesforce contact and deal creation",
+        "CRM property updates from conversations",
+        "Notion integration for no-code teams",
+        "Customizable inbound and outbound webhooks",
+        "WhatsApp activity logs in your CRM",
+        "Real-time sales alerts (Slack, email)",
+        "Custom field mapping for your CRM"
+      ],
+      "steps": [
+        { "title": "WhatsApp conversation", "desc": "The client responds to your AI agent — questions, information, requests." },
+        { "title": "AI processing", "desc": "The agent extracts key data: name, budget, need, qualification." },
+        { "title": "CRM update", "desc": "Data is pushed to your CRM instantly via webhook." }
+      ],
+      "integrations": [
+        { "name": "HubSpot", "desc": "Contacts, deals, activities, sequences" },
+        { "name": "Salesforce", "desc": "Leads, opportunities, tasks, notes" },
+        { "name": "Notion", "desc": "Databases, pages, properties" },
+        { "name": "Airtable", "desc": "Tables, records, filtered views" },
+        { "name": "Make / Zapier", "desc": "Automations via webhooks" },
+        { "name": "Cal.com", "desc": "Appointment booking directly in WhatsApp" }
+      ]
     },
     "rdv": {
       "title": "Appointment booking via WhatsApp",
@@ -218,12 +271,155 @@
       "includedTitle": "What's included",
       "ctaTitle": "Automate your appointment booking",
       "ctaSubtitle": "Deployment in less than a week. Book a free audit and we'll set up everything together.",
-      "ctaButton": "Book my free audit"
+      "ctaButton": "Book my free audit",
+      "features": [
+        "Appointment booking directly in the WhatsApp conversation",
+        "Cal.com v2 integration — real-time availability",
+        "Automatic confirmations and reminders",
+        "Self-service cancellation and rescheduling",
+        "Google Calendar and Outlook sync",
+        "Multi-calendar and multi-staff management",
+        "Automatic timezone detection",
+        "Auto-generated video call links (Zoom, Google Meet)"
+      ],
+      "steps": [
+        { "title": "The client requests an appointment", "desc": "\"I'd like to book an appointment\" — the agent understands and offers available slots." },
+        { "title": "The client picks a slot", "desc": "The agent shows Cal.com availability in real time. The client replies with their choice." },
+        { "title": "Automatic confirmation", "desc": "Appointment created in the calendar, WhatsApp + email confirmation, 24h reminder." }
+      ]
     },
     "common": {
       "auditGratuit": "Free audit",
       "ecrireWhatsapp": "Write on WhatsApp",
       "service": "Service"
     }
+  },
+  "legal": {
+    "title": "Legal notice",
+    "metaDescription": "Legal notice for AgenticWhatsup — legal information, publisher, hosting and intellectual property.",
+    "editorTitle": "Website publisher",
+    "editorIntro": "The website <strong>agentic-whatsup.com</strong> is published by:",
+    "companyLabel": "Company name",
+    "companyValue": "VAULT 369 LTD",
+    "legalFormLabel": "Legal form",
+    "legalFormValue": "Private Limited Company (Ltd)",
+    "regNumberLabel": "Registration number",
+    "regNumberValue": "16952492",
+    "addressLabel": "Registered office",
+    "addressValue": "128 City Road, EC1V 2NX, London, United Kingdom",
+    "swissOfficeLabel": "Swiss office",
+    "swissOfficeValue": "Chem. Saint-Hubert 2, 1950 Sion, Switzerland",
+    "contactLabel": "Contact",
+    "whatsappLabel": "WhatsApp",
+    "directorTitle": "Publication director",
+    "directorText": "The legal representative of VAULT 369 LTD.",
+    "hostingTitle": "Hosting",
+    "hostingIntro": "The website is hosted by:",
+    "hostingCompanyLabel": "Company",
+    "hostingCompanyValue": "Vercel Inc.",
+    "hostingAddressLabel": "Address",
+    "hostingAddressValue": "340 Pine Street, Suite 900, San Francisco, CA 94104, United States",
+    "hostingSiteLabel": "Website",
+    "ipTitle": "Intellectual property",
+    "ipText1": "All content on this website (texts, images, graphics, logos, icons, sounds, software, etc.) is the exclusive property of <strong>VAULT 369 LTD</strong> or its partners, and is protected by applicable intellectual property laws.",
+    "ipText2": "Any reproduction, representation, modification, publication, total or partial adaptation of the website elements, by any means or process, is prohibited without prior written authorization from VAULT 369 LTD.",
+    "liabilityTitle": "Limitation of liability",
+    "liabilityText1": "VAULT 369 LTD strives to ensure the accuracy and timeliness of the information published on this website, and reserves the right to correct content at any time without prior notice. VAULT 369 LTD cannot be held liable for the use made of the information available on this website, nor for any direct or indirect damages resulting therefrom.",
+    "liabilityText2": "Hyperlinks on this website may redirect to other websites. VAULT 369 LTD exercises no control over these websites and disclaims all responsibility for their content.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "This website uses cookies for audience analysis (Google Analytics) and to improve the user experience. You can disable cookies through your browser settings. For more information, please see our",
+    "cookiesLink": "Privacy policy",
+    "lawTitle": "Applicable law",
+    "lawText": "These legal notices are governed by English law. In the event of a dispute, the competent courts shall be those of London, United Kingdom, unless otherwise required by law.",
+    "lastUpdate": "Last updated: March 2026"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "metaDescription": "AgenticWhatsup privacy policy — collection, use and protection of your personal data in compliance with GDPR.",
+    "lastUpdate": "Last updated: March 2026",
+    "controllerTitle": "1. Data controller",
+    "controllerIntro": "The data controller for data collected via the website <strong>agentic-whatsup.com</strong> is:",
+    "companyLabel": "Company",
+    "companyValue": "VAULT 369 LTD",
+    "regLabel": "Registration",
+    "regValue": "16952492 (Companies House, United Kingdom)",
+    "addressLabel": "Address",
+    "addressValue": "128 City Road, EC1V 2NX, London, United Kingdom",
+    "dpoLabel": "DPO Contact",
+    "collectedTitle": "2. Data collected",
+    "collectedIntro": "We collect the following data:",
+    "collectedCategories": [
+      { "cat": "Booking form (iClosed)", "items": "Last name, first name, email address, phone number, company name, message." },
+      { "cat": "Browsing (Google Analytics)", "items": "Pages visited, session duration, country, device type, traffic source. Anonymized data." },
+      { "cat": "WhatsApp Business (customer service)", "items": "Messages exchanged with the AI agent: text, voice messages, photos, documents. Processed solely to respond to your requests." }
+    ],
+    "purposeTitle": "3. Purpose of processing",
+    "purposes": [
+      "Respond to your quote requests and strategic sessions",
+      "Manage the business relationship and project follow-up",
+      "Analyze website audience to improve content (anonymized analytics)",
+      "Send marketing communications with your consent",
+      "Comply with our legal and contractual obligations"
+    ],
+    "legalBasisTitle": "4. Legal basis",
+    "legalBases": [
+      { "name": "Consent", "desc": "for sending marketing communications and the use of non-essential cookies." },
+      { "name": "Contract performance", "desc": "to process your requests and deliver our services." },
+      { "name": "Legitimate interest", "desc": "for anonymized audience analysis and website security." }
+    ],
+    "retentionTitle": "5. Data retention period",
+    "retentionCategoryHeader": "Data category",
+    "retentionDurationHeader": "Duration",
+    "retentionRows": [
+      { "cat": "Contact data (form)", "duration": "3 years from the last contact" },
+      { "cat": "Contractual data (clients)", "duration": "5 years after the end of the contract" },
+      { "cat": "WhatsApp messages (AI agent)", "duration": "Configurable per project (90 days by default)" },
+      { "cat": "Analytics data", "duration": "26 months (standard Google Analytics configuration)" },
+      { "cat": "Essential cookies", "duration": "13 months maximum" }
+    ],
+    "recipientsTitle": "6. Data recipients",
+    "recipientsIntro": "Your data may be shared with the following subcontractors, strictly within the scope of service delivery:",
+    "recipients": [
+      { "name": "iClosed", "desc": "online appointment booking tool" },
+      { "name": "Google LLC", "desc": "analytics (anonymized data, EU servers)" },
+      { "name": "Meta Platforms Ireland Ltd", "desc": "WhatsApp Business API infrastructure" },
+      { "name": "Vercel Inc.", "desc": "website hosting" }
+    ],
+    "recipientsNoSale": "No data is sold to third parties. Transfers outside the EU are governed by standard contractual clauses (SCCs) compliant with the GDPR.",
+    "rightsTitle": "7. Your rights (GDPR)",
+    "rightsIntro": "In accordance with the General Data Protection Regulation (GDPR — EU 2016/679), you have the following rights:",
+    "rights": [
+      { "name": "Right of access", "desc": "obtain a copy of your data" },
+      { "name": "Right to rectification", "desc": "correct inaccurate data" },
+      { "name": "Right to erasure", "desc": "request the deletion of your data" },
+      { "name": "Right to portability", "desc": "receive your data in a structured format" },
+      { "name": "Right to object", "desc": "object to certain processing" },
+      { "name": "Right to restriction", "desc": "restrict processing in certain cases" }
+    ],
+    "rightsContact": "To exercise these rights, contact us by email:",
+    "rightsDelay": "We commit to responding within <strong>30 days</strong>.",
+    "rightsAuthority": "You also have the right to lodge a complaint with a competent supervisory authority (ICO in the United Kingdom, CNIL in France, FDPIC in Switzerland).",
+    "cookiesTitle": "8. Cookie policy",
+    "cookiesIntro": "This website uses the following types of cookies:",
+    "cookiesTypeHeader": "Type",
+    "cookiesPurposeHeader": "Purpose",
+    "cookiesConsentHeader": "Consent",
+    "cookiesRows": [
+      { "type": "Essential", "purpose": "Website functionality", "consent": "Not required" },
+      { "type": "Analytics (GA4)", "purpose": "Anonymized audience measurement", "consent": "Required" },
+      { "type": "Third-party (iClosed)", "purpose": "Appointment booking", "consent": "Required" }
+    ],
+    "cookiesManage": "You can manage your cookie preferences at any time through your browser settings.",
+    "securityTitle": "9. Data security",
+    "securityText": "We implement appropriate technical and organizational measures to protect your data against unauthorized access, loss, destruction or disclosure: HTTPS encryption, restricted data access, secure hosting and regular audits.",
+    "changesTitle": "10. Changes",
+    "changesText": "This policy may be updated at any time. Any material change will be notified via the website. The version in effect is the one displayed on this page with the update date.",
+    "footer": "Last updated: March 2026 — VAULT 369 LTD"
+  },
+  "cookies": {
+    "message": "This site uses cookies for traffic analysis.",
+    "accept": "Accept",
+    "refuse": "Decline",
+    "link": "Learn more"
   }
 }
