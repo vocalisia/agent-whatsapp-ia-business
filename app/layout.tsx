@@ -16,10 +16,16 @@ export const metadata: Metadata = {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
     shortcut: "/icon.svg",
   },
+  alternates: {
+    canonical: "https://agentic-whatsup.com",
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
     siteName: "AgenticWhatsup",
+    title: "Agent IA WhatsApp | Automatisez vos messages clients 24/7",
+    description: "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
+    url: "https://agentic-whatsup.com",
   },
   twitter: {
     card: "summary_large_image",
@@ -32,6 +38,39 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "WhatsApp Agent IA",
+                  url: "https://agentic-whatsup.com",
+                  description: "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos de vos clients.",
+                },
+                {
+                  "@type": "Service",
+                  name: "Agent IA WhatsApp",
+                  provider: { "@type": "Organization", name: "WhatsApp Agent IA" },
+                  description: "Agent conversationnel IA pour WhatsApp Business avec vision IA et transcription vocale.",
+                  areaServed: ["FR", "CH", "BE", "CA"],
+                },
+                {
+                  "@type": "FAQPage",
+                  mainEntity: [
+                    { "@type": "Question", name: "Qu'est-ce qu'un agent IA WhatsApp ?", acceptedAnswer: { "@type": "Answer", text: "Un agent IA WhatsApp est un assistant virtuel intelligent qui répond automatiquement aux messages de vos clients sur WhatsApp Business, 24h/24 et 7j/7." } },
+                    { "@type": "Question", name: "Quelles sont les fonctionnalités exclusives ?", acceptedAnswer: { "@type": "Answer", text: "Notre agent est le seul à proposer la vision IA (analyse des photos envoyées) et la transcription vocale (compréhension des messages audio WhatsApp)." } },
+                    { "@type": "Question", name: "Combien de temps pour la mise en place ?", acceptedAnswer: { "@type": "Answer", text: "L'intégration se fait en moins de 48h. Notre équipe configure l'agent selon vos besoins métier et le connecte à votre numéro WhatsApp Business." } },
+                    { "@type": "Question", name: "Est-ce conforme au RGPD ?", acceptedAnswer: { "@type": "Answer", text: "Oui, notre solution est 100% conforme au RGPD. Les données sont hébergées en Europe et nous ne conservons aucune donnée personnelle sans consentement." } },
+                    { "@type": "Question", name: "Quel est le ROI attendu ?", acceptedAnswer: { "@type": "Answer", text: "Nos clients constatent en moyenne une réduction de 60% des coûts de gestion client et une augmentation de 40% de la productivité des équipes." } },
+                  ],
+                },
+              ],
+            }),
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
