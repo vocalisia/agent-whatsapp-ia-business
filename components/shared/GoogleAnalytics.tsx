@@ -1,31 +1,36 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Script from "next/script";
 
 const GA_ID = "G-1Q10Z6C916";
 
-function getCookie(name: string): string | null {
-  if (typeof document === "undefined") return null;
-  const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
-  return match ? match[2] : null;
-}
-
 export default function GoogleAnalytics() {
-  const [accepted, setAccepted] = useState(false);
-
   useEffect(() => {
-    const check = () => setAccepted(getCookie("cookie_consent") === "accepted");
-    check();
-
-    window.addEventListener("cookie_consent_changed", check);
-    return () => window.removeEventListener("cookie_consent_changed", check);
+    const update = () => {
+      const match = document.cookie.match(/(^| )cookie_consent=([^;]+)/);
+      const accepted = match ? match[2] === "accepted" : false;
+      if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+        (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("consent", "update", {
+          analytics_storage: accepted ? "granted" : "denied",
+        });
+      }
+    };
+    window.addEventListener("cookie_consent_changed", update);
+    return () => window.removeEventListener("cookie_consent_changed", update);
   }, []);
-
-  if (!accepted) return null;
 
   return (
     <>
+      <Script id="consent-init" strategy="beforeInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          var _m = document.cookie.match(/(^| )cookie_consent=([^;]+)/);
+          var _c = _m ? _m[2] : null;
+          gtag('consent', 'default', { analytics_storage: _c === 'accepted' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+        `}
+      </Script>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
