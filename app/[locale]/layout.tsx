@@ -80,6 +80,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Consent Mode v2 + dynamic GA4 — raw inline script, FIRST in <head>, to avoid Next.js preloading GA URL. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;var m=document.cookie.match(/(^| )cookie_consent=([^;]+)/);var c=m?m[2]:null;gtag('consent','default',{analytics_storage:c==='accepted'?'granted':'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',wait_for_update:500});gtag('js',new Date());gtag('config','G-1Q10Z6C916');var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-1Q10Z6C916';document.head.appendChild(s);})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
