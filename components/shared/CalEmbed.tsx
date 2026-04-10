@@ -17,7 +17,7 @@ export default function CalEmbed() {
       className="iclosed-widget w-full"
       data-url="https://app.iclosed.io/e/VOCALIS/session-strat-gique-votre-agent-ia-whatsapp"
       title="Session Stratégique : Votre Agent IA WhatsApp"
-      style={{ minHeight: "620px" }}
+      style={{ minHeight: "700px" }}
     />
   );
 }
