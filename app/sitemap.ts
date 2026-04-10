@@ -24,6 +24,8 @@ const pages = [
   { path: "/cas-clients", changeFrequency: "monthly" as const, priority: 0.85 },
   { path: "/secteurs", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/agent-sur-mesure", changeFrequency: "monthly" as const, priority: 0.85 },
+  { path: "/services/automatisation", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/services/marketing-hub", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/securite", changeFrequency: "yearly" as const, priority: 0.6 },
   { path: "/cookies", changeFrequency: "yearly" as const, priority: 0.3 },
   { path: "/comparatif", changeFrequency: "monthly" as const, priority: 0.85 },

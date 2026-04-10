@@ -8,6 +8,8 @@ const integrationsLabel: Record<string, string> = { fr: "Intégrations", en: "In
 const casClientsLabel: Record<string, string> = { fr: "Cas clients", en: "Case studies", de: "Referenzen", nl: "Klantcases" };
 const securiteLabel: Record<string, string> = { fr: "Sécurité & RGPD", en: "Security & GDPR", de: "Sicherheit & DSGVO", nl: "Beveiliging & AVG" };
 const agentSurMesureLabel: Record<string, string> = { fr: "Agent sur-mesure", en: "Custom agent", de: "Maßgeschneiderter Agent", nl: "Maatwerk agent" };
+const automatisationLabel: Record<string, string> = { fr: "Automatisation", en: "Automation", de: "Automatisierung", nl: "Automatisering" };
+const marketingHubLabel: Record<string, string> = { fr: "Marketing Hub", en: "Marketing Hub", de: "Marketing Hub", nl: "Marketing Hub" };
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -77,6 +79,16 @@ export default function Footer() {
                 className="hover:text-wa transition-colors"
               >
                 {t("serviceCampaigns")}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/services/automatisation`} className="hover:text-wa transition-colors">
+                {automatisationLabel[locale] ?? "Automatisation"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/services/marketing-hub`} className="hover:text-wa transition-colors">
+                {marketingHubLabel[locale] ?? "Marketing Hub"}
               </Link>
             </li>
           </ul>
