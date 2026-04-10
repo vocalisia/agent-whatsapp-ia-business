@@ -167,6 +167,12 @@ export default async function LocaleLayout({
           <main className="flex-1 pt-16">{children}</main>
           <Footer />
           <CookieBanner />
+          {/* Vocalis WhatsApp Agent IA Widget */}
+          <script
+            src="https://app.vocalis.pro/embed.js"
+            data-assistant-id="1c784259-40d5-4274-ae00-aee0ef02054c"
+            async
+          />
         </NextIntlClientProvider>
       </body>
     </html>

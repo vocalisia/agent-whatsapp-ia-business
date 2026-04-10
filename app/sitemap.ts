@@ -25,6 +25,11 @@ const pages = [
   { path: "/secteurs", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/agent-sur-mesure", changeFrequency: "monthly" as const, priority: 0.85 },
   { path: "/securite", changeFrequency: "yearly" as const, priority: 0.6 },
+  { path: "/cookies", changeFrequency: "yearly" as const, priority: 0.3 },
+  { path: "/comparatif", changeFrequency: "monthly" as const, priority: 0.85 },
+  { path: "/comparatif/vs-wati", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/comparatif/vs-manychat", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/comparatif/vs-whatsapp-business", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly" as const, priority: 0.7 },
 ];

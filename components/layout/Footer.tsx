@@ -140,6 +140,16 @@ export default function Footer() {
                 {t("legalPrivacy")}
               </Link>
             </li>
+            <li>
+              <Link href={`/${locale}/cookies`} className="hover:text-wa transition-colors">
+                {locale === "nl" ? "Cookiebeleid" : locale === "de" ? "Cookie-Richtlinie" : locale === "en" ? "Cookie Policy" : "Cookies"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/comparatif`} className="hover:text-wa transition-colors">
+                {locale === "nl" ? "Vergelijkingen" : locale === "de" ? "Vergleiche" : locale === "en" ? "Comparisons" : "Comparatif"}
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
