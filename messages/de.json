@@ -5,7 +5,8 @@
     "blog": "Blog",
     "contact": "Kontakt",
     "audit": "Kostenloses Audit",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "secteurs": "Branchen"
   },
   "hero": {
     "badge": "Exklusive Technologie — KI-Vision + Sprachnachrichten",
@@ -115,6 +116,7 @@
     "serviceLeads": "Lead-Qualifizierung",
     "serviceCampaigns": "WhatsApp-Kampagnen",
     "resourcesTitle": "Ressourcen",
+    "secteursTitle": "Branchen",
     "legalTitle": "Rechtliches",
     "legalMentions": "Impressum",
     "legalPrivacy": "Datenschutzerklärung",

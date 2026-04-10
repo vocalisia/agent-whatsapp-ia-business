@@ -8,7 +8,7 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
-  const locales = ["fr", "en", "de"];
+  const locales = ["fr", "en", "de", "nl"];
   return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 

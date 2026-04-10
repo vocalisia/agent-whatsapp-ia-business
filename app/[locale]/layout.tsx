@@ -10,20 +10,46 @@ import CookieBanner from "@/components/shared/CookieBanner";
 
 const BASE_URL = "https://agentic-whatsup.com";
 
+const defaultMeta: Record<string, { title: string; description: string }> = {
+  fr: {
+    title: "Agent IA WhatsApp | Automatisez vos messages clients 24/7",
+    description: "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
+  },
+  en: {
+    title: "WhatsApp AI Agent | Automate your customer messages 24/7",
+    description: "The only WhatsApp AI agent that understands voice messages and analyzes photos. Automate responses, qualify leads, book appointments — 24/7.",
+  },
+  de: {
+    title: "WhatsApp KI-Agent | Automatisieren Sie Ihre Kundennachrichten 24/7",
+    description: "Der einzige WhatsApp KI-Agent, der Sprachnachrichten versteht und Fotos analysiert. Automatisieren Sie Antworten, qualifizieren Sie Leads, buchen Sie Termine — 24/7.",
+  },
+  nl: {
+    title: "WhatsApp AI-agent | Automatiseer uw klantberichten 24/7",
+    description: "De enige WhatsApp AI-agent die spraakberichten begrijpt en foto's analyseert. Automatiseer antwoorden, kwalificeer leads, boek afspraken — 24/7.",
+  },
+};
+
+const ogLocaleMap: Record<string, string> = {
+  fr: "fr_FR",
+  en: "en_US",
+  de: "de_DE",
+  nl: "nl_NL",
+};
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
+  const meta = defaultMeta[locale] ?? defaultMeta.fr;
 
   return {
     title: {
-      default: "Agent IA WhatsApp | Automatisez vos messages clients 24/7",
+      default: meta.title,
       template: "%s | AgenticWhatsup",
     },
-    description:
-      "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
+    description: meta.description,
     metadataBase: new URL(BASE_URL),
     icons: {
       icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
@@ -35,23 +61,23 @@ export async function generateMetadata({
         fr: `${BASE_URL}/fr`,
         en: `${BASE_URL}/en`,
         de: `${BASE_URL}/de`,
+        nl: `${BASE_URL}/nl`,
         "x-default": `${BASE_URL}/fr`,
       },
     },
     openGraph: {
       type: "website",
-      locale: locale === "fr" ? "fr_FR" : locale === "de" ? "de_DE" : "en_US",
+      locale: ogLocaleMap[locale] ?? "fr_FR",
       siteName: "AgenticWhatsup",
-      title: "Agent IA WhatsApp | Automatisez vos messages clients 24/7",
-      description:
-        "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
+      title: meta.title,
+      description: meta.description,
       url: `${BASE_URL}/${locale}`,
       images: [
         {
           url: `${BASE_URL}/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: "Agent IA WhatsApp | AgenticWhatsup",
+          alt: "WhatsApp AI Agent | AgenticWhatsup",
         },
       ],
     },
@@ -74,7 +100,7 @@ export default async function LocaleLayout({
 }>) {
   const { locale } = await params;
 
-  if (!routing.locales.includes(locale as "fr" | "en" | "de")) {
+  if (!routing.locales.includes(locale as "fr" | "en" | "de" | "nl")) {
     notFound();
   }
 

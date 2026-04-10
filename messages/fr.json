@@ -5,7 +5,8 @@
     "blog": "Blog",
     "contact": "Contact",
     "audit": "Audit gratuit",
-    "whatsapp": "WhatsApp"
+    "whatsapp": "WhatsApp",
+    "secteurs": "Secteurs"
   },
   "hero": {
     "badge": "Technologie exclusive — Vision IA + Vocaux",
@@ -115,6 +116,7 @@
     "serviceLeads": "Qualification de leads",
     "serviceCampaigns": "Campagnes WhatsApp",
     "resourcesTitle": "Ressources",
+    "secteursTitle": "Secteurs",
     "legalTitle": "Légal",
     "legalMentions": "Mentions légales",
     "legalPrivacy": "Politique de confidentialité",

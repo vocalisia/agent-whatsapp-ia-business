@@ -1,0 +1,427 @@
+{
+  "nav": {
+    "services": "Diensten",
+    "tarifs": "Prijzen",
+    "blog": "Blog",
+    "contact": "Contact",
+    "audit": "Gratis audit",
+    "whatsapp": "WhatsApp",
+    "secteurs": "Sectoren"
+  },
+  "hero": {
+    "badge": "Exclusieve technologie — AI Vision + Spraakberichten",
+    "title1": "De AI-agent",
+    "title2": "WhatsApp",
+    "title3": "die u ziet.",
+    "subtitle": "Spraakberichten, foto's, documenten — uw agent verwerkt alles, 24/7.",
+    "description": "De enige agent die afbeeldingen kan analyseren en de spraakberichten van uw klanten kan transcriberen. In realtime. Zonder menselijke tussenkomst.",
+    "pillVision": "AI Vision",
+    "pillVisionDesc": "Analyseert foto's",
+    "pillAudio": "AI Audio",
+    "pillAudioDesc": "Transcribeert spraakberichten",
+    "pillRgpd": "AVG",
+    "pillRgpdDesc": "Conform & veilig",
+    "ctaAudit": "Gratis audit",
+    "ctaWhatsapp": "Schrijf op WhatsApp",
+    "trustRgpd": "AVG-conform",
+    "trustDeployed": "Geïmplementeerd in 2 weken",
+    "trustSupport": "Toegewijde ondersteuning"
+  },
+  "stats": {
+    "costLabel": "Klantbeheerkosten",
+    "productivityLabel": "Teamproductiviteit",
+    "responseLabel": "Responspercentage",
+    "availabilityLabel": "Totale beschikbaarheid"
+  },
+  "problem": {
+    "eyebrow": "Het probleem",
+    "title": "Elk onbeantwoord bericht = een verloren klant",
+    "items": [
+      { "title": "Genegeerde spraakberichten", "description": "Uw klanten sturen WhatsApp-spraakberichten. Niemand heeft tijd om ernaar te luisteren.", "statLabel": "van spraakberichten niet beluisterd" },
+      { "title": "Niet-verwerkte foto's", "description": "De klant stuurt een foto van zijn document. Handmatige verwerking duurt uren.", "statLabel": "gemiddelde verwerkingstijd" },
+      { "title": "Leads verloren 's nachts", "description": "70% van de berichten komt buiten kantooruren. Zonder snel antwoord: dag prospect.", "statLabel": "van berichten buiten kantooruren" },
+      { "title": "Overweldigd team", "description": "Uw teams verwerken repetitieve berichten in plaats van zich te concentreren op waardevolle taken.", "statLabel": "van verspilde tijd" }
+    ]
+  },
+  "features": {
+    "eyebrow": "Functies",
+    "title": "Wat niemand anders doet",
+    "subtitle": "Exclusieve multimodale mogelijkheden op de WhatsApp Business-markt.",
+    "exclusive": "Exclusief",
+    "items": [
+      { "title": "AI Vision", "subtitle": "Analyseert foto's", "description": "De klant stuurt een foto (document, vastgoed, technisch probleem). De agent ziet, begrijpt en reageert via OpenAI Vision / Claude / Gemini." },
+      { "title": "AI Audio", "subtitle": "Transcribeert spraakberichten", "description": "De agent transcribeert automatisch WhatsApp-spraakberichten en reageert contextueel, in de taal van de klant." },
+      { "title": "Alle mediatypen", "subtitle": "Afbeeldingen, audio, video, docs", "description": "Alles wordt verwerkt, opgeslagen en toegankelijk gemaakt. Operators kunnen ook bestanden naar klanten sturen vanuit de interface." },
+      { "title": "Auto AVG", "subtitle": "Configureerbare bewaring", "description": "Automatische geplande opschoning per gegevenstype. EU-hosting beschikbaar. Moeiteloze naleving." },
+      { "title": "Cal.com v2", "subtitle": "Afspraken in WhatsApp", "description": "EU-servers, teams, dynamische velden. De agent boekt afspraken direct in het gesprek." },
+      { "title": "Webhooks", "subtitle": "Onbeperkte automatiseringen", "description": "Volledige transcript + AI-evaluatie aan het einde van elk gesprek. Verbindt HubSpot, Salesforce, Notion." }
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "AI-architectuur",
+    "title": "Hoe de agent elk bericht verwerkt",
+    "messageLabel": "WhatsApp-bericht",
+    "messageSub": "klant → agent",
+    "typeDetected": "Berichttype gedetecteerd?",
+    "photoLabel": "Foto / Doc",
+    "photoSub": "AI Vision",
+    "audioLabel": "Spraakbericht",
+    "audioSub": "AI Audio",
+    "textLabel": "Tekst",
+    "textSub": "NLP-agent",
+    "agentLabel": "AI-agent",
+    "agentSub": "Analyseert & genereert antwoord",
+    "responseLabel": "Antwoord verzonden",
+    "responseSub": "< 3 seconden",
+    "actionsTriggered": "Automatische acties geactiveerd",
+    "crmLabel": "CRM",
+    "crmSub": "Lead aangemaakt",
+    "calLabel": "Cal.com Afspraak",
+    "calSub": "Agenda bijgewerkt",
+    "notifLabel": "Melding",
+    "notifSub": "Team gewaarschuwd",
+    "legendMain": "Hoofdstroom",
+    "legendAi": "AI-modules",
+    "legendNlp": "NLP-verwerking"
+  },
+  "pricing": {
+    "eyebrow": "Abonnementen",
+    "title": "Een oplossing op maat voor u",
+    "subtitle": "Geen vaste prijslijst — elk project is uniek. Laten we praten.",
+    "recommended": "AANBEVOLEN",
+    "ctaAudit": "Gratis audit — 30 min",
+    "ctaSubtitle": "30 minuten · Geen verplichtingen · Voorstel binnen 48u",
+    "plans": [
+      { "name": "Starter", "features": ["1 WhatsApp-agent", "1 scenario", "1 integratie", "E-mailondersteuning"] },
+      { "name": "Pro", "features": ["Meerdere scenario's", "Meta-templates", "CRM + Agenda", "AI Vision + Spraak", "Auto-workflows", "48u ondersteuning"] },
+      { "name": "Enterprise", "features": ["Maatwerkooplossing", "Meerdere nummers", "Onbeperkte integraties", "Prioritaire SLA", "24u ondersteuning"] }
+    ]
+  },
+  "finalCta": {
+    "badge": "Klaar in 2-3 weken",
+    "title1": "Stop met het verliezen van",
+    "title2": "klanten",
+    "title3": "om 3 uur 's nachts.",
+    "subtitle": "30 minuten om uw behoeften te analyseren. Voorstel binnen 48u. Implementatie in 2-3 weken.",
+    "ctaPrimary": "Boek een gratis diagnose",
+    "ctaSecondary": "Schrijf nu",
+    "trust1": "Antwoord binnen 24u",
+    "trust2": "Gratis offerte",
+    "trust3": "Geen verplichtingen"
+  },
+  "footer": {
+    "tagline": "De enige WhatsApp AI-agent die uw klanten ziet, hoort en begrijpt.",
+    "servicesTitle": "Diensten",
+    "serviceAgent": "WhatsApp AI-agent",
+    "serviceLeads": "Leadkwalificatie",
+    "serviceCampaigns": "WhatsApp-campagnes",
+    "resourcesTitle": "Bronnen",
+    "secteursTitle": "Sectoren",
+    "legalTitle": "Juridisch",
+    "legalMentions": "Juridische kennisgeving",
+    "legalPrivacy": "Privacybeleid",
+    "copyright": "AgenticWhatsup. Alle rechten voorbehouden.",
+    "mobileWhatsapp": "WhatsApp",
+    "mobileBook": "Boeken"
+  },
+  "contact": {
+    "badge": "Strategische sessie — 100% gratis",
+    "title": "Boek uw WhatsApp-audit",
+    "subtitle": "30 minuten om uw situatie te analyseren en precies te bepalen wat een AI-agent voor u kan doen.",
+    "whatTitle": "Wat we samen gaan doen",
+    "bullets": [
+      "Diagnose van uw WhatsApp-berichtenstromen",
+      "Identificatie van mogelijke automatiseringen",
+      "Haalbaarheidsonderzoek op basis van uw tools (CRM, agenda)",
+      "Concreet, gedetailleerd voorstel binnen 48u",
+      "Geen verplichtingen — 100% gratis"
+    ],
+    "guaranteeTime": "30 minuten",
+    "guaranteeTimeSub": "tijd gerespecteerd",
+    "guaranteeConfidential": "Vertrouwelijk",
+    "guaranteeConfidentialSub": "NDA op verzoek",
+    "guaranteeResponse": "Antwoord binnen 48u",
+    "guaranteeResponseSub": "gedetailleerde offerte",
+    "testimonial": "In 30 minuten identificeerden ze 3 automatiseringen die ik niet had gezien. Het voorstel was precies en realistisch.",
+    "testimonialAuthor": "Karim B. — E-commerce, Parijs",
+    "calTitle": "Kies uw tijdslot",
+    "calPowered": "Mogelijk gemaakt door iClosed",
+    "directContact": "Direct contact"
+  },
+  "tarifs": {
+    "eyebrow": "Abonnementen",
+    "title": "Elk project is uniek",
+    "subtitle": "Geen vaste prijslijst. We bespreken uw behoeften en stellen de exacte oplossing voor — niet meer, niet minder.",
+    "recommended": "AANBEVOLEN",
+    "plans": [
+      { "name": "Starter", "description": "KMO's die beginnen met WhatsApp-automatisering.", "features": ["1 WhatsApp Business-agent", "1 gespreksscenario", "1 integratie (CRM of agenda)", "Automatische tekstantwoorden", "Monitoring-dashboard", "E-mailondersteuning", "Training inbegrepen"] },
+      { "name": "Pro", "description": "De complete oplossing om alles te automatiseren.", "features": ["Meerdere gespreksscenario's", "Vooraf goedgekeurde Meta-templates", "CRM + Agenda (Cal.com)", "AI Vision — fotoanalyse", "Automatische spraaktranscriptie", "Workflows & webhooks", "AVG-naleving", "Gegarandeerde 48u ondersteuning", "Toegewijde onboarding"] },
+      { "name": "Enterprise", "description": "Maatwerkooplossing voor grote organisaties.", "features": ["Volledig op maat gemaakte architectuur", "Meerdere WhatsApp-nummers", "Onbeperkte integraties", "Gegarandeerde prioritaire SLA", "Toegewijde EU-hosting", "Toegewijde 24/7 ondersteuning", "Doorlopende audit en optimalisatie", "Uitgebreide teamtraining"] }
+    ],
+    "sessionEyebrow": "Strategische sessie",
+    "sessionTitle": "Strategische Sessie — Uw WhatsApp AI-agent",
+    "sessionSubtitle": "30 minuten om uw stromen te analyseren, mogelijke automatiseringen te identificeren en uw strategie te definiëren. Gratis diagnose, geen verplichtingen.",
+    "faqTitle": "Veelgestelde vragen",
+    "faqs": [
+      { "question": "Is de installatie inbegrepen in de prijs?", "answer": "Ja. Elke offerte omvat de ontwikkeling, WhatsApp Business-configuratie, testen en volledige implementatie. Geen verrassingen." },
+      { "question": "Zijn er terugkerende kosten?", "answer": "Ja, een maandelijks pakket dekt hosting, API-aanroepen (LLM) en onderhoud. Dit pakket is inbegrepen in ons voorstel." },
+      { "question": "Wat is de doorlooptijd naar productie?", "answer": "Doorgaans 2 tot 3 weken voor het Pro-abonnement. Het Starter-abonnement kan in 1 week worden geïmplementeerd. Enterprise hangt af van de complexiteit." }
+    ]
+  },
+  "notFound": {
+    "title": "Pagina niet gevonden",
+    "description": "Deze pagina bestaat niet of is verplaatst. Ga terug naar de startpagina of neem direct contact met ons op.",
+    "home": "Terug naar startpagina",
+    "contact": "Neem contact op"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Gidsen en tips om uw WhatsApp Business te automatiseren met AI.",
+    "readArticle": "Artikel lezen →",
+    "backToBlog": "Terug naar blog",
+    "reading": "leestijd",
+    "ctaTitle": "Klaar om uw WhatsApp te automatiseren?",
+    "ctaSubtitle": "Gratis audit van 30 minuten — voorstel binnen 48u.",
+    "ctaButton": "Boek mijn gratis audit"
+  },
+  "services": {
+    "qualificationLeads": {
+      "title": "WhatsApp leadkwalificatie",
+      "subtitle": "Filter uw prospects automatisch. Uw verkoopteam spreekt alleen met echt geïnteresseerde leads.",
+      "howTitle": "Hoe het werkt",
+      "includedTitle": "Wat is inbegrepen",
+      "ctaTitle": "Klaar om uw leads automatisch te kwalificeren?",
+      "ctaSubtitle": "Boek een gratis audit van 30 minuten — we analyseren uw stromen en stellen een oplossing op maat voor binnen 48u.",
+      "ctaButton": "Boek mijn gratis audit",
+      "features": [
+        "Automatische kwalificatievragenlijst",
+        "Realtime AI-scoring op basis van uw criteria",
+        "Automatische CRM-doorstuur (HubSpot, Salesforce, Notion)",
+        "Automatische opvolgingen voor inactieve prospects",
+        "Verwerking van spraakberichten en foto's voor kwalificatie",
+        "Wekelijkse prestatierapporten"
+      ],
+      "steps": [
+        { "title": "De prospect stuurt een bericht", "desc": "Via uw WhatsApp Business-nummer — tekst, spraak of foto." },
+        { "title": "De AI stelt de juiste vragen", "desc": "Budget, behoefte, tijdlijn, autoriteit — afgestemd op uw sector." },
+        { "title": "Kwalificatiescore berekend", "desc": "Elke prospect ontvangt een score op basis van uw zakelijke criteria." },
+        { "title": "Doorgestuurd naar verkoop", "desc": "Alleen gekwalificeerde prospects landen in uw CRM of Slack." }
+      ]
+    },
+    "campagnes": {
+      "title": "Uitgaande WhatsApp-campagnes",
+      "subtitle": "Bereik uw klanten waar ze echt lezen. WhatsApp toont 98% openingspercentage — 5× meer dan e-mail.",
+      "useCasesTitle": "Gebruiksgevallen",
+      "includedTitle": "Wat is inbegrepen",
+      "ctaTitle": "Start uw eerste WhatsApp-campagne",
+      "ctaSubtitle": "Wij regelen alles: het schrijven van templates, Meta-goedkeuring, segmentatie en verzending. Start in 1 tot 2 weken.",
+      "ctaButton": "Boek mijn gratis audit",
+      "features": [
+        "Vooraf goedgekeurde Meta-templates voor uw verzendingen",
+        "Dynamische personalisatie (naam, bedrijf, product)",
+        "Geavanceerde contactsegmentatie",
+        "Tracking van open- en responspercentages",
+        "Geautomatiseerde opvolgsequenties",
+        "AVG-naleving en automatische opt-out",
+        "CRM-integratie voor precieze targeting",
+        "Gedetailleerde prestatierapporten"
+      ],
+      "useCases": [
+        { "title": "Prospect opvolging", "desc": "Reactiveer koude leads met gepersonaliseerde berichten op het juiste moment." },
+        { "title": "Klant onboarding", "desc": "Verwelkom elke nieuwe klant met een geautomatiseerde onboardingsequentie." },
+        { "title": "Promoties & aanbiedingen", "desc": "Verspreid gerichte aanbiedingen naar specifieke segmenten van uw database." },
+        { "title": "Transactionele meldingen", "desc": "Orderbevestigingen, leveringsupdates, afspraakherinneringen — automatisch." }
+      ]
+    },
+    "crm": {
+      "title": "CRM-automatisering",
+      "subtitle": "Uw WhatsApp-agent werkt uw CRM in realtime bij. Geen handmatige invoer meer — elk gesprek verrijkt uw database.",
+      "howTitle": "Hoe het werkt",
+      "integrationsTitle": "Beschikbare integraties",
+      "includedTitle": "Wat is inbegrepen",
+      "ctaTitle": "Verbind WhatsApp met uw CRM",
+      "ctaSubtitle": "Vertel ons welk CRM u gebruikt en we laten u precies zien hoe u het kunt automatiseren — gratis audit van 30 minuten.",
+      "ctaButton": "Boek mijn gratis audit",
+      "features": [
+        "Bidirectionele synchronisatie met HubSpot",
+        "Automatisch aanmaken van Salesforce-contacten en deals",
+        "CRM-eigenschapsupdates vanuit gesprekken",
+        "Notion-integratie voor no-code teams",
+        "Aanpasbare inkomende en uitgaande webhooks",
+        "WhatsApp-activiteitslogboeken in uw CRM",
+        "Realtime verkoopwaarschuwingen (Slack, e-mail)",
+        "Aangepaste veldtoewijzing voor uw CRM"
+      ],
+      "steps": [
+        { "title": "WhatsApp-gesprek", "desc": "De klant reageert op uw AI-agent — vragen, informatie, verzoeken." },
+        { "title": "AI-verwerking", "desc": "De agent extraheert sleuteldata: naam, budget, behoefte, kwalificatie." },
+        { "title": "CRM-update", "desc": "Data wordt direct via webhook naar uw CRM gestuurd." }
+      ],
+      "integrations": [
+        { "name": "HubSpot", "desc": "Contacten, deals, activiteiten, sequenties" },
+        { "name": "Salesforce", "desc": "Leads, kansen, taken, notities" },
+        { "name": "Notion", "desc": "Databases, pagina's, eigenschappen" },
+        { "name": "Airtable", "desc": "Tabellen, records, gefilterde weergaven" },
+        { "name": "Make / Zapier", "desc": "Automatiseringen via webhooks" },
+        { "name": "Cal.com", "desc": "Afspraken boeken direct in WhatsApp" }
+      ]
+    },
+    "rdv": {
+      "title": "Afspraken boeken via WhatsApp",
+      "subtitle": "Uw klanten boeken een slot zonder WhatsApp te verlaten. Geen heen en weer meer om een tijd te vinden.",
+      "stepsTitle": "In 3 stappen",
+      "includedTitle": "Wat is inbegrepen",
+      "ctaTitle": "Automatiseer uw afsprakenboeking",
+      "ctaSubtitle": "Implementatie in minder dan een week. Boek een gratis audit en we stellen alles samen in.",
+      "ctaButton": "Boek mijn gratis audit",
+      "features": [
+        "Afspraken boeken direct in het WhatsApp-gesprek",
+        "Cal.com v2-integratie — realtime beschikbaarheid",
+        "Automatische bevestigingen en herinneringen",
+        "Zelfbediening annulering en herplanning",
+        "Synchronisatie met Google Calendar en Outlook",
+        "Beheer van meerdere agenda's en medewerkers",
+        "Automatische tijdzondetectie",
+        "Automatisch gegenereerde videobel-links (Zoom, Google Meet)"
+      ],
+      "steps": [
+        { "title": "De klant vraagt een afspraak", "desc": "\"Ik wil een afspraak maken\" — de agent begrijpt en biedt beschikbare slots aan." },
+        { "title": "De klant kiest een slot", "desc": "De agent toont Cal.com-beschikbaarheid in realtime. De klant antwoordt met zijn keuze." },
+        { "title": "Automatische bevestiging", "desc": "Afspraak aangemaakt in de agenda, WhatsApp + e-mailbevestiging, 24u herinnering." }
+      ]
+    },
+    "common": {
+      "auditGratuit": "Gratis audit",
+      "ecrireWhatsapp": "Schrijf op WhatsApp",
+      "service": "Dienst"
+    }
+  },
+  "legal": {
+    "title": "Juridische kennisgeving",
+    "metaDescription": "Juridische kennisgeving van AgenticWhatsup — juridische informatie, uitgever, hosting en intellectueel eigendom.",
+    "editorTitle": "Website-uitgever",
+    "editorIntro": "De website <strong>agentic-whatsup.com</strong> wordt uitgegeven door:",
+    "companyLabel": "Bedrijfsnaam",
+    "companyValue": "VAULT 369 LTD",
+    "legalFormLabel": "Rechtsvorm",
+    "legalFormValue": "Private Limited Company (Ltd)",
+    "regNumberLabel": "Registratienummer",
+    "regNumberValue": "16952492",
+    "addressLabel": "Statutaire zetel",
+    "addressValue": "128 City Road, EC1V 2NX, Londen, Verenigd Koninkrijk",
+    "swissOfficeLabel": "Zwitsers kantoor",
+    "swissOfficeValue": "Chem. Saint-Hubert 2, 1950 Sion, Zwitserland",
+    "contactLabel": "Contact",
+    "whatsappLabel": "WhatsApp",
+    "directorTitle": "Publicatiedirecteur",
+    "directorText": "De wettelijke vertegenwoordiger van VAULT 369 LTD.",
+    "hostingTitle": "Hosting",
+    "hostingIntro": "De website wordt gehost door:",
+    "hostingCompanyLabel": "Bedrijf",
+    "hostingCompanyValue": "Vercel Inc.",
+    "hostingAddressLabel": "Adres",
+    "hostingAddressValue": "340 Pine Street, Suite 900, San Francisco, CA 94104, Verenigde Staten",
+    "hostingSiteLabel": "Website",
+    "ipTitle": "Intellectueel eigendom",
+    "ipText1": "Alle inhoud op deze website (teksten, afbeeldingen, graphics, logo's, pictogrammen, geluiden, software, enz.) is het exclusieve eigendom van <strong>VAULT 369 LTD</strong> of haar partners, en wordt beschermd door de toepasselijke intellectuele eigendomswetten.",
+    "ipText2": "Elke reproductie, vertegenwoordiging, wijziging, publicatie, totale of gedeeltelijke aanpassing van de website-elementen, door welk middel of proces dan ook, is verboden zonder voorafgaande schriftelijke toestemming van VAULT 369 LTD.",
+    "liabilityTitle": "Beperking van aansprakelijkheid",
+    "liabilityText1": "VAULT 369 LTD streeft ernaar de nauwkeurigheid en actualiteit van de op deze website gepubliceerde informatie te waarborgen, en behoudt zich het recht voor om de inhoud op elk moment en zonder voorafgaande kennisgeving te corrigeren. VAULT 369 LTD kan niet aansprakelijk worden gesteld voor het gebruik van de op deze website beschikbare informatie, noch voor directe of indirecte schade die hieruit kan voortvloeien.",
+    "liabilityText2": "Hyperlinks op deze website kunnen doorverwijzen naar andere websites. VAULT 369 LTD heeft geen controle over deze websites en wijst alle verantwoordelijkheid voor hun inhoud af.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "Deze website gebruikt cookies voor publieksanalyse (Google Analytics) en om de gebruikerservaring te verbeteren. U kunt cookies uitschakelen via uw browserinstellingen. Voor meer informatie, raadpleeg ons",
+    "cookiesLink": "Privacybeleid",
+    "lawTitle": "Toepasselijk recht",
+    "lawText": "Deze juridische kennisgeving wordt beheerst door het Engelse recht. Bij een geschil zijn de bevoegde rechtbanken die van Londen, Verenigd Koninkrijk, tenzij wettelijk anders bepaald.",
+    "lastUpdate": "Laatste update: maart 2026"
+  },
+  "privacy": {
+    "title": "Privacybeleid",
+    "metaDescription": "Privacybeleid van AgenticWhatsup — verzameling, gebruik en bescherming van uw persoonsgegevens conform de AVG.",
+    "lastUpdate": "Laatste update: maart 2026",
+    "controllerTitle": "1. Verwerkingsverantwoordelijke",
+    "controllerIntro": "De verwerkingsverantwoordelijke voor gegevens verzameld via de website <strong>agentic-whatsup.com</strong> is:",
+    "companyLabel": "Bedrijf",
+    "companyValue": "VAULT 369 LTD",
+    "regLabel": "Registratie",
+    "regValue": "16952492 (Companies House, Verenigd Koninkrijk)",
+    "addressLabel": "Adres",
+    "addressValue": "128 City Road, EC1V 2NX, Londen, Verenigd Koninkrijk",
+    "dpoLabel": "FG-contact",
+    "collectedTitle": "2. Verzamelde gegevens",
+    "collectedIntro": "Wij verzamelen de volgende gegevens:",
+    "collectedCategories": [
+      { "cat": "Boekingsformulier (iClosed)", "items": "Achternaam, voornaam, e-mailadres, telefoonnummer, bedrijfsnaam, bericht." },
+      { "cat": "Navigatie (Google Analytics)", "items": "Bezochte pagina's, sessieduur, land, apparaattype, verkeersbron. Geanonimiseerde gegevens." },
+      { "cat": "WhatsApp Business (klantenservice)", "items": "Berichten uitgewisseld met de AI-agent: tekst, spraakberichten, foto's, documenten. Alleen verwerkt om op uw verzoeken te reageren." }
+    ],
+    "purposeTitle": "3. Verwerkingsdoeleinden",
+    "purposes": [
+      "Reageren op uw offerteaanvragen en strategische sessies",
+      "Beheer van de zakelijke relatie en projectopvolging",
+      "Analyse van websitepubliek om inhoud te verbeteren (geanonimiseerde analytics)",
+      "Verzenden van marketingcommunicaties met uw toestemming",
+      "Voldoen aan onze wettelijke en contractuele verplichtingen"
+    ],
+    "legalBasisTitle": "4. Rechtsgrond",
+    "legalBases": [
+      { "name": "Toestemming", "desc": "voor het verzenden van marketingcommunicaties en het gebruik van niet-essentiële cookies." },
+      { "name": "Uitvoering van een overeenkomst", "desc": "om uw verzoeken te verwerken en onze diensten te leveren." },
+      { "name": "Gerechtvaardigd belang", "desc": "voor geanonimiseerde publieksanalyse en websitebeveiliging." }
+    ],
+    "retentionTitle": "5. Bewaartermijn",
+    "retentionCategoryHeader": "Gegevenscategorie",
+    "retentionDurationHeader": "Duur",
+    "retentionRows": [
+      { "cat": "Contactgegevens (formulier)", "duration": "3 jaar vanaf het laatste contact" },
+      { "cat": "Contractuele gegevens (klanten)", "duration": "5 jaar na het einde van het contract" },
+      { "cat": "WhatsApp-berichten (AI-agent)", "duration": "Configureerbaar per project (standaard 90 dagen)" },
+      { "cat": "Analyticsgegevens", "duration": "26 maanden (standaard Google Analytics-configuratie)" },
+      { "cat": "Essentiële cookies", "duration": "Maximaal 13 maanden" }
+    ],
+    "recipientsTitle": "6. Ontvangers van gegevens",
+    "recipientsIntro": "Uw gegevens kunnen worden gedeeld met de volgende onderaannemers, strikt binnen het kader van de dienstverlening:",
+    "recipients": [
+      { "name": "iClosed", "desc": "online afsprakenboeking tool" },
+      { "name": "Google LLC", "desc": "analytics (geanonimiseerde gegevens, EU-servers)" },
+      { "name": "Meta Platforms Ireland Ltd", "desc": "WhatsApp Business API-infrastructuur" },
+      { "name": "Vercel Inc.", "desc": "website-hosting" }
+    ],
+    "recipientsNoSale": "Er worden geen gegevens aan derden verkocht. Overdrachten buiten de EU worden geregeld door standaard contractuele clausules (SCC's) conform de AVG.",
+    "rightsTitle": "7. Uw rechten (AVG)",
+    "rightsIntro": "In overeenstemming met de Algemene Verordening Gegevensbescherming (AVG — EU 2016/679) heeft u de volgende rechten:",
+    "rights": [
+      { "name": "Recht op inzage", "desc": "een kopie van uw gegevens verkrijgen" },
+      { "name": "Recht op rectificatie", "desc": "onjuiste gegevens corrigeren" },
+      { "name": "Recht op wissing", "desc": "verwijdering van uw gegevens verzoeken" },
+      { "name": "Recht op overdraagbaarheid", "desc": "uw gegevens ontvangen in een gestructureerd formaat" },
+      { "name": "Recht van bezwaar", "desc": "bezwaar maken tegen bepaalde verwerkingen" },
+      { "name": "Recht op beperking", "desc": "de verwerking in bepaalde gevallen beperken" }
+    ],
+    "rightsContact": "Om deze rechten uit te oefenen, kunt u contact met ons opnemen via e-mail:",
+    "rightsDelay": "Wij verbinden ons ertoe te reageren binnen <strong>30 dagen</strong>.",
+    "rightsAuthority": "U heeft ook het recht om een klacht in te dienen bij een bevoegde toezichthoudende autoriteit (ICO in het Verenigd Koninkrijk, CNIL in Frankrijk, AP in Nederland).",
+    "cookiesTitle": "8. Cookiebeleid",
+    "cookiesIntro": "Deze website gebruikt de volgende soorten cookies:",
+    "cookiesTypeHeader": "Type",
+    "cookiesPurposeHeader": "Doel",
+    "cookiesConsentHeader": "Toestemming",
+    "cookiesRows": [
+      { "type": "Essentieel", "purpose": "Websitefunctionaliteit", "consent": "Niet vereist" },
+      { "type": "Analytics (GA4)", "purpose": "Geanonimiseerde publieksanalyse", "consent": "Vereist" },
+      { "type": "Derde partij (iClosed)", "purpose": "Afsprakenboeking", "consent": "Vereist" }
+    ],
+    "cookiesManage": "U kunt uw cookievoorkeuren op elk moment beheren via uw browserinstellingen.",
+    "securityTitle": "9. Gegevensbeveiliging",
+    "securityText": "Wij implementeren passende technische en organisatorische maatregelen om uw gegevens te beschermen tegen ongeautoriseerde toegang, verlies, vernietiging of openbaarmaking: HTTPS-versleuteling, beperkte gegevenstoegang, beveiligde hosting en regelmatige audits.",
+    "changesTitle": "10. Wijzigingen",
+    "changesText": "Dit beleid kan op elk moment worden bijgewerkt. Elke wezenlijke wijziging wordt via de website gemeld. De geldende versie is degene die op deze pagina wordt weergegeven met de bijwerkingsdatum.",
+    "footer": "Laatste update: maart 2026 — VAULT 369 LTD"
+  },
+  "cookies": {
+    "message": "Deze site gebruikt cookies voor verkeersanalyse.",
+    "accept": "Accepteren",
+    "refuse": "Weigeren",
+    "link": "Meer informatie"
+  }
+}

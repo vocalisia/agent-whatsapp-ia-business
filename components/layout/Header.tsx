@@ -11,6 +11,7 @@ export default function Header() {
 
   const links = [
     { href: `/${locale}/services/agent-ia-whatsapp`, label: t("services") },
+    { href: `/${locale}/secteurs`, label: t("secteurs") },
     { href: `/${locale}/tarifs`, label: t("tarifs") },
     { href: `/${locale}/blog`, label: t("blog") },
     { href: `/${locale}/contact`, label: t("contact") },
@@ -60,6 +61,7 @@ export default function Header() {
               { code: "fr", flag: "🇫🇷" },
               { code: "en", flag: "🇬🇧" },
               { code: "de", flag: "🇩🇪" },
+              { code: "nl", flag: "🇳🇱" },
             ] as const).map((l) => (
               <Link
                 key={l.code}

@@ -2,7 +2,13 @@ import { MetadataRoute } from "next";
 import { getAllSlugs } from "@/lib/mdx";
 
 const BASE_URL = "https://agentic-whatsup.com";
-const locales = ["fr", "en", "de"];
+const locales = ["fr", "en", "de", "nl"];
+
+const secteurSlugs = [
+  "immobilier", "ecommerce", "sante", "restaurant", "assurance",
+  "btp", "education", "automobile", "juridique", "beaute-bien-etre",
+  "logistique", "saas-tech",
+];
 
 const pages = [
   { path: "", changeFrequency: "weekly" as const, priority: 1.0 },
@@ -11,6 +17,7 @@ const pages = [
   { path: "/services/campagnes-whatsapp", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/crm-automation", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/prise-de-rdv", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/secteurs", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/tarifs", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly" as const, priority: 0.7 },
@@ -36,6 +43,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.7,
+      });
+    }
+    for (const secteur of secteurSlugs) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/secteurs/${secteur}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.75,
       });
     }
   }
