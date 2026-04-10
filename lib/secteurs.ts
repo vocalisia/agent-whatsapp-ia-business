@@ -838,8 +838,6 @@ export const SECTEUR_TRANSLATIONS: Record<string, Record<string, SecteurTranslat
       ctaText: "Bekijk een SaaS demo",
     },
   },
-};
-
   "coach-infopreneur": {
     fr: {
       name: "Coach & Infopreneur",
