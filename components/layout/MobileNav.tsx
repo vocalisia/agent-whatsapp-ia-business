@@ -1,17 +1,33 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
+
+const serviceLabels: Record<string, Record<string, string>> = {
+  "agent-ia-whatsapp":   { fr: "Agent IA WhatsApp",     en: "WhatsApp AI Agent",     de: "WhatsApp KI-Agent",       nl: "WhatsApp AI-agent" },
+  "qualification-leads": { fr: "Qualification de leads", en: "Lead qualification",    de: "Lead-Qualifizierung",     nl: "Leadkwalificatie" },
+  "campagnes-whatsapp":  { fr: "Campagnes WhatsApp",     en: "WhatsApp campaigns",    de: "WhatsApp-Kampagnen",      nl: "WhatsApp-campagnes" },
+  "crm-automation":      { fr: "CRM & Automation",       en: "CRM & Automation",      de: "CRM & Automatisierung",   nl: "CRM & Automatisering" },
+  "prise-de-rdv":        { fr: "Prise de RDV",           en: "Appointment booking",   de: "Terminvereinbarung",      nl: "Afspraken boeken" },
+  "automatisation":      { fr: "Automatisation",         en: "Automation",            de: "Automatisierung",         nl: "Automatisering" },
+  "marketing-hub":       { fr: "Marketing Hub",          en: "Marketing Hub",         de: "Marketing Hub",           nl: "Marketing Hub" },
+  "agent-sur-mesure":    { fr: "Agent sur-mesure",       en: "Custom agent",          de: "Maßgeschneiderter Agent", nl: "Maatwerk agent" },
+};
+
+const serviceKeys = [
+  "agent-ia-whatsapp", "qualification-leads", "campagnes-whatsapp",
+  "crm-automation", "prise-de-rdv", "automatisation", "marketing-hub", "agent-sur-mesure",
+];
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const t = useTranslations("nav");
   const locale = useLocale();
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
 
   const links = [
-    { href: `/${locale}/services/agent-ia-whatsapp`, label: t("services") },
     { href: `/${locale}/integrations`, label: t("integrations") },
     { href: `/${locale}/cas-clients`, label: t("casClients") },
     { href: `/${locale}/secteurs`, label: t("secteurs") },
@@ -29,8 +45,30 @@ export default function MobileNav() {
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
       {open && (
-        <div className="fixed inset-0 top-16 z-40 bg-bg/95 backdrop-blur-sm md:hidden">
-          <nav className="flex flex-col gap-4 p-6">
+        <div className="fixed inset-0 top-16 z-40 bg-bg/95 backdrop-blur-sm md:hidden overflow-y-auto">
+          <nav className="flex flex-col gap-1 p-6">
+            {/* Services accordion */}
+            <button
+              onClick={() => setServicesOpen((v) => !v)}
+              className="flex items-center justify-between w-full text-lg font-medium text-slate-200 hover:text-wa transition-colors py-2 border-b border-surface"
+            >
+              {t("services")}
+              <ChevronDown size={16} className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+            </button>
+            {servicesOpen && (
+              <div className="pl-4 flex flex-col gap-1 py-2">
+                {serviceKeys.map((key) => (
+                  <Link
+                    key={key}
+                    href={`/${locale}/services/${key}`}
+                    onClick={() => setOpen(false)}
+                    className="text-sm text-slate-400 hover:text-wa transition-colors py-1.5"
+                  >
+                    {serviceLabels[key][locale] ?? serviceLabels[key].fr}
+                  </Link>
+                ))}
+              </div>
+            )}
             {links.map((l) => (
               <Link
                 key={l.href}

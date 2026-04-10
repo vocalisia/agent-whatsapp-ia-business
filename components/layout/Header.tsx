@@ -1,16 +1,61 @@
 "use client";
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { MessageCircle, ChevronDown, Bot, UserCheck, Megaphone, Settings, Calendar, Zap, BarChart3, Wand2 } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import MobileNav from "./MobileNav";
+
+const serviceIcons: Record<string, React.ReactNode> = {
+  "agent-ia-whatsapp": <Bot size={15} />,
+  "qualification-leads": <UserCheck size={15} />,
+  "campagnes-whatsapp": <Megaphone size={15} />,
+  "crm-automation": <Settings size={15} />,
+  "prise-de-rdv": <Calendar size={15} />,
+  "automatisation": <Zap size={15} />,
+  "marketing-hub": <BarChart3 size={15} />,
+  "agent-sur-mesure": <Wand2 size={15} />,
+};
+
+const serviceLabels: Record<string, Record<string, string>> = {
+  "agent-ia-whatsapp":     { fr: "Agent IA WhatsApp",       en: "WhatsApp AI Agent",       de: "WhatsApp KI-Agent",         nl: "WhatsApp AI-agent" },
+  "qualification-leads":   { fr: "Qualification de leads",   en: "Lead qualification",       de: "Lead-Qualifizierung",        nl: "Leadkwalificatie" },
+  "campagnes-whatsapp":    { fr: "Campagnes WhatsApp",       en: "WhatsApp campaigns",       de: "WhatsApp-Kampagnen",         nl: "WhatsApp-campagnes" },
+  "crm-automation":        { fr: "CRM & Automation",         en: "CRM & Automation",         de: "CRM & Automatisierung",      nl: "CRM & Automatisering" },
+  "prise-de-rdv":          { fr: "Prise de RDV",             en: "Appointment booking",      de: "Terminvereinbarung",         nl: "Afspraken boeken" },
+  "automatisation":        { fr: "Automatisation",           en: "Automation",               de: "Automatisierung",            nl: "Automatisering" },
+  "marketing-hub":         { fr: "Marketing Hub",            en: "Marketing Hub",            de: "Marketing Hub",              nl: "Marketing Hub" },
+  "agent-sur-mesure":      { fr: "Agent sur-mesure",         en: "Custom agent",             de: "Maßgeschneiderter Agent",    nl: "Maatwerk agent" },
+};
+
+const serviceKeys = [
+  "agent-ia-whatsapp",
+  "qualification-leads",
+  "campagnes-whatsapp",
+  "crm-automation",
+  "prise-de-rdv",
+  "automatisation",
+  "marketing-hub",
+  "agent-sur-mesure",
+];
 
 export default function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const links = [
-    { href: `/${locale}/services/agent-ia-whatsapp`, label: t("services") },
     { href: `/${locale}/integrations`, label: t("integrations") },
     { href: `/${locale}/cas-clients`, label: t("casClients") },
     { href: `/${locale}/secteurs`, label: t("secteurs") },
@@ -34,7 +79,6 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-1.5 bg-surface border border-surface-2 hover:border-wa/40 rounded-full px-2.5 py-1 transition-colors group"
           >
-            {/* Vocalis logo mark */}
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="7" cy="7" r="6.5" stroke="#25D366" strokeWidth="1"/>
               <path d="M4 5L7 9.5L10 5" stroke="#25D366" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -45,6 +89,31 @@ export default function Header() {
           </a>
         </div>
         <nav className="hidden md:flex items-center gap-6">
+          {/* Services dropdown */}
+          <div ref={dropdownRef} className="relative">
+            <button
+              onClick={() => setServicesOpen((v) => !v)}
+              className="flex items-center gap-1 text-slate-300 hover:text-white transition-colors text-sm font-medium"
+            >
+              {t("services")}
+              <ChevronDown size={14} className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+            </button>
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-surface border border-surface-2 rounded-xl shadow-xl py-2 z-50">
+                {serviceKeys.map((key) => (
+                  <Link
+                    key={key}
+                    href={`/${locale}/services/${key}`}
+                    onClick={() => setServicesOpen(false)}
+                    className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-300 hover:text-wa hover:bg-wa/5 transition-colors"
+                  >
+                    <span className="text-wa/60">{serviceIcons[key]}</span>
+                    {serviceLabels[key][locale] ?? serviceLabels[key].fr}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
           {links.map((l) => (
             <Link
               key={l.href}
