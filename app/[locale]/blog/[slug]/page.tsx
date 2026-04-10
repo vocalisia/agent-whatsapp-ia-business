@@ -14,8 +14,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
   try {
-    const { slug } = await params;
-    const { meta } = getPostBySlug(slug);
+    const { slug, locale } = await params;
+    const { meta } = getPostBySlug(slug, locale);
     return {
       title: meta.title,
       description: meta.description,
@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   let post;
   try {
-    post = getPostBySlug(slug);
+    post = getPostBySlug(slug, locale);
   } catch {
     notFound();
   }
