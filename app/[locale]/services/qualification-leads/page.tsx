@@ -12,41 +12,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const features = [
-  "Questionnaire de qualification automatique",
-  "Scoring IA en temps r\u00e9el selon vos crit\u00e8res",
-  "Transmission automatique au CRM (HubSpot, Salesforce, Notion)",
-  "Relances automatiques des prospects inactifs",
-  "Gestion des vocaux et photos pour qualifier",
-  "Rapports hebdomadaires de performance",
-];
-
-const steps = [
-  {
-    icon: MessageCircle,
-    title: "Le prospect envoie un message",
-    desc: "Via votre num\u00e9ro WhatsApp Business \u2014 texte, vocal ou photo.",
-  },
-  {
-    icon: Filter,
-    title: "L'IA pose les bonnes questions",
-    desc: "Budget, besoin, d\u00e9lai, autorit\u00e9 \u2014 adapt\u00e9 \u00e0 votre secteur.",
-  },
-  {
-    icon: Target,
-    title: "Score de qualification calcul\u00e9",
-    desc: "Chaque prospect re\u00e7oit un score selon vos crit\u00e8res m\u00e9tier.",
-  },
-  {
-    icon: Zap,
-    title: "Transmission au commercial",
-    desc: "Seuls les prospects qualifi\u00e9s arrivent dans votre CRM ou Slack.",
-  },
-];
+const STEPS_ICONS = [MessageCircle, Filter, Target, Zap];
 
 export default async function QualificationLeadsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const features = t.raw("qualificationLeads.features") as string[];
+  const steps = (t.raw("qualificationLeads.steps") as Array<{ title: string; desc: string }>).map((s, i) => ({ ...s, icon: STEPS_ICONS[i] }));
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">

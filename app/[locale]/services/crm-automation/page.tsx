@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, ArrowRight, MessageCircle, Database, RefreshCw, Webhook } from "lucide-react";
+import { Check, ArrowRight, MessageCircle, Database, Webhook } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -12,29 +12,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const features = [
-  "Synchronisation bidirectionnelle avec HubSpot",
-  "Cr\u00e9ation automatique de contacts et deals Salesforce",
-  "Mise \u00e0 jour des propri\u00e9t\u00e9s CRM depuis les conversations",
-  "Int\u00e9gration Notion pour les \u00e9quipes no-code",
-  "Webhooks entrants et sortants personnalisables",
-  "Logs d'activit\u00e9 WhatsApp dans le CRM",
-  "Alertes commerciales en temps r\u00e9el (Slack, email)",
-  "Mapping champs personnalis\u00e9 selon votre CRM",
-];
-
-const integrations = [
-  { name: "HubSpot", desc: "Contacts, deals, activit\u00e9s, s\u00e9quences" },
-  { name: "Salesforce", desc: "Leads, opportunities, tasks, notes" },
-  { name: "Notion", desc: "Bases de donn\u00e9es, pages, propri\u00e9t\u00e9s" },
-  { name: "Airtable", desc: "Tables, records, vues filtr\u00e9es" },
-  { name: "Make / Zapier", desc: "Automatisations via webhooks" },
-  { name: "Cal.com", desc: "Prise de RDV directement dans WhatsApp" },
-];
+const CRM_STEP_ICONS = [MessageCircle, Webhook, Database];
 
 export default async function CrmAutomationPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const features = t.raw("crm.features") as string[];
+  const integrations = t.raw("crm.integrations") as Array<{ name: string; desc: string }>;
+  const steps = (t.raw("crm.steps") as Array<{ title: string; desc: string }>).map((s, i) => ({ ...s, icon: CRM_STEP_ICONS[i] }));
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
@@ -82,14 +67,10 @@ export default async function CrmAutomationPage({ params }: { params: Promise<{ 
           {t("crm.howTitle")}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            { icon: MessageCircle, step: "1", title: "Conversation WhatsApp", desc: "Le client r\u00e9pond \u00e0 votre agent IA \u2014 questions, informations, demandes." },
-            { icon: Webhook, step: "2", title: "Traitement IA", desc: "L'agent extrait les donn\u00e9es cl\u00e9s : nom, budget, besoin, qualification." },
-            { icon: Database, step: "3", title: "Mise \u00e0 jour CRM", desc: "Les donn\u00e9es sont pouss\u00e9es dans votre CRM instantan\u00e9ment via webhook." },
-          ].map(({ icon: Icon, step, title, desc }) => (
-            <div key={step} className="bg-surface border border-surface-2 rounded-xl p-5 text-center">
+          {steps.map(({ icon: Icon, title, desc }, i) => (
+            <div key={i} className="bg-surface border border-surface-2 rounded-xl p-5 text-center">
               <div className="w-10 h-10 rounded-full bg-wa/10 border border-wa/30 flex items-center justify-center mx-auto mb-3">
-                <span className="text-wa text-sm font-bold">{step}</span>
+                <span className="text-wa text-sm font-bold">{i + 1}</span>
               </div>
               <Icon size={18} className="text-wa mx-auto mb-2" />
               <h3 className="font-semibold text-white mb-1 text-sm">{title}</h3>

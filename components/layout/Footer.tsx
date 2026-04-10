@@ -3,8 +3,11 @@ import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 
-const tarifsLabel: Record<string, string> = { fr: "Tarifs", en: "Pricing", de: "Preise", nl: "Prijzen" };
 const contactLabel: Record<string, string> = { fr: "Contact", en: "Contact", de: "Kontakt", nl: "Contact" };
+const integrationsLabel: Record<string, string> = { fr: "Intégrations", en: "Integrations", de: "Integrationen", nl: "Integraties" };
+const casClientsLabel: Record<string, string> = { fr: "Cas clients", en: "Case studies", de: "Referenzen", nl: "Klantcases" };
+const securiteLabel: Record<string, string> = { fr: "Sécurité & RGPD", en: "Security & GDPR", de: "Sicherheit & DSGVO", nl: "Beveiliging & AVG" };
+const agentSurMesureLabel: Record<string, string> = { fr: "Agent sur-mesure", en: "Custom agent", de: "Maßgeschneiderter Agent", nl: "Maatwerk agent" };
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -82,18 +85,33 @@ export default function Footer() {
           <h3 className="font-semibold text-white mb-3">{t("resourcesTitle")}</h3>
           <ul className="space-y-2 text-sm text-slate-400">
             <li>
+              <Link href={`/${locale}/integrations`} className="hover:text-wa transition-colors">
+                {integrationsLabel[locale] ?? "Intégrations"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/cas-clients`} className="hover:text-wa transition-colors">
+                {casClientsLabel[locale] ?? "Cas clients"}
+              </Link>
+            </li>
+            <li>
               <Link href={`/${locale}/secteurs`} className="hover:text-wa transition-colors">
                 {t("secteursTitle")}
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/blog`} className="hover:text-wa transition-colors">
-                Blog
+              <Link href={`/${locale}/services/agent-sur-mesure`} className="hover:text-wa transition-colors">
+                {agentSurMesureLabel[locale] ?? "Agent sur-mesure"}
               </Link>
             </li>
             <li>
-              <Link href={`/${locale}/tarifs`} className="hover:text-wa transition-colors">
-                {tarifsLabel[locale] ?? "Tarifs"}
+              <Link href={`/${locale}/securite`} className="hover:text-wa transition-colors">
+                {securiteLabel[locale] ?? "Sécurité & RGPD"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/blog`} className="hover:text-wa transition-colors">
+                Blog
               </Link>
             </li>
             <li>

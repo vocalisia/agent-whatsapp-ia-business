@@ -20,8 +20,11 @@ const pages = [
   { path: "/services/campagnes-whatsapp", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/crm-automation", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/prise-de-rdv", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/integrations", changeFrequency: "monthly" as const, priority: 0.85 },
+  { path: "/cas-clients", changeFrequency: "monthly" as const, priority: 0.85 },
   { path: "/secteurs", changeFrequency: "monthly" as const, priority: 0.8 },
-  { path: "/tarifs", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/services/agent-sur-mesure", changeFrequency: "monthly" as const, priority: 0.85 },
+  { path: "/securite", changeFrequency: "yearly" as const, priority: 0.6 },
   { path: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly" as const, priority: 0.7 },
 ];

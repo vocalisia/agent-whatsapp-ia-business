@@ -6,7 +6,9 @@
     "contact": "Contact",
     "audit": "Audit gratuit",
     "whatsapp": "WhatsApp",
-    "secteurs": "Secteurs"
+    "secteurs": "Secteurs",
+    "integrations": "Intégrations",
+    "casClients": "Cas clients"
   },
   "hero": {
     "badge": "Technologie exclusive — Vision IA + Vocaux",
@@ -290,6 +292,40 @@
         { "title": "Confirmation automatique", "desc": "RDV créé dans l'agenda, confirmation WhatsApp + email, rappel 24h avant." }
       ]
     },
+    "agentIa": {
+      "metaTitle": "Agent IA WhatsApp Business",
+      "heroLabel": "Agent IA WhatsApp",
+      "heroTitle": "Votre agent IA WhatsApp Business,",
+      "heroHighlight": "clé en main",
+      "heroSubtitle": "De l'analyse des besoins à la mise en production — nous déployons votre agent IA WhatsApp en 2 à 3 semaines. Vision IA, transcription vocale, prise de RDV, intégrations CRM.",
+      "pricingEyebrow": "Tarifs",
+      "pricingTitle": "Un investissement adapté à votre activité",
+      "pricingSubtitle": "Chaque projet est différent. Contactez-nous pour un devis personnalisé basé sur vos volumes et vos intégrations.",
+      "pricingViewPlans": "Voir les formules",
+      "pricingRequestQuote": "Demander un devis",
+      "faqEyebrow": "FAQ",
+      "faqTitle": "Questions fréquentes sur l'agent IA WhatsApp",
+      "relatedEyebrow": "Services associés",
+      "relatedTitle": "Allez plus loin avec nos autres services",
+      "relatedLearnMore": "En savoir plus",
+      "finalCtaTitle": "Prêt à déployer votre agent IA WhatsApp ?",
+      "finalCtaSubtitle": "30 minutes pour analyser vos besoins. Proposition sous 48h.",
+      "faqItems": [
+        { "question": "Comment fonctionne la transcription vocale WhatsApp ?", "answer": "L'agent transcrit chaque message vocal grâce à un modèle de reconnaissance vocale, selon la langue configurée. Le transcript est traité comme du texte normal, et l'IA répond de façon contextuelle." },
+        { "question": "Quels types de photos l'agent peut-il analyser ?", "answer": "Documents (CNI, justificatifs, contrats, factures), photos de biens immobiliers, captures d'écran, photos de produits, prescriptions médicales — tout type d'image." },
+        { "question": "L'agent peut-il remplir des documents avec les photos reçues ?", "answer": "Oui. Si un client envoie une photo de sa pièce d'identité ou d'un formulaire, l'agent extrait les informations et les enregistre dans votre CRM ou pré-remplit un dossier automatiquement." },
+        { "question": "Faut-il un compte WhatsApp Business existant ?", "answer": "Vous avez besoin d'un compte WhatsApp Business API via Meta. Nous vous accompagnons dans la création, la connexion et l'approbation des templates." },
+        { "question": "Comment fonctionne la règle des 24h de Meta ?", "answer": "Notre agent gère cette contrainte automatiquement : il utilise des templates pré-approuvés pour relancer les conversations inactives depuis plus de 24h." },
+        { "question": "L'agent peut-il gérer plusieurs langues ?", "answer": "Oui. L'agent détecte automatiquement la langue du client et répond dans la même langue (français, anglais, arabe, espagnol, etc.)." },
+        { "question": "Combien de conversations simultanées peut-il gérer ?", "answer": "L'agent est scalable et peut gérer des centaines de conversations simultanées sans dégradation de qualité." },
+        { "question": "Quelle est la conformité RGPD de la solution ?", "answer": "Rétention des données configurable par type, nettoyage automatique planifié, hébergement possible sur serveurs EU via Cal.com v2." }
+      ],
+      "relatedServices": [
+        { "title": "Automatisation CRM", "description": "Connectez votre agent WhatsApp à HubSpot, Salesforce ou Pipedrive." },
+        { "title": "Campagnes WhatsApp sortantes", "description": "Prospection et relance automatisée via templates Meta approuvés." },
+        { "title": "Intégration Cal.com", "description": "Prise de rendez-vous intelligente directement dans WhatsApp." }
+      ]
+    },
     "common": {
       "auditGratuit": "Audit gratuit",
       "ecrireWhatsapp": "Écrire sur WhatsApp",
@@ -417,6 +453,50 @@
     "changesTitle": "10. Modifications",
     "changesText": "Cette politique peut être mise à jour à tout moment. Toute modification substantielle sera notifiée via le site. La version en vigueur est celle affichée sur cette page avec la date de mise à jour.",
     "footer": "Dernière mise à jour : mars 2026 — VAULT 369 LTD"
+  },
+  "confirmation": {
+    "sessionConfirmed": "Session confirmée",
+    "sessionConfirmedStatus": "Session confirmée · en attente de votre RDV",
+    "heroTitle": "Votre session stratégique",
+    "heroHighlight": "est réservée. 🚀",
+    "heroSubtitle": "Un email de confirmation avec tous les détails et le lien Google Meet vous a été envoyé.",
+    "vslTitle": "Regardez avant votre session",
+    "vslSubtitle": "2 minutes pour comprendre exactement ce qu'on va faire ensemble",
+    "stepsTitle": "Ce qui va se passer pendant la session",
+    "steps": [
+      { "num": "Minute 0–10", "title": "Diagnostic métier", "desc": "On analyse vos flux de messages WhatsApp, vos points de friction et les tâches répétitives qui vous font perdre du temps." },
+      { "num": "Minute 10–20", "title": "Évaluation technique", "desc": "Étude de faisabilité selon vos outils actuels (CRM, agenda, base de données). On vous dit exactement ce qui est automatisable." },
+      { "num": "Minute 20–30", "title": "Stratégie & proposition", "desc": "On définit ensemble votre plan d'action. Vous repartez avec une proposition concrète et chiffrée sous 48h dans votre boîte mail." }
+    ],
+    "checklistTitle": "Pour maximiser votre session — préparez :",
+    "checklistItems": [
+      "Votre volume de messages WhatsApp mensuel (approximatif)",
+      "Les 3 questions les plus fréquentes de vos clients",
+      "Les outils que vous utilisez : CRM, agenda, logiciel de facturation",
+      "Vos horaires de disponibilité pour les réponses automatiques"
+    ],
+    "statsTitle": "Ce que nos clients obtiennent",
+    "stats": [
+      { "stat": "−78%", "label": "de messages sans réponse" },
+      { "stat": "3×", "label": "plus de leads qualifiés" },
+      { "stat": "2 sem.", "label": "pour être en production" }
+    ],
+    "testimonialsTitle": "Ils l'ont fait avant vous",
+    "testimonials": [
+      { "name": "Sophie M.", "role": "Directrice agence immobilière, Lyon", "text": "En 2 semaines, l'agent répond aux photos de biens envoyées par WhatsApp. Mes agents passent 0 minute sur les questions basiques. ROI immédiat." },
+      { "name": "Karim B.", "role": "Fondateur e-commerce, Paris", "text": "Notre SAV WhatsApp tourne 24/7 sans intervention humaine. Le taux de satisfaction client est passé de 67% à 91% en un mois." }
+    ],
+    "guaranteesTitle": "Nos garanties",
+    "guarantees": [
+      { "icon": "🔒", "title": "Confidentiel", "desc": "NDA disponible sur demande" },
+      { "icon": "🎯", "title": "Sans engagement", "desc": "Aucune obligation d'achat" },
+      { "icon": "⚡", "title": "Proposition 48h", "desc": "Chiffrée et détaillée" }
+    ],
+    "ctaQuestion": "Une question avant la session ?",
+    "ctaWhatsapp": "Écrire sur WhatsApp",
+    "ctaResponse": "Réponse en moins de 2h en journée",
+    "footerHome": "← Retour à l'accueil",
+    "footerBlog": "Lire notre blog →"
   },
   "cookies": {
     "message": "Ce site utilise des cookies pour analyser le trafic.",

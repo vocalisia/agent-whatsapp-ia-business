@@ -6,7 +6,9 @@
     "contact": "Contact",
     "audit": "Gratis audit",
     "whatsapp": "WhatsApp",
-    "secteurs": "Sectoren"
+    "secteurs": "Sectoren",
+    "integrations": "Integraties",
+    "casClients": "Klantcases"
   },
   "hero": {
     "badge": "Exclusieve technologie — AI Vision + Spraakberichten",
@@ -290,6 +292,40 @@
         { "title": "Automatische bevestiging", "desc": "Afspraak aangemaakt in de agenda, WhatsApp + e-mailbevestiging, 24u herinnering." }
       ]
     },
+    "agentIa": {
+      "metaTitle": "WhatsApp AI-agent voor bedrijven",
+      "heroLabel": "WhatsApp AI-agent",
+      "heroTitle": "Uw WhatsApp Business AI-agent,",
+      "heroHighlight": "kant-en-klaar",
+      "heroSubtitle": "Van behoefteanalyse tot productie — wij zetten uw WhatsApp AI-agent in 2 tot 3 weken in. AI Vision, spraaktranscriptie, afsprakenboeking, CRM-integraties.",
+      "pricingEyebrow": "Prijzen",
+      "pricingTitle": "Een investering op maat van uw bedrijf",
+      "pricingSubtitle": "Elk project is uniek. Neem contact met ons op voor een gepersonaliseerde offerte op basis van uw volumes en integraties.",
+      "pricingViewPlans": "Bekijk formules",
+      "pricingRequestQuote": "Offerte aanvragen",
+      "faqEyebrow": "FAQ",
+      "faqTitle": "Veelgestelde vragen over de WhatsApp AI-agent",
+      "relatedEyebrow": "Gerelateerde diensten",
+      "relatedTitle": "Ga verder met onze andere diensten",
+      "relatedLearnMore": "Meer weten",
+      "finalCtaTitle": "Klaar om uw WhatsApp AI-agent in te zetten?",
+      "finalCtaSubtitle": "30 minuten om uw behoeften te analyseren. Voorstel binnen 48u.",
+      "faqItems": [
+        { "question": "Hoe werkt WhatsApp-spraaktranscriptie?", "answer": "De agent transcribeert elk spraakbericht met een spraakherkenningsmodel op basis van de geconfigureerde taal. Het transcript wordt verwerkt als gewone tekst en de AI antwoordt contextueel." },
+        { "question": "Welke soorten foto's kan de agent analyseren?", "answer": "Documenten (ID-kaarten, bewijsstukken, contracten, facturen), vastgoedfoto's, schermafbeeldingen, productfoto's, medische voorschriften — elk type afbeelding." },
+        { "question": "Kan de agent documenten invullen met ontvangen foto's?", "answer": "Ja. Als een klant een foto van zijn ID of een formulier stuurt, extraheert de agent de informatie en slaat deze op in uw CRM of vult automatisch een dossier in." },
+        { "question": "Heb ik een bestaand WhatsApp Business-account nodig?", "answer": "U heeft een WhatsApp Business API-account via Meta nodig. Wij begeleiden u bij het aanmaken, verbinden en goedkeuren van templates." },
+        { "question": "Hoe werkt Meta's 24-uursregel?", "answer": "Onze agent beheert deze beperking automatisch: hij gebruikt vooraf goedgekeurde templates om gesprekken te heractiveren die meer dan 24 uur inactief zijn geweest." },
+        { "question": "Kan de agent meerdere talen verwerken?", "answer": "Ja. De agent detecteert automatisch de taal van de klant en antwoordt in dezelfde taal (Frans, Engels, Arabisch, Spaans, enz.)." },
+        { "question": "Hoeveel gelijktijdige gesprekken kan hij verwerken?", "answer": "De agent is schaalbaar en kan honderden gelijktijdige gesprekken verwerken zonder kwaliteitsverlies." },
+        { "question": "Wat is de AVG-naleving van de oplossing?", "answer": "Configureerbare gegevensretentie per type, geplande automatische opruiming en mogelijk EU-serverhosting via Cal.com v2." }
+      ],
+      "relatedServices": [
+        { "title": "CRM-automatisering", "description": "Verbind uw WhatsApp-agent met HubSpot, Salesforce of Pipedrive." },
+        { "title": "Uitgaande WhatsApp-campagnes", "description": "Geautomatiseerde prospectie en opvolging via goedgekeurde Meta-templates." },
+        { "title": "Cal.com-integratie", "description": "Slimme afsprakenboeking direct in WhatsApp." }
+      ]
+    },
     "common": {
       "auditGratuit": "Gratis audit",
       "ecrireWhatsapp": "Schrijf op WhatsApp",
@@ -417,6 +453,50 @@
     "changesTitle": "10. Wijzigingen",
     "changesText": "Dit beleid kan op elk moment worden bijgewerkt. Elke wezenlijke wijziging wordt via de website gemeld. De geldende versie is degene die op deze pagina wordt weergegeven met de bijwerkingsdatum.",
     "footer": "Laatste update: maart 2026 — VAULT 369 LTD"
+  },
+  "confirmation": {
+    "sessionConfirmed": "Sessie bevestigd",
+    "sessionConfirmedStatus": "Sessie bevestigd · uw afspraak is in behandeling",
+    "heroTitle": "Uw strategiesessie",
+    "heroHighlight": "is geboekt. 🚀",
+    "heroSubtitle": "Een bevestigingsmail met alle details en de Google Meet-link is naar u verzonden.",
+    "vslTitle": "Bekijk voor uw sessie",
+    "vslSubtitle": "2 minuten om precies te begrijpen wat we samen gaan doen",
+    "stepsTitle": "Wat er tijdens de sessie gaat gebeuren",
+    "steps": [
+      { "num": "Minuten 0–10", "title": "Bedrijfsdiagnose", "desc": "We analyseren uw WhatsApp-berichtenstromen, uw pijnpunten en de repetitieve taken die uw tijd verspillen." },
+      { "num": "Minuten 10–20", "title": "Technische evaluatie", "desc": "Haalbaarheidsstudie op basis van uw huidige tools (CRM, agenda, database). We vertellen u precies wat geautomatiseerd kan worden." },
+      { "num": "Minuten 20–30", "title": "Strategie & voorstel", "desc": "We definiëren samen uw actieplan. U vertrekt met een concreet, gespecificeerd voorstel binnen 48u in uw inbox." }
+    ],
+    "checklistTitle": "Om uw sessie te maximaliseren — bereid voor:",
+    "checklistItems": [
+      "Uw maandelijks WhatsApp-berichtvolume (bij benadering)",
+      "De 3 meest gestelde vragen van uw klanten",
+      "De tools die u gebruikt: CRM, agenda, factureringssoftware",
+      "Uw beschikbaarheidsuren voor automatische antwoorden"
+    ],
+    "statsTitle": "Wat onze klanten bereiken",
+    "stats": [
+      { "stat": "−78%", "label": "onbeantwoorde berichten" },
+      { "stat": "3×", "label": "meer gekwalificeerde leads" },
+      { "stat": "2 wk.", "label": "om live te gaan" }
+    ],
+    "testimonialsTitle": "Zij deden het voor u",
+    "testimonials": [
+      { "name": "Sophie M.", "role": "Directeur vastgoedkantoor, Lyon", "text": "Binnen 2 weken beantwoordt de agent vastgoedfoto's die via WhatsApp worden verzonden. Mijn medewerkers besteden 0 minuten aan basisvragen. Direct ROI." },
+      { "name": "Karim B.", "role": "E-commerce oprichter, Parijs", "text": "Onze WhatsApp-klantenservice draait 24/7 zonder menselijke tussenkomst. De klanttevredenheid steeg van 67% naar 91% in één maand." }
+    ],
+    "guaranteesTitle": "Onze garanties",
+    "guarantees": [
+      { "icon": "🔒", "title": "Vertrouwelijk", "desc": "NDA op aanvraag beschikbaar" },
+      { "icon": "🎯", "title": "Vrijblijvend", "desc": "Geen aankoopverplichting" },
+      { "icon": "⚡", "title": "Voorstel binnen 48u", "desc": "Gespecificeerd en gedetailleerd" }
+    ],
+    "ctaQuestion": "Een vraag voor de sessie?",
+    "ctaWhatsapp": "Schrijf op WhatsApp",
+    "ctaResponse": "Antwoord binnen 2 uur tijdens kantooruren",
+    "footerHome": "← Terug naar home",
+    "footerBlog": "Ons blog lezen →"
   },
   "cookies": {
     "message": "Deze site gebruikt cookies voor verkeersanalyse.",

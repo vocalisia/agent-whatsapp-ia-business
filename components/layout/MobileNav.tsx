@@ -12,7 +12,9 @@ export default function MobileNav() {
 
   const links = [
     { href: `/${locale}/services/agent-ia-whatsapp`, label: t("services") },
-    { href: `/${locale}/tarifs`, label: t("tarifs") },
+    { href: `/${locale}/integrations`, label: t("integrations") },
+    { href: `/${locale}/cas-clients`, label: t("casClients") },
+    { href: `/${locale}/secteurs`, label: t("secteurs") },
     { href: `/${locale}/blog`, label: t("blog") },
     { href: `/${locale}/contact`, label: t("contact") },
   ];

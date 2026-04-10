@@ -5,23 +5,25 @@ import {
   CheckCircle, Calendar, Clock, MessageCircle,
   ChevronRight, Star, AlertCircle, Zap, Shield, Users
 } from "lucide-react";
+import { useTranslations, useLocale } from "next-intl";
 import VSLPlayer from "@/components/shared/VSLPlayer";
 import IClosedConfirm from "@/components/shared/IClosedConfirm";
 
 const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER ?? "33600000000";
+const STEP_COLORS = ["wa", "indigo", "sky"] as const;
+const STEP_ICONS = [Users, Zap, ChevronRight];
 
 // ── Countdown to call ──────────────────────────────────────────────────────
-function CountdownBar() {
-  const [seconds, setSeconds] = useState(0);
+function CountdownBar({ label }: { label: string }) {
+  const [, setSeconds] = useState(0);
   useEffect(() => {
-    // Pulse animation only — real countdown would need the booking time
     const i = setInterval(() => setSeconds((s) => (s + 1) % 60), 1000);
     return () => clearInterval(i);
   }, []);
   return (
     <div className="flex items-center gap-2 text-sm text-slate-400">
       <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-      Session confirmée · en attente de votre RDV
+      {label}
     </div>
   );
 }
@@ -71,6 +73,19 @@ function Testimonial({ name, role, text }: { name: string; role: string; text: s
 
 // ── Main page ──────────────────────────────────────────────────────────────
 export default function ConfirmationPage() {
+  const t = useTranslations("confirmation");
+  const locale = useLocale();
+
+  const steps = (t.raw("steps") as Array<{ num: string; title: string; desc: string }>).map((s, i) => ({
+    ...s,
+    icon: STEP_ICONS[i],
+    color: STEP_COLORS[i],
+  }));
+  const checklistItems = t.raw("checklistItems") as string[];
+  const stats = t.raw("stats") as Array<{ stat: string; label: string }>;
+  const testimonials = t.raw("testimonials") as Array<{ name: string; role: string; text: string }>;
+  const guarantees = t.raw("guarantees") as Array<{ icon: string; title: string; desc: string }>;
+
   return (
     <div className="min-h-screen bg-bg">
       {/* Hero confirmation banner */}
@@ -91,19 +106,19 @@ export default function ConfirmationPage() {
 
           <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-5">
             <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-            Session confirmée
+            {t("sessionConfirmed")}
           </div>
 
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 leading-tight">
-            Votre session stratégique<br />
-            <span className="text-gradient-wa">est réservée. 🚀</span>
+            {t("heroTitle")}<br />
+            <span className="text-gradient-wa">{t("heroHighlight")}</span>
           </h1>
 
           <p className="text-xl text-slate-400 max-w-xl mx-auto mb-6 leading-relaxed">
-            Un email de confirmation avec tous les détails et le lien Google Meet vous a été envoyé.
+            {t("heroSubtitle")}
           </p>
 
-          <CountdownBar />
+          <CountdownBar label={t("sessionConfirmedStatus")} />
         </div>
       </div>
 
@@ -112,65 +127,42 @@ export default function ConfirmationPage() {
         {/* iClosed confirmation widget */}
         <IClosedConfirm />
 
-        {/* VSL animée */}
+        {/* VSL */}
         <div>
           <div className="text-center mb-6">
             <h2 className="text-2xl font-bold text-white mb-2">
-              Regardez avant votre session
+              {t("vslTitle")}
             </h2>
             <p className="text-slate-400 text-sm">
-              2 minutes pour comprendre exactement ce qu'on va faire ensemble
+              {t("vslSubtitle")}
             </p>
           </div>
           <VSLPlayer />
         </div>
 
-        {/* Ce qui va se passer */}
+        {/* Steps */}
         <div>
           <div className="flex items-center gap-3 mb-6">
             <div className="w-8 h-8 bg-wa/15 border border-wa/30 rounded-lg flex items-center justify-center">
               <Calendar size={16} className="text-wa" />
             </div>
-            <h2 className="text-xl font-bold text-white">Ce qui va se passer pendant la session</h2>
+            <h2 className="text-xl font-bold text-white">{t("stepsTitle")}</h2>
           </div>
           <div className="space-y-3">
-            <StepCard
-              num="Minute 0–10"
-              title="Diagnostic métier"
-              desc="On analyse vos flux de messages WhatsApp, vos points de friction et les tâches répétitives qui vous font perdre du temps."
-              icon={Users}
-              color="wa"
-            />
-            <StepCard
-              num="Minute 10–20"
-              title="Évaluation technique"
-              desc="Étude de faisabilité selon vos outils actuels (CRM, agenda, base de données). On vous dit exactement ce qui est automatisable."
-              icon={Zap}
-              color="indigo"
-            />
-            <StepCard
-              num="Minute 20–30"
-              title="Stratégie & proposition"
-              desc="On définit ensemble votre plan d'action. Vous repartez avec une proposition concrète et chiffrée sous 48h dans votre boîte mail."
-              icon={ChevronRight}
-              color="sky"
-            />
+            {steps.map((s) => (
+              <StepCard key={s.num} num={s.num} title={s.title} desc={s.desc} icon={s.icon} color={s.color} />
+            ))}
           </div>
         </div>
 
-        {/* Checklist préparation */}
+        {/* Checklist */}
         <div className="bg-surface border border-surface-2 rounded-2xl p-6">
           <div className="flex items-center gap-3 mb-5">
             <AlertCircle size={20} className="text-amber-400" />
-            <h2 className="text-lg font-bold text-white">Pour maximiser votre session — préparez :</h2>
+            <h2 className="text-lg font-bold text-white">{t("checklistTitle")}</h2>
           </div>
           <ul className="space-y-3">
-            {[
-              "Votre volume de messages WhatsApp mensuel (approximatif)",
-              "Les 3 questions les plus fréquentes de vos clients",
-              "Les outils que vous utilisez : CRM, agenda, logiciel de facturation",
-              "Vos horaires de disponibilité pour les réponses automatiques",
-            ].map((item) => (
+            {checklistItems.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-slate-300">
                 <div className="w-5 h-5 bg-wa/15 border border-wa/30 rounded flex items-center justify-center shrink-0 mt-0.5">
                   <CheckCircle size={12} className="text-wa" />
@@ -181,15 +173,11 @@ export default function ConfirmationPage() {
           </ul>
         </div>
 
-        {/* Résultats attendus */}
+        {/* Stats */}
         <div>
-          <h2 className="text-xl font-bold text-white mb-5 text-center">Ce que nos clients obtiennent</h2>
+          <h2 className="text-xl font-bold text-white mb-5 text-center">{t("statsTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            {[
-              { stat: "−78%", label: "de messages sans réponse" },
-              { stat: "3×", label: "plus de leads qualifiés" },
-              { stat: "2 sem.", label: "pour être en production" },
-            ].map((item) => (
+            {stats.map((item) => (
               <div key={item.label} className="bg-surface border border-surface-2 rounded-xl p-5 text-center">
                 <div className="text-3xl font-extrabold text-wa mb-1">{item.stat}</div>
                 <div className="text-sm text-slate-400">{item.label}</div>
@@ -198,35 +186,24 @@ export default function ConfirmationPage() {
           </div>
         </div>
 
-        {/* Témoignages */}
+        {/* Testimonials */}
         <div>
-          <h2 className="text-xl font-bold text-white mb-5 text-center">Ils l'ont fait avant vous</h2>
+          <h2 className="text-xl font-bold text-white mb-5 text-center">{t("testimonialsTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Testimonial
-              name="Sophie M."
-              role="Directrice agence immobilière, Lyon"
-              text="En 2 semaines, l'agent répond aux photos de biens envoyées par WhatsApp. Mes agents passent 0 minute sur les questions basiques. ROI immédiat."
-            />
-            <Testimonial
-              name="Karim B."
-              role="Fondateur e-commerce, Paris"
-              text="Notre SAV WhatsApp tourne 24/7 sans intervention humaine. Le taux de satisfaction client est passé de 67% à 91% en un mois."
-            />
+            {testimonials.map((tm) => (
+              <Testimonial key={tm.name} name={tm.name} role={tm.role} text={tm.text} />
+            ))}
           </div>
         </div>
 
-        {/* Garanties */}
+        {/* Guarantees */}
         <div className="bg-surface border border-surface-2 rounded-2xl p-6">
           <div className="flex items-center gap-2 mb-4">
             <Shield size={18} className="text-wa" />
-            <h3 className="font-bold text-white">Nos garanties</h3>
+            <h3 className="font-bold text-white">{t("guaranteesTitle")}</h3>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {[
-              { icon: "🔒", title: "Confidentiel", desc: "NDA disponible sur demande" },
-              { icon: "🎯", title: "Sans engagement", desc: "Aucune obligation d'achat" },
-              { icon: "⚡", title: "Proposition 48h", desc: "Chiffrée et détaillée" },
-            ].map((g) => (
+            {guarantees.map((g) => (
               <div key={g.title} className="text-center p-3">
                 <div className="text-2xl mb-1">{g.icon}</div>
                 <div className="font-semibold text-white text-sm mb-0.5">{g.title}</div>
@@ -238,26 +215,26 @@ export default function ConfirmationPage() {
 
         {/* CTA WhatsApp */}
         <div className="text-center space-y-4">
-          <p className="text-slate-400 text-sm">Une question avant la session ?</p>
+          <p className="text-slate-400 text-sm">{t("ctaQuestion")}</p>
           <a
-            href={`https://wa.me/${waNumber}?text=Bonjour,%20j%27ai%20r%C3%A9serv%C3%A9%20une%20session%20strat%C3%A9gique%20et%20j%27ai%20une%20question.`}
+            href={`https://wa.me/${waNumber}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-colors glow-wa text-lg"
           >
             <MessageCircle size={20} />
-            Écrire sur WhatsApp
+            {t("ctaWhatsapp")}
           </a>
           <div className="flex items-center justify-center gap-2 text-xs text-slate-600 pt-2">
             <Clock size={12} />
-            Réponse en moins de 2h en journée
+            {t("ctaResponse")}
           </div>
         </div>
 
         {/* Footer nav */}
         <div className="border-t border-surface-2 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
-          <Link href="/" className="hover:text-wa transition-colors">← Retour à l'accueil</Link>
-          <Link href="/blog" className="hover:text-wa transition-colors">Lire notre blog →</Link>
+          <Link href={`/${locale}`} className="hover:text-wa transition-colors">{t("footerHome")}</Link>
+          <Link href={`/${locale}/blog`} className="hover:text-wa transition-colors">{t("footerBlog")}</Link>
         </div>
       </div>
     </div>

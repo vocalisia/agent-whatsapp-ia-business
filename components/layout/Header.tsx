@@ -11,8 +11,9 @@ export default function Header() {
 
   const links = [
     { href: `/${locale}/services/agent-ia-whatsapp`, label: t("services") },
+    { href: `/${locale}/integrations`, label: t("integrations") },
+    { href: `/${locale}/cas-clients`, label: t("casClients") },
     { href: `/${locale}/secteurs`, label: t("secteurs") },
-    { href: `/${locale}/tarifs`, label: t("tarifs") },
     { href: `/${locale}/blog`, label: t("blog") },
     { href: `/${locale}/contact`, label: t("contact") },
   ];

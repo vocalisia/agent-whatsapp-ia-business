@@ -12,43 +12,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const features = [
-  "Templates Meta pr\u00e9-approuv\u00e9s pour vos envois",
-  "Personnalisation dynamique (nom, entreprise, produit)",
-  "Segmentation avanc\u00e9e de vos contacts",
-  "Suivi des taux d'ouverture et de r\u00e9ponse",
-  "Automatisation des s\u00e9quences de relance",
-  "Conformit\u00e9 RGPD et opt-out automatique",
-  "Int\u00e9gration CRM pour ciblage pr\u00e9cis",
-  "Rapports de performance d\u00e9taill\u00e9s",
-];
-
-const useCases = [
-  {
-    icon: Send,
-    title: "Relance de prospects",
-    desc: "R\u00e9activez vos leads froids avec des messages personnalis\u00e9s au bon moment.",
-  },
-  {
-    icon: Users,
-    title: "Onboarding clients",
-    desc: "Accueillez chaque nouveau client avec une s\u00e9quence automatis\u00e9e bienvenue.",
-  },
-  {
-    icon: BarChart3,
-    title: "Promotions & offres",
-    desc: "Diffusez vos offres ponctuelles \u00e0 des segments pr\u00e9cis de votre base.",
-  },
-  {
-    icon: MessageCircle,
-    title: "Notifications transactionnelles",
-    desc: "Confirmations de commande, livraison, rappels de RDV \u2014 automatiquement.",
-  },
-];
+const UC_ICONS = [Send, Users, BarChart3, MessageCircle];
 
 export default async function CampagnesWhatsAppPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const features = t.raw("campagnes.features") as string[];
+  const useCasesData = t.raw("campagnes.useCases") as Array<{ title: string; desc: string }>;
+  const useCases = useCasesData.map((uc, i) => ({ ...uc, icon: UC_ICONS[i % UC_ICONS.length] }));
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
