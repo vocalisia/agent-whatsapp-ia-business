@@ -4,7 +4,6 @@ import ProblemSection from "@/components/home/ProblemSection";
 import FeaturesGrid from "@/components/home/FeaturesGrid";
 import HowItWorks from "@/components/home/HowItWorks";
 import StatsSection from "@/components/home/StatsSection";
-import PricingPreview from "@/components/home/PricingPreview";
 import FinalCTA from "@/components/home/FinalCTA";
 
 const pageMeta: Record<string, { title: string; description: string }> = {
@@ -40,7 +39,6 @@ export default function HomePage() {
       <ProblemSection />
       <FeaturesGrid />
       <HowItWorks />
-      <PricingPreview />
       <FinalCTA />
     </>
   );

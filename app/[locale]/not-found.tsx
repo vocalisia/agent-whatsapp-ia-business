@@ -42,7 +42,7 @@ export default function NotFound() {
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500">
           <Link href={`/${locale}/services/agent-ia-whatsapp`} className="hover:text-wa transition-colors">Agent IA WhatsApp</Link>
-          <Link href={`/${locale}/tarifs`} className="hover:text-wa transition-colors">{tNav("tarifs")}</Link>
+          <Link href={`/${locale}/cas-clients`} className="hover:text-wa transition-colors">{tNav("casClients")}</Link>
           <Link href={`/${locale}/blog`} className="hover:text-wa transition-colors">{tNav("blog")}</Link>
         </div>
       </div>

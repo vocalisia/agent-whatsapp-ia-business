@@ -52,7 +52,7 @@ export default function PricingPreview() {
       {/* Single CTA */}
       <div className="text-center">
         <Link
-          href={`/${locale}/tarifs#rdv`}
+          href={`/${locale}/contact`}
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-colors text-lg"
         >
           <Calendar size={20} />

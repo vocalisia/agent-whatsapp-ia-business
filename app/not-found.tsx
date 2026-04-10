@@ -37,7 +37,7 @@ export default function NotFound() {
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-slate-500">
           <Link href="/services/agent-ia-whatsapp" className="hover:text-wa transition-colors">Agent IA WhatsApp</Link>
-          <Link href="/tarifs" className="hover:text-wa transition-colors">Tarifs</Link>
+          <Link href="/cas-clients" className="hover:text-wa transition-colors">Cas clients</Link>
           <Link href="/blog" className="hover:text-wa transition-colors">Blog</Link>
         </div>
       </div>

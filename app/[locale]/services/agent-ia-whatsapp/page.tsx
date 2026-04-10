@@ -89,7 +89,7 @@ export default async function ServiceAgentIAWhatsAppPage({ params }: { params: P
             subtitle={t("agentIa.pricingSubtitle")}
           />
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CTAButton href={`/${locale}/tarifs`} label={t("agentIa.pricingViewPlans")} variant="wa" size="lg" />
+            <CTAButton href={calLink} label={t("common.auditGratuit")} variant="wa" icon={Calendar} size="lg" external />
             <CTAButton href={`/${locale}/contact`} label={t("agentIa.pricingRequestQuote")} variant="outline" size="lg" />
           </div>
         </div>
