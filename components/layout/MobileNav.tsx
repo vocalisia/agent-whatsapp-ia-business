@@ -54,6 +54,7 @@ export default function MobileNav() {
                 { code: "fr", flag: "🇫🇷", label: "FR" },
                 { code: "en", flag: "🇬🇧", label: "EN" },
                 { code: "de", flag: "🇩🇪", label: "DE" },
+                { code: "nl", flag: "🇳🇱", label: "NL" },
               ] as const).map((l) => (
                 <Link
                   key={l.code}

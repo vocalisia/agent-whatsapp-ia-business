@@ -3,6 +3,9 @@ import Link from "next/link";
 import { MessageCircle } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 
+const tarifsLabel: Record<string, string> = { fr: "Tarifs", en: "Pricing", de: "Preise", nl: "Prijzen" };
+const contactLabel: Record<string, string> = { fr: "Contact", en: "Contact", de: "Kontakt", nl: "Contact" };
+
 export default function Footer() {
   const t = useTranslations("footer");
   const locale = useLocale();
@@ -90,12 +93,12 @@ export default function Footer() {
             </li>
             <li>
               <Link href={`/${locale}/tarifs`} className="hover:text-wa transition-colors">
-                Tarifs
+                {tarifsLabel[locale] ?? "Tarifs"}
               </Link>
             </li>
             <li>
               <Link href={`/${locale}/contact`} className="hover:text-wa transition-colors">
-                Contact
+                {contactLabel[locale] ?? "Contact"}
               </Link>
             </li>
           </ul>

@@ -8,6 +8,9 @@ const secteurSlugs = [
   "immobilier", "ecommerce", "sante", "restaurant", "assurance",
   "btp", "education", "automobile", "juridique", "beaute-bien-etre",
   "logistique", "saas-tech",
+  "coach-infopreneur", "commerce-detail", "courtier", "finance-comptabilite",
+  "recrutement-rh", "tourisme-hotel", "artisanat", "agence-marketing",
+  "fitness-sport", "veterinaire", "notaire", "franchise",
 ];
 
 const pages = [
