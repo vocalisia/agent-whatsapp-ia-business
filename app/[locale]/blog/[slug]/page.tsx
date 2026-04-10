@@ -7,7 +7,9 @@ import { ArrowLeft, Clock, User } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  const slugs = getAllSlugs();
+  const locales = ["fr", "en", "de"];
+  return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
