@@ -23,6 +23,7 @@ const pages = [
   { path: "/integrations", changeFrequency: "monthly" as const, priority: 0.85 },
   { path: "/cas-clients", changeFrequency: "monthly" as const, priority: 0.85 },
   { path: "/secteurs", changeFrequency: "monthly" as const, priority: 0.8 },
+  { path: "/agent-commercial-whatsapp", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/services/agent-sur-mesure", changeFrequency: "monthly" as const, priority: 0.85 },
   { path: "/services/automatisation", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/marketing-hub", changeFrequency: "monthly" as const, priority: 0.8 },
