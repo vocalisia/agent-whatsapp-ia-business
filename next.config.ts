@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "ts", "tsx", "mdx"],
   async redirects() {
     return [
+      { source: "/", destination: "/fr", permanent: true },
       { source: "/tarifs", destination: "/fr/contact", permanent: true },
       { source: "/fr/tarifs", destination: "/fr/contact", permanent: true },
       { source: "/en/tarifs", destination: "/en/contact", permanent: true },
