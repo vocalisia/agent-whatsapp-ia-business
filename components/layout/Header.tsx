@@ -41,7 +41,6 @@ const serviceKeys = [
 export default function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
   const [servicesOpen, setServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -56,6 +55,7 @@ export default function Header() {
   }, []);
 
   const links = [
+    { href: `/${locale}/demo`, label: "Demo IA" },
     { href: `/${locale}/integrations`, label: t("integrations") },
     { href: `/${locale}/cas-clients`, label: t("casClients") },
     { href: `/${locale}/secteurs`, label: t("secteurs") },
