@@ -46,17 +46,17 @@ import { juridiqueConfig } from "@/components/demo/configs/juridique";
 import { hotelConfig } from "@/components/demo/configs/hotel";
 
 const SECTORS = [
-  { key: "general", label: "General", icon: Bot, config: generalConfig },
-  { key: "ecommerce", label: "E-Commerce", icon: ShoppingCart, config: ecommerceConfig },
-  { key: "coach", label: "Coach", icon: GraduationCap, config: coachConfig },
-  { key: "assurance", label: "Assurance", icon: HeartPulse, config: assuranceConfig },
-  { key: "immobilier", label: "Immobilier", icon: Home, config: immobilierConfig },
-  { key: "restaurant", label: "Restaurant", icon: UtensilsCrossed, config: restaurantConfig },
-  { key: "medical", label: "Medical", icon: Stethoscope, config: medicalConfig },
-  { key: "fitness", label: "Fitness", icon: Dumbbell, config: fitnessConfig },
-  { key: "automobile", label: "Auto", icon: Car, config: automobileConfig },
-  { key: "juridique", label: "Juridique", icon: Scale, config: juridiqueConfig },
-  { key: "hotel", label: "Hotel", icon: Hotel, config: hotelConfig },
+  { key: "general", labelKey: "sectorGeneral", icon: Bot, config: generalConfig },
+  { key: "ecommerce", labelKey: "sectorEcommerce", icon: ShoppingCart, config: ecommerceConfig },
+  { key: "coach", labelKey: "sectorCoach", icon: GraduationCap, config: coachConfig },
+  { key: "assurance", labelKey: "sectorAssurance", icon: HeartPulse, config: assuranceConfig },
+  { key: "immobilier", labelKey: "sectorImmobilier", icon: Home, config: immobilierConfig },
+  { key: "restaurant", labelKey: "sectorRestaurant", icon: UtensilsCrossed, config: restaurantConfig },
+  { key: "medical", labelKey: "sectorMedical", icon: Stethoscope, config: medicalConfig },
+  { key: "fitness", labelKey: "sectorFitness", icon: Dumbbell, config: fitnessConfig },
+  { key: "automobile", labelKey: "sectorAuto", icon: Car, config: automobileConfig },
+  { key: "juridique", labelKey: "sectorJuridique", icon: Scale, config: juridiqueConfig },
+  { key: "hotel", labelKey: "sectorHotel", icon: Hotel, config: hotelConfig },
 ];
 
 const capabilities = [
@@ -136,11 +136,17 @@ export default function DemoPage() {
             <p className="text-base text-slate-400 max-w-xl mx-auto">
               {t("subtitle")}
             </p>
+            {locale !== "fr" && (
+              <div className="mt-6 inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-lg px-4 py-2 text-xs text-indigo-300 max-w-lg mx-auto">
+                <Sparkles size={14} className="text-indigo-400 flex-shrink-0" />
+                <span>{t("demoLangNotice")}</span>
+              </div>
+            )}
           </div>
 
           {/* Sector selector */}
           <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {SECTORS.map(({ key, label, icon: Icon }) => (
+            {SECTORS.map(({ key, labelKey, icon: Icon }) => (
               <button
                 key={key}
                 onClick={() => setActiveSector(key)}
@@ -151,7 +157,7 @@ export default function DemoPage() {
                 }`}
               >
                 <Icon size={14} />
-                {label}
+                {t(labelKey)}
               </button>
             ))}
           </div>
@@ -168,7 +174,7 @@ export default function DemoPage() {
               <WhatsAppSimulatorPro
                 config={activeConfig}
                 onEvent={handleEvent}
-                selectedSector={SECTORS.find((s) => s.key === activeSector)?.label}
+                selectedSector={t(SECTORS.find((s) => s.key === activeSector)?.labelKey ?? "sectorGeneral")}
                 sectorKey={activeSector}
               />
             </div>
@@ -183,13 +189,13 @@ export default function DemoPage() {
                 </h3>
                 <div className="space-y-1.5">
                   {[
-                    "Bonjour !",
-                    "Comment ca marche ?",
-                    "Clonage vocal ?",
-                    "WhatsApp features",
-                    "Telephonie IA",
-                    "Les tarifs",
-                    "Prendre un RDV",
+                    t("suggestHello"),
+                    t("suggestHow"),
+                    t("suggestClone"),
+                    t("suggestWhatsapp"),
+                    t("suggestTelephony"),
+                    t("suggestPricing"),
+                    t("suggestBooking"),
                   ].map((p) => (
                     <div key={p} className="text-xs text-slate-300 bg-surface-2/50 rounded-lg px-2.5 py-1.5 border border-surface-3">
                       &ldquo;{p}&rdquo;
@@ -223,14 +229,14 @@ export default function DemoPage() {
                   {t("detailedDemos")}
                 </h3>
                 <div className="space-y-1">
-                  {SECTORS.filter((s) => s.key !== "general").map(({ key, label, icon: Icon }) => (
+                  {SECTORS.filter((s) => s.key !== "general").map(({ key, labelKey, icon: Icon }) => (
                     <Link
                       key={key}
                       href={`/${locale}/demo/${key}`}
                       className="flex items-center gap-2 text-xs text-slate-400 hover:text-wa py-1 transition-colors group"
                     >
                       <Icon size={12} />
-                      {label}
+                      {t(labelKey)}
                       <ArrowRight size={10} className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
                     </Link>
                   ))}
@@ -253,13 +259,13 @@ export default function DemoPage() {
               </h3>
               <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
                 {[
-                  "Bonjour !",
-                  "Comment ca marche ?",
-                  "Clonage vocal ?",
-                  "WhatsApp features",
-                  "Telephonie IA",
-                  "Les tarifs",
-                  "Prendre un RDV",
+                  t("suggestHello"),
+                  t("suggestHow"),
+                  t("suggestClone"),
+                  t("suggestWhatsapp"),
+                  t("suggestTelephony"),
+                  t("suggestPricing"),
+                  t("suggestBooking"),
                 ].map((p) => (
                   <div key={p} className="text-xs text-slate-300 bg-surface-2/50 rounded-lg px-2.5 py-1.5 border border-surface-3 whitespace-nowrap flex-shrink-0">
                     &ldquo;{p}&rdquo;

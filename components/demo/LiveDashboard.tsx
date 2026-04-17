@@ -217,22 +217,22 @@ function SentimentDisplay({
   );
 }
 
-/* ─── Language flag mapping ─── */
+/* ─── Language flag SVG ─── */
 
-function getLanguageFlag(code: string): string {
-  const flags: Record<string, string> = {
-    FR: "\uD83C\uDDEB\uD83C\uDDF7",
-    EN: "\uD83C\uDDEC\uD83C\uDDE7",
-    ES: "\uD83C\uDDEA\uD83C\uDDF8",
-    DE: "\uD83C\uDDE9\uD83C\uDDEA",
-    IT: "\uD83C\uDDEE\uD83C\uDDF9",
-    PT: "\uD83C\uDDF5\uD83C\uDDF9",
-    AR: "\uD83C\uDDF8\uD83C\uDDE6",
-    ZH: "\uD83C\uDDE8\uD83C\uDDF3",
-    JA: "\uD83C\uDDEF\uD83C\uDDF5",
-    NL: "\uD83C\uDDF3\uD83C\uDDF1",
-  };
-  return flags[code.toUpperCase()] ?? "\uD83C\uDF10";
+function LanguageFlag({ code }: { code: string }) {
+  const c = code.toUpperCase();
+  return (
+    <svg width="22" height="15" viewBox="0 0 18 12" className="rounded-[2px] flex-shrink-0">
+      {c === "FR" && (<><rect width="6" height="12" fill="#002395" /><rect x="6" width="6" height="12" fill="#FFF" /><rect x="12" width="6" height="12" fill="#ED2939" /></>)}
+      {c === "EN" && (<><rect width="18" height="12" fill="#012169" /><path d="M0,0 L18,12 M18,0 L0,12" stroke="#FFF" strokeWidth="2" /><path d="M0,0 L18,12 M18,0 L0,12" stroke="#C8102E" strokeWidth="1" /><path d="M9,0 V12 M0,6 H18" stroke="#FFF" strokeWidth="3" /><path d="M9,0 V12 M0,6 H18" stroke="#C8102E" strokeWidth="1.5" /></>)}
+      {c === "DE" && (<><rect width="18" height="4" fill="#000" /><rect y="4" width="18" height="4" fill="#DD0000" /><rect y="8" width="18" height="4" fill="#FFCE00" /></>)}
+      {c === "NL" && (<><rect width="18" height="4" fill="#AE1C28" /><rect y="4" width="18" height="4" fill="#FFF" /><rect y="8" width="18" height="4" fill="#21468B" /></>)}
+      {c === "ES" && (<><rect width="18" height="3" fill="#AA151B" /><rect y="3" width="18" height="6" fill="#F1BF00" /><rect y="9" width="18" height="3" fill="#AA151B" /></>)}
+      {c === "IT" && (<><rect width="6" height="12" fill="#009246" /><rect x="6" width="6" height="12" fill="#FFF" /><rect x="12" width="6" height="12" fill="#CE2B37" /></>)}
+      {c === "PT" && (<><rect width="7.2" height="12" fill="#046A38" /><rect x="7.2" width="10.8" height="12" fill="#DA291C" /></>)}
+      {!["FR","EN","DE","NL","ES","IT","PT"].includes(c) && (<rect width="18" height="12" fill="#6B7280" />)}
+    </svg>
+  );
 }
 
 /* ─── Comparison section ─── */
@@ -425,7 +425,7 @@ export default function LiveDashboard({
         label={t("language").toUpperCase()}
       >
         <div className="flex items-center gap-2">
-          <span className="text-lg">{getLanguageFlag(languageDetected)}</span>
+          <LanguageFlag code={languageDetected} />
           <span className="text-sm font-semibold text-white">
             {languageDetected}
           </span>
