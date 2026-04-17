@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, ChevronDown, Bot, UserCheck, Megaphone, Settings, Calendar, Zap, BarChart3, Wand2 } from "lucide-react";
+import { MessageCircle, ChevronDown, Bot, UserCheck, Megaphone, Settings, Calendar, Zap, BarChart3, Wand2, Play } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import MobileNav from "./MobileNav";
 
@@ -55,7 +55,6 @@ export default function Header() {
   }, []);
 
   const links = [
-    { href: `/${locale}/demo`, label: "Demo IA" },
     { href: `/${locale}/integrations`, label: t("integrations") },
     { href: `/${locale}/cas-clients`, label: t("casClients") },
     { href: `/${locale}/secteurs`, label: t("secteurs") },
@@ -146,6 +145,13 @@ export default function Header() {
               </Link>
             ))}
           </div>
+          <Link
+            href={`/${locale}/demo`}
+            className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
+          >
+            <Play size={14} />
+            Tester l&apos;Agent
+          </Link>
           <Link
             href={`/${locale}/contact`}
             className="flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, MessageCircle, ChevronDown } from "lucide-react";
+import { Menu, X, MessageCircle, ChevronDown, Play } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 
 const serviceLabels: Record<string, Record<string, string>> = {
@@ -79,11 +79,19 @@ export default function MobileNav() {
                 {l.label}
               </Link>
             ))}
+            <Link
+              href={`/${locale}/demo`}
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center gap-2 mt-4 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-5 py-3 rounded-lg transition-colors"
+            >
+              <Play size={18} />
+              Tester l&apos;Agent IA
+            </Link>
             <a
               href={`https://wa.me/${waNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 mt-4 bg-wa text-white font-semibold px-5 py-3 rounded-lg"
+              className="flex items-center justify-center gap-2 mt-2 bg-wa text-white font-semibold px-5 py-3 rounded-lg"
             >
               <MessageCircle size={18} />
               {t("whatsapp")}
