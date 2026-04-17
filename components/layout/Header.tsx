@@ -182,7 +182,7 @@ export default function Header() {
             className="flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold px-4 py-2 rounded-lg text-sm transition-colors"
           >
             <Play size={14} />
-            Tester l&apos;Agent
+            {t("testAgent")}
           </Link>
           <Link
             href={`/${locale}/contact`}

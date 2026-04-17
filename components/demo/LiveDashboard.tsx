@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 import {
   MessageSquare,
   Zap,
@@ -70,6 +71,7 @@ function LeadScoreRing({
   size?: number;
   strokeWidth?: number;
 }) {
+  const t = useTranslations("dashboard");
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const animatedScore = useAnimatedValue(score);
@@ -84,10 +86,10 @@ function LeadScoreRing({
 
   const label =
     score > 70
-      ? "Chaud"
+      ? t("hot")
       : score >= 30
-        ? "Tiede"
-        : "Froid";
+        ? t("warm")
+        : t("cold");
 
   return (
     <div className="flex flex-col items-center gap-1">
@@ -246,6 +248,7 @@ function ComparisonSection({
   leadScore: number;
   conversationCost: number;
 }) {
+  const t = useTranslations("dashboard");
   const responseFormatted =
     lastResponseTime > 0 ? `${(lastResponseTime / 1000).toFixed(1)}s` : "---";
   const responseRate = Math.min(100, Math.round(60 + messageCount * 5));
@@ -254,21 +257,21 @@ function ComparisonSection({
   return (
     <div className="rounded-xl border border-surface-3 bg-surface/80 backdrop-blur-sm p-3">
       <p className="text-[10px] text-slate-500 uppercase tracking-wider font-medium text-center mb-3">
-        Sans IA vs Avec IA
+        {t("withoutAI").toUpperCase()} VS {t("withAI").toUpperCase()}
       </p>
       <div className="grid grid-cols-2 gap-3">
         {/* Sans IA */}
         <div className="space-y-2">
           <div className="text-center mb-2">
             <span className="text-[10px] font-semibold text-red-400/80 uppercase tracking-wider">
-              Sans IA
+              {t("withoutAI").toUpperCase()}
             </span>
           </div>
           {[
-            "45 min reponse",
-            "40% taux reponse",
-            "0 leads qualifies",
-            "12\u20AC/conversation",
+            t("response45"),
+            t("rate40"),
+            t("leads0"),
+            t("cost12"),
           ].map((text) => (
             <div
               key={text}
@@ -283,15 +286,15 @@ function ComparisonSection({
         <div className="space-y-2">
           <div className="text-center mb-2">
             <span className="text-[10px] font-semibold text-wa uppercase tracking-wider">
-              Avec IA
+              {t("withAI").toUpperCase()}
             </span>
           </div>
           {[
-            { value: responseFormatted, label: "reponse" },
-            { value: `${responseRate}%`, label: "taux reponse" },
-            { value: `${leadsQualified} leads qualifies`, label: "" },
+            { value: responseFormatted, label: t("responseTime").toLowerCase() },
+            { value: `${responseRate}%`, label: t("responseRate") },
+            { value: `${leadsQualified} ${t("qualifiedLeads")}`, label: "" },
             {
-              value: `${conversationCost.toFixed(2)}\u20AC/conv`,
+              value: `${conversationCost.toFixed(2)}\u20AC/${t("conv")}`,
               label: "",
             },
           ].map((item, i) => (
@@ -325,6 +328,7 @@ export default function LiveDashboard({
   languageDetected,
   isTyping,
 }: DashboardProps) {
+  const t = useTranslations("dashboard");
   const animatedCount = useAnimatedValue(messageCount);
   const animatedCost = useAnimatedValue(conversationCost);
   const prevCountRef = useRef(messageCount);
@@ -350,14 +354,14 @@ export default function LiveDashboard({
           className="text-xs font-semibold text-slate-400 uppercase tracking-widest"
           style={{ fontFamily: "Onest, sans-serif" }}
         >
-          Dashboard temps reel
+          {t("title").toUpperCase()}
         </h3>
       </div>
 
       {/* Messages */}
       <KpiCard
         icon={<MessageSquare size={16} className="text-wa" />}
-        label="Messages traites"
+        label={t("messages").toUpperCase()}
         highlight={recentUpdate}
       >
         <span className="text-lg font-bold text-white tabular-nums">
@@ -368,7 +372,7 @@ export default function LiveDashboard({
       {/* Response time */}
       <KpiCard
         icon={<Zap size={16} className="text-amber-400" />}
-        label="Temps de reponse"
+        label={t("responseTime").toUpperCase()}
         highlight={recentUpdate}
       >
         <div className="flex items-baseline gap-2">
@@ -378,7 +382,7 @@ export default function LiveDashboard({
               : "---"}
           </span>
           <span className="text-[10px] text-red-400/60 line-through">
-            Humain moyen : 45 min
+            {t("humanAvg")}
           </span>
         </div>
       </KpiCard>
@@ -386,7 +390,7 @@ export default function LiveDashboard({
       {/* Lead score */}
       <KpiCard
         icon={<Target size={16} className="text-wa" />}
-        label="Score Lead"
+        label={t("leadScore").toUpperCase()}
       >
         <LeadScoreRing score={leadScore} />
       </KpiCard>
@@ -394,7 +398,7 @@ export default function LiveDashboard({
       {/* Cost */}
       <KpiCard
         icon={<Coins size={16} className="text-amber-400" />}
-        label="Cout conversation"
+        label={t("cost").toUpperCase()}
         highlight={recentUpdate}
       >
         <div className="flex items-baseline gap-2">
@@ -402,7 +406,7 @@ export default function LiveDashboard({
             {animatedCost.toFixed(2)}&euro;
           </span>
           <span className="text-[10px] text-red-400/60 line-through">
-            vs 12&euro; humain
+            {t("vsHuman")}
           </span>
         </div>
       </KpiCard>
@@ -410,7 +414,7 @@ export default function LiveDashboard({
       {/* Sentiment */}
       <KpiCard
         icon={<Heart size={16} className="text-pink-400" />}
-        label="Sentiment"
+        label={t("sentiment").toUpperCase()}
       >
         <SentimentDisplay sentiment={sentiment} />
       </KpiCard>
@@ -418,7 +422,7 @@ export default function LiveDashboard({
       {/* Language */}
       <KpiCard
         icon={<Globe size={16} className="text-sky-400" />}
-        label="Langue detectee"
+        label={t("language").toUpperCase()}
       >
         <div className="flex items-center gap-2">
           <span className="text-lg">{getLanguageFlag(languageDetected)}</span>

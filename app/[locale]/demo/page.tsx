@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import WhatsAppSimulatorPro from "@/components/demo/WhatsAppSimulatorPro";
 import type { SimulatorEvent } from "@/components/demo/WhatsAppSimulatorPro";
@@ -73,6 +73,7 @@ const capabilities = [
 
 export default function DemoPage() {
   const locale = useLocale();
+  const t = useTranslations("demo");
   const [activeSector, setActiveSector] = useState("general");
   const [dashState, setDashState] = useState({
     messageCount: 1,
@@ -127,13 +128,13 @@ export default function DemoPage() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-              Demo interactive en direct
+              {t("badge")}
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
-              Testez notre <span className="text-gradient-wa">Agent IA</span> en temps reel
+              {t("title")} <span className="text-gradient-wa">{t("titleHighlight")}</span> {t("titleEnd")}
             </h1>
             <p className="text-base text-slate-400 max-w-xl mx-auto">
-              Choisissez votre secteur, discutez avec l&apos;agent et observez les KPI en direct.
+              {t("subtitle")}
             </p>
           </div>
 
@@ -178,7 +179,7 @@ export default function DemoPage() {
               <div className="bg-surface/60 border border-surface-3 rounded-2xl p-4">
                 <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2" style={{ fontFamily: "Onest, sans-serif" }}>
                   <MessageCircle size={16} className="text-wa" />
-                  Essayez
+                  {t("trySuggestions")}
                 </h3>
                 <div className="space-y-1.5">
                   {[
@@ -200,10 +201,10 @@ export default function DemoPage() {
               {/* CTA */}
               <div className="bg-gradient-to-br from-wa/10 to-indigo-500/10 border border-wa/20 rounded-2xl p-4 text-center">
                 <h3 className="text-base font-bold text-white mb-2" style={{ fontFamily: "Onest, sans-serif" }}>
-                  Convaincus ?
+                  {t("convinced")}
                 </h3>
                 <p className="text-xs text-slate-400 mb-4">
-                  Audit gratuit 30 min — voyez l&apos;agent sur VOTRE business.
+                  {t("convincedDesc")}
                 </p>
                 <a
                   href={process.env.NEXT_PUBLIC_CAL_LINK || "/fr/contact"}
@@ -212,14 +213,14 @@ export default function DemoPage() {
                   className="inline-flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 glow-wa text-sm"
                 >
                   <Zap size={16} />
-                  Audit gratuit
+                  {t("freeAudit")}
                 </a>
               </div>
 
               {/* Sector-specific pages */}
               <div className="bg-surface/60 border border-surface-3 rounded-2xl p-4">
                 <h3 className="text-sm font-bold text-white mb-3" style={{ fontFamily: "Onest, sans-serif" }}>
-                  Demos detaillees
+                  {t("detailedDemos")}
                 </h3>
                 <div className="space-y-1">
                   {SECTORS.filter((s) => s.key !== "general").map(({ key, label, icon: Icon }) => (
@@ -248,7 +249,7 @@ export default function DemoPage() {
             <div className="bg-surface/60 border border-surface-3 rounded-2xl p-4">
               <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2" style={{ fontFamily: "Onest, sans-serif" }}>
                 <MessageCircle size={16} className="text-wa" />
-                Essayez
+                {t("trySuggestions")}
               </h3>
               <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
                 {[
@@ -274,13 +275,13 @@ export default function DemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="text-center mb-10">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Calculateur ROI
+            {t("roiBadge")}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
-            Combien allez-vous <span className="text-gradient-wa">economiser</span> ?
+            {t("roiTitle")} <span className="text-gradient-wa">{t("roiHighlight")}</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Ajustez les curseurs selon votre activite et decouvrez votre ROI en temps reel.
+            {t("roiSubtitle")}
           </p>
         </div>
         <ROICalculator />
@@ -290,10 +291,10 @@ export default function DemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="text-center mb-10">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Plateforme Vocalis AI
+            {t("platformBadge")}
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
-            Tout ce que l&apos;agent peut faire... <span className="text-gradient-wa">et plus</span>
+            {t("platformTitle")} <span className="text-gradient-wa">{t("platformHighlight")}</span>
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -315,10 +316,10 @@ export default function DemoPage() {
           <div className="absolute inset-0 opacity-10" style={{ background: "radial-gradient(circle at 50% 0%, rgba(37,211,102,0.3) 0%, transparent 60%)" }} />
           <div className="relative">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
-              Pret a automatiser votre WhatsApp ?
+              {t("ctaTitle")}
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Formation incluse. Sans engagement.
+              {t("ctaSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -328,7 +329,7 @@ export default function DemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                {t("ctaBook")}
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "33600000000"}`}
@@ -337,7 +338,7 @@ export default function DemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                {t("ctaWhatsapp")}
               </a>
             </div>
           </div>
