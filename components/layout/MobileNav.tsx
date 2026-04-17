@@ -96,25 +96,31 @@ export default function MobileNav() {
               <MessageCircle size={18} />
               {t("whatsapp")}
             </a>
-            {/* Language switcher */}
+            {/* Language switcher — SVG flags */}
             <div className="flex items-center gap-2 mt-4 pt-4 border-t border-surface">
               {([
-                { code: "fr", flag: "🇫🇷", label: "FR" },
-                { code: "en", flag: "🇬🇧", label: "EN" },
-                { code: "de", flag: "🇩🇪", label: "DE" },
-                { code: "nl", flag: "🇳🇱", label: "NL" },
-              ] as const).map((l) => (
+                { code: "fr" as const, label: "FR" },
+                { code: "en" as const, label: "EN" },
+                { code: "de" as const, label: "DE" },
+                { code: "nl" as const, label: "NL" },
+              ]).map((l) => (
                 <Link
                   key={l.code}
                   href={`/${l.code}`}
                   onClick={() => setOpen(false)}
-                  className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     locale === l.code
                       ? "bg-wa/20 text-wa border border-wa/30"
                       : "bg-surface border border-surface-2 text-slate-400 hover:text-white"
                   }`}
                 >
-                  {l.flag} {l.label}
+                  <svg width="20" height="14" viewBox="0 0 18 12" className="rounded-[2px] flex-shrink-0">
+                    {l.code === "fr" && (<><rect width="6" height="12" fill="#002395" /><rect x="6" width="6" height="12" fill="#FFF" /><rect x="12" width="6" height="12" fill="#ED2939" /></>)}
+                    {l.code === "en" && (<><rect width="18" height="12" fill="#012169" /><path d="M0,0 L18,12 M18,0 L0,12" stroke="#FFF" strokeWidth="2" /><path d="M0,0 L18,12 M18,0 L0,12" stroke="#C8102E" strokeWidth="1" /><path d="M9,0 V12 M0,6 H18" stroke="#FFF" strokeWidth="3" /><path d="M9,0 V12 M0,6 H18" stroke="#C8102E" strokeWidth="1.5" /></>)}
+                    {l.code === "de" && (<><rect width="18" height="4" fill="#000" /><rect y="4" width="18" height="4" fill="#DD0000" /><rect y="8" width="18" height="4" fill="#FFCE00" /></>)}
+                    {l.code === "nl" && (<><rect width="18" height="4" fill="#AE1C28" /><rect y="4" width="18" height="4" fill="#FFF" /><rect y="8" width="18" height="4" fill="#21468B" /></>)}
+                  </svg>
+                  {l.label}
                 </Link>
               ))}
             </div>

@@ -124,24 +124,56 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-3">
-          {/* Language switcher */}
-          <div className="flex items-center gap-1 bg-surface border border-surface-2 rounded-lg p-0.5">
+          {/* Language switcher — SVG flags for cross-platform rendering */}
+          <div className="flex items-center gap-0.5 bg-surface border border-surface-2 rounded-lg p-0.5">
             {([
-              { code: "fr", flag: "🇫🇷" },
-              { code: "en", flag: "🇬🇧" },
-              { code: "de", flag: "🇩🇪" },
-              { code: "nl", flag: "🇳🇱" },
+              { code: "fr", label: "FR", colors: ["#002395", "#FFFFFF", "#ED2939"] },
+              { code: "en", label: "EN", colors: ["#012169", "#C8102E", "#FFFFFF"] },
+              { code: "de", label: "DE", colors: ["#000000", "#DD0000", "#FFCE00"] },
+              { code: "nl", label: "NL", colors: ["#AE1C28", "#FFFFFF", "#21468B"] },
             ] as const).map((l) => (
               <Link
                 key={l.code}
                 href={`/${l.code}`}
-                className={`px-2 py-1 rounded-md text-xs font-medium transition-colors ${
+                className={`flex items-center gap-1 px-2 py-1.5 rounded-md text-[10px] font-semibold transition-colors ${
                   locale === l.code
                     ? "bg-wa/20 text-wa"
                     : "text-slate-500 hover:text-white"
                 }`}
+                title={l.label}
               >
-                {l.flag}
+                <svg width="18" height="12" viewBox="0 0 18 12" className="rounded-[2px] flex-shrink-0">
+                  {l.code === "fr" && (
+                    <>
+                      <rect width="6" height="12" fill="#002395" />
+                      <rect x="6" width="6" height="12" fill="#FFFFFF" />
+                      <rect x="12" width="6" height="12" fill="#ED2939" />
+                    </>
+                  )}
+                  {l.code === "en" && (
+                    <>
+                      <rect width="18" height="12" fill="#012169" />
+                      <path d="M0,0 L18,12 M18,0 L0,12" stroke="#FFFFFF" strokeWidth="2" />
+                      <path d="M0,0 L18,12 M18,0 L0,12" stroke="#C8102E" strokeWidth="1" />
+                      <path d="M9,0 V12 M0,6 H18" stroke="#FFFFFF" strokeWidth="3" />
+                      <path d="M9,0 V12 M0,6 H18" stroke="#C8102E" strokeWidth="1.5" />
+                    </>
+                  )}
+                  {l.code === "de" && (
+                    <>
+                      <rect width="18" height="4" fill="#000000" />
+                      <rect y="4" width="18" height="4" fill="#DD0000" />
+                      <rect y="8" width="18" height="4" fill="#FFCE00" />
+                    </>
+                  )}
+                  {l.code === "nl" && (
+                    <>
+                      <rect width="18" height="4" fill="#AE1C28" />
+                      <rect y="4" width="18" height="4" fill="#FFFFFF" />
+                      <rect y="8" width="18" height="4" fill="#21468B" />
+                    </>
+                  )}
+                </svg>
               </Link>
             ))}
           </div>
