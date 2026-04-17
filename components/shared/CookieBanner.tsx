@@ -21,10 +21,11 @@ export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const consent = getCookie("cookie_consent");
-    if (!consent) {
-      setVisible(true);
-    }
+    const id = window.setTimeout(() => {
+      const consent = getCookie("cookie_consent");
+      if (!consent) setVisible(true);
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   function handleAccept() {

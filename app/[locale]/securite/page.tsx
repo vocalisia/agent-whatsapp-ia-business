@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Calendar, MessageCircle, ShieldCheck, Lock, Server, Eye } from "lucide-react";
+import { Calendar, MessageCircle, ShieldCheck, Lock, Eye } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "Sécurité & Conformité RGPD — Vos données protégées | AgenticWhatsup", description: "Hébergement en Europe, chiffrement end-to-end, conformité RGPD totale. Vos données et celles de vos clients ne quittent jamais l'infrastructure sécurisée AgenticWhatsup." },

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug } from "@/lib/mdx";
+import { normalizeBlogMarkdownHref } from "@/lib/normalize-blog-href";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
+import type { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { ArrowLeft, Clock, User } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
@@ -42,6 +44,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   } catch {
     notFound();
   }
+
+  const mdxComponents: MDXRemoteProps["components"] = {
+    a: ({ href, children }) => {
+      if (!href) return <span>{children}</span>;
+      const out = normalizeBlogMarkdownHref(href, locale, {
+        sameOriginHosts: ["agentic-whatsup.com"],
+      });
+      const linkClass = "text-wa hover:underline";
+      if (/^https?:\/\//i.test(out)) {
+        return (
+          <a href={out} target="_blank" rel="noopener noreferrer" className={linkClass}>
+            {children}
+          </a>
+        );
+      }
+      return (
+        <Link href={out} className={linkClass}>
+          {children}
+        </Link>
+      );
+    },
+  };
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -98,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </h1>
 
       <div className="prose prose-invert max-w-none">
-        <MDXRemote source={post.content} />
+        <MDXRemote source={post.content} components={mdxComponents} />
       </div>
 
       {/* CTA fin d'article */}

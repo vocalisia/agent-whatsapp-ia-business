@@ -258,7 +258,7 @@ export default function VSLPlayer() {
               Regardez avant votre session
             </h3>
             <p className="text-slate-400 text-sm mb-6">
-              2 minutes pour comprendre exactement ce qu'on va faire ensemble
+              2 minutes pour comprendre exactement ce qu&apos;on va faire ensemble
             </p>
             <button
               onClick={startVSL}

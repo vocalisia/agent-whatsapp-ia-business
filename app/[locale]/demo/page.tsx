@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import WhatsAppSimulatorPro from "@/components/demo/WhatsAppSimulatorPro";
 import type { SimulatorEvent } from "@/components/demo/WhatsAppSimulatorPro";
@@ -71,6 +72,7 @@ const capabilities = [
 ];
 
 export default function DemoPage() {
+  const locale = useLocale();
   const [activeSector, setActiveSector] = useState("general");
   const [dashState, setDashState] = useState({
     messageCount: 1,
@@ -223,7 +225,7 @@ export default function DemoPage() {
                   {SECTORS.filter((s) => s.key !== "general").map(({ key, label, icon: Icon }) => (
                     <Link
                       key={key}
-                      href={`/demo/${key}`}
+                      href={`/${locale}/demo/${key}`}
                       className="flex items-center gap-2 text-xs text-slate-400 hover:text-wa py-1 transition-colors group"
                     >
                       <Icon size={12} />
@@ -239,6 +241,31 @@ export default function DemoPage() {
           {/* Mobile dashboard */}
           <div className="lg:hidden mt-8">
             <LiveDashboard {...dashState} />
+          </div>
+
+          {/* Mobile suggestions */}
+          <div className="lg:hidden mt-6">
+            <div className="bg-surface/60 border border-surface-3 rounded-2xl p-4">
+              <h3 className="text-sm font-bold text-white mb-3 flex items-center gap-2" style={{ fontFamily: "Onest, sans-serif" }}>
+                <MessageCircle size={16} className="text-wa" />
+                Essayez
+              </h3>
+              <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+                {[
+                  "Bonjour !",
+                  "Comment ca marche ?",
+                  "Clonage vocal ?",
+                  "WhatsApp features",
+                  "Telephonie IA",
+                  "Les tarifs",
+                  "Prendre un RDV",
+                ].map((p) => (
+                  <div key={p} className="text-xs text-slate-300 bg-surface-2/50 rounded-lg px-2.5 py-1.5 border border-surface-3 whitespace-nowrap flex-shrink-0">
+                    &ldquo;{p}&rdquo;
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

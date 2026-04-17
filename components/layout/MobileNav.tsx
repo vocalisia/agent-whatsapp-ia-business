@@ -45,7 +45,7 @@ export default function MobileNav() {
         {open ? <X size={24} /> : <Menu size={24} />}
       </button>
       {open && (
-        <div className="fixed inset-0 top-16 z-40 bg-bg/95 backdrop-blur-sm md:hidden overflow-y-auto">
+        <div className="fixed inset-0 top-16 z-[60] bg-bg/95 backdrop-blur-sm md:hidden overflow-y-auto">
           <nav className="flex flex-col gap-1 p-6">
             {/* Services accordion */}
             <button

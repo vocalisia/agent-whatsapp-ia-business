@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Calendar, MessageCircle, TrendingUp, Clock, Star } from "lucide-react";
+import { Calendar, MessageCircle, TrendingUp, Star } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "Cas clients — Résultats mesurés avec l'agent IA WhatsApp | AgenticWhatsup", description: "Découvrez comment nos clients ont transformé leur business avec l'agent IA WhatsApp : +42% leads qualifiés, -68% abandons panier, 0 appel manqué. ROI moyen : 8×." },

@@ -15,7 +15,7 @@ export default function NotFound() {
           Page introuvable
         </h1>
         <p className="text-slate-400 mb-8 leading-relaxed">
-          Cette page n'existe pas ou a été déplacée. Revenez à l'accueil ou
+          Cette page n&apos;existe pas ou a été déplacée. Revenez à l&apos;accueil ou
           contactez-nous directement.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -24,7 +24,7 @@ export default function NotFound() {
             className="inline-flex items-center justify-center gap-2 bg-surface border border-surface-2 hover:border-wa/40 text-white rounded-xl px-6 py-3 text-sm font-medium transition-colors"
           >
             <Home size={16} />
-            Retour à l'accueil
+            Retour à l&apos;accueil
           </Link>
           <Link
             href="/contact"

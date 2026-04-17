@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Calendar, MessageCircle, CheckCircle, TrendingUp, Users, Target } from "lucide-react";
+import { Calendar, MessageCircle, CheckCircle, TrendingUp, Target } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "Marketing Hub WhatsApp — Campagnes, segments et ROI mesurable | AgenticWhatsup", description: "Centralisez toute votre stratégie marketing WhatsApp : segmentation client, campagnes ciblées, A/B tests, analytics temps réel. ROI moyen 3,2× supérieur aux landing pages." },

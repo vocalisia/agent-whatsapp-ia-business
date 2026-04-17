@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Calendar, CheckCircle, MessageCircle, ArrowRight } from "lucide-react";
+import { Calendar, CheckCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "Agent IA WhatsApp sur-mesure — Développé pour votre métier | AgenticWhatsup", description: "Un agent IA WhatsApp entièrement personnalisé pour votre entreprise : formation sur vos données, connexion à vos APIs, personnalité de marque. Déployé en 14 jours." },

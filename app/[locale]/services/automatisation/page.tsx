@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Calendar, MessageCircle, CheckCircle, Zap, ArrowRight } from "lucide-react";
+import { Calendar, MessageCircle, CheckCircle, Zap } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "Automatisation WhatsApp sans code — Créez vos workflows en 15 min | AgenticWhatsup", description: "Créez des workflows d'automatisation WhatsApp sans ligne de code : confirmation de commande, relance panier, rappel RDV, suivi livraison. L'agent IA exécute tout automatiquement." },

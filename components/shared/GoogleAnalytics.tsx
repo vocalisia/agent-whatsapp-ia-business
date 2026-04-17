@@ -22,7 +22,7 @@ export default function GoogleAnalytics() {
 
   return (
     <>
-      <Script id="consent-init" strategy="beforeInteractive">
+      <Script id="consent-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}

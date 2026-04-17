@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
 import { SECTEURS, getSecteurTranslation } from "@/lib/secteurs";
 
 const metaTitles: Record<string, string> = {

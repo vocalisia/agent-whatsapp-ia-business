@@ -62,7 +62,11 @@ function Testimonial({ name, role, text }: { name: string; role: string; text: s
       <div className="flex gap-1 mb-3">
         {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-wa fill-wa" />)}
       </div>
-      <p className="text-slate-300 text-sm leading-relaxed mb-4">"{text}"</p>
+      <p className="text-slate-300 text-sm leading-relaxed mb-4">
+        <span className="text-slate-500">&ldquo;</span>
+        {text}
+        <span className="text-slate-500">&rdquo;</span>
+      </p>
       <div>
         <div className="font-semibold text-white text-sm">{name}</div>
         <div className="text-xs text-slate-500">{role}</div>

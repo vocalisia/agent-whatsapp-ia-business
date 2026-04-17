@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { Onest, Outfit } from "next/font/google";
 import { routing } from "@/lib/i18n/routing";
 import "../globals.css";
 import Header from "@/components/layout/Header";
@@ -9,6 +10,18 @@ import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/shared/CookieBanner";
 
 const BASE_URL = "https://agentic-whatsup.com";
+
+const fontOnest = Onest({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-onest",
+});
+
+const fontOutfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-outfit",
+});
 
 const defaultMeta: Record<string, { title: string; description: string }> = {
   fr: {
@@ -107,7 +120,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${fontOnest.variable} ${fontOutfit.variable}`}>
       <head>
         {/* Consent Mode v2 + dynamic GA4 — raw inline script, FIRST in <head>, to avoid Next.js preloading GA URL. */}
         <script
@@ -153,12 +166,6 @@ export default async function LocaleLayout({
               ],
             }),
           }}
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="min-h-screen flex flex-col">

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Calendar, CheckCircle, Zap, ArrowRight } from "lucide-react";
+import { Calendar, Zap } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "Intégrations — Connectez l'agent IA WhatsApp à vos outils | AgenticWhatsup", description: "Connectez l'agent IA WhatsApp à votre CRM, e-commerce, agenda et 50+ outils. HubSpot, Shopify, Zapier, Google Calendar — configuration en moins de 24h." },

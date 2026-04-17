@@ -67,7 +67,9 @@ function MessageBubble({ msg }: { msg: Message }) {
               <rect x="13" y="5" width="5" height="12" fill="#f0f0f0" />
               <rect x="18" y="5" width="5" height="12" fill="#ED2939" />
               {/* Title */}
-              <text x="30" y="15" fontSize="7" fill="#c8d8f0" fontFamily="monospace" fontWeight="bold">CARTE NATIONALE D'IDENTITÉ</text>
+              <text x="30" y="15" fontSize="7" fill="#c8d8f0" fontFamily="monospace" fontWeight="bold">
+                {`CARTE NATIONALE D'IDENTITÉ`}
+              </text>
               <text x="155" y="15" fontSize="6" fill="#c8d8f0" fontFamily="monospace">FRANCE</text>
               {/* Photo placeholder */}
               <rect x="8" y="28" width="36" height="44" fill="#0d2035" rx="2" />
@@ -245,11 +247,11 @@ export default function WhatsAppMockup() {
       </div>
 
       {/* Floating badges */}
-      <div className="absolute -left-16 top-16 bg-surface border border-wa/30 rounded-xl px-3 py-2 text-xs text-wa font-medium flex items-center gap-2 shadow-lg glow-wa-sm">
+      <div className="hidden sm:flex absolute -left-16 top-16 bg-surface border border-wa/30 rounded-xl px-3 py-2 text-xs text-wa font-medium items-center gap-2 shadow-lg glow-wa-sm">
         <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
         Photo analysée ✓
       </div>
-      <div className="absolute -right-16 bottom-28 bg-surface border border-indigo-500/30 rounded-xl px-3 py-2 text-xs text-indigo-400 font-medium shadow-lg">
+      <div className="hidden sm:flex absolute -right-16 bottom-28 bg-surface border border-indigo-500/30 rounded-xl px-3 py-2 text-xs text-indigo-400 font-medium shadow-lg">
         🎙️ Vocal transcrit ✓
       </div>
     </div>

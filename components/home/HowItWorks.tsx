@@ -52,7 +52,7 @@ function Box({
   }[color];
 
   return (
-    <div className={`border ${palette.border} ${palette.bg} ${palette.glow} rounded-xl px-4 py-3 flex flex-col items-center gap-1 min-w-[90px]`}>
+    <div className={`border ${palette.border} ${palette.bg} ${palette.glow} rounded-xl px-4 py-3 flex flex-col items-center gap-1 min-w-[70px] sm:min-w-[90px]`}>
       <span className="text-xl leading-none">{icon}</span>
       <span className={`text-xs font-bold ${palette.text} text-center`} style={{ fontFamily: "Onest, sans-serif" }}>{label}</span>
       {sub && <span className="text-[10px] text-slate-500 text-center">{sub}</span>}
@@ -129,7 +129,7 @@ export default function HowItWorks() {
           <SplitArrows />
 
           {/* 3 — Three branches */}
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-3 sm:gap-6">
             <Box icon="📸" label={t("photoLabel")} sub={t("photoSub")} color="indigo" />
             <Box icon="🎙️" label={t("audioLabel")} sub={t("audioSub")} color="blue" />
             <Box icon="✍️" label={t("textLabel")} sub={t("textSub")} color="slate" />
@@ -150,7 +150,7 @@ export default function HowItWorks() {
           </div>
           <SplitArrows />
 
-          <div className="flex items-start gap-6">
+          <div className="flex items-start gap-3 sm:gap-6">
             <Box icon="📋" label={t("crmLabel")} sub={t("crmSub")} color="indigo" />
             <Box icon="📅" label={t("calLabel")} sub={t("calSub")} color="indigo" />
             <Box icon="🔔" label={t("notifLabel")} sub={t("notifSub")} color="indigo" />
