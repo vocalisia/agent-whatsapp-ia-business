@@ -32,8 +32,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-/* ─── Sector configs (lazy imports would be better but these are small) ─── */
+/* ─── Sector configs ─── */
 import { generalConfig } from "@/components/demo/configs/general";
+import { generalConfigEN } from "@/components/demo/configs/general-en";
+import { generalConfigDE } from "@/components/demo/configs/general-de";
+import { generalConfigNL } from "@/components/demo/configs/general-nl";
 import { ecommerceConfig } from "@/components/demo/configs/ecommerce";
 import { coachConfig } from "@/components/demo/configs/coach";
 import { assuranceConfig } from "@/components/demo/configs/assurance";
@@ -45,19 +48,29 @@ import { automobileConfig } from "@/components/demo/configs/automobile";
 import { juridiqueConfig } from "@/components/demo/configs/juridique";
 import { hotelConfig } from "@/components/demo/configs/hotel";
 
-const SECTORS = [
-  { key: "general", labelKey: "sectorGeneral", icon: Bot, config: generalConfig },
-  { key: "ecommerce", labelKey: "sectorEcommerce", icon: ShoppingCart, config: ecommerceConfig },
-  { key: "coach", labelKey: "sectorCoach", icon: GraduationCap, config: coachConfig },
-  { key: "assurance", labelKey: "sectorAssurance", icon: HeartPulse, config: assuranceConfig },
-  { key: "immobilier", labelKey: "sectorImmobilier", icon: Home, config: immobilierConfig },
-  { key: "restaurant", labelKey: "sectorRestaurant", icon: UtensilsCrossed, config: restaurantConfig },
-  { key: "medical", labelKey: "sectorMedical", icon: Stethoscope, config: medicalConfig },
-  { key: "fitness", labelKey: "sectorFitness", icon: Dumbbell, config: fitnessConfig },
-  { key: "automobile", labelKey: "sectorAuto", icon: Car, config: automobileConfig },
-  { key: "juridique", labelKey: "sectorJuridique", icon: Scale, config: juridiqueConfig },
-  { key: "hotel", labelKey: "sectorHotel", icon: Hotel, config: hotelConfig },
-];
+const GENERAL_CONFIG_BY_LOCALE: Record<string, typeof generalConfig> = {
+  fr: generalConfig,
+  en: generalConfigEN,
+  de: generalConfigDE,
+  nl: generalConfigNL,
+};
+
+function getSectors(locale: string) {
+  const generalCfg = GENERAL_CONFIG_BY_LOCALE[locale] ?? generalConfig;
+  return [
+    { key: "general", labelKey: "sectorGeneral", icon: Bot, config: generalCfg },
+    { key: "ecommerce", labelKey: "sectorEcommerce", icon: ShoppingCart, config: ecommerceConfig },
+    { key: "coach", labelKey: "sectorCoach", icon: GraduationCap, config: coachConfig },
+    { key: "assurance", labelKey: "sectorAssurance", icon: HeartPulse, config: assuranceConfig },
+    { key: "immobilier", labelKey: "sectorImmobilier", icon: Home, config: immobilierConfig },
+    { key: "restaurant", labelKey: "sectorRestaurant", icon: UtensilsCrossed, config: restaurantConfig },
+    { key: "medical", labelKey: "sectorMedical", icon: Stethoscope, config: medicalConfig },
+    { key: "fitness", labelKey: "sectorFitness", icon: Dumbbell, config: fitnessConfig },
+    { key: "automobile", labelKey: "sectorAuto", icon: Car, config: automobileConfig },
+    { key: "juridique", labelKey: "sectorJuridique", icon: Scale, config: juridiqueConfig },
+    { key: "hotel", labelKey: "sectorHotel", icon: Hotel, config: hotelConfig },
+  ];
+}
 
 const capabilities = [
   { icon: Eye, title: "Vision IA", desc: "Analyse photos, documents, factures en temps reel" },
@@ -81,10 +94,11 @@ export default function DemoPage() {
     leadScore: 10,
     conversationCost: 0.02,
     sentiment: "neutral" as "positive" | "neutral" | "negative",
-    languageDetected: "FR",
+    languageDetected: locale.toUpperCase(),
     isTyping: false,
   });
 
+  const SECTORS = getSectors(locale);
   const activeConfig = SECTORS.find((s) => s.key === activeSector)?.config ?? generalConfig;
 
   const handleEvent = useCallback((event: SimulatorEvent) => {
@@ -136,7 +150,7 @@ export default function DemoPage() {
             <p className="text-base text-slate-400 max-w-xl mx-auto">
               {t("subtitle")}
             </p>
-            {locale !== "fr" && (
+            {locale !== "fr" && activeSector !== "general" && (
               <div className="mt-6 inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 rounded-lg px-4 py-2 text-xs text-indigo-300 max-w-lg mx-auto">
                 <Sparkles size={14} className="text-indigo-400 flex-shrink-0" />
                 <span>{t("demoLangNotice")}</span>
