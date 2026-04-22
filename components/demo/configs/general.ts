@@ -65,6 +65,16 @@ const GENERAL_INTENTS = {
       { label: "Tarifs", value: "tarif" },
     ],
   },
+  financement: {
+    text: "**Simulateur de financement IA** — exemples en temps reel :\n\n**Immobilier** (taux actuel 3.45%)\n- Budget 250 000 EUR sur 25 ans\n  → Mensualite : **1 240 EUR/mois**\n  → Apport minimum : 25 000 EUR\n- Budget 400 000 EUR sur 20 ans\n  → Mensualite : **2 316 EUR/mois**\n  → Apport minimum : 40 000 EUR\n\n**Automobile** (TAEG 4.9%)\n- Vehicule 25 000 EUR — Credit 48 mois\n  → Mensualite : **568 EUR/mois**\n- Vehicule 40 000 EUR — LOA 36 mois\n  → Loyer : **449 EUR/mois** + option d'achat\n\n**Formation / Coaching** (financement CPF)\n- Programme 2 500 EUR → 0 EUR reste a charge via CPF\n- Paiement 3x sans frais : **834 EUR x 3**\n\nL'agent calcule **en temps reel** selon le montant, la duree et le profil du client. Quelle simulation vous interesse ?",
+    delay: 2400,
+    quickReplies: [
+      { label: "Simulation immo", value: "financement" },
+      { label: "Simulation auto", value: "financement" },
+      { label: "Financement CPF", value: "financement" },
+      { label: "Prendre RDV", value: "rdv" },
+    ],
+  },
 };
 
 const GENERAL_KEYWORDS = {
@@ -74,6 +84,7 @@ const GENERAL_KEYWORDS = {
   demo: ["demo", "demonstration", "montrer", "show", "essayer", "test", "tester"],
   "cas clients": ["cas client", "resultat", "temoignage", "exemple", "reference"],
   secteur: ["secteur", "industrie", "metier", "vertical"],
+  financement: ["financement", "finance", "credit", "pret", "emprunt", "mensualite", "taux", "banque", "loyer", "loa", "lld", "apport", "cpf", "opco"],
 };
 
 const merged = mergeWithVocalis(GENERAL_INTENTS, GENERAL_KEYWORDS);

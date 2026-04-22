@@ -1,7 +1,7 @@
 "use client";
 import { MessageCircle, Zap, Shield } from "lucide-react";
 import { useTranslations } from "next-intl";
-import WhatsAppMockup from "@/components/home/WhatsAppMockup";
+import HeroSimulator from "@/components/home/HeroSimulator";
 
 export default function Hero() {
   const t = useTranslations("hero");
@@ -9,7 +9,7 @@ export default function Hero() {
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || "/contact";
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-x-hidden">
       {/* Animated background mesh */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-bg via-bg to-surface-2 opacity-90" />
@@ -39,17 +39,17 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-24 lg:py-32 grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24 lg:py-32 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full min-w-0">
         {/* Left: Text */}
         <div>
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-6">
             <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
             {t("badge")}
           </div>
 
           <h1
-            className="text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.05] mb-6 tracking-tight"
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-[1.1] mb-5 tracking-tight text-balance"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             {t("title1")}
@@ -59,15 +59,15 @@ export default function Hero() {
             {t("title3")}
           </h1>
 
-          <p className="text-xl text-slate-400 mb-4 leading-relaxed max-w-lg">
+          <p className="text-base sm:text-lg text-slate-400 mb-3 leading-relaxed max-w-lg text-pretty">
             {t("subtitle")}
           </p>
-          <p className="text-slate-500 mb-10 leading-relaxed max-w-lg">
+          <p className="text-sm sm:text-base text-slate-400 mb-8 leading-relaxed max-w-lg text-pretty">
             {t("description")}
           </p>
 
           {/* Feature pills */}
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-wrap gap-2 sm:gap-3 mb-8">
             {[
               { label: t("pillVision"), color: "wa", desc: t("pillVisionDesc") },
               { label: t("pillAudio"), color: "indigo", desc: t("pillAudioDesc") },
@@ -75,39 +75,39 @@ export default function Hero() {
             ].map((f) => (
               <div
                 key={f.label}
-                className="flex items-center gap-2 bg-surface border border-surface-3 rounded-xl px-4 py-2.5 hover:border-wa/40 transition-colors"
+                className="flex items-center gap-2 bg-surface border border-surface-3 rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 hover:border-wa/40 transition-colors"
               >
                 <div className="w-1.5 h-1.5 bg-wa rounded-full" />
                 <span className="text-sm text-white font-medium">{f.label}</span>
-                <span className="text-xs text-slate-500">{f.desc}</span>
+                <span className="hidden sm:inline text-xs text-slate-500">{f.desc}</span>
               </div>
             ))}
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-row flex-wrap gap-3 sm:gap-4">
             <a
               href={calLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
+              className="group inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-5 py-3 rounded-2xl transition-all duration-300 glow-wa text-sm sm:text-base min-h-[48px] shrink-0"
             >
-              <Zap size={20} className="group-hover:scale-110 transition-transform" />
+              <Zap size={18} className="group-hover:scale-110 transition-transform shrink-0" />
               {t("ctaAudit")}
             </a>
             <a
               href={`https://wa.me/${waNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-surface border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
+              className="inline-flex items-center justify-center gap-2 bg-surface border border-surface-3 hover:border-wa/50 text-white font-semibold px-5 py-3 rounded-2xl transition-all duration-300 text-sm sm:text-base min-h-[48px] shrink-0"
             >
-              <MessageCircle size={20} className="text-wa" />
+              <MessageCircle size={18} className="text-wa shrink-0" />
               {t("ctaWhatsapp")}
             </a>
           </div>
 
           {/* Trust badges */}
-          <div className="flex items-center gap-6 mt-10 pt-8 border-t border-surface-2">
+          <div className="flex flex-wrap items-center gap-4 mt-8 pt-6 border-t border-surface-2">
             {[
               { icon: Shield, label: t("trustRgpd") },
               { icon: Zap, label: t("trustDeployed") },
@@ -121,9 +121,9 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right: Animated WhatsApp Mockup */}
-        <div className="flex justify-center lg:justify-end">
-          <WhatsAppMockup />
+        {/* Right: Interactive WhatsApp Simulator */}
+        <div style={{ overflow: 'hidden', width: '100%', minWidth: 0 }}>
+          <HeroSimulator />
         </div>
       </div>
     </section>

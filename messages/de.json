@@ -40,10 +40,26 @@
     "eyebrow": "Das Problem",
     "title": "Jede unbeantwortete Nachricht = ein verlorener Kunde",
     "items": [
-      { "title": "Ignorierte Sprachnachrichten", "description": "Ihre Kunden senden WhatsApp-Sprachnachrichten. Niemand hat Zeit, sie anzuhören.", "statLabel": "der Sprachnachrichten ungehört" },
-      { "title": "Unbearbeitete Fotos", "description": "Der Kunde sendet ein Foto seines Dokuments. Die manuelle Bearbeitung dauert Stunden.", "statLabel": "durchschnittliche Bearbeitungszeit" },
-      { "title": "Nachts verlorene Leads", "description": "70 % der Nachrichten kommen ausserhalb der Geschäftszeiten. Ohne schnelle Antwort: Auf Wiedersehen, Interessent.", "statLabel": "der Nachrichten ausserhalb der Geschäftszeiten" },
-      { "title": "Überlastetes Team", "description": "Ihre Teams bearbeiten sich wiederholende Nachrichten, statt sich auf Wertschöpfung zu konzentrieren.", "statLabel": "verlorene Zeit" }
+      {
+        "title": "Ignorierte Sprachnachrichten",
+        "description": "Ihre Kunden senden WhatsApp-Sprachnachrichten. Niemand hat Zeit, sie anzuhören.",
+        "statLabel": "der Sprachnachrichten ungehört"
+      },
+      {
+        "title": "Unbearbeitete Fotos",
+        "description": "Der Kunde sendet ein Foto seines Dokuments. Die manuelle Bearbeitung dauert Stunden.",
+        "statLabel": "durchschnittliche Bearbeitungszeit"
+      },
+      {
+        "title": "Nachts verlorene Leads",
+        "description": "70 % der Nachrichten kommen ausserhalb der Geschäftszeiten. Ohne schnelle Antwort: Auf Wiedersehen, Interessent.",
+        "statLabel": "der Nachrichten ausserhalb der Geschäftszeiten"
+      },
+      {
+        "title": "Überlastetes Team",
+        "description": "Ihre Teams bearbeiten sich wiederholende Nachrichten, statt sich auf Wertschöpfung zu konzentrieren.",
+        "statLabel": "verlorene Zeit"
+      }
     ]
   },
   "features": {
@@ -52,12 +68,36 @@
     "subtitle": "Exklusive multimodale Fähigkeiten auf dem WhatsApp Business-Markt.",
     "exclusive": "Exklusiv",
     "items": [
-      { "title": "KI-Vision", "subtitle": "Analysiert Fotos", "description": "Der Kunde sendet ein Foto (Dokument, Immobilie, technisches Problem). Der Agent sieht, versteht und antwortet über OpenAI Vision / Claude / Gemini." },
-      { "title": "KI-Audio", "subtitle": "Transkribiert Sprachnachrichten", "description": "Der Agent transkribiert WhatsApp-Sprachnachrichten automatisch und antwortet kontextbezogen in der Sprache des Kunden." },
-      { "title": "Alle Medientypen", "subtitle": "Bilder, Audio, Video, Dokumente", "description": "Alles wird verarbeitet, gespeichert und ist zugänglich. Mitarbeiter können auch Dateien über die Oberfläche an Kunden senden." },
-      { "title": "Auto-DSGVO", "subtitle": "Konfigurierbare Aufbewahrung", "description": "Automatische geplante Bereinigung nach Datentyp. EU-Hosting verfügbar. Mühelose Konformität." },
-      { "title": "Cal.com v2", "subtitle": "Termine in WhatsApp", "description": "EU-Server, Teams, dynamische Felder. Der Agent bucht Termine direkt im Gespräch." },
-      { "title": "Webhooks", "subtitle": "Unbegrenzte Automatisierungen", "description": "Vollständiges Transkript + KI-Bewertung am Ende jedes Gesprächs. Verbindet HubSpot, Salesforce, Notion." }
+      {
+        "title": "KI-Vision",
+        "subtitle": "Analysiert Fotos",
+        "description": "Der Kunde sendet ein Foto (Dokument, Immobilie, technisches Problem). Der Agent sieht, versteht und antwortet über OpenAI Vision / Claude / Gemini."
+      },
+      {
+        "title": "KI-Audio",
+        "subtitle": "Transkribiert Sprachnachrichten",
+        "description": "Der Agent transkribiert WhatsApp-Sprachnachrichten automatisch und antwortet kontextbezogen in der Sprache des Kunden."
+      },
+      {
+        "title": "Alle Medientypen",
+        "subtitle": "Bilder, Audio, Video, Dokumente",
+        "description": "Alles wird verarbeitet, gespeichert und ist zugänglich. Mitarbeiter können auch Dateien über die Oberfläche an Kunden senden."
+      },
+      {
+        "title": "Auto-DSGVO",
+        "subtitle": "Konfigurierbare Aufbewahrung",
+        "description": "Automatische geplante Bereinigung nach Datentyp. EU-Hosting verfügbar. Mühelose Konformität."
+      },
+      {
+        "title": "Cal.com v2",
+        "subtitle": "Termine in WhatsApp",
+        "description": "EU-Server, Teams, dynamische Felder. Der Agent bucht Termine direkt im Gespräch."
+      },
+      {
+        "title": "Webhooks",
+        "subtitle": "Unbegrenzte Automatisierungen",
+        "description": "Vollständiges Transkript + KI-Bewertung am Ende jedes Gesprächs. Verbindet HubSpot, Salesforce, Notion."
+      }
     ]
   },
   "howItWorks": {
@@ -95,9 +135,36 @@
     "ctaAudit": "Kostenloses Audit — 30 Min.",
     "ctaSubtitle": "30 Minuten · Unverbindlich · Angebot innerhalb 48 Std.",
     "plans": [
-      { "name": "Starter", "features": ["1 WhatsApp-Agent", "1 Szenario", "1 Integration", "E-Mail-Support"] },
-      { "name": "Pro", "features": ["Mehrere Szenarien", "Meta-Vorlagen", "CRM + Kalender", "KI-Vision + Sprachnachrichten", "Automatische Workflows", "Support 48 Std."] },
-      { "name": "Enterprise", "features": ["Massgeschneiderte Lösung", "Mehrere Nummern", "Unbegrenzte Integrationen", "Prioritäts-SLA", "Support rund um die Uhr"] }
+      {
+        "name": "Starter",
+        "features": [
+          "1 WhatsApp-Agent",
+          "1 Szenario",
+          "1 Integration",
+          "E-Mail-Support"
+        ]
+      },
+      {
+        "name": "Pro",
+        "features": [
+          "Mehrere Szenarien",
+          "Meta-Vorlagen",
+          "CRM + Kalender",
+          "KI-Vision + Sprachnachrichten",
+          "Automatische Workflows",
+          "Support 48 Std."
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          "Massgeschneiderte Lösung",
+          "Mehrere Nummern",
+          "Unbegrenzte Integrationen",
+          "Prioritäts-SLA",
+          "Support rund um die Uhr"
+        ]
+      }
     ]
   },
   "finalCta": {
@@ -157,18 +224,66 @@
     "subtitle": "Keine starre Preisliste. Wir besprechen Ihre Anforderungen und schlagen die passende Lösung vor — nicht mehr, nicht weniger.",
     "recommended": "EMPFOHLEN",
     "plans": [
-      { "name": "Starter", "description": "KMU, die mit WhatsApp-Automatisierung starten.", "features": ["1 WhatsApp Business-Agent", "1 Gesprächsszenario", "1 Integration (CRM oder Kalender)", "Automatische Textantworten", "Monitoring-Dashboard", "E-Mail-Support", "Schulung inklusive"] },
-      { "name": "Pro", "description": "Die Komplettlösung für vollständige Automatisierung.", "features": ["Mehrere Gesprächsszenarien", "Vorab genehmigte Meta-Vorlagen", "CRM + Kalender (Cal.com)", "KI-Vision — Fotoanalyse", "Automatische Sprachtranskription", "Workflows & Webhooks", "DSGVO-Konformität", "Garantierter Support 48 Std.", "Persönliches Onboarding"] },
-      { "name": "Enterprise", "description": "Massgeschneiderte Lösung für grosse Organisationen.", "features": ["Vollständig individuelle Architektur", "Mehrere WhatsApp-Nummern", "Unbegrenzte Integrationen", "Garantiertes Prioritäts-SLA", "Dediziertes EU-Hosting", "Persönlicher Support rund um die Uhr", "Kontinuierliches Audit und Optimierung", "Erweiterte Teamschulung"] }
+      {
+        "name": "Starter",
+        "description": "KMU, die mit WhatsApp-Automatisierung starten.",
+        "features": [
+          "1 WhatsApp Business-Agent",
+          "1 Gesprächsszenario",
+          "1 Integration (CRM oder Kalender)",
+          "Automatische Textantworten",
+          "Monitoring-Dashboard",
+          "E-Mail-Support",
+          "Schulung inklusive"
+        ]
+      },
+      {
+        "name": "Pro",
+        "description": "Die Komplettlösung für vollständige Automatisierung.",
+        "features": [
+          "Mehrere Gesprächsszenarien",
+          "Vorab genehmigte Meta-Vorlagen",
+          "CRM + Kalender (Cal.com)",
+          "KI-Vision — Fotoanalyse",
+          "Automatische Sprachtranskription",
+          "Workflows & Webhooks",
+          "DSGVO-Konformität",
+          "Garantierter Support 48 Std.",
+          "Persönliches Onboarding"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "description": "Massgeschneiderte Lösung für grosse Organisationen.",
+        "features": [
+          "Vollständig individuelle Architektur",
+          "Mehrere WhatsApp-Nummern",
+          "Unbegrenzte Integrationen",
+          "Garantiertes Prioritäts-SLA",
+          "Dediziertes EU-Hosting",
+          "Persönlicher Support rund um die Uhr",
+          "Kontinuierliches Audit und Optimierung",
+          "Erweiterte Teamschulung"
+        ]
+      }
     ],
     "sessionEyebrow": "Strategiegespräch",
     "sessionTitle": "Strategiegespräch — Ihr WhatsApp-KI-Agent",
     "sessionSubtitle": "30 Minuten, um Ihre Abläufe zu analysieren, mögliche Automatisierungen zu identifizieren und Ihre Strategie zu definieren. Kostenlose Diagnose, unverbindlich.",
     "faqTitle": "Häufig gestellte Fragen",
     "faqs": [
-      { "question": "Beinhalten die Preise die Einrichtung?", "answer": "Ja. Jedes Angebot umfasst Entwicklung, WhatsApp Business-Konfiguration, Tests und vollständige Bereitstellung. Keine Überraschungen." },
-      { "question": "Gibt es laufende Kosten?", "answer": "Ja, ein monatliches Paket deckt Hosting, API-Aufrufe (LLM) und Wartung ab. Dieses Paket ist in unserem Angebot enthalten." },
-      { "question": "Wie lange dauert die Inbetriebnahme?", "answer": "In der Regel 2 bis 3 Wochen für den Pro-Plan. Der Starter-Plan kann in 1 Woche bereitgestellt werden. Enterprise hängt von der Komplexität ab." }
+      {
+        "question": "Beinhalten die Preise die Einrichtung?",
+        "answer": "Ja. Jedes Angebot umfasst Entwicklung, WhatsApp Business-Konfiguration, Tests und vollständige Bereitstellung. Keine Überraschungen."
+      },
+      {
+        "question": "Gibt es laufende Kosten?",
+        "answer": "Ja, ein monatliches Paket deckt Hosting, API-Aufrufe (LLM) und Wartung ab. Dieses Paket ist in unserem Angebot enthalten."
+      },
+      {
+        "question": "Wie lange dauert die Inbetriebnahme?",
+        "answer": "In der Regel 2 bis 3 Wochen für den Pro-Plan. Der Starter-Plan kann in 1 Woche bereitgestellt werden. Enterprise hängt von der Komplexität ab."
+      }
     ]
   },
   "notFound": {
@@ -205,10 +320,22 @@
         "Wöchentliche Performance-Berichte"
       ],
       "steps": [
-        { "title": "Der Interessent sendet eine Nachricht", "desc": "Über Ihre WhatsApp Business-Nummer — Text, Sprachnachricht oder Foto." },
-        { "title": "Die KI stellt die richtigen Fragen", "desc": "Budget, Bedarf, Zeitrahmen, Entscheidungsbefugnis — angepasst an Ihre Branche." },
-        { "title": "Qualifizierungsscore berechnet", "desc": "Jeder Interessent erhält einen Score basierend auf Ihren Geschäftskriterien." },
-        { "title": "Weiterleitung an den Vertrieb", "desc": "Nur qualifizierte Interessenten landen in Ihrem CRM oder Slack." }
+        {
+          "title": "Der Interessent sendet eine Nachricht",
+          "desc": "Über Ihre WhatsApp Business-Nummer — Text, Sprachnachricht oder Foto."
+        },
+        {
+          "title": "Die KI stellt die richtigen Fragen",
+          "desc": "Budget, Bedarf, Zeitrahmen, Entscheidungsbefugnis — angepasst an Ihre Branche."
+        },
+        {
+          "title": "Qualifizierungsscore berechnet",
+          "desc": "Jeder Interessent erhält einen Score basierend auf Ihren Geschäftskriterien."
+        },
+        {
+          "title": "Weiterleitung an den Vertrieb",
+          "desc": "Nur qualifizierte Interessenten landen in Ihrem CRM oder Slack."
+        }
       ]
     },
     "campagnes": {
@@ -230,10 +357,22 @@
         "Detaillierte Performance-Berichte"
       ],
       "useCases": [
-        { "title": "Interessenten-Nachfassung", "desc": "Reaktivieren Sie kalte Leads mit personalisierten Nachrichten zum richtigen Zeitpunkt." },
-        { "title": "Kunden-Onboarding", "desc": "Begrüssen Sie jeden neuen Kunden mit einer automatisierten Willkommenssequenz." },
-        { "title": "Aktionen & Angebote", "desc": "Versenden Sie gezielte Angebote an bestimmte Segmente Ihrer Datenbank." },
-        { "title": "Transaktionsbenachrichtigungen", "desc": "Bestellbestätigungen, Lieferupdates, Terminerinnerungen — automatisch." }
+        {
+          "title": "Interessenten-Nachfassung",
+          "desc": "Reaktivieren Sie kalte Leads mit personalisierten Nachrichten zum richtigen Zeitpunkt."
+        },
+        {
+          "title": "Kunden-Onboarding",
+          "desc": "Begrüssen Sie jeden neuen Kunden mit einer automatisierten Willkommenssequenz."
+        },
+        {
+          "title": "Aktionen & Angebote",
+          "desc": "Versenden Sie gezielte Angebote an bestimmte Segmente Ihrer Datenbank."
+        },
+        {
+          "title": "Transaktionsbenachrichtigungen",
+          "desc": "Bestellbestätigungen, Lieferupdates, Terminerinnerungen — automatisch."
+        }
       ]
     },
     "crm": {
@@ -256,17 +395,44 @@
         "Individuelles Feld-Mapping für Ihr CRM"
       ],
       "steps": [
-        { "title": "WhatsApp-Gespräch", "desc": "Der Kunde antwortet Ihrem KI-Agent — Fragen, Informationen, Anfragen." },
-        { "title": "KI-Verarbeitung", "desc": "Der Agent extrahiert die Schlüsseldaten: Name, Budget, Bedarf, Qualifizierung." },
-        { "title": "CRM-Aktualisierung", "desc": "Die Daten werden sofort per Webhook in Ihr CRM übertragen." }
+        {
+          "title": "WhatsApp-Gespräch",
+          "desc": "Der Kunde antwortet Ihrem KI-Agent — Fragen, Informationen, Anfragen."
+        },
+        {
+          "title": "KI-Verarbeitung",
+          "desc": "Der Agent extrahiert die Schlüsseldaten: Name, Budget, Bedarf, Qualifizierung."
+        },
+        {
+          "title": "CRM-Aktualisierung",
+          "desc": "Die Daten werden sofort per Webhook in Ihr CRM übertragen."
+        }
       ],
       "integrations": [
-        { "name": "HubSpot", "desc": "Kontakte, Deals, Aktivitäten, Sequenzen" },
-        { "name": "Salesforce", "desc": "Leads, Opportunities, Tasks, Notes" },
-        { "name": "Notion", "desc": "Datenbanken, Seiten, Eigenschaften" },
-        { "name": "Airtable", "desc": "Tabellen, Einträge, gefilterte Ansichten" },
-        { "name": "Make / Zapier", "desc": "Automatisierungen über Webhooks" },
-        { "name": "Cal.com", "desc": "Terminbuchung direkt in WhatsApp" }
+        {
+          "name": "HubSpot",
+          "desc": "Kontakte, Deals, Aktivitäten, Sequenzen"
+        },
+        {
+          "name": "Salesforce",
+          "desc": "Leads, Opportunities, Tasks, Notes"
+        },
+        {
+          "name": "Notion",
+          "desc": "Datenbanken, Seiten, Eigenschaften"
+        },
+        {
+          "name": "Airtable",
+          "desc": "Tabellen, Einträge, gefilterte Ansichten"
+        },
+        {
+          "name": "Make / Zapier",
+          "desc": "Automatisierungen über Webhooks"
+        },
+        {
+          "name": "Cal.com",
+          "desc": "Terminbuchung direkt in WhatsApp"
+        }
       ]
     },
     "rdv": {
@@ -288,9 +454,18 @@
         "Automatischer Versand von Videokonferenz-Links (Zoom, Google Meet)"
       ],
       "steps": [
-        { "title": "Der Kunde möchte einen Termin", "desc": "\"Ich möchte einen Termin buchen\" — der Agent versteht die Anfrage und zeigt verfügbare Termine." },
-        { "title": "Der Kunde wählt einen Termin", "desc": "Der Agent zeigt die Cal.com-Verfügbarkeit in Echtzeit. Der Kunde antwortet mit seiner Wahl." },
-        { "title": "Automatische Bestätigung", "desc": "Termin im Kalender erstellt, WhatsApp- + E-Mail-Bestätigung, Erinnerung 24 Std. vorher." }
+        {
+          "title": "Der Kunde möchte einen Termin",
+          "desc": "\"Ich möchte einen Termin buchen\" — der Agent versteht die Anfrage und zeigt verfügbare Termine."
+        },
+        {
+          "title": "Der Kunde wählt einen Termin",
+          "desc": "Der Agent zeigt die Cal.com-Verfügbarkeit in Echtzeit. Der Kunde antwortet mit seiner Wahl."
+        },
+        {
+          "title": "Automatische Bestätigung",
+          "desc": "Termin im Kalender erstellt, WhatsApp- + E-Mail-Bestätigung, Erinnerung 24 Std. vorher."
+        }
       ]
     },
     "agentIa": {
@@ -312,19 +487,52 @@
       "finalCtaTitle": "Bereit, Ihren WhatsApp KI-Agenten einzusetzen?",
       "finalCtaSubtitle": "30 Minuten zur Analyse Ihrer Anforderungen. Angebot innerhalb von 48 Std.",
       "faqItems": [
-        { "question": "Wie funktioniert die WhatsApp-Sprachtranskription?", "answer": "Der Agent transkribiert jede Sprachnachricht mit einem Spracherkennungsmodell basierend auf der konfigurierten Sprache. Das Transkript wird wie normaler Text verarbeitet, und die KI antwortet kontextuell." },
-        { "question": "Welche Arten von Fotos kann der Agent analysieren?", "answer": "Dokumente (Ausweise, Nachweise, Verträge, Rechnungen), Immobilienfotos, Screenshots, Produktfotos, medizinische Rezepte — jede Art von Bild." },
-        { "question": "Kann der Agent Dokumente mit empfangenen Fotos ausfüllen?", "answer": "Ja. Wenn ein Kunde ein Foto seines Ausweises oder eines Formulars sendet, extrahiert der Agent die Informationen und speichert sie in Ihrem CRM oder füllt automatisch eine Akte vor." },
-        { "question": "Brauche ich ein bestehendes WhatsApp Business-Konto?", "answer": "Sie benötigen ein WhatsApp Business API-Konto über Meta. Wir begleiten Sie bei der Erstellung, Verbindung und Template-Genehmigung." },
-        { "question": "Wie funktioniert Meta's 24-Stunden-Regel?", "answer": "Unser Agent verwaltet diese Einschränkung automatisch: Er verwendet vorab genehmigte Templates, um Gespräche wieder zu aktivieren, die seit mehr als 24 Stunden inaktiv sind." },
-        { "question": "Kann der Agent mehrere Sprachen verwalten?", "answer": "Ja. Der Agent erkennt die Sprache des Kunden automatisch und antwortet in derselben Sprache (Französisch, Englisch, Arabisch, Spanisch usw.)." },
-        { "question": "Wie viele gleichzeitige Gespräche kann er verwalten?", "answer": "Der Agent ist skalierbar und kann Hunderte von gleichzeitigen Gesprächen ohne Qualitätsverlust verwalten." },
-        { "question": "Was ist die DSGVO-Konformität der Lösung?", "answer": "Konfigurierbare Datenspeicherung nach Typ, geplante automatische Bereinigung und mögliches EU-Server-Hosting über Cal.com v2." }
+        {
+          "question": "Wie funktioniert die WhatsApp-Sprachtranskription?",
+          "answer": "Der Agent transkribiert jede Sprachnachricht mit einem Spracherkennungsmodell basierend auf der konfigurierten Sprache. Das Transkript wird wie normaler Text verarbeitet, und die KI antwortet kontextuell."
+        },
+        {
+          "question": "Welche Arten von Fotos kann der Agent analysieren?",
+          "answer": "Dokumente (Ausweise, Nachweise, Verträge, Rechnungen), Immobilienfotos, Screenshots, Produktfotos, medizinische Rezepte — jede Art von Bild."
+        },
+        {
+          "question": "Kann der Agent Dokumente mit empfangenen Fotos ausfüllen?",
+          "answer": "Ja. Wenn ein Kunde ein Foto seines Ausweises oder eines Formulars sendet, extrahiert der Agent die Informationen und speichert sie in Ihrem CRM oder füllt automatisch eine Akte vor."
+        },
+        {
+          "question": "Brauche ich ein bestehendes WhatsApp Business-Konto?",
+          "answer": "Sie benötigen ein WhatsApp Business API-Konto über Meta. Wir begleiten Sie bei der Erstellung, Verbindung und Template-Genehmigung."
+        },
+        {
+          "question": "Wie funktioniert Meta's 24-Stunden-Regel?",
+          "answer": "Unser Agent verwaltet diese Einschränkung automatisch: Er verwendet vorab genehmigte Templates, um Gespräche wieder zu aktivieren, die seit mehr als 24 Stunden inaktiv sind."
+        },
+        {
+          "question": "Kann der Agent mehrere Sprachen verwalten?",
+          "answer": "Ja. Der Agent erkennt die Sprache des Kunden automatisch und antwortet in derselben Sprache (Französisch, Englisch, Arabisch, Spanisch usw.)."
+        },
+        {
+          "question": "Wie viele gleichzeitige Gespräche kann er verwalten?",
+          "answer": "Der Agent ist skalierbar und kann Hunderte von gleichzeitigen Gesprächen ohne Qualitätsverlust verwalten."
+        },
+        {
+          "question": "Was ist die DSGVO-Konformität der Lösung?",
+          "answer": "Konfigurierbare Datenspeicherung nach Typ, geplante automatische Bereinigung und mögliches EU-Server-Hosting über Cal.com v2."
+        }
       ],
       "relatedServices": [
-        { "title": "CRM-Automatisierung", "description": "Verbinden Sie Ihren WhatsApp-Agenten mit HubSpot, Salesforce oder Pipedrive." },
-        { "title": "Ausgehende WhatsApp-Kampagnen", "description": "Automatisierte Kundengewinnung und Nachverfolgung über genehmigte Meta-Templates." },
-        { "title": "Cal.com-Integration", "description": "Intelligente Terminbuchung direkt in WhatsApp." }
+        {
+          "title": "CRM-Automatisierung",
+          "description": "Verbinden Sie Ihren WhatsApp-Agenten mit HubSpot, Salesforce oder Pipedrive."
+        },
+        {
+          "title": "Ausgehende WhatsApp-Kampagnen",
+          "description": "Automatisierte Kundengewinnung und Nachverfolgung über genehmigte Meta-Templates."
+        },
+        {
+          "title": "Cal.com-Integration",
+          "description": "Intelligente Terminbuchung direkt in WhatsApp."
+        }
       ]
     },
     "common": {
@@ -388,9 +596,18 @@
     "collectedTitle": "2. Erhobene Daten",
     "collectedIntro": "Wir erheben die folgenden Daten:",
     "collectedCategories": [
-      { "cat": "Buchungsformular (iClosed)", "items": "Nachname, Vorname, E-Mail-Adresse, Telefonnummer, Firmenname, Nachricht." },
-      { "cat": "Navigation (Google Analytics)", "items": "Besuchte Seiten, Sitzungsdauer, Land, Gerätetyp, Verkehrsquelle. Anonymisierte Daten." },
-      { "cat": "WhatsApp Business (Kundenservice)", "items": "Mit dem KI-Agenten ausgetauschte Nachrichten: Text, Sprachnachrichten, Fotos, Dokumente. Werden ausschliesslich zur Beantwortung Ihrer Anfragen verarbeitet." }
+      {
+        "cat": "Buchungsformular (iClosed)",
+        "items": "Nachname, Vorname, E-Mail-Adresse, Telefonnummer, Firmenname, Nachricht."
+      },
+      {
+        "cat": "Navigation (Google Analytics)",
+        "items": "Besuchte Seiten, Sitzungsdauer, Land, Gerätetyp, Verkehrsquelle. Anonymisierte Daten."
+      },
+      {
+        "cat": "WhatsApp Business (Kundenservice)",
+        "items": "Mit dem KI-Agenten ausgetauschte Nachrichten: Text, Sprachnachrichten, Fotos, Dokumente. Werden ausschliesslich zur Beantwortung Ihrer Anfragen verarbeitet."
+      }
     ],
     "purposeTitle": "3. Zweck der Verarbeitung",
     "purposes": [
@@ -402,38 +619,92 @@
     ],
     "legalBasisTitle": "4. Rechtsgrundlage",
     "legalBases": [
-      { "name": "Einwilligung", "desc": "für den Versand von Marketingkommunikation und die Nutzung nicht wesentlicher Cookies." },
-      { "name": "Vertragserfüllung", "desc": "zur Bearbeitung Ihrer Anfragen und Erbringung unserer Leistungen." },
-      { "name": "Berechtigtes Interesse", "desc": "für anonymisierte Zielgruppenanalyse und Website-Sicherheit." }
+      {
+        "name": "Einwilligung",
+        "desc": "für den Versand von Marketingkommunikation und die Nutzung nicht wesentlicher Cookies."
+      },
+      {
+        "name": "Vertragserfüllung",
+        "desc": "zur Bearbeitung Ihrer Anfragen und Erbringung unserer Leistungen."
+      },
+      {
+        "name": "Berechtigtes Interesse",
+        "desc": "für anonymisierte Zielgruppenanalyse und Website-Sicherheit."
+      }
     ],
     "retentionTitle": "5. Aufbewahrungsdauer",
     "retentionCategoryHeader": "Datenkategorie",
     "retentionDurationHeader": "Dauer",
     "retentionRows": [
-      { "cat": "Kontaktdaten (Formular)", "duration": "3 Jahre ab dem letzten Kontakt" },
-      { "cat": "Vertragsdaten (Kunden)", "duration": "5 Jahre nach Vertragsende" },
-      { "cat": "WhatsApp-Nachrichten (KI-Agent)", "duration": "Projektspezifisch konfigurierbar (Standard: 90 Tage)" },
-      { "cat": "Analysedaten", "duration": "26 Monate (Standard-Google-Analytics-Konfiguration)" },
-      { "cat": "Wesentliche Cookies", "duration": "Maximal 13 Monate" }
+      {
+        "cat": "Kontaktdaten (Formular)",
+        "duration": "3 Jahre ab dem letzten Kontakt"
+      },
+      {
+        "cat": "Vertragsdaten (Kunden)",
+        "duration": "5 Jahre nach Vertragsende"
+      },
+      {
+        "cat": "WhatsApp-Nachrichten (KI-Agent)",
+        "duration": "Projektspezifisch konfigurierbar (Standard: 90 Tage)"
+      },
+      {
+        "cat": "Analysedaten",
+        "duration": "26 Monate (Standard-Google-Analytics-Konfiguration)"
+      },
+      {
+        "cat": "Wesentliche Cookies",
+        "duration": "Maximal 13 Monate"
+      }
     ],
     "recipientsTitle": "6. Datenempfänger",
     "recipientsIntro": "Ihre Daten können im Rahmen der Leistungserbringung an folgende Auftragsverarbeiter weitergegeben werden:",
     "recipients": [
-      { "name": "iClosed", "desc": "Online-Terminbuchungstool" },
-      { "name": "Google LLC", "desc": "Analysen (anonymisierte Daten, EU-Server)" },
-      { "name": "Meta Platforms Ireland Ltd", "desc": "WhatsApp Business API-Infrastruktur" },
-      { "name": "Vercel Inc.", "desc": "Website-Hosting" }
+      {
+        "name": "iClosed",
+        "desc": "Online-Terminbuchungstool"
+      },
+      {
+        "name": "Google LLC",
+        "desc": "Analysen (anonymisierte Daten, EU-Server)"
+      },
+      {
+        "name": "Meta Platforms Ireland Ltd",
+        "desc": "WhatsApp Business API-Infrastruktur"
+      },
+      {
+        "name": "Vercel Inc.",
+        "desc": "Website-Hosting"
+      }
     ],
     "recipientsNoSale": "Es werden keine Daten an Dritte verkauft. Übermittlungen ausserhalb der EU sind durch DSGVO-konforme Standardvertragsklauseln (SVK) abgesichert.",
     "rightsTitle": "7. Ihre Rechte (DSGVO)",
     "rightsIntro": "Gemäss der Datenschutz-Grundverordnung (DSGVO — EU 2016/679) haben Sie folgende Rechte:",
     "rights": [
-      { "name": "Auskunftsrecht", "desc": "eine Kopie Ihrer Daten erhalten" },
-      { "name": "Recht auf Berichtigung", "desc": "unrichtige Daten korrigieren" },
-      { "name": "Recht auf Löschung", "desc": "die Löschung Ihrer Daten verlangen" },
-      { "name": "Recht auf Datenübertragbarkeit", "desc": "Ihre Daten in einem strukturierten Format erhalten" },
-      { "name": "Widerspruchsrecht", "desc": "bestimmten Verarbeitungen widersprechen" },
-      { "name": "Recht auf Einschränkung", "desc": "die Verarbeitung in bestimmten Fällen einschränken" }
+      {
+        "name": "Auskunftsrecht",
+        "desc": "eine Kopie Ihrer Daten erhalten"
+      },
+      {
+        "name": "Recht auf Berichtigung",
+        "desc": "unrichtige Daten korrigieren"
+      },
+      {
+        "name": "Recht auf Löschung",
+        "desc": "die Löschung Ihrer Daten verlangen"
+      },
+      {
+        "name": "Recht auf Datenübertragbarkeit",
+        "desc": "Ihre Daten in einem strukturierten Format erhalten"
+      },
+      {
+        "name": "Widerspruchsrecht",
+        "desc": "bestimmten Verarbeitungen widersprechen"
+      },
+      {
+        "name": "Recht auf Einschränkung",
+        "desc": "die Verarbeitung in bestimmten Fällen einschränken"
+      }
     ],
     "rightsContact": "Zur Ausübung dieser Rechte kontaktieren Sie uns per E-Mail:",
     "rightsDelay": "Wir verpflichten uns, innerhalb von <strong>30 Tagen</strong> zu antworten.",
@@ -444,9 +715,21 @@
     "cookiesPurposeHeader": "Zweck",
     "cookiesConsentHeader": "Einwilligung",
     "cookiesRows": [
-      { "type": "Wesentlich", "purpose": "Website-Funktionalität", "consent": "Nicht erforderlich" },
-      { "type": "Analytics (GA4)", "purpose": "Anonymisierte Zielgruppenmessung", "consent": "Erforderlich" },
-      { "type": "Drittanbieter (iClosed)", "purpose": "Terminbuchung", "consent": "Erforderlich" }
+      {
+        "type": "Wesentlich",
+        "purpose": "Website-Funktionalität",
+        "consent": "Nicht erforderlich"
+      },
+      {
+        "type": "Analytics (GA4)",
+        "purpose": "Anonymisierte Zielgruppenmessung",
+        "consent": "Erforderlich"
+      },
+      {
+        "type": "Drittanbieter (iClosed)",
+        "purpose": "Terminbuchung",
+        "consent": "Erforderlich"
+      }
     ],
     "cookiesManage": "Sie können Ihre Cookie-Einstellungen jederzeit über Ihre Browsereinstellungen verwalten.",
     "securityTitle": "9. Datensicherheit",
@@ -465,9 +748,21 @@
     "vslSubtitle": "2 Minuten, um genau zu verstehen, was wir gemeinsam tun werden",
     "stepsTitle": "Was während der Sitzung passiert",
     "steps": [
-      { "num": "Minuten 0–10", "title": "Unternehmensdiagnose", "desc": "Wir analysieren Ihre WhatsApp-Nachrichtenflüsse, Ihre Schmerzpunkte und die sich wiederholenden Aufgaben, die Ihre Zeit verschwenden." },
-      { "num": "Minuten 10–20", "title": "Technische Bewertung", "desc": "Machbarkeitsstudie basierend auf Ihren aktuellen Tools (CRM, Kalender, Datenbank). Wir sagen Ihnen genau, was automatisierbar ist." },
-      { "num": "Minuten 20–30", "title": "Strategie & Angebot", "desc": "Wir definieren gemeinsam Ihren Aktionsplan. Sie verlassen uns mit einem konkreten, aufgeschlüsselten Angebot innerhalb von 48 Std. in Ihrem Postfach." }
+      {
+        "num": "Minuten 0–10",
+        "title": "Unternehmensdiagnose",
+        "desc": "Wir analysieren Ihre WhatsApp-Nachrichtenflüsse, Ihre Schmerzpunkte und die sich wiederholenden Aufgaben, die Ihre Zeit verschwenden."
+      },
+      {
+        "num": "Minuten 10–20",
+        "title": "Technische Bewertung",
+        "desc": "Machbarkeitsstudie basierend auf Ihren aktuellen Tools (CRM, Kalender, Datenbank). Wir sagen Ihnen genau, was automatisierbar ist."
+      },
+      {
+        "num": "Minuten 20–30",
+        "title": "Strategie & Angebot",
+        "desc": "Wir definieren gemeinsam Ihren Aktionsplan. Sie verlassen uns mit einem konkreten, aufgeschlüsselten Angebot innerhalb von 48 Std. in Ihrem Postfach."
+      }
     ],
     "checklistTitle": "Um Ihre Sitzung zu maximieren — bereiten Sie vor:",
     "checklistItems": [
@@ -478,20 +773,49 @@
     ],
     "statsTitle": "Was unsere Kunden erreichen",
     "stats": [
-      { "stat": "−78%", "label": "unbeantwortete Nachrichten" },
-      { "stat": "3×", "label": "mehr qualifizierte Leads" },
-      { "stat": "2 Wo.", "label": "bis zur Produktion" }
+      {
+        "stat": "−78%",
+        "label": "unbeantwortete Nachrichten"
+      },
+      {
+        "stat": "3×",
+        "label": "mehr qualifizierte Leads"
+      },
+      {
+        "stat": "2 Wo.",
+        "label": "bis zur Produktion"
+      }
     ],
     "testimonialsTitle": "Sie haben es vor Ihnen getan",
     "testimonials": [
-      { "name": "Sophie M.", "role": "Direktorin Immobilienagentur, Lyon", "text": "Innerhalb von 2 Wochen beantwortet der Agent Objektfotos, die über WhatsApp gesendet werden. Meine Mitarbeiter verbringen 0 Minuten mit grundlegenden Fragen. Sofortiger ROI." },
-      { "name": "Karim B.", "role": "E-Commerce-Gründer, Paris", "text": "Unser WhatsApp-Support läuft 24/7 ohne menschliches Eingreifen. Die Kundenzufriedenheit stieg innerhalb eines Monats von 67% auf 91%." }
+      {
+        "name": "Sophie M.",
+        "role": "Direktorin Immobilienagentur, Lyon",
+        "text": "Innerhalb von 2 Wochen beantwortet der Agent Objektfotos, die über WhatsApp gesendet werden. Meine Mitarbeiter verbringen 0 Minuten mit grundlegenden Fragen. Sofortiger ROI."
+      },
+      {
+        "name": "Karim B.",
+        "role": "E-Commerce-Gründer, Paris",
+        "text": "Unser WhatsApp-Support läuft 24/7 ohne menschliches Eingreifen. Die Kundenzufriedenheit stieg innerhalb eines Monats von 67% auf 91%."
+      }
     ],
     "guaranteesTitle": "Unsere Garantien",
     "guarantees": [
-      { "icon": "🔒", "title": "Vertraulich", "desc": "NDA auf Anfrage verfügbar" },
-      { "icon": "🎯", "title": "Unverbindlich", "desc": "Keine Kaufverpflichtung" },
-      { "icon": "⚡", "title": "Angebot in 48 Std.", "desc": "Aufgeschlüsselt und detailliert" }
+      {
+        "icon": "🔒",
+        "title": "Vertraulich",
+        "desc": "NDA auf Anfrage verfügbar"
+      },
+      {
+        "icon": "🎯",
+        "title": "Unverbindlich",
+        "desc": "Keine Kaufverpflichtung"
+      },
+      {
+        "icon": "⚡",
+        "title": "Angebot in 48 Std.",
+        "desc": "Aufgeschlüsselt und detailliert"
+      }
     ],
     "ctaQuestion": "Eine Frage vor der Sitzung?",
     "ctaWhatsapp": "Auf WhatsApp schreiben",
@@ -506,6 +830,7 @@
     "link": "Mehr erfahren"
   },
   "demo": {
+    "tryAgent": "KI-Agent testen",
     "badge": "Live-Interaktive Demo",
     "title": "Testen Sie unseren",
     "titleHighlight": "KI-Agenten",
@@ -579,7 +904,7 @@
     "teamSize": "Teamgröße",
     "hourlyCost": "Durchschnittliche Stundenkosten",
     "avgResponse": "Durchschnittliche Antwortzeit",
-    "basedOn": "Basierend auf dem Business-Plan für 247€/Monat",
+    "basedOn": "Unverbindliche Schätzung — individuelles Angebot nach Termin",
     "hoursSaved": "Gesparte Stunden / Monat",
     "vsManual": "vs. {hours}h manuelle Bearbeitung",
     "monthlySavings": "Monatliche Einsparungen",
@@ -592,5 +917,15 @@
     "withMessages": "Mit {count} Nachrichten/Tag sparen Sie {savings}€/Monat",
     "bookAudit": "Mein kostenloses Audit buchen",
     "min": "Min"
+  },
+  "simulator": {
+    "placeholder": "Nachricht eingeben...",
+    "online": "online",
+    "photoSent": "Foto gesendet",
+    "choosePhoto": "Foto zum Senden auswahlen",
+    "simulateVoice": "Sprachnachricht simulieren",
+    "voiceTranscribed": "Sprachnachricht transkribiert",
+    "transcription": "Transkription",
+    "vsHuman45": "vs 45min Mensch"
   }
 }

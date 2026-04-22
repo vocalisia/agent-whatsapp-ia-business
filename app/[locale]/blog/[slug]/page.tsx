@@ -21,6 +21,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
       title: meta.title,
       description: meta.description,
+      alternates: {
+        canonical: `https://agentic-whatsup.com/${locale}/blog/${slug}`,
+        languages: {
+          fr: `https://agentic-whatsup.com/fr/blog/${slug}`,
+          en: `https://agentic-whatsup.com/en/blog/${slug}`,
+          de: `https://agentic-whatsup.com/de/blog/${slug}`,
+          nl: `https://agentic-whatsup.com/nl/blog/${slug}`,
+          "x-default": `https://agentic-whatsup.com/fr/blog/${slug}`,
+        },
+      },
       openGraph: {
         title: meta.title,
         description: meta.description,
@@ -67,12 +77,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
   };
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/blog/${slug}`;
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.meta.title,
     description: post.meta.description,
     datePublished: post.meta.date,
+    dateModified: post.meta.date,
+    inLanguage: locale,
     author: {
       "@type": "Organization",
       name: post.meta.author ?? "AgenticWhatsup",
@@ -82,11 +95,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "@type": "Organization",
       name: "AgenticWhatsup",
       url: "https://agentic-whatsup.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://agentic-whatsup.com/icon.svg",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://agentic-whatsup.com/blog/${slug}`,
+      "@id": canonicalUrl,
     },
+    url: canonicalUrl,
+    image: "https://agentic-whatsup.com/og-image.jpg",
   };
 
   return (

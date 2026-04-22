@@ -444,12 +444,50 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
   const c = t[locale] ?? t.fr;
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
 
+  const pageUrl = `https://agentic-whatsup.com/${locale}/cas-clients`;
+  const pageMeta = meta[locale] ?? meta.fr;
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: (meta[locale] ?? meta.fr).title,
-    description: (meta[locale] ?? meta.fr).description,
-    url: `https://agentic-whatsup.com/${locale}/cas-clients`,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        name: pageMeta.title,
+        description: pageMeta.description,
+        url: pageUrl,
+        inLanguage: locale,
+      },
+      {
+        "@type": "ItemList",
+        name: c.casesTitle,
+        itemListElement: c.cases.map((cas, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item: {
+            "@type": "Article",
+            headline: `${cas.sector} — ${cas.company}`,
+            description: cas.challenge,
+            inLanguage: locale,
+            author: {
+              "@type": "Organization",
+              name: "AgenticWhatsup",
+              url: "https://agentic-whatsup.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "AgenticWhatsup",
+              url: "https://agentic-whatsup.com",
+            },
+            mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+            review: {
+              "@type": "Review",
+              reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+              author: { "@type": "Person", name: cas.author },
+              reviewBody: cas.quote,
+            },
+          },
+        })),
+      },
+    ],
   };
 
   return (

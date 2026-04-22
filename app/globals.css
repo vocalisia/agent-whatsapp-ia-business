@@ -88,3 +88,13 @@
   0% { transform: translateY(0) rotate(0deg); opacity: 1; }
   100% { transform: translateY(700px) rotate(720deg); opacity: 0; }
 }
+
+/* Push Vocalis widget above sticky mobile Footer CTA (72px WhatsApp/Book bar) */
+@media (max-width: 767px) {
+  iframe[src*="vocalis.pro"],
+  iframe[id*="vocalis"],
+  [id*="vocalis-widget"],
+  [class*="vocalis-widget"] {
+    bottom: 88px !important;
+  }
+}

@@ -217,7 +217,7 @@ const COACH_KEYWORDS: Record<string, string[]> = {
   ressources: ["ressource", "fiche", "exercice", "document", "worksheet", "outil pratique"],
   urgence: ["urgence", "urgent", "crise", "detresse", "aide", "mal", "deprime", "anxiete", "panique", "suicide"],
   faq: ["faq", "question", "confidentialite", "annuler", "annulation", "duree", "combien de temps", "visio", "presentiel"],
-  paiement: ["paiement", "payer", "facilite", "echeance", "carte", "virement", "twint", "facture", "mensualite"],
+  paiement: ["paiement", "payer", "facilite", "echeance", "carte", "virement", "twint", "facture", "mensualite", "financement", "finance", "credit", "pret", "cpf", "opco", "fif", "plan de financement"],
   groupe: ["groupe", "equipe", "collectif", "team", "entreprise", "team building"],
   individuel: ["individuel", "personnel", "prive", "seul", "1-to-1", "one to one"],
   vip: ["vip", "premium", "intensif", "exclusif", "haut de gamme", "complet"],

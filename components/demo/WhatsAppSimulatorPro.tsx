@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect, useCallback } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import {
   Send,
   CheckCheck,
@@ -180,35 +181,60 @@ interface WhatsAppSimulatorProProps {
 /* ─── Score heuristics ─── */
 
 const SCORE_KEYWORDS: Record<string, number> = {
-  rdv: 25, reserver: 25, book: 25, rendez: 25,
-  tarif: 15, prix: 15, combien: 15, pricing: 15,
-  demo: 10, essai: 10, tester: 10,
-  comment: 5, marche: 5, fonctionne: 5,
-  oui: 20, absolument: 20, parfait: 15, genial: 15,
-  "confirmer rdv": 35, "lundi": 30, "mardi": 30,
+  // Strong buying signals
+  rdv: 25, reserver: 25, book: 25, reservation: 25, "prendre rdv": 25,
+  confirmer: 30, lundi: 28, mardi: 28, mercredi: 28, jeudi: 28, vendredi: 28,
+  achat: 22, acheter: 22, commander: 22, souscrire: 22, inscription: 20,
+  // Pricing interest
+  tarif: 15, prix: 15, combien: 15, pricing: 15, financement: 15, simulation: 12,
+  // Feature interest
+  demo: 10, essai: 10, tester: 10, telephonie: 10, clonage: 10, vocal: 10,
+  scoring: 10, automatisation: 8, integration: 8, crm: 10,
+  // Initial engagement
+  bonjour: 5, salut: 5, hello: 5, comment: 5, marche: 5, fonctionne: 5,
+  // Positive signals
+  oui: 18, absolument: 20, parfait: 15, genial: 15, super: 12, agree: 15,
+  interesse: 20, visite: 15, disponibilites: 15,
 };
 
 const SENTIMENT_KEYWORDS = {
-  positive: ["merci", "super", "genial", "parfait", "bravo", "excellent", "top", "oui", "absolument", "impressionnant"],
-  negative: ["non", "probleme", "reclamation", "erreur", "mauvais", "nul", "cher", "arnaque"],
+  positive: [
+    "merci", "super", "genial", "parfait", "bravo", "excellent", "top", "oui", "absolument", "impressionnant",
+    "rdv", "reserver", "reservation", "confirmer", "prendre rdv", "essai", "visite", "interesse",
+    "bonjour", "salut", "hello", "super", "great", "perfect", "yes", "ok", "bien", "agree",
+    "achat", "commander", "acheter", "prise de rdv", "disponibilites", "planifier", "seance",
+    "inscription", "souscrire", "offre", "decouvrir", "simulation", "simuler",
+    "thank", "thanks", "danke", "bedankt", "merveilleux", "fantastique", "incroyable",
+  ],
+  negative: [
+    "non", "probleme", "reclamation", "erreur", "mauvais", "nul", "cher", "arnaque",
+    "annuler", "annulation", "rembourser", "remboursement", "plainte", "decevant",
+    "insatisfait", "decu", "bug", "defaut", "casse", "perdu", "jamais", "impossible",
+    "no", "nein", "niet", "cancel", "refund", "complaint", "issue", "wrong",
+  ],
 };
 
-function detectLanguage(text: string): string {
+function detectLanguage(text: string, fallback: string = "FR"): string {
   const lower = text.toLowerCase();
   if (/\b(the|and|how|what|yes|no|please|thank)\b/.test(lower)) return "EN";
   if (/\b(und|wie|was|ja|nein|bitte|danke)\b/.test(lower)) return "DE";
   if (/\b(y|como|que|si|no|por favor|gracias)\b/.test(lower)) return "ES";
   if (/\b(en|het|hoe|wat|ja|nee|dank)\b/.test(lower)) return "NL";
-  return "FR";
+  if (/\b(bonjour|salut|oui|non|merci|comment|quoi)\b/.test(lower)) return "FR";
+  return fallback;
 }
 
 function computeLeadDelta(text: string): number {
   const lower = text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let delta = 0;
+  const seen = new Set<number>();
   for (const [kw, score] of Object.entries(SCORE_KEYWORDS)) {
-    if (lower.includes(kw)) delta = Math.max(delta, score);
+    if (lower.includes(kw) && !seen.has(score)) {
+      delta += score;
+      seen.add(score);
+    }
   }
-  return delta;
+  return Math.min(delta, 35);
 }
 
 function detectSentiment(text: string): "positive" | "neutral" | "negative" {
@@ -296,13 +322,14 @@ function TypingIndicator({ avatar }: { avatar?: string }) {
 /* ─── Speed Badge ─── */
 
 function SpeedBadge({ ms }: { ms: number }) {
+  const tSim = useTranslations("simulator");
   if (ms <= 0) return null;
   const secs = (ms / 1000).toFixed(1);
   return (
     <div className="absolute -right-2 top-1/2 -translate-y-1/2 translate-x-full z-10 hidden lg:flex items-center gap-1.5 bg-surface border border-wa/30 rounded-lg px-2.5 py-1.5 shadow-lg animate-[slideUp_0.3s_ease-out]">
       <div className="w-1.5 h-1.5 bg-wa rounded-full animate-pulse" />
       <span className="text-[10px] text-wa font-mono font-bold">{secs}s</span>
-      <span className="text-[9px] text-slate-500">vs 45min humain</span>
+      <span className="text-[9px] text-slate-500">{tSim("vsHuman45")}</span>
     </div>
   );
 }
@@ -310,6 +337,9 @@ function SpeedBadge({ ms }: { ms: number }) {
 /* ─── Main Component ─── */
 
 export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, sectorKey = "general" }: WhatsAppSimulatorProProps) {
+  const locale = useLocale();
+  const tSim = useTranslations("simulator");
+  const defaultLang = locale.toUpperCase();
   const [messages, setMessages] = useState<ChatMessage[]>([
     { id: "welcome", from: "bot", text: config.welcomeMessage, time: getTimestamp() },
   ]);
@@ -386,7 +416,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       setMsgCount(newMsgCount);
       typingStartRef.current = Date.now();
 
-      const lang = detectLanguage(text);
+      const lang = detectLanguage(text, defaultLang);
       const sentiment = detectSentiment(text);
       const scoreDelta = computeLeadDelta(text);
       const newScore = Math.min(100, totalScore + scoreDelta);
@@ -465,7 +495,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
     setIsTyping(true);
     typingStartRef.current = Date.now();
 
-    const lang = detectLanguage(voice.transcript);
+    const lang = detectLanguage(voice.transcript, defaultLang);
     const sentiment = detectSentiment(voice.transcript);
     const scoreDelta = computeLeadDelta(voice.transcript);
     const newScore = Math.min(100, totalScore + scoreDelta);
@@ -484,7 +514,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       const botMsg: ChatMessage = {
         id: `bot-${Date.now()}`,
         from: "bot",
-        text: "**Vocal transcrit :**\n\"" + voice.transcript + "\"\n\n" + response.text,
+        text: "**" + tSim("voiceTranscribed") + ":**\n\"" + voice.transcript + "\"\n\n" + response.text,
         time: getTimestamp(),
       };
       const finalCount = newCount + 1;
@@ -524,7 +554,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
     const newScore = Math.min(100, totalScore + scoreDelta);
     setTotalScore(newScore);
 
-    onEvent?.({ type: "user_message", messageCount: newCount, leadScore: newScore, sentiment: "neutral", language: "FR" });
+    onEvent?.({ type: "user_message", messageCount: newCount, leadScore: newScore, sentiment: "neutral", language: defaultLang });
     onEvent?.({ type: "typing_start" });
 
     const response = findBotResponse(photo.triggerText, config);
@@ -557,7 +587,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
   const currentVoices = SECTOR_VOICES[sectorKey] ?? SECTOR_VOICES.general;
 
   return (
-    <div className="w-full max-w-md mx-auto">
+    <div className="w-full max-w-md mx-auto" style={{ maxWidth: '100%' }}>
       <div className="relative">
         <div className="absolute -inset-4 bg-wa/8 rounded-[3rem] blur-3xl" />
 
@@ -588,7 +618,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-1.5 h-1.5 bg-wa rounded-full animate-pulse" />
-                <span className="text-[10px] text-wa">en ligne</span>
+                <span className="text-[10px] text-wa">{tSim("online")}</span>
                 {selectedSector && (
                   <span className="text-[9px] text-slate-500 ml-1">• {selectedSector}</span>
                 )}
@@ -646,7 +676,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
                           </div>
                           <div className="flex items-center gap-1.5 mb-1">
                             <Camera size={10} className="text-wa" />
-                            <span className="text-[10px] text-wa font-medium">Photo envoyee</span>
+                            <span className="text-[10px] text-wa font-medium">{tSim("photoSent")}</span>
                           </div>
                         </div>
                       )}
@@ -667,7 +697,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
                         </div>
                       )}
                       <p className="text-[13px] leading-relaxed text-slate-200 whitespace-pre-line">
-                        {msg.isVocal && <span className="text-[10px] text-slate-400 block mb-0.5">Transcription :</span>}
+                        {msg.isVocal && <span className="text-[10px] text-slate-400 block mb-0.5">{tSim("transcription")}:</span>}
                         {msg.text.split(/(\*\*.*?\*\*)/).map((part, i) => {
                           if (part.startsWith("**") && part.endsWith("**")) {
                             return <strong key={i} className="text-white font-semibold">{part.slice(2, -2)}</strong>;
@@ -711,7 +741,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
           {showPhotoPicker && (
             <div className="px-3 py-3 border-t border-surface-2 bg-surface">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[11px] text-slate-400 font-medium">Choisir une photo a envoyer</span>
+                <span className="text-[11px] text-slate-400 font-medium">{tSim("choosePhoto")}</span>
                 <button onClick={() => setShowPhotoPicker(false)} className="text-[10px] text-slate-500 hover:text-white">✕</button>
               </div>
               <div className="grid grid-cols-3 gap-2">
@@ -733,7 +763,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
           {showVoicePicker && (
             <div className="px-3 py-3 border-t border-surface-2 bg-surface">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-[11px] text-slate-400 font-medium">Simuler un message vocal</span>
+                <span className="text-[11px] text-slate-400 font-medium">{tSim("simulateVoice")}</span>
                 <button onClick={() => setShowVoicePicker(false)} className="text-[10px] text-slate-500 hover:text-white">✕</button>
               </div>
               <div className="flex flex-col gap-2">
@@ -769,7 +799,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Tapez un message..."
+                placeholder={tSim("placeholder")}
                 className="flex-1 bg-transparent text-sm text-white placeholder-slate-500 outline-none"
                 disabled={isTyping}
               />

@@ -9,6 +9,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("rdv.title"),
     description: t("rdv.subtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/services/prise-de-rdv`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/prise-de-rdv",
+        en: "https://agentic-whatsup.com/en/services/prise-de-rdv",
+        de: "https://agentic-whatsup.com/de/services/prise-de-rdv",
+        nl: "https://agentic-whatsup.com/nl/services/prise-de-rdv",
+        "x-default": "https://agentic-whatsup.com/fr/services/prise-de-rdv",
+      },
+    },
   };
 }
 

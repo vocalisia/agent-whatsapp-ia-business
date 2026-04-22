@@ -258,7 +258,7 @@ const ECOMMERCE_KEYWORDS: Record<string, string[]> = {
   paiement: [
     "paiement", "payer", "carte", "paypal", "virement",
     "3x", "plusieurs fois", "klarna", "apple pay",
-    "securise", "facture",
+    "securise", "facture", "financement", "finance", "credit", "pret", "mensualite",
   ],
   reclamation: [
     "reclamation", "plainte", "probleme", "insatisfait",

@@ -8,6 +8,7 @@ import "../globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/shared/CookieBanner";
+import GoogleTagManager, { GoogleTagManagerNoScript } from "@/components/shared/GoogleTagManager";
 
 const BASE_URL = "https://agentic-whatsup.com";
 
@@ -68,16 +69,10 @@ export async function generateMetadata({
       icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
       shortcut: "/icon.svg",
     },
-    alternates: {
-      canonical: `${BASE_URL}/${locale}`,
-      languages: {
-        fr: `${BASE_URL}/fr`,
-        en: `${BASE_URL}/en`,
-        de: `${BASE_URL}/de`,
-        nl: `${BASE_URL}/nl`,
-        "x-default": `${BASE_URL}/fr`,
-      },
-    },
+    // NOTE: do not set `alternates.canonical` / `languages` here.
+    // This layout applies to EVERY page under /[locale], so a static canonical
+    // would incorrectly map /fr/blog, /fr/contact, etc. back to /fr.
+    // Each page sets its own canonical + hreflangs via its own generateMetadata.
     openGraph: {
       type: "website",
       locale: ogLocaleMap[locale] ?? "fr_FR",
@@ -153,7 +148,7 @@ export default async function LocaleLayout({
                     { "@type": "Question", name: "Qu'est-ce qu'un agent WhatsApp IA ?", acceptedAnswer: { "@type": "Answer", text: "Un agent WhatsApp IA est un assistant virtuel intelligent qui répond automatiquement aux messages de vos clients sur WhatsApp Business, comprend les vocaux et analyse les photos, 24h/24 et 7j/7 sans intervention humaine." } },
                     { "@type": "Question", name: "Comment fonctionne l'automatisation WhatsApp avec l'IA ?", acceptedAnswer: { "@type": "Answer", text: "L'agent IA se connecte à votre numéro WhatsApp Business, analyse chaque message entrant grâce à l'intelligence artificielle, et répond de manière personnalisée selon votre catalogue, vos FAQ et vos processus métier." } },
                     { "@type": "Question", name: "Est-ce que le service est compatible avec WhatsApp Business ?", acceptedAnswer: { "@type": "Answer", text: "Oui, notre agent est 100% compatible avec WhatsApp Business API. Il s'intègre directement à votre compte WhatsApp Business existant sans changer de numéro." } },
-                    { "@type": "Question", name: "Combien coûte un agent WhatsApp automatisé ?", acceptedAnswer: { "@type": "Answer", text: "Nos offres démarrent à partir de 97€/mois pour un agent WhatsApp IA entièrement configuré. L'installation et la formation sont incluses. Contactez-nous pour un devis personnalisé." } },
+                    { "@type": "Question", name: "Comment fonctionne le tarif d'un agent WhatsApp automatisé ?", acceptedAnswer: { "@type": "Answer", text: "Chaque agent WhatsApp IA est configuré sur-mesure selon votre volume, vos intégrations CRM et vos objectifs. Nous construisons un devis personnalisé pendant votre session stratégique gratuite, incluant installation, formation et maintenance. Aucun engagement long terme." } },
                     { "@type": "Question", name: "Comment intégrer un agent IA à mon WhatsApp Business ?", acceptedAnswer: { "@type": "Answer", text: "L'intégration se fait en moins de 48h. Notre équipe prend en charge la configuration complète : connexion à votre WhatsApp Business, paramétrage de l'IA selon vos produits/services, et tests avant mise en ligne." } },
                   ],
                 },
@@ -169,6 +164,8 @@ export default async function LocaleLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        <GoogleTagManagerNoScript />
+        <GoogleTagManager />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1 pt-16">{children}</main>

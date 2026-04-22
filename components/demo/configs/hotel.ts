@@ -176,7 +176,7 @@ const sectorKeywords: Record<string, string[]> = {
   ],
   "tarifs chambre": [
     "tarif chambre", "prix nuit", "combien nuit", "cout chambre",
-    "saison", "promotion",
+    "saison", "promotion", "financement", "finance", "credit", "pret", "mensualite", "paiement", "payer", "facilite",
   ],
   "check in": [
     "check in", "checkin", "arrivee", "enregistrement", "early",

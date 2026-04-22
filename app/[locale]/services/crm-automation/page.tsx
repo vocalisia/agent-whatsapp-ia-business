@@ -9,6 +9,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("crm.title"),
     description: t("crm.subtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/services/crm-automation`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/crm-automation",
+        en: "https://agentic-whatsup.com/en/services/crm-automation",
+        de: "https://agentic-whatsup.com/de/services/crm-automation",
+        nl: "https://agentic-whatsup.com/nl/services/crm-automation",
+        "x-default": "https://agentic-whatsup.com/fr/services/crm-automation",
+      },
+    },
   };
 }
 

@@ -8,6 +8,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("title"),
     description: t("subtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/blog`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/blog",
+        en: "https://agentic-whatsup.com/en/blog",
+        de: "https://agentic-whatsup.com/de/blog",
+        nl: "https://agentic-whatsup.com/nl/blog",
+        "x-default": "https://agentic-whatsup.com/fr/blog",
+      },
+    },
   };
 }
 

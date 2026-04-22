@@ -9,6 +9,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("qualificationLeads.title"),
     description: t("qualificationLeads.subtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/services/qualification-leads`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/qualification-leads",
+        en: "https://agentic-whatsup.com/en/services/qualification-leads",
+        de: "https://agentic-whatsup.com/de/services/qualification-leads",
+        nl: "https://agentic-whatsup.com/nl/services/qualification-leads",
+        "x-default": "https://agentic-whatsup.com/fr/services/qualification-leads",
+      },
+    },
   };
 }
 

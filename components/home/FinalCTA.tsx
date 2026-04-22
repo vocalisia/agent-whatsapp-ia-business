@@ -9,7 +9,7 @@ export default function FinalCTA() {
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || "/contact";
 
   return (
-    <section className="py-32 px-4 sm:px-6 relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-wa/10 via-bg to-indigo-500/10" />
@@ -32,7 +32,7 @@ export default function FinalCTA() {
           </div>
 
           <h2
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight"
+            className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight text-balance"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             {t("title1")}
@@ -40,33 +40,33 @@ export default function FinalCTA() {
             <span className="text-gradient-wa">{t("title2")}</span> {t("title3")}
           </h2>
 
-          <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-400 mb-8 max-w-2xl mx-auto text-pretty">
             {t("subtitle")}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 justify-center">
             <a
               href={calLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-bold px-10 py-5 rounded-2xl transition-all duration-300 glow-wa text-lg"
+              className="group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-base sm:text-lg min-h-[52px] w-full sm:w-auto"
             >
-              <Zap size={22} />
+              <Zap size={20} className="shrink-0" />
               {t("ctaPrimary")}
-              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform shrink-0" />
             </a>
             <a
               href={`https://wa.me/${waNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-surface/80 backdrop-blur border border-surface-3 hover:border-wa/50 text-white font-bold px-10 py-5 rounded-2xl transition-all duration-300 text-lg"
+              className="inline-flex items-center justify-center gap-3 bg-surface/80 backdrop-blur border border-surface-3 hover:border-wa/50 text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 text-base sm:text-lg min-h-[52px] w-full sm:w-auto"
             >
-              <MessageCircle size={22} className="text-wa" />
+              <MessageCircle size={20} className="text-wa shrink-0" />
               {t("ctaSecondary")}
             </a>
           </div>
 
-          <div className="mt-12 flex items-center justify-center gap-8 text-sm text-slate-500">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-8 text-sm text-slate-500">
             <span>✓ {t("trust1")}</span>
             <span>✓ {t("trust2")}</span>
             <span>✓ {t("trust3")}</span>

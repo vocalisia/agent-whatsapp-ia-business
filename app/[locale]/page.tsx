@@ -28,7 +28,20 @@ const pageMeta: Record<string, { title: string; description: string }> = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const meta = pageMeta[locale] ?? pageMeta.fr;
-  return { title: meta.title, description: meta.description };
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr",
+        en: "https://agentic-whatsup.com/en",
+        de: "https://agentic-whatsup.com/de",
+        nl: "https://agentic-whatsup.com/nl",
+        "x-default": "https://agentic-whatsup.com/fr",
+      },
+    },
+  };
 }
 
 export default function HomePage() {

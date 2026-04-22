@@ -170,7 +170,7 @@ const MEDICAL_KEYWORDS: Record<string, string[]> = {
   urgence: ["urgence", "urgent", "samu", "15", "112", "secours", "grave", "douleur", "respir"],
   horaires: ["horaire", "heure", "ouverture", "fermeture", "quand", "adresse", "acces", "parking", "metro"],
   documents: ["document", "papier", "apporter", "premiere visite", "dossier", "piece"],
-  "carte vitale": ["carte vitale", "secu", "securite sociale", "remboursement", "tiers payant", "mutuelle"],
+  "carte vitale": ["carte vitale", "secu", "securite sociale", "remboursement", "tiers payant", "mutuelle", "financement", "finance", "paiement", "payer", "facilite", "mensualite", "credit"],
   vaccin: ["vaccin", "vaccination", "rappel vaccin", "grippe", "covid", "carnet vaccinal", "injection"],
   certificat: ["certificat", "attestation", "arret travail", "sport", "aptitude", "medical"],
   "suivi traitement": ["suivi", "traitement", "observance", "rappel medicament", "posologie", "effets secondaires"],

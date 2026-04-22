@@ -13,7 +13,7 @@ export default function FeaturesGrid() {
   const items = t.raw("items") as Array<{ title: string; subtitle: string; description: string }>;
 
   return (
-    <section className="py-24 px-4 sm:px-6">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +41,7 @@ export default function FeaturesGrid() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 whileHover={{ y: -4, transition: { duration: 0.2 } }}
-                className="group relative bg-surface border border-surface-2 hover:border-wa/40 rounded-2xl p-6 transition-colors duration-300 overflow-hidden"
+                className="group relative bg-surface border border-surface-2 hover:border-wa/40 rounded-2xl p-5 sm:p-6 transition-colors duration-300 overflow-hidden"
               >
                 {/* Background glow on hover */}
                 <div

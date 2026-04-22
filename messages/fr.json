@@ -40,10 +40,26 @@
     "eyebrow": "Le problème",
     "title": "Chaque message sans réponse = un client perdu",
     "items": [
-      { "title": "Vocaux ignorés", "description": "Vos clients envoient des messages vocaux WhatsApp. Personne n'a le temps de les écouter.", "statLabel": "des vocaux non écoutés" },
-      { "title": "Photos non traitées", "description": "Le client envoie une photo de son document. Le traitement manuel prend des heures.", "statLabel": "de traitement moyen" },
-      { "title": "Leads perdus la nuit", "description": "70% des messages arrivent hors horaires. Sans réponse rapide : adieu le prospect.", "statLabel": "des messages hors horaires" },
-      { "title": "Équipe débordée", "description": "Vos équipes gèrent des messages répétitifs au lieu de se concentrer sur la valeur.", "statLabel": "du temps perdu" }
+      {
+        "title": "Vocaux ignorés",
+        "description": "Vos clients envoient des messages vocaux WhatsApp. Personne n'a le temps de les écouter.",
+        "statLabel": "des vocaux non écoutés"
+      },
+      {
+        "title": "Photos non traitées",
+        "description": "Le client envoie une photo de son document. Le traitement manuel prend des heures.",
+        "statLabel": "de traitement moyen"
+      },
+      {
+        "title": "Leads perdus la nuit",
+        "description": "70% des messages arrivent hors horaires. Sans réponse rapide : adieu le prospect.",
+        "statLabel": "des messages hors horaires"
+      },
+      {
+        "title": "Équipe débordée",
+        "description": "Vos équipes gèrent des messages répétitifs au lieu de se concentrer sur la valeur.",
+        "statLabel": "du temps perdu"
+      }
     ]
   },
   "features": {
@@ -52,12 +68,36 @@
     "subtitle": "Des capacités multimodales exclusives sur le marché WhatsApp Business.",
     "exclusive": "Exclusif",
     "items": [
-      { "title": "Vision IA", "subtitle": "Analyse les photos", "description": "Le client envoie une photo (document, bien immobilier, problème technique). L'agent voit, comprend et répond via OpenAI Vision / Claude / Gemini." },
-      { "title": "Audio IA", "subtitle": "Transcrit les vocaux", "description": "L'agent transcrit automatiquement les messages vocaux WhatsApp et répond de façon contextuelle, dans la langue du client." },
-      { "title": "Tous les médias", "subtitle": "Images, audio, vidéo, docs", "description": "Tout est géré, stocké et accessible. Les opérateurs peuvent aussi envoyer des fichiers aux clients depuis l'interface." },
-      { "title": "RGPD Auto", "subtitle": "Rétention configurable", "description": "Nettoyage automatique planifié par type de données. Hébergement EU disponible. Conformité sans effort." },
-      { "title": "Cal.com v2", "subtitle": "RDV dans WhatsApp", "description": "Serveurs EU, équipes, champs dynamiques. L'agent prend des RDV directement dans la conversation." },
-      { "title": "Webhooks", "subtitle": "Automatisations infinies", "description": "Transcript complet + évaluation IA à chaque fin de conversation. Connecte HubSpot, Salesforce, Notion." }
+      {
+        "title": "Vision IA",
+        "subtitle": "Analyse les photos",
+        "description": "Le client envoie une photo (document, bien immobilier, problème technique). L'agent voit, comprend et répond via OpenAI Vision / Claude / Gemini."
+      },
+      {
+        "title": "Audio IA",
+        "subtitle": "Transcrit les vocaux",
+        "description": "L'agent transcrit automatiquement les messages vocaux WhatsApp et répond de façon contextuelle, dans la langue du client."
+      },
+      {
+        "title": "Tous les médias",
+        "subtitle": "Images, audio, vidéo, docs",
+        "description": "Tout est géré, stocké et accessible. Les opérateurs peuvent aussi envoyer des fichiers aux clients depuis l'interface."
+      },
+      {
+        "title": "RGPD Auto",
+        "subtitle": "Rétention configurable",
+        "description": "Nettoyage automatique planifié par type de données. Hébergement EU disponible. Conformité sans effort."
+      },
+      {
+        "title": "Cal.com v2",
+        "subtitle": "RDV dans WhatsApp",
+        "description": "Serveurs EU, équipes, champs dynamiques. L'agent prend des RDV directement dans la conversation."
+      },
+      {
+        "title": "Webhooks",
+        "subtitle": "Automatisations infinies",
+        "description": "Transcript complet + évaluation IA à chaque fin de conversation. Connecte HubSpot, Salesforce, Notion."
+      }
     ]
   },
   "howItWorks": {
@@ -95,9 +135,36 @@
     "ctaAudit": "Audit gratuit — 30 min",
     "ctaSubtitle": "30 minutes · Sans engagement · Proposition sous 48h",
     "plans": [
-      { "name": "Starter", "features": ["1 agent WhatsApp", "1 scénario", "1 intégration", "Support email"] },
-      { "name": "Pro", "features": ["Multi-scénarios", "Templates Meta", "CRM + Agenda", "Vision IA + Vocaux", "Workflows auto", "Support 48h"] },
-      { "name": "Enterprise", "features": ["Solution sur-mesure", "Multi-numéros", "Intégrations illimitées", "SLA prioritaire", "Support 24h"] }
+      {
+        "name": "Starter",
+        "features": [
+          "1 agent WhatsApp",
+          "1 scénario",
+          "1 intégration",
+          "Support email"
+        ]
+      },
+      {
+        "name": "Pro",
+        "features": [
+          "Multi-scénarios",
+          "Templates Meta",
+          "CRM + Agenda",
+          "Vision IA + Vocaux",
+          "Workflows auto",
+          "Support 48h"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          "Solution sur-mesure",
+          "Multi-numéros",
+          "Intégrations illimitées",
+          "SLA prioritaire",
+          "Support 24h"
+        ]
+      }
     ]
   },
   "finalCta": {
@@ -157,18 +224,66 @@
     "subtitle": "Pas de grille tarifaire figée. On discute de vos besoins et on vous propose la solution exacte — ni plus, ni moins.",
     "recommended": "RECOMMANDÉ",
     "plans": [
-      { "name": "Starter", "description": "PME qui débutent l'automatisation WhatsApp.", "features": ["1 agent WhatsApp Business", "1 scénario de conversation", "1 intégration (CRM ou agenda)", "Réponses texte automatiques", "Dashboard de monitoring", "Support email", "Formation incluse"] },
-      { "name": "Pro", "description": "La solution complète pour tout automatiser.", "features": ["Multi-scénarios de conversation", "Templates Meta pré-approuvés", "CRM + Agenda (Cal.com)", "Vision IA — analyse des photos", "Transcription vocale automatique", "Workflows & webhooks", "Conformité RGPD", "Support 48h garanti", "Onboarding dédié"] },
-      { "name": "Enterprise", "description": "Solution sur-mesure pour les grandes organisations.", "features": ["Architecture entièrement sur-mesure", "Multi-numéros WhatsApp", "Intégrations illimitées", "SLA garanti et prioritaire", "Hébergement EU dédié", "Support dédié 24h/24", "Audit et optimisation continus", "Formation équipes étendue"] }
+      {
+        "name": "Starter",
+        "description": "PME qui débutent l'automatisation WhatsApp.",
+        "features": [
+          "1 agent WhatsApp Business",
+          "1 scénario de conversation",
+          "1 intégration (CRM ou agenda)",
+          "Réponses texte automatiques",
+          "Dashboard de monitoring",
+          "Support email",
+          "Formation incluse"
+        ]
+      },
+      {
+        "name": "Pro",
+        "description": "La solution complète pour tout automatiser.",
+        "features": [
+          "Multi-scénarios de conversation",
+          "Templates Meta pré-approuvés",
+          "CRM + Agenda (Cal.com)",
+          "Vision IA — analyse des photos",
+          "Transcription vocale automatique",
+          "Workflows & webhooks",
+          "Conformité RGPD",
+          "Support 48h garanti",
+          "Onboarding dédié"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "description": "Solution sur-mesure pour les grandes organisations.",
+        "features": [
+          "Architecture entièrement sur-mesure",
+          "Multi-numéros WhatsApp",
+          "Intégrations illimitées",
+          "SLA garanti et prioritaire",
+          "Hébergement EU dédié",
+          "Support dédié 24h/24",
+          "Audit et optimisation continus",
+          "Formation équipes étendue"
+        ]
+      }
     ],
     "sessionEyebrow": "Session stratégique",
     "sessionTitle": "Session Stratégique — Votre Agent IA WhatsApp",
     "sessionSubtitle": "30 minutes pour analyser vos flux, identifier les automatisations possibles et définir votre stratégie. Diagnostic offert, sans engagement.",
     "faqTitle": "Questions fréquentes",
     "faqs": [
-      { "question": "Les tarifs incluent-ils la mise en place ?", "answer": "Oui. Chaque devis inclut le développement, la configuration WhatsApp Business, les tests et le déploiement complet. Pas de surprise." },
-      { "question": "Y a-t-il des frais récurrents ?", "answer": "Oui, un forfait mensuel couvre l'hébergement, les appels API (LLM) et la maintenance. Ce forfait est inclus dans notre proposition." },
-      { "question": "Quel est le délai de mise en production ?", "answer": "En général 2 à 3 semaines pour le plan Pro. Le plan Starter peut être déployé en 1 semaine. L'Enterprise dépend de la complexité." }
+      {
+        "question": "Les tarifs incluent-ils la mise en place ?",
+        "answer": "Oui. Chaque devis inclut le développement, la configuration WhatsApp Business, les tests et le déploiement complet. Pas de surprise."
+      },
+      {
+        "question": "Y a-t-il des frais récurrents ?",
+        "answer": "Oui, un forfait mensuel couvre l'hébergement, les appels API (LLM) et la maintenance. Ce forfait est inclus dans notre proposition."
+      },
+      {
+        "question": "Quel est le délai de mise en production ?",
+        "answer": "En général 2 à 3 semaines pour le plan Pro. Le plan Starter peut être déployé en 1 semaine. L'Enterprise dépend de la complexité."
+      }
     ]
   },
   "notFound": {
@@ -205,10 +320,22 @@
         "Rapports hebdomadaires de performance"
       ],
       "steps": [
-        { "title": "Le prospect envoie un message", "desc": "Via votre numéro WhatsApp Business — texte, vocal ou photo." },
-        { "title": "L'IA pose les bonnes questions", "desc": "Budget, besoin, délai, autorité — adapté à votre secteur." },
-        { "title": "Score de qualification calculé", "desc": "Chaque prospect reçoit un score selon vos critères métier." },
-        { "title": "Transmission au commercial", "desc": "Seuls les prospects qualifiés arrivent dans votre CRM ou Slack." }
+        {
+          "title": "Le prospect envoie un message",
+          "desc": "Via votre numéro WhatsApp Business — texte, vocal ou photo."
+        },
+        {
+          "title": "L'IA pose les bonnes questions",
+          "desc": "Budget, besoin, délai, autorité — adapté à votre secteur."
+        },
+        {
+          "title": "Score de qualification calculé",
+          "desc": "Chaque prospect reçoit un score selon vos critères métier."
+        },
+        {
+          "title": "Transmission au commercial",
+          "desc": "Seuls les prospects qualifiés arrivent dans votre CRM ou Slack."
+        }
       ]
     },
     "campagnes": {
@@ -230,10 +357,22 @@
         "Rapports de performance détaillés"
       ],
       "useCases": [
-        { "title": "Relance de prospects", "desc": "Réactivez vos leads froids avec des messages personnalisés au bon moment." },
-        { "title": "Onboarding clients", "desc": "Accueillez chaque nouveau client avec une séquence automatisée bienvenue." },
-        { "title": "Promotions & offres", "desc": "Diffusez vos offres ponctuelles à des segments précis de votre base." },
-        { "title": "Notifications transactionnelles", "desc": "Confirmations de commande, livraison, rappels de RDV — automatiquement." }
+        {
+          "title": "Relance de prospects",
+          "desc": "Réactivez vos leads froids avec des messages personnalisés au bon moment."
+        },
+        {
+          "title": "Onboarding clients",
+          "desc": "Accueillez chaque nouveau client avec une séquence automatisée bienvenue."
+        },
+        {
+          "title": "Promotions & offres",
+          "desc": "Diffusez vos offres ponctuelles à des segments précis de votre base."
+        },
+        {
+          "title": "Notifications transactionnelles",
+          "desc": "Confirmations de commande, livraison, rappels de RDV — automatiquement."
+        }
       ]
     },
     "crm": {
@@ -256,17 +395,44 @@
         "Mapping champs personnalisé selon votre CRM"
       ],
       "steps": [
-        { "title": "Conversation WhatsApp", "desc": "Le client répond à votre agent IA — questions, informations, demandes." },
-        { "title": "Traitement IA", "desc": "L'agent extrait les données clés : nom, budget, besoin, qualification." },
-        { "title": "Mise à jour CRM", "desc": "Les données sont poussées dans votre CRM instantanément via webhook." }
+        {
+          "title": "Conversation WhatsApp",
+          "desc": "Le client répond à votre agent IA — questions, informations, demandes."
+        },
+        {
+          "title": "Traitement IA",
+          "desc": "L'agent extrait les données clés : nom, budget, besoin, qualification."
+        },
+        {
+          "title": "Mise à jour CRM",
+          "desc": "Les données sont poussées dans votre CRM instantanément via webhook."
+        }
       ],
       "integrations": [
-        { "name": "HubSpot", "desc": "Contacts, deals, activités, séquences" },
-        { "name": "Salesforce", "desc": "Leads, opportunities, tasks, notes" },
-        { "name": "Notion", "desc": "Bases de données, pages, propriétés" },
-        { "name": "Airtable", "desc": "Tables, records, vues filtrées" },
-        { "name": "Make / Zapier", "desc": "Automatisations via webhooks" },
-        { "name": "Cal.com", "desc": "Prise de RDV directement dans WhatsApp" }
+        {
+          "name": "HubSpot",
+          "desc": "Contacts, deals, activités, séquences"
+        },
+        {
+          "name": "Salesforce",
+          "desc": "Leads, opportunities, tasks, notes"
+        },
+        {
+          "name": "Notion",
+          "desc": "Bases de données, pages, propriétés"
+        },
+        {
+          "name": "Airtable",
+          "desc": "Tables, records, vues filtrées"
+        },
+        {
+          "name": "Make / Zapier",
+          "desc": "Automatisations via webhooks"
+        },
+        {
+          "name": "Cal.com",
+          "desc": "Prise de RDV directement dans WhatsApp"
+        }
       ]
     },
     "rdv": {
@@ -288,9 +454,18 @@
         "Envoi de lien de visio (Zoom, Google Meet) automatique"
       ],
       "steps": [
-        { "title": "Le client demande un RDV", "desc": "\"Je veux prendre un RDV\" — l'agent comprend la demande et propose les créneaux disponibles." },
-        { "title": "Le client choisit son créneau", "desc": "L'agent affiche les disponibilités Cal.com en temps réel. Le client répond avec son choix." },
-        { "title": "Confirmation automatique", "desc": "RDV créé dans l'agenda, confirmation WhatsApp + email, rappel 24h avant." }
+        {
+          "title": "Le client demande un RDV",
+          "desc": "\"Je veux prendre un RDV\" — l'agent comprend la demande et propose les créneaux disponibles."
+        },
+        {
+          "title": "Le client choisit son créneau",
+          "desc": "L'agent affiche les disponibilités Cal.com en temps réel. Le client répond avec son choix."
+        },
+        {
+          "title": "Confirmation automatique",
+          "desc": "RDV créé dans l'agenda, confirmation WhatsApp + email, rappel 24h avant."
+        }
       ]
     },
     "agentIa": {
@@ -312,19 +487,52 @@
       "finalCtaTitle": "Prêt à déployer votre agent IA WhatsApp ?",
       "finalCtaSubtitle": "30 minutes pour analyser vos besoins. Proposition sous 48h.",
       "faqItems": [
-        { "question": "Comment fonctionne la transcription vocale WhatsApp ?", "answer": "L'agent transcrit chaque message vocal grâce à un modèle de reconnaissance vocale, selon la langue configurée. Le transcript est traité comme du texte normal, et l'IA répond de façon contextuelle." },
-        { "question": "Quels types de photos l'agent peut-il analyser ?", "answer": "Documents (CNI, justificatifs, contrats, factures), photos de biens immobiliers, captures d'écran, photos de produits, prescriptions médicales — tout type d'image." },
-        { "question": "L'agent peut-il remplir des documents avec les photos reçues ?", "answer": "Oui. Si un client envoie une photo de sa pièce d'identité ou d'un formulaire, l'agent extrait les informations et les enregistre dans votre CRM ou pré-remplit un dossier automatiquement." },
-        { "question": "Faut-il un compte WhatsApp Business existant ?", "answer": "Vous avez besoin d'un compte WhatsApp Business API via Meta. Nous vous accompagnons dans la création, la connexion et l'approbation des templates." },
-        { "question": "Comment fonctionne la règle des 24h de Meta ?", "answer": "Notre agent gère cette contrainte automatiquement : il utilise des templates pré-approuvés pour relancer les conversations inactives depuis plus de 24h." },
-        { "question": "L'agent peut-il gérer plusieurs langues ?", "answer": "Oui. L'agent détecte automatiquement la langue du client et répond dans la même langue (français, anglais, arabe, espagnol, etc.)." },
-        { "question": "Combien de conversations simultanées peut-il gérer ?", "answer": "L'agent est scalable et peut gérer des centaines de conversations simultanées sans dégradation de qualité." },
-        { "question": "Quelle est la conformité RGPD de la solution ?", "answer": "Rétention des données configurable par type, nettoyage automatique planifié, hébergement possible sur serveurs EU via Cal.com v2." }
+        {
+          "question": "Comment fonctionne la transcription vocale WhatsApp ?",
+          "answer": "L'agent transcrit chaque message vocal grâce à un modèle de reconnaissance vocale, selon la langue configurée. Le transcript est traité comme du texte normal, et l'IA répond de façon contextuelle."
+        },
+        {
+          "question": "Quels types de photos l'agent peut-il analyser ?",
+          "answer": "Documents (CNI, justificatifs, contrats, factures), photos de biens immobiliers, captures d'écran, photos de produits, prescriptions médicales — tout type d'image."
+        },
+        {
+          "question": "L'agent peut-il remplir des documents avec les photos reçues ?",
+          "answer": "Oui. Si un client envoie une photo de sa pièce d'identité ou d'un formulaire, l'agent extrait les informations et les enregistre dans votre CRM ou pré-remplit un dossier automatiquement."
+        },
+        {
+          "question": "Faut-il un compte WhatsApp Business existant ?",
+          "answer": "Vous avez besoin d'un compte WhatsApp Business API via Meta. Nous vous accompagnons dans la création, la connexion et l'approbation des templates."
+        },
+        {
+          "question": "Comment fonctionne la règle des 24h de Meta ?",
+          "answer": "Notre agent gère cette contrainte automatiquement : il utilise des templates pré-approuvés pour relancer les conversations inactives depuis plus de 24h."
+        },
+        {
+          "question": "L'agent peut-il gérer plusieurs langues ?",
+          "answer": "Oui. L'agent détecte automatiquement la langue du client et répond dans la même langue (français, anglais, arabe, espagnol, etc.)."
+        },
+        {
+          "question": "Combien de conversations simultanées peut-il gérer ?",
+          "answer": "L'agent est scalable et peut gérer des centaines de conversations simultanées sans dégradation de qualité."
+        },
+        {
+          "question": "Quelle est la conformité RGPD de la solution ?",
+          "answer": "Rétention des données configurable par type, nettoyage automatique planifié, hébergement possible sur serveurs EU via Cal.com v2."
+        }
       ],
       "relatedServices": [
-        { "title": "Automatisation CRM", "description": "Connectez votre agent WhatsApp à HubSpot, Salesforce ou Pipedrive." },
-        { "title": "Campagnes WhatsApp sortantes", "description": "Prospection et relance automatisée via templates Meta approuvés." },
-        { "title": "Intégration Cal.com", "description": "Prise de rendez-vous intelligente directement dans WhatsApp." }
+        {
+          "title": "Automatisation CRM",
+          "description": "Connectez votre agent WhatsApp à HubSpot, Salesforce ou Pipedrive."
+        },
+        {
+          "title": "Campagnes WhatsApp sortantes",
+          "description": "Prospection et relance automatisée via templates Meta approuvés."
+        },
+        {
+          "title": "Intégration Cal.com",
+          "description": "Prise de rendez-vous intelligente directement dans WhatsApp."
+        }
       ]
     },
     "common": {
@@ -388,9 +596,18 @@
     "collectedTitle": "2. Données collectées",
     "collectedIntro": "Nous collectons les données suivantes :",
     "collectedCategories": [
-      { "cat": "Formulaire de réservation (iClosed)", "items": "Nom, prénom, adresse e-mail, numéro de téléphone, nom de l'entreprise, message." },
-      { "cat": "Navigation (Google Analytics)", "items": "Pages visitées, durée de session, pays, type d'appareil, source de trafic. Données anonymisées." },
-      { "cat": "WhatsApp Business (service client)", "items": "Messages échangés avec l'agent IA : texte, vocaux, photos, documents. Traités uniquement pour répondre à vos demandes." }
+      {
+        "cat": "Formulaire de réservation (iClosed)",
+        "items": "Nom, prénom, adresse e-mail, numéro de téléphone, nom de l'entreprise, message."
+      },
+      {
+        "cat": "Navigation (Google Analytics)",
+        "items": "Pages visitées, durée de session, pays, type d'appareil, source de trafic. Données anonymisées."
+      },
+      {
+        "cat": "WhatsApp Business (service client)",
+        "items": "Messages échangés avec l'agent IA : texte, vocaux, photos, documents. Traités uniquement pour répondre à vos demandes."
+      }
     ],
     "purposeTitle": "3. Finalités du traitement",
     "purposes": [
@@ -402,38 +619,92 @@
     ],
     "legalBasisTitle": "4. Base légale",
     "legalBases": [
-      { "name": "Consentement", "desc": "pour l'envoi de communications marketing et l'utilisation de cookies non essentiels." },
-      { "name": "Exécution d'un contrat", "desc": "pour traiter vos demandes et délivrer nos services." },
-      { "name": "Intérêt légitime", "desc": "pour l'analyse d'audience anonymisée et la sécurité du site." }
+      {
+        "name": "Consentement",
+        "desc": "pour l'envoi de communications marketing et l'utilisation de cookies non essentiels."
+      },
+      {
+        "name": "Exécution d'un contrat",
+        "desc": "pour traiter vos demandes et délivrer nos services."
+      },
+      {
+        "name": "Intérêt légitime",
+        "desc": "pour l'analyse d'audience anonymisée et la sécurité du site."
+      }
     ],
     "retentionTitle": "5. Durée de conservation",
     "retentionCategoryHeader": "Catégorie de données",
     "retentionDurationHeader": "Durée",
     "retentionRows": [
-      { "cat": "Données de contact (formulaire)", "duration": "3 ans à compter du dernier contact" },
-      { "cat": "Données contractuelles (clients)", "duration": "5 ans après la fin du contrat" },
-      { "cat": "Messages WhatsApp (agent IA)", "duration": "Configurable selon le projet (90 jours par défaut)" },
-      { "cat": "Données analytics", "duration": "26 mois (configuration Google Analytics standard)" },
-      { "cat": "Cookies essentiels", "duration": "13 mois maximum" }
+      {
+        "cat": "Données de contact (formulaire)",
+        "duration": "3 ans à compter du dernier contact"
+      },
+      {
+        "cat": "Données contractuelles (clients)",
+        "duration": "5 ans après la fin du contrat"
+      },
+      {
+        "cat": "Messages WhatsApp (agent IA)",
+        "duration": "Configurable selon le projet (90 jours par défaut)"
+      },
+      {
+        "cat": "Données analytics",
+        "duration": "26 mois (configuration Google Analytics standard)"
+      },
+      {
+        "cat": "Cookies essentiels",
+        "duration": "13 mois maximum"
+      }
     ],
     "recipientsTitle": "6. Destinataires des données",
     "recipientsIntro": "Vos données peuvent être transmises aux sous-traitants suivants, dans le strict cadre de la fourniture des services :",
     "recipients": [
-      { "name": "iClosed", "desc": "outil de prise de rendez-vous en ligne" },
-      { "name": "Google LLC", "desc": "analytics (données anonymisées, serveurs UE)" },
-      { "name": "Meta Platforms Ireland Ltd", "desc": "infrastructure WhatsApp Business API" },
-      { "name": "Vercel Inc.", "desc": "hébergement du site web" }
+      {
+        "name": "iClosed",
+        "desc": "outil de prise de rendez-vous en ligne"
+      },
+      {
+        "name": "Google LLC",
+        "desc": "analytics (données anonymisées, serveurs UE)"
+      },
+      {
+        "name": "Meta Platforms Ireland Ltd",
+        "desc": "infrastructure WhatsApp Business API"
+      },
+      {
+        "name": "Vercel Inc.",
+        "desc": "hébergement du site web"
+      }
     ],
     "recipientsNoSale": "Aucune donnée n'est vendue à des tiers. Les transferts hors UE sont encadrés par des clauses contractuelles types (CCT) conformes au RGPD.",
     "rightsTitle": "7. Vos droits (RGPD)",
     "rightsIntro": "Conformément au Règlement Général sur la Protection des Données (RGPD — UE 2016/679), vous disposez des droits suivants :",
     "rights": [
-      { "name": "Droit d'accès", "desc": "obtenir une copie de vos données" },
-      { "name": "Droit de rectification", "desc": "corriger des données inexactes" },
-      { "name": "Droit à l'effacement", "desc": "demander la suppression de vos données" },
-      { "name": "Droit à la portabilité", "desc": "recevoir vos données dans un format structuré" },
-      { "name": "Droit d'opposition", "desc": "vous opposer à certains traitements" },
-      { "name": "Droit à la limitation", "desc": "limiter le traitement dans certains cas" }
+      {
+        "name": "Droit d'accès",
+        "desc": "obtenir une copie de vos données"
+      },
+      {
+        "name": "Droit de rectification",
+        "desc": "corriger des données inexactes"
+      },
+      {
+        "name": "Droit à l'effacement",
+        "desc": "demander la suppression de vos données"
+      },
+      {
+        "name": "Droit à la portabilité",
+        "desc": "recevoir vos données dans un format structuré"
+      },
+      {
+        "name": "Droit d'opposition",
+        "desc": "vous opposer à certains traitements"
+      },
+      {
+        "name": "Droit à la limitation",
+        "desc": "limiter le traitement dans certains cas"
+      }
     ],
     "rightsContact": "Pour exercer ces droits, contactez-nous par e-mail :",
     "rightsDelay": "Nous nous engageons à répondre dans un délai de <strong>30 jours</strong>.",
@@ -444,9 +715,21 @@
     "cookiesPurposeHeader": "Finalité",
     "cookiesConsentHeader": "Consentement",
     "cookiesRows": [
-      { "type": "Essentiels", "purpose": "Fonctionnement du site", "consent": "Non requis" },
-      { "type": "Analytics (GA4)", "purpose": "Mesure d'audience anonymisée", "consent": "Requis" },
-      { "type": "Tiers (iClosed)", "purpose": "Prise de rendez-vous", "consent": "Requis" }
+      {
+        "type": "Essentiels",
+        "purpose": "Fonctionnement du site",
+        "consent": "Non requis"
+      },
+      {
+        "type": "Analytics (GA4)",
+        "purpose": "Mesure d'audience anonymisée",
+        "consent": "Requis"
+      },
+      {
+        "type": "Tiers (iClosed)",
+        "purpose": "Prise de rendez-vous",
+        "consent": "Requis"
+      }
     ],
     "cookiesManage": "Vous pouvez gérer vos préférences cookies à tout moment depuis les paramètres de votre navigateur.",
     "securityTitle": "9. Sécurité des données",
@@ -465,9 +748,21 @@
     "vslSubtitle": "2 minutes pour comprendre exactement ce qu'on va faire ensemble",
     "stepsTitle": "Ce qui va se passer pendant la session",
     "steps": [
-      { "num": "Minute 0–10", "title": "Diagnostic métier", "desc": "On analyse vos flux de messages WhatsApp, vos points de friction et les tâches répétitives qui vous font perdre du temps." },
-      { "num": "Minute 10–20", "title": "Évaluation technique", "desc": "Étude de faisabilité selon vos outils actuels (CRM, agenda, base de données). On vous dit exactement ce qui est automatisable." },
-      { "num": "Minute 20–30", "title": "Stratégie & proposition", "desc": "On définit ensemble votre plan d'action. Vous repartez avec une proposition concrète et chiffrée sous 48h dans votre boîte mail." }
+      {
+        "num": "Minute 0–10",
+        "title": "Diagnostic métier",
+        "desc": "On analyse vos flux de messages WhatsApp, vos points de friction et les tâches répétitives qui vous font perdre du temps."
+      },
+      {
+        "num": "Minute 10–20",
+        "title": "Évaluation technique",
+        "desc": "Étude de faisabilité selon vos outils actuels (CRM, agenda, base de données). On vous dit exactement ce qui est automatisable."
+      },
+      {
+        "num": "Minute 20–30",
+        "title": "Stratégie & proposition",
+        "desc": "On définit ensemble votre plan d'action. Vous repartez avec une proposition concrète et chiffrée sous 48h dans votre boîte mail."
+      }
     ],
     "checklistTitle": "Pour maximiser votre session — préparez :",
     "checklistItems": [
@@ -478,20 +773,49 @@
     ],
     "statsTitle": "Ce que nos clients obtiennent",
     "stats": [
-      { "stat": "−78%", "label": "de messages sans réponse" },
-      { "stat": "3×", "label": "plus de leads qualifiés" },
-      { "stat": "2 sem.", "label": "pour être en production" }
+      {
+        "stat": "−78%",
+        "label": "de messages sans réponse"
+      },
+      {
+        "stat": "3×",
+        "label": "plus de leads qualifiés"
+      },
+      {
+        "stat": "2 sem.",
+        "label": "pour être en production"
+      }
     ],
     "testimonialsTitle": "Ils l'ont fait avant vous",
     "testimonials": [
-      { "name": "Sophie M.", "role": "Directrice agence immobilière, Lyon", "text": "En 2 semaines, l'agent répond aux photos de biens envoyées par WhatsApp. Mes agents passent 0 minute sur les questions basiques. ROI immédiat." },
-      { "name": "Karim B.", "role": "Fondateur e-commerce, Paris", "text": "Notre SAV WhatsApp tourne 24/7 sans intervention humaine. Le taux de satisfaction client est passé de 67% à 91% en un mois." }
+      {
+        "name": "Sophie M.",
+        "role": "Directrice agence immobilière, Lyon",
+        "text": "En 2 semaines, l'agent répond aux photos de biens envoyées par WhatsApp. Mes agents passent 0 minute sur les questions basiques. ROI immédiat."
+      },
+      {
+        "name": "Karim B.",
+        "role": "Fondateur e-commerce, Paris",
+        "text": "Notre SAV WhatsApp tourne 24/7 sans intervention humaine. Le taux de satisfaction client est passé de 67% à 91% en un mois."
+      }
     ],
     "guaranteesTitle": "Nos garanties",
     "guarantees": [
-      { "icon": "🔒", "title": "Confidentiel", "desc": "NDA disponible sur demande" },
-      { "icon": "🎯", "title": "Sans engagement", "desc": "Aucune obligation d'achat" },
-      { "icon": "⚡", "title": "Proposition 48h", "desc": "Chiffrée et détaillée" }
+      {
+        "icon": "🔒",
+        "title": "Confidentiel",
+        "desc": "NDA disponible sur demande"
+      },
+      {
+        "icon": "🎯",
+        "title": "Sans engagement",
+        "desc": "Aucune obligation d'achat"
+      },
+      {
+        "icon": "⚡",
+        "title": "Proposition 48h",
+        "desc": "Chiffrée et détaillée"
+      }
     ],
     "ctaQuestion": "Une question avant la session ?",
     "ctaWhatsapp": "Écrire sur WhatsApp",
@@ -506,6 +830,7 @@
     "link": "En savoir plus"
   },
   "demo": {
+    "tryAgent": "Tester l'Agent IA",
     "badge": "Demo interactive en direct",
     "title": "Testez notre",
     "titleHighlight": "Agent IA",
@@ -579,7 +904,7 @@
     "teamSize": "Taille de l'équipe",
     "hourlyCost": "Coût horaire moyen",
     "avgResponse": "Temps moyen de réponse",
-    "basedOn": "Basé sur le plan Business à 247€/mois",
+    "basedOn": "Estimation indicative — devis personnalisé sur rendez-vous",
     "hoursSaved": "Heures économisées / mois",
     "vsManual": "vs. {hours}h de traitement manuel",
     "monthlySavings": "Économies mensuelles",
@@ -592,5 +917,15 @@
     "withMessages": "Avec {count} messages/jour, vous économisez {savings}€/mois",
     "bookAudit": "Réserver mon audit gratuit",
     "min": "min"
+  },
+  "simulator": {
+    "placeholder": "Tapez un message...",
+    "online": "en ligne",
+    "photoSent": "Photo envoyee",
+    "choosePhoto": "Choisir une photo a envoyer",
+    "simulateVoice": "Simuler un message vocal",
+    "voiceTranscribed": "Vocal transcrit",
+    "transcription": "Transcription",
+    "vsHuman45": "vs 45min humain"
   }
 }

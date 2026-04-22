@@ -19,6 +19,10 @@ const headings: Record<string, { h1: string; subtitle: string; vs: string }> = {
 const competitors = [
   { slug: "vs-wati", name: "Wati", icon: "📦", tagline: { fr: "Wati : puissant mais rigide, sans vraie IA", en: "Wati: powerful but rigid, no real AI", de: "Wati: leistungsstark aber starr, keine echte KI", nl: "Wati: krachtig maar rigide, geen echte AI" } },
   { slug: "vs-manychat", name: "ManyChat", icon: "💬", tagline: { fr: "ManyChat : idéal pour Instagram, limité sur WhatsApp", en: "ManyChat: great for Instagram, limited on WhatsApp", de: "ManyChat: gut für Instagram, begrenzt auf WhatsApp", nl: "ManyChat: goed voor Instagram, beperkt op WhatsApp" } },
+  { slug: "vs-respond-io", name: "Respond.io", icon: "🔀", tagline: { fr: "Respond.io : omnichannel enterprise solide, générique sur WhatsApp", en: "Respond.io: solid enterprise omnichannel, generic on WhatsApp", de: "Respond.io: solides Enterprise-Omnichannel, generisch auf WhatsApp", nl: "Respond.io: solide enterprise omnichannel, generiek op WhatsApp" } },
+  { slug: "vs-sendpulse", name: "SendPulse", icon: "📧", tagline: { fr: "SendPulse : tout-en-un email/SMS/push, WhatsApp basique", en: "SendPulse: all-in-one email/SMS/push, basic WhatsApp", de: "SendPulse: Alles-in-einem E-Mail/SMS/Push, einfaches WhatsApp", nl: "SendPulse: alles-in-één e-mail/SMS/push, basis WhatsApp" } },
+  { slug: "vs-chatfuel", name: "Chatfuel", icon: "🤖", tagline: { fr: "Chatfuel : leader Facebook/Instagram, push WhatsApp récent", en: "Chatfuel: Facebook/Instagram leader, recent WhatsApp push", de: "Chatfuel: Facebook/Instagram-Marktführer, neues WhatsApp-Angebot", nl: "Chatfuel: Facebook/Instagram-leider, recent WhatsApp-aanbod" } },
+  { slug: "vs-zenvia", name: "Zenvia", icon: "🌎", tagline: { fr: "Zenvia : leader LatAm CPaaS, scaling international", en: "Zenvia: LatAm CPaaS leader, scaling internationally", de: "Zenvia: LatAm CPaaS-Marktführer, internationale Expansion", nl: "Zenvia: LatAm CPaaS-leider, internationale expansie" } },
   { slug: "vs-whatsapp-business", name: "WhatsApp Business", icon: "📱", tagline: { fr: "WhatsApp Business natif : gratuit mais zéro IA", en: "Native WhatsApp Business: free but zero AI", de: "Natives WhatsApp Business: kostenlos aber keine KI", nl: "Native WhatsApp Business: gratis maar geen AI" } },
 ];
 
@@ -39,10 +43,36 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function ComparatifPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const h = headings[locale] ?? headings.fr;
+  const m = meta[locale] ?? meta.fr;
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
+  const pageUrl = `https://agentic-whatsup.com/${locale}/comparatif`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        name: m.title,
+        description: m.description,
+        url: pageUrl,
+        inLanguage: locale,
+      },
+      {
+        "@type": "ItemList",
+        name: h.h1,
+        itemListElement: competitors.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: `https://agentic-whatsup.com/${locale}/comparatif/${c.slug}`,
+          name: `AgenticWhatsup vs ${c.name}`,
+        })),
+      },
+    ],
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="text-center mb-14">
         <span className="inline-block bg-wa/10 text-wa text-xs font-semibold px-3 py-1 rounded-full mb-4">Comparatif</span>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>{h.h1}</h1>

@@ -157,12 +157,12 @@ export const VOCALIS_INTENTS: Record<string, BotResponse> = {
     ],
   },
   tarif: {
-    text: "Nos formules :\n\n**Starter** — 97 EUR/mois\n- 1 agent WhatsApp\n- 500 conversations/mois\n- FAQ + base de connaissances\n\n**Business** — 247 EUR/mois\n- Agent multimodal (photo + vocal + appels)\n- Conversations illimitees\n- CRM + Calendrier + Campagnes\n- Flow Builder + Automatisations\n\n**Enterprise** — Sur mesure\n- Multi-agents + clonage vocal\n- API + Webhooks\n- SLA garanti + dashboards custom\n\nSetup + formation inclus.",
-    delay: 2200,
+    text: "Le tarif depend de votre volume WhatsApp, integrations CRM et options choisies.\n\nOn construit un devis personnalise pendant votre **session strategique gratuite** (30 min).\n\nVous repartez avec :\n- Un plan d'action chiffre\n- Une demo adaptee a votre secteur\n- Un ROI projete 90 jours\n\nAucun engagement. Reservez votre creneau.",
+    delay: 2000,
     quickReplies: [
-      { label: "Essai gratuit ?", value: "essai" },
-      { label: "Prendre RDV", value: "rdv" },
+      { label: "Reserver 30 min", value: "rdv" },
       { label: "ROI typique ?", value: "roi" },
+      { label: "Essai gratuit ?", value: "essai" },
     ],
   },
   essai: {

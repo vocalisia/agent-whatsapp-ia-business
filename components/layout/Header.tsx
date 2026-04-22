@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
-import { MessageCircle, ChevronDown, Bot, UserCheck, Megaphone, Settings, Calendar, Zap, BarChart3, Wand2, Play } from "lucide-react";
+import { MessageCircle, ChevronDown, Bot, UserCheck, Megaphone, Settings, Calendar, Zap, BarChart3, Wand2, Play, TrendingUp, AlertTriangle, Users } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import MobileNav from "./MobileNav";
 
@@ -38,6 +38,37 @@ const serviceKeys = [
   "agent-sur-mesure",
 ];
 
+interface OfferEntry {
+  slug: "roi" | "urgent" | "social";
+  icon: React.ReactNode;
+  labels: Record<string, string>;
+}
+
+const offerEntries: OfferEntry[] = [
+  {
+    slug: "roi",
+    icon: <TrendingUp size={15} />,
+    labels: { fr: "Calculateur ROI", en: "ROI Calculator", de: "ROI-Rechner", nl: "ROI-calculator" },
+  },
+  {
+    slug: "urgent",
+    icon: <AlertTriangle size={15} />,
+    labels: { fr: "Réponse 24/7 en 8 sec", en: "24/7 — 8-sec reply", de: "24/7 — 8-Sek.-Antwort", nl: "24/7 — 8-sec antwoord" },
+  },
+  {
+    slug: "social",
+    icon: <Users size={15} />,
+    labels: { fr: "Benchmark 340 PME", en: "340 SMBs Benchmark", de: "340 KMU Benchmark", nl: "340 KMO's Benchmark" },
+  },
+];
+
+const offersSectionLabel: Record<string, string> = {
+  fr: "Offres spéciales",
+  en: "Special offers",
+  de: "Spezielle Angebote",
+  nl: "Speciale aanbiedingen",
+};
+
 export default function Header() {
   const t = useTranslations("nav");
   const locale = useLocale();
@@ -63,11 +94,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-md border-b border-surface">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-bg/95 backdrop-blur-md border-b border-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         <div className="flex items-center gap-3">
-          <Link href={`/${locale}`} className="flex items-center gap-2 font-bold text-xl">
-            <MessageCircle className="text-wa" size={24} />
+          <Link href={`/${locale}`} className="flex items-center gap-2 font-bold text-lg sm:text-xl py-2 -my-2">
+            <MessageCircle className="text-wa" size={26} />
             <span className="text-white">
               Agentic<span className="text-wa">Whatsup</span>
             </span>
@@ -98,7 +129,7 @@ export default function Header() {
               <ChevronDown size={14} className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-surface border border-surface-2 rounded-xl shadow-xl py-2 z-50">
+              <div className="absolute top-full left-0 mt-2 w-64 bg-surface border border-surface-2 rounded-xl shadow-xl py-2 z-50">
                 {serviceKeys.map((key) => (
                   <Link
                     key={key}
@@ -110,6 +141,22 @@ export default function Header() {
                     {serviceLabels[key][locale] ?? serviceLabels[key].fr}
                   </Link>
                 ))}
+                <div className="border-t border-surface-2 mt-1 pt-1">
+                  <div className="px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
+                    {offersSectionLabel[locale] ?? offersSectionLabel.fr}
+                  </div>
+                  {offerEntries.map((offer) => (
+                    <Link
+                      key={offer.slug}
+                      href={`/${locale}/${offer.slug}`}
+                      onClick={() => setServicesOpen(false)}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-300 hover:text-wa hover:bg-wa/5 transition-colors"
+                    >
+                      <span className="text-wa/60">{offer.icon}</span>
+                      {offer.labels[locale] ?? offer.labels.fr}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>
@@ -191,6 +238,28 @@ export default function Header() {
             <MessageCircle size={16} />
             {t("audit")}
           </Link>
+        </div>
+        {/* Mobile language flags — visible directly in header bar */}
+        <div className="flex md:hidden items-center gap-1 mr-1">
+          {([
+            { code: "fr" as const },
+            { code: "en" as const },
+            { code: "de" as const },
+            { code: "nl" as const },
+          ]).map((l) => (
+            <Link
+              key={l.code}
+              href={`/${l.code}`}
+              className={`p-1 rounded transition-opacity ${locale === l.code ? "opacity-100 ring-1 ring-wa/60 rounded" : "opacity-40 hover:opacity-80"}`}
+            >
+              <svg width="22" height="15" viewBox="0 0 18 12" className="rounded-[2px]">
+                {l.code === "fr" && (<><rect width="6" height="12" fill="#002395" /><rect x="6" width="6" height="12" fill="#FFFFFF" /><rect x="12" width="6" height="12" fill="#ED2939" /></>)}
+                {l.code === "en" && (<><rect width="18" height="12" fill="#012169" /><path d="M0,0 L18,12 M18,0 L0,12" stroke="#FFFFFF" strokeWidth="2" /><path d="M0,0 L18,12 M18,0 L0,12" stroke="#C8102E" strokeWidth="1" /><path d="M9,0 V12 M0,6 H18" stroke="#FFFFFF" strokeWidth="3" /><path d="M9,0 V12 M0,6 H18" stroke="#C8102E" strokeWidth="1.5" /></>)}
+                {l.code === "de" && (<><rect width="18" height="4" fill="#000000" /><rect y="4" width="18" height="4" fill="#DD0000" /><rect y="8" width="18" height="4" fill="#FFCE00" /></>)}
+                {l.code === "nl" && (<><rect width="18" height="4" fill="#AE1C28" /><rect y="4" width="18" height="4" fill="#FFFFFF" /><rect y="8" width="18" height="4" fill="#21468B" /></>)}
+              </svg>
+            </Link>
+          ))}
         </div>
         <MobileNav />
       </div>

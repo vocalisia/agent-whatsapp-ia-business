@@ -166,7 +166,7 @@ const sectorKeywords: Record<string, string[]> = {
   ],
   honoraires: [
     "honoraire", "prix", "cout", "combien", "tarif cabinet",
-    "facturer", "payer",
+    "facturer", "payer", "financement", "finance", "credit", "pret", "mensualite", "facilite",
   ],
   documents: [
     "document", "papier", "piece", "justificatif", "dossier",

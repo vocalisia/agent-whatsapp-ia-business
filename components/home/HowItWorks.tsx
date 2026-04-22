@@ -104,7 +104,7 @@ export default function HowItWorks() {
   const t = useTranslations("howItWorks");
 
   return (
-    <section className="py-24 px-4 sm:px-6 bg-surface/30">
+    <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 bg-surface/30">
       <div className="max-w-4xl mx-auto">
         <motion.div {...fadeUp()}>
           <SectionTitle

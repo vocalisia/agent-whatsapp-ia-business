@@ -40,10 +40,26 @@
     "eyebrow": "Het probleem",
     "title": "Elk onbeantwoord bericht = een verloren klant",
     "items": [
-      { "title": "Genegeerde spraakberichten", "description": "Uw klanten sturen WhatsApp-spraakberichten. Niemand heeft tijd om ernaar te luisteren.", "statLabel": "van spraakberichten niet beluisterd" },
-      { "title": "Niet-verwerkte foto's", "description": "De klant stuurt een foto van zijn document. Handmatige verwerking duurt uren.", "statLabel": "gemiddelde verwerkingstijd" },
-      { "title": "Leads verloren 's nachts", "description": "70% van de berichten komt buiten kantooruren. Zonder snel antwoord: dag prospect.", "statLabel": "van berichten buiten kantooruren" },
-      { "title": "Overweldigd team", "description": "Uw teams verwerken repetitieve berichten in plaats van zich te concentreren op waardevolle taken.", "statLabel": "van verspilde tijd" }
+      {
+        "title": "Genegeerde spraakberichten",
+        "description": "Uw klanten sturen WhatsApp-spraakberichten. Niemand heeft tijd om ernaar te luisteren.",
+        "statLabel": "van spraakberichten niet beluisterd"
+      },
+      {
+        "title": "Niet-verwerkte foto's",
+        "description": "De klant stuurt een foto van zijn document. Handmatige verwerking duurt uren.",
+        "statLabel": "gemiddelde verwerkingstijd"
+      },
+      {
+        "title": "Leads verloren 's nachts",
+        "description": "70% van de berichten komt buiten kantooruren. Zonder snel antwoord: dag prospect.",
+        "statLabel": "van berichten buiten kantooruren"
+      },
+      {
+        "title": "Overweldigd team",
+        "description": "Uw teams verwerken repetitieve berichten in plaats van zich te concentreren op waardevolle taken.",
+        "statLabel": "van verspilde tijd"
+      }
     ]
   },
   "features": {
@@ -52,12 +68,36 @@
     "subtitle": "Exclusieve multimodale mogelijkheden op de WhatsApp Business-markt.",
     "exclusive": "Exclusief",
     "items": [
-      { "title": "AI Vision", "subtitle": "Analyseert foto's", "description": "De klant stuurt een foto (document, vastgoed, technisch probleem). De agent ziet, begrijpt en reageert via OpenAI Vision / Claude / Gemini." },
-      { "title": "AI Audio", "subtitle": "Transcribeert spraakberichten", "description": "De agent transcribeert automatisch WhatsApp-spraakberichten en reageert contextueel, in de taal van de klant." },
-      { "title": "Alle mediatypen", "subtitle": "Afbeeldingen, audio, video, docs", "description": "Alles wordt verwerkt, opgeslagen en toegankelijk gemaakt. Operators kunnen ook bestanden naar klanten sturen vanuit de interface." },
-      { "title": "Auto AVG", "subtitle": "Configureerbare bewaring", "description": "Automatische geplande opschoning per gegevenstype. EU-hosting beschikbaar. Moeiteloze naleving." },
-      { "title": "Cal.com v2", "subtitle": "Afspraken in WhatsApp", "description": "EU-servers, teams, dynamische velden. De agent boekt afspraken direct in het gesprek." },
-      { "title": "Webhooks", "subtitle": "Onbeperkte automatiseringen", "description": "Volledige transcript + AI-evaluatie aan het einde van elk gesprek. Verbindt HubSpot, Salesforce, Notion." }
+      {
+        "title": "AI Vision",
+        "subtitle": "Analyseert foto's",
+        "description": "De klant stuurt een foto (document, vastgoed, technisch probleem). De agent ziet, begrijpt en reageert via OpenAI Vision / Claude / Gemini."
+      },
+      {
+        "title": "AI Audio",
+        "subtitle": "Transcribeert spraakberichten",
+        "description": "De agent transcribeert automatisch WhatsApp-spraakberichten en reageert contextueel, in de taal van de klant."
+      },
+      {
+        "title": "Alle mediatypen",
+        "subtitle": "Afbeeldingen, audio, video, docs",
+        "description": "Alles wordt verwerkt, opgeslagen en toegankelijk gemaakt. Operators kunnen ook bestanden naar klanten sturen vanuit de interface."
+      },
+      {
+        "title": "Auto AVG",
+        "subtitle": "Configureerbare bewaring",
+        "description": "Automatische geplande opschoning per gegevenstype. EU-hosting beschikbaar. Moeiteloze naleving."
+      },
+      {
+        "title": "Cal.com v2",
+        "subtitle": "Afspraken in WhatsApp",
+        "description": "EU-servers, teams, dynamische velden. De agent boekt afspraken direct in het gesprek."
+      },
+      {
+        "title": "Webhooks",
+        "subtitle": "Onbeperkte automatiseringen",
+        "description": "Volledige transcript + AI-evaluatie aan het einde van elk gesprek. Verbindt HubSpot, Salesforce, Notion."
+      }
     ]
   },
   "howItWorks": {
@@ -95,9 +135,36 @@
     "ctaAudit": "Gratis audit — 30 min",
     "ctaSubtitle": "30 minuten · Geen verplichtingen · Voorstel binnen 48u",
     "plans": [
-      { "name": "Starter", "features": ["1 WhatsApp-agent", "1 scenario", "1 integratie", "E-mailondersteuning"] },
-      { "name": "Pro", "features": ["Meerdere scenario's", "Meta-templates", "CRM + Agenda", "AI Vision + Spraak", "Auto-workflows", "48u ondersteuning"] },
-      { "name": "Enterprise", "features": ["Maatwerkooplossing", "Meerdere nummers", "Onbeperkte integraties", "Prioritaire SLA", "24u ondersteuning"] }
+      {
+        "name": "Starter",
+        "features": [
+          "1 WhatsApp-agent",
+          "1 scenario",
+          "1 integratie",
+          "E-mailondersteuning"
+        ]
+      },
+      {
+        "name": "Pro",
+        "features": [
+          "Meerdere scenario's",
+          "Meta-templates",
+          "CRM + Agenda",
+          "AI Vision + Spraak",
+          "Auto-workflows",
+          "48u ondersteuning"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "features": [
+          "Maatwerkooplossing",
+          "Meerdere nummers",
+          "Onbeperkte integraties",
+          "Prioritaire SLA",
+          "24u ondersteuning"
+        ]
+      }
     ]
   },
   "finalCta": {
@@ -157,18 +224,66 @@
     "subtitle": "Geen vaste prijslijst. We bespreken uw behoeften en stellen de exacte oplossing voor — niet meer, niet minder.",
     "recommended": "AANBEVOLEN",
     "plans": [
-      { "name": "Starter", "description": "KMO's die beginnen met WhatsApp-automatisering.", "features": ["1 WhatsApp Business-agent", "1 gespreksscenario", "1 integratie (CRM of agenda)", "Automatische tekstantwoorden", "Monitoring-dashboard", "E-mailondersteuning", "Training inbegrepen"] },
-      { "name": "Pro", "description": "De complete oplossing om alles te automatiseren.", "features": ["Meerdere gespreksscenario's", "Vooraf goedgekeurde Meta-templates", "CRM + Agenda (Cal.com)", "AI Vision — fotoanalyse", "Automatische spraaktranscriptie", "Workflows & webhooks", "AVG-naleving", "Gegarandeerde 48u ondersteuning", "Toegewijde onboarding"] },
-      { "name": "Enterprise", "description": "Maatwerkooplossing voor grote organisaties.", "features": ["Volledig op maat gemaakte architectuur", "Meerdere WhatsApp-nummers", "Onbeperkte integraties", "Gegarandeerde prioritaire SLA", "Toegewijde EU-hosting", "Toegewijde 24/7 ondersteuning", "Doorlopende audit en optimalisatie", "Uitgebreide teamtraining"] }
+      {
+        "name": "Starter",
+        "description": "KMO's die beginnen met WhatsApp-automatisering.",
+        "features": [
+          "1 WhatsApp Business-agent",
+          "1 gespreksscenario",
+          "1 integratie (CRM of agenda)",
+          "Automatische tekstantwoorden",
+          "Monitoring-dashboard",
+          "E-mailondersteuning",
+          "Training inbegrepen"
+        ]
+      },
+      {
+        "name": "Pro",
+        "description": "De complete oplossing om alles te automatiseren.",
+        "features": [
+          "Meerdere gespreksscenario's",
+          "Vooraf goedgekeurde Meta-templates",
+          "CRM + Agenda (Cal.com)",
+          "AI Vision — fotoanalyse",
+          "Automatische spraaktranscriptie",
+          "Workflows & webhooks",
+          "AVG-naleving",
+          "Gegarandeerde 48u ondersteuning",
+          "Toegewijde onboarding"
+        ]
+      },
+      {
+        "name": "Enterprise",
+        "description": "Maatwerkooplossing voor grote organisaties.",
+        "features": [
+          "Volledig op maat gemaakte architectuur",
+          "Meerdere WhatsApp-nummers",
+          "Onbeperkte integraties",
+          "Gegarandeerde prioritaire SLA",
+          "Toegewijde EU-hosting",
+          "Toegewijde 24/7 ondersteuning",
+          "Doorlopende audit en optimalisatie",
+          "Uitgebreide teamtraining"
+        ]
+      }
     ],
     "sessionEyebrow": "Strategische sessie",
     "sessionTitle": "Strategische Sessie — Uw WhatsApp AI-agent",
     "sessionSubtitle": "30 minuten om uw stromen te analyseren, mogelijke automatiseringen te identificeren en uw strategie te definiëren. Gratis diagnose, geen verplichtingen.",
     "faqTitle": "Veelgestelde vragen",
     "faqs": [
-      { "question": "Is de installatie inbegrepen in de prijs?", "answer": "Ja. Elke offerte omvat de ontwikkeling, WhatsApp Business-configuratie, testen en volledige implementatie. Geen verrassingen." },
-      { "question": "Zijn er terugkerende kosten?", "answer": "Ja, een maandelijks pakket dekt hosting, API-aanroepen (LLM) en onderhoud. Dit pakket is inbegrepen in ons voorstel." },
-      { "question": "Wat is de doorlooptijd naar productie?", "answer": "Doorgaans 2 tot 3 weken voor het Pro-abonnement. Het Starter-abonnement kan in 1 week worden geïmplementeerd. Enterprise hangt af van de complexiteit." }
+      {
+        "question": "Is de installatie inbegrepen in de prijs?",
+        "answer": "Ja. Elke offerte omvat de ontwikkeling, WhatsApp Business-configuratie, testen en volledige implementatie. Geen verrassingen."
+      },
+      {
+        "question": "Zijn er terugkerende kosten?",
+        "answer": "Ja, een maandelijks pakket dekt hosting, API-aanroepen (LLM) en onderhoud. Dit pakket is inbegrepen in ons voorstel."
+      },
+      {
+        "question": "Wat is de doorlooptijd naar productie?",
+        "answer": "Doorgaans 2 tot 3 weken voor het Pro-abonnement. Het Starter-abonnement kan in 1 week worden geïmplementeerd. Enterprise hangt af van de complexiteit."
+      }
     ]
   },
   "notFound": {
@@ -205,10 +320,22 @@
         "Wekelijkse prestatierapporten"
       ],
       "steps": [
-        { "title": "De prospect stuurt een bericht", "desc": "Via uw WhatsApp Business-nummer — tekst, spraak of foto." },
-        { "title": "De AI stelt de juiste vragen", "desc": "Budget, behoefte, tijdlijn, autoriteit — afgestemd op uw sector." },
-        { "title": "Kwalificatiescore berekend", "desc": "Elke prospect ontvangt een score op basis van uw zakelijke criteria." },
-        { "title": "Doorgestuurd naar verkoop", "desc": "Alleen gekwalificeerde prospects landen in uw CRM of Slack." }
+        {
+          "title": "De prospect stuurt een bericht",
+          "desc": "Via uw WhatsApp Business-nummer — tekst, spraak of foto."
+        },
+        {
+          "title": "De AI stelt de juiste vragen",
+          "desc": "Budget, behoefte, tijdlijn, autoriteit — afgestemd op uw sector."
+        },
+        {
+          "title": "Kwalificatiescore berekend",
+          "desc": "Elke prospect ontvangt een score op basis van uw zakelijke criteria."
+        },
+        {
+          "title": "Doorgestuurd naar verkoop",
+          "desc": "Alleen gekwalificeerde prospects landen in uw CRM of Slack."
+        }
       ]
     },
     "campagnes": {
@@ -230,10 +357,22 @@
         "Gedetailleerde prestatierapporten"
       ],
       "useCases": [
-        { "title": "Prospect opvolging", "desc": "Reactiveer koude leads met gepersonaliseerde berichten op het juiste moment." },
-        { "title": "Klant onboarding", "desc": "Verwelkom elke nieuwe klant met een geautomatiseerde onboardingsequentie." },
-        { "title": "Promoties & aanbiedingen", "desc": "Verspreid gerichte aanbiedingen naar specifieke segmenten van uw database." },
-        { "title": "Transactionele meldingen", "desc": "Orderbevestigingen, leveringsupdates, afspraakherinneringen — automatisch." }
+        {
+          "title": "Prospect opvolging",
+          "desc": "Reactiveer koude leads met gepersonaliseerde berichten op het juiste moment."
+        },
+        {
+          "title": "Klant onboarding",
+          "desc": "Verwelkom elke nieuwe klant met een geautomatiseerde onboardingsequentie."
+        },
+        {
+          "title": "Promoties & aanbiedingen",
+          "desc": "Verspreid gerichte aanbiedingen naar specifieke segmenten van uw database."
+        },
+        {
+          "title": "Transactionele meldingen",
+          "desc": "Orderbevestigingen, leveringsupdates, afspraakherinneringen — automatisch."
+        }
       ]
     },
     "crm": {
@@ -256,17 +395,44 @@
         "Aangepaste veldtoewijzing voor uw CRM"
       ],
       "steps": [
-        { "title": "WhatsApp-gesprek", "desc": "De klant reageert op uw AI-agent — vragen, informatie, verzoeken." },
-        { "title": "AI-verwerking", "desc": "De agent extraheert sleuteldata: naam, budget, behoefte, kwalificatie." },
-        { "title": "CRM-update", "desc": "Data wordt direct via webhook naar uw CRM gestuurd." }
+        {
+          "title": "WhatsApp-gesprek",
+          "desc": "De klant reageert op uw AI-agent — vragen, informatie, verzoeken."
+        },
+        {
+          "title": "AI-verwerking",
+          "desc": "De agent extraheert sleuteldata: naam, budget, behoefte, kwalificatie."
+        },
+        {
+          "title": "CRM-update",
+          "desc": "Data wordt direct via webhook naar uw CRM gestuurd."
+        }
       ],
       "integrations": [
-        { "name": "HubSpot", "desc": "Contacten, deals, activiteiten, sequenties" },
-        { "name": "Salesforce", "desc": "Leads, kansen, taken, notities" },
-        { "name": "Notion", "desc": "Databases, pagina's, eigenschappen" },
-        { "name": "Airtable", "desc": "Tabellen, records, gefilterde weergaven" },
-        { "name": "Make / Zapier", "desc": "Automatiseringen via webhooks" },
-        { "name": "Cal.com", "desc": "Afspraken boeken direct in WhatsApp" }
+        {
+          "name": "HubSpot",
+          "desc": "Contacten, deals, activiteiten, sequenties"
+        },
+        {
+          "name": "Salesforce",
+          "desc": "Leads, kansen, taken, notities"
+        },
+        {
+          "name": "Notion",
+          "desc": "Databases, pagina's, eigenschappen"
+        },
+        {
+          "name": "Airtable",
+          "desc": "Tabellen, records, gefilterde weergaven"
+        },
+        {
+          "name": "Make / Zapier",
+          "desc": "Automatiseringen via webhooks"
+        },
+        {
+          "name": "Cal.com",
+          "desc": "Afspraken boeken direct in WhatsApp"
+        }
       ]
     },
     "rdv": {
@@ -288,9 +454,18 @@
         "Automatisch gegenereerde videobel-links (Zoom, Google Meet)"
       ],
       "steps": [
-        { "title": "De klant vraagt een afspraak", "desc": "\"Ik wil een afspraak maken\" — de agent begrijpt en biedt beschikbare slots aan." },
-        { "title": "De klant kiest een slot", "desc": "De agent toont Cal.com-beschikbaarheid in realtime. De klant antwoordt met zijn keuze." },
-        { "title": "Automatische bevestiging", "desc": "Afspraak aangemaakt in de agenda, WhatsApp + e-mailbevestiging, 24u herinnering." }
+        {
+          "title": "De klant vraagt een afspraak",
+          "desc": "\"Ik wil een afspraak maken\" — de agent begrijpt en biedt beschikbare slots aan."
+        },
+        {
+          "title": "De klant kiest een slot",
+          "desc": "De agent toont Cal.com-beschikbaarheid in realtime. De klant antwoordt met zijn keuze."
+        },
+        {
+          "title": "Automatische bevestiging",
+          "desc": "Afspraak aangemaakt in de agenda, WhatsApp + e-mailbevestiging, 24u herinnering."
+        }
       ]
     },
     "agentIa": {
@@ -312,19 +487,52 @@
       "finalCtaTitle": "Klaar om uw WhatsApp AI-agent in te zetten?",
       "finalCtaSubtitle": "30 minuten om uw behoeften te analyseren. Voorstel binnen 48u.",
       "faqItems": [
-        { "question": "Hoe werkt WhatsApp-spraaktranscriptie?", "answer": "De agent transcribeert elk spraakbericht met een spraakherkenningsmodel op basis van de geconfigureerde taal. Het transcript wordt verwerkt als gewone tekst en de AI antwoordt contextueel." },
-        { "question": "Welke soorten foto's kan de agent analyseren?", "answer": "Documenten (ID-kaarten, bewijsstukken, contracten, facturen), vastgoedfoto's, schermafbeeldingen, productfoto's, medische voorschriften — elk type afbeelding." },
-        { "question": "Kan de agent documenten invullen met ontvangen foto's?", "answer": "Ja. Als een klant een foto van zijn ID of een formulier stuurt, extraheert de agent de informatie en slaat deze op in uw CRM of vult automatisch een dossier in." },
-        { "question": "Heb ik een bestaand WhatsApp Business-account nodig?", "answer": "U heeft een WhatsApp Business API-account via Meta nodig. Wij begeleiden u bij het aanmaken, verbinden en goedkeuren van templates." },
-        { "question": "Hoe werkt Meta's 24-uursregel?", "answer": "Onze agent beheert deze beperking automatisch: hij gebruikt vooraf goedgekeurde templates om gesprekken te heractiveren die meer dan 24 uur inactief zijn geweest." },
-        { "question": "Kan de agent meerdere talen verwerken?", "answer": "Ja. De agent detecteert automatisch de taal van de klant en antwoordt in dezelfde taal (Frans, Engels, Arabisch, Spaans, enz.)." },
-        { "question": "Hoeveel gelijktijdige gesprekken kan hij verwerken?", "answer": "De agent is schaalbaar en kan honderden gelijktijdige gesprekken verwerken zonder kwaliteitsverlies." },
-        { "question": "Wat is de AVG-naleving van de oplossing?", "answer": "Configureerbare gegevensretentie per type, geplande automatische opruiming en mogelijk EU-serverhosting via Cal.com v2." }
+        {
+          "question": "Hoe werkt WhatsApp-spraaktranscriptie?",
+          "answer": "De agent transcribeert elk spraakbericht met een spraakherkenningsmodel op basis van de geconfigureerde taal. Het transcript wordt verwerkt als gewone tekst en de AI antwoordt contextueel."
+        },
+        {
+          "question": "Welke soorten foto's kan de agent analyseren?",
+          "answer": "Documenten (ID-kaarten, bewijsstukken, contracten, facturen), vastgoedfoto's, schermafbeeldingen, productfoto's, medische voorschriften — elk type afbeelding."
+        },
+        {
+          "question": "Kan de agent documenten invullen met ontvangen foto's?",
+          "answer": "Ja. Als een klant een foto van zijn ID of een formulier stuurt, extraheert de agent de informatie en slaat deze op in uw CRM of vult automatisch een dossier in."
+        },
+        {
+          "question": "Heb ik een bestaand WhatsApp Business-account nodig?",
+          "answer": "U heeft een WhatsApp Business API-account via Meta nodig. Wij begeleiden u bij het aanmaken, verbinden en goedkeuren van templates."
+        },
+        {
+          "question": "Hoe werkt Meta's 24-uursregel?",
+          "answer": "Onze agent beheert deze beperking automatisch: hij gebruikt vooraf goedgekeurde templates om gesprekken te heractiveren die meer dan 24 uur inactief zijn geweest."
+        },
+        {
+          "question": "Kan de agent meerdere talen verwerken?",
+          "answer": "Ja. De agent detecteert automatisch de taal van de klant en antwoordt in dezelfde taal (Frans, Engels, Arabisch, Spaans, enz.)."
+        },
+        {
+          "question": "Hoeveel gelijktijdige gesprekken kan hij verwerken?",
+          "answer": "De agent is schaalbaar en kan honderden gelijktijdige gesprekken verwerken zonder kwaliteitsverlies."
+        },
+        {
+          "question": "Wat is de AVG-naleving van de oplossing?",
+          "answer": "Configureerbare gegevensretentie per type, geplande automatische opruiming en mogelijk EU-serverhosting via Cal.com v2."
+        }
       ],
       "relatedServices": [
-        { "title": "CRM-automatisering", "description": "Verbind uw WhatsApp-agent met HubSpot, Salesforce of Pipedrive." },
-        { "title": "Uitgaande WhatsApp-campagnes", "description": "Geautomatiseerde prospectie en opvolging via goedgekeurde Meta-templates." },
-        { "title": "Cal.com-integratie", "description": "Slimme afsprakenboeking direct in WhatsApp." }
+        {
+          "title": "CRM-automatisering",
+          "description": "Verbind uw WhatsApp-agent met HubSpot, Salesforce of Pipedrive."
+        },
+        {
+          "title": "Uitgaande WhatsApp-campagnes",
+          "description": "Geautomatiseerde prospectie en opvolging via goedgekeurde Meta-templates."
+        },
+        {
+          "title": "Cal.com-integratie",
+          "description": "Slimme afsprakenboeking direct in WhatsApp."
+        }
       ]
     },
     "common": {
@@ -388,9 +596,18 @@
     "collectedTitle": "2. Verzamelde gegevens",
     "collectedIntro": "Wij verzamelen de volgende gegevens:",
     "collectedCategories": [
-      { "cat": "Boekingsformulier (iClosed)", "items": "Achternaam, voornaam, e-mailadres, telefoonnummer, bedrijfsnaam, bericht." },
-      { "cat": "Navigatie (Google Analytics)", "items": "Bezochte pagina's, sessieduur, land, apparaattype, verkeersbron. Geanonimiseerde gegevens." },
-      { "cat": "WhatsApp Business (klantenservice)", "items": "Berichten uitgewisseld met de AI-agent: tekst, spraakberichten, foto's, documenten. Alleen verwerkt om op uw verzoeken te reageren." }
+      {
+        "cat": "Boekingsformulier (iClosed)",
+        "items": "Achternaam, voornaam, e-mailadres, telefoonnummer, bedrijfsnaam, bericht."
+      },
+      {
+        "cat": "Navigatie (Google Analytics)",
+        "items": "Bezochte pagina's, sessieduur, land, apparaattype, verkeersbron. Geanonimiseerde gegevens."
+      },
+      {
+        "cat": "WhatsApp Business (klantenservice)",
+        "items": "Berichten uitgewisseld met de AI-agent: tekst, spraakberichten, foto's, documenten. Alleen verwerkt om op uw verzoeken te reageren."
+      }
     ],
     "purposeTitle": "3. Verwerkingsdoeleinden",
     "purposes": [
@@ -402,38 +619,92 @@
     ],
     "legalBasisTitle": "4. Rechtsgrond",
     "legalBases": [
-      { "name": "Toestemming", "desc": "voor het verzenden van marketingcommunicaties en het gebruik van niet-essentiële cookies." },
-      { "name": "Uitvoering van een overeenkomst", "desc": "om uw verzoeken te verwerken en onze diensten te leveren." },
-      { "name": "Gerechtvaardigd belang", "desc": "voor geanonimiseerde publieksanalyse en websitebeveiliging." }
+      {
+        "name": "Toestemming",
+        "desc": "voor het verzenden van marketingcommunicaties en het gebruik van niet-essentiële cookies."
+      },
+      {
+        "name": "Uitvoering van een overeenkomst",
+        "desc": "om uw verzoeken te verwerken en onze diensten te leveren."
+      },
+      {
+        "name": "Gerechtvaardigd belang",
+        "desc": "voor geanonimiseerde publieksanalyse en websitebeveiliging."
+      }
     ],
     "retentionTitle": "5. Bewaartermijn",
     "retentionCategoryHeader": "Gegevenscategorie",
     "retentionDurationHeader": "Duur",
     "retentionRows": [
-      { "cat": "Contactgegevens (formulier)", "duration": "3 jaar vanaf het laatste contact" },
-      { "cat": "Contractuele gegevens (klanten)", "duration": "5 jaar na het einde van het contract" },
-      { "cat": "WhatsApp-berichten (AI-agent)", "duration": "Configureerbaar per project (standaard 90 dagen)" },
-      { "cat": "Analyticsgegevens", "duration": "26 maanden (standaard Google Analytics-configuratie)" },
-      { "cat": "Essentiële cookies", "duration": "Maximaal 13 maanden" }
+      {
+        "cat": "Contactgegevens (formulier)",
+        "duration": "3 jaar vanaf het laatste contact"
+      },
+      {
+        "cat": "Contractuele gegevens (klanten)",
+        "duration": "5 jaar na het einde van het contract"
+      },
+      {
+        "cat": "WhatsApp-berichten (AI-agent)",
+        "duration": "Configureerbaar per project (standaard 90 dagen)"
+      },
+      {
+        "cat": "Analyticsgegevens",
+        "duration": "26 maanden (standaard Google Analytics-configuratie)"
+      },
+      {
+        "cat": "Essentiële cookies",
+        "duration": "Maximaal 13 maanden"
+      }
     ],
     "recipientsTitle": "6. Ontvangers van gegevens",
     "recipientsIntro": "Uw gegevens kunnen worden gedeeld met de volgende onderaannemers, strikt binnen het kader van de dienstverlening:",
     "recipients": [
-      { "name": "iClosed", "desc": "online afsprakenboeking tool" },
-      { "name": "Google LLC", "desc": "analytics (geanonimiseerde gegevens, EU-servers)" },
-      { "name": "Meta Platforms Ireland Ltd", "desc": "WhatsApp Business API-infrastructuur" },
-      { "name": "Vercel Inc.", "desc": "website-hosting" }
+      {
+        "name": "iClosed",
+        "desc": "online afsprakenboeking tool"
+      },
+      {
+        "name": "Google LLC",
+        "desc": "analytics (geanonimiseerde gegevens, EU-servers)"
+      },
+      {
+        "name": "Meta Platforms Ireland Ltd",
+        "desc": "WhatsApp Business API-infrastructuur"
+      },
+      {
+        "name": "Vercel Inc.",
+        "desc": "website-hosting"
+      }
     ],
     "recipientsNoSale": "Er worden geen gegevens aan derden verkocht. Overdrachten buiten de EU worden geregeld door standaard contractuele clausules (SCC's) conform de AVG.",
     "rightsTitle": "7. Uw rechten (AVG)",
     "rightsIntro": "In overeenstemming met de Algemene Verordening Gegevensbescherming (AVG — EU 2016/679) heeft u de volgende rechten:",
     "rights": [
-      { "name": "Recht op inzage", "desc": "een kopie van uw gegevens verkrijgen" },
-      { "name": "Recht op rectificatie", "desc": "onjuiste gegevens corrigeren" },
-      { "name": "Recht op wissing", "desc": "verwijdering van uw gegevens verzoeken" },
-      { "name": "Recht op overdraagbaarheid", "desc": "uw gegevens ontvangen in een gestructureerd formaat" },
-      { "name": "Recht van bezwaar", "desc": "bezwaar maken tegen bepaalde verwerkingen" },
-      { "name": "Recht op beperking", "desc": "de verwerking in bepaalde gevallen beperken" }
+      {
+        "name": "Recht op inzage",
+        "desc": "een kopie van uw gegevens verkrijgen"
+      },
+      {
+        "name": "Recht op rectificatie",
+        "desc": "onjuiste gegevens corrigeren"
+      },
+      {
+        "name": "Recht op wissing",
+        "desc": "verwijdering van uw gegevens verzoeken"
+      },
+      {
+        "name": "Recht op overdraagbaarheid",
+        "desc": "uw gegevens ontvangen in een gestructureerd formaat"
+      },
+      {
+        "name": "Recht van bezwaar",
+        "desc": "bezwaar maken tegen bepaalde verwerkingen"
+      },
+      {
+        "name": "Recht op beperking",
+        "desc": "de verwerking in bepaalde gevallen beperken"
+      }
     ],
     "rightsContact": "Om deze rechten uit te oefenen, kunt u contact met ons opnemen via e-mail:",
     "rightsDelay": "Wij verbinden ons ertoe te reageren binnen <strong>30 dagen</strong>.",
@@ -444,9 +715,21 @@
     "cookiesPurposeHeader": "Doel",
     "cookiesConsentHeader": "Toestemming",
     "cookiesRows": [
-      { "type": "Essentieel", "purpose": "Websitefunctionaliteit", "consent": "Niet vereist" },
-      { "type": "Analytics (GA4)", "purpose": "Geanonimiseerde publieksanalyse", "consent": "Vereist" },
-      { "type": "Derde partij (iClosed)", "purpose": "Afsprakenboeking", "consent": "Vereist" }
+      {
+        "type": "Essentieel",
+        "purpose": "Websitefunctionaliteit",
+        "consent": "Niet vereist"
+      },
+      {
+        "type": "Analytics (GA4)",
+        "purpose": "Geanonimiseerde publieksanalyse",
+        "consent": "Vereist"
+      },
+      {
+        "type": "Derde partij (iClosed)",
+        "purpose": "Afsprakenboeking",
+        "consent": "Vereist"
+      }
     ],
     "cookiesManage": "U kunt uw cookievoorkeuren op elk moment beheren via uw browserinstellingen.",
     "securityTitle": "9. Gegevensbeveiliging",
@@ -465,9 +748,21 @@
     "vslSubtitle": "2 minuten om precies te begrijpen wat we samen gaan doen",
     "stepsTitle": "Wat er tijdens de sessie gaat gebeuren",
     "steps": [
-      { "num": "Minuten 0–10", "title": "Bedrijfsdiagnose", "desc": "We analyseren uw WhatsApp-berichtenstromen, uw pijnpunten en de repetitieve taken die uw tijd verspillen." },
-      { "num": "Minuten 10–20", "title": "Technische evaluatie", "desc": "Haalbaarheidsstudie op basis van uw huidige tools (CRM, agenda, database). We vertellen u precies wat geautomatiseerd kan worden." },
-      { "num": "Minuten 20–30", "title": "Strategie & voorstel", "desc": "We definiëren samen uw actieplan. U vertrekt met een concreet, gespecificeerd voorstel binnen 48u in uw inbox." }
+      {
+        "num": "Minuten 0–10",
+        "title": "Bedrijfsdiagnose",
+        "desc": "We analyseren uw WhatsApp-berichtenstromen, uw pijnpunten en de repetitieve taken die uw tijd verspillen."
+      },
+      {
+        "num": "Minuten 10–20",
+        "title": "Technische evaluatie",
+        "desc": "Haalbaarheidsstudie op basis van uw huidige tools (CRM, agenda, database). We vertellen u precies wat geautomatiseerd kan worden."
+      },
+      {
+        "num": "Minuten 20–30",
+        "title": "Strategie & voorstel",
+        "desc": "We definiëren samen uw actieplan. U vertrekt met een concreet, gespecificeerd voorstel binnen 48u in uw inbox."
+      }
     ],
     "checklistTitle": "Om uw sessie te maximaliseren — bereid voor:",
     "checklistItems": [
@@ -478,20 +773,49 @@
     ],
     "statsTitle": "Wat onze klanten bereiken",
     "stats": [
-      { "stat": "−78%", "label": "onbeantwoorde berichten" },
-      { "stat": "3×", "label": "meer gekwalificeerde leads" },
-      { "stat": "2 wk.", "label": "om live te gaan" }
+      {
+        "stat": "−78%",
+        "label": "onbeantwoorde berichten"
+      },
+      {
+        "stat": "3×",
+        "label": "meer gekwalificeerde leads"
+      },
+      {
+        "stat": "2 wk.",
+        "label": "om live te gaan"
+      }
     ],
     "testimonialsTitle": "Zij deden het voor u",
     "testimonials": [
-      { "name": "Sophie M.", "role": "Directeur vastgoedkantoor, Lyon", "text": "Binnen 2 weken beantwoordt de agent vastgoedfoto's die via WhatsApp worden verzonden. Mijn medewerkers besteden 0 minuten aan basisvragen. Direct ROI." },
-      { "name": "Karim B.", "role": "E-commerce oprichter, Parijs", "text": "Onze WhatsApp-klantenservice draait 24/7 zonder menselijke tussenkomst. De klanttevredenheid steeg van 67% naar 91% in één maand." }
+      {
+        "name": "Sophie M.",
+        "role": "Directeur vastgoedkantoor, Lyon",
+        "text": "Binnen 2 weken beantwoordt de agent vastgoedfoto's die via WhatsApp worden verzonden. Mijn medewerkers besteden 0 minuten aan basisvragen. Direct ROI."
+      },
+      {
+        "name": "Karim B.",
+        "role": "E-commerce oprichter, Parijs",
+        "text": "Onze WhatsApp-klantenservice draait 24/7 zonder menselijke tussenkomst. De klanttevredenheid steeg van 67% naar 91% in één maand."
+      }
     ],
     "guaranteesTitle": "Onze garanties",
     "guarantees": [
-      { "icon": "🔒", "title": "Vertrouwelijk", "desc": "NDA op aanvraag beschikbaar" },
-      { "icon": "🎯", "title": "Vrijblijvend", "desc": "Geen aankoopverplichting" },
-      { "icon": "⚡", "title": "Voorstel binnen 48u", "desc": "Gespecificeerd en gedetailleerd" }
+      {
+        "icon": "🔒",
+        "title": "Vertrouwelijk",
+        "desc": "NDA op aanvraag beschikbaar"
+      },
+      {
+        "icon": "🎯",
+        "title": "Vrijblijvend",
+        "desc": "Geen aankoopverplichting"
+      },
+      {
+        "icon": "⚡",
+        "title": "Voorstel binnen 48u",
+        "desc": "Gespecificeerd en gedetailleerd"
+      }
     ],
     "ctaQuestion": "Een vraag voor de sessie?",
     "ctaWhatsapp": "Schrijf op WhatsApp",
@@ -506,6 +830,7 @@
     "link": "Meer informatie"
   },
   "demo": {
+    "tryAgent": "Probeer AI-agent",
     "badge": "Live interactieve demo",
     "title": "Test onze",
     "titleHighlight": "AI-agent",
@@ -579,7 +904,7 @@
     "teamSize": "Teamgrootte",
     "hourlyCost": "Gemiddelde uurkosten",
     "avgResponse": "Gemiddelde reactietijd",
-    "basedOn": "Gebaseerd op het Business-plan van €247/maand",
+    "basedOn": "Indicatieve schatting — offerte op maat na afspraak",
     "hoursSaved": "Bespaarde uren / maand",
     "vsManual": "vs. {hours}u handmatige verwerking",
     "monthlySavings": "Maandelijkse besparingen",
@@ -592,5 +917,15 @@
     "withMessages": "Met {count} berichten/dag bespaart u €{savings}/maand",
     "bookAudit": "Mijn gratis audit boeken",
     "min": "min"
+  },
+  "simulator": {
+    "placeholder": "Typ een bericht...",
+    "online": "online",
+    "photoSent": "Foto verzonden",
+    "choosePhoto": "Kies een foto om te verzenden",
+    "simulateVoice": "Simuleer een spraakbericht",
+    "voiceTranscribed": "Stem getranscribeerd",
+    "transcription": "Transcriptie",
+    "vsHuman45": "vs 45min mens"
   }
 }

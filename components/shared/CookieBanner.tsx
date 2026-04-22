@@ -28,10 +28,25 @@ export default function CookieBanner() {
     return () => window.clearTimeout(id);
   }, []);
 
+  // Hide vocalis widget while banner is visible so nothing overlaps accept/refuse.
+  useEffect(() => {
+    if (!visible) return;
+    const style = document.createElement("style");
+    style.setAttribute("data-cookie-banner", "true");
+    style.textContent = `
+      iframe[src*="vocalis.pro"],
+      iframe[id*="vocalis"],
+      [class*="vocalis"] { display: none !important; visibility: hidden !important; }
+    `;
+    document.head.appendChild(style);
+    return () => {
+      style.remove();
+    };
+  }, [visible]);
+
   function handleAccept() {
     setCookie("cookie_consent", "accepted", 365);
     setVisible(false);
-    // Dispatch event so GoogleAnalytics component can react
     window.dispatchEvent(new Event("cookie_consent_changed"));
   }
 
@@ -43,32 +58,53 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-50 border-t border-white/10 bg-[#0a0f1a]/95 backdrop-blur-sm px-4 py-3">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 sm:flex-row sm:justify-between">
-        <p className="text-sm text-slate-300">
-          {t("message")}{" "}
-          <Link
-            href={`/${locale}/politique-confidentialite`}
-            className="underline underline-offset-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+    <>
+      {/* Backdrop to dim the rest of the page + prevent clicks through */}
+      <div
+        aria-hidden="true"
+        className="fixed inset-0 z-[9990] bg-black/40 backdrop-blur-[2px] md:hidden"
+        style={{ pointerEvents: "auto" }}
+      />
+      <div
+        className="fixed left-0 right-0 z-[9991] border-t border-white/10 px-4 py-4 sm:py-3"
+        style={{
+          bottom: 0,
+          backgroundColor: "#0a0f1a",
+          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 1rem)",
+        }}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cookie-banner-msg"
+      >
+        <div className="mx-auto flex max-w-5xl flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p
+            id="cookie-banner-msg"
+            className="text-[13px] sm:text-sm leading-relaxed text-slate-300"
           >
-            {t("link")}
-          </Link>
-        </p>
-        <div className="flex shrink-0 gap-2">
-          <button
-            onClick={handleRefuse}
-            className="rounded-md border border-white/10 px-4 py-1.5 text-sm text-slate-300 transition-colors hover:bg-white/5"
-          >
-            {t("refuse")}
-          </button>
-          <button
-            onClick={handleAccept}
-            className="rounded-md bg-emerald-600 px-4 py-1.5 text-sm font-medium text-white transition-colors hover:bg-emerald-500"
-          >
-            {t("accept")}
-          </button>
+            {t("message")}{" "}
+            <Link
+              href={`/${locale}/politique-confidentialite`}
+              className="underline underline-offset-2 text-emerald-400 hover:text-emerald-300 transition-colors"
+            >
+              {t("link")}
+            </Link>
+          </p>
+          <div className="flex shrink-0 gap-2">
+            <button
+              onClick={handleRefuse}
+              className="flex-1 sm:flex-none rounded-lg border border-white/15 px-5 py-3 sm:py-2 text-sm font-medium text-slate-200 transition-colors hover:bg-white/5 active:bg-white/10"
+            >
+              {t("refuse")}
+            </button>
+            <button
+              onClick={handleAccept}
+              className="flex-1 sm:flex-none rounded-lg bg-emerald-600 px-5 py-3 sm:py-2 text-sm font-semibold text-white transition-colors hover:bg-emerald-500 active:bg-emerald-700"
+            >
+              {t("accept")}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -7,6 +7,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("title"),
     description: t("metaDescription"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/politique-confidentialite`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/politique-confidentialite",
+        en: "https://agentic-whatsup.com/en/politique-confidentialite",
+        de: "https://agentic-whatsup.com/de/politique-confidentialite",
+        nl: "https://agentic-whatsup.com/nl/politique-confidentialite",
+        "x-default": "https://agentic-whatsup.com/fr/politique-confidentialite",
+      },
+    },
   };
 }
 

@@ -9,6 +9,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("campagnes.title"),
     description: t("campagnes.subtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/services/campagnes-whatsapp`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/campagnes-whatsapp",
+        en: "https://agentic-whatsup.com/en/services/campagnes-whatsapp",
+        de: "https://agentic-whatsup.com/de/services/campagnes-whatsapp",
+        nl: "https://agentic-whatsup.com/nl/services/campagnes-whatsapp",
+        "x-default": "https://agentic-whatsup.com/fr/services/campagnes-whatsapp",
+      },
+    },
   };
 }
 

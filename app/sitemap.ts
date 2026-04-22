@@ -15,6 +15,7 @@ const secteurSlugs = [
 
 const pages = [
   { path: "", changeFrequency: "weekly" as const, priority: 1.0 },
+  { path: "/demo", changeFrequency: "weekly" as const, priority: 0.95 },
   { path: "/services/agent-ia-whatsapp", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/services/qualification-leads", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/services/campagnes-whatsapp", changeFrequency: "monthly" as const, priority: 0.8 },
@@ -33,8 +34,15 @@ const pages = [
   { path: "/comparatif/vs-wati", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/comparatif/vs-manychat", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/comparatif/vs-whatsapp-business", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/comparatif/vs-respond-io", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/comparatif/vs-sendpulse", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/comparatif/vs-chatfuel", changeFrequency: "monthly" as const, priority: 0.9 },
+  { path: "/comparatif/vs-zenvia", changeFrequency: "monthly" as const, priority: 0.9 },
   { path: "/blog", changeFrequency: "weekly" as const, priority: 0.8 },
   { path: "/contact", changeFrequency: "yearly" as const, priority: 0.7 },
+  { path: "/roi", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/urgent", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/social", changeFrequency: "weekly" as const, priority: 0.9 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

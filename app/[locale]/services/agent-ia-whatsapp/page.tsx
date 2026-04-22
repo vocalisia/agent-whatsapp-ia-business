@@ -14,6 +14,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("agentIa.metaTitle"),
     description: t("agentIa.heroSubtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/services/agent-ia-whatsapp`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/agent-ia-whatsapp",
+        en: "https://agentic-whatsup.com/en/services/agent-ia-whatsapp",
+        de: "https://agentic-whatsup.com/de/services/agent-ia-whatsapp",
+        nl: "https://agentic-whatsup.com/nl/services/agent-ia-whatsapp",
+        "x-default": "https://agentic-whatsup.com/fr/services/agent-ia-whatsapp",
+      },
+    },
   };
 }
 

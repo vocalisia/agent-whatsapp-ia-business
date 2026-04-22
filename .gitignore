@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+
+# Cold email outbound (never commit leads / state)
+scripts/outbound/leads.json
+scripts/outbound/state.json

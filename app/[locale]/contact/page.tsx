@@ -8,6 +8,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("title"),
     description: t("subtitle"),
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/contact`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/contact",
+        en: "https://agentic-whatsup.com/en/contact",
+        de: "https://agentic-whatsup.com/de/contact",
+        nl: "https://agentic-whatsup.com/nl/contact",
+        "x-default": "https://agentic-whatsup.com/fr/contact",
+      },
+    },
   };
 }
 
@@ -27,23 +37,23 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       {/* Hero */}
       <div className="relative overflow-hidden border-b border-surface-2">
         <div className="absolute inset-0 bg-gradient-to-br from-wa/5 via-bg to-bg" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
           <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium mb-5">
             <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
             {t("badge")}
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 text-balance" style={{ fontFamily: "Onest, sans-serif" }}>
             {t("title")}
           </h1>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto text-pretty">
             {t("subtitle")}
           </p>
         </div>
       </div>
 
       {/* Main grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
 
           {/* Left — context */}
           <div className="lg:col-span-1 space-y-8">

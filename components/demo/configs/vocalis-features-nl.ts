@@ -157,12 +157,12 @@ export const VOCALIS_INTENTS_NL: Record<string, BotResponse> = {
     ],
   },
   prijs: {
-    text: "Onze formules:\n\n**Starter** — 97 EUR/maand\n- 1 WhatsApp-agent\n- 500 gesprekken/maand\n- FAQ + kennisbank\n\n**Business** — 247 EUR/maand\n- Multimodale agent (foto + spraak + oproepen)\n- Onbeperkte gesprekken\n- CRM + Agenda + Campagnes\n- Flow Builder + Automatiseringen\n\n**Enterprise** — Op maat\n- Multi-agents + stem klonen\n- API + Webhooks\n- Gegarandeerde SLA + custom dashboards\n\nSetup + training inbegrepen.",
-    delay: 2200,
+    text: "De prijs hangt af van uw WhatsApp-volume, CRM-integraties en opties.\n\nWe stellen een persoonlijke offerte op tijdens uw **gratis strategiegesprek** (30 min).\n\nU vertrekt met:\n- Een becijferd actieplan\n- Een demo afgestemd op uw sector\n- Een 90-dagen ROI-projectie\n\nZonder verplichting. Boek uw slot.",
+    delay: 2000,
     quickReplies: [
-      { label: "Gratis proef?", value: "proef" },
-      { label: "Afspraak maken", value: "afspraak" },
+      { label: "30 min boeken", value: "afspraak" },
       { label: "Typische ROI?", value: "roi" },
+      { label: "Gratis proef?", value: "proef" },
     ],
   },
   proef: {
