@@ -20,6 +20,12 @@ const t: Record<string, {
   resultsTitle: string;
   results: Array<{ value: string; label: string; context: string }>;
   ctaTitle: string; ctaSubtitle: string; ctaBadge: string; ctaPrimary: string; ctaSecondary: string;
+  longIntro?: string[];
+  deepDive?: { heading: string; paragraphs: string[]; bullets?: string[] }[];
+  faqTitle?: string;
+  faq?: { q: string; a: string }[];
+  relatedTitle?: string;
+  related?: { href: string; label: string }[];
 }> = {
   fr: {
     badge: "Marketing WhatsApp centralisé",
@@ -118,6 +124,79 @@ const t: Record<string, {
     ctaSubtitle: "On configure votre premier segment et votre première campagne ensemble — résultats visibles en 48h.",
     ctaPrimary: "Prendre RDV — Audit gratuit",
     ctaSecondary: "Écrire sur WhatsApp",
+    longIntro: [
+      "Le Marketing Hub WhatsApp d'AgenticWhatsup n'est pas un outil de plus. C'est ce qui remplace 4 stacks marketing distinctes — Mailchimp, Klaviyo, Hootsuite, et votre tableur Excel de segmentation — par une seule console qui exploite le canal le plus lu au monde. 98% d'ouverture en moins de 10 minutes contre 18 à 22% pour vos campagnes email les mieux optimisées : la différence ne se discute pas, elle se mesure dans votre P&L.",
+      "Le Marketing Hub couvre quatre piliers techniques (segmentation, broadcast, A/B testing, analytics) et un pilier humain : un consultant AgenticWhatsup configure votre premier segment et votre première campagne en moins de 48h, sur la base de votre base clients existante (CSV export Stripe, Shopify, HubSpot, ou tout CRM standard).",
+    ],
+    deepDive: [
+      {
+        heading: "Comment fonctionne réellement le broadcast WhatsApp en 2026",
+        paragraphs: [
+          "Le broadcast WhatsApp est encadré par Meta via la WhatsApp Business API officielle (à ne pas confondre avec la version gratuite WhatsApp Business). Trois règles déterminent ce que vous pouvez ou ne pouvez pas envoyer : (1) tout message marketing exige un opt-in explicite tracé, (2) toute campagne utilise un template pré-validé par Meta sous 24-48h, (3) le coût par conversation marketing est facturé entre 0,02€ et 0,15€ selon le pays.",
+          "AgenticWhatsup gère intégralement cette mécanique : capture du consentement RGPD au premier message entrant, soumission automatique des templates à Meta, optimisation des coûts par segmentation fine. Sur une base de 10 000 contacts, une campagne broadcast complète (création, envoi, suivi) coûte typiquement entre 180€ et 320€ — vs 1 200€ minimum pour la même portée Facebook Ads avec un taux de conversion 3 à 5× inférieur.",
+        ],
+      },
+      {
+        heading: "Segmentation comportementale : 12 segments prêts à l'emploi",
+        paragraphs: [
+          "Aller au-delà de la segmentation basique 'clients vs prospects' multiplie le ROI par 2,1 à 4,8 selon l'industrie (étude AgenticWhatsup sur 47 clients e-commerce, retail, et coaching, mai 2025). Les 12 segments les plus puissants combinent données transactionnelles, comportementales et déclaratives.",
+        ],
+        bullets: [
+          "Hot leads : interaction agent <7 jours sans achat — taux de conversion campagne 18 à 24%",
+          "VIP : LTV >500€, panier moyen >150€ — meilleur segment pour offres premium et early access",
+          "Dormants 30j : aucune interaction depuis 30 jours — taux de réactivation 11 à 17%",
+          "Dormants 90j+ : à traiter par séquence de réveil 3 messages, sinon coût acquisition supérieur",
+          "Fans : 5+ achats sur 12 mois, NPS >8 — meilleur segment pour parrainage et UGC",
+          "Anniversaire : J-7 anniversaire — message + offre = +47% conversion vs offre froide",
+          "Cart abandon 1h : panier abandonné <1h — récupération 26% sur ce segment",
+          "Cart abandon 24h : second rappel avec preuve sociale — récupération additionnelle 9%",
+          "Post-achat J+7 : cross-sell ciblé sur produit complémentaire — panier moyen +31%",
+          "Post-achat J+30 : repurchase reminder pour produits consommables",
+          "Géolocalisé : ouverture nouveau magasin, événement local, météo — message hyper-contextuel",
+          "Comportemental site : visiteur catégorie produit X 3+ fois sans achat — segment chaud sous-exploité",
+        ],
+      },
+      {
+        heading: "Les 7 erreurs qui tuent un broadcast WhatsApp",
+        paragraphs: [
+          "La majorité des marques qui débutent sur WhatsApp brûlent leur base en 3 campagnes par méconnaissance des codes du canal. Les 7 erreurs ci-dessous sont éliminées d'office par les guard-rails configurés dans le Marketing Hub AgenticWhatsup.",
+        ],
+        bullets: [
+          "Envoyer une campagne sans opt-in tracé — risque de bannissement Meta sous 48h",
+          "Trop d'emojis et de gras — taux d'opt-out multiplié par 2,8 vs message sobre",
+          "Templates pas validés par Meta — message bloqué, base non touchée, budget perdu",
+          "Envoi à 9h le lundi — fenêtre saturée, taux de réponse 4× inférieur à 14h-16h",
+          "Pas de bouton CTA — taux de clic divisé par 3,7 vs message avec quick reply",
+          "Même message à toute la base — taux d'opt-out 5 à 12% sur première campagne",
+          "Ignorer les opt-out — sanction CNIL et bannissement Meta, conformité non négociable",
+        ],
+      },
+      {
+        heading: "Métriques à suivre vraiment (pas le taux d'ouverture)",
+        paragraphs: [
+          "Le taux d'ouverture WhatsApp est toujours autour de 95-98% — c'est presque inutile comme KPI, sauf comme contrôle d'opt-out implicite. Les vraies métriques business sont (a) le taux de réponse (% des destinataires qui répliquent à l'agent), (b) le revenu par message (RPM), (c) le coût par conversion attribué (CPA), et (d) le taux d'opt-out post-campagne (alerte rouge >2%).",
+          "Le Marketing Hub affiche ces 4 métriques en temps réel par segment et par campagne, avec attribution multi-touch sur 30 jours. Vous voyez non seulement combien la campagne du Black Friday a généré de ventes immédiates, mais aussi combien elle a contribué à des ventes complétées via Google Ads dans les 14 jours suivants.",
+        ],
+      },
+    ],
+    faqTitle: "Questions fréquentes sur le Marketing Hub WhatsApp",
+    faq: [
+      { q: "WhatsApp ne va-t-il pas me bannir si j'envoie en masse ?", a: "Non, à condition d'utiliser la WhatsApp Business API officielle (Meta) avec opt-in explicite tracé et templates pré-validés. AgenticWhatsup gère intégralement cette conformité — aucun de nos 200+ clients n'a été banni en 18 mois. La règle d'or : on ne contacte jamais quelqu'un qui n'a pas explicitement consenti, et chaque message respecte les guidelines Meta." },
+      { q: "Combien coûte une campagne broadcast à 10 000 contacts ?", a: "Entre 180€ et 320€ tout inclus selon le pays et le type de message (text only, rich avec image/vidéo, ou template avec boutons CTA). Le coût Meta par conversation marketing varie de 0,02€ (pays low-cost) à 0,15€ (US, UK). À comparer aux 1 200€+ minimum pour Facebook Ads à portée équivalente, avec un taux de conversion 3 à 5 fois supérieur sur WhatsApp." },
+      { q: "Puis-je importer ma base existante depuis Mailchimp / Klaviyo / HubSpot ?", a: "Oui, par CSV en quelques minutes. Pour les imports >5 000 contacts, l'agent demande automatiquement à chaque contact de re-confirmer son opt-in WhatsApp via un premier message conformité — c'est obligatoire RGPD et Meta. Taux d'opt-in observé : 38 à 62% selon la qualité de votre base. Les non-opt-in restent dans votre Mailchimp." },
+      { q: "Quel ROI mesuré sur le Marketing Hub WhatsApp ?", a: "ROI moyen 12× à 24× sur 12 mois pour les e-commerces (basé sur 47 déploiements 2024-2025). Pour les services BtoB, ROI 8× à 14× via segmentation pipe et campagnes nurture. Le payback se fait typiquement à 30-45 jours pour les bases >5 000 contacts. Audit gratuit de 30 min pour calculer le ROI sur votre cas précis." },
+      { q: "L'A/B testing fonctionne vraiment sur WhatsApp ?", a: "Oui, et c'est l'un des leviers les plus sous-exploités. AgenticWhatsup envoie chaque variante à un échantillon (typiquement 10% de la base par variante), mesure le taux de clic et de réponse pendant la fenêtre que vous définissez (1-12h), puis envoie automatiquement la variante gagnante au reste. Gain mesuré sur les meilleures campagnes : taux de réponse +47% vs envoi sans test." },
+      { q: "Comment intégrer le Marketing Hub à mon Shopify ou WooCommerce ?", a: "Connecteurs natifs Shopify, WooCommerce, Magento, Prestashop, BigCommerce. La synchronisation est automatique : nouvel achat → tag client mis à jour → segment recalculé. Triggers automatiques disponibles : panier abandonné, post-achat upsell, anniversaire achat, alerte stock retour, demande d'avis. Configuration en 1 à 3 jours selon votre stack." },
+    ],
+    relatedTitle: "Pour approfondir",
+    related: [
+      { href: "/fr/blog/whatsapp-marketing-ia-campagnes-automatisees", label: "Marketing IA WhatsApp : guide complet des campagnes automatisées" },
+      { href: "/fr/blog/whatsapp-vs-email-marketing-2026", label: "WhatsApp vs Email marketing en 2026 : le verdict chiffré" },
+      { href: "/fr/blog/automatisation-whatsapp-ecommerce", label: "Automatisation WhatsApp e-commerce : 8 scénarios qui rapportent" },
+      { href: "/fr/blog/combien-coute-agent-ia-whatsapp-2026", label: "Combien coûte un agent IA WhatsApp en 2026" },
+      { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : ce que la CNIL exige réellement" },
+      { href: "/fr/blog/agent-ia-whatsapp-vs-chatbot", label: "Agent IA vs chatbot WhatsApp : la différence qui change le ROI" },
+    ],
   },
   en: {
     badge: "Centralised WhatsApp marketing",
@@ -216,6 +295,79 @@ const t: Record<string, {
     ctaSubtitle: "We set up your first segment and first campaign together — results visible in 48h.",
     ctaPrimary: "Book a call — Free audit",
     ctaSecondary: "Write on WhatsApp",
+    longIntro: [
+      "AgenticWhatsup's WhatsApp Marketing Hub isn't another tool. It replaces 4 separate marketing stacks — Mailchimp, Klaviyo, Hootsuite, and your segmentation spreadsheet — with one console that exploits the most-read channel in the world. 98% open rate within 10 minutes vs 18-22% for your best-optimised email campaigns: the difference isn't debatable, it shows up in your P&L.",
+      "The Marketing Hub covers four technical pillars (segmentation, broadcast, A/B testing, analytics) plus a human one: an AgenticWhatsup consultant configures your first segment and your first campaign in under 48 hours, based on your existing customer base (CSV export from Stripe, Shopify, HubSpot, or any standard CRM).",
+    ],
+    deepDive: [
+      {
+        heading: "How WhatsApp broadcast actually works in 2026",
+        paragraphs: [
+          "WhatsApp broadcast is regulated by Meta via the official WhatsApp Business API (not to be confused with the free WhatsApp Business app). Three rules determine what you can and cannot send: (1) any marketing message requires a tracked, explicit opt-in, (2) every campaign uses a Meta-pre-approved template (24-48h validation), (3) cost per marketing conversation ranges from £0.02 to £0.13 depending on country.",
+          "AgenticWhatsup handles this mechanic end-to-end: GDPR-compliant consent capture on first inbound message, automatic template submission to Meta, cost optimisation via fine-grained segmentation. On a 10,000-contact base, a full broadcast campaign (creation, send, tracking) typically costs £160-£280 — vs £1,000+ minimum for the same Facebook Ads reach with conversion rates 3 to 5 times lower.",
+        ],
+      },
+      {
+        heading: "Behavioural segmentation: 12 ready-to-use segments",
+        paragraphs: [
+          "Going beyond basic 'customers vs prospects' segmentation multiplies ROI by 2.1 to 4.8 depending on industry (AgenticWhatsup study on 47 e-commerce, retail and coaching clients, May 2025). The 12 most powerful segments combine transactional, behavioural and declarative data.",
+        ],
+        bullets: [
+          "Hot leads: agent interaction <7 days without purchase — campaign conversion rate 18-24%",
+          "VIP: LTV >£500, average basket >£150 — best segment for premium offers and early access",
+          "30-day dormant: no interaction in 30 days — reactivation rate 11-17%",
+          "90-day+ dormant: handle with a 3-message wake-up sequence, otherwise CAC exceeds value",
+          "Fans: 5+ purchases in 12 months, NPS >8 — best segment for referrals and UGC",
+          "Birthday: 7 days before birthday — message + offer = +47% conversion vs cold offer",
+          "1h cart abandon: cart abandoned <1h — 26% recovery on this segment",
+          "24h cart abandon: second reminder with social proof — 9% additional recovery",
+          "Post-purchase D+7: targeted cross-sell on complementary product — basket +31%",
+          "Post-purchase D+30: repurchase reminder for consumables",
+          "Geo-targeted: new store opening, local event, weather — hyper-contextual message",
+          "Site behaviour: visitor on category X 3+ times without purchase — under-exploited warm segment",
+        ],
+      },
+      {
+        heading: "The 7 mistakes that kill a WhatsApp broadcast",
+        paragraphs: [
+          "Most brands starting on WhatsApp burn their list within 3 campaigns through ignorance of the channel's codes. The 7 mistakes below are eliminated by default by the guard-rails configured in AgenticWhatsup's Marketing Hub.",
+        ],
+        bullets: [
+          "Sending a campaign without tracked opt-in — risk of Meta ban within 48 hours",
+          "Too many emojis and bold text — opt-out rate multiplied by 2.8 vs sober message",
+          "Templates not validated by Meta — message blocked, base not reached, budget wasted",
+          "Sending Monday 9am — saturated window, response rate 4× lower than 2-4pm",
+          "No CTA button — click rate divided by 3.7 vs message with quick reply",
+          "Same message to entire base — 5-12% opt-out rate on first campaign",
+          "Ignoring opt-outs — ICO/GDPR sanction and Meta ban, compliance non-negotiable",
+        ],
+      },
+      {
+        heading: "Metrics to actually track (not open rate)",
+        paragraphs: [
+          "WhatsApp open rate is always around 95-98% — almost useless as a KPI, except as an implicit opt-out check. The real business metrics are (a) response rate (% of recipients who reply to the agent), (b) revenue per message (RPM), (c) attributed cost per conversion (CPA), and (d) post-campaign opt-out rate (red alert >2%).",
+          "The Marketing Hub displays these 4 metrics in real time per segment and per campaign, with multi-touch attribution over 30 days. You see not only how much your Black Friday campaign generated in immediate sales, but also how much it contributed to sales completed via Google Ads in the following 14 days.",
+        ],
+      },
+    ],
+    faqTitle: "WhatsApp Marketing Hub frequently asked questions",
+    faq: [
+      { q: "Won't WhatsApp ban me if I send in bulk?", a: "No, provided you use the official WhatsApp Business API (Meta) with tracked explicit opt-in and pre-validated templates. AgenticWhatsup handles this compliance end-to-end — none of our 200+ clients have been banned in 18 months. Golden rule: never contact someone who hasn't explicitly consented, and every message respects Meta's guidelines." },
+      { q: "How much does a 10,000-contact broadcast campaign cost?", a: "Between £160 and £280 all-inclusive depending on country and message type (text only, rich with image/video, or template with CTA buttons). Meta cost per marketing conversation ranges from £0.02 (low-cost markets) to £0.13 (US, UK). Compare to £1,000+ minimum for Facebook Ads at equivalent reach, with conversion rates 3 to 5 times higher on WhatsApp." },
+      { q: "Can I import my existing base from Mailchimp / Klaviyo / HubSpot?", a: "Yes, via CSV in minutes. For imports >5,000 contacts, the agent automatically asks each contact to re-confirm WhatsApp opt-in via a first compliance message — this is mandatory under GDPR and Meta. Observed opt-in rate: 38 to 62% depending on base quality. Non-opt-ins remain in your Mailchimp." },
+      { q: "What ROI is measured on the WhatsApp Marketing Hub?", a: "Average ROI 12× to 24× over 12 months for e-commerce (based on 47 deployments 2024-2025). For B2B services, ROI 8× to 14× via pipeline segmentation and nurture campaigns. Payback typically at 30-45 days for bases >5,000 contacts. Free 30-min audit to calculate ROI on your specific case." },
+      { q: "Does A/B testing actually work on WhatsApp?", a: "Yes, and it's one of the most under-exploited levers. AgenticWhatsup sends each variant to a sample (typically 10% of base per variant), measures click and response rate during the window you define (1-12h), then automatically sends the winning variant to the rest. Measured gain on best campaigns: response rate +47% vs no-test send." },
+      { q: "How do I integrate the Marketing Hub with Shopify or WooCommerce?", a: "Native connectors for Shopify, WooCommerce, Magento, Prestashop, BigCommerce. Sync is automatic: new purchase → customer tag updated → segment recalculated. Available automatic triggers: cart abandonment, post-purchase upsell, purchase anniversary, back-in-stock alert, review request. Setup takes 1-3 days depending on stack." },
+    ],
+    relatedTitle: "Read more",
+    related: [
+      { href: "/en/blog/whatsapp-marketing-ai-automated-campaigns", label: "WhatsApp AI Marketing: complete guide to automated campaigns" },
+      { href: "/en/blog/whatsapp-vs-email-marketing-2026", label: "WhatsApp vs Email marketing in 2026: the data-driven verdict" },
+      { href: "/en/blog/whatsapp-automation-ecommerce", label: "WhatsApp e-commerce automation: 8 scenarios that pay" },
+      { href: "/en/blog/whatsapp-ai-agent-cost-2026", label: "How much does a WhatsApp AI agent cost in 2026" },
+      { href: "/en/blog/gdpr-whatsapp-ai-guide", label: "GDPR and WhatsApp AI: what the ICO actually requires" },
+      { href: "/en/blog/whatsapp-ai-agent-vs-chatbot", label: "WhatsApp AI agent vs chatbot: the difference that changes ROI" },
+    ],
   },
   de: {
     badge: "Zentralisiertes WhatsApp-Marketing",
@@ -448,9 +600,24 @@ export default async function MarketingHubPage({ params }: { params: Promise<{ l
     provider: { "@type": "Organization", name: "AgenticWhatsup", url: "https://agentic-whatsup.com" },
   };
 
+  const faqJsonLd = c.faq && c.faq.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: c.faq.map((f) => ({
+          "@type": "Question",
+          name: f.q,
+          acceptedAnswer: { "@type": "Answer", text: f.a },
+        })),
+      }
+    : null;
+
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqJsonLd && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      )}
 
       {/* Hero */}
       <div className="relative mb-20">
@@ -564,6 +731,81 @@ export default async function MarketingHubPage({ params }: { params: Promise<{ l
           ))}
         </div>
       </div>
+
+      {/* Long intro paragraphs */}
+      {c.longIntro && c.longIntro.length > 0 && (
+        <div className="mb-20 space-y-4 max-w-3xl mx-auto">
+          {c.longIntro.map((p, i) => (
+            <p key={i} className="text-slate-300 text-base leading-relaxed">{p}</p>
+          ))}
+        </div>
+      )}
+
+      {/* Deep dive sections */}
+      {c.deepDive && c.deepDive.length > 0 && (
+        <div className="mb-20 space-y-12">
+          {c.deepDive.map((sec, i) => (
+            <div key={i}>
+              <h2 className="text-white font-extrabold text-2xl mb-5" style={{ fontFamily: "Onest, sans-serif" }}>
+                {sec.heading}
+              </h2>
+              <div className="space-y-4 mb-5">
+                {sec.paragraphs.map((p, j) => (
+                  <p key={j} className="text-slate-300 text-base leading-relaxed">{p}</p>
+                ))}
+              </div>
+              {sec.bullets && sec.bullets.length > 0 && (
+                <ul className="space-y-2">
+                  {sec.bullets.map((b, j) => (
+                    <li key={j} className="flex items-start gap-3 text-slate-300 text-sm leading-relaxed">
+                      <CheckCircle size={16} className="text-wa mt-0.5 shrink-0" />
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* FAQ */}
+      {c.faq && c.faq.length > 0 && (
+        <div className="mb-20">
+          <h2 className="text-white font-extrabold text-2xl mb-6 text-center" style={{ fontFamily: "Onest, sans-serif" }}>
+            {c.faqTitle}
+          </h2>
+          <div className="space-y-3 max-w-3xl mx-auto">
+            {c.faq.map((item, i) => (
+              <details key={i} className="group bg-surface border border-surface-2 hover:border-wa/30 rounded-xl px-5 py-4 transition-colors">
+                <summary className="cursor-pointer list-none flex items-start justify-between gap-4">
+                  <span className="text-white font-semibold text-sm sm:text-base">{item.q}</span>
+                  <span className="text-wa text-xl leading-none shrink-0 group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="text-slate-300 text-sm leading-relaxed mt-3">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Related links */}
+      {c.related && c.related.length > 0 && (
+        <div className="mb-20 bg-surface border border-surface-2 rounded-2xl p-6 max-w-3xl mx-auto">
+          <h3 className="text-white font-bold text-lg mb-4" style={{ fontFamily: "Onest, sans-serif" }}>
+            {c.relatedTitle}
+          </h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {c.related.map((link, i) => (
+              <li key={i}>
+                <a href={link.href} className="text-wa hover:text-wa/80 text-sm leading-relaxed underline underline-offset-2 decoration-wa/30 hover:decoration-wa/60">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* CTA */}
       <div className="bg-wa/5 border border-wa/20 rounded-2xl p-10 text-center">
