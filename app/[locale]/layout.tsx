@@ -143,16 +143,6 @@ export default async function LocaleLayout({
                   areaServed: ["FR", "CH", "BE", "CA"],
                 },
                 {
-                  "@type": "FAQPage",
-                  mainEntity: [
-                    { "@type": "Question", name: "Qu'est-ce qu'un agent WhatsApp IA ?", acceptedAnswer: { "@type": "Answer", text: "Un agent WhatsApp IA est un assistant virtuel intelligent qui répond automatiquement aux messages de vos clients sur WhatsApp Business, comprend les vocaux et analyse les photos, 24h/24 et 7j/7 sans intervention humaine." } },
-                    { "@type": "Question", name: "Comment fonctionne l'automatisation WhatsApp avec l'IA ?", acceptedAnswer: { "@type": "Answer", text: "L'agent IA se connecte à votre numéro WhatsApp Business, analyse chaque message entrant grâce à l'intelligence artificielle, et répond de manière personnalisée selon votre catalogue, vos FAQ et vos processus métier." } },
-                    { "@type": "Question", name: "Est-ce que le service est compatible avec WhatsApp Business ?", acceptedAnswer: { "@type": "Answer", text: "Oui, notre agent est 100% compatible avec WhatsApp Business API. Il s'intègre directement à votre compte WhatsApp Business existant sans changer de numéro." } },
-                    { "@type": "Question", name: "Comment fonctionne le tarif d'un agent WhatsApp automatisé ?", acceptedAnswer: { "@type": "Answer", text: "Chaque agent WhatsApp IA est configuré sur-mesure selon votre volume, vos intégrations CRM et vos objectifs. Nous construisons un devis personnalisé pendant votre session stratégique gratuite, incluant installation, formation et maintenance. Aucun engagement long terme." } },
-                    { "@type": "Question", name: "Comment intégrer un agent IA à mon WhatsApp Business ?", acceptedAnswer: { "@type": "Answer", text: "L'intégration se fait en moins de 48h. Notre équipe prend en charge la configuration complète : connexion à votre WhatsApp Business, paramétrage de l'IA selon vos produits/services, et tests avant mise en ligne." } },
-                  ],
-                },
-                {
                   "@type": "BreadcrumbList",
                   itemListElement: [
                     { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
