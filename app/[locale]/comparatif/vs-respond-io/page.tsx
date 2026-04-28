@@ -260,12 +260,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/comparatif/vs-respond-io`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "AgenticWhatsup vs Respond.io, comparatif Respond.io WhatsApp IA, Respond.io alternative, meilleur agent IA WhatsApp omnichannel",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-respond-io", en: "/en/comparatif/vs-respond-io", de: "/de/comparatif/vs-respond-io", nl: "/nl/comparatif/vs-respond-io" },
-      canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-respond-io`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-respond-io",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-respond-io",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-respond-io",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-respond-io",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-respond-io",
+      },
+    },
+    openGraph: {
+      type: "article",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

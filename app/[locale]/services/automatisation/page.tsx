@@ -386,12 +386,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/automatisation`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "automatisation WhatsApp IA, workflows WhatsApp automatiques, réponses automatiques WhatsApp, agent IA WhatsApp 24h/24",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/services/automatisation", en: "/en/services/automatisation", de: "/de/services/automatisation", nl: "/nl/services/automatisation" },
-      canonical: `https://agentic-whatsup.com/${locale}/services/automatisation`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/automatisation",
+        en: "https://agentic-whatsup.com/en/services/automatisation",
+        de: "https://agentic-whatsup.com/de/services/automatisation",
+        nl: "https://agentic-whatsup.com/nl/services/automatisation",
+        "x-default": "https://agentic-whatsup.com/fr/services/automatisation",
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

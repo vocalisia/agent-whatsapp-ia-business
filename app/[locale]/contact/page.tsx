@@ -1,15 +1,20 @@
+import type { Metadata } from "next";
 import { CheckCircle, Clock, Shield, Zap } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import CalEmbed from "@/components/shared/CalEmbed";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "contact" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/contact`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t("title"),
     description: t("subtitle"),
+    keywords: "audit gratuit agent IA WhatsApp, contact agenticwhatsup, prendre rendez-vous WhatsApp IA, demo agent whatsapp",
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://agentic-whatsup.com/${locale}/contact`,
+      canonical: canonicalUrl,
       languages: {
         fr: "https://agentic-whatsup.com/fr/contact",
         en: "https://agentic-whatsup.com/en/contact",
@@ -17,6 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/contact",
         "x-default": "https://agentic-whatsup.com/fr/contact",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t("title"),
+      description: t("subtitle"),
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: "AgenticWhatsup — Audit gratuit 30 min" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("subtitle"),
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
@@ -32,8 +52,43 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
     { icon: Zap,     label: t("guaranteeResponse"),      sub: t("guaranteeResponseSub") },
   ];
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/contact`;
+  const contactPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "@id": `${canonicalUrl}#contactpage`,
+    "name": t("title"),
+    "description": t("subtitle"),
+    "url": canonicalUrl,
+    "inLanguage": locale,
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
+      "name": "AgenticWhatsup",
+      "url": "https://agentic-whatsup.com",
+      "email": "contact@agentic-whatsup.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@agentic-whatsup.com",
+        "contactType": "sales",
+        "availableLanguage": ["French", "English", "German", "Dutch"],
+      },
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": t("title"), "item": canonicalUrl },
+    ],
+  };
+
   return (
     <div className="min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* Hero */}
       <div className="relative overflow-hidden border-b border-surface-2">
         <div className="absolute inset-0 bg-gradient-to-br from-wa/5 via-bg to-bg" />

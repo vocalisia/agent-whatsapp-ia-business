@@ -6,11 +6,15 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/campagnes-whatsapp`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t("campagnes.title"),
     description: t("campagnes.subtitle"),
+    keywords: "campagnes WhatsApp IA, broadcast WhatsApp automatisé, marketing WhatsApp agent IA, 98% taux ouverture WhatsApp",
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://agentic-whatsup.com/${locale}/services/campagnes-whatsapp`,
+      canonical: canonicalUrl,
       languages: {
         fr: "https://agentic-whatsup.com/fr/services/campagnes-whatsapp",
         en: "https://agentic-whatsup.com/en/services/campagnes-whatsapp",
@@ -18,6 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/services/campagnes-whatsapp",
         "x-default": "https://agentic-whatsup.com/fr/services/campagnes-whatsapp",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t("campagnes.title"),
+      description: t("campagnes.subtitle"),
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: t("campagnes.title") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("campagnes.title"),
+      description: t("campagnes.subtitle"),
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

@@ -78,21 +78,30 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   const canonicalUrl = `https://agentic-whatsup.com/${locale}/blog/${slug}`;
+  const isAgenticAuthor = !post.meta.author || post.meta.author === "AgenticWhatsup";
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
+    "@id": `${canonicalUrl}#article`,
     headline: post.meta.title,
     description: post.meta.description,
     datePublished: post.meta.date,
     dateModified: post.meta.date,
     inLanguage: locale,
-    author: {
-      "@type": "Organization",
-      name: post.meta.author ?? "AgenticWhatsup",
-      url: "https://agentic-whatsup.com",
-    },
+    author: isAgenticAuthor
+      ? {
+          "@type": "Person",
+          "@id": "https://agentic-whatsup.com/#founder",
+          name: "Richard Cohen",
+          sameAs: "https://www.linkedin.com/in/richard-cohen-vault369/",
+        }
+      : {
+          "@type": "Person",
+          name: post.meta.author,
+        },
     publisher: {
       "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
       name: "AgenticWhatsup",
       url: "https://agentic-whatsup.com",
       logo: {
@@ -108,11 +117,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     image: "https://agentic-whatsup.com/og-image.jpg",
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": `https://agentic-whatsup.com/${locale}/blog` },
+      { "@type": "ListItem", "position": 3, "name": post.meta.title, "item": canonicalUrl },
+    ],
+  };
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Link href={`/${locale}/blog`} className="inline-flex items-center gap-2 text-slate-400 hover:text-wa transition-colors text-sm mb-8">
         <ArrowLeft size={16} />{t("backToBlog")}

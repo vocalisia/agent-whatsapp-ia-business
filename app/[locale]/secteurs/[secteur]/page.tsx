@@ -42,18 +42,37 @@ export async function generateMetadata({
   const t = getSecteurTranslation(secteur, locale);
   if (!t) return {};
 
-  const canonicalLocale = locale;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/secteurs/${secteur}`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t.metaTitle,
     description: t.metaDescription,
+    keywords: `agent IA WhatsApp ${t.name}, automatisation WhatsApp ${t.name}, chatbot WhatsApp ${t.name}, agentic whatsup`,
+    robots: { index: true, follow: true },
     alternates: {
+      canonical: canonicalUrl,
       languages: {
-        fr: `/fr/secteurs/${secteur}`,
-        en: `/en/secteurs/${secteur}`,
-        de: `/de/secteurs/${secteur}`,
-        nl: `/nl/secteurs/${secteur}`,
+        fr: `https://agentic-whatsup.com/fr/secteurs/${secteur}`,
+        en: `https://agentic-whatsup.com/en/secteurs/${secteur}`,
+        de: `https://agentic-whatsup.com/de/secteurs/${secteur}`,
+        nl: `https://agentic-whatsup.com/nl/secteurs/${secteur}`,
+        "x-default": `https://agentic-whatsup.com/fr/secteurs/${secteur}`,
       },
-      canonical: `https://agentic-whatsup.com/${canonicalLocale}/secteurs/${secteur}`,
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t.metaTitle,
+      description: t.metaDescription,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: t.metaTitle }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t.metaTitle,
+      description: t.metaDescription,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
@@ -74,17 +93,52 @@ export default async function SecteurPage({
   const cta = ctaLabels[locale] ?? ctaLabels.fr;
   const rich = getSecteurRich(secteurSlug, locale);
 
+  const pageUrl = `https://agentic-whatsup.com/${locale}/secteurs/${secteurSlug}`;
+
   const baseJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
     name: t.metaTitle,
     description: t.metaDescription,
-    url: `https://agentic-whatsup.com/${locale}/secteurs/${secteurSlug}`,
+    url: pageUrl,
     publisher: {
       "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
       name: "AgenticWhatsup",
       url: "https://agentic-whatsup.com",
     },
+  };
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${pageUrl}#service`,
+    "name": t.title,
+    "description": t.metaDescription,
+    "url": pageUrl,
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
+      "name": "AgenticWhatsup",
+      "url": "https://agentic-whatsup.com",
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": t.name,
+    },
+    "serviceType": "WhatsApp AI Automation",
+    "areaServed": ["FR", "BE", "CH", "LU", "GB", "DE", "NL"],
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": locale === "fr" ? "Secteurs" : locale === "de" ? "Branchen" : locale === "nl" ? "Sectoren" : "Industries", "item": `https://agentic-whatsup.com/${locale}/secteurs` },
+      { "@type": "ListItem", "position": 3, "name": t.name, "item": pageUrl },
+    ],
   };
 
   const faqJsonLd = rich?.faq && rich.faq.length > 0
@@ -108,6 +162,8 @@ export default async function SecteurPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(baseJsonLd) }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {faqJsonLd && (
         <script
           type="application/ld+json"

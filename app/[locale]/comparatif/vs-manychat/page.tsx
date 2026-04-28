@@ -227,12 +227,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/comparatif/vs-manychat`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "AgenticWhatsup vs ManyChat, comparatif ManyChat WhatsApp IA, ManyChat alternative WhatsApp, meilleur chatbot WhatsApp 2025",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-manychat", en: "/en/comparatif/vs-manychat", de: "/de/comparatif/vs-manychat", nl: "/nl/comparatif/vs-manychat" },
-      canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-manychat`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-manychat",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-manychat",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-manychat",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-manychat",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-manychat",
+      },
+    },
+    openGraph: {
+      type: "article",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
@@ -243,9 +268,62 @@ export default async function VsManyChatPage({ params }: { params: Promise<{ loc
   const { locale } = await params;
   const c = t[locale] ?? t.fr;
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
+  const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/comparatif/vs-manychat`;
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${canonicalUrl}#article`,
+    "headline": m.title,
+    "description": m.description,
+    "url": canonicalUrl,
+    "inLanguage": locale,
+    "author": {
+      "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
+      "name": "AgenticWhatsup",
+      "url": "https://agentic-whatsup.com",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
+      "name": "AgenticWhatsup",
+      "url": "https://agentic-whatsup.com",
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
+    "about": [
+      { "@type": "SoftwareApplication", "name": "AgenticWhatsup", "url": "https://agentic-whatsup.com" },
+      { "@type": "SoftwareApplication", "name": "ManyChat", "url": "https://manychat.com" },
+    ],
+  };
+
+  const comparisonItemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": c.tableTitle,
+    "itemListElement": c.rows.map((row, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "name": row.feature,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": locale === "fr" ? "Comparatif" : "Comparison", "item": `https://agentic-whatsup.com/${locale}/comparatif` },
+      { "@type": "ListItem", "position": 3, "name": "AgenticWhatsup vs ManyChat", "item": canonicalUrl },
+    ],
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(comparisonItemListJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <Link href={`/${locale}/comparatif`} className="inline-flex items-center gap-1 text-slate-400 hover:text-wa text-sm mb-10 transition-colors">
         ← {c.back.replace("← ", "")}
       </Link>

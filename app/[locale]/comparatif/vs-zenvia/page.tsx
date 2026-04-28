@@ -268,8 +268,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-zenvia", en: "/en/comparatif/vs-zenvia", de: "/de/comparatif/vs-zenvia", nl: "/nl/comparatif/vs-zenvia" },
       canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-zenvia`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-zenvia",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-zenvia",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-zenvia",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-zenvia",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-zenvia",
+      },
     },
   };
 }

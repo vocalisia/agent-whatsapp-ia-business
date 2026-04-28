@@ -33,11 +33,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: metaTitles[locale] ?? metaTitles.fr,
     description: metaDescriptions[locale] ?? metaDescriptions.fr,
     alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/secteurs`,
       languages: {
-        fr: "/fr/secteurs",
-        en: "/en/secteurs",
-        de: "/de/secteurs",
-        nl: "/nl/secteurs",
+        fr: "https://agentic-whatsup.com/fr/secteurs",
+        en: "https://agentic-whatsup.com/en/secteurs",
+        de: "https://agentic-whatsup.com/de/secteurs",
+        nl: "https://agentic-whatsup.com/nl/secteurs",
+        "x-default": "https://agentic-whatsup.com/fr/secteurs",
       },
     },
   };

@@ -36,7 +36,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: m.title,
     description: m.description,
-    alternates: { languages: { fr: "/fr/comparatif", en: "/en/comparatif", de: "/de/comparatif", nl: "/nl/comparatif" } },
+    alternates: {
+      canonical: `https://agentic-whatsup.com/${locale}/comparatif`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif",
+        en: "https://agentic-whatsup.com/en/comparatif",
+        de: "https://agentic-whatsup.com/de/comparatif",
+        nl: "https://agentic-whatsup.com/nl/comparatif",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif",
+      },
+    },
   };
 }
 

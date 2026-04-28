@@ -6,11 +6,15 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/prise-de-rdv`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t("rdv.title"),
     description: t("rdv.subtitle"),
+    keywords: "prise de RDV automatique WhatsApp, booking WhatsApp IA, agenda Google Calendar WhatsApp, Calendly WhatsApp automatisation",
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://agentic-whatsup.com/${locale}/services/prise-de-rdv`,
+      canonical: canonicalUrl,
       languages: {
         fr: "https://agentic-whatsup.com/fr/services/prise-de-rdv",
         en: "https://agentic-whatsup.com/en/services/prise-de-rdv",
@@ -18,6 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/services/prise-de-rdv",
         "x-default": "https://agentic-whatsup.com/fr/services/prise-de-rdv",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t("rdv.title"),
+      description: t("rdv.subtitle"),
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: t("rdv.title") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("rdv.title"),
+      description: t("rdv.subtitle"),
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

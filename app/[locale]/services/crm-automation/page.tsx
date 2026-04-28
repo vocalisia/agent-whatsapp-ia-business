@@ -6,11 +6,15 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/crm-automation`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t("crm.title"),
     description: t("crm.subtitle"),
+    keywords: "CRM automation WhatsApp, synchroniser HubSpot WhatsApp IA, intégration CRM WhatsApp agent, Salesforce WhatsApp automatisation",
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://agentic-whatsup.com/${locale}/services/crm-automation`,
+      canonical: canonicalUrl,
       languages: {
         fr: "https://agentic-whatsup.com/fr/services/crm-automation",
         en: "https://agentic-whatsup.com/en/services/crm-automation",
@@ -18,6 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/services/crm-automation",
         "x-default": "https://agentic-whatsup.com/fr/services/crm-automation",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t("crm.title"),
+      description: t("crm.subtitle"),
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: t("crm.title") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("crm.title"),
+      description: t("crm.subtitle"),
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

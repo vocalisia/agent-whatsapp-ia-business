@@ -6,11 +6,15 @@ import { getTranslations } from "next-intl/server";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/qualification-leads`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t("qualificationLeads.title"),
     description: t("qualificationLeads.subtitle"),
+    keywords: "qualification leads WhatsApp IA, automatiser qualification prospects WhatsApp, agent IA qualification leads, agenticwhatsup qualification",
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://agentic-whatsup.com/${locale}/services/qualification-leads`,
+      canonical: canonicalUrl,
       languages: {
         fr: "https://agentic-whatsup.com/fr/services/qualification-leads",
         en: "https://agentic-whatsup.com/en/services/qualification-leads",
@@ -18,6 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/services/qualification-leads",
         "x-default": "https://agentic-whatsup.com/fr/services/qualification-leads",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t("qualificationLeads.title"),
+      description: t("qualificationLeads.subtitle"),
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: t("qualificationLeads.title") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("qualificationLeads.title"),
+      description: t("qualificationLeads.subtitle"),
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

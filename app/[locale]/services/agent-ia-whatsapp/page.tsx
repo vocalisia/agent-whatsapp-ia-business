@@ -11,11 +11,15 @@ import SectionTitle from "@/components/shared/SectionTitle";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/agent-ia-whatsapp`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: t("agentIa.metaTitle"),
     description: t("agentIa.heroSubtitle"),
+    keywords: "agent IA WhatsApp, chatbot WhatsApp intelligent, automatisation WhatsApp LLM, vision photos WhatsApp, transcription vocale WhatsApp",
+    robots: { index: true, follow: true },
     alternates: {
-      canonical: `https://agentic-whatsup.com/${locale}/services/agent-ia-whatsapp`,
+      canonical: canonicalUrl,
       languages: {
         fr: "https://agentic-whatsup.com/fr/services/agent-ia-whatsapp",
         en: "https://agentic-whatsup.com/en/services/agent-ia-whatsapp",
@@ -23,6 +27,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/services/agent-ia-whatsapp",
         "x-default": "https://agentic-whatsup.com/fr/services/agent-ia-whatsapp",
       },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: t("agentIa.metaTitle"),
+      description: t("agentIa.heroSubtitle"),
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: t("agentIa.metaTitle") }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("agentIa.metaTitle"),
+      description: t("agentIa.heroSubtitle"),
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
@@ -43,8 +62,55 @@ export default async function ServiceAgentIAWhatsAppPage({ params }: { params: P
   ];
   const relatedServices = relatedServicesData.map((s, i) => ({ ...s, href: relatedServiceHrefs[i] }));
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/agent-ia-whatsapp`;
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${canonicalUrl}#service`,
+    "name": t("agentIa.metaTitle"),
+    "description": t("agentIa.heroSubtitle"),
+    "url": canonicalUrl,
+    "provider": {
+      "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
+      "name": "AgenticWhatsup",
+      "url": "https://agentic-whatsup.com",
+    },
+    "serviceType": "WhatsApp AI Automation",
+    "areaServed": ["FR", "BE", "CH", "LU", "GB", "DE", "NL"],
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": canonicalUrl,
+    },
+  };
+
+  const faqJsonLd = faqItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": faqItems.map((item) => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": { "@type": "Answer", "text": item.answer },
+        })),
+      }
+    : null;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": locale === "fr" ? "Services" : "Services", "item": `https://agentic-whatsup.com/${locale}/services` },
+      { "@type": "ListItem", "position": 3, "name": t("agentIa.metaTitle"), "item": canonicalUrl },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       {/* Hero */}
       <section className="relative py-24 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-bg via-surface/20 to-bg pointer-events-none" />

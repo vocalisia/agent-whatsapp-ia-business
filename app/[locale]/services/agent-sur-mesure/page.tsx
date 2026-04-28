@@ -193,12 +193,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/agent-sur-mesure`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "agent WhatsApp IA sur mesure, chatbot WhatsApp personnalisé, agent IA données entreprise, personnalité de marque WhatsApp IA",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/services/agent-sur-mesure", en: "/en/services/agent-sur-mesure", de: "/de/services/agent-sur-mesure", nl: "/nl/services/agent-sur-mesure" },
-      canonical: `https://agentic-whatsup.com/${locale}/services/agent-sur-mesure`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/agent-sur-mesure",
+        en: "https://agentic-whatsup.com/en/services/agent-sur-mesure",
+        de: "https://agentic-whatsup.com/de/services/agent-sur-mesure",
+        nl: "https://agentic-whatsup.com/nl/services/agent-sur-mesure",
+        "x-default": "https://agentic-whatsup.com/fr/services/agent-sur-mesure",
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }

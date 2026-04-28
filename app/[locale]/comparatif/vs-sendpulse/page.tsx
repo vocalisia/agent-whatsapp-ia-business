@@ -272,8 +272,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-sendpulse", en: "/en/comparatif/vs-sendpulse", de: "/de/comparatif/vs-sendpulse", nl: "/nl/comparatif/vs-sendpulse" },
       canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-sendpulse`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-sendpulse",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-sendpulse",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-sendpulse",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-sendpulse",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-sendpulse",
+      },
     },
   };
 }

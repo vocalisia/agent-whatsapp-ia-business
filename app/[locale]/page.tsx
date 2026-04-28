@@ -62,21 +62,46 @@ const websiteJsonLd = {
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
+  "@id": "https://agentic-whatsup.com/#organization",
   "@type": "Organization",
   "name": "AgenticWhatsup",
   "url": "https://agentic-whatsup.com",
+  "email": "contact@agentic-whatsup.com",
   "logo": {
     "@type": "ImageObject",
     "url": "https://agentic-whatsup.com/icon.svg"
   },
   "description": "The only WhatsApp AI agent that understands voice messages and analyzes customer photos. Automate replies, qualify leads, book appointments 24/7.",
   "areaServed": ["FR", "BE", "CH", "LU", "GB", "DE", "NL"],
+  "founder": {
+    "@type": "Person",
+    "@id": "https://agentic-whatsup.com/#founder",
+    "name": "Richard Cohen",
+    "sameAs": "https://www.linkedin.com/in/richard-cohen-vault369/"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "VAULT 369 LTD",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "71-75 Shelton Street",
+      "addressLocality": "London",
+      "postalCode": "WC2H 9JQ",
+      "addressCountry": "GB"
+    }
+  },
   "sameAs": [
     "https://www.linkedin.com/company/agentic-whatsup",
-    "https://twitter.com/agenticwhatsup"
+    "https://twitter.com/agenticwhatsup",
+    "https://vocalis.pro",
+    "https://seo-true.com",
+    "https://trustly-ai.com",
+    "https://master-seller.fr",
+    "https://tesla-mag.ch"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
+    "email": "contact@agentic-whatsup.com",
     "contactType": "customer support",
     "availableLanguage": ["French", "English", "German", "Dutch"]
   }
@@ -106,7 +131,31 @@ const softwareAppJsonLd = {
   ]
 };
 
-export default function HomePage() {
+function buildBreadcrumb(locale: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "AgenticWhatsup",
+        "item": "https://agentic-whatsup.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": locale === "fr" ? "Accueil" : locale === "de" ? "Startseite" : locale === "nl" ? "Startpagina" : "Home",
+        "item": `https://agentic-whatsup.com/${locale}`
+      }
+    ]
+  };
+}
+
+export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const breadcrumbJsonLd = buildBreadcrumb(locale);
+
   return (
     <>
       <Script
@@ -123,6 +172,11 @@ export default function HomePage() {
         id="jsonld-software"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }}
+      />
+      <Script
+        id="jsonld-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Hero />
       <StatsSection />

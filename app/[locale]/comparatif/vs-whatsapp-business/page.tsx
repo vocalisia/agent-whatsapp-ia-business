@@ -227,8 +227,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-whatsapp-business", en: "/en/comparatif/vs-whatsapp-business", de: "/de/comparatif/vs-whatsapp-business", nl: "/nl/comparatif/vs-whatsapp-business" },
       canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-whatsapp-business`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-whatsapp-business",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-whatsapp-business",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-whatsapp-business",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-whatsapp-business",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-whatsapp-business",
+      },
     },
   };
 }

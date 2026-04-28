@@ -268,8 +268,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-chatfuel", en: "/en/comparatif/vs-chatfuel", de: "/de/comparatif/vs-chatfuel", nl: "/nl/comparatif/vs-chatfuel" },
       canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-chatfuel`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-chatfuel",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-chatfuel",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-chatfuel",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-chatfuel",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-chatfuel",
+      },
     },
   };
 }

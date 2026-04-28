@@ -140,12 +140,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/integrations`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "intégrations agent WhatsApp IA, connecter HubSpot WhatsApp, Shopify WhatsApp automatisation, Zapier WhatsApp agent IA, agenticwhatsup intégrations",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/integrations", en: "/en/integrations", de: "/de/integrations", nl: "/nl/integrations" },
-      canonical: `https://agentic-whatsup.com/${locale}/integrations`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/integrations",
+        en: "https://agentic-whatsup.com/en/integrations",
+        de: "https://agentic-whatsup.com/de/integrations",
+        nl: "https://agentic-whatsup.com/nl/integrations",
+        "x-default": "https://agentic-whatsup.com/fr/integrations",
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
@@ -157,17 +182,53 @@ export default async function IntegrationsPage({ params }: { params: Promise<{ l
   const c = t[locale] ?? t.fr;
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
 
+  const pageUrl = `https://agentic-whatsup.com/${locale}/integrations`;
+  const m = meta[locale] ?? meta.fr;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: (meta[locale] ?? meta.fr).title,
-    description: (meta[locale] ?? meta.fr).description,
-    url: `https://agentic-whatsup.com/${locale}/integrations`,
+    "@id": `${pageUrl}#webpage`,
+    name: m.title,
+    description: m.description,
+    url: pageUrl,
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://agentic-whatsup.com/#organization",
+      "name": "AgenticWhatsup",
+      "url": "https://agentic-whatsup.com",
+    },
+  };
+
+  const allTools = c.categories.flatMap((cat) => cat.tools);
+  const softwareListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": c.h1,
+    "itemListElement": allTools.map((tool, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": tool,
+        "applicationCategory": "BusinessApplication",
+      },
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": locale === "fr" ? "Intégrations" : locale === "de" ? "Integrationen" : locale === "nl" ? "Integraties" : "Integrations", "item": pageUrl },
+    ],
   };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareListJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* Hero */}
       <div className="text-center mb-16">

@@ -243,8 +243,14 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
-      languages: { fr: "/fr/comparatif/vs-wati", en: "/en/comparatif/vs-wati", de: "/de/comparatif/vs-wati", nl: "/nl/comparatif/vs-wati" },
       canonical: `https://agentic-whatsup.com/${locale}/comparatif/vs-wati`,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/comparatif/vs-wati",
+        en: "https://agentic-whatsup.com/en/comparatif/vs-wati",
+        de: "https://agentic-whatsup.com/de/comparatif/vs-wati",
+        nl: "https://agentic-whatsup.com/nl/comparatif/vs-wati",
+        "x-default": "https://agentic-whatsup.com/fr/comparatif/vs-wati",
+      },
     },
   };
 }

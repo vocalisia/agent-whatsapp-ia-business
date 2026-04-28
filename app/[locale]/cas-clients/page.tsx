@@ -427,12 +427,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/cas-clients`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "résultats agent IA WhatsApp, ROI WhatsApp IA, cas clients automatisation WhatsApp, études de cas agenticwhatsup, témoignages clients",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/cas-clients", en: "/en/cas-clients", de: "/de/cas-clients", nl: "/nl/cas-clients" },
-      canonical: `https://agentic-whatsup.com/${locale}/cas-clients`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/cas-clients",
+        en: "https://agentic-whatsup.com/en/cas-clients",
+        de: "https://agentic-whatsup.com/de/cas-clients",
+        nl: "https://agentic-whatsup.com/nl/cas-clients",
+        "x-default": "https://agentic-whatsup.com/fr/cas-clients",
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
@@ -451,6 +476,7 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
     "@graph": [
       {
         "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
         name: pageMeta.title,
         description: pageMeta.description,
         url: pageUrl,
@@ -469,11 +495,13 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
             inLanguage: locale,
             author: {
               "@type": "Organization",
+              "@id": "https://agentic-whatsup.com/#organization",
               name: "AgenticWhatsup",
               url: "https://agentic-whatsup.com",
             },
             publisher: {
               "@type": "Organization",
+              "@id": "https://agentic-whatsup.com/#organization",
               name: "AgenticWhatsup",
               url: "https://agentic-whatsup.com",
             },
@@ -486,6 +514,13 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
             },
           },
         })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": c.casesTitle, "item": pageUrl },
+        ],
       },
     ],
   };

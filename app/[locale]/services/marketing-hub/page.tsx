@@ -574,12 +574,37 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/marketing-hub`;
+  const ogLocale = locale === "de" ? "de_DE" : locale === "nl" ? "nl_NL" : locale === "en" ? "en_US" : "fr_FR";
   return {
     title: m.title,
     description: m.description,
+    keywords: "marketing hub WhatsApp IA, nurturing WhatsApp automatisé, upsell WhatsApp, fidélisation clients WhatsApp agent IA",
+    robots: { index: true, follow: true },
     alternates: {
-      languages: { fr: "/fr/services/marketing-hub", en: "/en/services/marketing-hub", de: "/de/services/marketing-hub", nl: "/nl/services/marketing-hub" },
-      canonical: `https://agentic-whatsup.com/${locale}/services/marketing-hub`,
+      canonical: canonicalUrl,
+      languages: {
+        fr: "https://agentic-whatsup.com/fr/services/marketing-hub",
+        en: "https://agentic-whatsup.com/en/services/marketing-hub",
+        de: "https://agentic-whatsup.com/de/services/marketing-hub",
+        nl: "https://agentic-whatsup.com/nl/services/marketing-hub",
+        "x-default": "https://agentic-whatsup.com/fr/services/marketing-hub",
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: ogLocale,
+      title: m.title,
+      description: m.description,
+      url: canonicalUrl,
+      siteName: "AgenticWhatsup",
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: m.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: m.title,
+      description: m.description,
+      images: ["https://agentic-whatsup.com/og-image.jpg"],
     },
   };
 }
