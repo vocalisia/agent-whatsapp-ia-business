@@ -114,12 +114,6 @@ const softwareAppJsonLd = {
   "url": "https://agentic-whatsup.com",
   "applicationCategory": "BusinessApplication",
   "operatingSystem": "Web",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "EUR",
-    "description": "Free trial available"
-  },
   "description": "WhatsApp AI agent that understands voice messages & analyzes photos. Automate customer conversations 24/7 with real AI. Deploy in 14 days.",
   "featureList": [
     "Voice message understanding",

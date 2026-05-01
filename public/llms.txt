@@ -1,16 +1,20 @@
 # AgenticWhatsup
 > Agent IA WhatsApp avec vision photos + transcription vocale, multilingue FR/EN/DE/NL — le seul agent qui comprend vocaux et images envoyés par vos clients.
 
-AgenticWhatsup (agentic-whatsup.com) est une solution d'automatisation WhatsApp alimentée par IA conversationnelle (LLM). Contrairement aux chatbots à règles, l'agent comprend le contexte, transcrit les messages vocaux, analyse les images et s'intègre à votre CRM, agenda et e-commerce en moins de 24h. ROI moyen client : 8× en 90 jours.
+AgenticWhatsup (agentic-whatsup.com) est une solution d'automatisation WhatsApp alimentée par IA conversationnelle (LLM). Contrairement aux chatbots à règles, l'agent comprend le contexte, transcrit les messages vocaux, analyse les images et s'intègre à votre CRM, agenda et e-commerce en moins de 24h.
 
 ## Pages clés
 - [Homepage FR](https://agentic-whatsup.com/fr): Agent IA WhatsApp — automatisation 24/7, qualification leads, vision photos
 - [Homepage EN](https://agentic-whatsup.com/en): WhatsApp AI Agent — 24/7 automation, lead qualification, image vision
-- [Demo / Essai gratuit](https://agentic-whatsup.com/fr/demo): Tester l'agent en live, simulation de conversation WhatsApp IA
-- [Tarifs & ROI](https://agentic-whatsup.com/fr/tarifs): Calculateur ROI, grilles tarifaires, audit gratuit 30 min
+- [Homepage DE](https://agentic-whatsup.com/de): WhatsApp KI-Agent — 24/7 Automatisierung, Lead-Qualifizierung, Foto-KI
+- [Homepage NL](https://agentic-whatsup.com/nl): WhatsApp AI-agent — 24/7 automatisering, leadkwalificatie, fotoanalyse
+- [Demo / Essai gratuit](https://agentic-whatsup.com/fr/demo): Tester l'agent en live, simulation conversation WhatsApp IA
+- [Audit gratuit 30 min](https://agentic-whatsup.com/fr/contact): Réservation Cal.com, diagnostic WhatsApp personnalisé, réponse sous 24h
 - [Cas clients](https://agentic-whatsup.com/fr/cas-clients): 6 études de cas mesurées — immobilier, e-commerce, santé, restaurant, assurance, coaching
-- [Contact / Audit gratuit](https://agentic-whatsup.com/fr/contact): Réservation audit 30 min, Cal.com intégré, réponse sous 24h
-- [Intégrations](https://agentic-whatsup.com/fr/integrations): 50+ connecteurs — HubSpot, Shopify, Zapier, Google Calendar, Stripe
+- [Intégrations](https://agentic-whatsup.com/fr/integrations): 50+ connecteurs — HubSpot, Shopify, Zapier, Google Calendar, Stripe, Cal.com
+
+## Auteur & expertise
+- [Laurent Duplat — auteur](https://agentic-whatsup.com/fr/auteur/laurent-duplat): Directeur publication, expert IA conversationnelle WhatsApp depuis 2022
 
 ## Services
 - [Agent IA WhatsApp](https://agentic-whatsup.com/fr/services/agent-ia-whatsapp): Agent conversationnel LLM, vision photos, transcription vocale, 24/7
@@ -23,11 +27,11 @@ AgenticWhatsup (agentic-whatsup.com) est une solution d'automatisation WhatsApp 
 - [Marketing Hub](https://agentic-whatsup.com/fr/services/marketing-hub): Nurturing WhatsApp, upsell, fidélisation clients
 
 ## Comparatifs (7)
-- [vs Wati](https://agentic-whatsup.com/fr/comparatif/vs-wati): IA conversationnelle vs workflows rigides — comparatif complet 2025
-- [vs ManyChat](https://agentic-whatsup.com/fr/comparatif/vs-manychat): WhatsApp IA vs bot Instagram/Facebook — fonctionnalités et prix
+- [vs Wati](https://agentic-whatsup.com/fr/comparatif/vs-wati): IA conversationnelle vs workflows rigides — comparatif fonctionnalités 2026
+- [vs ManyChat](https://agentic-whatsup.com/fr/comparatif/vs-manychat): WhatsApp IA vs bot Instagram/Facebook — fonctionnalités
 - [vs WhatsApp Business natif](https://agentic-whatsup.com/fr/comparatif/vs-whatsapp-business): IA complète vs application gratuite sans automation
-- [vs Respond.io](https://agentic-whatsup.com/fr/comparatif/vs-respond-io): Agent IA vs inbox partagée omnichannel enterprise
-- [vs SendPulse](https://agentic-whatsup.com/fr/comparatif/vs-sendpulse): Agent IA WhatsApp vs plateforme email/SMS/push tout-en-un
+- [vs Respond.io](https://agentic-whatsup.com/fr/comparatif/vs-respond-io): Agent IA vs inbox partagée omnichannel
+- [vs SendPulse](https://agentic-whatsup.com/fr/comparatif/vs-sendpulse): Agent IA WhatsApp vs plateforme email/SMS/push
 - [vs Chatfuel](https://agentic-whatsup.com/fr/comparatif/vs-chatfuel): LLM conversationnel vs chatbot Facebook/Instagram
 - [vs Zenvia](https://agentic-whatsup.com/fr/comparatif/vs-zenvia): Solution FR/DE/NL vs CPaaS LatAm — périmètre Europe
 
@@ -37,11 +41,11 @@ AgenticWhatsup (agentic-whatsup.com) est une solution d'automatisation WhatsApp 
 - [Santé](https://agentic-whatsup.com/fr/secteurs/sante): RDV 24/7, rappels patients, -61% no-shows
 - [Restaurant](https://agentic-whatsup.com/fr/secteurs/restaurant): Réservations directes sans commission, +43% bookings
 - [Assurance](https://agentic-whatsup.com/fr/secteurs/assurance): Devis automatiques en 5min, +38% conversion
-- [BTP / Construction](https://agentic-whatsup.com/fr/secteurs/btp): Devis chantier 24h, +67% devis envoyés
+- [BTP / Construction](https://agentic-whatsup.com/fr/secteurs/btp): Devis chantier 24h, suivi chantier, +67% devis envoyés
 - [Éducation / Formation](https://agentic-whatsup.com/fr/secteurs/education): Inscriptions automatisées, -70% abandons
 - [Automobile](https://agentic-whatsup.com/fr/secteurs/automobile): RDV atelier 24/7, relance contrôle technique
 - [Juridique](https://agentic-whatsup.com/fr/secteurs/juridique): Qualification dossiers, prise RDV consultation
-- [Beauté & Bien-être](https://agentic-whatsup.com/fr/secteurs/beaute-bien-etre): Réservations soins, fidélisation, 0% commission Treatwell
+- [Beauté & Bien-être](https://agentic-whatsup.com/fr/secteurs/beaute-bien-etre): Réservations soins, fidélisation
 - [Logistique](https://agentic-whatsup.com/fr/secteurs/logistique): WISMO automatique, -73% appels entrants
 - [SaaS / Tech](https://agentic-whatsup.com/fr/secteurs/saas-tech): Onboarding, support L1, upsell automatisé
 - [Coach / Infopreneur](https://agentic-whatsup.com/fr/secteurs/coach-infopreneur): Vente formations WhatsApp, +67% conversion tunnel
@@ -49,24 +53,35 @@ AgenticWhatsup (agentic-whatsup.com) est une solution d'automatisation WhatsApp 
 - [Courtier](https://agentic-whatsup.com/fr/secteurs/courtier): Qualification dossiers, suivi négociation
 - [Finance / Comptabilité](https://agentic-whatsup.com/fr/secteurs/finance-comptabilite): Collecte documents, rappels échéances
 - [Recrutement / RH](https://agentic-whatsup.com/fr/secteurs/recrutement-rh): Pré-qualification candidats, planification entretiens
-- [Tourisme / Hôtel](https://agentic-whatsup.com/fr/secteurs/tourisme-hotel): Réservations directes, 0% commission Booking.com
+- [Tourisme / Hôtel](https://agentic-whatsup.com/fr/secteurs/tourisme-hotel): Réservations directes
 - [Artisanat](https://agentic-whatsup.com/fr/secteurs/artisanat): Devis rapide, prise RDV intervention
-- [Agence marketing](https://agentic-whatsup.com/fr/secteurs/agence-marketing): Qualification prospects, onboarding clients, reporting
-- [Fitness / Sport](https://agentic-whatsup.com/fr/secteurs/fitness-sport): Inscriptions cours, suivi adhérents, -55% churn
-- [Vétérinaire](https://agentic-whatsup.com/fr/secteurs/veterinaire): RDV consultation, rappels vaccins, -58% no-shows
-- [Notaire](https://agentic-whatsup.com/fr/secteurs/notaire): Collecte documents, prise RDV, -65% secrétariat
+- [Agence marketing](https://agentic-whatsup.com/fr/secteurs/agence-marketing): Qualification prospects, onboarding clients
+- [Fitness / Sport](https://agentic-whatsup.com/fr/secteurs/fitness-sport): Inscriptions cours, suivi adhérents
+- [Vétérinaire](https://agentic-whatsup.com/fr/secteurs/veterinaire): RDV consultation, rappels vaccins
+- [Notaire](https://agentic-whatsup.com/fr/secteurs/notaire): Collecte documents, prise RDV
 - [Franchise](https://agentic-whatsup.com/fr/secteurs/franchise): Recrutement franchisés, support réseau
 
 ## Articles piliers (blog)
 - [Blog FR](https://agentic-whatsup.com/fr/blog): Articles WhatsApp IA, automatisation, cas d'usage par secteur
 - [Blog EN](https://agentic-whatsup.com/en/blog): WhatsApp AI blog — automation, ROI, industry use cases
+- [Guide complet WhatsApp Business AI](https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-business): Architecture technique, ROI, comment choisir
+- [WhatsApp Cloud API vs Agent IA](https://agentic-whatsup.com/fr/blog/whatsapp-cloud-api-vs-agent-ia): Différences techniques, quand utiliser quoi
+- [RGPD et Agent IA WhatsApp](https://agentic-whatsup.com/fr/blog/rgpd-whatsapp-ia-guide): Conformité européenne, hébergement EU
+- [Comment fonctionne un agent IA WhatsApp](https://agentic-whatsup.com/fr/blog/comment-fonctionne-agent-ia-whatsapp): LLM, NLP, vision multimodale expliqués
 
-## Résultats clés
-- ROI moyen : 8× en 90 jours (moyenne 200+ clients actifs)
-- Taux de renouvellement clients : 97%
-- Délai de mise en production : 14 jours
-- Disponibilité agent : 24h/24, 7j/7
-- Taux d'ouverture messages WhatsApp : 98%
+## Fonctionnalités exclusives
+- Vision IA : analyse en temps réel des photos envoyées par les clients sur WhatsApp (factures, plaques d'immatriculation, dégâts, produits)
+- Transcription vocale : compréhension des messages audio WhatsApp, réponse contextuelle
+- Multilingue natif FR / EN / DE / NL
+- Hébergement EU + RGPD natif
+- Déploiement 2-3 semaines clé en main
+- Intégration native Meta WhatsApp Cloud API
+
+## Conformité
+- RGPD natif, hébergement Union Européenne
+- Audit sécurité disponible sur demande
+- DPA / contrat de sous-traitance fourni
+- Conservation messages chiffrés AES-256
 
 ## Contact
 - Site : https://agentic-whatsup.com
@@ -77,4 +92,7 @@ AgenticWhatsup (agentic-whatsup.com) est une solution d'automatisation WhatsApp 
 ## Optional
 - [Sitemap](https://agentic-whatsup.com/sitemap.xml)
 - [Blog FR](https://agentic-whatsup.com/fr/blog)
+- [Blog EN](https://agentic-whatsup.com/en/blog)
 - [Robots.txt](https://agentic-whatsup.com/robots.txt)
+- [Mentions légales](https://agentic-whatsup.com/fr/mentions-legales)
+- [Politique de confidentialité](https://agentic-whatsup.com/fr/politique-confidentialite)
