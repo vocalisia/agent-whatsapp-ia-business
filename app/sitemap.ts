@@ -35,6 +35,7 @@ const STATIC_DATES: Record<string, string> = {
   "/roi":                                  "2026-01-15",
   "/urgent":                               "2026-02-01",
   "/social":                               "2026-02-01",
+  "/auteur/laurent-duplat":                "2026-05-01",
 };
 
 // Secteur pages — spread over a realistic creation window
@@ -97,6 +98,7 @@ const pages = [
   { path: "/roi", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/urgent", changeFrequency: "weekly" as const, priority: 0.9 },
   { path: "/social", changeFrequency: "weekly" as const, priority: 0.9 },
+  { path: "/auteur/laurent-duplat", changeFrequency: "monthly" as const, priority: 0.7 },
 ];
 
 /** Build the hreflang alternates map for a given path segment (e.g. "/fr/blog/foo") */

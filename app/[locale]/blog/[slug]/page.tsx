@@ -78,7 +78,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   const canonicalUrl = `https://agentic-whatsup.com/${locale}/blog/${slug}`;
-  const isAgenticAuthor = !post.meta.author || post.meta.author === "AgenticWhatsup";
+  const authorName = post.meta.author && post.meta.author !== "AgenticWhatsup"
+    ? post.meta.author
+    : "Laurent Duplat";
+  const authorJsonLd = authorName === "Laurent Duplat"
+    ? {
+        "@type": "Person",
+        "@id": "https://agentic-whatsup.com/fr/auteur/laurent-duplat",
+        name: "Laurent Duplat",
+        url: `https://agentic-whatsup.com/${locale}/auteur/laurent-duplat`,
+        sameAs: ["https://www.linkedin.com/in/richard-cohen-vault369/"],
+      }
+    : {
+        "@type": "Person",
+        name: authorName,
+      };
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -88,17 +102,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     datePublished: post.meta.date,
     dateModified: post.meta.date,
     inLanguage: locale,
-    author: isAgenticAuthor
-      ? {
-          "@type": "Person",
-          "@id": "https://agentic-whatsup.com/#founder",
-          name: "Richard Cohen",
-          sameAs: "https://www.linkedin.com/in/richard-cohen-vault369/",
-        }
-      : {
-          "@type": "Person",
-          name: post.meta.author,
-        },
+    author: authorJsonLd,
     publisher: {
       "@type": "Organization",
       "@id": "https://agentic-whatsup.com/#organization",
