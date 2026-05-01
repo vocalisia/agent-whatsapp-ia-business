@@ -1,0 +1,146 @@
+---
+title: "Bot WhatsApp pour la construction et le BTP : guide complet 2026"
+date: "2026-05-01"
+description: "Bot WhatsApp construction BTP : automatisez devis chantier, suivi de travaux, RDV avec les artisans et qualification des appels d'offres. Guide pratique 2026 avec workflows, intégrations et conformité."
+readTime: "10 min"
+author: "Laurent Duplat"
+---
+
+## Pourquoi un bot WhatsApp pour la construction et le BTP en 2026
+
+Le secteur du BTP et de la construction est en première ligne pour adopter un **bot WhatsApp** : 87 % des artisans et conducteurs de travaux utilisent déjà WhatsApp comme canal principal de communication client (source : Capeb, baromètre 2025). Pourtant, moins de 5 % des entreprises de construction ont automatisé ce canal. Le résultat : devis perdus, rappels manqués, RDV chantier décalés, et des heures de gestion administrative qui pourraient être facturées.
+
+Un bot WhatsApp construction bien conçu attaque exactement ces points : il qualifie les demandes entrantes (rénovation vs neuf, budget, délai), envoie les premiers documents (CV chantier, références, devis-type), planifie les visites techniques sans aller-retour téléphonique, et tient le client informé pendant les travaux.
+
+Ce guide vous donne tout : workflows, intégrations CGV/comptabilité, modèles de messages conformes RGPD, et erreurs spécifiques au BTP à éviter.
+
+## Cas d'usage d'un bot WhatsApp BTP qui rapportent vraiment
+
+### 1. Qualification des demandes entrantes (devis chantier)
+
+Sans bot : un prospect appelle → standard occupé → message vocal → rappel 48h après → 60 % du temps le prospect a déjà signé ailleurs.
+
+Avec bot WhatsApp construction : message reçu → l'IA répond en 30 secondes → pose les 6 questions clés (type de chantier, surface, délai souhaité, budget approximatif, localisation, urgence) → le dossier qualifié arrive dans votre CRM avec scoring de chaleur.
+
+**Gain mesuré** : +67 % de devis envoyés, -40 % de leads perdus à l'étape de premier contact.
+
+### 2. Envoi automatique de devis-types et CV chantier
+
+Pour 80 % des demandes courantes (rénovation cuisine, isolation combles, ravalement de façade, dallage extérieur), un devis-type avec fourchette tarifaire suffit à pré-qualifier. L'IA envoie le PDF avec les bonnes mentions légales, votre CV chantier (3 dernières réalisations + photos), et l'attestation décennale.
+
+### 3. Prise de RDV visite technique
+
+L'IA propose des créneaux dans Google Calendar / Cal.com en croisant : disponibilité du conducteur de travaux, distance vers le chantier (via Google Maps), météo prévue (pour les chantiers extérieurs). Le client confirme en 1 clic, le RDV part dans les agendas, un rappel J-1 part automatiquement.
+
+### 4. Suivi de chantier client
+
+Pendant les travaux, le client reçoit des photos d'avancement chaque vendredi (l'équipe les envoie au bot, qui les transfère au client avec un commentaire IA structuré). Réduit drastiquement les appels "où en est-on ?" et augmente la confiance.
+
+### 5. Gestion des dépannages urgents
+
+Pour les artisans dépannage (plomberie, électricité, chauffagiste), l'IA filtre les vraies urgences (fuite, panne totale, sécurité) des demandes différables. La photo envoyée par le client (Vision IA) confirme la gravité avant tout déplacement.
+
+## Architecture technique d'un bot WhatsApp construction
+
+```
+[Client WhatsApp] → [WhatsApp Cloud API] → [Webhook backend]
+                                                ↓
+                                  [LLM + Vision IA + Whisper audio]
+                                                ↓
+        ┌──────────────────────────────────────────────────────────┐
+        ↓                          ↓                                ↓
+   [CRM (HubSpot,            [Google Calendar /              [Stockage docs
+    Pipedrive, Axonaut)]      Cal.com — RDV]                  (devis, photos)]
+        ↓                          ↓                                ↓
+                          [Réponse renvoyée au client en < 2s]
+```
+
+Pour un chiffrage interne fiable, prévoyez l'intégration avec : Axonaut ou Sellsy (CRM BTP français), Batappli ou Codial (devis/facturation), OpenSolar ou Archelios (PV photovoltaïque), Google Maps Distance Matrix (pour calculer l'éligibilité des chantiers).
+
+## Conformité RGPD : ce que le BTP doit savoir
+
+Le BTP traite des données sensibles : adresses chantiers, plans, photos d'intérieurs, parfois identité des occupants. Trois règles non-négociables :
+
+1. **Hébergement Union Européenne obligatoire** pour les conversations WhatsApp et les pièces jointes (photos chantier).
+2. **Mention dans vos CGV** que les échanges WhatsApp sont conservés N mois (3 mois recommandé pour les leads non-clients, durée du chantier + 5 ans pour les clients).
+3. **Droit à l'oubli** : un endpoint qui supprime les conversations sur demande client, avec accusé de réception.
+
+L'app WhatsApp Business standard ne couvre pas ces points : elle stocke sur les serveurs Meta US. Seule l'API WhatsApp Cloud routée via un backend EU, ou un agent IA construit dessus, vous rend conforme RGPD.
+
+## Intégration avec vos outils métier BTP
+
+| Outil métier | Intégration recommandée |
+|---|---|
+| **Axonaut** | Webhook bidirectionnel — création prospect, devis attaché, statut |
+| **Sellsy** | API native, sync conversations vers fiche client |
+| **Batappli** | Génération automatique de devis-types depuis le bot |
+| **Google Calendar** | Création RDV avec adresse chantier + lien Google Maps |
+| **Drive / OneDrive** | Stockage automatique des photos chantier datées |
+| **Pennylane** | Synchronisation factures payées → relance automatique J+30 |
+
+## Comparatif : bot WhatsApp BTP vs alternatives
+
+| Solution | Spécialisation BTP | Vision photo (chantier) | Hébergement EU | Devis-types intégrés |
+|---|---|---|---|---|
+| **AgenticWhatsup (secteur BTP)** | Oui | Oui | UE | Oui |
+| WATI | Non | Non | Mixte | Non |
+| ManyChat | Non | Non | US | Non |
+| Bot maison no-code (Zapier) | Limité | Non | Variable | Manuel |
+
+Voir notre [page secteur BTP / Construction dédiée](https://agentic-whatsup.com/fr/secteurs/btp) pour les workflows pré-paramétrés.
+
+## Modèles de messages WhatsApp BTP prêts à l'emploi
+
+**Premier contact entrant (devis chantier)** :
+
+> Bonjour ! Vous souhaitez un devis pour votre projet de [type de travaux détecté]. Pour vous envoyer une estimation précise, j'ai besoin de 4 infos rapides :
+> 1. Surface concernée ?
+> 2. Délai souhaité ?
+> 3. Adresse approximative (commune) ?
+> 4. Une photo de l'existant si possible ?
+>
+> Je reviens vers vous avec une fourchette dans 5 minutes 👷
+
+**Confirmation RDV visite technique** :
+
+> RDV confirmé : [jour] [date] à [heure].
+> 📍 [Adresse chantier]
+> 👷 Notre conducteur : [Prénom] (06 XX XX XX XX)
+> ⏱️ Durée prévue : 45 min
+>
+> Prévoyez les plans si vous les avez sous la main. À demain !
+
+**Suivi hebdomadaire chantier** :
+
+> 📸 Avancement chantier semaine [N°] :
+> [3-5 photos]
+>
+> Cette semaine : [résumé travaux IA]
+> Semaine prochaine : [prochaines étapes IA]
+>
+> Une question ? Répondez ici, on vous rappelle dans la journée.
+
+## Erreurs spécifiques au BTP à éviter
+
+- **Ne pas filtrer les urgences vraies des fausses** — le client qui dit "urgent" pour une question de devis n'est pas urgent. Le bot doit savoir distinguer.
+- **Oublier les photos** — un bot WhatsApp BTP sans Vision IA passe à côté de 50 % de l'information utile.
+- **Promettre des prix ferme via le bot** — l'IA donne des fourchettes, jamais un prix ferme sans visite technique. Risque juridique sinon.
+- **Ne pas penser à la zone d'intervention** — le bot doit refuser poliment les chantiers hors zone, pas qualifier puis annuler.
+- **Stockage hors UE** — élimine d'office si le client demande la conformité RGPD (marchés publics, gros donneurs d'ordre).
+
+## Conclusion : par où commencer ?
+
+Si vous gérez une entreprise de BTP et que vous recevez plus de 10 demandes WhatsApp par semaine, un bot WhatsApp construction se rentabilise en moins de 60 jours. Démarrez par le périmètre le plus simple :
+
+1. **Semaine 1** : qualification des demandes entrantes uniquement
+2. **Semaine 2-3** : envoi automatique des devis-types
+3. **Semaine 4** : prise de RDV visite technique
+4. **Mois 2** : suivi de chantier hebdomadaire
+5. **Mois 3** : intégration CRM + facturation
+
+Pour identifier vos 3 quick wins prioritaires, réservez un [audit gratuit 30 minutes](https://agentic-whatsup.com/fr/contact) ou découvrez notre [page dédiée BTP / Construction](https://agentic-whatsup.com/fr/secteurs/btp).
+
+Lectures complémentaires :
+- [Comment fonctionne un agent IA WhatsApp](https://agentic-whatsup.com/fr/blog/comment-fonctionne-agent-ia-whatsapp)
+- [WhatsApp Business AI : guide complet](https://agentic-whatsup.com/fr/blog/whatsapp-business-ai-2026)
+- [Comment analyser les photos clients avec l'IA WhatsApp](https://agentic-whatsup.com/fr/blog/analyser-photos-clients-ia-whatsapp)
