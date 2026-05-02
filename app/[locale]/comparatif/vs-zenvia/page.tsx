@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FAQAccordion from "@/components/shared/FAQAccordion";
 import { Calendar, CheckCircle, XCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
@@ -395,16 +396,7 @@ export default async function VsZenviaPage({ params }: { params: Promise<{ local
 
       <div className="mb-14">
         <h2 className="text-white font-extrabold text-xl mb-5" style={{ fontFamily: "Onest, sans-serif" }}>{c.faqTitle}</h2>
-        <div className="space-y-3">
-          {c.faqs.map((f, i) => (
-            <details key={i} className="bg-surface border border-surface-2 rounded-xl p-4 group">
-              <summary className="text-white font-semibold text-sm cursor-pointer list-none flex justify-between items-center">
-                {f.q}<span className="text-wa ml-4 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="text-slate-400 text-sm mt-3 leading-relaxed">{f.a}</p>
-            </details>
-          ))}
-        </div>
+        <FAQAccordion items={c.faqs.map((f) => ({ question: f.q, answer: f.a }))} emitSchema={false} />
       </div>
 
       <div className="bg-wa/5 border border-wa/20 rounded-2xl p-10 text-center">

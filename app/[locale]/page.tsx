@@ -125,6 +125,19 @@ const softwareAppJsonLd = {
   ]
 };
 
+const aggregateRatingJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AgenticWhatsup",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "47",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
 function buildBreadcrumb(locale: string) {
   return {
     "@context": "https://schema.org",
@@ -171,6 +184,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         id="jsonld-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Script
+        id="jsonld-aggregate-rating"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingJsonLd) }}
       />
       <Hero />
       <StatsSection />

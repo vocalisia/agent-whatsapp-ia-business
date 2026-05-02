@@ -3,7 +3,18 @@ title: "Comment fonctionne un agent IA WhatsApp ?"
 date: "2026-03-01"
 description: "Découvrez comment un agent IA WhatsApp analyse vos messages, comprend les vocaux et répond à vos clients 24h/24 sans intervention humaine."
 readTime: "6 min"
-author: "AgenticWhatsup"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Réception du message via WhatsApp Cloud API"
+    text: "Le message texte, vocal ou photo du client arrive via webhook WhatsApp Cloud API officielle Meta sur votre backend."
+  - name: "Traitement multimodal"
+    text: "Si vocal → transcription Whisper. Si photo → analyse Vision IA. Si texte → passage direct au LLM."
+  - name: "Compréhension contextuelle par le LLM"
+    text: "Le LLM (GPT-4o ou Claude) analyse le message avec l'historique de la conversation et le profil CRM du contact pour générer une réponse adaptée."
+  - name: "Déclenchement des actions métier"
+    text: "L'IA exécute les actions nécessaires : mise à jour CRM, création de RDV Cal.com, envoi de document, escalade humaine si nécessaire."
+  - name: "Envoi de la réponse au client"
+    text: "La réponse formatée est renvoyée via WhatsApp Cloud API en moins de 2 secondes."
 ---
 
 ## Qu'est-ce qu'un agent IA WhatsApp ?

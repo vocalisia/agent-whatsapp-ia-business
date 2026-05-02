@@ -3,7 +3,18 @@ title: "Comment analyser les photos clients avec l'IA WhatsApp ?"
 date: "2026-03-10"
 description: "Votre agent IA WhatsApp peut analyser les photos envoyées par vos clients. Découvrez comment ça fonctionne et les cas d'usage concrets."
 readTime: "7 min"
-author: "AgenticWhatsup"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Recevoir la photo via WhatsApp Cloud API"
+    text: "L'API fournit l'URL temporaire de l'image envoyée par le client. Le backend la télécharge immédiatement."
+  - name: "Analyser l'image avec Vision IA"
+    text: "L'image est soumise au modèle Vision (GPT-4o Vision ou Claude 3.5 Vision) avec un prompt contextuel selon votre secteur."
+  - name: "Extraire les informations clés"
+    text: "L'IA identifie : type d'objet, état, texte visible, dimensions estimées, numéros de référence selon le cas d'usage."
+  - name: "Générer une réponse contextuelle"
+    text: "Le LLM combine l'analyse visuelle avec l'historique de conversation pour formuler une réponse précise et actionnelle."
+  - name: "Déclencher les actions aval"
+    text: "Selon les données extraites : création de ticket, envoi de devis, qualification lead, mise à jour CRM."
 ---
 
 

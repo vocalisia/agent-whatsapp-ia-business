@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FAQAccordion from "@/components/shared/FAQAccordion";
 import { Calendar, CheckCircle, XCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
@@ -17,6 +18,7 @@ const t: Record<string, {
   whyTitle: string; why: string[];
   forWhoTitle: string; forWhoUs: string[]; forWhoThem: string[];
   ctaTitle: string; ctaSubtitle: string; ctaPrimary: string; ctaSecondary: string;
+  faqTitle: string; faqs: Array<{ q: string; a: string }>;
 }> = {
   fr: {
     back: "← Tous les comparatifs",
@@ -67,6 +69,13 @@ const t: Record<string, {
     ctaSubtitle: "Audit gratuit de 30 min — on vous montre la différence concrète avec un agent IA dédié WhatsApp.",
     ctaPrimary: "Prendre RDV — Audit gratuit",
     ctaSecondary: "Écrire sur WhatsApp",
+    faqTitle: "Questions fréquentes",
+    faqs: [
+      { q: "ManyChat fonctionne-t-il bien sur WhatsApp ?", a: "ManyChat est conçu principalement pour Instagram et Facebook Messenger. Sa version WhatsApp est plus limitée que sur ses canaux historiques." },
+      { q: "ManyChat peut-il analyser des photos envoyées par WhatsApp ?", a: "Non. ManyChat n'intègre pas de Vision IA. AgenticWhatsup analyse photos et documents envoyés par vos clients en temps réel." },
+      { q: "Quel est le délai de mise en production avec ManyChat vs AgenticWhatsup ?", a: "ManyChat est self-service (vous construisez les flows). AgenticWhatsup est clé en main : 14 jours avec formation sur vos données." },
+      { q: "ManyChat est-il conforme RGPD ?", a: "ManyChat est une plateforme US. AgenticWhatsup est hébergé exclusivement en Europe avec DPA fourni dès le début." },
+    ],
   },
   en: {
     back: "← All comparisons",
@@ -115,6 +124,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Is WhatsApp your priority channel?",
     ctaSubtitle: "Free 30-min audit — we show you the concrete difference with a dedicated WhatsApp AI agent.",
+    faqTitle: "Häufig gestellte Fragen",
+    faqs: [],
     ctaPrimary: "Book a call — Free audit",
     ctaSecondary: "Write on WhatsApp",
   },
@@ -165,6 +176,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Ist WhatsApp Ihr Hauptkanal?",
     ctaSubtitle: "Kostenloses 30-Min-Audit — wir zeigen Ihnen den konkreten Unterschied mit einem dedizierten WhatsApp KI-Agent.",
+    faqTitle: "Veelgestelde vragen",
+    faqs: [],
     ctaPrimary: "Termin vereinbaren — Kostenloses Audit",
     ctaSecondary: "Auf WhatsApp schreiben",
   },
@@ -215,6 +228,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Is WhatsApp uw prioriteitskanaal?",
     ctaSubtitle: "Gratis audit van 30 min — we tonen u het concrete verschil met een dedicated WhatsApp AI-agent.",
+    faqTitle: "Questions fréquentes",
+    faqs: [],
     ctaPrimary: "Afspraak maken — Gratis audit",
     ctaSecondary: "Schrijf op WhatsApp",
   },
@@ -319,6 +334,17 @@ export default async function VsManyChatPage({ params }: { params: Promise<{ loc
     ],
   };
 
+
+  const faqLd = c.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  } : null;
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
@@ -395,6 +421,14 @@ export default async function VsManyChatPage({ params }: { params: Promise<{ loc
           <ul className="space-y-2">{c.forWhoThem.map((item, i) => (<li key={i} className="flex items-start gap-2 text-slate-400 text-sm"><span className="shrink-0 mt-0.5">→</span> {item}</li>))}</ul>
         </div>
       </div>
+
+
+      {c.faqs.length > 0 && (
+        <div className="mb-14">
+          <h2 className="text-white font-extrabold text-xl mb-5" style={{ fontFamily: "Onest, sans-serif" }}>{c.faqTitle}</h2>
+          <FAQAccordion items={c.faqs.map((f) => ({ question: f.q, answer: f.a }))} emitSchema={false} />
+        </div>
+      )}
 
       <div className="bg-wa/5 border border-wa/20 rounded-2xl p-10 text-center">
         <h2 className="text-white font-extrabold text-2xl mb-2" style={{ fontFamily: "Onest, sans-serif" }}>{c.ctaTitle}</h2>

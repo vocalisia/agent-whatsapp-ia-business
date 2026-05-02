@@ -131,6 +131,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ],
   };
 
+  const howToJsonLd = post.meta.howToSteps && post.meta.howToSteps.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: post.meta.title,
+        description: post.meta.description,
+        step: post.meta.howToSteps.map((s, i) => ({
+          "@type": "HowToStep",
+          position: i + 1,
+          name: s.name,
+          text: s.text,
+        })),
+      }
+    : null;
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <script
@@ -141,6 +156,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {howToJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+        />
+      )}
       <Link href={`/${locale}/blog`} className="inline-flex items-center gap-2 text-slate-400 hover:text-wa transition-colors text-sm mb-8">
         <ArrowLeft size={16} />{t("backToBlog")}
       </Link>

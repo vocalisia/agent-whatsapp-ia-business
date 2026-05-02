@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FAQAccordion from "@/components/shared/FAQAccordion";
 import { Calendar, CheckCircle, XCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
@@ -17,6 +18,7 @@ const t: Record<string, {
   whyTitle: string; why: string[];
   forWhoTitle: string; forWhoUs: string[]; forWhoThem: string[];
   ctaTitle: string; ctaSubtitle: string; ctaPrimary: string; ctaSecondary: string;
+  faqTitle: string; faqs: Array<{ q: string; a: string }>;
 }> = {
   fr: {
     back: "← Tous les comparatifs",
@@ -66,6 +68,13 @@ const t: Record<string, {
     ctaSubtitle: "Audit gratuit de 30 min — on vous montre exactement ce que ferait l'IA sur votre volume actuel.",
     ctaPrimary: "Prendre RDV — Audit gratuit",
     ctaSecondary: "Écrire sur WhatsApp",
+    faqTitle: "Questions fréquentes",
+    faqs: [
+      { q: "L'app WhatsApp Business suffit-elle pour automatiser mes réponses ?", a: "L'app propose des réponses rapides et un message d'absence uniquement. Aucune IA, aucune qualification de lead, aucune intégration CRM possible." },
+      { q: "Quelle différence entre l'app WhatsApp Business et l'API Cloud ?", a: "L'app est limitée à 1 appareil et ~256 contacts de diffusion. L'API WhatsApp Cloud permet l'automation à grande échelle avec IA et CRM — c'est la base qu'AgenticWhatsup utilise." },
+      { q: "Peut-on utiliser l'IA sans l'API officielle WhatsApp ?", a: "Non légalement. AgenticWhatsup utilise exclusivement l'API WhatsApp Cloud officielle Meta pour garantir conformité et stabilité." },
+      { q: "Combien de temps pour migrer depuis l'app WhatsApp Business ?", a: "14 jours. Nous gérons l'ouverture du compte API Cloud, la migration du numéro et la formation de l'agent sur votre entreprise." },
+    ],
   },
   en: {
     back: "← All comparisons",
@@ -113,6 +122,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Ready to level up?",
     ctaSubtitle: "Free 30-min audit — we show you exactly what the AI would do with your current volume.",
+    faqTitle: "Häufig gestellte Fragen",
+    faqs: [],
     ctaPrimary: "Book a call — Free audit",
     ctaSecondary: "Write on WhatsApp",
   },
@@ -162,6 +173,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Bereit für das nächste Level?",
     ctaSubtitle: "Kostenloses 30-Min-Audit — wir zeigen Ihnen genau, was die KI mit Ihrem aktuellen Volumen tun würde.",
+    faqTitle: "Veelgestelde vragen",
+    faqs: [],
     ctaPrimary: "Termin vereinbaren — Kostenloses Audit",
     ctaSecondary: "Auf WhatsApp schreiben",
   },
@@ -210,6 +223,8 @@ const t: Record<string, {
       "Geen budget voor automatisering",
     ],
     ctaTitle: "Klaar voor het volgende niveau?",
+    faqTitle: "Questions fréquentes",
+    faqs: [],
     ctaSubtitle: "Gratis audit van 30 min — we tonen u precies wat de AI zou doen met uw huidige volume.",
     ctaPrimary: "Afspraak maken — Gratis audit",
     ctaSecondary: "Schrijf op WhatsApp",
@@ -245,6 +260,17 @@ export default async function VsWhatsAppBusinessPage({ params }: { params: Promi
   const { locale } = await params;
   const c = t[locale] ?? t.fr;
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
+
+
+  const faqLd = c.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  } : null;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
@@ -319,6 +345,14 @@ export default async function VsWhatsAppBusinessPage({ params }: { params: Promi
           <ul className="space-y-2">{c.forWhoThem.map((item, i) => (<li key={i} className="flex items-start gap-2 text-slate-400 text-sm"><span className="shrink-0 mt-0.5">→</span> {item}</li>))}</ul>
         </div>
       </div>
+
+
+      {c.faqs.length > 0 && (
+        <div className="mb-14">
+          <h2 className="text-white font-extrabold text-xl mb-5" style={{ fontFamily: "Onest, sans-serif" }}>{c.faqTitle}</h2>
+          <FAQAccordion items={c.faqs.map((f) => ({ question: f.q, answer: f.a }))} emitSchema={false} />
+        </div>
+      )}
 
       <div className="bg-wa/5 border border-wa/20 rounded-2xl p-10 text-center">
         <h2 className="text-white font-extrabold text-2xl mb-2" style={{ fontFamily: "Onest, sans-serif" }}>{c.ctaTitle}</h2>

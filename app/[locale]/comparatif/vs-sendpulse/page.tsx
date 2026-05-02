@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, CheckCircle, XCircle, MessageCircle } from "lucide-react";
+import FAQAccordion from "@/components/shared/FAQAccordion";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "AgenticWhatsup vs SendPulse — Comparatif 2025 | Agent IA WhatsApp vs marketing multicanal", description: "AgenticWhatsup ou SendPulse ? SendPulse est un bon outil marketing multicanal (email, SMS, push). AgenticWhatsup est spécialiste WhatsApp avec IA vocale et vision image. Analyse honnête." },
@@ -301,16 +302,6 @@ export default async function VsSendPulsePage({ params }: { params: Promise<{ lo
     sameAs: ["https://wa.me/41799394222"],
   };
 
-  const faqLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: c.faqs.map((f) => ({
-      "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
-    })),
-  };
-
   const pageLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -318,6 +309,16 @@ export default async function VsSendPulsePage({ params }: { params: Promise<{ lo
     description: m.description,
     url: `https://agentic-whatsup.com/${locale}/comparatif/vs-sendpulse`,
   };
+
+  const faqLd = c.faqs && c.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f: { q: string; a: string }) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  } : null;
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
@@ -399,16 +400,7 @@ export default async function VsSendPulsePage({ params }: { params: Promise<{ lo
 
       <div className="mb-14">
         <h2 className="text-white font-extrabold text-xl mb-5" style={{ fontFamily: "Onest, sans-serif" }}>{c.faqTitle}</h2>
-        <div className="space-y-3">
-          {c.faqs.map((f, i) => (
-            <details key={i} className="bg-surface border border-surface-2 rounded-xl p-4 group">
-              <summary className="text-white font-semibold text-sm cursor-pointer list-none flex justify-between items-center">
-                {f.q}<span className="text-wa ml-4 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="text-slate-400 text-sm mt-3 leading-relaxed">{f.a}</p>
-            </details>
-          ))}
-        </div>
+        <FAQAccordion items={c.faqs.map((f) => ({ question: f.q, answer: f.a }))} emitSchema={false} />
       </div>
 
       <div className="bg-wa/5 border border-wa/20 rounded-2xl p-10 text-center">

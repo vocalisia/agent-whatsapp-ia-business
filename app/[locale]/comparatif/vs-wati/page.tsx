@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import FAQAccordion from "@/components/shared/FAQAccordion";
 import { Calendar, CheckCircle, XCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
@@ -17,6 +18,7 @@ const t: Record<string, {
   whyTitle: string; why: string[];
   forWhoTitle: string; forWhoUs: string[]; forWhoThem: string[];
   ctaTitle: string; ctaSubtitle: string; ctaPrimary: string; ctaSecondary: string;
+  faqTitle: string; faqs: Array<{ q: string; a: string }>;
 }> = {
   fr: {
     back: "← Tous les comparatifs",
@@ -70,6 +72,13 @@ const t: Record<string, {
     ctaSubtitle: "Audit gratuit de 30 min — on vous montre ce que ferait l'agent sur votre volume de messages.",
     ctaPrimary: "Prendre RDV — Audit gratuit",
     ctaSecondary: "Écrire sur WhatsApp",
+    faqTitle: "Questions fréquentes",
+    faqs: [
+      { q: "Wati peut-il comprendre les messages vocaux WhatsApp ?", a: "Non. Wati ne transcrit pas les messages vocaux. Avec AgenticWhatsup, chaque vocal est transcrit et traité par le LLM comme un message texte normal." },
+      { q: "Wati a-t-il une vraie IA conversationnelle ?", a: "Wati utilise des workflows et triggers pré-définis. AgenticWhatsup utilise GPT-4o/Claude pour comprendre le contexte réel de chaque conversation." },
+      { q: "Peut-on migrer de Wati vers AgenticWhatsup ?", a: "Oui. Nous récupérons vos templates, FAQs et historique CRM pour former l'agent. Migration accompagnée en 14 jours." },
+      { q: "Wati est-il conforme RGPD pour l'Europe ?", a: "Wati propose des options EU mais AgenticWhatsup est natif EU avec DPA fourni et chiffrement AES-256 inclus dès le départ." },
+    ],
   },
   en: {
     back: "← All comparisons",
@@ -121,6 +130,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Convinced? Let's discuss your case",
     ctaSubtitle: "Free 30-min audit — we show you what the agent would do with your message volume.",
+    faqTitle: "Häufig gestellte Fragen",
+    faqs: [],
     ctaPrimary: "Book a call — Free audit",
     ctaSecondary: "Write on WhatsApp",
   },
@@ -174,6 +185,8 @@ const t: Record<string, {
     ],
     ctaTitle: "Überzeugt? Lassen Sie uns über Ihren Fall sprechen",
     ctaSubtitle: "Kostenloses 30-Min-Audit — wir zeigen Ihnen, was der Agent mit Ihrem Nachrichtenvolumen tun würde.",
+    faqTitle: "Veelgestelde vragen",
+    faqs: [],
     ctaPrimary: "Termin vereinbaren — Kostenloses Audit",
     ctaSecondary: "Auf WhatsApp schreiben",
   },
@@ -226,6 +239,8 @@ const t: Record<string, {
       "Uw behoeften zijn uitsluitend in het Engels",
     ],
     ctaTitle: "Overtuigd? Laten we uw geval bespreken",
+    faqTitle: "Questions fréquentes",
+    faqs: [],
     ctaSubtitle: "Gratis audit van 30 min — we tonen u wat de agent zou doen met uw berichtvolume.",
     ctaPrimary: "Afspraak maken — Gratis audit",
     ctaSecondary: "Schrijf op WhatsApp",
@@ -270,9 +285,21 @@ export default async function VsWatiPage({ params }: { params: Promise<{ locale:
     url: `https://agentic-whatsup.com/${locale}/comparatif/vs-wati`,
   };
 
+
+  const faqLd = c.faqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: c.faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  } : null;
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
 
       <Link href={`/${locale}/comparatif`} className="inline-flex items-center gap-1 text-slate-400 hover:text-wa text-sm mb-10 transition-colors">
         <ArrowLeft size={14} /> {c.back}
@@ -373,6 +400,14 @@ export default async function VsWatiPage({ params }: { params: Promise<{ locale:
       </div>
 
       {/* CTA */}
+
+      {c.faqs.length > 0 && (
+        <div className="mb-14">
+          <h2 className="text-white font-extrabold text-xl mb-5" style={{ fontFamily: "Onest, sans-serif" }}>{c.faqTitle}</h2>
+          <FAQAccordion items={c.faqs.map((f) => ({ question: f.q, answer: f.a }))} emitSchema={false} />
+        </div>
+      )}
+
       <div className="bg-wa/5 border border-wa/20 rounded-2xl p-10 text-center">
         <h2 className="text-white font-extrabold text-2xl mb-2" style={{ fontFamily: "Onest, sans-serif" }}>{c.ctaTitle}</h2>
         <p className="text-slate-400 text-sm mb-6">{c.ctaSubtitle}</p>
