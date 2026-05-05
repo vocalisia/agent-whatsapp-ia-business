@@ -79,17 +79,6 @@ const organizationJsonLd = {
     "name": "Richard Cohen",
     "sameAs": "https://www.linkedin.com/in/richard-cohen-vault369/"
   },
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "VAULT 369 LTD",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "71-75 Shelton Street",
-      "addressLocality": "London",
-      "postalCode": "WC2H 9JQ",
-      "addressCountry": "GB"
-    }
-  },
   "sameAs": [
     "https://www.linkedin.com/company/agentic-whatsup",
     "https://twitter.com/agenticwhatsup",

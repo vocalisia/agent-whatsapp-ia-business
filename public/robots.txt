@@ -3,8 +3,11 @@
 
 User-agent: *
 Allow: /
+Allow: /_next/static/
+Allow: /_next/image
 Disallow: /api/
-Disallow: /_next/
+Disallow: /_next/data/
+Disallow: /_next/server/
 
 # === Search engine AI training & answering ===
 User-agent: GPTBot
