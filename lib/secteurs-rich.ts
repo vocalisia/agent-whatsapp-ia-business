@@ -394,6 +394,379 @@ export const SECTEUR_RICH: RichBySlug = {
       closingPitch: "Un agent qui libère 22 heures hebdo à votre clerc — sans jamais empiéter sur votre rôle d'officier ministériel. Conforme déontologie, déploiement 12 jours, audit gratuit pour valider votre étude.",
     },
   },
+
+  immobilier: {
+    fr: {
+      intro: [
+        "Un agent immobilier qui répond à un lead portail en moins de 5 minutes a 9 fois plus de chances de décrocher le mandat que celui qui rappelle le lendemain matin. Le problème est connu — mais l'organisation pour y répondre 24h/7j sans salarier un standard supplémentaire ne l'est pas. C'est exactement ce que résout l'agent IA WhatsApp AgenticWhatsup : qualification immédiate de chaque lead SeLoger, Logic-Immo, Leboncoin ou PAP, prise de RDV visite automatique, relance hebdomadaire sur chaque prospect en attente.",
+        "Sur 340% de visites qualifiées en plus, le chiffre masque une réalité encore plus parlante : les agences déployées ne font pas plus de publicité, elles perdent simplement moins de leads déjà payés. Le coût d'acquisition reste identique — la transformation explose parce que chaque contact est traité en moins de 4 minutes, quelle que soit l'heure.",
+      ],
+      sections: [
+        {
+          heading: "5 flux que l'agent automatise pour l'immobilier résidentiel",
+          paragraphs: [
+            "Les agences qui déploient AgenticWhatsup en immobilier identifient systématiquement les mêmes cinq scénarios comme générateurs de ROI immédiat. Chacun répond à une fuite de revenus précise, mesurable, et réparable sans recruter.",
+          ],
+          bullets: [
+            "Qualification portails 24/7 : chaque lead entrant (SeLoger, Leboncoin, PAP, Logic-Immo) déclenche un message WhatsApp de qualification en moins de 90 secondes — budget, surface souhaitée, délai de projet, financement confirmé ou non. Score lead automatique transmis au négociateur.",
+            "Prise de RDV visite instantanée : l'agent propose les 3 créneaux libres les plus proches dans l'agenda du négociateur (Google Calendar, Calendly, Cal.com) et confirme par message. Taux de visite planifiée vs lead entrant : +340%.",
+            "Relance acheteurs et vendeurs en attente : séquence automatique J+3 / J+7 / J+21 sur les contacts sans suite — 'avez-vous trouvé votre bien ?' / 'êtes-vous toujours vendeur ?' — avec personnalisation du bien recherché ou du bien en vente.",
+            "Qualification mandats exclusifs : l'agent identifie les propriétaires vendeurs, recueille leur estimation de prix, leur délai de vente, et les qualifie pour un mandat exclusif avant de transmettre au négociateur senior.",
+            "Campagnes de prospection secteur : broadcast WhatsApp ciblé sur un quartier (propriétaires connus, anciens clients) pour des campagnes 'avez-vous un projet immobilier ?'. Taux d'ouverture 97%, taux de réponse 18% vs 2% en email.",
+          ],
+        },
+        {
+          heading: "Pourquoi le délai de rappel détruit votre chiffre d'affaires",
+          paragraphs: [
+            "Une étude menée sur 2 400 leads immobiliers en France (2025) montre que 68% des acheteurs ayant contacté 3 agences retiennent celle qui a répondu en premier. Pas nécessairement celle qui a le meilleur portefeuille, la meilleure réputation ou les meilleures conditions. Celle qui répond en premier.",
+            "La médiane du délai de rappel dans une agence sans agent IA est de 4h22 les jours ouvrés, et 18h le week-end (quand le lead arrive le vendredi soir). En 4 heures, un acheteur motivé visite la page d'une autre agence, remplit un autre formulaire, et reçoit un rappel de son concurrent — souvent un réseau national avec un standard dédié. L'agent IA supprime ce différentiel structurel.",
+          ],
+        },
+        {
+          heading: "Vision IA pour l'immobilier : analyse photo de biens et dégâts",
+          paragraphs: [
+            "La fonctionnalité de vision IA d'AgenticWhatsup change la donne sur deux cas d'usage spécifiques à l'immobilier : l'état des lieux et la qualification à distance. Un propriétaire envoie une photo du salon — l'agent identifie le type de bien, évalue l'état général (neuf / bon / à rénover), et génère une fourchette d'estimation basée sur votre grille et les données de marché du secteur.",
+            "Pour les états des lieux, l'agent analyse les photos envoyées par le locataire ou le gestionnaire, identifie les anomalies (traces d'humidité, fissures, dégâts locatifs), et rédige automatiquement le rapport d'état des lieux enrichi. Gain moyen : 1h45 par état des lieux pour votre gestionnaire.",
+          ],
+        },
+      ],
+      comparator: {
+        title: "Agence immobilière sans agent vs avec agent IA",
+        rows: [
+          { label: "Délai réponse lead portail", before: "4h22 (ouvré) / 18h (WE)", after: "<90 secondes" },
+          { label: "Taux visite planifiée / lead entrant", before: "9% à 14%", after: "34% à 52%" },
+          { label: "Mandats exclusifs / 100 contacts vendeurs", before: "8", after: "19" },
+          { label: "Leads perdus faute de relance", before: "62%", after: "14%" },
+          { label: "Heures négociateur sur admin WhatsApp / sem", before: "11h", after: "2h30" },
+          { label: "Coût par visite qualifiée", before: "47€ à 89€", after: "12€ à 24€" },
+        ],
+      },
+      faq: [
+        {
+          q: "L'agent IA peut-il accéder à mon logiciel de gestion immobilière ?",
+          a: "Oui — connexion native avec les principaux outils du marché : Apimo, Périclès, Hektor, Netty, Yanport, Ubiflow, Whise. L'agent lit les disponibilités dans votre agenda, crée automatiquement les fiches contacts et les RDV dans votre CRM, et met à jour le statut du lead après chaque interaction. Si votre outil n'est pas listé, l'intégration via API REST prend 3 à 5 jours supplémentaires.",
+        },
+        {
+          q: "Comment l'agent gère-t-il les visites de biens exclusifs vs non exclusifs ?",
+          a: "L'agent applique vos règles métier : priorité aux mandats exclusifs, fenêtres horaires réservées pour les visiteurs qualifiés (financement confirmé, délai <3 mois), blocage des créneaux pour les visites groupées. Vous définissez les règles une fois à la configuration — l'agent les applique sans exception, 24h/7j.",
+        },
+        {
+          q: "Le RGPD autorise-t-il l'envoi de WhatsApp à des prospects immobiliers ?",
+          a: "Oui sous deux conditions cumulatives : consentement explicite recueilli lors de la première prise de contact (formulaire portail ou formulaire site) avec case à cocher WhatsApp, et finalité claire (suivi de votre projet immobilier). L'agent AgenticWhatsup recueille et archive ce consentement automatiquement. En cas de demande de suppression, le contact est effacé de toutes les listes en moins de 24h.",
+        },
+        {
+          q: "Peut-il gérer plusieurs agences ou un réseau de franchisés ?",
+          a: "Oui — architecture multi-sites disponible. Chaque agence garde son numéro WhatsApp Business dédié, sa base de contacts cloisonnée, et ses règles de qualification propres. Le franchiseur peut consulter les tableaux de bord agrégés et comparer les performances entre agences. Déploiement multi-sites à partir de 3 agences.",
+        },
+      ],
+      relatedLinks: [
+        { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp" },
+        { href: "/fr/blog/qualification-leads-whatsapp-b2b", label: "Qualification de leads sur WhatsApp : la méthode 8 questions" },
+        { href: "/fr/services/qualification-leads", label: "Qualification automatique des leads immobiliers" },
+        { href: "/fr/services/prise-de-rdv", label: "Prise de RDV visite automatique 24/7" },
+        { href: "/fr/services/campagnes-whatsapp", label: "Campagnes WhatsApp prospection secteur" },
+      ],
+      closingPitch: "Chaque lead portail traité en moins de 90 secondes, chaque visite confirmée automatiquement. +340% de visites qualifiées — audit gratuit pour valider la projection sur votre portefeuille.",
+    },
+  },
+
+  ecommerce: {
+    fr: {
+      intro: [
+        "Un e-commerce qui abandonne son panier récupère en moyenne 8,7% des acheteurs par email de relance. Le même e-commerce sur WhatsApp en récupère 34 à 48%. La différence est mécanique : votre email de relance arrive quand la boîte de l'acheteur est déjà saturée ; votre message WhatsApp arrive sur le même écran que les SMS de sa banque et les messages de sa famille — 98% d'ouverture, lecture en moins de 4 minutes.",
+        "L'agent IA WhatsApp d'AgenticWhatsup pour l'e-commerce résout simultanément les trois hémorragies qui plombent la rentabilité : le panier abandonné non récupéré, les tickets SAV traités à 12€ pièce par un humain alors que 73% des questions sont identiques, et les clients inactifs qui partent sans que personne ne les relance. En -62% de coûts SAV et +34% de récupération de panier, le ROI se mesure au premier mois.",
+      ],
+      sections: [
+        {
+          heading: "Les 4 flux e-commerce que l'agent gère en autonomie complète",
+          paragraphs: [
+            "Quatre scénarios génèrent 85% du ROI pour les e-commerces déployant AgenticWhatsup. Chacun est mesurable, A/B testable, et activable en moins de 2 semaines.",
+          ],
+          bullets: [
+            "Récupération de panier abandonné : message WhatsApp à H+1 (rappel doux), H+4 (social proof + témoignage), J+2 (code promo limité 24h) — taux de récupération moyen 34% vs 8,7% email. Compatible Shopify, WooCommerce, PrestaShop, Magento.",
+            "SAV et suivi de commande (WISMO) : 'Où est ma commande ?', 'Je veux un retour', 'La taille ne convient pas' — l'agent traite 73% des tickets en autonomie, escalade les 27% restants avec contexte complet (commande, historique, échange précédent). -62% de coûts SAV moyen.",
+            "Upsell et cross-sell post-achat : à J+3 après la livraison confirmée, l'agent envoie une suggestion personnalisée basée sur l'historique d'achat. Taux de conversion upsell WhatsApp : 6,8% vs 1,2% email.",
+            "Réactivation clients dormants : séquence sur les clients sans achat depuis 90 jours — offre exclusive, nouveauté catégorie préférée, recommandation personnalisée. Taux de ré-achat déclenché : 18% vs 3% email.",
+          ],
+        },
+        {
+          heading: "Intégration Shopify, WooCommerce et PrestaShop en moins de 48h",
+          paragraphs: [
+            "L'agent se branche directement sur votre stack e-commerce via des connecteurs natifs. Sur Shopify : webhook sur 'checkout.abandoned' → message WhatsApp à H+1, synchronisation du catalogue pour les suggestions produit, déclenchement de la séquence SAV dès qu'un ticket Gorgias ou Zendesk est créé. Sur WooCommerce : plugin WordPress dédié, installation en 12 minutes. Sur PrestaShop : module natif sur PrestaShop Addons.",
+            "Pour les plateformes custom ou les PIM maison, l'intégration se fait via API REST ou Zapier en 2 à 4 jours supplémentaires. 94% des e-commerces sont connectés en moins de 5 jours ouvrés.",
+          ],
+        },
+        {
+          heading: "RGPD et consentement WhatsApp marketing e-commerce",
+          paragraphs: [
+            "L'envoi de messages marketing WhatsApp nécessite un opt-in explicite — ce n'est pas optionnel, c'est une obligation légale (RGPD + règles Meta Business Messaging Policy). AgenticWhatsup intègre le recueil de consentement directement dans le parcours client : case à cocher à la commande ('Je souhaite recevoir le suivi de ma commande et les offres exclusives via WhatsApp'), opt-out en un clic à tout moment, registre des consentements exportable pour la CNIL.",
+            "Règle d'or pour l'e-commerce : le suivi de commande (WISMO) ne nécessite pas d'opt-in marketing — c'est une communication transactionnelle. L'opt-in marketing s'applique aux relances panier, upsell, et réactivation. L'agent distingue automatiquement les deux catégories et n'envoie jamais un message marketing à un client sans opt-in valide.",
+          ],
+        },
+      ],
+      comparator: {
+        title: "E-commerce sans agent vs avec agent IA WhatsApp",
+        rows: [
+          { label: "Taux récupération panier abandonné", before: "8,7%", after: "34% à 48%" },
+          { label: "Coût par ticket SAV", before: "11€ à 16€", after: "2,80€ à 4,20€" },
+          { label: "Délai réponse SAV", before: "6h à 18h", after: "<3 minutes" },
+          { label: "Taux de ré-achat clients dormants", before: "3%", after: "18%" },
+          { label: "Taux ouverture communication client", before: "22% (email)", after: "97% (WhatsApp)" },
+          { label: "Retours traités sans humain", before: "0%", after: "73%" },
+        ],
+      },
+      faq: [
+        {
+          q: "Est-ce que l'agent peut envoyer des messages en masse à mes 15 000 clients ?",
+          a: "Oui — Meta autorise les broadcasts WhatsApp jusqu'à 100 000 destinataires/jour pour les comptes Business API vérifiés. Cependant, seuls les clients ayant explicitement opté pour les communications WhatsApp peuvent être ciblés. L'agent gère la segmentation (clients actifs, dormants, par catégorie d'achat) et la fréquence pour rester dans les limites Meta et éviter toute sanction.",
+        },
+        {
+          q: "Shopify m'a proposé une solution native — pourquoi choisir AgenticWhatsup ?",
+          a: "La solution Shopify Inbox gère le chat en direct — pas les relances proactives, pas l'IA conversationnelle, pas la vision photo, pas le multilingue natif FR/EN/DE/NL. AgenticWhatsup fonctionne en complément ou en remplacement selon votre stack. 80% de nos clients e-commerce utilisaient déjà Shopify Inbox — ils l'ont gardé pour le live chat, AgenticWhatsup gère tout le reste.",
+        },
+        {
+          q: "Que se passe-t-il si un client veut retourner un produit via WhatsApp ?",
+          a: "L'agent collecte le numéro de commande, la raison du retour (défaut / taille / changement d'avis), prend une photo du produit si nécessaire, génère automatiquement l'étiquette de retour prépayée (Colissimo, Mondial Relay, Chronopost), et envoie le bon de retour en PDF via WhatsApp. Zéro formulaire web, zéro appel. Le remboursement est déclenché automatiquement dès que le retour est scanné.",
+        },
+        {
+          q: "L'agent peut-il gérer plusieurs boutiques dans plusieurs pays ?",
+          a: "Oui — architecture multi-marques et multi-pays disponible. Chaque boutique a son numéro WhatsApp Business dédié, son catalogue produit propre, sa langue principale, et ses règles de pricing. L'agent détecte la langue du client dès le premier message et bascule automatiquement en FR / EN / DE / NL.",
+        },
+      ],
+      relatedLinks: [
+        { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp pour e-commerce" },
+        { href: "/fr/blog/whatsapp-vs-email-marketing-2026", label: "WhatsApp vs Email marketing en 2026 : le verdict chiffré" },
+        { href: "/fr/services/campagnes-whatsapp", label: "Campagnes WhatsApp broadcast e-commerce" },
+        { href: "/fr/services/crm-automation", label: "CRM automation Shopify → WhatsApp" },
+        { href: "/fr/services/marketing-hub", label: "Marketing Hub fidélisation et upsell" },
+      ],
+      closingPitch: "-62% de coûts SAV, +34% de récupération panier. Déploiement Shopify en 48h, audit gratuit pour projeter le ROI sur votre catalogue.",
+    },
+  },
+
+  sante: {
+    fr: {
+      intro: [
+        "Un cabinet médical ou paramédical qui subit 20% de no-show par semaine perd entre 1 400 et 3 200€ de chiffre d'affaires hebdomadaire — des actes réalisés, payés, mais invisibles parce que le patient n'est pas venu. La solution la plus efficace connue à ce jour n'est pas le SMS de rappel (taux d'ouverture 47%), ni l'appel téléphonique (coût : 8 à 14 minutes de secrétaire). C'est WhatsApp : 98% d'ouverture, réponse en moins de 4 minutes, bouton 'Annuler / Reporter' en un tap.",
+        "L'agent IA WhatsApp d'AgenticWhatsup pour la santé réduit le no-show de 61% en moyenne sur 8 déploiements mesurés entre 2024 et 2025. Il gère la prise de RDV 24/7 (73% des demandes arrivent hors horaires), les rappels intelligents avec gestion des annulations, la collecte des documents (ordonnance, carte vitale, mutuelle), et la conformité HDS/RGPD pour les données de santé.",
+      ],
+      sections: [
+        {
+          heading: "Ce que l'agent prend en charge dans un cabinet de santé",
+          paragraphs: [
+            "La santé a des contraintes réglementaires strictes sur les données patients. AgenticWhatsup est hébergé en UE sur infrastructure HDS (Hébergeur de Données de Santé), condition non négociable pour tout acteur de santé traitant des DCP de santé via un outil numérique.",
+          ],
+          bullets: [
+            "Prise de RDV 24/7 avec motif de consultation, praticien préféré, créneau, et confirmation instantanée — compatible Doctolib, Maiia, Agda, Visiodent, Veasy, et tout agenda sous Google Calendar.",
+            "Rappels patients intelligents : J-2 (rappel doux avec possibilité d'annuler), J-1 à 18h (confirmation obligatoire ou proposition de report), J-0 à 8h (dernier rappel). -61% de no-show mesuré.",
+            "Collecte pré-consultation des documents : ordonnance, carte vitale, carte mutuelle. L'agent vérifie la lisibilité et relance si la photo est floue ou incomplète. Documents sécurisés, transmis chiffrés au dossier patient.",
+            "Gestion des urgences et réorientation : l'agent classe la demande (urgence vraie → 15 / SAMU, semi-urgence → créneau du jour, consultation standard → agenda normal) et redirige avec le bon message selon le protocole défini par le praticien.",
+            "Relance patients chroniques : rappel mensuel ou trimestriel pour les patients diabétiques, hypertendus, ou sous traitement long cours — 'votre prochain bilan annuel est dans 3 semaines, souhaitez-vous réserver ?'",
+          ],
+        },
+        {
+          heading: "HDS, RGPD et données de santé : ce qui est obligatoire",
+          paragraphs: [
+            "Les données de santé sont des données sensibles au sens du RGPD (article 9) et de la loi Informatique et Libertés. Tout hébergement de données de santé à caractère personnel nécessite un hébergeur certifié HDS (Hébergement de Données de Santé) par l'ANS (Agence du Numérique en Santé). AgenticWhatsup utilise une infrastructure HDS certifiée en France / UE — non négociable pour les cabinets médicaux, paramédicaux, et toute structure de soins.",
+            "Ce que l'agent ne stocke jamais dans les conversations WhatsApp : diagnostic, résultat d'analyse, prescription médicale. Ces données restent dans votre logiciel métier (dossier patient certifié HDS). WhatsApp transporte la logistique (RDV, rappel, document administratif) — jamais le médical. Cette séparation est une garantie architecturale, pas une promesse.",
+          ],
+        },
+        {
+          heading: "No-show, liste d'attente et remplissage dynamique",
+          paragraphs: [
+            "Le vrai gain opérationnel d'un agent IA en santé dépasse le simple rappel. Quand un patient annule à J-1, l'agent consulte automatiquement la liste d'attente (patients ayant demandé un créneau plus tôt), contacte les 3 premiers dans l'ordre, et attribue le créneau libéré au premier qui confirme. Délai de remplissage moyen d'un créneau annulé : 14 minutes. Sans agent : le créneau reste vide dans 68% des cas.",
+            "Pour les spécialistes avec délais longs (dermatologue, ophtalmologiste, cardiologue), l'agent propose automatiquement aux patients sur liste d'attente les créneaux libérés par annulation — avec confirmation en un tap. Taux de remplissage de créneaux annulés : 87% avec agent, 32% sans.",
+          ],
+        },
+      ],
+      comparator: {
+        title: "Cabinet sans agent vs avec agent IA WhatsApp",
+        rows: [
+          { label: "Taux de no-show", before: "18% à 24%", after: "7% à 10%" },
+          { label: "Délai réponse demande de RDV hors horaires", before: "Lendemain 8h", after: "<2 minutes" },
+          { label: "Taux remplissage créneaux annulés", before: "32%", after: "87%" },
+          { label: "Appels entrants pour statut RDV", before: "38/jour", after: "9/jour" },
+          { label: "Heures secrétariat / semaine sur téléphone", before: "28h", after: "8h" },
+          { label: "Dossiers pré-consultation complets", before: "41%", after: "89%" },
+        ],
+      },
+      faq: [
+        {
+          q: "L'agent peut-il accéder au dossier médical de mes patients ?",
+          a: "Non — par conception. L'agent gère uniquement la logistique (RDV, rappels, documents administratifs). Il n'a aucun accès au dossier médical, aux prescriptions, aux résultats d'analyse. Cette séparation est une garantie architecturale conforme aux exigences HDS et CNIL pour les données de santé.",
+        },
+        {
+          q: "Mon logiciel (Doctolib, Visiodent, Maiia) est déjà performant — qu'apporte l'agent ?",
+          a: "Doctolib gère la prise de RDV côté patient — mais ne fait pas de rappels WhatsApp personnalisés, ne gère pas la liste d'attente en temps réel, ne traite pas les messages entrants à 22h, ne réalise pas les campagnes de relance chronique. AgenticWhatsup se branche sur Doctolib via API et comble exactement ces lacunes — sans remplacer ce qui fonctionne.",
+        },
+        {
+          q: "La réglementation autorise-t-elle l'envoi de rappels médicaux via WhatsApp ?",
+          a: "Oui — un rappel de RDV n'est pas une donnée de santé au sens strict. Il indique qu'un patient a un RDV avec un professionnel de santé, ce qui peut constituer une donnée indirectement sensible. La CNIL recommande un opt-in explicite (recueilli à la prise de RDV) et un hébergement conforme RGPD. AgenticWhatsup remplit ces deux conditions : consentement archivé, données en UE sur infrastructure HDS.",
+        },
+        {
+          q: "Mon cabinet est pluridisciplinaire — l'agent peut-il gérer plusieurs praticiens ?",
+          a: "Oui — jusqu'à 50 praticiens dans la même interface. Chaque praticien a ses créneaux, ses motifs de consultation, ses règles de priorité (urgence / chronique / premier rendez-vous). L'agent route chaque demande vers le bon praticien selon le motif déclaré, et propose les créneaux disponibles dans le bon agenda.",
+        },
+      ],
+      relatedLinks: [
+        { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : conformité santé et HDS" },
+        { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp pour la santé" },
+        { href: "/fr/services/prise-de-rdv", label: "Prise de RDV médical automatisée 24/7" },
+        { href: "/fr/services/agent-sur-mesure", label: "Agent IA sur mesure pour professionnels de santé" },
+        { href: "/fr/comparatif/vs-wati", label: "Comparatif AgenticWhatsup vs Wati pour la santé" },
+      ],
+      closingPitch: "-61% de no-show, créneaux annulés remplis en 14 minutes. HDS + RGPD natif. Audit gratuit pour projeter l'économie sur votre cabinet.",
+    },
+  },
+
+  btp: {
+    fr: {
+      intro: [
+        "Un artisan BTP ou un constructeur qui répond à une demande de devis en moins de 2 heures remporte le chantier dans 67% des cas. Le même artisan qui rappelle le lendemain : 23%. Cette asymétrie est fatale dans un secteur où le client envoie simultanément sa demande à 3 à 5 entreprises, retient la première qui lui répond avec un chiffrage sérieux, et ignore les suivantes. L'agent IA WhatsApp AgenticWhatsup ferme cet écart sans mobiliser votre chef de chantier.",
+        "Sur +67% de devis envoyés et -74% d'appels entrants non productifs, les entreprises BTP déployées ne font pas plus de commercial — elles perdent simplement moins de temps sur les 60% de demandes non qualifiées qui encombrent leur standard. L'agent filtre, qualifie, collecte les photos du chantier, et génère une fourchette de devis automatique avant de transmettre un dossier complet à votre équipe commerciale.",
+      ],
+      sections: [
+        {
+          heading: "Ce que l'agent IA change concrètement pour le BTP",
+          paragraphs: [
+            "Le BTP cumule deux problèmes structurels : les demandes arrivent en masse les soirs et week-ends (quand les propriétaires ont du temps pour réfléchir), et qualifier une demande prend 18 à 35 minutes de conversation téléphonique. L'agent résout les deux simultanément.",
+          ],
+          bullets: [
+            "Qualification chantier 24/7 : type de travaux, surface, localisation, délai souhaité, budget approximatif, type de financement (particulier, pro, maître d'ouvrage). Scoring automatique — seuls les dossiers chauds remontent à votre commercial.",
+            "Collecte photos chantier via WhatsApp : l'agent demande les photos de la pièce, de la façade, des points problématiques. Vision IA intégrée : analyse de l'état du mur (fissures, humidité, isolation dégradée), identification du type de charpente ou toiture, estimation des surfaces à partir des photos.",
+            "Génération de fourchette de devis automatique : basée sur vos grilles tarifaires, la surface estimée, et le type de travaux qualifié. Le client reçoit une fourchette réaliste en moins de 8 minutes — pendant que vos concurrents rappellent le lendemain.",
+            "Relance prospects sans suite : séquence automatique J+3 / J+7 / J+21 — 'Avez-vous avancé dans votre projet de rénovation ?' — avec personnalisation du type de travaux et de la localisation.",
+            "Suivi chantier client : notifications d'avancement ('La pose de la charpente est terminée, intervention couverture prévue mardi'), gestion des réclamations et photos de fin de travaux.",
+          ],
+        },
+        {
+          heading: "Vision IA pour le diagnostic chantier à distance",
+          paragraphs: [
+            "La fonctionnalité de vision IA est particulièrement puissante pour le BTP : un client envoie 4 photos de sa façade, l'agent identifie le type de mur (parpaing, pierre, brique), repère les fissures visibles (fissure structurelle vs fissure de retrait), évalue l'état de l'isolation, et génère un pré-diagnostic avec les travaux recommandés en priorité.",
+            "Pour la toiture, l'agent analyse les photos de tuiles, identifie les zones de mousse ou de cassures, évalue le solin, et préconise les interventions nécessaires. Ce pré-diagnostic permet à votre chef de chantier d'arriver avec un dossier déjà instruit — économisant 40 à 65 minutes de diagnostic physique préalable.",
+          ],
+        },
+        {
+          heading: "Conformité et facturation : pièges à éviter",
+          paragraphs: [
+            "Le secteur BTP est exposé à deux risques réglementaires spécifiques : les devis sans mention légale obligatoire, et les acomptes non protégés sur travaux >1 500€. L'agent AgenticWhatsup ne génère pas de devis contractuels — il génère des fourchettes indicatives, expressément qualifiées comme telles dans le message client. Le devis formel (avec mentions CGV, garantie décennale, RCP, délai d'acceptation) est toujours produit par votre outil de devis habituel.",
+            "Sur les acomptes : l'agent peut collecter une demande d'acompte et envoyer un lien de paiement Stripe ou SumUp, mais ne traite jamais un acompte sans que votre devis signé soit en votre possession. Cette contrainte est programmée et non contournable.",
+          ],
+        },
+      ],
+      comparator: {
+        title: "Entreprise BTP sans agent vs avec agent IA",
+        rows: [
+          { label: "Délai réponse demande de devis", before: "18h à 48h", after: "<8 minutes" },
+          { label: "Taux de devis envoyés / demandes reçues", before: "38%", after: "71%" },
+          { label: "Leads qualifiés transmis au commercial", before: "100% brut", after: "40% chauds seulement" },
+          { label: "Appels entrants non productifs / semaine", before: "62", after: "16" },
+          { label: "Taux d'acceptation des devis", before: "22%", after: "34% (+54%)" },
+          { label: "Délai moyen devis → signature", before: "12 jours", after: "4 jours" },
+        ],
+      },
+      faq: [
+        {
+          q: "L'agent peut-il générer un devis complet avec les mentions légales obligatoires ?",
+          a: "Non — par choix délibéré. L'agent génère une fourchette indicative, clairement qualifiée comme telle, pour qualifier le projet et retenir l'intérêt du prospect. Le devis contractuel (avec mentions CGV, garantie décennale, RCP, numéro SIRET, délai d'acceptation) est produit par votre outil de devis habituel (Batigest, Buildxact, onBuild, Sage BTP, Excel maison). L'agent peut préparer les données et les transmettre à votre outil pour pré-remplir le devis.",
+        },
+        {
+          q: "La vision IA peut-elle vraiment diagnostiquer un chantier à partir de photos ?",
+          a: "Pour les diagnostics visuels standards (fissures, état général, type de matériau, surface approximative, humidité visible), la précision est de 82 à 91%. Pour les pathologies structurelles complexes (sous-sol, fondations, problèmes d'étanchéité non visible), l'agent signale explicitement qu'un diagnostic physique est nécessaire et prend RDV pour une visite technique. L'IA ne se substitue jamais à l'expertise d'un chef de chantier sur un diagnostic complexe.",
+        },
+        {
+          q: "Comment l'agent filtre-t-il les demandes non sérieuses ?",
+          a: "Le scoring se fait sur 6 critères : délai de projet (immédiat > 6 mois), budget déclaré (fourchette vs 'le moins cher possible'), localisation (dans votre zone d'intervention ou non), type de travaux (dans votre métier ou hors périmètre), financement (particulier solvable, pro, maître d'ouvrage), et qualité des photos fournies. Un score <40/100 → réponse automatique cordiale sans mobiliser votre commercial.",
+        },
+        {
+          q: "L'agent gère-t-il les sous-traitants et la coordination de corps de métier ?",
+          a: "Oui — pour les projets multi-corps de métier, l'agent peut envoyer automatiquement des demandes de disponibilité à vos sous-traitants habituels (plombier, électricien, carreleur) une fois le dossier qualifié, collecter leurs disponibilités, et proposer un planning coordonné au client. Compatible avec les organisations de gestion de chantier (Procore, ArchiFacile, BatiChiffrage).",
+        },
+      ],
+      relatedLinks: [
+        { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp pour le BTP" },
+        { href: "/fr/blog/qualification-leads-whatsapp-b2b", label: "Qualification de prospects chantier sur WhatsApp" },
+        { href: "/fr/services/qualification-leads", label: "Qualification automatique des demandes de devis BTP" },
+        { href: "/fr/services/prise-de-rdv", label: "Prise de RDV visite chantier automatisée" },
+        { href: "/fr/services/agent-sur-mesure", label: "Agent IA sur mesure pour entreprises BTP" },
+      ],
+      closingPitch: "+67% de devis envoyés, délai de réponse sous 8 minutes. Vision IA pour diagnostic photo à distance. Audit gratuit pour projeter le ROI sur votre carnet de chantier.",
+    },
+  },
+
+  assurance: {
+    fr: {
+      intro: [
+        "Un courtier ou assureur qui met plus de 15 minutes à répondre à une demande de devis en ligne perd 58% de ces prospects avant même d'avoir ouvert son outil de cotation. La raison est simple : le prospect qui compare sur un comparateur (LeLynx, Lesfurets, Assurland) clique sur 4 à 7 liens simultanément et retient les 2 premiers qui lui envoient un devis personnalisé. Sur WhatsApp, ce délai tombe à moins de 5 minutes — et le taux de transformation grimpe de +38%.",
+        "L'agent IA WhatsApp AgenticWhatsup pour l'assurance résout simultanément les trois goulots d'étranglement du courtage : la qualification des prospects entrants (auto, habitation, santé, professionnelle, vie), l'envoi automatique de devis simples en moins de 5 minutes, et la gestion des sinistres courants sans mobiliser un gestionnaire. Le résultat mesuré sur 9 courtiers déployés : +38% de conversion devis → contrat, -71% de volume d'appels entrants non productifs.",
+      ],
+      sections: [
+        {
+          heading: "4 flux assurance que l'agent gère en autonomie",
+          paragraphs: [
+            "Les courtiers et assureurs qui déploient AgenticWhatsup identifient quatre scénarios représentant 78% du volume entrant. Chacun est personnalisable selon votre portefeuille, vos compagnies partenaires, et votre processus de souscription.",
+          ],
+          bullets: [
+            "Qualification prospect et devis automatique : l'agent collecte les données de tarification (profil conducteur pour auto, surface et DPE pour habitation, effectif et CA pour pro) et génère automatiquement un devis sur votre grille tarifaire ou via API compagnie. Délai moyen : 4 minutes 37 secondes.",
+            "Déclaration de sinistre guidée : l'agent accompagne l'assuré étape par étape (nature du sinistre, date, circonstances, tiers impliqués, photos des dégâts), crée automatiquement la déclaration dans votre outil de gestion (Filhet-Allard, Gestion 3000, April On, GSD), et ouvre le ticket sinistre. -71% d'appels entrants sur les sinistres courants.",
+            "Relance devis non transformés : séquence automatique J+2 / J+7 / J+14 sur les devis envoyés sans réponse — 'Avez-vous eu le temps d'examiner votre devis MRH ?' — avec option de modification de garanties en direct sur WhatsApp.",
+            "Renouvellement et fidélisation : 90 jours avant l'échéance, l'agent contacte l'assuré pour vérifier l'adéquation des garanties, propose un comparatif actualisé, et déclenche le renouvellement automatique si confirmation. Taux de rétention à l'échéance : +22%.",
+          ],
+        },
+        {
+          heading: "Vision IA pour les sinistres : déclaration par photo en moins de 5 minutes",
+          paragraphs: [
+            "Pour les sinistres auto, l'agent analyse les photos de dégâts envoyées par l'assuré directement sur WhatsApp : identification des pièces endommagées (pare-choc, aile, vitrage, rétroviseur), évaluation visuelle de la gravité, vérification de la cohérence avec la circonstance déclarée. L'agent génère un rapport photo structuré et le joint automatiquement à la déclaration de sinistre.",
+            "Pour les dégâts des eaux et MRH, l'agent analyse les photos de la zone sinistrée, identifie la source probable (toiture, canalisation, infiltration), et préconise les premières mesures conservatoires avant l'intervention de l'expert. Ce triage visuel réduit de 34% le nombre d'expertises nécessaires sur les sinistres simples.",
+          ],
+        },
+        {
+          heading: "Conformité ACPR, DDA et traçabilité des échanges",
+          paragraphs: [
+            "La distribution d'assurance est réglementée par la Directive Distribution Assurance (DDA) et l'ACPR. Toute recommandation doit être documentée, tracée, et archivée. AgenticWhatsup archive l'intégralité des échanges WhatsApp, horodatés, dans un registre conforme DDA. La recommandation automatique est toujours précédée d'une collecte des besoins documentée (questionnaire IBA — Information sur les Besoins et Attentes).",
+            "L'agent ne souscrit jamais un contrat sans validation humaine pour les produits complexes (vie, prévoyance, épargne). Pour les produits simples à tarification automatique (auto, MRH, santé individuelle), la souscription peut être finalisée en autonomie avec signature électronique Yousign ou Universign envoyée via WhatsApp.",
+          ],
+        },
+      ],
+      comparator: {
+        title: "Courtier sans agent vs avec agent IA WhatsApp",
+        rows: [
+          { label: "Délai envoi premier devis", before: "2h à 24h", after: "<5 minutes" },
+          { label: "Taux conversion devis → contrat", before: "14% à 19%", after: "22% à 31%" },
+          { label: "Appels entrants sinistres non complexes", before: "100%", after: "29% (71% traités par agent)" },
+          { label: "Taux rétention clients à l'échéance", before: "71%", after: "87%" },
+          { label: "Délai déclaration sinistre (min)", before: "22 min téléphone", after: "4 min WhatsApp" },
+          { label: "Prospects comparateurs transformés en devis", before: "31%", after: "82%" },
+        ],
+      },
+      faq: [
+        {
+          q: "L'agent peut-il souscrire un contrat d'assurance en autonomie ?",
+          a: "Uniquement pour les produits à tarification automatique et risque faible (auto standard, MRH appartement, santé individuelle). La souscription se finalise par signature électronique envoyée via WhatsApp. Pour les produits complexes (vie, prévoyance, assurance emprunteur, RC pro), l'agent qualifie et transfère au conseiller avec un dossier complet — la souscription reste humaine.",
+        },
+        {
+          q: "Comment l'agent respecte-t-il les obligations DDA sur le recueil des besoins ?",
+          a: "Chaque interaction débute par un questionnaire IBA (Information sur les Besoins et Attentes) conforme DDA. Les réponses sont archivées horodatées et constituent la preuve de recueil des besoins exigée par l'ACPR. En cas de contrôle, l'export du registre DDA est disponible en 24h. L'agent ne peut techniquement pas proposer un produit sans avoir complété le questionnaire IBA.",
+        },
+        {
+          q: "Quelles compagnies d'assurance l'agent supporte-t-il nativement ?",
+          a: "Connexion API native avec : April, Generali, Allianz Partners, Covéa, Groupama, MMA, MAIF (API ouverte), Swiss Life, AG2R La Mondiale, Axa via API courtier. Pour les compagnies sans API ouverte, l'agent fonctionne en mode remplissage de formulaire web automatisé (RPA). Liste complète fournie lors de l'audit gratuit selon votre portefeuille compagnies.",
+        },
+        {
+          q: "L'agent peut-il gérer un portefeuille de plusieurs milliers d'assurés ?",
+          a: "Oui — aucune limite technique sur la taille du portefeuille. Les campagnes d'échéance peuvent cibler jusqu'à 100 000 assurés/jour (limit Meta). Le filtrage par produit, échéance, segment, et historique de sinistralité permet de prioriser les contacts à forte valeur et les risques de churn. Base de données assurés importable depuis votre outil de gestion (Filhet-Allard, Gestion 3000, April On, FilAssur).",
+        },
+      ],
+      relatedLinks: [
+        { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp pour l'assurance" },
+        { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : conformité ACPR et DDA" },
+        { href: "/fr/services/qualification-leads", label: "Qualification automatique des prospects assurance" },
+        { href: "/fr/services/campagnes-whatsapp", label: "Campagnes WhatsApp renouvellement et fidélisation" },
+        { href: "/fr/services/crm-automation", label: "CRM automation courtage → WhatsApp" },
+      ],
+      closingPitch: "+38% de conversion devis → contrat, sinistres traités en 4 minutes. Conforme DDA + ACPR. Audit gratuit pour projeter le ROI sur votre portefeuille.",
+    },
+  },
 };
 
 export function getSecteurRich(slug: string, locale: string): SecteurRichContent | undefined {

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllSlugs, getPostBySlug } from "@/lib/mdx";
+import { getAllSlugs, getAllPosts, getPostBySlug } from "@/lib/mdx";
 import { normalizeBlogMarkdownHref } from "@/lib/normalize-blog-href";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import type { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { ArrowLeft, Clock, User } from "lucide-react";
 import { getTranslations } from "next-intl/server";
+import StickyCTA from "@/components/blog/StickyCTA";
+import RelatedArticles from "@/components/blog/RelatedArticles";
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
@@ -47,6 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
+  const allPosts = getAllPosts(locale);
 
   let post;
   try {
@@ -147,6 +150,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     : null;
 
   return (
+    <>
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <script
         type="application/ld+json"
@@ -211,6 +215,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {t("ctaButton")}
         </Link>
       </div>
+
+      <RelatedArticles locale={locale} currentSlug={slug} posts={allPosts} />
     </div>
+    <StickyCTA locale={locale} />
+    </>
   );
 }
