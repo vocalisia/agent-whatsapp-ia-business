@@ -17,6 +17,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         nl: "https://agentic-whatsup.com/nl/blog",
         "x-default": "https://agentic-whatsup.com/fr/blog",
       },
+      types: {
+        "application/rss+xml": `https://agentic-whatsup.com/${locale}/blog/feed.xml`,
+      },
     },
   };
 }

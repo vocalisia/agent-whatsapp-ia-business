@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     headline: post.meta.title,
     description: post.meta.description,
     datePublished: post.meta.date,
-    dateModified: post.meta.date,
+    dateModified: post.meta.dateModified ?? post.meta.date,
     inLanguage: locale,
     author: authorJsonLd,
     publisher: {
@@ -174,8 +174,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       {/* Meta */}
       <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500 mb-6">
         <span>
-          {new Date(post.meta.date).toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" })}
+          {new Date(post.meta.date).toLocaleDateString(locale === "fr" ? "fr-FR" : locale === "de" ? "de-DE" : locale === "nl" ? "nl-NL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}
         </span>
+        {post.meta.dateModified && post.meta.dateModified !== post.meta.date && (
+          <span className="text-slate-600">
+            · {locale === "fr" ? "Mis à jour" : locale === "de" ? "Aktualisiert" : locale === "nl" ? "Bijgewerkt" : "Updated"}{" "}
+            {new Date(post.meta.dateModified).toLocaleDateString(locale === "fr" ? "fr-FR" : locale === "de" ? "de-DE" : locale === "nl" ? "nl-NL" : "en-GB", { day: "numeric", month: "long", year: "numeric" })}
+          </span>
+        )}
         {post.meta.readTime && (
           <span className="flex items-center gap-1"><Clock size={11} />{post.meta.readTime} {t("reading")}</span>
         )}

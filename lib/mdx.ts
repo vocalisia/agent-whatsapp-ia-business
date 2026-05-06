@@ -13,6 +13,7 @@ export interface PostMeta {
   slug: string;
   title: string;
   date: string;
+  dateModified?: string;
   description: string;
   readTime?: string;
   author?: string;
