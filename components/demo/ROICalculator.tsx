@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo, useEffect, useRef } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import { Clock, Euro, TrendingUp, Users } from "lucide-react";
 
 /* ─── Animated counter hook ─── */
@@ -161,6 +162,7 @@ const WORKING_HOURS_PER_MONTH = 160;
 
 export default function ROICalculator() {
   const t = useTranslations("roi");
+  const locale = useLocale();
   const [messagesPerDay, setMessagesPerDay] = useState(50);
   const [teamSize, setTeamSize] = useState(3);
   const [hourlyCost, setHourlyCost] = useState(25);
@@ -343,8 +345,8 @@ export default function ROICalculator() {
             <p className="text-white/70 text-lg">
               {t("withMessages", { count: messagesPerDay, savings: Math.round(results.monthlySavings) })}
             </p>
-            <a
-              href="#booking"
+            <Link
+              href={`/${locale}/contact`}
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-wa text-black font-semibold text-lg
                 glow-wa hover:bg-wa-hover transition-all duration-300 hover:scale-105 active:scale-[0.98]"
             >
@@ -358,7 +360,7 @@ export default function ROICalculator() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
