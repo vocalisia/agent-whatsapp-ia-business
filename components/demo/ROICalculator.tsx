@@ -155,9 +155,7 @@ function ResultCard({ icon, label, value, formatter, subtitle, highlight = false
 /* ─── Constants ─── */
 
 const BUSINESS_PLAN_PRICE = 247;
-const WORKING_HOURS_PER_MONTH = 160;
-// Hard cap: team can't dedicate more than 80% of capacity to WhatsApp
-const WHATSAPP_TIME_RATIO = 0.80;
+const WORKING_HOURS_PER_MONTH = 160; // for FTE equivalent display only
 // Effective time reduction: AI fully autonomous on simple messages, assists on complex ones → net 40%
 const AI_AUTONOMY_RATE = 0.40;
 
@@ -174,15 +172,11 @@ export default function ROICalculator() {
   const results = useMemo(() => {
     const totalMessagesMonth = messagesPerDay * 22; // working days
 
-    // Raw human time if all messages handled manually
+    // Total human time if handled manually (no cap — both sliders directly affect output)
     const humanHoursRaw = (totalMessagesMonth * avgResponseTime) / 60;
 
-    // Realistic cap: team can't spend more than 25% of capacity on WhatsApp
-    const teamCapHours = teamSize * WORKING_HOURS_PER_MONTH * WHATSAPP_TIME_RATIO;
-    const humanHours = Math.min(humanHoursRaw, teamCapHours);
-
-    // AI handles 70% autonomously
-    const hoursSaved = humanHours * AI_AUTONOMY_RATE;
+    // AI reduces effective handling time by 40% (autonomous + assisted responses)
+    const hoursSaved = humanHoursRaw * AI_AUTONOMY_RATE;
 
     const monthlySavings = hoursSaved * hourlyCost;
 
@@ -192,11 +186,12 @@ export default function ROICalculator() {
       ? Math.ceil((BUSINESS_PLAN_PRICE / monthlySavings) * 30)
       : 999;
 
+    // Team size: shows how many FTEs the saved hours represent
     const employeeEquivalent = hoursSaved / WORKING_HOURS_PER_MONTH;
 
     return {
       hoursSaved,
-      humanHoursTotal: humanHours,
+      humanHoursTotal: humanHoursRaw,
       monthlySavings,
       roi,
       paybackDays,
