@@ -281,15 +281,13 @@ export default function DemoPageClient() {
                 <p className="text-xs text-slate-400 mb-4">
                   {t('convincedDesc')}
                 </p>
-                <a
-                  href={process.env.NEXT_PUBLIC_CAL_LINK || '/fr/contact'}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href={process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`}
                   className="inline-flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 glow-wa text-sm"
                 >
                   <Zap size={16} />
                   {t('freeAudit')}
-                </a>
+                </Link>
               </div>
 
               <div className="bg-surface/60 border border-surface-3 rounded-2xl p-4">
@@ -396,15 +394,13 @@ export default function DemoPageClient() {
               {t('ctaSubtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={process.env.NEXT_PUBLIC_CAL_LINK || '/fr/contact'}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`}
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
                 {t('ctaBook')}
-              </a>
+              </Link>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '33600000000'}`}
                 target="_blank"
