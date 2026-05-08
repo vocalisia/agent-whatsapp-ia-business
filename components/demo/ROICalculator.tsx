@@ -155,8 +155,11 @@ function ResultCard({ icon, label, value, formatter, subtitle, highlight = false
 /* ─── Constants ─── */
 
 const BUSINESS_PLAN_PRICE = 247;
-const AI_RESPONSE_TIME_MIN = 0.02; // ~1.2 seconds in minutes
 const WORKING_HOURS_PER_MONTH = 160;
+// Realistic: team spends max 25% of their time on WhatsApp
+const WHATSAPP_TIME_RATIO = 0.25;
+// AI autonomously handles 70% of messages
+const AI_AUTONOMY_RATE = 0.70;
 
 /* ─── Main component ─── */
 
@@ -166,14 +169,20 @@ export default function ROICalculator() {
   const [messagesPerDay, setMessagesPerDay] = useState(50);
   const [teamSize, setTeamSize] = useState(3);
   const [hourlyCost, setHourlyCost] = useState(25);
-  const [avgResponseTime, setAvgResponseTime] = useState(30);
+  const [avgResponseTime, setAvgResponseTime] = useState(5);
 
   const results = useMemo(() => {
-    const totalMessagesMonth = messagesPerDay * 30;
+    const totalMessagesMonth = messagesPerDay * 22; // working days
 
-    const humanHours = (totalMessagesMonth * avgResponseTime) / 60;
-    const aiHours = (totalMessagesMonth * AI_RESPONSE_TIME_MIN) / 60;
-    const hoursSaved = humanHours - aiHours;
+    // Raw human time if all messages handled manually
+    const humanHoursRaw = (totalMessagesMonth * avgResponseTime) / 60;
+
+    // Realistic cap: team can't spend more than 25% of capacity on WhatsApp
+    const teamCapHours = teamSize * WORKING_HOURS_PER_MONTH * WHATSAPP_TIME_RATIO;
+    const humanHours = Math.min(humanHoursRaw, teamCapHours);
+
+    // AI handles 70% autonomously
+    const hoursSaved = humanHours * AI_AUTONOMY_RATE;
 
     const monthlySavings = hoursSaved * hourlyCost;
 
@@ -187,6 +196,7 @@ export default function ROICalculator() {
 
     return {
       hoursSaved,
+      humanHoursTotal: humanHours,
       monthlySavings,
       roi,
       paybackDays,
@@ -257,9 +267,9 @@ export default function ROICalculator() {
               <Slider
                 label={t("avgResponse")}
                 value={avgResponseTime}
-                min={5}
-                max={120}
-                step={5}
+                min={2}
+                max={20}
+                step={1}
                 unit={` ${t("min")}`}
                 onChange={setAvgResponseTime}
               />
@@ -279,7 +289,7 @@ export default function ROICalculator() {
                 label={t("hoursSaved")}
                 value={results.hoursSaved}
                 formatter={(v) => `${Math.round(v)}h`}
-                subtitle={t("vsManual", { hours: Math.round(results.hoursSaved + (messagesPerDay * 30 * AI_RESPONSE_TIME_MIN) / 60) })}
+                subtitle={t("vsManual", { hours: Math.round(results.humanHoursTotal) })}
               />
 
               <ResultCard
