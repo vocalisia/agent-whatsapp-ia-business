@@ -156,10 +156,10 @@ function ResultCard({ icon, label, value, formatter, subtitle, highlight = false
 
 const BUSINESS_PLAN_PRICE = 247;
 const WORKING_HOURS_PER_MONTH = 160;
-// Realistic: team spends max 25% of their time on WhatsApp
-const WHATSAPP_TIME_RATIO = 0.25;
-// AI autonomously handles 70% of messages
-const AI_AUTONOMY_RATE = 0.70;
+// Hard cap: team can't dedicate more than 80% of capacity to WhatsApp
+const WHATSAPP_TIME_RATIO = 0.80;
+// Effective time reduction: AI fully autonomous on simple messages, assists on complex ones → net 40%
+const AI_AUTONOMY_RATE = 0.40;
 
 /* ─── Main component ─── */
 
@@ -305,7 +305,7 @@ export default function ROICalculator() {
                 icon={<TrendingUp className="w-4 h-4" />}
                 label={`${t("roi")} ${fireIndicator ? "🔥" : ""}`}
                 value={Math.max(results.roi, 0)}
-                formatter={(v) => `${Math.round(v)}%`}
+                formatter={(v) => v > 999 ? ">999%" : `${Math.round(v)}%`}
                 subtitle={
                   results.roi > 0
                     ? t("payback")
@@ -329,7 +329,7 @@ export default function ROICalculator() {
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-white/50">{t("returnInvestment")}</span>
                   <span className="text-wa font-bold tabular-nums">
-                    {Math.round(results.roi)}%
+                    {results.roi > 999 ? ">999%" : `${Math.round(results.roi)}%`}
                     {fireIndicator && " 🔥"}
                   </span>
                 </div>
