@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function BlogPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "blog" });
-  const posts = getAllPosts();
+  const posts = getAllPosts(locale);
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
