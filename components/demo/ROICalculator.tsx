@@ -166,7 +166,7 @@ export default function ROICalculator() {
   const locale = useLocale();
   const [messagesPerDay, setMessagesPerDay] = useState(50);
   const [teamSize, setTeamSize] = useState(3);
-  const [hourlyCost, setHourlyCost] = useState(22);
+  const [hourlyCost, setHourlyCost] = useState(25);
   const [avgResponseTime, setAvgResponseTime] = useState(5);
 
   const results = useMemo(() => {
