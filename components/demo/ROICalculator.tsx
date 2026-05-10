@@ -79,7 +79,7 @@ function Slider({ label, value, min, max, step, unit = "", onChange }: SliderPro
           step={step}
           value={value}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="relative z-10 w-full appearance-none bg-transparent cursor-pointer
+          className="relative z-10 w-full h-5 appearance-none bg-transparent cursor-pointer
             [&::-webkit-slider-thumb]:appearance-none
             [&::-webkit-slider-thumb]:w-5
             [&::-webkit-slider-thumb]:h-5
