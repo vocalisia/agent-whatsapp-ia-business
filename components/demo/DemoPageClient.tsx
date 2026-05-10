@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -402,7 +402,7 @@ export default function DemoPageClient() {
                 {t('ctaBook')}
               </Link>
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '33600000000'}`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || '41799394222'}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"

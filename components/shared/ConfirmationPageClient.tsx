@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import VSLPlayer from '@/components/shared/VSLPlayer';
 import IClosedConfirm from '@/components/shared/IClosedConfirm';
 
-const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER ?? '33600000000';
+const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER ?? '41799394222';
 const STEP_COLORS = ['wa', 'indigo', 'sky'] as const;
 const STEP_ICONS = [Users, Zap, ChevronRight];
 

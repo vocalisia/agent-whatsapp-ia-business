@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 import { MessageCircle, Zap, Shield } from "lucide-react";
 import { useTranslations } from "next-intl";
 import HeroSimulator from "@/components/home/HeroSimulator";
 
 export default function Hero() {
   const t = useTranslations("hero");
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "33600000000";
+  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222";
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || "/contact";
 
   return (

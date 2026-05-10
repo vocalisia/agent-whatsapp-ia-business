@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 import { motion } from "framer-motion";
 import { MessageCircle, Zap, ArrowRight } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function FinalCTA() {
   const t = useTranslations("finalCta");
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "33600000000";
+  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222";
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || "/contact";
 
   return (
