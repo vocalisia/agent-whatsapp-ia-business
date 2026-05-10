@@ -73,6 +73,7 @@ function Slider({ label, value, min, max, step, unit = "", onChange }: SliderPro
         </div>
         <input
           type="range"
+          aria-label={label}
           min={min}
           max={max}
           step={step}
@@ -154,10 +155,9 @@ function ResultCard({ icon, label, value, formatter, subtitle, highlight = false
 
 /* ─── Constants ─── */
 
-const BUSINESS_PLAN_PRICE = 247;
-const WORKING_HOURS_PER_MONTH = 160; // for FTE equivalent display only
-// Effective time reduction: AI fully autonomous on simple messages, assists on complex ones → net 40%
-const AI_AUTONOMY_RATE = 0.40;
+const WORKING_HOURS_PER_MONTH = 151; // 35h/semaine × 4.33 semaines (France)
+// 70% of messages handled autonomously (matches fr.json roi.basedOn label)
+const AI_AUTONOMY_RATE = 0.70;
 
 /* ─── Main component ─── */
 
@@ -166,40 +166,35 @@ export default function ROICalculator() {
   const locale = useLocale();
   const [messagesPerDay, setMessagesPerDay] = useState(50);
   const [teamSize, setTeamSize] = useState(3);
-  const [hourlyCost, setHourlyCost] = useState(25);
+  const [hourlyCost, setHourlyCost] = useState(22);
   const [avgResponseTime, setAvgResponseTime] = useState(5);
 
   const results = useMemo(() => {
-    const totalMessagesMonth = messagesPerDay * 22; // working days
+    const totalMessagesMonth = messagesPerDay * 22;
 
-    // Total human time if handled manually (no cap — both sliders directly affect output)
-    const humanHoursRaw = (totalMessagesMonth * avgResponseTime) / 60;
+    // Cap at 40% of team capacity — WhatsApp can't exceed 40% of team's monthly hours
+    const teamCapacity = teamSize * WORKING_HOURS_PER_MONTH;
+    const humanHoursRaw = Math.min(
+      (totalMessagesMonth * avgResponseTime) / 60,
+      teamCapacity * 0.4
+    );
 
-    // AI reduces effective handling time by 40% (autonomous + assisted responses)
     const hoursSaved = humanHoursRaw * AI_AUTONOMY_RATE;
 
     const monthlySavings = hoursSaved * hourlyCost;
 
-    const roi = ((monthlySavings - BUSINESS_PLAN_PRICE) / BUSINESS_PLAN_PRICE) * 100;
+    const annualSavings = monthlySavings * 12;
 
-    const paybackDays = monthlySavings > 0
-      ? Math.ceil((BUSINESS_PLAN_PRICE / monthlySavings) * 30)
-      : 999;
-
-    // Team size: shows how many FTEs the saved hours represent
     const employeeEquivalent = hoursSaved / WORKING_HOURS_PER_MONTH;
 
     return {
       hoursSaved,
       humanHoursTotal: humanHoursRaw,
       monthlySavings,
-      roi,
-      paybackDays,
+      annualSavings,
       employeeEquivalent,
     };
   }, [messagesPerDay, teamSize, hourlyCost, avgResponseTime]);
-
-  const fireIndicator = results.roi > 500;
 
   return (
     <section className="relative w-full py-20 overflow-hidden">
@@ -234,9 +229,9 @@ export default function ROICalculator() {
               <Slider
                 label={t("messagesDay")}
                 value={messagesPerDay}
-                min={10}
-                max={500}
-                step={10}
+                min={5}
+                max={100}
+                step={5}
                 onChange={setMessagesPerDay}
               />
 
@@ -244,7 +239,7 @@ export default function ROICalculator() {
                 label={t("teamSize")}
                 value={teamSize}
                 min={1}
-                max={20}
+                max={10}
                 step={1}
                 onChange={setTeamSize}
               />
@@ -253,8 +248,8 @@ export default function ROICalculator() {
                 label={t("hourlyCost")}
                 value={hourlyCost}
                 min={15}
-                max={80}
-                step={5}
+                max={30}
+                step={1}
                 unit="€"
                 onChange={setHourlyCost}
               />
@@ -262,8 +257,8 @@ export default function ROICalculator() {
               <Slider
                 label={t("avgResponse")}
                 value={avgResponseTime}
-                min={2}
-                max={20}
+                min={1}
+                max={10}
                 step={1}
                 unit={` ${t("min")}`}
                 onChange={setAvgResponseTime}
@@ -298,15 +293,11 @@ export default function ROICalculator() {
 
               <ResultCard
                 icon={<TrendingUp className="w-4 h-4" />}
-                label={`${t("roi")} ${fireIndicator ? "🔥" : ""}`}
-                value={Math.max(results.roi, 0)}
-                formatter={(v) => v > 999 ? ">999%" : `${Math.round(v)}%`}
-                subtitle={
-                  results.roi > 0
-                    ? t("payback")
-                    : t("roi")
-                }
-                highlight={results.roi > 100}
+                label={t("annualSavings")}
+                value={results.annualSavings}
+                formatter={(v) => `${Math.round(v).toLocaleString("fr-FR")}€`}
+                subtitle={t("annualBasis")}
+                highlight
               />
 
               <ResultCard
@@ -317,30 +308,6 @@ export default function ROICalculator() {
                 subtitle={t("perPerson")}
               />
             </div>
-
-            {/* ROI bar visual */}
-            {results.roi > 0 && (
-              <div className="rounded-2xl border border-surface-3 bg-surface/60 p-5 space-y-3">
-                <div className="flex items-center justify-between text-sm">
-                  <span className="text-white/50">{t("returnInvestment")}</span>
-                  <span className="text-wa font-bold tabular-nums">
-                    {results.roi > 999 ? ">999%" : `${Math.round(results.roi)}%`}
-                    {fireIndicator && " 🔥"}
-                  </span>
-                </div>
-                <div className="h-3 rounded-full bg-surface-3 overflow-hidden">
-                  <div
-                    className="h-full rounded-full bg-gradient-to-r from-wa/70 via-wa to-wa/70 transition-all duration-700 ease-out"
-                    style={{ width: `${Math.min(results.roi / 10, 100)}%` }}
-                  />
-                </div>
-                <div className="flex justify-between text-xs text-white/25">
-                  <span>0%</span>
-                  <span>500%</span>
-                  <span>1000%+</span>
-                </div>
-              </div>
-            )}
           </div>
         </div>
 

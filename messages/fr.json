@@ -34,7 +34,8 @@
     "costLabel": "Coûts de gestion client",
     "productivityLabel": "Productivité des équipes",
     "responseLabel": "Taux de réponse",
-    "availabilityLabel": "Disponibilité totale"
+    "availabilityLabel": "Disponibilité totale",
+    "savingsLabel": "Économies mensuelles type"
   },
   "problem": {
     "eyebrow": "Le problème",
@@ -902,18 +903,17 @@
     "params": "Vos paramètres",
     "messagesDay": "Messages par jour",
     "teamSize": "Taille de l'équipe",
-    "hourlyCost": "Coût horaire moyen",
+    "hourlyCost": "Coût employeur / heure (charges incluses)",
     "avgResponse": "Temps de traitement / message",
     "basedOn": "Estimation indicative — IA gère 70% des messages autonomement",
     "hoursSaved": "Heures récupérées / mois",
     "vsManual": "sur {hours}h de travail WhatsApp / mois",
     "monthlySavings": "Économies mensuelles",
     "savingsCalc": "{cost}€/h × {hours}h libérées par l'IA",
-    "roi": "ROI",
-    "payback": "Rentabilisé en moins d'1 mois",
+    "annualSavings": "Économies annuelles",
+    "annualBasis": "Sur 12 mois (mensuel × 12)",
     "equivalent": "Temps libéré équipe",
     "perPerson": "Pour d'autres tâches à valeur ajoutée",
-    "returnInvestment": "Retour sur investissement",
     "withMessages": "Avec {count} messages/jour, vous économisez {savings}€/mois",
     "bookAudit": "Réserver mon audit gratuit",
     "min": "min"

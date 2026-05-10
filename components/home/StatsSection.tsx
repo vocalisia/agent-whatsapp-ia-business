@@ -36,11 +36,13 @@ export default function StatsSection() {
     return () => observer.disconnect();
   }, []);
 
-  const stats = [
+  type Stat = { value: number; prefix: string; suffix: string; label: string; isText?: boolean; text?: string };
+  const stats: Stat[] = [
     { value: 60, prefix: "-", suffix: "%", label: t("costLabel") },
     { value: 40, prefix: "+", suffix: "%", label: t("productivityLabel") },
-    { value: 30, prefix: "+", suffix: "%", label: t("responseLabel") },
-    { value: 0, prefix: "", suffix: "24/7", label: t("availabilityLabel"), isText: true },
+    { value: 47, prefix: "+", suffix: "%", label: t("responseLabel") },
+    { value: 0, prefix: "", suffix: "", label: t("availabilityLabel"), isText: true, text: "24/7" },
+    { value: 0, prefix: "", suffix: "", label: t("savingsLabel"), isText: true, text: "~500 €/mois" },
   ];
 
   return (
@@ -50,7 +52,7 @@ export default function StatsSection() {
       <div className="absolute inset-0 border-y border-surface-2" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -65,7 +67,7 @@ export default function StatsSection() {
                 style={{ fontFamily: "Onest, sans-serif" }}
               >
                 {s.isText ? (
-                  "24/7"
+                  s.text
                 ) : (
                   <>
                     {s.prefix}

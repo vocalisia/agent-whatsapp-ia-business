@@ -34,7 +34,8 @@
     "costLabel": "Client management costs",
     "productivityLabel": "Team productivity",
     "responseLabel": "Response rate",
-    "availabilityLabel": "Total availability"
+    "availabilityLabel": "Total availability",
+    "savingsLabel": "Typical monthly savings"
   },
   "problem": {
     "eyebrow": "The problem",
@@ -909,11 +910,10 @@
     "vsManual": "out of {hours}h spent on WhatsApp / month",
     "monthlySavings": "Monthly savings",
     "savingsCalc": "€{cost}/h × {hours}h freed by AI",
-    "roi": "ROI",
-    "payback": "Paid back in less than 1 month",
+    "annualSavings": "Annual savings",
+    "annualBasis": "Over 12 months (monthly × 12)",
     "equivalent": "Team time freed",
     "perPerson": "For higher-value tasks",
-    "returnInvestment": "Return on investment",
     "withMessages": "With {count} messages/day, you save €{savings}/month",
     "bookAudit": "Book my free audit",
     "min": "min"

@@ -34,7 +34,8 @@
     "costLabel": "Klantbeheerkosten",
     "productivityLabel": "Teamproductiviteit",
     "responseLabel": "Responspercentage",
-    "availabilityLabel": "Totale beschikbaarheid"
+    "availabilityLabel": "Totale beschikbaarheid",
+    "savingsLabel": "Typische maandelijkse besparing"
   },
   "problem": {
     "eyebrow": "Het probleem",
@@ -909,11 +910,10 @@
     "vsManual": "van {hours}u WhatsApp-werk / maand",
     "monthlySavings": "Maandelijkse besparingen",
     "savingsCalc": "€{cost}/u × {hours}u vrijgemaakt door AI",
-    "roi": "ROI",
-    "payback": "Terugverdiend in minder dan 1 maand",
+    "annualSavings": "Jaarlijkse besparingen",
+    "annualBasis": "Over 12 maanden (maandelijks × 12)",
     "equivalent": "Vrijgemaakte teamtijd",
     "perPerson": "Voor taken met meer toegevoegde waarde",
-    "returnInvestment": "Rendement op investering",
     "withMessages": "Met {count} berichten/dag bespaart u €{savings}/maand",
     "bookAudit": "Mijn gratis audit boeken",
     "min": "min"

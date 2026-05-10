@@ -7,6 +7,7 @@ import WhatsAppSimulatorPro from '@/components/demo/WhatsAppSimulatorPro';
 import type { SimulatorEvent } from '@/components/demo/WhatsAppSimulatorPro';
 import LiveDashboard from '@/components/demo/LiveDashboard';
 import ROICalculator from '@/components/demo/ROICalculator';
+import { motion } from 'framer-motion';
 import {
   Zap,
   MessageCircle,
@@ -20,9 +21,7 @@ import {
   Car,
   Scale,
   Hotel,
-  Phone,
   Workflow,
-  Volume2,
   Eye,
   Mic,
   Bot,
@@ -131,13 +130,11 @@ function getSectors(locale: string) {
 
 const capabilities = [
   { icon: Eye, title: 'Vision IA', desc: 'Analyse photos, documents, factures en temps reel' },
-  { icon: Volume2, title: 'Voix IA & Clonage', desc: '3 modes vocaux, clonage voix, ElevenLabs & Cartesia' },
-  { icon: Phone, title: 'Telephonie IA', desc: 'Appels entrants/sortants 24/7, SIP, transfert humain' },
   { icon: Workflow, title: 'Flow Builder', desc: 'Logique conversation visuelle, zero code, multi-canal' },
   { icon: Bot, title: 'Scoring Predictif', desc: '15+ criteres, scoring 0-100, routing automatique' },
   { icon: Calendar, title: 'Calendrier Integre', desc: 'Cal.com, Calendly, GoHighLevel, Google Calendar' },
   { icon: Mic, title: 'WhatsApp Business', desc: 'Templates Meta, nurturing, recovery panier, upselling' },
-  { icon: Sparkles, title: '10+ Langues', desc: 'Code-switching auto, accents regionaux, 98% precision' },
+  { icon: Sparkles, title: '40+ Langues', desc: 'Code-switching auto, dialectes regionaux, 98% precision' },
   { icon: Shield, title: 'RGPD & Securite', desc: 'Hebergement EU, chiffrement AES-256, Bloctel' },
 ];
 
@@ -370,14 +367,26 @@ export default function DemoPageClient() {
           </h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {capabilities.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="bg-surface border border-surface-3 rounded-2xl p-6 hover:border-wa/30 transition-colors group">
-              <div className="w-10 h-10 bg-wa/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-wa/20 transition-colors">
+          {capabilities.map(({ icon: Icon, title, desc }, i) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.07 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+              className="bg-surface border border-surface-3 rounded-2xl p-6 hover:border-wa/40 hover:shadow-[0_0_24px_rgba(37,211,102,0.08)] transition-all duration-300 group cursor-default"
+            >
+              <motion.div
+                className="w-10 h-10 bg-wa/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-wa/20 transition-colors"
+                whileHover={{ rotate: [0, -8, 8, 0] }}
+                transition={{ duration: 0.4 }}
+              >
                 <Icon size={20} className="text-wa" />
-              </div>
+              </motion.div>
               <h3 className="text-white font-semibold mb-2">{title}</h3>
               <p className="text-sm text-slate-400">{desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
