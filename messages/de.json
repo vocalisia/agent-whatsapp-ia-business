@@ -902,7 +902,7 @@
     "desc": "Simulieren Sie Ihre Einsparungen mit einem WhatsApp KI-Agenten, der 24/7 arbeitet",
     "params": "Ihre Parameter",
     "messagesDay": "Nachrichten pro Tag",
-    "teamSize": "Teamgröße",
+    "autonomyRate": "Nachrichten durch KI bearbeitet",
     "hourlyCost": "Durchschnittliche Stundenkosten",
     "avgResponse": "Bearbeitungszeit / Nachricht",
     "basedOn": "Unverbindliche Schätzung — KI bearbeitet 70% der Nachrichten autonom",

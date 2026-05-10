@@ -902,7 +902,7 @@
     "desc": "Simuleer uw besparingen met een WhatsApp AI-agent die 24/7 werkt",
     "params": "Uw parameters",
     "messagesDay": "Berichten per dag",
-    "teamSize": "Teamgrootte",
+    "autonomyRate": "Berichten verwerkt door AI",
     "hourlyCost": "Gemiddelde uurkosten",
     "avgResponse": "Behandeltijd / bericht",
     "basedOn": "Indicatieve schatting — AI verwerkt 70% van berichten autonoom",

@@ -165,26 +165,16 @@ export default function ROICalculator() {
   const t = useTranslations("roi");
   const locale = useLocale();
   const [messagesPerDay, setMessagesPerDay] = useState(50);
-  const [teamSize, setTeamSize] = useState(3);
+  const [autonomyRate, setAutonomyRate] = useState(70);
   const [hourlyCost, setHourlyCost] = useState(25);
   const [avgResponseTime, setAvgResponseTime] = useState(5);
 
   const results = useMemo(() => {
     const totalMessagesMonth = messagesPerDay * 22;
-
-    // Cap at 40% of team capacity — WhatsApp can't exceed 40% of team's monthly hours
-    const teamCapacity = teamSize * WORKING_HOURS_PER_MONTH;
-    const humanHoursRaw = Math.min(
-      (totalMessagesMonth * avgResponseTime) / 60,
-      teamCapacity * 0.4
-    );
-
-    const hoursSaved = humanHoursRaw * AI_AUTONOMY_RATE;
-
+    const humanHoursRaw = (totalMessagesMonth * avgResponseTime) / 60;
+    const hoursSaved = humanHoursRaw * (autonomyRate / 100);
     const monthlySavings = hoursSaved * hourlyCost;
-
     const annualSavings = monthlySavings * 12;
-
     const employeeEquivalent = hoursSaved / WORKING_HOURS_PER_MONTH;
 
     return {
@@ -194,7 +184,7 @@ export default function ROICalculator() {
       annualSavings,
       employeeEquivalent,
     };
-  }, [messagesPerDay, teamSize, hourlyCost, avgResponseTime]);
+  }, [messagesPerDay, autonomyRate, hourlyCost, avgResponseTime]);
 
   return (
     <section className="relative w-full py-20 overflow-hidden">
@@ -236,12 +226,13 @@ export default function ROICalculator() {
               />
 
               <Slider
-                label={t("teamSize")}
-                value={teamSize}
-                min={1}
-                max={10}
-                step={1}
-                onChange={setTeamSize}
+                label={t("autonomyRate")}
+                value={autonomyRate}
+                min={50}
+                max={90}
+                step={5}
+                unit="%"
+                onChange={setAutonomyRate}
               />
 
               <Slider

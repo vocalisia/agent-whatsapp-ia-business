@@ -902,7 +902,7 @@
     "desc": "Simulate your savings with a WhatsApp AI agent working 24/7",
     "params": "Your parameters",
     "messagesDay": "Messages per day",
-    "teamSize": "Team size",
+    "autonomyRate": "Messages handled by AI",
     "hourlyCost": "Average hourly cost",
     "avgResponse": "Handling time / message",
     "basedOn": "Indicative estimate — AI handles 70% of messages autonomously",

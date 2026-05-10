@@ -902,7 +902,7 @@
     "desc": "Simulez vos gains avec un agent IA WhatsApp qui travaille 24/7",
     "params": "Vos paramètres",
     "messagesDay": "Messages par jour",
-    "teamSize": "Taille de l'équipe",
+    "autonomyRate": "Messages traités par l'IA",
     "hourlyCost": "Coût employeur / heure (charges incluses)",
     "avgResponse": "Temps de traitement / message",
     "basedOn": "Estimation indicative — IA gère 70% des messages autonomement",
