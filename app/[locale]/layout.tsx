@@ -82,7 +82,7 @@ export async function generateMetadata({
       url: `${BASE_URL}/${locale}`,
       images: [
         {
-          url: `${BASE_URL}/og-image.jpg`,
+          url: `${BASE_URL}/${locale}/opengraph-image`,
           width: 1200,
           height: 630,
           alt: "WhatsApp AI Agent | AgenticWhatsup",
@@ -91,7 +91,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      images: [`${BASE_URL}/og-image.jpg`],
+      images: [`${BASE_URL}/${locale}/opengraph-image`],
     },
     ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION && {
       verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION },
@@ -131,22 +131,53 @@ export default async function LocaleLayout({
               "@graph": [
                 {
                   "@type": "Organization",
-                  name: "WhatsApp Agent IA",
+                  "@id": "https://agentic-whatsup.com/#organization",
+                  name: "AgenticWhatsup",
                   url: "https://agentic-whatsup.com",
                   description: "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos de vos clients.",
-                },
-                {
-                  "@type": "Service",
-                  name: "Agent IA WhatsApp",
-                  provider: { "@type": "Organization", name: "WhatsApp Agent IA" },
-                  description: "Agent conversationnel IA pour WhatsApp Business avec vision IA et transcription vocale.",
-                  areaServed: ["FR", "CH", "BE", "CA"],
-                },
-                {
-                  "@type": "BreadcrumbList",
-                  itemListElement: [
-                    { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://agentic-whatsup.com/icon.svg",
+                    width: 512,
+                    height: 512,
+                  },
+                  email: "contact@agentic-whatsup.com",
+                  telephone: "+41799394222",
+                  sameAs: [
+                    "https://www.linkedin.com/company/agenticwhatsup",
                   ],
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    contactType: "customer support",
+                    availableLanguage: ["French", "English", "German", "Dutch"],
+                    contactOption: "TollFree",
+                  },
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  "@id": "https://agentic-whatsup.com/#app",
+                  name: "Agent IA WhatsApp",
+                  applicationCategory: "BusinessApplication",
+                  operatingSystem: "WhatsApp Business",
+                  description: "Agent conversationnel IA pour WhatsApp Business avec vision IA et transcription vocale.",
+                  offers: {
+                    "@type": "Offer",
+                    availability: "https://schema.org/InStock",
+                    priceCurrency: "EUR",
+                  },
+                  publisher: { "@id": "https://agentic-whatsup.com/#organization" },
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://agentic-whatsup.com/#website",
+                  url: "https://agentic-whatsup.com",
+                  name: "AgenticWhatsup",
+                  publisher: { "@id": "https://agentic-whatsup.com/#organization" },
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: { "@type": "EntryPoint", urlTemplate: "https://agentic-whatsup.com/fr/blog?q={search_term_string}" },
+                    "query-input": "required name=search_term_string",
+                  },
                 },
               ],
             }),
@@ -161,11 +192,11 @@ export default async function LocaleLayout({
           <main className="flex-1 pt-16">{children}</main>
           <Footer />
           <CookieBanner />
-          {/* Vocalis WhatsApp Agent IA Widget */}
+          {/* Vocalis WhatsApp Agent IA Widget — defer to not block TTI */}
           <script
             src="https://app.vocalis.pro/embed.js"
             data-assistant-id="1c784259-40d5-4274-ae00-aee0ef02054c"
-            async
+            defer
           />
         </NextIntlClientProvider>
       </body>
