@@ -309,7 +309,7 @@ export default async function VsRespondIoPage({ params }: { params: Promise<{ lo
     "@type": "Organization",
     name: "AgenticWhatsup",
     url: "https://agentic-whatsup.com",
-    logo: "https://agentic-whatsup.com/logo.png",
+    logo: { "@type": "ImageObject", url: "https://agentic-whatsup.com/logo.png", width: 200, height: 60 },
     sameAs: ["https://wa.me/41799394222"],
   };
 
