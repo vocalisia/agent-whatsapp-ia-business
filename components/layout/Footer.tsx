@@ -8,8 +8,11 @@ const integrationsLabel: Record<string, string> = { fr: "Intégrations", en: "In
 const casClientsLabel: Record<string, string> = { fr: "Cas clients", en: "Case studies", de: "Referenzen", nl: "Klantcases" };
 const securiteLabel: Record<string, string> = { fr: "Sécurité & RGPD", en: "Security & GDPR", de: "Sicherheit & DSGVO", nl: "Beveiliging & AVG" };
 const agentSurMesureLabel: Record<string, string> = { fr: "Agent sur-mesure", en: "Custom agent", de: "Maßgeschneiderter Agent", nl: "Maatwerk agent" };
+const agentCommercialLabel: Record<string, string> = { fr: "Agent commercial", en: "Sales agent", de: "Vertriebsagent", nl: "Sales agent" };
 const automatisationLabel: Record<string, string> = { fr: "Automatisation", en: "Automation", de: "Automatisierung", nl: "Automatisering" };
 const marketingHubLabel: Record<string, string> = { fr: "Marketing Hub", en: "Marketing Hub", de: "Marketing Hub", nl: "Marketing Hub" };
+const authorLabel: Record<string, string> = { fr: "Auteur Laurent Duplat", en: "Author Laurent Duplat", de: "Autor Laurent Duplat", nl: "Auteur Laurent Duplat" };
+const roiLabel: Record<string, string> = { fr: "Calculateur ROI", en: "ROI Calculator", de: "ROI-Rechner", nl: "ROI-calculator" };
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -91,6 +94,11 @@ export default function Footer() {
                 {marketingHubLabel[locale] ?? "Marketing Hub"}
               </Link>
             </li>
+            <li>
+              <Link href={`/${locale}/agent-commercial-whatsapp`} className="hover:text-wa transition-colors">
+                {agentCommercialLabel[locale] ?? "Agent commercial"}
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -124,6 +132,16 @@ export default function Footer() {
             <li>
               <Link href={`/${locale}/blog`} className="hover:text-wa transition-colors">
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/roi`} className="hover:text-wa transition-colors">
+                {roiLabel[locale] ?? "Calculateur ROI"}
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${locale}/auteur/laurent-duplat`} className="hover:text-wa transition-colors">
+                {authorLabel[locale] ?? "Auteur Laurent Duplat"}
               </Link>
             </li>
             <li>
