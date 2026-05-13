@@ -47,37 +47,75 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "@id": PERSON_URL,
+  "@id": `${PERSON_URL}#person`,
   name: "Laurent Duplat",
+  alternateName: "L. Duplat",
   url: PERSON_URL,
-  image: "https://agentic-whatsup.com/og-image.jpg",
+  image: {
+    "@type": "ImageObject",
+    url: "https://agentic-whatsup.com/og-image.jpg",
+    width: 1200,
+    height: 630,
+  },
   jobTitle: "Directeur publication, expert IA conversationnelle WhatsApp",
   description:
-    "Auteur et expert en agents IA conversationnels appliqués à WhatsApp Business. Spécialiste IA multimodale (Vision + Audio), conformité RGPD et architectures LLM en environnement EU.",
+    "Auteur et expert en agents IA conversationnels appliqués à WhatsApp Business. Spécialiste IA multimodale (Vision + Audio), conformité RGPD et architectures LLM en environnement EU. Plus de 25 publications de référence en FR, EN, DE, NL.",
+  email: "contact@agentic-whatsup.com",
   worksFor: {
     "@type": "Organization",
     "@id": "https://agentic-whatsup.com/#organization",
     name: "AgenticWhatsup",
     url: "https://agentic-whatsup.com",
   },
-  sameAs: [
-    "https://www.linkedin.com/in/richard-cohen-vault369/",
-    "https://agentic-whatsup.com",
-  ],
+  hasOccupation: {
+    "@type": "Occupation",
+    name: "Conversational AI Expert / Technical Author",
+    occupationLocation: {
+      "@type": "Country",
+      name: "Switzerland",
+    },
+    skills: [
+      "WhatsApp Business Cloud API",
+      "Multimodal LLM architecture (GPT-4o, Claude 3.5, Gemini 2.0)",
+      "Whisper / GPT-4o Audio transcription",
+      "GPT-4o Vision / Claude Vision integration",
+      "GDPR/RGPD compliance for AI systems",
+      "CRM integration (HubSpot, Pipedrive, Salesforce, Make.com)",
+    ],
+  },
   knowsAbout: [
     "WhatsApp Business API",
     "WhatsApp Cloud API",
     "Conversational AI",
     "Large Language Models",
     "Multimodal AI",
-    "GDPR / RGPD",
+    "GPT-4o Vision",
+    "Claude 3.5 Sonnet Vision",
+    "Whisper transcription",
+    "GDPR / RGPD compliance",
+    "AI Act (EU) compliance",
     "Lead qualification automation",
     "CRM integration",
+    "WhatsApp marketing automation",
+    "B2B sales automation",
+  ],
+  knowsLanguage: [
+    { "@type": "Language", name: "French", alternateName: "fr" },
+    { "@type": "Language", name: "English", alternateName: "en" },
   ],
   alumniOf: {
     "@type": "Organization",
     name: "VAULT 369 LTD",
   },
+  nationality: {
+    "@type": "Country",
+    name: "France",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/richard-cohen-vault369/",
+    "https://agentic-whatsup.com",
+    "https://vocalis.pro",
+  ],
 };
 
 const labels: Record<string, { back: string; about: string; expertise: string; topics: string; contact: string; auditCta: string; bioP1: string; bioP2: string; bioP3: string; topicsList: string[] }> = {
