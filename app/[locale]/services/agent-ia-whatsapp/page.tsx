@@ -177,7 +177,7 @@ export default async function ServiceAgentIAWhatsAppPage({ params }: { params: P
           eyebrow={t("agentIa.faqEyebrow")}
           title={t("agentIa.faqTitle")}
         />
-        <FAQAccordion items={faqItems} />
+        <FAQAccordion items={faqItems} emitSchema={false} />
       </section>
 
       {/* Related services */}
