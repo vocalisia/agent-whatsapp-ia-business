@@ -31,13 +31,13 @@ Drei Technologien arbeiten zusammen:
 
 ## Transkriptionsmodelle 2026: Vergleich
 
-| Modell | DE-Genauigkeit | Mehrsprachige Genauigkeit | Latenz | Kosten/Min |
-|--------|----------------|--------------------------|--------|------------|
-| **Whisper v3 large** | 95% | 99 Sprachen, ausgezeichnet | 2-4 s | $0.006 |
-| **GPT-4o Audio** | 97% | 50 Sprachen, top tier | 1-2 s | $0.015 |
-| **Deepgram Nova-2** | 93% | 30 Sprachen | &lt;1 s | $0.004 |
-| **AssemblyAI Universal** | 92% | 28 Sprachen | 1.5 s | $0.005 |
-| **Google Speech-to-Text** | 93% | 125 Sprachen | 1-2 s | $0.016 |
+| Modell | DE-Genauigkeit | Mehrsprachige Genauigkeit | Latenz |
+|--------|----------------|--------------------------|--------|
+| **Whisper v3 large** | 95% | 99 Sprachen, ausgezeichnet | 2-4 s |
+| **GPT-4o Audio** | 97% | 50 Sprachen, top tier | 1-2 s |
+| **Deepgram Nova-2** | 93% | 30 Sprachen | &lt;1 s |
+| **AssemblyAI Universal** | 92% | 28 Sprachen | 1.5 s |
+| **Google Speech-to-Text** | 93% | 125 Sprachen | 1-2 s |
 
 Bei AgenticWhatsup verwenden wir **GPT-4o Audio** standardmäßig (beste Integration mit der LLM-Kette) und **Whisper v3** als Budget-Fallback. Für zeitkritische Echtzeit-Fälle bietet **Deepgram Nova-2** die niedrigste Latenz.
 
@@ -50,7 +50,7 @@ Der Kunde sagt "Ich hätte gern einen Termin nächsten Dienstag morgens wenn mö
 Ein Leck, einen Unfall, eine Panne mündlich zu beschreiben ist 4× schneller als schriftlich. Der Kunde sendet eine 30-Sekunden-Sprachnachricht; der Agent extrahiert automatisch strukturierte Elemente (Typ, Ort, Schwere, Dringlichkeit, geforderte Fotos).
 
 ### 3. Personalisierte Angebotsanfrage
-"Guten Tag, ich suche ein Angebot für eine Einbauküche, Eiche, ca. 18m², Induktionskochfeld, Pyrolyse-Backofen, Maximalbudget 15.000 Euro". Der Agent identifiziert alle Kriterien, prüft den Katalog, generiert ein vorausgefülltes Angebot.
+"Guten Tag, ich suche ein Angebot für eine Einbauküche, Eiche, ca. 18m², Induktionskochfeld, Pyrolyse-Backofen". Der Agent identifiziert alle Kriterien, prüft den Katalog, generiert ein vorausgefülltes Angebot.
 
 ### 4. B2B-Vertriebsqualifizierung
 In der Akquise kann ein Kunde per Sprache antworten beim Verlassen einer Besprechung: "Ja interessant, wir sind 22 Personen, der Bedarf ist eher Lead-Qualifizierung als Support, rufen Sie mich Freitag zurück". Der Agent extrahiert BANT (Budget, Authority, Need, Timing) automatisch.
@@ -110,18 +110,20 @@ Audiodateien sind personenbezogene Daten. Drei Verpflichtungen:
 
 Bei AgenticWhatsup sind diese 3 Regeln standardmäßig aktiviert. Hosting auf europäischer Infrastruktur (Scaleway / Vercel EU).
 
-## Was kostet ein WhatsApp-Agent mit Sprachtranskription?
+## Wie Ihr Projekt dimensionieren?
 
-Ab **290 €/Monat** (AgenticWhatsup KMU-Standardpaket), alles inklusive:
+Statt einer Listenpreis dimensionieren wir jedes Projekt nach Ihren Sprachnachrichten-Volumen, Ihrer Branche, Ihren Integrationen und Ihren DSGVO-Anforderungen. Der schnellste Weg: ein **kostenloses 30-Minuten-Audit**, in dem wir Ihren WhatsApp-Flow analysieren und den richtigen Stack präzise dimensionieren.
+
+Was wir gemeinsam betrachten:
 
 - WhatsApp Business Cloud API
-- Whisper v3 oder GPT-4o Audio Transkription
-- Orchestrierender LLM (Claude Sonnet oder GPT-4)
+- Whisper v3 oder GPT-4o Audio Transkription je nach Volumen
+- Orchestrierender LLM (Claude Sonnet oder GPT-4) je nach Anwendungsfall
 - CRM-/Kalender-Integration (HubSpot, Pipedrive, Cal.com, Make.com)
 - EU-Hosting + DSGVO-Konformität
-- Kontinuierlicher Support und Optimierung
+- Support- und Optimierungsplan
 
-Für 5000+ Sprachnachrichten/Monat oder spezielle Bedürfnisse (dediziertes Modell, Fachvokabular), individuelles Angebot. [Kostenloses 30-Min-Audit →](/de/contact)
+[Buchen Sie Ihr kostenloses 30-Min-Audit →](/de/contact)
 
 ## FAQ — WhatsApp Sprachnachrichten-KI-Transkription
 

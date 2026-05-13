@@ -40,13 +40,13 @@ Trois technologies travaillent ensemble :
 
 ## Les modèles de transcription en 2026 : comparatif
 
-| Modèle | Précision FR | Précision multi-langue | Latence | Coût/min |
-|--------|--------------|-----------------------|---------|----------|
-| **Whisper v3 large** | 96% | 99 langues, excellent | 2-4 s | 0,006 $ |
-| **GPT-4o Audio** | 97% | 50 langues, top tier | 1-2 s | 0,015 $ |
-| **Deepgram Nova-2** | 94% | 30 langues | &lt;1 s | 0,004 $ |
-| **AssemblyAI Universal** | 93% | 28 langues | 1,5 s | 0,005 $ |
-| **Google Speech-to-Text** | 92% | 125 langues | 1-2 s | 0,016 $ |
+| Modèle | Précision FR | Précision multi-langue | Latence |
+|--------|--------------|-----------------------|---------|
+| **Whisper v3 large** | 96% | 99 langues, excellent | 2-4 s |
+| **GPT-4o Audio** | 97% | 50 langues, top tier | 1-2 s |
+| **Deepgram Nova-2** | 94% | 30 langues | &lt;1 s |
+| **AssemblyAI Universal** | 93% | 28 langues | 1,5 s |
+| **Google Speech-to-Text** | 92% | 125 langues | 1-2 s |
 
 Chez AgenticWhatsup, nous utilisons **GPT-4o Audio** comme défaut (meilleure intégration avec la chaîne LLM) et **Whisper v3** en fallback budget. Pour les cas temps réel critique, **Deepgram Nova-2** offre la latence la plus basse.
 
@@ -59,7 +59,7 @@ Le client dit "Je voudrais un rendez-vous mardi prochain matin de préférence".
 Décrire une fuite, un accident, une panne, est 4× plus rapide à l'oral qu'à l'écrit. Le client envoie un vocal de 30 secondes ; l'agent extrait les éléments structurés (type, lieu, gravité, urgence, photos demandées) automatiquement.
 
 ### 3. Demande de devis personnalisée
-"Bonjour, je cherche un devis pour une cuisine équipée chêne, environ 18m², plaque induction, four pyrolyse, prix max 15000 euros". L'agent identifie tous les critères, vérifie le catalogue, génère un devis pré-rempli.
+"Bonjour, je cherche un devis pour une cuisine équipée chêne, environ 18m², plaque induction, four pyrolyse". L'agent identifie tous les critères, vérifie le catalogue, génère un devis pré-rempli.
 
 ### 4. Qualification commerciale B2B
 En prospection, un client peut répondre par vocal en sortant de réunion : "Oui ça m'intéresse, on est 22 personnes, le besoin c'est plus la qualification de leads que le SAV, rappelez-moi vendredi". L'agent extrait le BANT (Budget, Authority, Need, Timing) automatiquement.
@@ -119,18 +119,20 @@ Les fichiers audio sont des données personnelles. Trois obligations :
 
 Chez AgenticWhatsup, ces 3 règles sont activées par défaut. Hébergement sur infra européenne (Scaleway / Vercel EU).
 
-## Combien coûte un agent WhatsApp avec transcription vocale ?
+## Comment chiffrer votre projet ?
 
-À partir de **290 €/mois** (forfait PME standard AgenticWhatsup), tout inclus :
+Plutôt qu'un tarif catalogue, nous chiffrons chaque projet selon vos volumes de vocaux, votre secteur, vos intégrations et vos contraintes RGPD. Le plus rapide : un **audit gratuit de 30 minutes** pendant lequel nous analysons votre flux WhatsApp et nous dimensionnons précisément la stack.
+
+Ce que nous étudions ensemble :
 
 - WhatsApp Business Cloud API
-- Transcription Whisper v3 ou GPT-4o Audio
-- LLM orchestrateur (Claude Sonnet ou GPT-4)
+- Transcription Whisper v3 ou GPT-4o Audio selon vos volumes
+- LLM orchestrateur (Claude Sonnet ou GPT-4) selon vos cas d'usage
 - Intégration CRM/agenda (HubSpot, Pipedrive, Cal.com, Make.com)
 - Hébergement EU + conformité RGPD
-- Support et optimisation continue
+- Plan de support et d'optimisation continue
 
-Pour 5000+ vocaux/mois ou besoins spécifiques (modèle dédié, vocabulaire métier), devis sur mesure. [Audit gratuit de 30 min →](/fr/contact)
+[Réservez votre audit gratuit de 30 min →](/fr/contact)
 
 ## FAQ Transcription Vocale WhatsApp IA
 

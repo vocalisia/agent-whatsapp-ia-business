@@ -197,9 +197,6 @@ export default async function LocaleLayout({
                   offers: {
                     "@type": "Offer",
                     availability: "https://schema.org/InStock",
-                    priceCurrency: "EUR",
-                    price: "290",
-                    priceValidUntil: "2026-12-31",
                     url: "https://agentic-whatsup.com/fr/contact",
                   },
                   aggregateRating: {

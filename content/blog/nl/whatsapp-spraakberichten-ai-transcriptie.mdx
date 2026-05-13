@@ -31,13 +31,13 @@ Drie technologieën werken samen:
 
 ## Transcriptiemodellen 2026: vergelijking
 
-| Model | NL-nauwkeurigheid | Meertalige nauwkeurigheid | Latentie | Kost/min |
-|-------|-------------------|--------------------------|----------|----------|
-| **Whisper v3 large** | 95% | 99 talen, uitstekend | 2-4 s | $0.006 |
-| **GPT-4o Audio** | 97% | 50 talen, top tier | 1-2 s | $0.015 |
-| **Deepgram Nova-2** | 93% | 30 talen | &lt;1 s | $0.004 |
-| **AssemblyAI Universal** | 92% | 28 talen | 1.5 s | $0.005 |
-| **Google Speech-to-Text** | 93% | 125 talen | 1-2 s | $0.016 |
+| Model | NL-nauwkeurigheid | Meertalige nauwkeurigheid | Latentie |
+|-------|-------------------|--------------------------|----------|
+| **Whisper v3 large** | 95% | 99 talen, uitstekend | 2-4 s |
+| **GPT-4o Audio** | 97% | 50 talen, top tier | 1-2 s |
+| **Deepgram Nova-2** | 93% | 30 talen | &lt;1 s |
+| **AssemblyAI Universal** | 92% | 28 talen | 1.5 s |
+| **Google Speech-to-Text** | 93% | 125 talen | 1-2 s |
 
 Bij AgenticWhatsup gebruiken we standaard **GPT-4o Audio** (beste integratie met de LLM-keten) en **Whisper v3** als budget-fallback. Voor tijdkritische realtime gevallen biedt **Deepgram Nova-2** de laagste latentie.
 
@@ -50,7 +50,7 @@ De klant zegt "Ik zou graag een afspraak hebben volgende week dinsdagochtend ind
 Een lek, een ongeval, een storing beschrijven is mondeling 4× sneller dan schriftelijk. De klant stuurt een spraakbericht van 30 seconden; de agent extraheert automatisch gestructureerde elementen (type, locatie, ernst, urgentie, gevraagde foto's).
 
 ### 3. Gepersonaliseerde offerteaanvraag
-"Hallo, ik zoek een offerte voor een uitgeruste keuken, eiken, ongeveer 18m², inductiekookplaat, pyrolyse-oven, maximaal budget 15000 euro". De agent identificeert alle criteria, controleert de catalogus, genereert een vooraf ingevulde offerte.
+"Hallo, ik zoek een offerte voor een uitgeruste keuken, eiken, ongeveer 18m², inductiekookplaat, pyrolyse-oven". De agent identificeert alle criteria, controleert de catalogus, genereert een vooraf ingevulde offerte.
 
 ### 4. B2B-verkoopkwalificatie
 In prospectie kan een klant per spraak antwoorden bij het verlaten van een vergadering: "Ja interessant, we zijn met 22 mensen, de behoefte is meer leadkwalificatie dan support, bel me vrijdag terug". De agent extraheert BANT (Budget, Authority, Need, Timing) automatisch.
@@ -110,18 +110,20 @@ Audiobestanden zijn persoonsgegevens. Drie verplichtingen:
 
 Bij AgenticWhatsup zijn deze 3 regels standaard geactiveerd. Hosting op Europese infrastructuur (Scaleway / Vercel EU).
 
-## Wat kost een WhatsApp-agent met spraaktranscriptie?
+## Hoe uw project dimensioneren?
 
-Vanaf **€290/maand** (AgenticWhatsup KMO standaardpakket), alles inbegrepen:
+In plaats van een lijstprijs dimensioneren we elk project op basis van uw spraakberichtvolumes, uw sector, uw integraties en uw AVG-vereisten. De snelste weg: een **gratis 30-minuten audit** waarin we uw WhatsApp-flow analyseren en de juiste stack nauwkeurig dimensioneren.
+
+Wat we samen bekijken:
 
 - WhatsApp Business Cloud API
-- Whisper v3 of GPT-4o Audio-transcriptie
-- Orchestrerend LLM (Claude Sonnet of GPT-4)
+- Whisper v3 of GPT-4o Audio-transcriptie afhankelijk van volumes
+- Orchestrerend LLM (Claude Sonnet of GPT-4) afhankelijk van use cases
 - CRM/agenda-integratie (HubSpot, Pipedrive, Cal.com, Make.com)
 - EU-hosting + AVG-conformiteit
-- Continue ondersteuning en optimalisatie
+- Ondersteunings- en optimalisatieplan
 
-Voor 5000+ spraakberichten/maand of specifieke behoeften (toegewijd model, vakvocabulaire), maatwerkofferte. [Gratis 30-min audit →](/nl/contact)
+[Boek uw gratis 30-min audit →](/nl/contact)
 
 ## FAQ — WhatsApp spraak-AI-transcriptie
 

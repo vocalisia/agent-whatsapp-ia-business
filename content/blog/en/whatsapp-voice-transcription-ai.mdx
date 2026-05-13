@@ -31,13 +31,13 @@ Three technologies work together:
 
 ## 2026 Transcription Models: Comparison
 
-| Model | EN Accuracy | Multilingual Accuracy | Latency | Cost/min |
-|-------|-------------|----------------------|---------|----------|
-| **Whisper v3 large** | 97% | 99 languages, excellent | 2-4 s | $0.006 |
-| **GPT-4o Audio** | 98% | 50 languages, top tier | 1-2 s | $0.015 |
-| **Deepgram Nova-2** | 96% | 30 languages | &lt;1 s | $0.004 |
-| **AssemblyAI Universal** | 95% | 28 languages | 1.5 s | $0.005 |
-| **Google Speech-to-Text** | 94% | 125 languages | 1-2 s | $0.016 |
+| Model | EN Accuracy | Multilingual Accuracy | Latency |
+|-------|-------------|----------------------|---------|
+| **Whisper v3 large** | 97% | 99 languages, excellent | 2-4 s |
+| **GPT-4o Audio** | 98% | 50 languages, top tier | 1-2 s |
+| **Deepgram Nova-2** | 96% | 30 languages | &lt;1 s |
+| **AssemblyAI Universal** | 95% | 28 languages | 1.5 s |
+| **Google Speech-to-Text** | 94% | 125 languages | 1-2 s |
 
 At AgenticWhatsup, we use **GPT-4o Audio** as default (best integration with the LLM chain) and **Whisper v3** as budget fallback. For real-time critical cases, **Deepgram Nova-2** offers the lowest latency.
 
@@ -50,7 +50,7 @@ The customer says "I'd like an appointment Tuesday next week morning if possible
 Describing a leak, an accident, a breakdown is 4× faster verbally than in writing. The customer sends a 30-second voice note; the agent automatically extracts structured elements (type, location, severity, urgency, required photos).
 
 ### 3. Personalised Quote Request
-"Hi, I'm looking for a quote for a fitted kitchen, oak finish, about 18m², induction hob, pyrolytic oven, max budget £15,000". The agent identifies all criteria, checks the catalogue, generates a pre-filled quote.
+"Hi, I'm looking for a quote for a fitted kitchen, oak finish, about 18m², induction hob, pyrolytic oven". The agent identifies all criteria, checks the catalogue, generates a pre-filled quote.
 
 ### 4. B2B Sales Qualification
 In outbound prospecting, a customer can reply by voice on the way out of a meeting: "Yes I'm interested, we're 22 people, the need is more lead qualification than support, call me back Friday". The agent extracts BANT (Budget, Authority, Need, Timing) automatically.
@@ -110,18 +110,20 @@ Audio files are personal data. Three obligations:
 
 At AgenticWhatsup, these 3 rules are activated by default. Hosting on European infrastructure (Scaleway / Vercel EU).
 
-## How Much Does a WhatsApp Agent with Voice Transcription Cost?
+## How to Scope Your Project
 
-From **€290/month** (AgenticWhatsup standard SMB plan), all included:
+Rather than a catalogue price, we scope each project based on your voice-note volumes, your industry, your integrations and your GDPR constraints. The fastest way: a **free 30-minute audit** during which we analyse your WhatsApp flow and size the right stack.
+
+What we cover together:
 
 - WhatsApp Business Cloud API
-- Whisper v3 or GPT-4o Audio transcription
-- Orchestrating LLM (Claude Sonnet or GPT-4)
+- Whisper v3 or GPT-4o Audio transcription depending on volumes
+- Orchestrating LLM (Claude Sonnet or GPT-4) depending on use cases
 - CRM/calendar integration (HubSpot, Pipedrive, Cal.com, Make.com)
 - EU hosting + GDPR compliance
-- Continuous support and optimisation
+- Ongoing support and optimisation plan
 
-For 5,000+ voice notes/month or specific needs (dedicated model, industry vocabulary), custom quote. [Free 30-minute audit →](/en/contact)
+[Book your free 30-minute audit →](/en/contact)
 
 ## FAQ — WhatsApp Voice Transcription AI
 
