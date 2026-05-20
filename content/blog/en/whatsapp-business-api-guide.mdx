@@ -1,0 +1,188 @@
+---
+title: "WhatsApp Business API: The 2026 Technical Guide (Cloud API, Pricing, Compliance)"
+date: "2026-05-20"
+description: "WhatsApp Business API in 2026 — Cloud API vs On-Premises, message templates, 24h service window, quality tiers, pricing tiers, GDPR. Complete technical guide by Laurent Duplat."
+readTime: "12 min"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Create a Meta Business Manager"
+    text: "Sign up at business.facebook.com, verify your business documents (DUNS, VAT, address). Allow 1-3 days for Meta business verification."
+  - name: "Add a dedicated phone number"
+    text: "Use a phone number not currently used on the consumer WhatsApp app. Receive the verification code via SMS or voice call. Display name must match your verified business."
+  - name: "Provision a WhatsApp Cloud API endpoint"
+    text: "Inside Meta Business Manager → WhatsApp → Configure. Generate an API token, set the webhook URL pointing to your backend, configure verification."
+  - name: "Submit message templates for approval"
+    text: "Any business-initiated message outside the 24h service window requires a Meta-approved template. Allow 24-48h per template. Templates support buttons, media, variables."
+  - name: "Build your integration with proper compliance"
+    text: "Implement webhook signature verification, log every conversation for GDPR audit, ensure EU data residency if needed, and design proper escalation to human agents."
+---
+
+## What is the WhatsApp Business API in 2026?
+
+The **WhatsApp Business API** is the official Meta interface that lets companies send and receive WhatsApp messages programmatically — at scale, with template management, webhook events, and a defined pricing model. It's the engine underneath every serious [WhatsApp AI chatbot](/en/blog/whatsapp-ai-chatbot), [WhatsApp Business automation](/en/blog/whatsapp-business-automation), and [WhatsApp AI agent](/en/blog/whatsapp-ai-agent) deployed in production.
+
+In 2026, the API comes in two flavors:
+
+- **WhatsApp Cloud API** — hosted by Meta, free infrastructure, billed per conversation. The default choice for 95% of businesses.
+- **WhatsApp On-Premises API** — self-hosted Docker containers, being phased out by Meta in favor of Cloud API. Only relevant for enterprises with strict on-prem data requirements.
+
+This guide focuses on the Cloud API since it's now the standard.
+
+## Why the WhatsApp Business API matters
+
+The free WhatsApp Business app is good for under 200 messages/month and a single device. The API unlocks:
+
+- Multi-agent inboxes (multiple humans + AI handling the same inbound queue)
+- CRM, calendar, e-commerce integrations
+- AI chatbot and agent deployments
+- Outbound transactional and marketing messages at scale
+- Quality tier scaling (250 → 1K → 10K → 100K+ unique conversations per 24h)
+- Proper analytics, audit logs, GDPR retention controls
+
+If you handle 500+ WhatsApp messages per month or want to automate any part of your conversational flow, the API is mandatory.
+
+## WhatsApp Cloud API: technical architecture
+
+```
+[Customer WhatsApp app]
+       ↓
+[Meta infrastructure: receive/queue messages]
+       ↓
+[Cloud API webhook → your backend]
+       ↓
+[Your conversation engine]
+   ├── Rule-based flow OR LLM AI agent
+   ├── CRM, calendar, e-commerce integrations
+   └── Human handover queue
+       ↓
+[Reply via Cloud API → Meta → Customer]
+```
+
+The Cloud API handles all infrastructure: phone number provisioning, message delivery retries, queue management, encryption at rest. You provide the webhook URL and the conversation logic.
+
+For a deeper architectural breakdown specific to AI agents: [How a WhatsApp AI agent works](/en/blog/how-whatsapp-ai-agent-works), and the comparison [WhatsApp Cloud API vs AI agent](/en/blog/whatsapp-cloud-api-vs-ai-agent).
+
+## The 24-hour service window (critical concept)
+
+Meta enforces a strict rule on business-initiated messaging to protect users from spam:
+
+- **Inside the 24h window** (the customer sent you a message in the last 24h): you can reply with **any free-form content** — text, media, structured messages.
+- **Outside the 24h window**: you can only send **pre-approved template messages**.
+
+This single rule shapes every WhatsApp Business API workflow.
+
+### Message templates
+
+Templates are pre-defined message structures submitted to Meta for review. They support:
+
+- Static text + variable placeholders ({{1}}, {{2}})
+- Header (text, image, video, document, location)
+- Footer
+- Buttons: quick reply (up to 3) or call-to-action (URL, phone)
+- Authentication templates (OTP/2FA flows)
+
+Categories:
+- **Marketing** — promotions, offers (highest cost tier, opt-in required)
+- **Utility** — order confirmations, shipping updates, account alerts (lower cost)
+- **Authentication** — OTP, login codes (lowest cost)
+
+Meta approval typically 24-48h. Reject reasons: promotional content disguised as utility, missing variables in body, vague language.
+
+## WhatsApp Business API pricing in 2026 (Meta-side)
+
+Meta bills per **conversation** (a 24-hour session, not per message):
+
+- **Marketing conversations**: roughly €0.025-0.15 depending on country (France ~€0.07, Brazil ~€0.04, US ~€0.014)
+- **Utility conversations**: ~50% cheaper than marketing
+- **Authentication conversations**: lowest tier
+- **Service conversations**: free for the first 1,000/month per WhatsApp Business Account (WABA), then billed at utility rates
+
+You pay this Meta cost on top of your **platform/chatbot/AI agent** fee. Combined economics: see [How much a WhatsApp AI agent costs in 2026](/en/blog/whatsapp-ai-agent-cost-2026).
+
+## Quality tiers and rate limits
+
+New WhatsApp Business Accounts start at **tier 1**: 250 unique conversations / 24h. Meta auto-upgrades based on a quality rating:
+
+| Tier | Unique conversations / 24h |
+|---|---|
+| Tier 1 | 250 |
+| Tier 2 | 1,000 |
+| Tier 3 | 10,000 |
+| Tier 4 | 100,000 |
+| Unlimited | — |
+
+Quality rating: Green (high), Yellow (medium), Red (low — risk of being blocked). Driven by user reports (mark-as-spam), block rate, and message volume patterns.
+
+Maintain high quality by: respecting opt-in, using utility/authentication templates correctly, avoiding aggressive marketing, and routing complex cases to humans.
+
+## Compliance: GDPR, FADP, AI Act
+
+If you operate in the EU, Switzerland, UK, or process EU resident data, structural compliance matters:
+
+- **EU data residency** for conversation transcripts, embeddings, AI inference
+- **DPA** signed with every processor in the chain (Meta, your platform, AI provider)
+- **Right to erasure**: a "STOP" or "DELETE MY DATA" must trigger complete, traceable deletion
+- **Consent documentation**: log how each contact opted in to WhatsApp messaging
+- **AI Act disclosure (2025-2026)**: customers must know they're talking to AI when not obvious
+- **Retention policy**: typically 90 days non-converted leads, contract duration + legal hold for customers
+
+Full compliance playbook: [GDPR guide for WhatsApp AI](/en/blog/gdpr-whatsapp-ai-guide).
+
+## Building on the WhatsApp Business API: build vs buy
+
+### Build your own integration
+
+Pros: full control, no platform fee, customizable to your stack.
+Cons: 3-6 months engineering time, ongoing maintenance (Meta API changes, template management, quality monitoring), GDPR audit complexity.
+
+Right choice if: you have a dedicated engineering team and high-volume, custom workflows that off-the-shelf platforms can't handle.
+
+Full build playbook: [How to build a WhatsApp chatbot](/en/blog/how-to-build-whatsapp-chatbot).
+
+### Use a platform (BSP — Business Solution Provider)
+
+Pros: live in 14-21 days, managed templates, dashboard analytics, EU compliance defaults.
+Cons: platform fee on top of Meta cost.
+
+Right choice if: you want time-to-value, no engineering overhead, and proven EU compliance defaults.
+
+Independent provider benchmark: [Best WhatsApp AI agents 2026 comparison](/en/blog/best-whatsapp-ai-agents-comparison-2026).
+
+## Use cases the API unlocks
+
+Beyond basic messaging, the API supports:
+
+- **Lead qualification & booking** — see [B2B lead qualification](/en/blog/whatsapp-b2b-lead-qualification) and [sales automation](/en/blog/whatsapp-sales-automation)
+- **Customer service automation** — see [WhatsApp customer service AI](/en/blog/whatsapp-customer-service-ai)
+- **E-commerce flows** — abandoned cart, order status, post-purchase ([Shopify integration](/en/blog/integrate-whatsapp-ai-agent-shopify), [e-commerce automation](/en/blog/whatsapp-automation-ecommerce))
+- **CRM sync** — see [WhatsApp CRM integration](/en/blog/whatsapp-crm-integration)
+- **Marketing campaigns** — [WhatsApp marketing AI campaigns](/en/blog/whatsapp-marketing-ai-automated-campaigns)
+- **Voice + image handling** — [voice transcription](/en/blog/whatsapp-voice-transcription-ai), [photo analysis](/en/blog/analyze-customer-photos-whatsapp-ai)
+
+## Common WhatsApp Business API mistakes
+
+1. **Unofficial WhatsApp Web wrappers** — Meta bans are immediate and permanent
+2. **Marketing content in utility templates** — Meta rejects, quality rating drops
+3. **No opt-in tracking** — first regulator inquiry = exposure
+4. **Single API key in production** — rotate regularly, store in secret manager
+5. **No webhook signature verification** — security hole
+6. **Non-EU hosting** without DPA → GDPR exposure
+
+## Start this week
+
+1. **Verify business documents** — DUNS, VAT, address — in Meta Business Manager
+2. **Pick a dedicated phone number** (not used on consumer WhatsApp)
+3. **Decide build vs buy** — engineering capacity, time-to-value, compliance needs
+4. **Shortlist 3 BSP providers** if buying — apply the 5-question filter from our [provider selection guide](/en/blog/best-whatsapp-ai-agents-comparison-2026)
+5. **Book a 30-minute personalized diagnostic** to validate fit and rollout — [contact](/en/contact)
+
+## Further reading
+
+- [WhatsApp AI agent: complete guide 2026](/en/blog/whatsapp-ai-agent)
+- [WhatsApp AI chatbot: deep dive](/en/blog/whatsapp-ai-chatbot)
+- [WhatsApp Business automation guide](/en/blog/whatsapp-business-automation)
+- [WhatsApp Business chatbot: build, compare, pick](/en/blog/whatsapp-business-chatbot)
+- [WhatsApp automation across sales/support/marketing](/en/blog/whatsapp-automation)
+- [ChatGPT on WhatsApp: separating hype from reality](/en/blog/chatgpt-on-whatsapp)
+- [WhatsApp CRM integration playbook](/en/blog/whatsapp-crm-integration)
+- [Cost of a WhatsApp AI agent in 2026](/en/blog/whatsapp-ai-agent-cost-2026)
