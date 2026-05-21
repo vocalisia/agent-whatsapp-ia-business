@@ -93,6 +93,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       images: [`${BASE_URL}/${locale}/opengraph-image`],
     },
+    robots: { index: true, follow: true },
     ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION && {
       verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION },
     }),
