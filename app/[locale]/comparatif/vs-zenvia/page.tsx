@@ -5,7 +5,7 @@ import { Calendar, CheckCircle, XCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
   fr: { title: "AgenticWhatsup vs Zenvia — Comparatif 2025 | Agent IA WhatsApp Europe vs LatAm", description: "AgenticWhatsup ou Zenvia ? Zenvia domine le marché latino-américain avec une offre CPaaS complète. AgenticWhatsup est le spécialiste WhatsApp IA pour PME francophones/DACH/Benelux." },
-  en: { title: "AgenticWhatsup vs Zenvia 2026: WhatsApp AI", description: "AgenticWhatsup vs Zenvia 2026: WhatsApp AI agent for Europe (FR/DACH/Benelux SMBs) vs LatAm CPaaS leader. Free 30-min audit." },
+  en: { title: "AgenticWhatsup vs Zenvia: WhatsApp AI Comparison", description: "AgenticWhatsup vs Zenvia in 2026: Zenvia leads LatAm CPaaS, AgenticWhatsup is the WhatsApp AI specialist for French, DACH and Benelux SMBs." },
   de: { title: "AgenticWhatsup vs Zenvia — Vergleich 2025 | WhatsApp KI-Agent Europa vs LatAm", description: "AgenticWhatsup oder Zenvia? Zenvia dominiert den LatAm-Markt mit vollständigem CPaaS-Angebot. AgenticWhatsup ist der WhatsApp KI-Spezialist für europäische KMU." },
   nl: { title: "AgenticWhatsup vs Zenvia — Vergelijking 2025 | WhatsApp AI-agent Europa vs LatAm", description: "AgenticWhatsup of Zenvia? Zenvia domineert de LatAm-markt met volledig CPaaS-aanbod. AgenticWhatsup is de WhatsApp AI-specialist voor Europese MKB." },
 };
