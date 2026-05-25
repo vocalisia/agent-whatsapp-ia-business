@@ -17,8 +17,8 @@ const pageMeta: Record<string, { title: string; description: string }> = {
     description: "The only WhatsApp AI agent that understands voice messages and analyzes your clients' photos. Automate responses, qualify leads, book appointments.",
   },
   de: {
-    title: "WhatsApp KI-Agent | Automatisieren Sie Ihre Kundennachrichten 24/7",
-    description: "Der einzige WhatsApp KI-Agent, der Sprachnachrichten versteht und Fotos Ihrer Kunden analysiert. Automatisieren Sie Antworten, qualifizieren Sie Leads, buchen Sie Termine.",
+    title: "WhatsApp KI-Agent | Automatisieren Kundennachrichten 24/7",
+    description: "Der einzige WhatsApp KI-Agent, der Sprachnachrichten versteht und Fotos analysiert. Antworten automatisieren, Leads qualifizieren, Termine buchen — 24/7.",
   },
   nl: {
     title: "WhatsApp AI-agent | Automatiseer uw klantberichten 24/7",
