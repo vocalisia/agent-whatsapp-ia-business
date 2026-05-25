@@ -27,11 +27,12 @@ if (process.env.SEO_GUARD_DISABLE === "1") {
 }
 
 // Fichiers candidats pour le layout principal. Le premier trouvé est scanné.
+// Les layouts localisés sont prioritaires car ils contiennent metadataBase + html lang.
 const LAYOUT_CANDIDATES = [
+  "app/[locale]/layout.tsx",
+  "src/app/[locale]/layout.tsx",
   "app/layout.tsx",
   "src/app/layout.tsx",
-  "src/app/[locale]/layout.tsx",
-  "app/[locale]/layout.tsx",
 ];
 
 // Règles : { code, severity, mode: "require"|"forbid", pattern, msg, fix }
@@ -65,7 +66,7 @@ const RULES = [
     code: "no_raw_gtag_script_src",
     severity: "critical",
     mode: "forbid",
-    pattern: /<script\s[^>]*async[^>]*src=["'][^"']*googletagmanager\.com[^"']*["']/,
+    pattern: /<script[^>\n]*\basync\b[^>\n]*src=["'][^"'\n]*googletagmanager\.com[^"'\n]*["']/,
     msg: "DANGER : <script async src='gtag.js'> en JSX — Next.js hoist cet élément AVANT les scripts inline, cassant l'ordre consent-first RGPD.",
     fix: "Remplacer par un createElement dynamique DANS le script consent inline : `(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-XXX';document.head.appendChild(s);})()`",
   },
