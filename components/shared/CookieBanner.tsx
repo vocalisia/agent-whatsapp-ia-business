@@ -51,7 +51,7 @@ export default function CookieBanner() {
   }
 
   function handleRefuse() {
-    setCookie("cookie_consent", "refused", 365);
+    setCookie("cookie_consent", "rejected", 365);
     setVisible(false);
   }
 
