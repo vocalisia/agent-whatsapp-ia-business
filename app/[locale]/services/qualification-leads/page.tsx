@@ -148,6 +148,24 @@ export default async function QualificationLeadsPage({ params }: { params: Promi
         </Link>
       </div>
 
+      {/* Internal link — agent IA WhatsApp Business */}
+      <div className="mt-10 text-center">
+        <p className="text-slate-400 text-sm mb-3">
+          {locale === "fr"
+            ? "La qualification de leads est une fonctionnalité clé de notre"
+            : "Lead qualification is a key feature of our"}
+          {" "}
+          <Link
+            href={`/${locale}/services/agent-ia-whatsapp`}
+            className="text-wa hover:underline font-medium"
+          >
+            {locale === "fr"
+              ? "agent IA WhatsApp Business"
+              : "AI agent for WhatsApp Business"}
+          </Link>.
+        </p>
+      </div>
+
     </div>
   );
 }

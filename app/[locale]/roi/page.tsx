@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Script from "next/script";
 import { TrendingUp, DollarSign, Target, Euro, Zap, BarChart3 } from "lucide-react";
 import StrategyLanding, { type LandingCopy } from "@/components/landing/StrategyLanding";
@@ -367,6 +368,22 @@ export default async function RoiLandingPage({
         valueIcons={[TrendingUp, Zap, BarChart3] as const}
         accentTint="amber"
       />
+      <div className="text-center py-8 px-4">
+        <p className="text-slate-400 text-sm">
+          {locale === "fr"
+            ? "Maximisez ce ROI avec notre"
+            : "Maximize this ROI with our"}
+          {" "}
+          <Link
+            href={`/${locale}/services/agent-ia-whatsapp`}
+            className="text-wa hover:underline font-medium"
+          >
+            {locale === "fr"
+              ? "agent IA WhatsApp Business"
+              : "AI agent for WhatsApp Business"}
+          </Link>.
+        </p>
+      </div>
     </>
   );
 }

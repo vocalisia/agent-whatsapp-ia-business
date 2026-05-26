@@ -470,18 +470,18 @@
       ]
     },
     "agentIa": {
-      "metaTitle": "Agent IA WhatsApp Business",
+      "metaTitle": "Agent IA WhatsApp Business — Guide Complet 2026",
       "heroLabel": "Agent IA WhatsApp",
-      "heroTitle": "Votre agent IA WhatsApp Business,",
-      "heroHighlight": "clé en main",
-      "heroSubtitle": "De l'analyse des besoins à la mise en production — nous déployons votre agent IA WhatsApp en 2 à 3 semaines. Vision IA, transcription vocale, prise de RDV, intégrations CRM.",
+      "heroTitle": "Agent IA WhatsApp Business :",
+      "heroHighlight": "votre guide complet 2026",
+      "heroSubtitle": "Découvrez comment un agent IA WhatsApp Business transforme la qualification de leads, la prise de RDV et le service client 24/7 — déployé en 2 à 3 semaines.",
       "pricingEyebrow": "Tarifs",
       "pricingTitle": "Un investissement adapté à votre activité",
       "pricingSubtitle": "Chaque projet est différent. Contactez-nous pour un devis personnalisé basé sur vos volumes et vos intégrations.",
       "pricingViewPlans": "Voir les formules",
       "pricingRequestQuote": "Demander un devis",
       "faqEyebrow": "FAQ",
-      "faqTitle": "Questions fréquentes sur l'agent IA WhatsApp",
+      "faqTitle": "FAQ — Agent IA WhatsApp Business",
       "relatedEyebrow": "Services associés",
       "relatedTitle": "Allez plus loin avec nos autres services",
       "relatedLearnMore": "En savoir plus",
@@ -489,36 +489,24 @@
       "finalCtaSubtitle": "30 minutes pour analyser vos besoins. Proposition sous 48h.",
       "faqItems": [
         {
-          "question": "Comment fonctionne la transcription vocale WhatsApp ?",
-          "answer": "L'agent transcrit chaque message vocal grâce à un modèle de reconnaissance vocale, selon la langue configurée. Le transcript est traité comme du texte normal, et l'IA répond de façon contextuelle."
+          "question": "Qu'est-ce qu'un agent IA WhatsApp Business ?",
+          "answer": "Un agent IA WhatsApp Business est un programme automatisé connecté à votre compte WhatsApp Business API. Il comprend le langage naturel, analyse les messages texte, vocaux et photos, et répond à vos clients 24h/24 sans intervention humaine. Il peut qualifier des leads, prendre des rendez-vous et gérer le service client."
         },
         {
-          "question": "Quels types de photos l'agent peut-il analyser ?",
-          "answer": "Documents (CNI, justificatifs, contrats, factures), photos de biens immobiliers, captures d'écran, photos de produits, prescriptions médicales — tout type d'image."
+          "question": "Comment un agent IA WhatsApp Business qualifie-t-il les leads ?",
+          "answer": "L'agent pose une séquence de questions personnalisées dès le premier contact : budget, besoin, délai, décideur. Il attribue un score à chaque prospect et transfère automatiquement les leads chauds à votre équipe commerciale via webhook ou CRM. Les leads froids reçoivent un suivi automatique via templates Meta approuvés."
         },
         {
-          "question": "L'agent peut-il remplir des documents avec les photos reçues ?",
-          "answer": "Oui. Si un client envoie une photo de sa pièce d'identité ou d'un formulaire, l'agent extrait les informations et les enregistre dans votre CRM ou pré-remplit un dossier automatiquement."
+          "question": "L'agent IA WhatsApp Business peut-il gérer la prise de RDV ?",
+          "answer": "Oui. L'agent est connecté à Cal.com, Google Calendar ou Calendly. Il consulte vos disponibilités en temps réel, propose des créneaux au client et confirme la réservation directement dans WhatsApp. Un rappel automatique est envoyé 24h avant le rendez-vous."
         },
         {
-          "question": "Faut-il un compte WhatsApp Business existant ?",
-          "answer": "Vous avez besoin d'un compte WhatsApp Business API via Meta. Nous vous accompagnons dans la création, la connexion et l'approbation des templates."
+          "question": "Comment fonctionne le service client 24/7 via WhatsApp Business IA ?",
+          "answer": "L'agent dispose d'une base de connaissance personnalisée (FAQ, fiches produits, procédures). Il répond instantanément aux questions fréquentes, analyse les photos envoyées par les clients, transcrit les messages vocaux et escalade les cas complexes à un agent humain avec tout le contexte de la conversation."
         },
         {
-          "question": "Comment fonctionne la règle des 24h de Meta ?",
-          "answer": "Notre agent gère cette contrainte automatiquement : il utilise des templates pré-approuvés pour relancer les conversations inactives depuis plus de 24h."
-        },
-        {
-          "question": "L'agent peut-il gérer plusieurs langues ?",
-          "answer": "Oui. L'agent détecte automatiquement la langue du client et répond dans la même langue (français, anglais, arabe, espagnol, etc.)."
-        },
-        {
-          "question": "Combien de conversations simultanées peut-il gérer ?",
-          "answer": "L'agent est scalable et peut gérer des centaines de conversations simultanées sans dégradation de qualité."
-        },
-        {
-          "question": "Quelle est la conformité RGPD de la solution ?",
-          "answer": "Rétention des données configurable par type, nettoyage automatique planifié, hébergement possible sur serveurs EU via Cal.com v2."
+          "question": "Combien de temps faut-il pour déployer un agent IA WhatsApp Business ?",
+          "answer": "Le déploiement complet prend 2 à 3 semaines : audit de vos besoins (J1-J3), configuration de l'agent et connexion WhatsApp Business API (J4-J10), tests et ajustements (J11-J14), mise en production (J15-J21). Vous bénéficiez d'un support dédié pendant les 30 premiers jours."
         }
       ],
       "relatedServices": [
@@ -534,7 +522,9 @@
           "title": "Intégration Cal.com",
           "description": "Prise de rendez-vous intelligente directement dans WhatsApp."
         }
-      ]
+      ],
+      "contentBodyTitle": "Pourquoi déployer un Agent IA WhatsApp Business en 2026 ?",
+      "contentBody": "WhatsApp Business compte plus de 200 millions d'utilisateurs professionnels actifs. Pourtant, la grande majorité des entreprises gèrent encore leurs conversations manuellement — avec des temps de réponse de plusieurs heures et des leads perdus pendant la nuit.\n\nUn agent IA WhatsApp Business change la donne en automatisant trois cas d'usage critiques :\n\n**1. Qualification de leads automatique**\nL'agent engage chaque nouveau contact dès la première seconde : il pose les bonnes questions, identifie le besoin, et transfère les prospects qualifiés directement à votre équipe commerciale. Résultat : +42 % de leads qualifiés sans charge supplémentaire pour vos équipes.\n\n**2. Prise de RDV intelligente**\nGrâce à l'intégration Cal.com ou Google Calendar, votre agent IA WhatsApp Business propose des créneaux disponibles et confirme les rendez-vous en temps réel. Zéro appel téléphonique, zéro échange d'emails. Le client réserve directement depuis WhatsApp.\n\n**3. Service client 24h/24, 7j/7**\n70 % des messages WhatsApp Business arrivent hors des horaires de bureau. Un agent IA répond instantanément : questions fréquentes, suivi de commande, traitement de réclamations, analyse de photos et transcription de vocaux. Votre équipe ne gère que les cas complexes.\n\nLa mise en production d'un agent IA WhatsApp Business prend 2 à 3 semaines. Il s'intègre à votre CRM (HubSpot, Salesforce, Pipedrive) et respecte les contraintes RGPD."
     },
     "common": {
       "auditGratuit": "Audit gratuit",

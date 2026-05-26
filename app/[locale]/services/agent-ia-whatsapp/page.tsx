@@ -156,6 +156,18 @@ export default async function ServiceAgentIAWhatsAppPage({ params }: { params: P
       {/* How it works */}
       <HowItWorks />
 
+      {/* Content body — SEO text block */}
+      <section className="py-20 px-4 sm:px-6 max-w-4xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-6">
+          {t("agentIa.contentBodyTitle")}
+        </h2>
+        <div className="prose prose-invert prose-lg max-w-none text-slate-300 leading-relaxed space-y-4">
+          {t("agentIa.contentBody").split("\n\n").map((para, i) => (
+            <p key={i} className="text-slate-300 leading-relaxed">{para}</p>
+          ))}
+        </div>
+      </section>
+
       {/* Pricing CTA */}
       <section className="py-20 px-4 sm:px-6 bg-surface/20">
         <div className="max-w-3xl mx-auto text-center">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Calendar, MessageCircle, TrendingUp, Star } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
@@ -625,6 +626,24 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
             <MessageCircle size={16} className="text-wa" /> {c.ctaSecondary}
           </a>
         </div>
+      </div>
+
+      {/* Internal link — agent IA WhatsApp Business */}
+      <div className="mt-10 text-center">
+        <p className="text-slate-400 text-sm">
+          {locale === "fr"
+            ? "Ces résultats ont été obtenus grâce à notre"
+            : "These results were achieved with our"}
+          {" "}
+          <Link
+            href={`/${locale}/services/agent-ia-whatsapp`}
+            className="text-wa hover:underline font-medium"
+          >
+            {locale === "fr"
+              ? "agent IA WhatsApp Business"
+              : "AI agent for WhatsApp Business"}
+          </Link>.
+        </p>
       </div>
     </div>
   );

@@ -148,6 +148,24 @@ export default async function PriseDeRdvPage({ params }: { params: Promise<{ loc
         </Link>
       </div>
 
+      {/* Internal link — agent IA WhatsApp Business */}
+      <div className="mt-10 text-center">
+        <p className="text-slate-400 text-sm mb-3">
+          {locale === "fr"
+            ? "La prise de RDV automatique fait partie intégrante de notre"
+            : "Automatic appointment booking is a core part of our"}
+          {" "}
+          <Link
+            href={`/${locale}/services/agent-ia-whatsapp`}
+            className="text-wa hover:underline font-medium"
+          >
+            {locale === "fr"
+              ? "agent IA WhatsApp Business"
+              : "AI agent for WhatsApp Business"}
+          </Link>.
+        </p>
+      </div>
+
     </div>
   );
 }
