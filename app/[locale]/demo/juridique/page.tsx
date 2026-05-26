@@ -54,39 +54,39 @@ const capabilities = [
   {
     icon: Briefcase,
     title: "Domaines de droit",
-    desc: "Orientation vers le bon domaine : famille, immobilier, commercial, penal, travail",
+    desc: "Orientation vers le bon domaine : famille, immobilier, commercial, pénal, travail",
   },
   {
     icon: FileSearch,
     title: "Suivi dossier",
-    desc: "Suivi en temps reel de votre affaire : etapes, echeances, documents manquants",
+    desc: "Suivi en temps réel de votre affaire : étapes, échéances, documents manquants",
   },
   {
     icon: FileText,
     title: "Analyse documents",
-    desc: "Envoyez un contrat ou document juridique, l'IA en extrait les clauses cles",
+    desc: "Envoyez un contrat ou document juridique, l'IA en extrait les clauses clés",
   },
   {
     icon: Calculator,
     title: "Estimation honoraires",
-    desc: "Grille tarifaire transparente, forfaits clairs et eligibilite aide juridictionnelle",
+    desc: "Grille tarifaire transparente, forfaits clairs et éligibilité aide juridictionnelle",
   },
   {
     icon: AlertTriangle,
     title: "Urgences juridiques",
-    desc: "Garde a vue, expulsion, saisie : assistance immediate et rappel avocat sous 30 min",
+    desc: "Garde à vue, expulsion, saisie : assistance immédiate et rappel avocat sous 30 min",
   },
 ];
 
 const suggestedPhrases = [
   "Je veux une consultation en droit du travail",
-  "Combien coute un divorce amiable ?",
+  "Combien coûte un divorce amiable ?",
   "Je dois envoyer une mise en demeure",
-  "Quels documents pour creer une SAS ?",
-  "Ou en est mon dossier JUR-2026-0042 ?",
-  "J'ai recu un contrat a analyser",
-  "Quels sont les delais de prescription ?",
-  "Suis-je eligible a l'aide juridictionnelle ?",
+  "Quels documents pour créer une SAS ?",
+  "Où en est mon dossier JUR-2026-0042 ?",
+  "J'ai reçu un contrat à analyser",
+  "Quels sont les délais de prescription ?",
+  "Suis-je éligible à l'aide juridictionnelle ?",
 ];
 
 export default function JuridiqueDemoPage() {
@@ -174,11 +174,11 @@ export default function JuridiqueDemoPage() {
                   className="text-xl font-bold text-white mb-3"
                   style={{ fontFamily: "Onest, sans-serif" }}
                 >
-                  Votre cabinet merite mieux
+                  Votre cabinet mérite mieux
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Reservez un audit gratuit de 30 min. On vous montre l&apos;agent
-                  configure avec VOS domaines et VOTRE marque.
+                  Réservez un audit gratuit de 30 min. On vous montre l&apos;agent
+                  configuré avec VOS domaines et VOTRE marque.
                 </p>
                 <a
                   href={process.env.NEXT_PUBLIC_CAL_LINK || "/fr/contact"}
@@ -199,18 +199,18 @@ export default function JuridiqueDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites sectorielles
+            Fonctionnalités sectorielles
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             Tout ce dont un cabinet a besoin...{" "}
-            <span className="text-gradient-wa">automatise</span>
+            <span className="text-gradient-wa">automatisé</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            De la prise de contact au suivi de dossier, l&apos;agent gere
-            chaque etape de la relation client juridique.
+            De la prise de contact au suivi de dossier, l&apos;agent gère
+            chaque étape de la relation client juridique.
           </p>
         </div>
 
@@ -245,11 +245,11 @@ export default function JuridiqueDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a transformer votre cabinet ?
+              Prêt à transformer votre cabinet ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Vos domaines et documents importes automatiquement.
-              Formation equipe incluse.
+              Setup en 48h. Vos domaines et documents importés automatiquement.
+              Formation équipe incluse.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -259,7 +259,7 @@ export default function JuridiqueDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -268,7 +268,7 @@ export default function JuridiqueDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

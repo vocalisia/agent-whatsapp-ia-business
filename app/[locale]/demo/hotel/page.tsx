@@ -15,9 +15,9 @@ import {
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
-    title: "Agent IA WhatsApp Hotel | Demo interactive HotelLux",
+    title: "Agent IA WhatsApp Hôtel | Demo interactive HotelLux",
     description:
-      "Testez notre agent IA WhatsApp pour hotels et residences. Reservation instantanee, check-in auto, spa, restaurant, conciergerie IA, groupes et evenements.",
+      "Testez notre agent IA WhatsApp pour hôtels et résidences. Réservation instantanée, check-in auto, spa, restaurant, conciergerie IA, groupes et événements.",
   },
   en: {
     title: "Hotel WhatsApp AI Agent | Interactive Demo",
@@ -49,45 +49,45 @@ export async function generateMetadata({
 const capabilities = [
   {
     icon: Calendar,
-    title: "Reservation instantanee",
-    desc: "Reservation de chambre en temps reel avec meilleur tarif garanti et upgrade automatique",
+    title: "Réservation instantanée",
+    desc: "Réservation de chambre en temps réel avec meilleur tarif garanti et upgrade automatique",
   },
   {
     icon: Clock,
     title: "Check-in / out auto",
-    desc: "Check-in express via WhatsApp, cle digitale, early/late check-in et check-out simplifie",
+    desc: "Check-in express via WhatsApp, clé digitale, early/late check-in et check-out simplifié",
   },
   {
     icon: Sparkles,
     title: "Services spa",
-    desc: "Reservation massages, soins et acces piscine, sauna, hammam directement par message",
+    desc: "Réservation massages, soins et accès piscine, sauna, hammam directement par message",
   },
   {
     icon: UtensilsCrossed,
     title: "Restaurant & room service",
-    desc: "Reservation restaurant, room service 24/7, menus speciaux et dietary requirements",
+    desc: "Réservation restaurant, room service 24/7, menus spéciaux et dietary requirements",
   },
   {
     icon: Headphones,
     title: "Conciergerie IA",
-    desc: "Service concierge 24/7 : reservations, transport, shopping, celebrations, baby-sitting",
+    desc: "Service concierge 24/7 : réservations, transport, shopping, célébrations, baby-sitting",
   },
   {
     icon: Users,
-    title: "Groupes & evenements",
-    desc: "Seminaires, mariages, groupes touristiques : devis personnalise et coordination complete",
+    title: "Groupes & événements",
+    desc: "Séminaires, mariages, groupes touristiques : devis personnalisé et coordination complète",
   },
 ];
 
 const suggestedPhrases = [
-  "Je veux reserver une suite pour 2 nuits",
+  "Je veux réserver une suite pour 2 nuits",
   "Quels types de chambres avez-vous ?",
-  "Reservez-moi un massage relaxant",
-  "A quelle heure est le check-in ?",
-  "Navette aeroport disponible ?",
+  "Réservez-moi un massage relaxant",
+  "À quelle heure est le check-in ?",
+  "Navette aéroport disponible ?",
   "Je voyage avec mon chien",
   "Menu du restaurant ce soir ?",
-  "Devis pour un seminaire 50 personnes",
+  "Devis pour un séminaire 50 personnes",
 ];
 
 export default function HotelDemoPage() {
@@ -120,7 +120,7 @@ export default function HotelDemoPage() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium">
               <Hotel size={14} />
-              Hotellerie
+              Hôtellerie
             </div>
           </div>
 
@@ -131,11 +131,11 @@ export default function HotelDemoPage() {
               style={{ fontFamily: "Onest, sans-serif" }}
             >
               Agent IA pour{" "}
-              <span className="text-gradient-wa">hotels et residences</span>
+              <span className="text-gradient-wa">hôtels et résidences</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">
-              Automatisez reservations, check-in et conciergerie.
-              Votre assistant hotelier IA disponible 24h/24 sur WhatsApp.
+              Automatisez réservations, check-in et conciergerie.
+              Votre assistant hôtelier IA disponible 24h/24 sur WhatsApp.
             </p>
           </div>
 
@@ -175,11 +175,11 @@ export default function HotelDemoPage() {
                   className="text-xl font-bold text-white mb-3"
                   style={{ fontFamily: "Onest, sans-serif" }}
                 >
-                  Votre hotel merite mieux
+                  Votre hôtel mérite mieux
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Reservez un audit gratuit de 30 min. On vous montre l&apos;agent
-                  configure avec VOS chambres et VOTRE marque.
+                  Réservez un audit gratuit de 30 min. On vous montre l&apos;agent
+                  configuré avec VOS chambres et VOTRE marque.
                 </p>
                 <a
                   href={process.env.NEXT_PUBLIC_CAL_LINK || "/fr/contact"}
@@ -188,7 +188,7 @@ export default function HotelDemoPage() {
                   className="inline-flex items-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 glow-wa"
                 >
                   <Zap size={18} />
-                  Audit gratuit hotellerie
+                  Audit gratuit hôtellerie
                 </a>
               </div>
             </div>
@@ -200,18 +200,18 @@ export default function HotelDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites sectorielles
+            Fonctionnalités sectorielles
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
-            Tout ce dont un hotel a besoin...{" "}
-            <span className="text-gradient-wa">automatise</span>
+            Tout ce dont un hôtel a besoin...{" "}
+            <span className="text-gradient-wa">automatisé</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            De la reservation au check-out, l&apos;agent gere
-            chaque etape de l&apos;experience client hoteliere.
+            De la réservation au check-out, l&apos;agent gère
+            chaque étape de l&apos;expérience client hôtelière.
           </p>
         </div>
 
@@ -246,11 +246,11 @@ export default function HotelDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a transformer votre hotel ?
+              Prêt à transformer votre hôtel ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Vos chambres et services importes automatiquement.
-              Formation equipe incluse.
+              Setup en 48h. Vos chambres et services importés automatiquement.
+              Formation équipe incluse.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -260,7 +260,7 @@ export default function HotelDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -269,7 +269,7 @@ export default function HotelDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

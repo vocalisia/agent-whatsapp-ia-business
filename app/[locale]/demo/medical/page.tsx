@@ -15,9 +15,9 @@ import {
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
-    title: "Agent IA WhatsApp pour Cabinets Medicaux | Demo Interactive MediAssist",
+    title: "Agent IA WhatsApp pour Cabinets Médicaux | Demo Interactive MediAssist",
     description:
-      "Testez notre agent IA WhatsApp specialise medical : prise de RDV automatique, rappels patients, renouvellement ordonnance, teleconsultation, suivi traitement et triage urgences.",
+      "Testez notre agent IA WhatsApp spécialisé médical : prise de RDV automatique, rappels patients, renouvellement ordonnance, téléconsultation, suivi traitement et triage urgences.",
   },
   en: {
     title: "WhatsApp AI Agent for Medical Practices | Interactive Demo MediAssist",
@@ -50,7 +50,7 @@ const capabilities = [
   {
     icon: Calendar,
     title: "Prise de RDV automatique",
-    desc: "Reservation en ligne 24/7 par specialite, creneaux en temps reel et confirmation instantanee",
+    desc: "Réservation en ligne 24/7 par spécialité, créneaux en temps réel et confirmation instantanée",
   },
   {
     icon: Bell,
@@ -60,34 +60,34 @@ const capabilities = [
   {
     icon: FileText,
     title: "Renouvellement ordonnance",
-    desc: "Demande de renouvellement en ligne, validation medecin sous 24-48h, envoi pharmacie",
+    desc: "Demande de renouvellement en ligne, validation médecin sous 24-48h, envoi pharmacie",
   },
   {
     icon: Video,
-    title: "Teleconsultation",
-    desc: "Consultation video securisee avec lien WhatsApp, ordonnance et compte-rendu post-consult",
+    title: "Téléconsultation",
+    desc: "Consultation vidéo sécurisée avec lien WhatsApp, ordonnance et compte-rendu post-consult",
   },
   {
     icon: Pill,
     title: "Suivi traitement",
-    desc: "Rappels medicaments, suivi observance, alertes controles periodiques et effets secondaires",
+    desc: "Rappels médicaments, suivi observance, alertes contrôles périodiques et effets secondaires",
   },
   {
     icon: AlertTriangle,
     title: "Triage urgences",
-    desc: "Evaluation IA des symptomes, redirection SAMU/15 si urgence vitale, medecin de garde",
+    desc: "Évaluation IA des symptômes, redirection SAMU/15 si urgence vitale, médecin de garde",
   },
 ];
 
 const suggestedPhrases = [
   "Je veux prendre rendez-vous",
   "Renouveler mon ordonnance",
-  "Mes resultats d'analyses",
-  "Je veux une teleconsultation",
-  "Rappel de mes medicaments",
-  "Envoyer une photo de symptome",
+  "Mes résultats d'analyses",
+  "Je veux une téléconsultation",
+  "Rappel de mes médicaments",
+  "Envoyer une photo de symptôme",
   "Horaires du cabinet",
-  "J'ai besoin d'un certificat medical",
+  "J'ai besoin d'un certificat médical",
 ];
 
 export default function MedicalDemoPage() {
@@ -120,7 +120,7 @@ export default function MedicalDemoPage() {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-wa/10 border border-wa/20 rounded-full px-4 py-1.5 text-wa text-sm font-medium">
               <Stethoscope size={14} />
-              Medical
+              Médical
             </div>
           </div>
 
@@ -131,11 +131,11 @@ export default function MedicalDemoPage() {
               style={{ fontFamily: "Onest, sans-serif" }}
             >
               Agent IA pour{" "}
-              <span className="text-gradient-wa">cabinets medicaux</span>
+              <span className="text-gradient-wa">cabinets médicaux</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">
-              Prise de RDV, rappels patients, ordonnances, teleconsultation et
-              triage urgences — votre assistant medical disponible 24/7 sur
+              Prise de RDV, rappels patients, ordonnances, téléconsultation et
+              triage urgences — votre assistant médical disponible 24/7 sur
               WhatsApp.
             </p>
           </div>
@@ -179,8 +179,8 @@ export default function MedicalDemoPage() {
                   Automatisez votre accueil patient
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Reservez un audit gratuit de 30 min et decouvrez comment
-                  l&apos;agent gere RDV, ordonnances et rappels pour VOTRE
+                  Réservez un audit gratuit de 30 min et découvrez comment
+                  l&apos;agent gère RDV, ordonnances et rappels pour VOTRE
                   cabinet.
                 </p>
                 <a
@@ -202,18 +202,18 @@ export default function MedicalDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites medical
+            Fonctionnalités médical
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             Tout ce qu&apos;un agent IA peut faire{" "}
-            <span className="text-gradient-wa">pour le medical</span>
+            <span className="text-gradient-wa">pour le médical</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
             De la prise de rendez-vous au triage des urgences, votre agent
-            WhatsApp gere les demandes patients les plus courantes en autonomie.
+            WhatsApp gère les demandes patients les plus courantes en autonomie.
           </p>
         </div>
 
@@ -248,10 +248,10 @@ export default function MedicalDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a transformer votre cabinet medical ?
+              Prêt à transformer votre cabinet médical ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Formation incluse. Conforme RGPD et secret medical.
+              Setup en 48h. Formation incluse. Conforme RGPD et secret médical.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -261,7 +261,7 @@ export default function MedicalDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -270,7 +270,7 @@ export default function MedicalDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

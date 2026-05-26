@@ -16,7 +16,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
     title: "Agent IA WhatsApp Immobilier | Demo interactive ImmoPrestige",
     description:
-      "Testez notre agent IA WhatsApp pour agences immobilieres. Recherche de biens, estimation IA, prise de visite automatique, simulation credit, suivi transaction.",
+      "Testez notre agent IA WhatsApp pour agences immobilières. Recherche de biens, estimation IA, prise de visite automatique, simulation crédit, suivi transaction.",
   },
   en: {
     title: "Real Estate WhatsApp AI Agent | Interactive Demo",
@@ -49,17 +49,17 @@ const capabilities = [
   {
     icon: Home,
     title: "Recherche intelligente",
-    desc: "Trouve le bien ideal selon budget, surface, localisation et criteres personnalises",
+    desc: "Trouve le bien idéal selon budget, surface, localisation et critères personnalisés",
   },
   {
     icon: Camera,
     title: "Analyse photo biens",
-    desc: "Vision IA : estime surface, etat, materiaux et potentiel d'un bien en photo",
+    desc: "Vision IA : estime surface, état, matériaux et potentiel d'un bien en photo",
   },
   {
     icon: TrendingUp,
     title: "Estimation IA",
-    desc: "Prix au m2 en temps reel, transactions comparables, tendances du marche local",
+    desc: "Prix au m² en temps réel, transactions comparables, tendances du marché local",
   },
   {
     icon: Calendar,
@@ -68,22 +68,22 @@ const capabilities = [
   },
   {
     icon: Calculator,
-    title: "Simulation credit",
-    desc: "Calcul de mensualites, taux, apport et mise en relation avec banques partenaires",
+    title: "Simulation crédit",
+    desc: "Calcul de mensualités, taux, apport et mise en relation avec banques partenaires",
   },
   {
     icon: FileSearch,
     title: "Suivi transaction",
-    desc: "Suivi en temps reel du dossier : offre, compromis, pret, acte authentique",
+    desc: "Suivi en temps réel du dossier : offre, compromis, prêt, acte authentique",
   },
 ];
 
 const suggestedPhrases = [
-  "Je cherche un appartement 3 pieces a Paris",
+  "Je cherche un appartement 3 pièces à Paris",
   "Combien vaut mon bien ?",
   "Quels biens sont disponibles ?",
   "Je veux planifier une visite",
-  "Simuler un credit de 300 000 EUR",
+  "Simuler un crédit de 300 000 EUR",
   "Quels documents pour acheter ?",
   "Quel est le DPE du bien ?",
   "Quels sont les frais de notaire ?",
@@ -130,7 +130,7 @@ export default function ImmobilierDemoPage() {
               style={{ fontFamily: "Onest, sans-serif" }}
             >
               Agent IA pour{" "}
-              <span className="text-gradient-wa">agences immobilieres</span>
+              <span className="text-gradient-wa">agences immobilières</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">
               Automatisez la qualification, les visites et le suivi client.
@@ -174,11 +174,11 @@ export default function ImmobilierDemoPage() {
                   className="text-xl font-bold text-white mb-3"
                   style={{ fontFamily: "Onest, sans-serif" }}
                 >
-                  Votre agence merite mieux
+                  Votre agence mérite mieux
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Reservez un audit gratuit de 30 min. On vous montre l&apos;agent
-                  configure avec VOS biens et VOTRE marque.
+                  Réservez un audit gratuit de 30 min. On vous montre l&apos;agent
+                  configuré avec VOS biens et VOTRE marque.
                 </p>
                 <a
                   href={process.env.NEXT_PUBLIC_CAL_LINK || "/fr/contact"}
@@ -199,18 +199,18 @@ export default function ImmobilierDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites sectorielles
+            Fonctionnalités sectorielles
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             Tout ce dont une agence a besoin...{" "}
-            <span className="text-gradient-wa">automatise</span>
+            <span className="text-gradient-wa">automatisé</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            De la recherche de biens au suivi de transaction, l&apos;agent gere
-            chaque etape du parcours client immobilier.
+            De la recherche de biens au suivi de transaction, l&apos;agent gère
+            chaque étape du parcours client immobilier.
           </p>
         </div>
 
@@ -245,11 +245,11 @@ export default function ImmobilierDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a transformer votre agence ?
+              Prêt à transformer votre agence ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Vos biens importes automatiquement.
-              Formation equipe incluse.
+              Setup en 48h. Vos biens importés automatiquement.
+              Formation équipe incluse.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -259,7 +259,7 @@ export default function ImmobilierDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -268,7 +268,7 @@ export default function ImmobilierDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

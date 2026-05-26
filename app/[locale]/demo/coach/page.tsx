@@ -16,7 +16,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
     title: "Demo Coaching | Agent IA WhatsApp pour coachs et formateurs",
     description:
-      "Testez notre agent IA WhatsApp specialise coaching. Prise de RDV automatique, seance decouverte, suivi inter-seances, envoi de ressources et analyse vocale.",
+      "Testez notre agent IA WhatsApp spécialisé coaching. Prise de RDV automatique, séance découverte, suivi inter-séances, envoi de ressources et analyse vocale.",
   },
   en: {
     title: "Coaching Demo | WhatsApp AI Agent for coaches and trainers",
@@ -49,27 +49,27 @@ const capabilities = [
   {
     icon: Calendar,
     title: "Prise de RDV auto",
-    desc: "Reserve les seances et envoie des rappels automatiquement",
+    desc: "Réserve les séances et envoie des rappels automatiquement",
   },
   {
     icon: Sparkles,
-    title: "Seance decouverte",
-    desc: "Qualifie le prospect et propose un creneau d'essai gratuit",
+    title: "Séance découverte",
+    desc: "Qualifie le prospect et propose un créneau d'essai gratuit",
   },
   {
     icon: ClipboardCheck,
-    title: "Suivi inter-seances",
+    title: "Suivi inter-séances",
     desc: "Check-ins hebdomadaires, rappels d'actions et points d'avancement",
   },
   {
     icon: BookOpen,
     title: "Envoi ressources",
-    desc: "Fiches pratiques, exercices et templates envoyes au bon moment",
+    desc: "Fiches pratiques, exercices et templates envoyés au bon moment",
   },
   {
     icon: Star,
-    title: "Temoignages",
-    desc: "Partage les resultats clients et cas de succes automatiquement",
+    title: "Témoignages",
+    desc: "Partage les résultats clients et cas de succès automatiquement",
   },
   {
     icon: Mic,
@@ -81,12 +81,12 @@ const capabilities = [
 const suggestedPhrases = [
   "Bonjour, quels sont vos programmes ?",
   "Je cherche un coaching individuel",
-  "Combien ca coute ?",
-  "Je veux reserver une seance decouverte",
-  "Avez-vous des temoignages ?",
-  "Comment fonctionne votre methode ?",
+  "Combien ça coûte ?",
+  "Je veux réserver une séance découverte",
+  "Avez-vous des témoignages ?",
+  "Comment fonctionne votre méthode ?",
   "Je peux envoyer un vocal ?",
-  "Quels sont vos disponibilites ?",
+  "Quelles sont vos disponibilités ?",
 ];
 
 export default function CoachDemoPage() {
@@ -174,11 +174,11 @@ export default function CoachDemoPage() {
                   className="text-xl font-bold text-white mb-3"
                   style={{ fontFamily: "Onest, sans-serif" }}
                 >
-                  Vous etes coach ou formateur ?
+                  Vous êtes coach ou formateur ?
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Decouvrez comment automatiser 80% de vos interactions clients
-                  avec un agent IA personnalise.
+                  Découvrez comment automatiser 80% de vos interactions clients
+                  avec un agent IA personnalisé.
                 </p>
                 <a
                   href={process.env.NEXT_PUBLIC_CAL_LINK || "/fr/contact"}
@@ -199,17 +199,17 @@ export default function CoachDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites coaching
+            Fonctionnalités coaching
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             Tout ce dont un coach a besoin...{" "}
-            <span className="text-gradient-wa">automatise</span>
+            <span className="text-gradient-wa">automatisé</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            L&apos;agent gere vos prospects, vos seances et votre suivi client
+            L&apos;agent gère vos prospects, vos séances et votre suivi client
             pendant que vous vous concentrez sur l&apos;accompagnement.
           </p>
         </div>
@@ -245,7 +245,7 @@ export default function CoachDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a automatiser votre pratique de coaching ?
+              Prêt à automatiser votre pratique de coaching ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
               Setup en 48h. Formation incluse. Sans engagement.
@@ -258,7 +258,7 @@ export default function CoachDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -267,7 +267,7 @@ export default function CoachDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

@@ -17,7 +17,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
     title: "Agent IA WhatsApp pour Assurances | Demo Interactive AssurPlus",
     description:
-      "Testez notre agent IA WhatsApp specialise assurance : declaration sinistre, analyse photo degats, suivi dossier, devis instantane, attestations et assistance 24/7.",
+      "Testez notre agent IA WhatsApp spécialisé assurance : déclaration sinistre, analyse photo dégâts, suivi dossier, devis instantané, attestations et assistance 24/7.",
   },
   en: {
     title: "WhatsApp AI Agent for Insurance | Interactive Demo AssurPlus",
@@ -49,44 +49,44 @@ export async function generateMetadata({
 const capabilities = [
   {
     icon: FileText,
-    title: "Declaration sinistre",
-    desc: "Guidage etape par etape pour declarer tout type de sinistre en quelques minutes",
+    title: "Déclaration sinistre",
+    desc: "Guidage étape par étape pour déclarer tout type de sinistre en quelques minutes",
   },
   {
     icon: Camera,
-    title: "Analyse photo degats",
-    desc: "IA vision qui detecte le type de degat, estime la gravite et le cout de reparation",
+    title: "Analyse photo dégâts",
+    desc: "IA vision qui détecte le type de dégât, estime la gravité et le coût de réparation",
   },
   {
     icon: Search,
     title: "Suivi dossier",
-    desc: "Etat en temps reel de vos dossiers sinistres, RDV experts et remboursements",
+    desc: "État en temps réel de vos dossiers sinistres, RDV experts et remboursements",
   },
   {
     icon: Calculator,
-    title: "Devis instantane",
-    desc: "Tarif personnalise auto, habitation, sante ou pro calcule en 2 minutes",
+    title: "Devis instantané",
+    desc: "Tarif personnalisé auto, habitation, santé ou pro calculé en 2 minutes",
   },
   {
     icon: Car,
     title: "Attestations auto",
-    desc: "Carte verte, attestation vehicule et documents generes et envoyes automatiquement",
+    desc: "Carte verte, attestation véhicule et documents générés et envoyés automatiquement",
   },
   {
     icon: Phone,
     title: "Assistance 24/7",
-    desc: "Depannage, remorquage, urgence habitation et rapatriement a toute heure",
+    desc: "Dépannage, remorquage, urgence habitation et rapatriement à toute heure",
   },
 ];
 
 const suggestedPhrases = [
-  "Je veux declarer un sinistre",
-  "Envoyez une photo de degats",
-  "Ou en est mon dossier ?",
+  "Je veux déclarer un sinistre",
+  "Envoyez une photo de dégâts",
+  "Où en est mon dossier ?",
   "Je veux un devis auto",
   "Envoyez-moi ma carte verte",
   "C'est quoi ma franchise ?",
-  "Je veux resilier mon contrat",
+  "Je veux résilier mon contrat",
   "J'ai besoin d'une assistance urgente",
 ];
 
@@ -134,8 +134,8 @@ export default function AssuranceDemoPage() {
               <span className="text-gradient-wa">compagnies d&apos;assurance</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">
-              Declaration sinistre, analyse photo, suivi dossier, devis
-              instantane — votre assistant assurance disponible 24/7 sur
+              Déclaration sinistre, analyse photo, suivi dossier, devis
+              instantané — votre assistant assurance disponible 24/7 sur
               WhatsApp.
             </p>
           </div>
@@ -179,8 +179,8 @@ export default function AssuranceDemoPage() {
                   Automatisez votre service client assurance
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Reservez un audit gratuit de 30 min et decouvrez comment
-                  l&apos;agent gere sinistres, devis et attestations pour VOTRE
+                  Réservez un audit gratuit de 30 min et découvrez comment
+                  l&apos;agent gère sinistres, devis et attestations pour VOTRE
                   compagnie.
                 </p>
                 <a
@@ -202,7 +202,7 @@ export default function AssuranceDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites assurance
+            Fonctionnalités assurance
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
@@ -212,8 +212,8 @@ export default function AssuranceDemoPage() {
             <span className="text-gradient-wa">pour l&apos;assurance</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            De la declaration de sinistre a l&apos;assistance d&apos;urgence, votre
-            agent WhatsApp gere les demandes les plus courantes en autonomie.
+            De la déclaration de sinistre à l&apos;assistance d&apos;urgence, votre
+            agent WhatsApp gère les demandes les plus courantes en autonomie.
           </p>
         </div>
 
@@ -248,10 +248,10 @@ export default function AssuranceDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a transformer votre service client assurance ?
+              Prêt à transformer votre service client assurance ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Formation incluse. Conforme RGPD et reglementations
+              Setup en 48h. Formation incluse. Conforme RGPD et réglementations
               assurance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -262,7 +262,7 @@ export default function AssuranceDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -271,7 +271,7 @@ export default function AssuranceDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

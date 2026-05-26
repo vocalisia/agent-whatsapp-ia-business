@@ -17,7 +17,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
     title: "Agent IA WhatsApp Restaurant | Demo interactive Le Gourmet IA",
     description:
-      "Testez notre agent IA WhatsApp pour restaurants et traiteurs. Reservation automatique, menu du jour, commande a emporter, allergenes, carte des vins, evenements prives.",
+      "Testez notre agent IA WhatsApp pour restaurants et traiteurs. Réservation automatique, menu du jour, commande à emporter, allergènes, carte des vins, événements privés.",
   },
   en: {
     title: "Restaurant WhatsApp AI Agent | Interactive Demo",
@@ -49,45 +49,45 @@ export async function generateMetadata({
 const capabilities = [
   {
     icon: Calendar,
-    title: "Reservation automatique",
-    desc: "Gestion des tables en temps reel, confirmations et rappels WhatsApp automatiques",
+    title: "Réservation automatique",
+    desc: "Gestion des tables en temps réel, confirmations et rappels WhatsApp automatiques",
   },
   {
     icon: BookOpen,
     title: "Menu du jour",
-    desc: "Carte mise a jour quotidiennement, suggestions du chef et formules du moment",
+    desc: "Carte mise à jour quotidiennement, suggestions du chef et formules du moment",
   },
   {
     icon: AlertTriangle,
-    title: "Allergenes & regimes",
-    desc: "14 allergenes identifies, options sans gluten, vegan et adaptations sur demande",
+    title: "Allergènes & régimes",
+    desc: "14 allergènes identifiés, options sans gluten, vegan et adaptations sur demande",
   },
   {
     icon: ShoppingBag,
-    title: "Commande a emporter",
+    title: "Commande à emporter",
     desc: "Click & collect, livraison directe ou via Uber Eats, Deliveroo, Just Eat",
   },
   {
     icon: PartyPopper,
-    title: "Evenements prives",
-    desc: "Salons privatises, menu sur mesure par le Chef, devis automatique en 24h",
+    title: "Événements privés",
+    desc: "Salons privatisés, menu sur mesure par le Chef, devis automatique en 24h",
   },
   {
     icon: Star,
     title: "Avis clients",
-    desc: "Collecte automatique d'avis Google, programme fidelite et suivi satisfaction",
+    desc: "Collecte automatique d'avis Google, programme fidélité et suivi satisfaction",
   },
 ];
 
 const suggestedPhrases = [
-  "Je voudrais reserver pour samedi soir",
+  "Je voudrais réserver pour samedi soir",
   "Quel est le menu du jour ?",
   "Avez-vous des options sans gluten ?",
-  "Je veux commander a emporter",
-  "Organisez-vous des evenements prives ?",
+  "Je veux commander à emporter",
+  "Organisez-vous des événements privés ?",
   "Montrez-moi la carte des vins",
   "Quels sont vos horaires ?",
-  "Comment fonctionne le programme fidelite ?",
+  "Comment fonctionne le programme fidélité ?",
 ];
 
 export default function RestaurantDemoPage() {
@@ -134,8 +134,8 @@ export default function RestaurantDemoPage() {
               <span className="text-gradient-wa">restaurants et traiteurs</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">
-              Automatisez les reservations, la carte et les commandes.
-              Votre maitre d&apos;hotel IA disponible 24h/24 sur WhatsApp.
+              Automatisez les réservations, la carte et les commandes.
+              Votre maître d&apos;hôtel IA disponible 24h/24 sur WhatsApp.
             </p>
           </div>
 
@@ -175,11 +175,11 @@ export default function RestaurantDemoPage() {
                   className="text-xl font-bold text-white mb-3"
                   style={{ fontFamily: "Onest, sans-serif" }}
                 >
-                  Votre restaurant merite mieux
+                  Votre restaurant mérite mieux
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Reservez un audit gratuit de 30 min. On vous montre l&apos;agent
-                  configure avec VOTRE carte et VOTRE marque.
+                  Réservez un audit gratuit de 30 min. On vous montre l&apos;agent
+                  configuré avec VOTRE carte et VOTRE marque.
                 </p>
                 <a
                   href={process.env.NEXT_PUBLIC_CAL_LINK || "/fr/contact"}
@@ -200,17 +200,17 @@ export default function RestaurantDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites sectorielles
+            Fonctionnalités sectorielles
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             Tout ce dont un restaurant a besoin...{" "}
-            <span className="text-gradient-wa">automatise</span>
+            <span className="text-gradient-wa">automatisé</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            De la reservation a la fidelisation, l&apos;agent gere chaque
+            De la réservation à la fidélisation, l&apos;agent gère chaque
             interaction client de votre restaurant.
           </p>
         </div>
@@ -246,11 +246,11 @@ export default function RestaurantDemoPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "Onest, sans-serif" }}
             >
-              Pret a transformer votre restaurant ?
+              Prêt à transformer votre restaurant ?
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Setup en 48h. Votre carte importee automatiquement.
-              Formation equipe incluse.
+              Setup en 48h. Votre carte importée automatiquement.
+              Formation équipe incluse.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -260,7 +260,7 @@ export default function RestaurantDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -269,7 +269,7 @@ export default function RestaurantDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>

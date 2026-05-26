@@ -16,7 +16,7 @@ const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
     title: "Demo Automobile | Agent IA WhatsApp pour concessions auto",
     description:
-      "Testez notre agent IA WhatsApp specialise automobile. Recherche vehicule, essai routier, estimation reprise, financement IA et entretien planifie.",
+      "Testez notre agent IA WhatsApp spécialisé automobile. Recherche véhicule, essai routier, estimation reprise, financement IA et entretien planifié.",
   },
   en: {
     title: "Automobile Demo | WhatsApp AI Agent for car dealerships",
@@ -48,33 +48,33 @@ export async function generateMetadata({
 const capabilities = [
   {
     icon: Car,
-    title: "Recherche vehicule",
-    desc: "Trouvez le vehicule ideal parmi notre stock neuf et occasion, filtre par criteres IA",
+    title: "Recherche véhicule",
+    desc: "Trouvez le véhicule idéal parmi notre stock neuf et occasion, filtré par critères IA",
   },
   {
     icon: Calendar,
     title: "Essai route auto",
-    desc: "Reservation d'essai routier en 1 clic, choix du modele et du creneau via WhatsApp",
+    desc: "Réservation d'essai routier en 1 clic, choix du modèle et du créneau via WhatsApp",
   },
   {
     icon: TrendingDown,
     title: "Estimation reprise",
-    desc: "Estimation instantanee de votre vehicule par IA, prix garanti 7 jours",
+    desc: "Estimation instantanée de votre véhicule par IA, prix garanti 7 jours",
   },
   {
     icon: Calculator,
     title: "Financement IA",
-    desc: "Simulation credit, LOA et LLD personnalisee avec nos partenaires bancaires",
+    desc: "Simulation crédit, LOA et LLD personnalisée avec nos partenaires bancaires",
   },
   {
     icon: Wrench,
-    title: "Entretien planifie",
-    desc: "Reservation atelier, rappels automatiques et suivi d'entretien de votre vehicule",
+    title: "Entretien planifié",
+    desc: "Réservation atelier, rappels automatiques et suivi d'entretien de votre véhicule",
   },
   {
     icon: Camera,
     title: "Analyse photo",
-    desc: "Envoyez une photo de votre vehicule pour une estimation IA des degats et de la valeur",
+    desc: "Envoyez une photo de votre véhicule pour une estimation IA des dégâts et de la valeur",
   },
 ];
 
@@ -122,8 +122,8 @@ export default function AutomobileDemoPage() {
               <span className="text-gradient-wa">concessions automobiles</span>
             </h1>
             <p className="text-lg text-slate-400 max-w-xl mx-auto">
-              Automatisez votre concession sur WhatsApp. Recherche vehicule,
-              essais, financement, reprise, entretien — tout est gere par
+              Automatisez votre concession sur WhatsApp. Recherche véhicule,
+              essais, financement, reprise, entretien — tout est géré par
               l&apos;IA.
             </p>
           </div>
@@ -148,14 +148,14 @@ export default function AutomobileDemoPage() {
                 </h3>
                 <div className="space-y-2">
                   {[
-                    "Je cherche un SUV electrique",
-                    "Reserver un essai routier",
+                    "Je cherche un SUV électrique",
+                    "Réserver un essai routier",
                     "Combien vaut ma voiture en reprise ?",
                     "Simuler un financement LOA",
-                    "Prendre RDV pour une revision",
+                    "Prendre RDV pour une révision",
                     "Analysez la photo de ma voiture",
                     "Quelles promotions en ce moment ?",
-                    "Mon controle technique arrive a echeance",
+                    "Mon contrôle technique arrive à échéance",
                   ].map((phrase) => (
                     <div
                       key={phrase}
@@ -176,7 +176,7 @@ export default function AutomobileDemoPage() {
                   Boostez votre concession
                 </h3>
                 <p className="text-sm text-slate-400 mb-5">
-                  Augmentez vos prises d&apos;essai de 60% et reduisez 80% des
+                  Augmentez vos prises d&apos;essai de 60% et réduisez 80% des
                   appels entrants avec notre agent IA automobile.
                 </p>
                 <a
@@ -198,18 +198,18 @@ export default function AutomobileDemoPage() {
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <span className="inline-block text-wa text-sm font-semibold uppercase tracking-wider mb-3">
-            Fonctionnalites automobile
+            Fonctionnalités automobile
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold text-white mb-4"
             style={{ fontFamily: "Onest, sans-serif" }}
           >
             Tout ce dont votre concession a besoin...{" "}
-            <span className="text-gradient-wa">automatise</span>
+            <span className="text-gradient-wa">automatisé</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            L&apos;agent s&apos;integre a votre DMS, votre stock et votre CRM
-            pour offrir une experience client fluide et personnalisee.
+            L&apos;agent s&apos;intègre à votre DMS, votre stock et votre CRM
+            pour offrir une expérience client fluide et personnalisée.
           </p>
         </div>
 
@@ -247,7 +247,7 @@ export default function AutomobileDemoPage() {
               Transformez votre concession automobile
             </h2>
             <p className="text-slate-400 text-lg mb-8 max-w-xl mx-auto">
-              Integration en 48h avec votre DMS et CRM. Formation incluse.
+              Intégration en 48h avec votre DMS et CRM. Formation incluse.
               Sans engagement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -258,7 +258,7 @@ export default function AutomobileDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-lg"
               >
                 <Zap size={20} />
-                Reserver mon audit gratuit
+                Réserver mon audit gratuit
               </a>
               <a
                 href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222"}`}
@@ -267,7 +267,7 @@ export default function AutomobileDemoPage() {
                 className="inline-flex items-center justify-center gap-2 bg-surface-2 border border-surface-3 hover:border-wa/50 text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 text-lg"
               >
                 <MessageCircle size={20} className="text-wa" />
-                Nous ecrire sur WhatsApp
+                Nous écrire sur WhatsApp
               </a>
             </div>
           </div>
