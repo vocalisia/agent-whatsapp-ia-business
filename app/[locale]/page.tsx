@@ -99,11 +99,14 @@ const organizationJsonLd = {
 const softwareAppJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "AgenticWhatsup",
+  "@id": "https://agentic-whatsup.com/#app",
+  "name": "Agentic WhatsApp",
   "url": "https://agentic-whatsup.com",
   "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "CustomerServiceApplication",
   "operatingSystem": "Web",
-  "description": "WhatsApp AI agent that understands voice messages & analyzes photos. Automate customer conversations 24/7 with real AI. Deploy in 14 days.",
+  "description": "Agent IA pour WhatsApp Business — automatisation des réponses et qualification de leads",
+  "inLanguage": ["fr", "en", "de", "nl"],
   "featureList": [
     "Voice message understanding",
     "Photo analysis",
@@ -111,7 +114,10 @@ const softwareAppJsonLd = {
     "Appointment booking",
     "24/7 automation",
     "Multilingual support (FR, EN, DE, NL)"
-  ]
+  ],
+  "publisher": {
+    "@id": "https://agentic-whatsup.com/#organization"
+  }
 };
 
 const aggregateRatingJsonLd = {

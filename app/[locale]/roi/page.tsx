@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { TrendingUp, DollarSign, Target, Euro, Zap, BarChart3 } from "lucide-react";
 import StrategyLanding, { type LandingCopy } from "@/components/landing/StrategyLanding";
 
@@ -301,6 +302,22 @@ function pick<T extends Record<Locale, unknown>>(map: T, locale: string): T[Loca
   return map[(locale as Locale) in map ? (locale as Locale) : "fr"];
 }
 
+function buildFaqJsonLd(locale: string) {
+  const copy = pick(COPY, locale);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": copy.faq.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a,
+      },
+    })),
+  };
+}
+
 export async function generateStaticParams() {
   return (["fr", "en", "de", "nl"] as const).map((locale) => ({ locale }));
 }
@@ -335,13 +352,21 @@ export default async function RoiLandingPage({
 }) {
   const { locale } = await params;
   const copy = pick(COPY, locale);
+  const faqJsonLd = buildFaqJsonLd(locale);
 
   return (
-    <StrategyLanding
-      copy={copy}
-      painIcons={[DollarSign, Target, Euro] as const}
-      valueIcons={[TrendingUp, Zap, BarChart3] as const}
-      accentTint="amber"
-    />
+    <>
+      <Script
+        id="jsonld-faq-roi"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <StrategyLanding
+        copy={copy}
+        painIcons={[DollarSign, Target, Euro] as const}
+        valueIcons={[TrendingUp, Zap, BarChart3] as const}
+        accentTint="amber"
+      />
+    </>
   );
 }
