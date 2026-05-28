@@ -336,13 +336,34 @@ export default async function SocialLandingPage({
 }) {
   const { locale } = await params;
   const copy = pick(COPY, locale);
+  const meta = pick(META, locale);
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/social`;
 
   return (
-    <StrategyLanding
-      copy={copy}
-      painIcons={[Users, Star, Trophy] as const}
-      valueIcons={[TrendingUp, Zap, Rocket] as const}
-      accentTint="indigo"
-    />
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": meta.title,
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": meta.title, "item": canonicalUrl },
+        ],
+      }) }} />
+      <StrategyLanding
+        copy={copy}
+        painIcons={[Users, Star, Trophy] as const}
+        valueIcons={[TrendingUp, Zap, Rocket] as const}
+        accentTint="indigo"
+      />
+    </>
   );
 }

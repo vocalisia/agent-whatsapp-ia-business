@@ -23,8 +23,27 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function MentionsLegalesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "legal" });
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/mentions-legales`;
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": t("title"),
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": t("title"), "item": canonicalUrl },
+        ],
+      }) }} />
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <h1
         className="text-3xl sm:text-4xl font-extrabold text-white mb-10"
@@ -115,5 +134,6 @@ export default async function MentionsLegalesPage({ params }: { params: Promise<
         </p>
       </div>
     </div>
+    </>
   );
 }

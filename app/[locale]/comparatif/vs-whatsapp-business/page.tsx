@@ -272,7 +272,29 @@ export default async function VsWhatsAppBusinessPage({ params }: { params: Promi
     })),
   } : null;
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/comparatif/vs-whatsapp-business`;
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": c.h1,
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": "Comparatif", "item": `https://agentic-whatsup.com/${locale}/comparatif` },
+          { "@type": "ListItem", "position": 3, "name": c.h1, "item": canonicalUrl },
+        ],
+      }) }} />
+      {faqLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />}
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-20">
       <Link href={`/${locale}/comparatif`} className="inline-flex items-center gap-1 text-slate-400 hover:text-wa text-sm mb-10 transition-colors">
         ← {c.back.replace("← ", "")}
@@ -369,5 +391,6 @@ export default async function VsWhatsAppBusinessPage({ params }: { params: Promi
         </div>
       </div>
     </div>
+    </>
   );
 }

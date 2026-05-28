@@ -354,7 +354,32 @@ export default async function AgentCommercialPage({ params }: { params: Promise<
     },
   };
 
+  const canonicalUrl = `https://agentic-whatsup.com/${l}/agent-commercial-whatsapp`;
+  const pageTitles: Record<string, string> = {
+    fr: "Agent Commercial IA WhatsApp 24/7 | AgenticWhatsup",
+    en: "WhatsApp AI Sales Agent 24/7 | AgenticWhatsup",
+    de: "WhatsApp KI-Verkaufsagent 24/7 | AgenticWhatsup",
+    nl: "WhatsApp AI Verkoopassistent 24/7 | AgenticWhatsup",
+  };
+  const pageTitle = pageTitles[l] ?? pageTitles.fr;
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${canonicalUrl}#service`,
+        "name": pageTitle,
+        "url": canonicalUrl,
+        "provider": { "@type": "Organization", "@id": "https://agentic-whatsup.com/#organization", "name": "AgenticWhatsup" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": pageTitle, "item": canonicalUrl },
+        ],
+      }) }} />
     <div className="bg-bg text-white">
 
       {/* ── HERO ── */}
@@ -687,5 +712,6 @@ export default async function AgentCommercialPage({ params }: { params: Promise<
         </div>
       </section>
     </div>
+    </>
   );
 }

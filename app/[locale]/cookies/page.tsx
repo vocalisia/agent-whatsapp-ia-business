@@ -80,8 +80,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function CookiesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const c = t[locale] ?? t.fr;
+  const m = meta[locale] ?? meta.fr;
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/cookies`;
 
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": m.title,
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": m.title, "item": canonicalUrl },
+        ],
+      }) }} />
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-2" style={{ fontFamily: "Onest, sans-serif" }}>
         {c.h1}
@@ -96,5 +116,6 @@ export default async function CookiesPage({ params }: { params: Promise<{ locale
         ))}
       </div>
     </div>
+    </>
   );
 }

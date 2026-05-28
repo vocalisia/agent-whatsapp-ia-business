@@ -306,6 +306,8 @@ export default async function VsManyChatPage({ params }: { params: Promise<{ loc
       "name": "AgenticWhatsup",
       "url": "https://agentic-whatsup.com",
     },
+    "datePublished": "2025-09-01",
+    "dateModified": "2026-05-27",
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl },
     "about": [
       { "@type": "SoftwareApplication", "name": "AgenticWhatsup", "url": "https://agentic-whatsup.com" },

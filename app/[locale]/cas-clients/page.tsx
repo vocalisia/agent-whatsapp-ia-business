@@ -472,63 +472,53 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
 
   const pageUrl = `https://agentic-whatsup.com/${locale}/cas-clients`;
   const pageMeta = meta[locale] ?? meta.fr;
-  const jsonLd = {
+  const webPageJsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${pageUrl}#webpage`,
-        name: pageMeta.title,
-        description: pageMeta.description,
-        url: pageUrl,
-        inLanguage: locale,
+    "@type": "WebPage",
+    "@id": `${pageUrl}#webpage`,
+    "name": pageMeta.title,
+    "description": pageMeta.description,
+    "url": pageUrl,
+    "inLanguage": locale,
+  };
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": c.casesTitle,
+    "itemListElement": c.cases.map((cas, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "Article",
+        "headline": `${cas.sector} — ${cas.company}`,
+        "description": cas.challenge,
+        "inLanguage": locale,
+        "author": { "@type": "Organization", "@id": "https://agentic-whatsup.com/#organization", "name": "AgenticWhatsup" },
+        "publisher": { "@type": "Organization", "@id": "https://agentic-whatsup.com/#organization", "name": "AgenticWhatsup" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+        "review": {
+          "@type": "Review",
+          "reviewRating": { "@type": "Rating", "ratingValue": 5, "bestRating": 5 },
+          "author": { "@type": "Person", "name": cas.author },
+          "reviewBody": cas.quote,
+        },
       },
-      {
-        "@type": "ItemList",
-        name: c.casesTitle,
-        itemListElement: c.cases.map((cas, i) => ({
-          "@type": "ListItem",
-          position: i + 1,
-          item: {
-            "@type": "Article",
-            headline: `${cas.sector} — ${cas.company}`,
-            description: cas.challenge,
-            inLanguage: locale,
-            author: {
-              "@type": "Organization",
-              "@id": "https://agentic-whatsup.com/#organization",
-              name: "AgenticWhatsup",
-              url: "https://agentic-whatsup.com",
-            },
-            publisher: {
-              "@type": "Organization",
-              "@id": "https://agentic-whatsup.com/#organization",
-              name: "AgenticWhatsup",
-              url: "https://agentic-whatsup.com",
-            },
-            mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
-            review: {
-              "@type": "Review",
-              reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
-              author: { "@type": "Person", name: cas.author },
-              reviewBody: cas.quote,
-            },
-          },
-        })),
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
-          { "@type": "ListItem", "position": 2, "name": c.casesTitle, "item": pageUrl },
-        ],
-      },
+    })),
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+      { "@type": "ListItem", "position": 2, "name": c.casesTitle, "item": pageUrl },
     ],
   };
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* Hero */}
       <div className="text-center mb-16">

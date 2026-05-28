@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Script from "next/script";
 import { TrendingUp, DollarSign, Target, Euro, Zap, BarChart3 } from "lucide-react";
 import StrategyLanding, { type LandingCopy } from "@/components/landing/StrategyLanding";
 
@@ -353,15 +352,30 @@ export default async function RoiLandingPage({
 }) {
   const { locale } = await params;
   const copy = pick(COPY, locale);
+  const meta = pick(META, locale);
   const faqJsonLd = buildFaqJsonLd(locale);
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/roi`;
 
   return (
     <>
-      <Script
-        id="jsonld-faq-roi"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": meta.title,
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": meta.title, "item": canonicalUrl },
+        ],
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <StrategyLanding
         copy={copy}
         painIcons={[DollarSign, Target, Euro] as const}

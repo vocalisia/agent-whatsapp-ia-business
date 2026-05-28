@@ -49,7 +49,26 @@ export default async function SecteursPage({ params }: { params: Promise<{ local
   const { locale } = await params;
   const heading = headings[locale] ?? headings.fr;
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/secteurs`;
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": heading.title,
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": heading.title, "item": canonicalUrl },
+        ],
+      }) }} />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
       <div className="text-center mb-14">
         <span className="inline-block bg-wa/10 text-wa text-xs font-semibold px-3 py-1 rounded-full mb-4">
@@ -92,5 +111,6 @@ export default async function SecteursPage({ params }: { params: Promise<{ local
         })}
       </div>
     </div>
+    </>
   );
 }

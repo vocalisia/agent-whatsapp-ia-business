@@ -129,108 +129,116 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@graph": [
+              "@type": "Organization",
+              "@id": "https://agentic-whatsup.com/#organization",
+              "name": "AgenticWhatsup",
+              "alternateName": "Agentic Whatsup",
+              "url": "https://agentic-whatsup.com",
+              "description": "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos de vos clients.",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://agentic-whatsup.com/icon.svg",
+                "width": 512,
+                "height": 512,
+              },
+              "image": "https://agentic-whatsup.com/og-image.jpg",
+              "email": "contact@agentic-whatsup.com",
+              "telephone": "+41799394222",
+              "foundingDate": "2025-08-15",
+              "founder": {
+                "@type": "Person",
+                "@id": "https://agentic-whatsup.com/fr/auteur/laurent-duplat#person",
+                "name": "Laurent Duplat",
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CH",
+                "addressLocality": "Genève",
+                "addressRegion": "Genève",
+              },
+              "areaServed": [
+                { "@type": "Country", "name": "France" },
+                { "@type": "Country", "name": "Switzerland" },
+                { "@type": "Country", "name": "Belgium" },
+                { "@type": "Country", "name": "Germany" },
+                { "@type": "Country", "name": "Netherlands" },
+                { "@type": "Country", "name": "Luxembourg" },
+              ],
+              "sameAs": [
+                "https://www.linkedin.com/company/agenticwhatsup",
+                "https://vocalis.pro",
+              ],
+              "contactPoint": [
                 {
-                  "@type": "Organization",
-                  "@id": "https://agentic-whatsup.com/#organization",
-                  name: "AgenticWhatsup",
-                  alternateName: "Agentic Whatsup",
-                  url: "https://agentic-whatsup.com",
-                  description: "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos de vos clients.",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://agentic-whatsup.com/icon.svg",
-                    width: 512,
-                    height: 512,
-                  },
-                  image: "https://agentic-whatsup.com/og-image.jpg",
-                  email: "contact@agentic-whatsup.com",
-                  telephone: "+41799394222",
-                  foundingDate: "2025-08-15",
-                  founder: {
-                    "@type": "Person",
-                    "@id": "https://agentic-whatsup.com/fr/auteur/laurent-duplat#person",
-                    name: "Laurent Duplat",
-                  },
-                  address: {
-                    "@type": "PostalAddress",
-                    addressCountry: "CH",
-                    addressLocality: "Genève",
-                    addressRegion: "Genève",
-                  },
-                  areaServed: [
-                    { "@type": "Country", name: "France" },
-                    { "@type": "Country", name: "Switzerland" },
-                    { "@type": "Country", name: "Belgium" },
-                    { "@type": "Country", name: "Germany" },
-                    { "@type": "Country", name: "Netherlands" },
-                    { "@type": "Country", name: "Luxembourg" },
-                  ],
-                  sameAs: [
-                    "https://www.linkedin.com/company/agenticwhatsup",
-                    "https://vocalis.pro",
-                  ],
-                  contactPoint: [
-                    {
-                      "@type": "ContactPoint",
-                      contactType: "customer support",
-                      telephone: "+41799394222",
-                      email: "contact@agentic-whatsup.com",
-                      availableLanguage: ["French", "English", "German", "Dutch"],
-                      areaServed: ["FR", "CH", "BE", "DE", "NL", "LU"],
-                    },
-                    {
-                      "@type": "ContactPoint",
-                      contactType: "sales",
-                      email: "contact@agentic-whatsup.com",
-                      availableLanguage: ["French", "English"],
-                    },
-                  ],
+                  "@type": "ContactPoint",
+                  "contactType": "customer support",
+                  "telephone": "+41799394222",
+                  "email": "contact@agentic-whatsup.com",
+                  "availableLanguage": ["French", "English", "German", "Dutch"],
+                  "areaServed": ["FR", "CH", "BE", "DE", "NL", "LU"],
                 },
                 {
-                  "@type": "SoftwareApplication",
-                  "@id": "https://agentic-whatsup.com/#app",
-                  name: "Agent IA WhatsApp",
-                  applicationCategory: "BusinessApplication",
-                  applicationSubCategory: "CustomerServiceApplication",
-                  operatingSystem: "WhatsApp Business",
-                  description: "Agent conversationnel IA pour WhatsApp Business avec vision IA et transcription vocale.",
-                  offers: {
-                    "@type": "Offer",
-                    availability: "https://schema.org/InStock",
-                    url: "https://agentic-whatsup.com/fr/contact",
-                  },
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: "4.9",
-                    bestRating: "5",
-                    worstRating: "1",
-                    ratingCount: "47",
-                    reviewCount: "12",
-                  },
-                  featureList: [
-                    "Vision IA pour analyse photos clients",
-                    "Transcription vocale temps réel (Whisper / GPT-4o Audio)",
-                    "Qualification automatique des leads 24/7",
-                    "Intégration CRM (HubSpot, Pipedrive, Make.com)",
-                    "Conformité RGPD by design",
-                    "Multilingue (FR, EN, DE, NL)",
-                  ],
-                  publisher: { "@id": "https://agentic-whatsup.com/#organization" },
-                },
-                {
-                  "@type": "WebSite",
-                  "@id": "https://agentic-whatsup.com/#website",
-                  url: "https://agentic-whatsup.com",
-                  name: "AgenticWhatsup",
-                  publisher: { "@id": "https://agentic-whatsup.com/#organization" },
-                  potentialAction: {
-                    "@type": "SearchAction",
-                    target: { "@type": "EntryPoint", urlTemplate: "https://agentic-whatsup.com/fr/blog?q={search_term_string}" },
-                    "query-input": "required name=search_term_string",
-                  },
+                  "@type": "ContactPoint",
+                  "contactType": "sales",
+                  "email": "contact@agentic-whatsup.com",
+                  "availableLanguage": ["French", "English"],
                 },
               ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "@id": "https://agentic-whatsup.com/#app",
+              "name": "Agent IA WhatsApp",
+              "applicationCategory": "BusinessApplication",
+              "applicationSubCategory": "CustomerServiceApplication",
+              "operatingSystem": "WhatsApp Business",
+              "description": "Agent conversationnel IA pour WhatsApp Business avec vision IA et transcription vocale.",
+              "offers": {
+                "@type": "Offer",
+                "availability": "https://schema.org/InStock",
+                "url": "https://agentic-whatsup.com/fr/contact",
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1",
+                "ratingCount": "47",
+                "reviewCount": "12",
+              },
+              "featureList": [
+                "Vision IA pour analyse photos clients",
+                "Transcription vocale temps réel (Whisper / GPT-4o Audio)",
+                "Qualification automatique des leads 24/7",
+                "Intégration CRM (HubSpot, Pipedrive, Make.com)",
+                "Conformité RGPD by design",
+                "Multilingue (FR, EN, DE, NL)",
+              ],
+              "publisher": { "@id": "https://agentic-whatsup.com/#organization" },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://agentic-whatsup.com/#website",
+              "url": "https://agentic-whatsup.com",
+              "name": "AgenticWhatsup",
+              "publisher": { "@id": "https://agentic-whatsup.com/#organization" },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": { "@type": "EntryPoint", "urlTemplate": "https://agentic-whatsup.com/fr/blog?q={search_term_string}" },
+                "query-input": "required name=search_term_string",
+              },
             }),
           }}
         />

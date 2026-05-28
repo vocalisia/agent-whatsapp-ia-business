@@ -50,6 +50,37 @@ export async function generateMetadata({
   };
 }
 
-export default function DemoPage() {
-  return <DemoPageClient />;
+export default async function DemoPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const base = 'https://agentic-whatsup.com';
+  const pageTitles: Record<string, string> = {
+    fr: 'Demo Agent IA WhatsApp — Testez l\'agent en direct',
+    en: 'WhatsApp AI Agent Demo — Test the agent live',
+    de: 'WhatsApp-KI-Agent Demo — Testen Sie den Agenten live',
+    nl: 'WhatsApp AI-Agent Demo — Test de agent live',
+  };
+  const pageTitle = pageTitles[locale] ?? pageTitles.fr;
+  const canonicalUrl = `${base}/${locale}/demo`;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": pageTitle,
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": pageTitle, "item": canonicalUrl },
+        ],
+      }) }} />
+      <DemoPageClient />
+    </>
+  );
 }

@@ -50,8 +50,28 @@ export default async function CampagnesWhatsAppPage({ params }: { params: Promis
   const useCasesData = t.raw("campagnes.useCases") as Array<{ title: string; desc: string }>;
   const useCases = useCasesData.map((uc, i) => ({ ...uc, icon: UC_ICONS[i % UC_ICONS.length] }));
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/services/campagnes-whatsapp`;
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${canonicalUrl}#service`,
+        "name": t("campagnes.title"),
+        "description": t("campagnes.subtitle"),
+        "url": canonicalUrl,
+        "provider": { "@type": "Organization", "@id": "https://agentic-whatsup.com/#organization", "name": "AgenticWhatsup" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": `https://agentic-whatsup.com/${locale}/services` },
+          { "@type": "ListItem", "position": 3, "name": t("campagnes.title"), "item": canonicalUrl },
+        ],
+      }) }} />
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
 
       {/* Header */}
       <div className="text-center mb-16">
@@ -149,5 +169,6 @@ export default async function CampagnesWhatsAppPage({ params }: { params: Promis
       </div>
 
     </div>
+    </>
   );
 }

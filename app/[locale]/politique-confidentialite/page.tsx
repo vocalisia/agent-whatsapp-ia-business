@@ -32,7 +32,27 @@ export default async function PolitiqueConfidentialitePage({ params }: { params:
   const rights = t.raw("rights") as Array<{ name: string; desc: string }>;
   const cookiesRows = t.raw("cookiesRows") as Array<{ type: string; purpose: string; consent: string }>;
 
+  const canonicalUrl = `https://agentic-whatsup.com/${locale}/politique-confidentialite`;
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        "name": t("title"),
+        "url": canonicalUrl,
+        "inLanguage": locale,
+        "isPartOf": { "@id": "https://agentic-whatsup.com/#website" },
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "AgenticWhatsup", "item": "https://agentic-whatsup.com" },
+          { "@type": "ListItem", "position": 2, "name": t("title"), "item": canonicalUrl },
+        ],
+      }) }} />
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20">
       <h1
         className="text-3xl sm:text-4xl font-extrabold text-white mb-4"
@@ -193,5 +213,6 @@ export default async function PolitiqueConfidentialitePage({ params }: { params:
         </p>
       </div>
     </div>
+    </>
   );
 }
