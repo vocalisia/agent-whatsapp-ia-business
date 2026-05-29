@@ -10,6 +10,7 @@
     "prebuild": "node scripts/seo-tag-guard.cjs"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.38.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.7.0",
