@@ -122,7 +122,52 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
     url: canonicalUrl,
     image: "https://agentic-whatsup.com/og-image.jpg",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".article-intro", ".article-summary"],
+    },
   };
+
+  // Auto-detect FAQ from MDX content (## Question? followed by answer).
+  function stripMd(s: string): string {
+    return s
+      .replace(/^#{1,6}\s+/gm, "")
+      .replace(/\*\*([^*]+)\*\*/g, "$1")
+      .replace(/\*([^*]+)\*/g, "$1")
+      .replace(/`([^`]+)`/g, "$1")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+  const md = post.content || "";
+  const faqPairs: { question: string; answer: string }[] = (() => {
+    const re = /^#{2,3}\s+(.+?\?)\s*$/gm;
+    const matches = [...md.matchAll(re)];
+    if (matches.length < 2) return [];
+    const result: { question: string; answer: string }[] = [];
+    for (let i = 0; i < matches.length; i++) {
+      const m = matches[i];
+      const start = (m.index ?? 0) + m[0].length;
+      const end = i + 1 < matches.length ? (matches[i + 1].index ?? md.length) : md.length;
+      const answer = stripMd(md.slice(start, end)).slice(0, 480);
+      if (answer.length >= 30) {
+        result.push({ question: stripMd(m[1]).slice(0, 220), answer });
+      }
+    }
+    return result;
+  })();
+  const faqJsonLd = faqPairs.length >= 2
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `${canonicalUrl}#faq`,
+        mainEntity: faqPairs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
+      }
+    : null;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -164,6 +209,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
+        />
+      )}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
       <Link href={`/${locale}/blog`} className="inline-flex items-center gap-2 text-slate-400 hover:text-wa transition-colors text-sm mb-8">
