@@ -193,7 +193,7 @@ export default async function LocaleLayout({
               "sameAs": [
                 "https://www.linkedin.com/company/agenticwhatsup",
                 "https://www.linkedin.com/in/vocalisia",
-                "https://x.com/vocalisia",
+                "https://x.com/VocalisAi",
                 "https://vocalis.pro",
               ],
               "contactPoint": [
@@ -247,7 +247,7 @@ export default async function LocaleLayout({
               "knowsLanguage": ["fr", "en", "de", "nl"],
               "sameAs": [
                 "https://www.linkedin.com/in/vocalisia",
-                "https://x.com/vocalisia",
+                "https://x.com/VocalisAi",
                 "https://vocalis.pro",
               ],
             }),
