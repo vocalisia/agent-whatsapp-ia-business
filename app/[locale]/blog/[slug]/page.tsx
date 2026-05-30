@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         "@id": "https://agentic-whatsup.com/fr/auteur/laurent-duplat",
         name: "Laurent Duplat",
         url: `https://agentic-whatsup.com/${locale}/auteur/laurent-duplat`,
-        sameAs: ["https://www.linkedin.com/in/richard-cohen-vault369/"],
+        sameAs: ["https://www.linkedin.com/in/vocalisia/", "https://x.com/VocalisAi"],
       }
     : {
         "@type": "Person",
