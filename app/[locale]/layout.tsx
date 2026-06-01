@@ -31,20 +31,20 @@ const fontOutfit = Outfit({
 
 const defaultMeta: Record<string, { title: string; description: string }> = {
   fr: {
-    title: "Agent IA WhatsApp | Automatisez vos messages clients 24/7",
-    description: "Le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez vos réponses clients, qualifiez vos leads, prenez des RDV — 24h/24.",
+    title: "WhatsUp AI — Agent IA WhatsApp | Automatisez vos clients 24/7",
+    description: "WhatsUp AI : le seul agent IA WhatsApp qui comprend les vocaux et analyse les photos. Automatisez réponses, leads, RDV — 24h/24.",
   },
   en: {
-    title: "WhatsApp AI Agent | Automate your customer messages 24/7",
-    description: "The only WhatsApp AI agent that understands voice messages and analyzes photos. Automate responses, qualify leads, book appointments — 24/7.",
+    title: "WhatsUp AI — WhatsApp AI Agent | Automate Customer Messages 24/7",
+    description: "WhatsUp AI: the only WhatsApp AI agent that understands voice messages and analyzes photos. Automate responses, qualify leads, book appointments — 24/7.",
   },
   de: {
-    title: "WhatsApp KI-Agent | Automatisieren Kundennachrichten 24/7",
-    description: "Der einzige WhatsApp KI-Agent, der Sprachnachrichten versteht und Fotos analysiert. Antworten automatisieren, Leads qualifizieren, Termine buchen — 24/7.",
+    title: "WhatsUp AI — WhatsApp KI-Agent | Kundennachrichten automatisieren 24/7",
+    description: "WhatsUp AI: der einzige WhatsApp KI-Agent, der Sprachnachrichten versteht und Fotos analysiert. Antworten automatisieren, Leads qualifizieren, Termine buchen — 24/7.",
   },
   nl: {
-    title: "WhatsApp AI-agent | Automatiseer uw klantberichten 24/7",
-    description: "De enige WhatsApp AI-agent die spraakberichten begrijpt en foto's analyseert. Automatiseer antwoorden, kwalificeer leads, boek afspraken — 24/7.",
+    title: "WhatsUp AI — WhatsApp AI-agent | Klantberichten automatiseren 24/7",
+    description: "WhatsUp AI: de enige WhatsApp AI-agent die spraakberichten begrijpt en foto's analyseert. Automatiseer antwoorden, kwalificeer leads, boek afspraken — 24/7.",
   },
 };
 
