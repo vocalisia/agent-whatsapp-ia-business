@@ -73,6 +73,18 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   const mdxComponents: MDXRemoteProps["components"] = {
+    img: ({ src, alt }) => (
+      <span className="not-prose my-8 block overflow-hidden rounded-2xl border border-surface-2 bg-surface">
+        {/* MDX images are editorial assets; constrain them so SVGs never cover text. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={typeof src === "string" ? src : ""}
+          alt={typeof alt === "string" ? alt : ""}
+          className="block h-auto w-full max-w-full object-contain"
+          loading="lazy"
+        />
+      </span>
+    ),
     a: ({ href, children }) => {
       if (!href) return <span>{children}</span>;
       const out = normalizeBlogMarkdownHref(href, locale, {
