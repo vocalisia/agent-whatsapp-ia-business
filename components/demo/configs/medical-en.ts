@@ -61,7 +61,7 @@ const MEDICAL_INTENTS: Record<string, BotResponse> = {
     ],
   },
   "video consultation": {
-    text: "📹 **Video consultation**\n\nConsult a doctor from home:\n\n**Video consultation availability:**\n• Dr. Martin — Today 5pm, Tomorrow 9am\n• Dr. Faure — Tomorrow 2pm, 4:30pm\n\n**How it works:**\n1️⃣ Book a slot\n2️⃣ Video link sent by WhatsApp 10 min before\n3️⃣ Secure consultation (15-20 min)\n4️⃣ Prescription + summary sent afterwards\n\n**Fee:** 25 EUR (sector 1) — Direct billing possible\n**Reimbursement:** 70% NHS / private insurance top-up\n\nWhich slot works for you?",
+    text: "📹 **Video consultation**\n\nConsult a doctor from home:\n\n**Video consultation availability:**\n• Dr. Martin — Today 5pm, Tomorrow 9am\n• Dr. Faure — Tomorrow 2pm, 4:30pm\n\n**How it works:**\n1️⃣ Book a slot\n2️⃣ Video link sent by WhatsApp 10 min before\n3️⃣ Secure consultation (15-20 min)\n4️⃣ Prescription + summary sent afterwards\n\n**Fee:** estimation personnalisee (sector 1) — Direct billing possible\n**Reimbursement:** 70% NHS / private insurance top-up\n\nWhich slot works for you?",
     delay: 2200,
     quickReplies: [
       { label: "Dr. Martin 5pm", value: "confirm appointment" },
@@ -149,7 +149,7 @@ const MEDICAL_INTENTS: Record<string, BotResponse> = {
     ],
   },
   "cancel appointment": {
-    text: "📅 **Cancel / Reschedule an appointment**\n\nYour upcoming appointments:\n\n**1. Dr. Martin** — Mon 04/21 at 09:00\n**2. Dr. Leroy** — Tue 04/29 at 3:00pm\n\n**Options:**\n• ❌ **Cancel** — The slot will be freed for another patient\n• 🔄 **Reschedule** — Choose a new slot\n\n⚠️ Please cancel **at least 24 hours in advance**.\nAfter 3 unexplained absences, a 20 EUR penalty may apply.\n\nWhich appointment would you like to modify?",
+    text: "📅 **Cancel / Reschedule an appointment**\n\nYour upcoming appointments:\n\n**1. Dr. Martin** — Mon 04/21 at 09:00\n**2. Dr. Leroy** — Tue 04/29 at 3:00pm\n\n**Options:**\n• ❌ **Cancel** — The slot will be freed for another patient\n• 🔄 **Reschedule** — Choose a new slot\n\n⚠️ Please cancel **at least 24 hours in advance**.\nAfter 3 unexplained absences, a estimation personnalisee penalty may apply.\n\nWhich appointment would you like to modify?",
     delay: 2000,
     quickReplies: [
       { label: "Cancel Dr. Martin", value: "cancel appointment" },

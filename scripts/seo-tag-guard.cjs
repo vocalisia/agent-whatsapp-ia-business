@@ -79,6 +79,14 @@ const RULES = [
     fix: "Retirer le meta robots noindex du layout. Utiliser robots.ts par route si besoin.",
   },
   {
+    code: "no_public_pricing_schema_fields",
+    severity: "critical",
+    mode: "forbid",
+    pattern: /["'](?:price|priceRange|lowPrice|highPrice)["']\s*:/,
+    msg: "Champ schema de prix detecte dans le layout public.",
+    fix: "Retirer les champs price/priceRange/lowPrice/highPrice. Rediriger vers /contact ou un audit gratuit.",
+  },
+  {
     code: "html_lang_present",
     severity: "high",
     mode: "require",

@@ -159,7 +159,7 @@ export default function MobileNav() {
               <span>{t("services")}</span>
               <ChevronDown
                 size={18}
-                className={`text-slate-400 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`}
+                className={`text-slate-400 transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`}
               />
             </button>
             {servicesOpen && (

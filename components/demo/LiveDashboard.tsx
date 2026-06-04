@@ -163,8 +163,7 @@ function KpiCard({
       className={`
         rounded-xl border border-surface-3 bg-surface/80 backdrop-blur-sm
         px-3 py-2.5 flex items-center gap-3
-        transition-all duration-300
-        ${highlight ? "ring-1 ring-wa/30 shadow-[0_0_12px_rgba(37,211,102,0.1)]" : ""}
+        transition-all duration-300 ${highlight ? "ring-1 ring-wa/30 shadow-[0_0_12px_rgba(37,211,102,0.1)]" : ""}
       `}
     >
       <div className="w-8 h-8 rounded-lg bg-wa/10 flex items-center justify-center flex-shrink-0">
@@ -202,8 +201,7 @@ function SentimentDisplay({
         <span
           key={item.key}
           className={`
-            text-lg transition-all duration-300
-            ${
+            text-lg transition-all duration-300 ${
               sentiment === item.key
                 ? "scale-125 opacity-100"
                 : "scale-90 opacity-30 grayscale"

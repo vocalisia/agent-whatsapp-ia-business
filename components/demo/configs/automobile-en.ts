@@ -14,7 +14,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   vehicle: {
-    text: "**AutoPrestige vehicle search**:\n\nTo refine your selection, tell me your criteria:\n\n**Our categories:**\n- City cars (from 15,990 EUR)\n- Saloons (from 28,900 EUR)\n- SUV & Crossovers (from 32,500 EUR)\n- Sports (from 45,000 EUR)\n- Electric & Hybrid (from 35,900 EUR)\n\n**Featured this week:**\n- **BMW 3 Series 320d** — 38,900 EUR | 2024 | 12,000 km\n- **Mercedes GLC 300e** — 52,500 EUR | 2025 | 5,000 km\n- **Audi A4 Avant** — 41,200 EUR | 2024 | 18,000 km\n- **Tesla Model 3** — 39,990 EUR | 2025 | 3,200 km\n\nWhat type of vehicle interests you?",
+    text: "**AutoPrestige vehicle search**:\n\nTo refine your selection, tell me your criteria:\n\n**Our categories:**\n- City cars (available after audit)\n- Saloons (available after audit)\n- SUV & Crossovers (available after audit)\n- Sports (available after audit)\n- Electric & Hybrid (available after audit)\n\n**Featured this week:**\n- **BMW 3 Series 320d** — estimation personnalisee | 2024 | 12,000 km\n- **Mercedes GLC 300e** — estimation personnalisee | 2025 | 5,000 km\n- **Audi A4 Avant** — estimation personnalisee | 2024 | 18,000 km\n- **Tesla Model 3** — estimation personnalisee | 2025 | 3,200 km\n\nWhat type of vehicle interests you?",
     delay: 2200,
     quickReplies: [
       { label: "SUV", value: "vehicle" },
@@ -45,7 +45,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   financing: {
-    text: "**AutoPrestige financing simulator**:\n\nExample for a **BMW 3 Series** at 38,900 EUR:\n\n**Standard loan:**\n- Deposit: 5,000 EUR\n- Duration: 48 months\n- Monthly payment: **749 EUR/month**\n- APR: 4.9%\n\n**PCP (Personal Contract Purchase):**\n- Deposit: 3,000 EUR\n- Duration: 36 months / 15,000 km/year\n- Monthly: **449 EUR/month**\n- Optional final payment: 15,560 EUR\n\n**PCH (Personal Contract Hire):**\n- Everything included (insurance + maintenance)\n- **549 EUR/month** over 36 months\n\nOur partners: **Barclays, Black Horse, Santander**\nDecision within **24 hours**. Would you like a personalized simulation?",
+    text: "**AutoPrestige financing simulator**:\n\nExample for a **BMW 3 Series** at estimation personnalisee:\n\n**Standard loan:**\n- Deposit: estimation personnalisee\n- Duration: 48 months\n- Monthly payment: **estimation personnalisee**\n- APR: 4.9%\n\n**PCP (Personal Contract Purchase):**\n- Deposit: estimation personnalisee\n- Duration: 36 months / 15,000 km/year\n- Monthly: **estimation personnalisee**\n- Optional final payment: estimation personnalisee\n\n**PCH (Personal Contract Hire):**\n- Everything included (insurance + maintenance)\n- **estimation personnalisee** over 36 months\n\nOur partners: **Barclays, Black Horse, Santander**\nDecision within **24 hours**. Would you like a personalized simulation?",
     delay: 2400,
     quickReplies: [
       { label: "Personal simulation", value: "financing" },
@@ -56,7 +56,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "trade-in": {
-    text: "**AutoPrestige trade-in estimate**:\n\nTo value your vehicle, I need:\n- Make and model\n- Year of first registration\n- Mileage\n- Fuel type (petrol/diesel/hybrid/electric)\n\n**Example estimate:**\n- Peugeot 308 — 2021 — 45,000 km — Diesel\n- **Estimate: 14,500 — 16,200 EUR**\n\n**Our commitment:**\n- Free and non-binding estimate\n- Guaranteed price for **7 days**\n- Trade-in even without buying from us\n- Bank transfer within **48h** after agreement\n\nSend me your vehicle details or a photo!",
+    text: "**AutoPrestige trade-in estimate**:\n\nTo ?? your vehicle, I need:\n- Make and model\n- Year of first registration\n- Mileage\n- Fuel type (petrol/diesel/hybrid/electric)\n\n**Example estimate:**\n- Peugeot 308 — 2021 — 45,000 km — Diesel\n- **Estimate: 14,500 — estimation personnalisee**\n\n**Our commitment:**\n- Free and non-binding estimate\n- Guaranteed price for **7 days**\n- Trade-in even without buying from us\n- Bank transfer within **48h** after agreement\n\nSend me your vehicle details or a photo!",
     delay: 2000,
     quickReplies: [
       { label: "Send photo", value: "vehicle photo" },
@@ -67,7 +67,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "vehicle photo": {
-    text: "Thank you for the photo! **AI analysis in progress**...\n\n**Analysis result:**\n\n- **Vehicle identified:** Renault Megane IV — 2020\n- **Body condition:** Good (micro-scratch on passenger door)\n- **Paint condition:** Very good (platinum grey)\n- **Alloys:** Good condition, 1 minor scuff\n\n**AI estimate:** 12,800 — 14,200 EUR\n\n**To refine:**\n- Exact mileage?\n- Full service history?\n- Valid MOT?\n\nAn expert can confirm within **24h** with physical inspection.",
+    text: "Thank you for the photo! **AI analysis in progress**...\n\n**Analysis result:**\n\n- **Vehicle identified:** Renault Megane IV — 2020\n- **Body condition:** Good (micro-scratch on passenger door)\n- **Paint condition:** Very good (platinum grey)\n- **Alloys:** Good condition, 1 minor scuff\n\n**AI estimate:** 12,800 — estimation personnalisee\n\n**To refine:**\n- Exact mileage?\n- Full service history?\n- Valid MOT?\n\nAn expert can confirm within **24h** with physical inspection.",
     delay: 2800,
     quickReplies: [
       { label: "Confirm trade-in", value: "trade-in" },
@@ -78,7 +78,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   servicing: {
-    text: "**AutoPrestige service centre**:\n\n**Our services:**\n- **Full service** — from 189 EUR (oil change + filters + diagnostic)\n- **Oil change** — 79 EUR (oil + filter)\n- **Tyres** — from 65 EUR/tyre (fitting + balancing included)\n- **Brakes** — from 149 EUR (front pads)\n- **Air conditioning** — 89 EUR (recharge + disinfection)\n- **Wheel alignment** — 69 EUR\n\n**Next available slots:**\n- Monday April 21 — 8am, 10am, 2pm\n- Wednesday April 23 — 9am, 11am\n- Friday April 25 — 8am, 3pm\n\n**Free courtesy car** for jobs over 2 hours.\n\nWhich service do you need?",
+    text: "**AutoPrestige service centre**:\n\n**Our services:**\n- **Full service** — available after audit (oil change + filters + diagnostic)\n- **Oil change** — estimation personnalisee (oil + filter)\n- **Tyres** — available after audit (fitting + balancing included)\n- **Brakes** — available after audit (front pads)\n- **Air conditioning** — estimation personnalisee (recharge + disinfection)\n- **Wheel alignment** — estimation personnalisee\n\n**Next available slots:**\n- Monday April 21 — 8am, 10am, 2pm\n- Wednesday April 23 — 9am, 11am\n- Friday April 25 — 8am, 3pm\n\n**Free courtesy car** for jobs over 2 hours.\n\nWhich service do you need?",
     delay: 2200,
     quickReplies: [
       { label: "Full service", value: "confirm servicing" },
@@ -89,7 +89,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "confirm servicing": {
-    text: "Service appointment confirmed!\n\n**Service:** Full service\n**Date:** Monday April 21, 2026 — 8:00am\n**Estimated duration:** 2h30\n**Courtesy car:** Yes (Peugeot 208)\n\n**Included:**\n- Engine oil change\n- Filter replacements (air, oil, cabin)\n- 32-point electronic diagnostic\n- Fluid levels + lighting check\n\n**Price:** 189 EUR inc. VAT\n\nWhatsApp reminder the day before. Bring your vehicle registration.",
+    text: "Service appointment confirmed!\n\n**Service:** Full service\n**Date:** Monday April 21, 2026 — 8:00am\n**Estimated duration:** 2h30\n**Courtesy car:** Yes (Peugeot 208)\n\n**Included:**\n- Engine oil change\n- Filter replacements (air, oil, cabin)\n- 32-point electronic diagnostic\n- Fluid levels + lighting check\n\n**Price:** estimation personnalisee inc. VAT\n\nWhatsApp reminder the day before. Bring your vehicle registration.",
     delay: 1800,
     quickReplies: [
       { label: "Thank you!", value: "thanks" },
@@ -120,7 +120,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   parts: {
-    text: "**AutoPrestige spare parts**:\n\n**Availability:**\n- Genuine manufacturer parts\n- Certified equivalent parts\n- Accessories and equipment\n\n**Quick search:**\nTell me your vehicle + the part you need.\n\n**Examples:**\n- BMW 3 Series oil filter — **24.90 EUR** (in stock)\n- Mercedes GLC front brake pads — **89.00 EUR** (available D+1)\n- Audi A4 battery — **179.00 EUR** (in stock)\n\n**Services:**\n- Delivery to dealership or home\n- Workshop fitting (preferential rate)\n- 2-year warranty on all parts\n\nWhich part are you looking for?",
+    text: "**AutoPrestige spare parts**:\n\n**Availability:**\n- Genuine manufacturer parts\n- Certified equivalent parts\n- Accessories and equipment\n\n**Quick search:**\nTell me your vehicle + the part you need.\n\n**Examples:**\n- BMW 3 Series oil filter — **estimation personnalisee** (in stock)\n- Mercedes GLC front brake pads — **estimation personnalisee** (available D+1)\n- Audi A4 battery — **estimation personnalisee** (in stock)\n\n**Services:**\n- Delivery to dealership or home\n- Workshop fitting (preferential rate)\n- 2-year warranty on all parts\n\nWhich part are you looking for?",
     delay: 2000,
     quickReplies: [
       { label: "Search part", value: "parts" },
@@ -131,7 +131,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "used cars": {
-    text: "**AutoPrestige used vehicles**:\n\nAll our vehicles are **150-point checked**:\n\n**Current selection:**\n- **Peugeot 3008 GT** — 2023 — 28,000 km — 29,900 EUR\n- **VW Golf 8 R-Line** — 2022 — 35,000 km — 24,500 EUR\n- **Renault Arkana** — 2024 — 12,000 km — 27,800 EUR\n- **BMW X1 xDrive** — 2023 — 22,000 km — 36,900 EUR\n- **Citroen C5 X** — 2024 — 8,000 km — 31,200 EUR\n\n**AutoPrestige used car advantages:**\n- 12-month warranty minimum\n- Certified complete history\n- Trade-in of your old vehicle\n- Tailored financing\n\nDoes a vehicle interest you?",
+    text: "**AutoPrestige used vehicles**:\n\nAll our vehicles are **150-point checked**:\n\n**Current selection:**\n- **Peugeot 3008 GT** — 2023 — 28,000 km — estimation personnalisee\n- **VW Golf 8 R-Line** — 2022 — 35,000 km — estimation personnalisee\n- **Renault Arkana** — 2024 — 12,000 km — estimation personnalisee\n- **BMW X1 xDrive** — 2023 — 22,000 km — estimation personnalisee\n- **Citroen C5 X** — 2024 — 8,000 km — estimation personnalisee\n\n**AutoPrestige used car advantages:**\n- 12-month warranty minimum\n- Certified complete history\n- Trade-in of your old vehicle\n- Tailored financing\n\nDoes a vehicle interest you?",
     delay: 2400,
     quickReplies: [
       { label: "Test Peugeot 3008", value: "test drive" },
@@ -142,7 +142,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   promotion: {
-    text: "**AutoPrestige special offers**:\n\n**Spring 2026:**\n- **-3,000 EUR** on BMW 1 and 3 Series range\n- **PCP from 299 EUR/month** on Peugeot 3008 (2,500 EUR deposit)\n- **Scrappage scheme**: up to 5,000 EUR on electric vehicles\n- **3-year service pack** free with any new car purchase\n\n**Weekend flash:**\n- Double trade-in on your old vehicle (estimate + 10%)\n- Free set of tyres on used SUVs\n\n**Valid until April 30, 2026.**\n\nTake advantage now!",
+    text: "**AutoPrestige special offers**:\n\n**Spring 2026:**\n- **-estimation personnalisee** on BMW 1 and 3 Series range\n- **PCP available after audit** on Peugeot 3008 (estimation personnalisee deposit)\n- **Scrappage scheme**: up to estimation personnalisee on electric vehicles\n- **3-year service pack** free with any new car purchase\n\n**Weekend flash:**\n- Double trade-in on your old vehicle (estimate + 10%)\n- Free set of tyres on used SUVs\n\n**Valid until April 30, 2026.**\n\nTake advantage now!",
     delay: 2000,
     quickReplies: [
       { label: "BMW on offer", value: "vehicle" },
@@ -153,7 +153,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "car insurance": {
-    text: "**Car insurance — AutoPrestige partners**:\n\nWe work with the best insurers:\n\n**Negotiated offers:**\n- **Comprehensive** — from 45 EUR/month (max no-claims)\n- **Third party+** — from 28 EUR/month\n- **Young driver** — from 65 EUR/month\n\n**Included in our offers:**\n- Zero-km 24/7 breakdown assistance\n- Replacement vehicle\n- No excess on glass claims\n- Legal protection\n\n**Partners:** AXA, Allianz, Direct Line, Admiral\n\nFree simulation in **2 minutes**.\nQuote sent via WhatsApp.",
+    text: "**Car insurance — AutoPrestige partners**:\n\nWe work with the best insurers:\n\n**Negotiated offers:**\n- **Comprehensive** — available after audit (max no-claims)\n- **Third party+** — available after audit\n- **Young driver** — available after audit\n\n**Included in our offers:**\n- Zero-km 24/7 breakdown assistance\n- Replacement vehicle\n- No excess on glass claims\n- Legal protection\n\n**Partners:** AXA, Allianz, Direct Line, Admiral\n\nFree simulation in **2 minutes**.\nQuote sent via WhatsApp.",
     delay: 2000,
     quickReplies: [
       { label: "Simulate insurance", value: "car insurance" },
@@ -164,7 +164,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   mot: {
-    text: "**MOT — AutoPrestige**:\n\n**Our approved centre:**\n- Periodic MOT\n- Re-test\n- Pre-MOT check (recommended)\n\n**Prices:**\n- MOT: **54.85 EUR** (government capped)\n- Re-test: **29 EUR**\n- MOT + pre-check: **89 EUR** (recommended)\n\n**Next available slots:**\n- Thursday April 24 — 8am, 10am, 2pm, 4pm\n- Friday April 25 — 9am, 11am\n\n**Your vehicle:** MOT due before **09/15/2026**\n\n**Duration:** Approx. 45 min\nVehicle returned same day.",
+    text: "**MOT — AutoPrestige**:\n\n**Our approved centre:**\n- Periodic MOT\n- Re-test\n- Pre-MOT check (recommended)\n\n**Prices:**\n- MOT: **estimation personnalisee** (government capped)\n- Re-test: **estimation personnalisee**\n- MOT + pre-check: **estimation personnalisee** (recommended)\n\n**Next available slots:**\n- Thursday April 24 — 8am, 10am, 2pm, 4pm\n- Friday April 25 — 9am, 11am\n\n**Your vehicle:** MOT due before **09/15/2026**\n\n**Duration:** Approx. 45 min\nVehicle returned same day.",
     delay: 1800,
     quickReplies: [
       { label: "Book MOT", value: "confirm servicing" },
@@ -175,7 +175,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   delivery: {
-    text: "**AutoPrestige delivery options**:\n\n**At the dealership:**\n- Personalized handover with your advisor\n- Full vehicle presentation (1 hour)\n- Setup + feature walkthrough\n- Free\n\n**Home delivery:**\n- Delivery by transporter\n- Within 100 km: **149 EUR**\n- Within 200 km: **249 EUR**\n- Nationwide: **on request**\n\n**Lead times:**\n- Vehicle in stock: **48-72 hours**\n- Factory order: **3 to 6 months** depending on model\n\nDocuments handed over (registration, insurance) on delivery day.",
+    text: "**AutoPrestige delivery options**:\n\n**At the dealership:**\n- Personalized handover with your advisor\n- Full vehicle presentation (1 hour)\n- Setup + feature walkthrough\n- Free\n\n**Home delivery:**\n- Delivery by transporter\n- Within 100 km: **estimation personnalisee**\n- Within 200 km: **estimation personnalisee**\n- Nationwide: **on request**\n\n**Lead times:**\n- Vehicle in stock: **48-72 hours**\n- Factory order: **3 to 6 months** depending on model\n\nDocuments handed over (registration, insurance) on delivery day.",
     delay: 2000,
     quickReplies: [
       { label: "Home delivery", value: "delivery" },

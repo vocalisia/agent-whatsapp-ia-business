@@ -14,7 +14,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   fahrzeug: {
-    text: "**Fahrzeugsuche AutoPrestige** :\n\nBitte teilen Sie uns Ihre Kriterien mit :\n\n**Unsere Kategorien :**\n- Kleinwagen (ab 15.990 EUR)\n- Limousinen (ab 28.900 EUR)\n- SUV & Crossover (ab 32.500 EUR)\n- Sportwagen (ab 45.000 EUR)\n- Elektro & Hybrid (ab 35.900 EUR)\n\n**Diese Woche im Angebot :**\n- **BMW 3er 320d** — 38.900 EUR | 2024 | 12.000 km\n- **Mercedes GLC 300e** — 52.500 EUR | 2025 | 5.000 km\n- **Audi A4 Avant** — 41.200 EUR | 2024 | 18.000 km\n- **Tesla Model 3** — 39.990 EUR | 2025 | 3.200 km\n\nWelche Fahrzeugkategorie interessiert Sie ?",
+    text: "**Fahrzeugsuche AutoPrestige** :\n\nBitte teilen Sie uns Ihre Kriterien mit :\n\n**Unsere Kategorien :**\n- Kleinwagen (ab estimation personnalisee)\n- Limousinen (ab estimation personnalisee)\n- SUV & Crossover (ab estimation personnalisee)\n- Sportwagen (ab estimation personnalisee)\n- Elektro & Hybrid (ab estimation personnalisee)\n\n**Diese Woche im Angebot :**\n- **BMW 3er 320d** — estimation personnalisee | 2024 | 12.000 km\n- **Mercedes GLC 300e** — estimation personnalisee | 2025 | 5.000 km\n- **Audi A4 Avant** — estimation personnalisee | 2024 | 18.000 km\n- **Tesla Model 3** — estimation personnalisee | 2025 | 3.200 km\n\nWelche Fahrzeugkategorie interessiert Sie ?",
     delay: 2200,
     quickReplies: [
       { label: "SUV", value: "fahrzeug" },
@@ -45,7 +45,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   finanzierung: {
-    text: "**Finanzierungsrechner AutoPrestige** :\n\nBeispiel fur einen **BMW 3er** zu 38.900 EUR :\n\n**Klassischer Kredit :**\n- Anzahlung : 5.000 EUR\n- Laufzeit : 48 Monate\n- Rate : **749 EUR/Monat**\n- Effektivzins : 4,9 %\n\n**Leasing :**\n- Anzahlung : 3.000 EUR\n- Laufzeit : 36 Monate / 15.000 km/Jahr\n- Rate : **449 EUR/Monat**\n- Restwert : 15.560 EUR\n\n**Full-Service-Leasing :**\n- Alles inklusive (Versicherung + Wartung)\n- **549 EUR/Monat** uber 36 Monate\n\nUnsere Partner : **Deutsche Bank, Santander, VW Bank**\nAntwort innerhalb von **24 Stunden**. Personliche Simulation gewunscht ?",
+    text: "**Finanzierungsrechner AutoPrestige** :\n\nBeispiel fur einen **BMW 3er** zu estimation personnalisee :\n\n**Klassischer Kredit :**\n- Anzahlung : estimation personnalisee\n- Laufzeit : 48 Monate\n- Rate : **estimation personnalisee**\n- Effektivzins : 4,9 %\n\n**Leasing :**\n- Anzahlung : estimation personnalisee\n- Laufzeit : 36 Monate / 15.000 km/Jahr\n- Rate : **estimation personnalisee**\n- Restwert : estimation personnalisee\n\n**Full-Service-Leasing :**\n- Alles inklusive (Versicherung + Wartung)\n- **estimation personnalisee** uber 36 Monate\n\nUnsere Partner : **Deutsche Bank, Santander, VW Bank**\nAntwort innerhalb von **24 Stunden**. Personliche Simulation gewunscht ?",
     delay: 2400,
     quickReplies: [
       { label: "Personl. Simulation", value: "finanzierung" },
@@ -56,7 +56,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   inzahlungnahme: {
-    text: "**Inzahlungnahme AutoPrestige** :\n\nFur die Schatzung Ihres Fahrzeugs benotige ich :\n- Marke und Modell\n- Erstzulassungsjahr\n- Kilometerstand\n- Antrieb (Benzin/Diesel/Hybrid/Elektro)\n\n**Schatzungsbeispiel :**\n- VW Golf VIII — 2021 — 45.000 km — Diesel\n- **Schatzwert : 14.500 — 16.200 EUR**\n\n**Unser Versprechen :**\n- Kostenlose & unverbindliche Schatzung\n- Preis garantiert fur **7 Tage**\n- Ankauf auch ohne Kauf bei uns\n- Uberweisung innerhalb **48 Stunden** nach Einigung\n\nSchicken Sie mir die Daten oder ein Foto Ihres Fahrzeugs !",
+    text: "**Inzahlungnahme AutoPrestige** :\n\nFur die Schatzung Ihres Fahrzeugs benotige ich :\n- Marke und Modell\n- Erstzulassungsjahr\n- Kilometerstand\n- Antrieb (Benzin/Diesel/Hybrid/Elektro)\n\n**Schatzungsbeispiel :**\n- VW Golf VIII — 2021 — 45.000 km — Diesel\n- **Schatzwert : 14.500 — estimation personnalisee**\n\n**Unser Versprechen :**\n- Kostenlose & unverbindliche Schatzung\n- Preis garantiert fur **7 Tage**\n- Ankauf auch ohne Kauf bei uns\n- Uberweisung innerhalb **48 Stunden** nach Einigung\n\nSchicken Sie mir die Daten oder ein Foto Ihres Fahrzeugs !",
     delay: 2000,
     quickReplies: [
       { label: "Foto senden", value: "fahrzeugfoto" },
@@ -67,7 +67,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   fahrzeugfoto: {
-    text: "Danke fur das Foto ! **KI-Analyse lauft**...\n\n**Analyseergebnis :**\n\n- **Erkanntes Fahrzeug :** Volkswagen Golf IV — 2020\n- **Karosseriezustand :** Gut (kleiner Kratzer Beifahrertür)\n- **Lackzustand :** Sehr gut (Farbe Platingrau)\n- **Felgen :** Guter Zustand, 1 leichte Schramme\n\n**KI-Schatzung :** 12.800 — 14.200 EUR\n\n**Fur genauere Schatzung :**\n- Genauen Kilometerstand ?\n- Scheckheft gepflegt ?\n- Hauptuntersuchung (HU) gultig ?\n\nEin Experte kann innerhalb von **24 Stunden** nach Sichtprufung bestatigen.",
+    text: "Danke fur das Foto ! **KI-Analyse lauft**...\n\n**Analyseergebnis :**\n\n- **Erkanntes Fahrzeug :** Volkswagen Golf IV — 2020\n- **Karosseriezustand :** Gut (kleiner Kratzer Beifahrertür)\n- **Lackzustand :** Sehr gut (Farbe Platingrau)\n- **Felgen :** Guter Zustand, 1 leichte Schramme\n\n**KI-Schatzung :** 12.800 — estimation personnalisee\n\n**Fur genauere Schatzung :**\n- Genauen Kilometerstand ?\n- Scheckheft gepflegt ?\n- Hauptuntersuchung (HU) gultig ?\n\nEin Experte kann innerhalb von **24 Stunden** nach Sichtprufung bestatigen.",
     delay: 2800,
     quickReplies: [
       { label: "Inzahlungnahme bestatigen", value: "inzahlungnahme" },
@@ -78,7 +78,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   wartung: {
-    text: "**Werkstatt AutoPrestige** :\n\n**Unsere Leistungen :**\n- **Inspektion komplett** — ab 189 EUR (Olwechsel + Filter + Diagnose)\n- **Olwechsel** — 79 EUR (Ol + Filter)\n- **Reifen** — ab 65 EUR/Reifen (Montage + Auswuchten inklusive)\n- **Bremsen** — ab 149 EUR (Vorderbremsbelage)\n- **Klimaanlage** — 89 EUR (Befulllung + Desinfektion)\n- **Spurvermessung** — 69 EUR\n\n**Nachste Termine :**\n- Montag, 21. April — 8, 10, 14 Uhr\n- Mittwoch, 23. April — 9, 11 Uhr\n- Freitag, 25. April — 8, 15 Uhr\n\n**Kostenloses Leihfahrzeug** fur Arbeiten > 2 Stunden.\n\nWelche Leistung mochten Sie ?",
+    text: "**Werkstatt AutoPrestige** :\n\n**Unsere Leistungen :**\n- **Inspektion komplett** — ab estimation personnalisee (Olwechsel + Filter + Diagnose)\n- **Olwechsel** — estimation personnalisee (Ol + Filter)\n- **Reifen** — ab estimation personnalisee (Montage + Auswuchten inklusive)\n- **Bremsen** — ab estimation personnalisee (Vorderbremsbelage)\n- **Klimaanlage** — estimation personnalisee (Befulllung + Desinfektion)\n- **Spurvermessung** — estimation personnalisee\n\n**Nachste Termine :**\n- Montag, 21. April — 8, 10, 14 Uhr\n- Mittwoch, 23. April — 9, 11 Uhr\n- Freitag, 25. April — 8, 15 Uhr\n\n**Kostenloses Leihfahrzeug** fur Arbeiten > 2 Stunden.\n\nWelche Leistung mochten Sie ?",
     delay: 2200,
     quickReplies: [
       { label: "Inspektion", value: "wartung bestatigen" },
@@ -89,7 +89,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "wartung bestatigen": {
-    text: "Werkstatttermin bestatigt !\n\n**Leistung :** Inspektion komplett\n**Datum :** Montag, 21. April 2026 — 8:00 Uhr\n**Geschatzte Dauer :** 2,5 Stunden\n**Leihfahrzeug :** Ja (VW Polo)\n\n**Inklusive :**\n- Motorolwechsel\n- Filterwechsel (Luft, Ol, Innenraum)\n- Elektronikdiagnose (32 Punkte)\n- Flussigkeiten + Beleuchtung\n\n**Preis :** 189 EUR inkl. MwSt.\n\nWhatsApp-Erinnerung am Vorabend. Bitte Fahrzeugschein mitbringen.",
+    text: "Werkstatttermin bestatigt !\n\n**Leistung :** Inspektion komplett\n**Datum :** Montag, 21. April 2026 — 8:00 Uhr\n**Geschatzte Dauer :** 2,5 Stunden\n**Leihfahrzeug :** Ja (VW Polo)\n\n**Inklusive :**\n- Motorolwechsel\n- Filterwechsel (Luft, Ol, Innenraum)\n- Elektronikdiagnose (32 Punkte)\n- Flussigkeiten + Beleuchtung\n\n**Preis :** estimation personnalisee inkl. MwSt.\n\nWhatsApp-Erinnerung am Vorabend. Bitte Fahrzeugschein mitbringen.",
     delay: 1800,
     quickReplies: [
       { label: "Danke !", value: "danke" },
@@ -120,7 +120,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   ersatzteile: {
-    text: "**Ersatzteile AutoPrestige** :\n\n**Verfugbarkeit :**\n- Original-Herstellerteile\n- Zertifizierte Gleichwertigteile\n- Zubehor und Ausrustung\n\n**Schnellsuche :**\nTeilen Sie uns Ihr Fahrzeug + das gewunschte Teil mit.\n\n**Beispiele :**\n- Olfilter BMW 3er — **24,90 EUR** (auf Lager)\n- Vorderbremsbelage Mercedes GLC — **89,00 EUR** (verfugbar J+1)\n- Batterie Audi A4 — **179,00 EUR** (auf Lager)\n\n**Services :**\n- Lieferung ins Autohaus oder nach Hause\n- Montage in der Werkstatt (Vorzugspreis)\n- 2 Jahre Garantie auf alle Teile\n\nWelches Teil suchen Sie ?",
+    text: "**Ersatzteile AutoPrestige** :\n\n**Verfugbarkeit :**\n- Original-Herstellerteile\n- Zertifizierte Gleichwertigteile\n- Zubehor und Ausrustung\n\n**Schnellsuche :**\nTeilen Sie uns Ihr Fahrzeug + das gewunschte Teil mit.\n\n**Beispiele :**\n- Olfilter BMW 3er — **estimation personnalisee** (auf Lager)\n- Vorderbremsbelage Mercedes GLC — **estimation personnalisee** (verfugbar J+1)\n- Batterie Audi A4 — **estimation personnalisee** (auf Lager)\n\n**Services :**\n- Lieferung ins Autohaus oder nach Hause\n- Montage in der Werkstatt (Vorzugspreis)\n- 2 Jahre Garantie auf alle Teile\n\nWelches Teil suchen Sie ?",
     delay: 2000,
     quickReplies: [
       { label: "Teil suchen", value: "ersatzteile" },
@@ -131,7 +131,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   gebraucht: {
-    text: "**Gebrauchtfahrzeuge AutoPrestige** :\n\nAlle unsere Fahrzeuge sind **150-Punkte-gepruft** :\n\n**Aktuelle Auswahl :**\n- **VW Tiguan GT** — 2023 — 28.000 km — 29.900 EUR\n- **VW Golf 8 R-Line** — 2022 — 35.000 km — 24.500 EUR\n- **Skoda Octavia** — 2024 — 12.000 km — 27.800 EUR\n- **BMW X1 xDrive** — 2023 — 22.000 km — 36.900 EUR\n- **Mercedes A-Klasse** — 2024 — 8.000 km — 31.200 EUR\n\n**Vorteile Gebrauchtwagen AutoPrestige :**\n- Mindestens 12 Monate Garantie\n- Vollstandige zertifizierte Fahrzeughistorie\n- Inzahlungnahme Ihres alten Fahrzeugs\n- Massgeschneiderte Finanzierung\n\nInteressiert Sie ein Fahrzeug ?",
+    text: "**Gebrauchtfahrzeuge AutoPrestige** :\n\nAlle unsere Fahrzeuge sind **150-Punkte-gepruft** :\n\n**Aktuelle Auswahl :**\n- **VW Tiguan GT** — 2023 — 28.000 km — estimation personnalisee\n- **VW Golf 8 R-Line** — 2022 — 35.000 km — estimation personnalisee\n- **Skoda Octavia** — 2024 — 12.000 km — estimation personnalisee\n- **BMW X1 xDrive** — 2023 — 22.000 km — estimation personnalisee\n- **Mercedes A-Klasse** — 2024 — 8.000 km — estimation personnalisee\n\n**Vorteile Gebrauchtwagen AutoPrestige :**\n- Mindestens 12 Monate Garantie\n- Vollstandige zertifizierte Fahrzeughistorie\n- Inzahlungnahme Ihres alten Fahrzeugs\n- Massgeschneiderte Finanzierung\n\nInteressiert Sie ein Fahrzeug ?",
     delay: 2400,
     quickReplies: [
       { label: "VW Tiguan Probefahrt", value: "probefahrt" },
@@ -142,7 +142,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   angebote: {
-    text: "**Sonderangebote AutoPrestige** :\n\n**Fruhling 2026 :**\n- **-3.000 EUR** auf BMW 1er- und 3er-Modelle\n- **Leasing ab 299 EUR/Monat** auf VW Tiguan (2.500 EUR Anzahlung)\n- **Umweltbonus** : bis zu 5.000 EUR auf Elektrofahrzeuge\n- **3 Jahre Inspektion gratis** beim Neuwagenkauf\n\n**Wochenend-Flash :**\n- Doppelte Inzahlungnahme (+10 % auf Schatzung)\n- Gratis-Reifensatz auf Gebraucht-SUVs\n\n**Gultig bis 30. April 2026.**\n\nJetzt profitieren !",
+    text: "**Sonderangebote AutoPrestige** :\n\n**Fruhling 2026 :**\n- **-estimation personnalisee** auf BMW 1er- und 3er-Modelle\n- **Leasing ab estimation personnalisee** auf VW Tiguan (estimation personnalisee Anzahlung)\n- **Umweltbonus** : bis zu estimation personnalisee Elektrofahrzeuge\n- **3 Jahre Inspektion gratis** beim Neuwagenkauf\n\n**Wochenend-Flash :**\n- Doppelte Inzahlungnahme (+10 % auf Schatzung)\n- Gratis-Reifensatz auf Gebraucht-SUVs\n\n**Gultig bis 30. April 2026.**\n\nJetzt profitieren !",
     delay: 2000,
     quickReplies: [
       { label: "BMW im Angebot", value: "fahrzeug" },
@@ -153,7 +153,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   kfzversicherung: {
-    text: "**KFZ-Versicherung — AutoPrestige-Partner** :\n\nWir arbeiten mit den besten Versicherern zusammen :\n\n**Ausgehandelte Angebote :**\n- **Vollkasko** — ab 45 EUR/Monat (50 % Schadenfreiheitsrabatt)\n- **Teilkasko+** — ab 28 EUR/Monat\n- **Jungfahrer** — ab 65 EUR/Monat\n\n**In unseren Angeboten inklusive :**\n- Pannenhilfe 0 km 24/7\n- Ersatzfahrzeug\n- Scheibenbruch ohne Selbstbeteiligung\n- Rechtsschutz\n\n**Partner :** Allianz, HUK-Coburg, ADAC, Zurich\n\nKostenlose Simulation in **2 Minuten**.\nAngebot per WhatsApp gesendet.",
+    text: "**KFZ-Versicherung — AutoPrestige-Partner** :\n\nWir arbeiten mit den besten Versicherern zusammen :\n\n**Ausgehandelte Angebote :**\n- **Vollkasko** — ab estimation personnalisee (50 % Schadenfreiheitsrabatt)\n- **Teilkasko+** — ab estimation personnalisee\n- **Jungfahrer** — ab estimation personnalisee\n\n**In unseren Angeboten inklusive :**\n- Pannenhilfe 0 km 24/7\n- Ersatzfahrzeug\n- Scheibenbruch ohne Selbstbeteiligung\n- Rechtsschutz\n\n**Partner :** Allianz, HUK-Coburg, ADAC, Zurich\n\nKostenlose Simulation in **2 Minuten**.\nAngebot per WhatsApp gesendet.",
     delay: 2000,
     quickReplies: [
       { label: "Versicherung simulieren", value: "kfzversicherung" },
@@ -164,7 +164,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   hauptuntersuchung: {
-    text: "**Hauptuntersuchung (HU/TUV) — AutoPrestige** :\n\n**Unser anerkanntes Zentrum :**\n- Regelmaßige Hauptuntersuchung (HU)\n- Nachprufung\n- Freiwillige Prufung (vor Kauf/Verkauf)\n\n**Preise :**\n- HU standard : **79 EUR**\n- Nachprufung : **29 EUR**\n- HU + Vorabcheck : **99 EUR** (empfohlen)\n\n**Nachste Termine :**\n- Donnerstag, 24. April — 8, 10, 14, 16 Uhr\n- Freitag, 25. April — 9, 11 Uhr\n\n**Ihr Fahrzeug :** HU fallig vor **15.09.2026**\n\n**Dauer :** ca. 45 Minuten\nFahrzeug noch am gleichen Tag abholbereit.",
+    text: "**Hauptuntersuchung (HU/TUV) — AutoPrestige** :\n\n**Unser anerkanntes Zentrum :**\n- Regelmaßige Hauptuntersuchung (HU)\n- Nachprufung\n- Freiwillige Prufung (vor Kauf/Verkauf)\n\n**Preise :**\n- HU standard : **estimation personnalisee**\n- Nachprufung : **estimation personnalisee**\n- HU + Vorabcheck : **estimation personnalisee** (empfohlen)\n\n**Nachste Termine :**\n- Donnerstag, 24. April — 8, 10, 14, 16 Uhr\n- Freitag, 25. April — 9, 11 Uhr\n\n**Ihr Fahrzeug :** HU fallig vor **15.09.2026**\n\n**Dauer :** ca. 45 Minuten\nFahrzeug noch am gleichen Tag abholbereit.",
     delay: 1800,
     quickReplies: [
       { label: "HU buchen", value: "wartung bestatigen" },
@@ -175,7 +175,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   lieferung: {
-    text: "**Lieferoptionen AutoPrestige** :\n\n**Im Autohaus :**\n- Personliche Ubergabe mit Ihrem Berater\n- Vollstandige Fahrzeugvorstellung (1 Std)\n- Einweisung + Konfiguration\n- Kostenlos\n\n**Nach Hause :**\n- Lieferung per Tieflader\n- Radius 100 km : **149 EUR**\n- Radius 200 km : **249 EUR**\n- Deutschlandweit : **auf Anfrage**\n\n**Lieferzeiten :**\n- Lagerfahrzeug : **48 - 72 Stunden**\n- Werksbestellung : **3 bis 6 Monate** je nach Modell\n\nUbergabe der Dokumente (Fahrzeugschein, Versicherung) am Liefertag.",
+    text: "**Lieferoptionen AutoPrestige** :\n\n**Im Autohaus :**\n- Personliche Ubergabe mit Ihrem Berater\n- Vollstandige Fahrzeugvorstellung (1 Std)\n- Einweisung + Konfiguration\n- Kostenlos\n\n**Nach Hause :**\n- Lieferung per Tieflader\n- Radius 100 km : **estimation personnalisee**\n- Radius 200 km : **estimation personnalisee**\n- Deutschlandweit : **auf Anfrage**\n\n**Lieferzeiten :**\n- Lagerfahrzeug : **48 - 72 Stunden**\n- Werksbestellung : **3 bis 6 Monate** je nach Modell\n\nUbergabe der Dokumente (Fahrzeugschein, Versicherung) am Liefertag.",
     delay: 2000,
     quickReplies: [
       { label: "Lieferung nach Hause", value: "lieferung" },

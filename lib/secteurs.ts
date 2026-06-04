@@ -432,7 +432,7 @@ export const SECTEUR_TRANSLATIONS: Record<string, Record<string, SecteurTranslat
       metaDescription: "Automatisez les réservations et commandes click & collect de votre restaurant sur WhatsApp. Zéro commission, clients fidélisés, salle toujours optimisée.",
       subtitle: "Gérez vos réservations, commandes click & collect et fidélisation client sans payer de commission à des plateformes tierces.",
       useCases: ["Réservations de table automatiques avec confirmation instantanée", "Commandes click & collect et livraison sans commission", "Relance automatique des clients inactifs avec offre personnalisée", "Gestion des menus, allergènes et plats du jour en temps réel", "Programme de fidélité et collecte d'avis Google"],
-      painPoint: "TheFork prend 2€ par couvert. Uber Eats 30% de commission. Vous n'avez aucun accès aux données de vos clients — et aucun moyen de les fidéliser directement.",
+      painPoint: "TheFork prend estimation personnalisee Uber Eats 30% de commission. Vous n'avez aucun accès aux données de vos clients — et aucun moyen de les fidéliser directement.",
       solution: "L'agent WhatsApp prend les réservations et commandes directement, sans intermédiaire. Vos clients vous appartiennent. Vous les relancez, vous les fidélisez, vous collectez les avis.",
       ctaText: "Voir une démo restaurant",
     },

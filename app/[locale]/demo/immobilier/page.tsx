@@ -83,7 +83,7 @@ const suggestedPhrases = [
   "Combien vaut mon bien ?",
   "Quels biens sont disponibles ?",
   "Je veux planifier une visite",
-  "Simuler un crédit de 300 000 EUR",
+  "Simuler un crédit de estimation personnalisee",
   "Quels documents pour acheter ?",
   "Quel est le DPE du bien ?",
   "Quels sont les frais de notaire ?",

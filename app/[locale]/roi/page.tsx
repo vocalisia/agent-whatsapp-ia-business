@@ -9,22 +9,22 @@ const META: Record<Locale, { title: string; description: string }> = {
   fr: {
     title: "Calculateur ROI Agent IA WhatsApp | Rentabilité chiffrée par PME",
     description:
-      "Calculez précisément combien vous rapporte un agent IA WhatsApp sur votre business. Gains moyens : 47K€/an. Audit gratuit + projection ROI 90 jours.",
+      "Calculez précisément combien vous rapporte un agent IA WhatsApp sur votre business. Gains moyens : 47Kvalue/an. Audit gratuit + projection ROI 90 jours.",
   },
   en: {
     title: "WhatsApp AI Agent ROI Calculator | Quantified SMB returns",
     description:
-      "Precisely calculate how much a WhatsApp AI agent can return on your business. Avg gains: €47K/year. Free audit + 90-day ROI projection.",
+      "Precisely calculate how much a WhatsApp AI agent can return on your business. Avg gains: estimation personnalisee Free audit + 90-day ROI projection.",
   },
   de: {
     title: "WhatsApp KI-Agent ROI-Rechner | Berechneter KMU-Gewinn",
     description:
-      "Berechnen Sie präzise, was ein WhatsApp-KI-Agent für Ihr Business bringt. Durchschnitt: 47.000€/Jahr. Kostenloses Audit + 90-Tage-ROI-Prognose.",
+      "Berechnen Sie präzise, was ein WhatsApp-KI-Agent für Ihr Business bringt. Durchschnitt: estimation personnalisee Kostenloses Audit + 90-Tage-ROI-Prognose.",
   },
   nl: {
     title: "WhatsApp AI-agent ROI-calculator | Becijferde KMO-winst",
     description:
-      "Bereken precies hoeveel een WhatsApp AI-agent oplevert op uw business. Gemiddeld: €47K/jaar. Gratis audit + 90-dagen ROI-projectie.",
+      "Bereken precies hoeveel een WhatsApp AI-agent oplevert op uw business. Gemiddeld: estimation personnalisee Gratis audit + 90-dagen ROI-projectie.",
   },
 };
 
@@ -32,16 +32,16 @@ const COPY: Record<Locale, LandingCopy> = {
   fr: {
     hero: {
       badge: "Pour PME perdant ≥ 10 leads/semaine",
-      title1: "Récupérez 47 000€/an",
+      title1: "Récupérez estimation personnalisee",
       title2: "que votre équipe laisse filer sur WhatsApp",
       subtitle:
-        "Chaque message sans réponse = 127€ de CA perdu. Notre IA répond à 100%, 24/7, qualifie vos leads et remplit votre agenda — pendant que vos concurrents dorment.",
+        "Chaque message sans réponse = estimation personnalisee de CA perdu. Notre IA répond à 100%, 24/7, qualifie vos leads et remplit votre agenda — pendant que vos concurrents dorment.",
       trust: ["ROI chiffré en 30 min", "Garantie 90 jours", "Déployé en 14 jours"],
     },
     painTitle: "Chiffrez ce que vous perdez vraiment chaque semaine",
     painItems: [
       {
-        title: "127€ par message ignoré",
+        title: "estimation personnalisee ignoré",
         desc: "Panier moyen × taux conversion moyen. Vos stats internes confirmeront. On le chiffre sur ton business.",
       },
       {
@@ -56,8 +56,8 @@ const COPY: Record<Locale, LandingCopy> = {
     valueTitle: "Le calcul simple qui change tout",
     valueItems: [
       {
-        title: "+127€ × 12 messages/jour",
-        desc: "Reprend les leads que votre équipe ignore. 1 524€/jour récupérés = 45 720€/an. Conservateur.",
+        title: "gain mesure × 12 messages/jour",
+        desc: "Reprend les leads que votre équipe ignore. estimation personnalisee récupérés = estimation personnalisee Conservateur.",
       },
       {
         title: "−23h/semaine équipe",
@@ -75,8 +75,8 @@ const COPY: Record<Locale, LandingCopy> = {
     faqTitle: "Réponses aux questions qui reviennent",
     faq: [
       {
-        q: "Le chiffre 47 000€/an, c'est réaliste ou du marketing ?",
-        a: "Conservateur. Calcul basé sur 50 messages/jour × 47% non traités × 127€ panier moyen. Nos clients dépassent souvent 70K€ la 1ère année. Ton chiffre sera calculé live sur TON business.",
+        q: "Le chiffre estimation personnalisee, c'est réaliste ou du marketing ?",
+        a: "Conservateur. Calcul basé sur 50 messages/jour × 47% non traités × estimation personnalisee panier moyen. Nos clients dépassent souvent 70Kvalue la 1ère année. Ton chiffre sera calculé live sur TON business.",
       },
       {
         q: "Comment ça se passe côté investissement ?",
@@ -91,7 +91,7 @@ const COPY: Record<Locale, LandingCopy> = {
         a: "Premiers RDV qualifiés dès J+14. ROI positif entre J+30 et J+60 selon volume. Dashboard temps réel pour suivre chaque euro.",
       },
     ],
-    finalCtaTitle: "Chaque jour qui passe = 127€ × nombre de leads ignorés",
+    finalCtaTitle: "Chaque jour qui passe = estimation personnalisee × nombre de leads ignorés",
     finalCtaDesc:
       "La calculette ROI est live sur ton business dans 30 minutes. Zéro engagement, zéro commercial agressif. Juste des chiffres.",
     finalCtaBtn: "Réserver mon calcul ROI",
@@ -99,16 +99,16 @@ const COPY: Record<Locale, LandingCopy> = {
   en: {
     hero: {
       badge: "For SMBs losing ≥ 10 leads/week",
-      title1: "Recover €47,000/year",
+      title1: "Recover estimation personnalisee",
       title2: "your team is losing on WhatsApp",
       subtitle:
-        "Every unanswered message = €127 in lost revenue. Our AI answers 100%, 24/7, qualifies leads and fills your calendar — while your competitors sleep.",
+        "Every unanswered message = estimation personnaliseein lost revenue. Our AI answers 100%, 24/7, qualifies leads and fills your calendar — while your competitors sleep.",
       trust: ["ROI quantified in 30 min", "90-day guarantee", "Live in 14 days"],
     },
     painTitle: "Let's quantify what you actually lose each week",
     painItems: [
       {
-        title: "€127 per ignored message",
+        title: "estimation personnalisee message",
         desc: "Average basket × average conversion rate. Your internals will confirm. We calculate it on your actual business.",
       },
       {
@@ -123,8 +123,8 @@ const COPY: Record<Locale, LandingCopy> = {
     valueTitle: "The simple math that changes everything",
     valueItems: [
       {
-        title: "+€127 × 12 msg/day",
-        desc: "Recovers leads your team ignores. €1,524/day recaptured = €45,720/year. Conservative estimate.",
+        title: "gain mesure× 12 msg/day",
+        desc: "Recovers leads your team ignores. estimation personnalisee recaptured = estimation personnalisee Conservative estimate.",
       },
       {
         title: "−23h/week team load",
@@ -142,8 +142,8 @@ const COPY: Record<Locale, LandingCopy> = {
     faqTitle: "Frequently asked questions",
     faq: [
       {
-        q: "€47K/year — real or marketing hype?",
-        a: "Conservative. Based on 50 msg/day × 47% ignored × €127 avg basket. Our clients often exceed €70K in year one. Your number will be live-calculated on YOUR business.",
+        q: "estimation personnalisee — real or marketing hype?",
+        a: "Conservative. Based on 50 msg/day × 47% ignored × estimation personnaliseeavg basket. Our clients often exceed estimation personnaliseein year one. Your number will be live-calculated on YOUR business.",
       },
       {
         q: "What about pricing?",
@@ -158,7 +158,7 @@ const COPY: Record<Locale, LandingCopy> = {
         a: "First qualified bookings from day 14. Positive ROI between day 30 and 60 based on volume. Real-time dashboard tracks every euro.",
       },
     ],
-    finalCtaTitle: "Every day that passes = €127 × ignored leads",
+    finalCtaTitle: "Every day that passes = estimation personnalisee× ignored leads",
     finalCtaDesc:
       "Live ROI calculator on your business in 30 minutes. Zero commitment, zero pushy sales. Just numbers.",
     finalCtaBtn: "Book my ROI calculation",
@@ -166,16 +166,16 @@ const COPY: Record<Locale, LandingCopy> = {
   de: {
     hero: {
       badge: "Für KMU mit ≥ 10 verlorenen Leads/Woche",
-      title1: "Holen Sie 47.000€/Jahr zurück",
+      title1: "Holen Sie estimation personnalisee zurück",
       title2: "die Ihr Team auf WhatsApp verliert",
       subtitle:
-        "Jede unbeantwortete Nachricht = 127€ verlorener Umsatz. Unsere KI antwortet zu 100%, 24/7, qualifiziert Leads und füllt Ihren Kalender — während Ihre Konkurrenten schlafen.",
+        "Jede unbeantwortete Nachricht = estimation personnalisee verlorener Umsatz. Unsere KI antwortet zu 100%, 24/7, qualifiziert Leads und füllt Ihren Kalender — während Ihre Konkurrenten schlafen.",
       trust: ["ROI in 30 Min. berechnet", "90-Tage-Garantie", "Live in 14 Tagen"],
     },
     painTitle: "Berechnen Sie, was Sie jede Woche wirklich verlieren",
     painItems: [
       {
-        title: "127€ pro ignorierter Nachricht",
+        title: "estimation personnalisee pro ignorierter Nachricht",
         desc: "Durchschnittswarenkorb × Conversion-Rate. Ihre internen Daten bestätigen es. Wir berechnen es live auf Ihr Business.",
       },
       {
@@ -190,8 +190,8 @@ const COPY: Record<Locale, LandingCopy> = {
     valueTitle: "Die einfache Rechnung, die alles ändert",
     valueItems: [
       {
-        title: "+127€ × 12 Nachrichten/Tag",
-        desc: "Holt Leads zurück, die Ihr Team ignoriert. 1.524€/Tag = 45.720€/Jahr. Konservativ.",
+        title: "gain mesure × 12 Nachrichten/Tag",
+        desc: "Holt Leads zurück, die Ihr Team ignoriert. estimation personnalisee = estimation personnalisee Konservativ.",
       },
       {
         title: "−23 Std./Woche Teamlast",
@@ -209,8 +209,8 @@ const COPY: Record<Locale, LandingCopy> = {
     faqTitle: "Häufige Fragen",
     faq: [
       {
-        q: "Die 47.000€/Jahr — realistisch oder Marketing?",
-        a: "Konservativ. Basis: 50 Nachrichten/Tag × 47% ignoriert × 127€ Warenkorb. Unsere Kunden überschreiten oft 70K€ im 1. Jahr. Ihre Zahl wird live auf IHR Business berechnet.",
+        q: "Die estimation personnalisee — realistisch oder Marketing?",
+        a: "Konservativ. Basis: 50 Nachrichten/Tag × 47% ignoriert × estimation personnalisee Warenkorb. Unsere Kunden überschreiten oft 70Kvalue im 1. Jahr. Ihre Zahl wird live auf IHR Business berechnet.",
       },
       {
         q: "Wie läuft es preislich ab?",
@@ -225,7 +225,7 @@ const COPY: Record<Locale, LandingCopy> = {
         a: "Erste qualifizierte Termine ab Tag 14. Positiver ROI zwischen Tag 30 und 60. Echtzeit-Dashboard.",
       },
     ],
-    finalCtaTitle: "Jeder Tag = 127€ × ignorierte Leads",
+    finalCtaTitle: "Jeder Tag = estimation personnalisee × ignorierte Leads",
     finalCtaDesc:
       "Live-ROI-Kalkulation auf Ihr Business in 30 Min. Null Verpflichtung. Nur Zahlen.",
     finalCtaBtn: "ROI-Berechnung buchen",
@@ -233,16 +233,16 @@ const COPY: Record<Locale, LandingCopy> = {
   nl: {
     hero: {
       badge: "Voor KMO's met ≥ 10 verloren leads/week",
-      title1: "Recupereer €47.000/jaar",
+      title1: "Recupereer estimation personnalisee",
       title2: "die uw team verliest op WhatsApp",
       subtitle:
-        "Elk onbeantwoord bericht = €127 verloren omzet. Onze AI antwoordt 100%, 24/7, kwalificeert leads en vult uw agenda — terwijl uw concurrenten slapen.",
+        "Elk onbeantwoord bericht = estimation personnaliseeverloren omzet. Onze AI antwoordt 100%, 24/7, kwalificeert leads en vult uw agenda — terwijl uw concurrenten slapen.",
       trust: ["ROI becijferd in 30 min", "90-dagen garantie", "Live in 14 dagen"],
     },
     painTitle: "Becijfer wat u echt elke week verliest",
     painItems: [
       {
-        title: "€127 per genegeerd bericht",
+        title: "estimation personnalisee bericht",
         desc: "Gemiddelde mand × conversieratio. Uw data bevestigt. We becijferen het op uw echte business.",
       },
       {
@@ -257,8 +257,8 @@ const COPY: Record<Locale, LandingCopy> = {
     valueTitle: "De simpele berekening die alles verandert",
     valueItems: [
       {
-        title: "+€127 × 12 berichten/dag",
-        desc: "Haalt genegeerde leads terug. €1.524/dag = €45.720/jaar. Conservatief.",
+        title: "gain mesure× 12 berichten/dag",
+        desc: "Haalt genegeerde leads terug. estimation personnalisee = estimation personnalisee Conservatief.",
       },
       {
         title: "−23u/week teamlast",
@@ -276,8 +276,8 @@ const COPY: Record<Locale, LandingCopy> = {
     faqTitle: "Veelgestelde vragen",
     faq: [
       {
-        q: "€47K/jaar — realistisch of marketing?",
-        a: "Conservatief. Basis: 50 berichten/dag × 47% genegeerd × €127 mand. Onze klanten overschrijden vaak €70K in jaar 1. Uw cijfer wordt live berekend op UW business.",
+        q: "estimation personnalisee — realistisch of marketing?",
+        a: "Conservatief. Basis: 50 berichten/dag × 47% genegeerd × estimation personnaliseemand. Onze klanten overschrijden vaak estimation personnaliseein jaar 1. Uw cijfer wordt live berekend op UW business.",
       },
       {
         q: "Hoe zit het met de prijs?",
@@ -292,7 +292,7 @@ const COPY: Record<Locale, LandingCopy> = {
         a: "Eerste gekwalificeerde boekingen vanaf dag 14. Positieve ROI tussen dag 30 en 60. Real-time dashboard.",
       },
     ],
-    finalCtaTitle: "Elke dag = €127 × genegeerde leads",
+    finalCtaTitle: "Elke dag = estimation personnalisee× genegeerde leads",
     finalCtaDesc: "Live ROI-calculator op uw business in 30 min. Nul engagement. Enkel cijfers.",
     finalCtaBtn: "ROI-berekening boeken",
   },

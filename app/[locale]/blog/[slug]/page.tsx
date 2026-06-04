@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllSlugs, getAllPosts, getPostBySlug } from "@/lib/mdx";
+import { getAllSlugs, getAllPosts, getPostBySlug, isBlockedPricingSlug } from "@/lib/mdx";
 import { normalizeBlogMarkdownHref } from "@/lib/normalize-blog-href";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -19,6 +19,17 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
   try {
     const { slug, locale } = await params;
+    if (isBlockedPricingSlug(slug)) {
+      return {
+        robots: {
+          index: false,
+          follow: true,
+        },
+        alternates: {
+          canonical: `https://agentic-whatsup.com/${locale}/contact`,
+        },
+      };
+    }
     const { meta } = getPostBySlug(slug, locale);
     return {
       title: meta.title,
@@ -48,6 +59,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params;
+  if (isBlockedPricingSlug(slug)) {
+    notFound();
+  }
   const t = await getTranslations({ locale, namespace: "blog" });
   const allPosts = getAllPosts(locale);
 
@@ -132,10 +146,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   function stripMd(s: string): string {
     return s
       .replace(/^#{1,6}\s+/gm, "")
-      .replace(/\*\*([^*]+)\*\*/g, "$1")
-      .replace(/\*([^*]+)\*/g, "$1")
-      .replace(/`([^`]+)`/g, "$1")
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+      .replace(/\*\*([^*]+)\*\*/g, "estimation personnalisee")
+      .replace(/\*([^*]+)\*/g, "estimation personnalisee")
+      .replace(/`([^`]+)`/g, "estimation personnalisee")
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, "estimation personnalisee")
       .replace(/\s+/g, " ")
       .trim();
   }

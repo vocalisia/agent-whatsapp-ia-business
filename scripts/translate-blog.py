@@ -128,7 +128,7 @@ def translate_article(fr_content: str, target_lang_name: str, target_locale: str
 - Any /fr/... link -> /{target_locale}/... (replace locale prefix only).
 - Tone: expert, data-driven, actionable.
 - Brand: "AgenticWhatsup" stays unchanged in every language.
-- Currency: keep € for all locales (EU consistency).
+- Public pricing: do not preserve visible currency symbols or pricing amounts; replace pricing examples with a contact/audit-oriented wording.
 - Numbers, stats, company names, proper nouns: keep identical.
 
 OUTPUT RULES:

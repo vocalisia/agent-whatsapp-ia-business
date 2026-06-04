@@ -15,7 +15,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   "recherche bien": {
-    text: "Parfait, lancons votre recherche personnalisee.\n\nPour vous proposer les meilleurs biens, j'ai besoin de quelques criteres :\n\n**Budget :** Quel est votre budget max ?\n**Type :** Appartement, maison, villa, loft ?\n**Surface :** Combien de m2 minimum ?\n**Localisation :** Quelle ville ou quartier ?\n**Chambres :** Combien de chambres ?\n\nPar exemple : *\"Appartement 3 pieces, 80m2, Paris 16e, budget 600 000 EUR\"*",
+    text: "Parfait, lancons votre recherche personnalisee.\n\nPour vous proposer les meilleurs biens, j'ai besoin de quelques criteres :\n\n**Budget :** Quel est votre budget max ?\n**Type :** Appartement, maison, villa, loft ?\n**Surface :** Combien de m2 minimum ?\n**Localisation :** Quelle ville ou quartier ?\n**Chambres :** Combien de chambres ?\n\nPar exemple : *\"Appartement 3 pieces, 80m2, Paris 16e, budget estimation personnalisee\"*",
     delay: 2000,
     quickReplies: [
       { label: "Appart Paris < 500K", value: "disponibilites" },
@@ -54,7 +54,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   financement: {
-    text: "**Simulation de credit immobilier**\n\nParametres par defaut :\n- Taux : 3.45% sur 25 ans\n- Apport recommande : 10% minimum\n- Assurance : 0.34%/an\n\n**Exemple pour 300 000 EUR :**\n- Mensualite : 1 487 EUR / mois\n- Cout total du credit : 146 100 EUR\n- Apport minimum : 30 000 EUR\n\nNos **banques partenaires** : Credit Agricole, BNP Paribas, Boursorama, LCL\n\nIndiquez votre budget et je simule pour vous !",
+    text: "**Simulation de credit immobilier**\n\nParametres par defaut :\n- Taux : 3.45% sur 25 ans\n- Apport recommande : 10% minimum\n- Assurance : 0.34%/an\n\n**Exemple pour estimation personnalisee :**\n- Mensualite : estimation personnalisee\n- Cout total du credit : estimation personnalisee\n- Apport minimum : estimation personnalisee\n\nNos **banques partenaires** : Credit Agricole, BNP Paribas, Boursorama, LCL\n\nIndiquez votre budget et je simule pour vous !",
     delay: 2000,
     quickReplies: [
       { label: "Simuler 250K", value: "financement" },
@@ -94,7 +94,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   disponibilites: {
-    text: "**Biens disponibles correspondant a vos criteres :**\n\n1. **Appart T3 - Paris 11e** - 72m2\n   Prix : 485 000 EUR | 6 736 EUR/m2\n   2 ch, balcon, cave, refait neuf\n\n2. **Maison T5 - Vincennes** - 130m2\n   Prix : 890 000 EUR | jardin 200m2\n   4 ch, garage, proche RER A\n\n3. **Studio - Paris 5e** - 28m2\n   Prix : 245 000 EUR | ideal investissement\n   Rendement locatif : 4.2%\n\n4. **Loft - Montreuil** - 95m2\n   Prix : 520 000 EUR | style industriel\n   Terrasse 30m2, parking\n\n5 autres biens disponibles. Lequel vous interesse ?",
+    text: "**Biens disponibles correspondant a vos criteres :**\n\n1. **Appart T3 - Paris 11e** - 72m2\n   Prix : estimation personnalisee | estimation personnalisee\n   2 ch, balcon, cave, refait neuf\n\n2. **Maison T5 - Vincennes** - 130m2\n   Prix : estimation personnalisee | jardin 200m2\n   4 ch, garage, proche RER A\n\n3. **Studio - Paris 5e** - 28m2\n   Prix : estimation personnalisee | ideal investissement\n   Rendement locatif : 4.2%\n\n4. **Loft - Montreuil** - 95m2\n   Prix : estimation personnalisee | style industriel\n   Terrasse 30m2, parking\n\n5 autres biens disponibles. Lequel vous interesse ?",
     delay: 2200,
     quickReplies: [
       { label: "Voir le T3 Paris 11e", value: "visite" },
@@ -124,7 +124,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   investissement: {
-    text: "**Opportunites d'investissement locatif**\n\n**Top 3 du mois :**\n\n1. **Studio Paris 18e** - 22m2 - 195 000 EUR\n   Loyer estime : 750 EUR/mois\n   Rendement brut : **4.6%**\n\n2. **T2 Lyon 7e** - 42m2 - 185 000 EUR\n   Loyer estime : 680 EUR/mois\n   Rendement brut : **4.4%**\n\n3. **T1 Bordeaux** - 30m2 - 155 000 EUR\n   Loyer estime : 580 EUR/mois\n   Rendement brut : **4.5%**\n\nNous analysons : rendement, fiscalite (LMNP, Pinel), valorisation, demande locative.\n\nQuel type d'investissement vous interesse ?",
+    text: "**Opportunites d'investissement locatif**\n\n**Top 3 du mois :**\n\n1. **Studio Paris 18e** - 22m2 - estimation personnalisee\n   Loyer estime : estimation personnalisee\n   Rendement brut : **4.6%**\n\n2. **T2 Lyon 7e** - 42m2 - estimation personnalisee\n   Loyer estime : estimation personnalisee\n   Rendement brut : **4.4%**\n\n3. **T1 Bordeaux** - 30m2 - estimation personnalisee\n   Loyer estime : estimation personnalisee\n   Rendement brut : **4.5%**\n\nNous analysons : rendement, fiscalite (LMNP, Pinel), valorisation, demande locative.\n\nQuel type d'investissement vous interesse ?",
     delay: 2200,
     quickReplies: [
       { label: "LMNP meuble", value: "investissement" },
@@ -134,7 +134,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   location: {
-    text: "**Recherche de location**\n\nBiens en location disponibles :\n\n1. **T2 meuble - Paris 10e** - 45m2\n   Loyer : 1 250 EUR/mois CC\n   Libre au 1er mai\n\n2. **T3 vide - Lyon 3e** - 68m2\n   Loyer : 950 EUR/mois HC\n   Libre immediatement\n\n3. **Studio - Marseille 6e** - 25m2\n   Loyer : 550 EUR/mois CC\n   Libre au 15 mai\n\n**Dossier locataire :** 3 fiches de paie, avis d'imposition, piece d'identite, garant (ou garantie Visale).\n\nQuel bien vous interesse ?",
+    text: "**Recherche de location**\n\nBiens en location disponibles :\n\n1. **T2 meuble - Paris 10e** - 45m2\n   Loyer : estimation personnalisee CC\n   Libre au 1er mai\n\n2. **T3 vide - Lyon 3e** - 68m2\n   Loyer : estimation personnalisee HC\n   Libre immediatement\n\n3. **Studio - Marseille 6e** - 25m2\n   Loyer : estimation personnalisee CC\n   Libre au 15 mai\n\n**Dossier locataire :** 3 fiches de paie, avis d'imposition, piece d'identite, garant (ou garantie Visale).\n\nQuel bien vous interesse ?",
     delay: 2000,
     quickReplies: [
       { label: "Visiter le T2 Paris", value: "visite" },
@@ -144,7 +144,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   dpe: {
-    text: "**Diagnostics immobiliers obligatoires**\n\n**DPE (Diagnostic de Performance Energetique) :**\n- Classe A a G (F et G = passoires thermiques)\n- Obligatoire pour vente ET location\n- Validite : 10 ans\n\n**Autres diagnostics requis :**\n- Amiante (avant 1997)\n- Plomb (avant 1949)\n- Electricite / Gaz (> 15 ans)\n- Termites (zones a risque)\n- ERP (risques naturels)\n- Superficie Carrez\n- Assainissement\n\n**Cout moyen pack complet :** 350 - 600 EUR\n\nNos diagnostiqueurs partenaires interviennent sous 48h.",
+    text: "**Diagnostics immobiliers obligatoires**\n\n**DPE (Diagnostic de Performance Energetique) :**\n- Classe A a G (F et G = passoires thermiques)\n- Obligatoire pour vente ET location\n- Validite : 10 ans\n\n**Autres diagnostics requis :**\n- Amiante (avant 1997)\n- Plomb (avant 1949)\n- Electricite / Gaz (> 15 ans)\n- Termites (zones a risque)\n- ERP (risques naturels)\n- Superficie Carrez\n- Assainissement\n\n**Cout moyen pack complet :** 350 - estimation personnalisee\n\nNos diagnostiqueurs partenaires interviennent sous 48h.",
     delay: 2000,
     quickReplies: [
       { label: "Prendre RDV diagnostic", value: "rdv agent" },
@@ -164,7 +164,7 @@ const IMMOBILIER_INTENTS = {
     ],
   },
   frais: {
-    text: "**Decomposition des frais d'achat**\n\n**Pour un bien a 400 000 EUR :**\n\n- **Frais de notaire** : ~32 000 EUR (8%)\n  - Droits de mutation : 22 600 EUR\n  - Emoluments notaire : 3 945 EUR\n  - Frais divers : 5 455 EUR\n\n- **Frais d'agence** : 15 200 EUR (3.8%)\n  *(inclus dans le prix affiche)*\n\n- **Frais de garantie** : ~4 000 EUR\n- **Frais de dossier banque** : ~1 000 EUR\n\n**Total a prevoir : ~437 000 EUR**\n\nBien neuf = frais reduits (~3% au lieu de 8%).",
+    text: "**Decomposition des frais d'achat**\n\n**Pour un bien a estimation personnalisee :**\n\n- **Frais de notaire** : audit gratuit (8%)\n  - Droits de mutation : estimation personnalisee\n  - Emoluments notaire : estimation personnalisee\n  - Frais divers : estimation personnalisee\n\n- **Frais d'agence** : estimation personnalisee (3.8%)\n  *(inclus dans le prix affiche)*\n\n- **Frais de garantie** : audit gratuit\n- **Frais de dossier banque** : audit gratuit\n\n**Total a prevoir : audit gratuit**\n\nBien neuf = frais reduits (~3% au lieu de 8%).",
     delay: 2000,
     quickReplies: [
       { label: "Simuler credit total", value: "financement" },

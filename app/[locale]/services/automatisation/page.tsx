@@ -34,7 +34,7 @@ const t: Record<string, {
     howTitle: "Comment ça fonctionne",
     steps: [
       { num: "01", title: "Choisissez un déclencheur", desc: "Nouvelle commande, RDV pris, panier abandonné, formulaire rempli, tag CRM modifié... Choisissez l'événement qui lance votre séquence.", example: "Ex: commande passée sur Shopify" },
-      { num: "02", title: "Définissez vos conditions", desc: "Filtrez selon le montant, la zone géographique, le statut client, le type de produit. Seuls les bons clients reçoivent le bon message.", example: "Ex: montant > 50€ ET première commande" },
+      { num: "02", title: "Définissez vos conditions", desc: "Filtrez selon le montant, la zone géographique, le statut client, le type de produit. Seuls les bons clients reçoivent le bon message.", example: "Ex: montant > estimation personnalisee ET première commande" },
       { num: "03", title: "Configurez vos actions", desc: "Message WhatsApp, délai d'attente, mise à jour CRM, notification d'équipe, lien de paiement — enchaînez autant d'étapes que nécessaire.", example: "Ex: envoyer confirmation + attendre 2j + envoyer avis" },
       { num: "04", title: "Activez et oubliez", desc: "L'agent IA exécute votre workflow 24h/24 sans intervention. Vous suivez les résultats en temps réel dans votre dashboard.", example: "Ex: 340 workflows exécutés ce mois" },
     ],
@@ -123,7 +123,7 @@ const t: Record<string, {
     howTitle: "How it works",
     steps: [
       { num: "01", title: "Choose a trigger", desc: "New order, appointment booked, abandoned cart, form filled, CRM tag changed... Choose the event that starts your sequence.", example: "E.g.: order placed on Shopify" },
-      { num: "02", title: "Set your conditions", desc: "Filter by amount, region, customer status, product type. Only the right customers receive the right message.", example: "E.g.: amount > €50 AND first order" },
+      { num: "02", title: "Set your conditions", desc: "Filter by amount, region, customer status, product type. Only the right customers receive the right message.", example: "E.g.: amount > estimation personnaliseeAND first order" },
       { num: "03", title: "Configure your actions", desc: "WhatsApp message, wait delay, CRM update, team notification, payment link — chain as many steps as needed.", example: "E.g.: send confirmation + wait 2d + send review request" },
       { num: "04", title: "Activate and forget", desc: "The AI agent runs your workflow 24/7 without intervention. Track results in real time on your dashboard.", example: "E.g.: 340 workflows executed this month" },
     ],
@@ -212,7 +212,7 @@ const t: Record<string, {
     howTitle: "So funktioniert es",
     steps: [
       { num: "01", title: "Trigger wählen", desc: "Neue Bestellung, Termin gebucht, verlassener Warenkorb, ausgefülltes Formular, CRM-Tag geändert... Wählen Sie das Ereignis, das Ihre Sequenz startet.", example: "Z.B.: Bestellung auf Shopify aufgegeben" },
-      { num: "02", title: "Bedingungen festlegen", desc: "Filtern nach Betrag, Region, Kundenstatus, Produkttyp. Nur die richtigen Kunden erhalten die richtige Nachricht.", example: "Z.B.: Betrag > 50€ UND Erstbestellung" },
+      { num: "02", title: "Bedingungen festlegen", desc: "Filtern nach Betrag, Region, Kundenstatus, Produkttyp. Nur die richtigen Kunden erhalten die richtige Nachricht.", example: "Z.B.: Betrag > estimation personnalisee UND Erstbestellung" },
       { num: "03", title: "Aktionen konfigurieren", desc: "WhatsApp-Nachricht, Wartezeit, CRM-Update, Team-Benachrichtigung, Zahlungslink — verketten Sie so viele Schritte wie nötig.", example: "Z.B.: Bestätigung senden + 2 Tage warten + Bewertung anfragen" },
       { num: "04", title: "Aktivieren und vergessen", desc: "Der KI-Agent führt Ihren Workflow 24/7 ohne Eingriff aus. Verfolgen Sie die Ergebnisse in Echtzeit.", example: "Z.B.: 340 Workflows diesen Monat ausgeführt" },
     ],
@@ -301,7 +301,7 @@ const t: Record<string, {
     howTitle: "Hoe het werkt",
     steps: [
       { num: "01", title: "Kies een trigger", desc: "Nieuwe bestelling, afspraak gemaakt, verlaten winkelwagen, ingevuld formulier, CRM-tag gewijzigd... Kies het evenement dat uw sequentie start.", example: "Bijv.: bestelling geplaatst op Shopify" },
-      { num: "02", title: "Stel uw voorwaarden in", desc: "Filter op bedrag, regio, klantstatus, producttype. Alleen de juiste klanten ontvangen het juiste bericht.", example: "Bijv.: bedrag > €50 EN eerste bestelling" },
+      { num: "02", title: "Stel uw voorwaarden in", desc: "Filter op bedrag, regio, klantstatus, producttype. Alleen de juiste klanten ontvangen het juiste bericht.", example: "Bijv.: bedrag > estimation personnaliseeEN eerste bestelling" },
       { num: "03", title: "Configureer uw acties", desc: "WhatsApp-bericht, wachttijd, CRM-update, teammelding, betaallink — koppel zoveel stappen als nodig.", example: "Bijv.: bevestiging sturen + 2 dagen wachten + review vragen" },
       { num: "04", title: "Activeer en vergeet", desc: "De AI-agent voert uw workflow 24/7 uit zonder tussenkomst. Volg resultaten in realtime op uw dashboard.", example: "Bijv.: 340 workflows uitgevoerd deze maand" },
     ],
@@ -436,10 +436,49 @@ export default async function AutomatisationPage({ params }: { params: Promise<{
     url: `https://agentic-whatsup.com/${locale}/services/automatisation`,
     provider: { "@type": "Organization", name: "AgenticWhatsup", url: "https://agentic-whatsup.com" },
   };
+  const pageUrl = `https://agentic-whatsup.com/${locale}/services/automatisation`;
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${pageUrl}#howto`,
+    name: c.howTitle,
+    description: (meta[locale] ?? meta.fr).description,
+    step: c.steps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.title,
+      text: `${step.desc} ${step.example}`,
+      url: pageUrl,
+    })),
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: locale === "fr" ? "Comment creer un workflow WhatsApp sans code ?" : locale === "de" ? "Wie erstellt man einen WhatsApp-Workflow ohne Code?" : locale === "nl" ? "Hoe maak je een WhatsApp-workflow zonder code?" : "How do you create a no-code WhatsApp workflow?",
+        acceptedAnswer: { "@type": "Answer", text: c.steps.map((step) => `${step.title}: ${step.desc}`).join(" ") },
+      },
+      {
+        "@type": "Question",
+        name: locale === "fr" ? "Quels workflows WhatsApp sont prets a l'emploi ?" : locale === "de" ? "Welche WhatsApp-Workflows sind sofort einsatzbereit?" : locale === "nl" ? "Welke WhatsApp-workflows zijn kant-en-klaar?" : "Which WhatsApp workflows are ready to use?",
+        acceptedAnswer: { "@type": "Answer", text: c.usecases.map((usecase) => `${usecase.title}: ${usecase.desc}`).join(" ") },
+      },
+      {
+        "@type": "Question",
+        name: locale === "fr" ? "Que comprend l'automatisation WhatsApp ?" : locale === "de" ? "Was umfasst die WhatsApp-Automatisierung?" : locale === "nl" ? "Wat omvat WhatsApp-automatisering?" : "What does WhatsApp automation include?",
+        acceptedAnswer: { "@type": "Answer", text: c.features.join(", ") },
+      },
+    ],
+  };
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <div className="relative mb-20">

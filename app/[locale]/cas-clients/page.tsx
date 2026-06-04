@@ -513,12 +513,37 @@ export default async function CasClientsPage({ params }: { params: Promise<{ loc
       { "@type": "ListItem", "position": 2, "name": c.casesTitle, "item": pageUrl },
     ],
   };
+  const faqItems = [
+    {
+      q: locale === "fr" ? "Quels resultats les clients AgenticWhatsup obtiennent-ils ?" : locale === "de" ? "Welche Ergebnisse erzielen AgenticWhatsup-Kunden?" : locale === "nl" ? "Welke resultaten behalen AgenticWhatsup-klanten?" : "What results do AgenticWhatsup clients achieve?",
+      a: c.globalStats.map((stat) => `${stat.value} ${stat.label}`).join(". "),
+    },
+    {
+      q: locale === "fr" ? "Quels secteurs sont couverts par ces cas clients ?" : locale === "de" ? "Welche Branchen decken diese Kundenfaelle ab?" : locale === "nl" ? "Welke sectoren worden door deze klantcases gedekt?" : "Which industries are covered by these client cases?",
+      a: c.cases.map((cas) => cas.sector).join(", "),
+    },
+    {
+      q: locale === "fr" ? "Comment estimer le ROI potentiel de mon agent WhatsApp ?" : locale === "de" ? "Wie schaetze ich den potenziellen ROI meines WhatsApp-Agenten?" : locale === "nl" ? "Hoe schat ik de potentiele ROI van mijn WhatsApp-agent?" : "How can I estimate the potential ROI of my WhatsApp agent?",
+      a: c.roiItems.map((item) => `${item.label}: ${item.value}`).join(". "),
+    },
+  ];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <div className="text-center mb-16">

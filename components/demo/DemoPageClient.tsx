@@ -218,7 +218,7 @@ export default function DemoPageClient() {
               <button
                 key={key}
                 onClick={() => setActiveSector(key)}
-                className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-200 ${
+                className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-300 ${
                   activeSector === key
                     ? 'bg-wa text-white shadow-lg shadow-wa/20'
                     : 'bg-surface border border-surface-3 text-slate-400 hover:border-wa/30 hover:text-white'

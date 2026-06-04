@@ -36,7 +36,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "schade water": {
-    text: "**Waterschade — Stap 2/4**\n\nVoor de verwerking van uw aangifte:\n\n1️⃣ Oorsprong van het lek (dak, leiding, buurman...)\n2️⃣ Getroffen ruimten\n3️⃣ Schatting van de schade\n4️⃣ Schadeformulier ingevuld met buurman?\n\n📝 Vergeet niet het **schadeformulier** in te vullen met uw buurman indien van toepassing.\n\nUw woonverzekeringspolis **WON-7821** dekt waterschade tot **15.000 EUR**.",
+    text: "**Waterschade — Stap 2/4**\n\nVoor de verwerking van uw aangifte:\n\n1️⃣ Oorsprong van het lek (dak, leiding, buurman...)\n2️⃣ Getroffen ruimten\n3️⃣ Schatting van de schade\n4️⃣ Schadeformulier ingevuld met buurman?\n\n📝 Vergeet niet het **schadeformulier** in te vullen met uw buurman indien van toepassing.\n\nUw woonverzekeringspolis **WON-7821** dekt waterschade tot **estimation personnalisee**.",
     delay: 2000,
     quickReplies: [
       { label: "📷 Foto sturen", value: "foto schade" },
@@ -46,7 +46,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "schade brand": {
-    text: "**Brand — Dringende aangifte**\n\n🚨 Als de brand nog gaande is, bel onmiddellijk **112**.\n\nEenmaal in veiligheid:\n1️⃣ Raak niets aan voor de expert langskomt\n2️⃣ Bewaar beschadigde voorwerpen\n3️⃣ Maak foto's van alle schade\n\nUw polis dekt brandschade tot **150.000 EUR** (nieuwwaarde).\n\nEen expert wordt binnen **48u** aangesteld.",
+    text: "**Brand — Dringende aangifte**\n\n🚨 Als de brand nog gaande is, bel onmiddellijk **112**.\n\nEenmaal in veiligheid:\n1️⃣ Raak niets aan voor de expert langskomt\n2️⃣ Bewaar beschadigde voorwerpen\n3️⃣ Maak foto's van alle schade\n\nUw polis dekt brandschade tot **estimation personnalisee** (nieuwwaarde).\n\nEen expert wordt binnen **48u** aangesteld.",
     delay: 2200,
     quickReplies: [
       { label: "🆘 Dringende hulp", value: "noodgeval" },
@@ -65,7 +65,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "foto schade": {
-    text: "📷 **AI fotoanalyse**\n\nStuur me een foto van de schade en onze AI analyseert:\n\n• **Type schade** automatisch gedetecteerd\n• **Ernst** geschat (licht / matig / ernstig)\n• **Reparatiekosten** geschat\n• **Dekking** toepasbaar op uw polis\n\n---\n*Simulatie:* 🔍 Analyse bezig...\n\n✅ **Resultaat**:\n• Type: Achterbumper botsing\n• Ernst: Matig\n• Schatting: **1.200 EUR - 1.800 EUR**\n• Eigen risico: **300 EUR**\n• Geschatte vergoeding: **900 EUR - 1.500 EUR**\n\nWilt u deze aangifte bevestigen?",
+    text: "📷 **AI fotoanalyse**\n\nStuur me een foto van de schade en onze AI analyseert:\n\n• **Type schade** automatisch gedetecteerd\n• **Ernst** geschat (licht / matig / ernstig)\n• **Reparatiekosten** geschat\n• **Dekking** toepasbaar op uw polis\n\n---\n*Simulatie:* 🔍 Analyse bezig...\n\n✅ **Resultaat**:\n• Type: Achterbumper botsing\n• Ernst: Matig\n• Schatting: **estimation personnalisee value**\n• Eigen risico: **estimation personnalisee**\n• Geschatte vergoeding: **estimation personnalisee value**\n\nWilt u deze aangifte bevestigen?",
     delay: 3000,
     quickReplies: [
       { label: "✅ Aangifte bevestigen", value: "schade melden" },
@@ -75,7 +75,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "dossier opvolging": {
-    text: "📊 **Opvolging van uw dossiers**\n\nHier is de status van uw lopende dossiers:\n\n**1. SCH-2026-03-6529** — Waterschade\n• Status: 🟢 Expert aangesteld\n• Afspraak expert: 22/04/2026 om 10u\n• Schatting: 3.200 EUR\n\n**2. SCH-2026-01-4102** — Glasbreuk\n• Status: ✅ Afgesloten — Vergoed\n• Uitgekeerd bedrag: 450 EUR\n• Datum overschrijving: 18/02/2026\n\nVoor een specifiek dossier, stuur me het **referentienummer** (bijv.: SCH-2026-XXXX).",
+    text: "📊 **Opvolging van uw dossiers**\n\nHier is de status van uw lopende dossiers:\n\n**1. SCH-2026-03-6529** — Waterschade\n• Status: 🟢 Expert aangesteld\n• Afspraak expert: 22/04/2026 om 10u\n• Schatting: estimation personnalisee\n\n**2. SCH-2026-01-4102** — Glasbreuk\n• Status: ✅ Afgesloten — Vergoed\n• Uitgekeerd bedrag: estimation personnalisee\n• Datum overschrijving: 18/02/2026\n\nVoor een specifiek dossier, stuur me het **referentienummer** (bijv.: SCH-2026-XXXX).",
     delay: 2500,
     quickReplies: [
       { label: "Details dossier 6529", value: "dossier opvolging" },
@@ -85,7 +85,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   offerte: {
-    text: "💰 **Directe offerte**\n\nWelk type verzekering interesseert u?\n\n🚗 **Auto** — Vanaf 28 EUR/maand\n🏠 **Woning** — Vanaf 12 EUR/maand\n🏥 **Ziektekosten** — Vanaf 35 EUR/maand\n💼 **Bedrijf / BA** — Vanaf 19 EUR/maand\n✈️ **Reis** — Vanaf 8 EUR/reis\n\nIk bereken uw persoonlijk tarief in 2 minuten!",
+    text: "💰 **Directe offerte**\n\nWelk type verzekering interesseert u?\n\n🚗 **Auto** — Vanaf estimation personnalisee\n🏠 **Woning** — Vanaf estimation personnalisee\n🏥 **Ziektekosten** — Vanaf estimation personnalisee\n💼 **Bedrijf / BA** — Vanaf estimation personnalisee\n✈️ **Reis** — Vanaf estimation personnalisee\n\nIk bereken uw persoonlijk tarief in 2 minuten!",
     delay: 1800,
     quickReplies: [
       { label: "🚗 Auto offerte", value: "offerte auto" },
@@ -95,7 +95,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "offerte auto": {
-    text: "🚗 **Snelle Auto Offerte**\n\nVoor uw tarief heb ik nodig:\n\n1️⃣ Merk en model van het voertuig\n2️⃣ Bouwjaar\n3️⃣ Jaarlijks kilometerstand\n4️⃣ Datum rijbewijs\n5️⃣ Huidige bonus-malus\n\n---\n*Simulatie*:\n\n✅ **Renault Clio V (2023)**\n• WA+: **32 EUR/maand**\n• All-risk: **48 EUR/maand**\n• Bonus 0.50 toegepast\n• Eigen risico: 300 EUR (WA+) / 150 EUR (AR)\n\n🌟 *-15% bij online afsluiting!*",
+    text: "🚗 **Snelle Auto Offerte**\n\nVoor uw tarief heb ik nodig:\n\n1️⃣ Merk en model van het voertuig\n2️⃣ Bouwjaar\n3️⃣ Jaarlijks kilometerstand\n4️⃣ Datum rijbewijs\n5️⃣ Huidige bonus-malus\n\n---\n*Simulatie*:\n\n✅ **Renault Clio V (2023)**\n• WA+: **estimation personnalisee**\n• All-risk: **estimation personnalisee**\n• Bonus 0.50 toegepast\n• Eigen risico: estimation personnalisee (WA+) / estimation personnalisee (AR)\n\n🌟 *-15% bij online afsluiting!*",
     delay: 2500,
     quickReplies: [
       { label: "✅ Online afsluiten", value: "polis" },
@@ -105,7 +105,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "offerte woning": {
-    text: "🏠 **Snelle Woning Offerte**\n\nEnkele gegevens voor uw tarief:\n\n1️⃣ Type (appartement / huis)\n2️⃣ Oppervlakte in m²\n3️⃣ Aantal kamers\n4️⃣ Eigenaar of huurder\n5️⃣ Alarmsysteem aanwezig?\n\n---\n*Simulatie*: Appartement 3-kamer, 65m², huurder\n\n✅ **Basis formule**: 14 EUR/maand\n✅ **Comfort formule**: 22 EUR/maand\n✅ **Premium formule**: 31 EUR/maand\n\nInbegrepen dekkingen: waterschade, brand, diefstal, BA.",
+    text: "🏠 **Snelle Woning Offerte**\n\nEnkele gegevens voor uw tarief:\n\n1️⃣ Type (appartement / huis)\n2️⃣ Oppervlakte in m²\n3️⃣ Aantal kamers\n4️⃣ Eigenaar of huurder\n5️⃣ Alarmsysteem aanwezig?\n\n---\n*Simulatie*: Appartement 3-kamer, 65m², huurder\n\n✅ **Basis formule**: estimation personnalisee\n✅ **Comfort formule**: estimation personnalisee\n✅ **Premium formule**: estimation personnalisee\n\nInbegrepen dekkingen: waterschade, brand, diefstal, BA.",
     delay: 2500,
     quickReplies: [
       { label: "Formules vergelijken", value: "garanties" },
@@ -115,7 +115,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "offerte ziektekosten": {
-    text: "🏥 **Ziektekosten Offerte**\n\nVoor een persoonlijke offerte:\n\n1️⃣ Aantal te verzekeren personen\n2️⃣ Leeftijd(en)\n3️⃣ Stelsel (werknemer, ZZP, gepensioneerd)\n4️⃣ Specifieke behoeften (optiek, tandheelkunde, ziekenhuis)\n\n---\n*Simulatie*: 1 volwassene, 35 jaar, werknemer\n\n✅ **Eco**: 38 EUR/maand\n✅ **Balans**: 55 EUR/maand\n✅ **Sereniteit**: 79 EUR/maand\n\n🌟 Dekking binnen 48u, geen wachttijd.",
+    text: "🏥 **Ziektekosten Offerte**\n\nVoor een persoonlijke offerte:\n\n1️⃣ Aantal te verzekeren personen\n2️⃣ Leeftijd(en)\n3️⃣ Stelsel (werknemer, ZZP, gepensioneerd)\n4️⃣ Specifieke behoeften (optiek, tandheelkunde, ziekenhuis)\n\n---\n*Simulatie*: 1 volwassene, 35 jaar, werknemer\n\n✅ **Eco**: estimation personnalisee\n✅ **Balans**: estimation personnalisee\n✅ **Sereniteit**: estimation personnalisee\n\n🌟 Dekking binnen 48u, geen wachttijd.",
     delay: 2500,
     quickReplies: [
       { label: "Formules vergelijken", value: "garanties" },
@@ -125,7 +125,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "offerte bedrijf": {
-    text: "💼 **Bedrijf / Beroepsaansprakelijkheid Offerte**\n\nUw activiteit vereist aangepaste dekking:\n\n1️⃣ Type activiteit (advies, bouw, handel...)\n2️⃣ Jaarlijkse omzet\n3️⃣ Aantal werknemers\n4️⃣ Gewenste dekkingen\n\n---\n*Simulatie*: IT-consultant, omzet 120K EUR, 1 persoon\n\n✅ **BA Pro**: 22 EUR/maand\n✅ **BA Pro + Cyber**: 38 EUR/maand\n✅ **Integraal pakket**: 55 EUR/maand\n\nBescherming uw activiteit vandaag nog.",
+    text: "💼 **Bedrijf / Beroepsaansprakelijkheid Offerte**\n\nUw activiteit vereist aangepaste dekking:\n\n1️⃣ Type activiteit (advies, bouw, handel...)\n2️⃣ Jaarlijkse omzet\n3️⃣ Aantal werknemers\n4️⃣ Gewenste dekkingen\n\n---\n*Simulatie*: IT-consultant, omzet 120K value, 1 persoon\n\n✅ **BA Pro**: estimation personnalisee\n✅ **BA Pro + Cyber**: estimation personnalisee\n✅ **Integraal pakket**: estimation personnalisee\n\nBescherming uw activiteit vandaag nog.",
     delay: 2500,
     quickReplies: [
       { label: "BA Pro dekkingen", value: "garanties" },
@@ -134,7 +134,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   polis: {
-    text: "📄 **Uw AssurPlus polissen**\n\n**1. Auto — All-risk** (nr. AP-AUT-782341)\n• Voertuig: Renault Clio V\n• Vervaldatum: 15/09/2026\n• Premie: 576 EUR/jaar (48 EUR/maand)\n• Bonus: 0.50\n\n**2. Woning — Comfort** (nr. AP-WON-7821)\n• Adres: Handelsstraat 12, 1011 Amsterdam\n• Vervaldatum: 01/01/2027\n• Premie: 264 EUR/jaar (22 EUR/maand)\n\nU kunt uw polissen downloaden of online wijzigen.",
+    text: "📄 **Uw AssurPlus polissen**\n\n**1. Auto — All-risk** (nr. AP-AUT-782341)\n• Voertuig: Renault Clio V\n• Vervaldatum: 15/09/2026\n• Premie: estimation personnalisee (estimation personnalisee)\n• Bonus: 0.50\n\n**2. Woning — Comfort** (nr. AP-WON-7821)\n• Adres: Handelsstraat 12, 1011 Amsterdam\n• Vervaldatum: 01/01/2027\n• Premie: estimation personnalisee (estimation personnalisee)\n\nU kunt uw polissen downloaden of online wijzigen.",
     delay: 2200,
     quickReplies: [
       { label: "💾 Polis downloaden", value: "polis" },
@@ -184,7 +184,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   betaling: {
-    text: "💳 **Betaling & Termijnen**\n\n**Volgende afschrijving**:\n• Datum: 01/05/2026\n• Bedrag: **70 EUR** (auto 48 EUR + woning 22 EUR)\n• Methode: Bankkaart eindigend op ****4521\n\n**Recente geschiedenis**:\n• 01/04/2026: 70 EUR ✅\n• 01/03/2026: 70 EUR ✅\n• 01/02/2026: 70 EUR ✅\n\n**Opties**:\n• Maandelijks / Driemaandelijks / Jaarlijks\n• Automatische incasso of bankkaart\n• Betalingsplan mogelijk bij moeilijkheden",
+    text: "💳 **Betaling & Termijnen**\n\n**Volgende afschrijving**:\n• Datum: 01/05/2026\n• Bedrag: **estimation personnalisee** (auto estimation personnalisee + woning estimation personnalisee)\n• Methode: Bankkaart eindigend op ****4521\n\n**Recente geschiedenis**:\n• 01/04/2026: estimation personnalisee ✅\n• 01/03/2026: estimation personnalisee ✅\n• 01/02/2026: estimation personnalisee ✅\n\n**Opties**:\n• Maandelijks / Driemaandelijks / Jaarlijks\n• Automatische incasso of bankkaart\n• Betalingsplan mogelijk bij moeilijkheden",
     delay: 2000,
     quickReplies: [
       { label: "Betaalmethode wijzigen", value: "polis wijzigen" },
@@ -204,7 +204,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   garanties: {
-    text: "🛡️ **Uw dekkingen — All-risk polis**\n\n**Inbegrepen dekkingen**:\n• ✅ Burgerlijke aansprakelijkheid (onbeperkt)\n• ✅ Schade alle risico's\n• ✅ Diefstal en diefstalpogingen\n• ✅ Brand en explosie\n• ✅ Glasbreuk\n• ✅ Natuurramp\n• ✅ Rechtsbijstand (15.000 EUR)\n• ✅ Pechhulp 0 km\n\n**Limieten**:\n• Materiële schade: **150.000 EUR**\n• Lichamelijke schade: **Onbeperkt**\n• Vervoerde objecten: **1.500 EUR**",
+    text: "🛡️ **Uw dekkingen — All-risk polis**\n\n**Inbegrepen dekkingen**:\n• ✅ Burgerlijke aansprakelijkheid (onbeperkt)\n• ✅ Schade alle risico's\n• ✅ Diefstal en diefstalpogingen\n• ✅ Brand en explosie\n• ✅ Glasbreuk\n• ✅ Natuurramp\n• ✅ Rechtsbijstand (estimation personnalisee)\n• ✅ Pechhulp 0 km\n\n**Limieten**:\n• Materiële schade: **estimation personnalisee**\n• Lichamelijke schade: **Onbeperkt**\n• Vervoerde objecten: **estimation personnalisee**",
     delay: 2200,
     quickReplies: [
       { label: "Mijn eigen risico", value: "eigen risico" },
@@ -214,7 +214,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "eigen risico": {
-    text: "📊 **Eigen risico — Uitleg**\n\nHet eigen risico is het bedrag dat u zelf betaalt bij een schade.\n\n**Uw huidige eigen risico's**:\n\n🚗 **Auto (All-risk)**:\n• Schade: **150 EUR**\n• Diefstal: **300 EUR**\n• Glasbreuk: **0 EUR** (geen eigen risico)\n\n🏠 **Woning (Comfort)**:\n• Waterschade: **200 EUR**\n• Diefstal: **300 EUR**\n• Natuurramp: **380 EUR** (wettelijk vastgesteld)\n\n💡 **Tip**: Een hoger eigen risico van 150 EUR kan uw premie met **10-15%** verlagen.",
+    text: "📊 **Eigen risico — Uitleg**\n\nHet eigen risico is het bedrag dat u zelf betaalt bij een schade.\n\n**Uw huidige eigen risico's**:\n\n🚗 **Auto (All-risk)**:\n• Schade: **estimation personnalisee**\n• Diefstal: **estimation personnalisee**\n• Glasbreuk: **estimation personnalisee** (geen eigen risico)\n\n🏠 **Woning (Comfort)**:\n• Waterschade: **estimation personnalisee**\n• Diefstal: **estimation personnalisee**\n• Natuurramp: **estimation personnalisee** (wettelijk vastgesteld)\n\n💡 **Tip**: Een hoger eigen risico van estimation personnalisee kan uw premie met **10-15%** verlagen.",
     delay: 2200,
     quickReplies: [
       { label: "Eigen risico aanpassen", value: "polis wijzigen" },
@@ -264,7 +264,7 @@ const ASSURANCE_INTENTS_NL = {
     ],
   },
   "herinnering template": {
-    text: "📩 **Meta-templates — Vervalherinneringen**\n\nVooraf goedgekeurde WhatsApp-templates voor verzekeringen:\n\n**1. Polisverlenging** (utility)\n> Beste {{naam}}, uw {{type}} polis verloopt op {{datum}}. Verleng in 1 klik of neem contact op met uw adviseur.\n\n**2. Betalingsherinnering** (utility)\n> {{voornaam}}, uw afschrijving van {{bedrag}} EUR staat gepland op {{datum}}. Controleer uw bankgegevens.\n\n**3. Multi-polis aanbieding** (marketing)\n> U bent bij ons autoverzekerd — profiteer van **-20%** op woningverzekering! Direct een offerte.\n\n**Voordelen:**\n• Verzending na 24u WhatsApp-venster\n• Interactieve knoppen (Verlengen / Contacteren)\n• Dynamische variabelen vanuit het CRM\n• Tracking opening + klik",
+    text: "📩 **Meta-templates — Vervalherinneringen**\n\nVooraf goedgekeurde WhatsApp-templates voor verzekeringen:\n\n**1. Polisverlenging** (utility)\n> Beste {{naam}}, uw {{type}} polis verloopt op {{datum}}. Verleng in 1 klik of neem contact op met uw adviseur.\n\n**2. Betalingsherinnering** (utility)\n> {{voornaam}}, uw afschrijving van {{bedrag}} ?? staat gepland op {{datum}}. Controleer uw bankgegevens.\n\n**3. Multi-polis aanbieding** (marketing)\n> U bent bij ons autoverzekerd — profiteer van **-20%** op woningverzekering! Direct een offerte.\n\n**Voordelen:**\n• Verzending na 24u WhatsApp-venster\n• Interactieve knoppen (Verlengen / Contacteren)\n• Dynamische variabelen vanuit het CRM\n• Tracking opening + klik",
     delay: 2400,
     quickReplies: [
       { label: "Meta-templates", value: "templates" },

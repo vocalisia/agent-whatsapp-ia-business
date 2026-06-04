@@ -139,7 +139,7 @@ const COACH_INTENTS = {
   },
 
   groupe: {
-    text: "Le **coaching de groupe** est ideal pour :\n\n**Equipes en entreprise** (6-8 personnes)\n- Cohesion et communication\n- Gestion des conflits\n- Leadership collectif\n- Objectifs communs\n\n**Groupes ouverts** (6-8 personnes)\n- Reconversion professionnelle\n- Entrepreneuriat\n- Developpement personnel\n\n**Format** : 8 seances de 90 min sur 2 mois\n**Tarif** : 890 CHF/personne\n**Bonus** : Communaute WhatsApp privee du groupe\n\nProchaine session : **Mai 2026** - Places limitees !",
+    text: "Le **coaching de groupe** est ideal pour :\n\n**Equipes en entreprise** (6-8 personnes)\n- Cohesion et communication\n- Gestion des conflits\n- Leadership collectif\n- Objectifs communs\n\n**Groupes ouverts** (6-8 personnes)\n- Reconversion professionnelle\n- Entrepreneuriat\n- Developpement personnel\n\n**Format** : 8 seances de 90 min sur 2 mois\n**Tarif** : estimation personnalisee\n**Bonus** : Communaute WhatsApp privee du groupe\n\nProchaine session : **Mai 2026** - Places limitees !",
     delay: 2000,
     quickReplies: [
       { label: "S'inscrire au groupe", value: "rdv" },
@@ -149,7 +149,7 @@ const COACH_INTENTS = {
   },
 
   individuel: {
-    text: "Le **coaching individuel** est notre programme phare :\n\n**Ce qui est inclus :**\n- 12 seances de 60 min (1/semaine)\n- Bilan initial approfondi\n- Plan d'action personnalise\n- Suivi WhatsApp entre les seances\n- Fiches et exercices pratiques\n- Bilan final et plan de consolidation\n\n**Pour qui ?**\nProfessionnels en transition, managers, entrepreneurs, toute personne souhaitant un accompagnement sur-mesure.\n\n**Duree** : 3 mois\n**Tarif** : 1 800 CHF\n\nCommencez par une seance decouverte gratuite !",
+    text: "Le **coaching individuel** est notre programme phare :\n\n**Ce qui est inclus :**\n- 12 seances de 60 min (1/semaine)\n- Bilan initial approfondi\n- Plan d'action personnalise\n- Suivi WhatsApp entre les seances\n- Fiches et exercices pratiques\n- Bilan final et plan de consolidation\n\n**Pour qui ?**\nProfessionnels en transition, managers, entrepreneurs, toute personne souhaitant un accompagnement sur-mesure.\n\n**Duree** : 3 mois\n**Tarif** : estimation personnalisee\n\nCommencez par une seance decouverte gratuite !",
     delay: 2000,
     quickReplies: [
       { label: "Seance decouverte", value: "seance decouverte" },
@@ -159,7 +159,7 @@ const COACH_INTENTS = {
   },
 
   vip: {
-    text: "Le programme **VIP Intensif** est notre offre premium :\n\n**Ce qui est inclus :**\n- 20 seances de 60 min\n- Acces WhatsApp **illimite** avec votre coach\n- Bilan psychometrique complet\n- Plan strategique sur-mesure\n- Ressources exclusives (masterclasses, outils)\n- 2 seances de suivi post-programme\n- Support prioritaire 7j/7\n\n**Resultats moyens :**\n- +67% de confiance mesuree\n- +45% de productivite\n- 94% d'objectifs atteints\n\n**Duree** : 6 mois\n**Tarif** : 4 500 CHF (paiement en 4x possible)",
+    text: "Le programme **VIP Intensif** est notre offre premium :\n\n**Ce qui est inclus :**\n- 20 seances de 60 min\n- Acces WhatsApp **illimite** avec votre coach\n- Bilan psychometrique complet\n- Plan strategique sur-mesure\n- Ressources exclusives (masterclasses, outils)\n- 2 seances de suivi post-programme\n- Support prioritaire 7j/7\n\n**Resultats moyens :**\n- +67% de confiance mesuree\n- +45% de productivite\n- 94% d'objectifs atteints\n\n**Duree** : 6 mois\n**Tarif** : estimation personnalisee (paiement en 4x possible)",
     delay: 2200,
     quickReplies: [
       { label: "Reserver VIP", value: "rdv" },

@@ -79,7 +79,7 @@ const COPY: Record<Locale, LandingCopy> = {
       },
       {
         q: "Quel ROI moyen observé sur ces 340 ?",
-        a: "4.2× en année 1 (coût total vs revenus récupérés). Médiane : 47K€ de CA additionnel. Top 10% : +180K€. Données transparentes partagées pendant l'audit.",
+        a: "4.2× en année 1 (coût total vs revenus récupérés). Médiane : 47Kvalue de CA additionnel. Top 10% : +180Kvalue. Données transparentes partagées pendant l'audit.",
       },
       {
         q: "Mon secteur est-il déjà couvert ?",
@@ -146,7 +146,7 @@ const COPY: Record<Locale, LandingCopy> = {
       },
       {
         q: "Average ROI observed across the 340?",
-        a: "4.2× in year 1 (total cost vs recovered revenue). Median: €47K additional revenue. Top 10%: +€180K. Transparent data shared during audit.",
+        a: "4.2× in year 1 (total cost vs recovered revenue). Median: estimation personnaliseeadditional revenue. Top 10%: gain mesureTransparent data shared during audit.",
       },
       {
         q: "Is my vertical covered?",
@@ -213,7 +213,7 @@ const COPY: Record<Locale, LandingCopy> = {
       },
       {
         q: "Durchschnittlicher ROI über die 340?",
-        a: "4,2× in Jahr 1. Median: 47K€ Zusatzumsatz. Top 10%: +180K€. Transparente Daten im Audit.",
+        a: "4,2× in Jahr 1. Median: 47Kvalue Zusatzumsatz. Top 10%: +180Kvalue. Transparente Daten im Audit.",
       },
       {
         q: "Ist meine Branche abgedeckt?",
@@ -280,7 +280,7 @@ const COPY: Record<Locale, LandingCopy> = {
       },
       {
         q: "Gemiddelde ROI over de 340?",
-        a: "4,2× in jaar 1. Mediaan: €47K extra omzet. Top 10%: +€180K. Transparante data tijdens audit.",
+        a: "4,2× in jaar 1. Mediaan: estimation personnaliseeextra omzet. Top 10%: gain mesureTransparante data tijdens audit.",
       },
       {
         q: "Is mijn sector gedekt?",

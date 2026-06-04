@@ -42,7 +42,7 @@ export default function StatsSection() {
     { value: 40, prefix: "+", suffix: "%", label: t("productivityLabel") },
     { value: 47, prefix: "+", suffix: "%", label: t("responseLabel") },
     { value: 0, prefix: "", suffix: "", label: t("availabilityLabel"), isText: true, text: "24/7" },
-    { value: 0, prefix: "", suffix: "", label: t("savingsLabel"), isText: true, text: "~500 €/mois" },
+    { value: 0, prefix: "", suffix: "", label: t("savingsLabel"), isText: true, text: "audit gratuit" },
   ];
 
   return (

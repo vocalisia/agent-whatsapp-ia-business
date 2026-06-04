@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
-import { Clock, Euro, TrendingUp, Users } from "lucide-react";
+import { Clock, TrendingUp, Users } from "lucide-react";
 
 /* ─── Animated counter hook ─── */
 
@@ -129,8 +129,7 @@ function ResultCard({ icon, label, value, formatter, subtitle, highlight = false
   return (
     <div
       className={`
-        relative rounded-2xl border p-5 transition-all duration-500
-        ${highlight
+        relative rounded-2xl border p-5 transition-all duration-300 ${highlight
           ? "border-wa/40 bg-wa/5 shadow-[0_0_30px_rgba(37,211,102,0.1)]"
           : "border-surface-3 bg-surface/80"
         }
@@ -241,7 +240,6 @@ export default function ROICalculator() {
                 min={15}
                 max={30}
                 step={1}
-                unit="€"
                 onChange={setHourlyCost}
               />
 
@@ -274,10 +272,10 @@ export default function ROICalculator() {
               />
 
               <ResultCard
-                icon={<Euro className="w-4 h-4" />}
+                icon={<TrendingUp className="w-4 h-4" />}
                 label={t("monthlySavings")}
                 value={results.monthlySavings}
-                formatter={(v) => `${Math.round(v).toLocaleString("fr-FR")}€`}
+                formatter={(v) => Math.round(v).toLocaleString("fr-FR")}
                 subtitle={t("savingsCalc", { cost: hourlyCost, hours: Math.round(results.hoursSaved) })}
                 highlight
               />
@@ -286,7 +284,7 @@ export default function ROICalculator() {
                 icon={<TrendingUp className="w-4 h-4" />}
                 label={t("annualSavings")}
                 value={results.annualSavings}
-                formatter={(v) => `${Math.round(v).toLocaleString("fr-FR")}€`}
+                formatter={(v) => Math.round(v).toLocaleString("fr-FR")}
                 subtitle={t("annualBasis")}
                 highlight
               />

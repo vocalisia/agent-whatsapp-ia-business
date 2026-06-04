@@ -139,7 +139,7 @@ const COACH_INTENTS = {
   },
 
   group: {
-    text: "**Group coaching** is ideal for:\n\n**Corporate teams** (6-8 people)\n- Cohesion and communication\n- Conflict management\n- Collective leadership\n- Shared objectives\n\n**Open groups** (6-8 people)\n- Career transitions\n- Entrepreneurship\n- Personal development\n\n**Format**: 8 x 90-min sessions over 2 months\n**Price**: 890 CHF/person\n**Bonus**: Private WhatsApp community for the group\n\nNext session: **May 2026** - Limited spots!",
+    text: "**Group coaching** is ideal for:\n\n**Corporate teams** (6-8 people)\n- Cohesion and communication\n- Conflict management\n- Collective leadership\n- Shared objectives\n\n**Open groups** (6-8 people)\n- Career transitions\n- Entrepreneurship\n- Personal development\n\n**Format**: 8 x 90-min sessions over 2 months\n**Price**: estimation personnalisee\n**Bonus**: Private WhatsApp community for the group\n\nNext session: **May 2026** - Limited spots!",
     delay: 2000,
     quickReplies: [
       { label: "Join the group", value: "booking" },
@@ -149,7 +149,7 @@ const COACH_INTENTS = {
   },
 
   individual: {
-    text: "**Individual coaching** is our flagship program:\n\n**What's included:**\n- 12 x 60-min sessions (weekly)\n- In-depth initial assessment\n- Personalized action plan\n- WhatsApp follow-up between sessions\n- Practical sheets and exercises\n- Final review and consolidation plan\n\n**Who is it for?**\nProfessionals in transition, managers, entrepreneurs, anyone seeking tailored support.\n\n**Duration**: 3 months\n**Price**: 1,800 CHF\n\nStart with a free discovery session!",
+    text: "**Individual coaching** is our flagship program:\n\n**What's included:**\n- 12 x 60-min sessions (weekly)\n- In-depth initial assessment\n- Personalized action plan\n- WhatsApp follow-up between sessions\n- Practical sheets and exercises\n- Final review and consolidation plan\n\n**Who is it for?**\nProfessionals in transition, managers, entrepreneurs, anyone seeking tailored support.\n\n**Duration**: 3 months\n**Price**: estimation personnalisee\n\nStart with a free discovery session!",
     delay: 2000,
     quickReplies: [
       { label: "Discovery session", value: "discovery session" },
@@ -159,7 +159,7 @@ const COACH_INTENTS = {
   },
 
   vip: {
-    text: "The **VIP Intensive** program is our premium offer:\n\n**What's included:**\n- 20 x 60-min sessions\n- **Unlimited** WhatsApp access with your coach\n- Full psychometric assessment\n- Custom strategic plan\n- Exclusive resources (masterclasses, tools)\n- 2 post-program follow-up sessions\n- Priority support 7 days/week\n\n**Average results:**\n- +67% measured confidence\n- +45% productivity\n- 94% goals achieved\n\n**Duration**: 6 months\n**Price**: 4,500 CHF (4 installments available)",
+    text: "The **VIP Intensive** program is our premium offer:\n\n**What's included:**\n- 20 x 60-min sessions\n- **Unlimited** WhatsApp access with your coach\n- Full psychometric assessment\n- Custom strategic plan\n- Exclusive resources (masterclasses, tools)\n- 2 post-program follow-up sessions\n- Priority support 7 days/week\n\n**Average results:**\n- +67% measured confidence\n- +45% productivity\n- 94% goals achieved\n\n**Duration**: 6 months\n**Price**: estimation personnalisee (4 installments available)",
     delay: 2200,
     quickReplies: [
       { label: "Book VIP", value: "booking" },

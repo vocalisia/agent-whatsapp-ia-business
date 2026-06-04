@@ -14,7 +14,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   mitgliedschaft: {
-    text: "Unsere **FitClub-Pakete** :\n\n**Access** — 29,90 EUR/Monat\n- Zugang Kraftraum + Cardio\n- Offnungszeiten : 6 - 22 Uhr\n- Umkleide + Duschen\n\n**Premium** — 49,90 EUR/Monat\n- Unbegrenzter Zugang 24/7\n- Alle Gruppenkurse inklusive\n- Sauna + Dampfbad\n- 1 Korpermessung/Quartal\n\n**Elite** — 79,90 EUR/Monat\n- Alles aus Premium\n- 4 Personal-Training-Einheiten/Monat\n- Personalisierter Ernahrungsplan\n- KI-Fortschrittsverfolgung\n\nOhne Bindung. Welches Paket interessiert Sie ?",
+    text: "Unsere **FitClub-Pakete** :\n\n**Access** — estimation personnalisee\n- Zugang Kraftraum + Cardio\n- Offnungszeiten : 6 - 22 Uhr\n- Umkleide + Duschen\n\n**Premium** — estimation personnalisee\n- Unbegrenzter Zugang 24/7\n- Alle Gruppenkurse inklusive\n- Sauna + Dampfbad\n- 1 Korpermessung/Quartal\n\n**Elite** — estimation personnalisee\n- Alles aus Premium\n- 4 Personal-Training-Einheiten/Monat\n- Personalisierter Ernahrungsplan\n- KI-Fortschrittsverfolgung\n\nOhne Bindung. Welches Paket interessiert Sie ?",
     delay: 2000,
     quickReplies: [
       { label: "Kostenloser Probetag", value: "kostenloser probetag" },
@@ -87,7 +87,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   ernahrung: {
-    text: "**KI-Ernahrungsplan FitClub** :\n\nUnsere KI analysiert Ihr Profil und erstellt einen personalisierten Plan :\n\n**Beispiel — Ziel : Muskelaufbau**\n\n**Fruhstuck :** Ruhrerei + Haferflocken + Banane (520 kcal)\n**Snack :** Quark + Mandeln (280 kcal)\n**Mittagessen :** Gegrilltes Hahnchen + Vollkornreis + Gemuse (650 kcal)\n**Nachmittagssnack :** Proteinshake + Beeren (320 kcal)\n**Abendessen :** Lachs + Sußkartoffel + Brokkoli (580 kcal)\n\n**Gesamt :** 2 350 kcal | 180 g Protein\n\nIm **Elite**-Paket inklusive oder als Option fur **9,90 EUR/Monat**.\n\nMochten Sie Ihren personalisierten Plan ?",
+    text: "**KI-Ernahrungsplan FitClub** :\n\nUnsere KI analysiert Ihr Profil und erstellt einen personalisierten Plan :\n\n**Beispiel — Ziel : Muskelaufbau**\n\n**Fruhstuck :** Ruhrerei + Haferflocken + Banane (520 kcal)\n**Snack :** Quark + Mandeln (280 kcal)\n**Mittagessen :** Gegrilltes Hahnchen + Vollkornreis + Gemuse (650 kcal)\n**Nachmittagssnack :** Proteinshake + Beeren (320 kcal)\n**Abendessen :** Lachs + Sußkartoffel + Brokkoli (580 kcal)\n\n**Gesamt :** 2 350 kcal | 180 g Protein\n\nIm **Elite**-Paket inklusive oder als Option fur **estimation personnalisee**.\n\nMochten Sie Ihren personalisierten Plan ?",
     delay: 2400,
     quickReplies: [
       { label: "Mein personl. Plan", value: "ernahrung" },
@@ -150,7 +150,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   sauna: {
-    text: "**Wellnessbereich FitClub** :\n\nIm **Premium**- und **Elite**-Paket inklusive :\n\n- **Finnische Sauna** — 80 - 90 °C, 15-Minuten-Sessions\n- **Dampfbad** — Eukalyptus-Dampf, ideal nach dem Training\n- **Wechseldusche** — Wechsel warm/kalt\n- **Entspannungsbereich** — Liegestuhle, Krauter-Tee gratis\n\n**Wellnesszeiten :**\n- Mo-Fr : 8 - 21 Uhr\n- Sa-So : 9 - 19 Uhr\n\n**Vorteile :** Muskelregeneration, Entschlackung, tiefe Entspannung.\n\nAccess-Mitglieder : **5 EUR/Session**.",
+    text: "**Wellnessbereich FitClub** :\n\nIm **Premium**- und **Elite**-Paket inklusive :\n\n- **Finnische Sauna** — 80 - 90 °C, 15-Minuten-Sessions\n- **Dampfbad** — Eukalyptus-Dampf, ideal nach dem Training\n- **Wechseldusche** — Wechsel warm/kalt\n- **Entspannungsbereich** — Liegestuhle, Krauter-Tee gratis\n\n**Wellnesszeiten :**\n- Mo-Fr : 8 - 21 Uhr\n- Sa-So : 9 - 19 Uhr\n\n**Vorteile :** Muskelregeneration, Entschlackung, tiefe Entspannung.\n\nAccess-Mitglieder : **estimation personnalisee**.",
     delay: 1800,
     quickReplies: [
       { label: "Auf Premium wechseln", value: "mitgliedschaft" },
@@ -172,7 +172,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   pause: {
-    text: "**Mitgliedschaft pausieren — FitClub** :\n\n**Bedingungen :**\n- Pause moglich nach **3 Monaten** Mitgliedschaft\n- Dauer : **1 bis 3 Monate** maximal\n- Pausierungsgebuhr : **5 EUR/Monat**\n- Nachweis erforderlich : Reise, Verletzung, Krankheit\n\n**So pausieren Sie :**\n1. Nachweis hier einsenden\n2. Gewunschte Dauer angeben\n3. Bestatigung innerhalb von 24 Stunden\n\nIhre Mitgliedschaft wird automatisch zum geplanten Datum fortgesetzt.\n\nMochten Sie fortfahren ?",
+    text: "**Mitgliedschaft pausieren — FitClub** :\n\n**Bedingungen :**\n- Pause moglich nach **3 Monaten** Mitgliedschaft\n- Dauer : **1 bis 3 Monate** maximal\n- Pausierungsgebuhr : **estimation personnalisee**\n- Nachweis erforderlich : Reise, Verletzung, Krankheit\n\n**So pausieren Sie :**\n1. Nachweis hier einsenden\n2. Gewunschte Dauer angeben\n3. Bestatigung innerhalb von 24 Stunden\n\nIhre Mitgliedschaft wird automatisch zum geplanten Datum fortgesetzt.\n\nMochten Sie fortfahren ?",
     delay: 1800,
     quickReplies: [
       { label: "1 Monat pausieren", value: "pause" },
@@ -183,7 +183,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   verlangerung: {
-    text: "**Mitgliedschaft verlangern — FitClub** :\n\n**Ihre aktuelle Mitgliedschaft :**\n- Paket : Premium (49,90 EUR/Monat)\n- Seit : Januar 2026\n- Nachste Abbuchung : 1. Mai 2026\n\n**Jahresangebot :**\n- **499 EUR/Jahr** statt 598,80 EUR (-17 %)\n- Entspricht **41,60 EUR/Monat**\n- 2 Gratismonate\n- Bonus-Coach-Einheit pro Quartal\n\nDie Verlangerung erfolgt automatisch, sofern keine Kundigung **30 Tage** vor Ablauf erfolgt.",
+    text: "**Mitgliedschaft verlangern — FitClub** :\n\n**Ihre aktuelle Mitgliedschaft :**\n- Paket : Premium (estimation personnalisee)\n- Seit : Januar 2026\n- Nachste Abbuchung : 1. Mai 2026\n\n**Jahresangebot :**\n- **estimation personnalisee** statt estimation personnalisee (-17 %)\n- Entspricht **estimation personnalisee**\n- 2 Gratismonate\n- Bonus-Coach-Einheit pro Quartal\n\nDie Verlangerung erfolgt automatisch, sofern keine Kundigung **30 Tage** vor Ablauf erfolgt.",
     delay: 1800,
     quickReplies: [
       { label: "Auf Jahresabo wechseln", value: "verlangerung" },

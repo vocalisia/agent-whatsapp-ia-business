@@ -14,7 +14,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   voertuig: {
-    text: "**Voertuig zoeken AutoPrestige** :\n\nGeef uw criteria op om de selectie te verfijnen :\n\n**Onze categorieën :**\n- Stadswagens (vanaf 15 990 EUR)\n- Berlines (vanaf 28 900 EUR)\n- SUV & Crossover (vanaf 32 500 EUR)\n- Sportwagens (vanaf 45 000 EUR)\n- Elektrisch & Hybride (vanaf 35 900 EUR)\n\n**Uitgelicht deze week :**\n- **BMW Serie 3 320d** — 38 900 EUR | 2024 | 12 000 km\n- **Mercedes GLC 300e** — 52 500 EUR | 2025 | 5 000 km\n- **Audi A4 Avant** — 41 200 EUR | 2024 | 18 000 km\n- **Tesla Model 3** — 39 990 EUR | 2025 | 3 200 km\n\nWelk type voertuig interesseert u ?",
+    text: "**Voertuig zoeken AutoPrestige** :\n\nGeef uw criteria op om de selectie te verfijnen :\n\n**Onze categorieën :**\n- Stadswagens (vanaf estimation personnalisee)\n- Berlines (vanaf estimation personnalisee)\n- SUV & Crossover (vanaf estimation personnalisee)\n- Sportwagens (vanaf estimation personnalisee)\n- Elektrisch & Hybride (vanaf estimation personnalisee)\n\n**Uitgelicht deze week :**\n- **BMW Serie 3 320d** — estimation personnalisee | 2024 | 12 000 km\n- **Mercedes GLC 300e** — estimation personnalisee | 2025 | 5 000 km\n- **Audi A4 Avant** — estimation personnalisee | 2024 | 18 000 km\n- **Tesla Model 3** — estimation personnalisee | 2025 | 3 200 km\n\nWelk type voertuig interesseert u ?",
     delay: 2200,
     quickReplies: [
       { label: "SUV", value: "voertuig" },
@@ -45,7 +45,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   financiering: {
-    text: "**Financieringssimulator AutoPrestige** :\n\nVoorbeeld voor een **BMW Serie 3** aan 38 900 EUR :\n\n**Klassieke lening :**\n- Aanbetaling : 5 000 EUR\n- Looptijd : 48 maanden\n- Maandlast : **749 EUR/maand**\n- JKP : 4,9%\n\n**Financiële leasing :**\n- Aanbetaling : 3 000 EUR\n- Looptijd : 36 maanden / 15 000 km/jaar\n- Huurprijs : **449 EUR/maand**\n- Aankoopoptie : 15 560 EUR\n\n**Operationele leasing :**\n- Alles inbegrepen (verzekering + onderhoud)\n- **549 EUR/maand** over 36 maanden\n\nOnze partners : **BNP, Cetelem, Cofidis**\nAntwoord binnen **24u**. Wilt u een gepersonaliseerde simulatie ?",
+    text: "**Financieringssimulator AutoPrestige** :\n\nVoorbeeld voor een **BMW Serie 3** aan estimation personnalisee :\n\n**Klassieke lening :**\n- Aanbetaling : estimation personnalisee\n- Looptijd : 48 maanden\n- Maandlast : **estimation personnalisee**\n- JKP : 4,9%\n\n**Financiële leasing :**\n- Aanbetaling : estimation personnalisee\n- Looptijd : 36 maanden / 15 000 km/jaar\n- Huurprijs : **estimation personnalisee**\n- Aankoopoptie : estimation personnalisee\n\n**Operationele leasing :**\n- Alles inbegrepen (verzekering + onderhoud)\n- **estimation personnalisee** over 36 maanden\n\nOnze partners : **BNP, Cetelem, Cofidis**\nAntwoord binnen **24u**. Wilt u een gepersonaliseerde simulatie ?",
     delay: 2400,
     quickReplies: [
       { label: "Persoonlijke simulatie", value: "financiering" },
@@ -56,7 +56,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   inruil: {
-    text: "**Inruilschatting AutoPrestige** :\n\nVoor de schatting van uw voertuig heb ik nodig :\n- Merk en model\n- Jaar van inschrijving\n- Kilometerstand\n- Brandstof (benzine/diesel/hybride/elektrisch)\n\n**Voorbeeld schatting :**\n- Peugeot 308 — 2021 — 45 000 km — Diesel\n- **Schatting : 14 500 — 16 200 EUR**\n\n**Onze belofte :**\n- Gratis schatting en vrijblijvend\n- Gegarandeerde prijs **7 dagen**\n- Inruil ook zonder aankoop bij ons\n- Overschrijving binnen **48u** na akkoord\n\nStuur me de gegevens van uw voertuig of een foto !",
+    text: "**Inruilschatting AutoPrestige** :\n\nVoor de schatting van uw voertuig heb ik nodig :\n- Merk en model\n- Jaar van inschrijving\n- Kilometerstand\n- Brandstof (benzine/diesel/hybride/elektrisch)\n\n**Voorbeeld schatting :**\n- Peugeot 308 — 2021 — 45 000 km — Diesel\n- **Schatting : 14 500 — estimation personnalisee**\n\n**Onze belofte :**\n- Gratis schatting en vrijblijvend\n- Gegarandeerde prijs **7 dagen**\n- Inruil ook zonder aankoop bij ons\n- Overschrijving binnen **48u** na akkoord\n\nStuur me de gegevens van uw voertuig of een foto !",
     delay: 2000,
     quickReplies: [
       { label: "Foto sturen", value: "voertuig foto" },
@@ -67,7 +67,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "voertuig foto": {
-    text: "Bedankt voor de foto ! **IA-analyse bezig**...\n\n**Analyseresultaat :**\n\n- **Voertuig herkend :** Renault Megane IV — 2020\n- **Carrosserie staat :** Goed (micro-kras rechterdeur)\n- **Lak staat :** Zeer goed (kleur platina grijs)\n- **Velgen :** Goede staat, 1 lichte schaafplek\n\n**IA-schatting :** 12 800 — 14 200 EUR\n\n**Om te verfijnen :**\n- Exacte kilometerstand ?\n- Onderhoudsboekje bijgewerkt ?\n- Geldig keuringsattest ?\n\nEen expert kan binnen **24u** bevestigen met fysieke inspectie.",
+    text: "Bedankt voor de foto ! **IA-analyse bezig**...\n\n**Analyseresultaat :**\n\n- **Voertuig herkend :** Renault Megane IV — 2020\n- **Carrosserie staat :** Goed (micro-kras rechterdeur)\n- **Lak staat :** Zeer goed (kleur platina grijs)\n- **Velgen :** Goede staat, 1 lichte schaafplek\n\n**IA-schatting :** 12 800 — estimation personnalisee\n\n**Om te verfijnen :**\n- Exacte kilometerstand ?\n- Onderhoudsboekje bijgewerkt ?\n- Geldig keuringsattest ?\n\nEen expert kan binnen **24u** bevestigen met fysieke inspectie.",
     delay: 2800,
     quickReplies: [
       { label: "Inruil bevestigen", value: "inruil" },
@@ -78,7 +78,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   onderhoud: {
-    text: "**Onderhoudsatelier AutoPrestige** :\n\n**Onze diensten :**\n- **Volledige beurt** — vanaf 189 EUR (olieverversing + filters + diagnose)\n- **Olieverversing** — 79 EUR (olie + filter)\n- **Banden** — vanaf 65 EUR/band (montage + balanceren inbegrepen)\n- **Remmen** — vanaf 149 EUR (voorremblokken)\n- **Airconditioning** — 89 EUR (vulling + ontsmetting)\n- **Uitlijning** — 69 EUR\n\n**Volgende tijdsloten :**\n- Maandag 21 april — 8u, 10u, 14u\n- Woensdag 23 april — 9u, 11u\n- Vrijdag 25 april — 8u, 15u\n\n**Gratis vervangwagen** bij interventies > 2u.\n\nWelke dienst wenst u ?",
+    text: "**Onderhoudsatelier AutoPrestige** :\n\n**Onze diensten :**\n- **Volledige beurt** — vanaf estimation personnalisee (olieverversing + filters + diagnose)\n- **Olieverversing** — estimation personnalisee (olie + filter)\n- **Banden** — vanaf estimation personnalisee (montage + balanceren inbegrepen)\n- **Remmen** — vanaf estimation personnalisee (voorremblokken)\n- **Airconditioning** — estimation personnalisee (vulling + ontsmetting)\n- **Uitlijning** — estimation personnalisee\n\n**Volgende tijdsloten :**\n- Maandag 21 april — 8u, 10u, 14u\n- Woensdag 23 april — 9u, 11u\n- Vrijdag 25 april — 8u, 15u\n\n**Gratis vervangwagen** bij interventies > 2u.\n\nWelke dienst wenst u ?",
     delay: 2200,
     quickReplies: [
       { label: "Volledige beurt", value: "onderhoud bevestigen" },
@@ -89,7 +89,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "onderhoud bevestigen": {
-    text: "Atelierafspraak bevestigd !\n\n**Dienst :** Volledige beurt\n**Datum :** Maandag 21 april 2026 — 8u00\n**Geschatte duur :** 2u30\n**Vervangwagen :** Ja (Peugeot 208)\n\n**Inbegrepen :**\n- Motorolieverversing\n- Vervanging filters (lucht, olie, habitacle)\n- Elektronische diagnose 32 punten\n- Niveaus + verlichting\n\n**Tarief :** 189 EUR incl. btw\n\nWhatsApp herinnering de dag ervoor. Breng uw kentekencard mee.",
+    text: "Atelierafspraak bevestigd !\n\n**Dienst :** Volledige beurt\n**Datum :** Maandag 21 april 2026 — 8u00\n**Geschatte duur :** 2u30\n**Vervangwagen :** Ja (Peugeot 208)\n\n**Inbegrepen :**\n- Motorolieverversing\n- Vervanging filters (lucht, olie, habitacle)\n- Elektronische diagnose 32 punten\n- Niveaus + verlichting\n\n**Tarief :** estimation personnalisee incl. btw\n\nWhatsApp herinnering de dag ervoor. Breng uw kentekencard mee.",
     delay: 1800,
     quickReplies: [
       { label: "Bedankt !", value: "bedankt" },
@@ -120,7 +120,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   onderdelen: {
-    text: "**Onderdelen AutoPrestige** :\n\n**Beschikbaarheid :**\n- Originele fabrieksonderdelen\n- Gecertificeerde equivalente onderdelen\n- Accessoires en uitrusting\n\n**Snel zoeken :**\nGeef uw voertuig + het gezochte onderdeel op.\n\n**Voorbeeld :**\n- Oliefilter BMW Serie 3 — **24,90 EUR** (op stock)\n- Voorremblokken Mercedes GLC — **89,00 EUR** (beschikbaar D+1)\n- Accu Audi A4 — **179,00 EUR** (op stock)\n\n**Services :**\n- Levering aan concessie of thuis\n- Montage in atelier (voordeeltarief)\n- 2 jaar garantie op alle onderdelen\n\nWelk onderdeel zoekt u ?",
+    text: "**Onderdelen AutoPrestige** :\n\n**Beschikbaarheid :**\n- Originele fabrieksonderdelen\n- Gecertificeerde equivalente onderdelen\n- Accessoires en uitrusting\n\n**Snel zoeken :**\nGeef uw voertuig + het gezochte onderdeel op.\n\n**Voorbeeld :**\n- Oliefilter BMW Serie 3 — **estimation personnalisee** (op stock)\n- Voorremblokken Mercedes GLC — **estimation personnalisee** (beschikbaar D+1)\n- Accu Audi A4 — **estimation personnalisee** (op stock)\n\n**Services :**\n- Levering aan concessie of thuis\n- Montage in atelier (voordeeltarief)\n- 2 jaar garantie op alle onderdelen\n\nWelk onderdeel zoekt u ?",
     delay: 2000,
     quickReplies: [
       { label: "Onderdeel zoeken", value: "onderdelen" },
@@ -131,7 +131,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   occasion: {
-    text: "**Occasievoertuigen AutoPrestige** :\n\nAl onze voertuigen zijn **150 punten gecontroleerd** :\n\n**Huidige selectie :**\n- **Peugeot 3008 GT** — 2023 — 28 000 km — 29 900 EUR\n- **VW Golf 8 R-Line** — 2022 — 35 000 km — 24 500 EUR\n- **Renault Arkana** — 2024 — 12 000 km — 27 800 EUR\n- **BMW X1 xDrive** — 2023 — 22 000 km — 36 900 EUR\n- **Citroën C5 X** — 2024 — 8 000 km — 31 200 EUR\n\n**Voordelen occasion AutoPrestige :**\n- Minimum 12 maanden garantie\n- Volledig gecertificeerde geschiedenis\n- Inruil van uw oud voertuig\n- Maatwerk financiering\n\nInteresseert een voertuig u ?",
+    text: "**Occasievoertuigen AutoPrestige** :\n\nAl onze voertuigen zijn **150 punten gecontroleerd** :\n\n**Huidige selectie :**\n- **Peugeot 3008 GT** — 2023 — 28 000 km — estimation personnalisee\n- **VW Golf 8 R-Line** — 2022 — 35 000 km — estimation personnalisee\n- **Renault Arkana** — 2024 — 12 000 km — estimation personnalisee\n- **BMW X1 xDrive** — 2023 — 22 000 km — estimation personnalisee\n- **Citroën C5 X** — 2024 — 8 000 km — estimation personnalisee\n\n**Voordelen occasion AutoPrestige :**\n- Minimum 12 maanden garantie\n- Volledig gecertificeerde geschiedenis\n- Inruil van uw oud voertuig\n- Maatwerk financiering\n\nInteresseert een voertuig u ?",
     delay: 2400,
     quickReplies: [
       { label: "Proefrit Peugeot 3008", value: "proefrit" },
@@ -142,7 +142,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   actie: {
-    text: "**Speciale aanbiedingen AutoPrestige** :\n\n**Lente 2026 :**\n- **-3 000 EUR** op de BMW Serie 1 en 3 gamma\n- **Leasing aan 299 EUR/maand** voor Peugeot 3008 (aanbetaling 2 500 EUR)\n- **Conversiepremie** : tot 5 000 EUR op elektrische voertuigen\n- **3 jaar onderhoudspack** gratis bij elke nieuwe aankoop\n\n**Weekend flash :**\n- Dubbele inruil op uw oud voertuig (schatting + 10%)\n- Set banden gratis bij occasion SUV's\n\n**Geldig tot 30 april 2026.**\n\nProfiteer er nu van !",
+    text: "**Speciale aanbiedingen AutoPrestige** :\n\n**Lente 2026 :**\n- **-estimation personnalisee** op de BMW Serie 1 en 3 gamma\n- **Leasing aan estimation personnalisee** voor Peugeot 3008 (aanbetaling estimation personnalisee)\n- **Conversiepremie** : tot estimation personnalisee op elektrische voertuigen\n- **3 jaar onderhoudspack** gratis bij elke nieuwe aankoop\n\n**Weekend flash :**\n- Dubbele inruil op uw oud voertuig (schatting + 10%)\n- Set banden gratis bij occasion SUV's\n\n**Geldig tot 30 april 2026.**\n\nProfiteer er nu van !",
     delay: 2000,
     quickReplies: [
       { label: "BMW in actie", value: "voertuig" },
@@ -153,7 +153,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   autoverzekering: {
-    text: "**Autoverzekering — Partners AutoPrestige** :\n\nWij werken samen met de beste verzekeraars :\n\n**Onderhandelde aanbiedingen :**\n- **Omnium** — vanaf 45 EUR/maand (50% bonus)\n- **Beperkte omnium** — vanaf 28 EUR/maand\n- **Jongere bestuurder** — vanaf 65 EUR/maand\n\n**Inbegrepen in onze aanbiedingen :**\n- 0 km bijstand 24/7\n- Vervangvoertuig\n- Glasbreuk zonder vrijstelling\n- Rechtsbijstand\n\n**Partners :** AXA, Allianz, AG Insurance, Ethias\n\nGratis simulatie in **2 minuten**.\nOfferte verstuurd via WhatsApp.",
+    text: "**Autoverzekering — Partners AutoPrestige** :\n\nWij werken samen met de beste verzekeraars :\n\n**Onderhandelde aanbiedingen :**\n- **Omnium** — vanaf estimation personnalisee (50% bonus)\n- **Beperkte omnium** — vanaf estimation personnalisee\n- **Jongere bestuurder** — vanaf estimation personnalisee\n\n**Inbegrepen in onze aanbiedingen :**\n- 0 km bijstand 24/7\n- Vervangvoertuig\n- Glasbreuk zonder vrijstelling\n- Rechtsbijstand\n\n**Partners :** AXA, Allianz, AG Insurance, Ethias\n\nGratis simulatie in **2 minuten**.\nOfferte verstuurd via WhatsApp.",
     delay: 2000,
     quickReplies: [
       { label: "Verzekering simuleren", value: "autoverzekering" },
@@ -164,7 +164,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "technische keuring": {
-    text: "**Technische keuring AutoPrestige** :\n\n**Ons erkend centrum :**\n- Periodieke technische keuring (TK)\n- Herkeuring\n- Vrijwillige controle (voor aankoop/verkoop)\n\n**Tarieven :**\n- Standaard TK : **69 EUR**\n- Herkeuring : **29 EUR**\n- TK + voorcontrole : **89 EUR** (aanbevolen)\n\n**Volgende tijdsloten :**\n- Donderdag 24 april — 8u, 10u, 14u, 16u\n- Vrijdag 25 april — 9u, 11u\n\n**Uw voertuig :** TK te vernieuwen voor **15/09/2026**\n\n**Duur :** ongeveer 45 min\nVoertuig dezelfde dag terug.",
+    text: "**Technische keuring AutoPrestige** :\n\n**Ons erkend centrum :**\n- Periodieke technische keuring (TK)\n- Herkeuring\n- Vrijwillige controle (voor aankoop/verkoop)\n\n**Tarieven :**\n- Standaard TK : **estimation personnalisee**\n- Herkeuring : **estimation personnalisee**\n- TK + voorcontrole : **estimation personnalisee** (aanbevolen)\n\n**Volgende tijdsloten :**\n- Donderdag 24 april — 8u, 10u, 14u, 16u\n- Vrijdag 25 april — 9u, 11u\n\n**Uw voertuig :** TK te vernieuwen voor **15/09/2026**\n\n**Duur :** ongeveer 45 min\nVoertuig dezelfde dag terug.",
     delay: 1800,
     quickReplies: [
       { label: "TK reserveren", value: "onderhoud bevestigen" },
@@ -175,7 +175,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   levering: {
-    text: "**Leveringsopties AutoPrestige** :\n\n**In de showroom :**\n- Gepersonaliseerde levering met uw adviseur\n- Volledige voertuigpresentatie (1u)\n- Ingebruikname + instellingen\n- Gratis\n\n**Aan huis :**\n- Levering via dieplader\n- Straal 100 km : **149 EUR**\n- Straal 200 km : **249 EUR**\n- Heel België : **op aanvraag**\n\n**Termijnen :**\n- Voertuig op stock : **48-72u**\n- Fabrieksbestelling : **3 tot 6 maanden** naargelang model\n\nOverhandiging documenten (kentekenbewijs, verzekering) op leveringsdag.",
+    text: "**Leveringsopties AutoPrestige** :\n\n**In de showroom :**\n- Gepersonaliseerde levering met uw adviseur\n- Volledige voertuigpresentatie (1u)\n- Ingebruikname + instellingen\n- Gratis\n\n**Aan huis :**\n- Levering via dieplader\n- Straal 100 km : **estimation personnalisee**\n- Straal 200 km : **estimation personnalisee**\n- Heel België : **op aanvraag**\n\n**Termijnen :**\n- Voertuig op stock : **48-72u**\n- Fabrieksbestelling : **3 tot 6 maanden** naargelang model\n\nOverhandiging documenten (kentekenbewijs, verzekering) op leveringsdag.",
     delay: 2000,
     quickReplies: [
       { label: "Thuislevering", value: "levering" },

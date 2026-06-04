@@ -335,6 +335,11 @@ export default async function LocaleLayout({
             </svg>
           </a>
         </NextIntlClientProvider>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){if(window.__ga4LeadTrackingInstalled)return;window.__ga4LeadTrackingInstalled=true;function send(n,p){if(typeof window.gtag!=='function')return;window.gtag('event',n,Object.assign({event_category:'lead',event_label:location.pathname,page_location:location.href},p||{}));}document.addEventListener('submit',function(e){var f=e.target;if(!f||f.tagName!=='FORM')return;var id=(f.id||f.getAttribute('name')||f.className||'form').toString();send('qualify_lead',{event_label:id,method:/newsletter/i.test(id)?'newsletter':'form'});},true);document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var h=a.getAttribute('href')||'';if(/wa\\.me|whatsapp/i.test(h)){send('close_convert_lead',{event_label:'whatsapp_click',method:'whatsapp'});}else if(/^tel:/i.test(h)){send('qualify_lead',{event_label:'phone_click',method:'phone'});}else if(/^mailto:/i.test(h)){send('qualify_lead',{event_label:'email_click',method:'email'});}else if(/contact|rdv|devis|quote|demo|booking|cal\\.com|calendly/i.test(h)){send('qualify_lead',{event_label:'contact_click',method:'contact'});}},true);})();`,
+          }}
+        />
         <SpeedInsights />
       </body>
     </html>

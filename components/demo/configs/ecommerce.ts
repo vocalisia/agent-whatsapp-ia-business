@@ -16,7 +16,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   "suivi commande": {
-    text: "Bien sur ! Voici le statut de votre derniere commande :\n\n**Commande #MC-78432**\n- Robe Elegance Noire (M) — 89,90 EUR\n- Sac Cuir Camel — 129,00 EUR\n\n**Statut :** En cours de livraison\n**Transporteur :** Colissimo\n**N de suivi :** 8R12345678901\n**Livraison estimee :** Demain avant 18h\n\nVoulez-vous autre chose ?",
+    text: "Bien sur ! Voici le statut de votre derniere commande :\n\n**Commande #MC-78432**\n- Robe Elegance Noire (M) — estimation personnalisee\n- Sac Cuir Camel — estimation personnalisee\n\n**Statut :** En cours de livraison\n**Transporteur :** Colissimo\n**N de suivi :** 8R12345678901\n**Livraison estimee :** Demain avant 18h\n\nVoulez-vous autre chose ?",
     delay: 1500,
     quickReplies: [
       { label: "Modifier l'adresse", value: "livraison" },
@@ -49,7 +49,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   stock: {
-    text: "Je verifie la disponibilite pour vous...\n\nVoici les **best-sellers en stock** :\n\n- **Robe Elegance Noire** — 89,90 EUR (S, M, L)\n- **Blazer Parisienne** — 149,00 EUR (M, L, XL)\n- **Jean Slim Brut** — 69,90 EUR (36, 38, 40, 42)\n- **Pull Cachemire Ivoire** — 119,00 EUR (S, M) *dernieres pieces !*\n\nQuel article vous interesse ?",
+    text: "Je verifie la disponibilite pour vous...\n\nVoici les **best-sellers en stock** :\n\n- **Robe Elegance Noire** — estimation personnalisee (S, M, L)\n- **Blazer Parisienne** — estimation personnalisee (M, L, XL)\n- **Jean Slim Brut** — estimation personnalisee (36, 38, 40, 42)\n- **Pull Cachemire Ivoire** — estimation personnalisee (S, M) *dernieres pieces !*\n\nQuel article vous interesse ?",
     delay: 1200,
     quickReplies: [
       { label: "Robe Elegance", value: "catalogue" },
@@ -82,7 +82,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   livraison: {
-    text: "**Options de livraison ModaChic :**\n\n- **Standard** (3-5 jours) : Gratuit des 49 EUR\n- **Express** (24h) : 5,90 EUR\n- **Point relais** (2-4 jours) : Gratuit des 29 EUR\n- **Same-day Paris** : 9,90 EUR (commande avant 14h)\n\n**Zones :** France metropolitaine, Belgique, Suisse, Luxembourg\n**Suivi :** SMS + email a chaque etape\n\nVotre commande est-elle en cours ?",
+    text: "**Options de livraison ModaChic :**\n\n- **Standard** (3-5 jours) : Gratuit sur audit gratuit\n- **Express** (24h) : estimation personnalisee\n- **Point relais** (2-4 jours) : Gratuit sur audit gratuit\n- **Same-day Paris** : estimation personnalisee (commande avant 14h)\n\n**Zones :** France metropolitaine, Belgique, Suisse, Luxembourg\n**Suivi :** SMS + email a chaque etape\n\nVotre commande est-elle en cours ?",
     delay: 1300,
     quickReplies: [
       { label: "Suivre ma commande", value: "suivi commande" },
@@ -93,7 +93,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   paiement: {
-    text: "**Moyens de paiement acceptes :**\n\n- Carte bancaire (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Paiement en **3x sans frais** des 50 EUR\n- Virement bancaire\n- Carte cadeau ModaChic\n\n**Paiement 100% securise** (3D Secure, chiffrement SSL)\n\nBesoin d'aide pour finaliser votre commande ?",
+    text: "**Moyens de paiement acceptes :**\n\n- Carte bancaire (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Paiement en **3x sans frais** sur audit gratuit\n- Virement bancaire\n- Carte cadeau ModaChic\n\n**Paiement 100% securise** (3D Secure, chiffrement SSL)\n\nBesoin d'aide pour finaliser votre commande ?",
     delay: 1100,
     quickReplies: [
       { label: "Payer en 3x", value: "paiement" },
@@ -104,7 +104,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   reclamation: {
-    text: "Je suis desole pour ce desagrement. Votre satisfaction est notre priorite.\n\n**Votre reclamation est enregistree :**\n- **Ref :** REC-MC-2026-04-1847\n- **Priorite :** Haute\n- **Delai de reponse :** Sous 2h maximum\n\nUn conseiller senior va prendre en charge votre dossier. En attendant, puis-je vous proposer un **bon d'achat de 10 EUR** en geste commercial ?",
+    text: "Je suis desole pour ce desagrement. Votre satisfaction est notre priorite.\n\n**Votre reclamation est enregistree :**\n- **Ref :** REC-MC-2026-04-1847\n- **Priorite :** Haute\n- **Delai de reponse :** Sous 2h maximum\n\nUn conseiller senior va prendre en charge votre dossier. En attendant, puis-je vous proposer un **bon d'achat de estimation personnalisee** en geste commercial ?",
     delay: 1600,
     quickReplies: [
       { label: "Accepter le bon", value: "code promo" },
@@ -115,7 +115,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   sav: {
-    text: "**Service apres-vente ModaChic :**\n\nNotre SAV est disponible **7j/7 de 8h a 22h**.\n\nJe peux vous aider avec :\n- Suivi et modification de commande\n- Retours et echanges\n- Problemes de qualite\n- Facturation et remboursements\n- Programme de fidelite (vos points : **2 450 pts** = 24,50 EUR)\n\nQue souhaitez-vous faire ?",
+    text: "**Service apres-vente ModaChic :**\n\nNotre SAV est disponible **7j/7 de 8h a 22h**.\n\nJe peux vous aider avec :\n- Suivi et modification de commande\n- Retours et echanges\n- Problemes de qualite\n- Facturation et remboursements\n- Programme de fidelite (vos points : **2 450 pts** = estimation personnalisee)\n\nQue souhaitez-vous faire ?",
     delay: 1200,
     quickReplies: [
       { label: "Mes points fidelite", value: "sav" },
@@ -137,7 +137,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   catalogue: {
-    text: "Decouvrez nos **collections ModaChic** :\n\n**Nouveautes Printemps 2026 :**\n- Robe Florale Provence — 79,90 EUR\n- Blazer Lin Naturel — 139,00 EUR\n- Sandales Dorees — 59,90 EUR\n\n**Best-sellers :**\n- Robe Elegance Noire — 89,90 EUR\n- Jean Slim Brut — 69,90 EUR\n- Sac Cuir Camel — 129,00 EUR\n\n**Code SPRING26** pour -20% sur les nouveautes !\n\nQuel article vous interesse ?",
+    text: "Decouvrez nos **collections ModaChic** :\n\n**Nouveautes Printemps 2026 :**\n- Robe Florale Provence — estimation personnalisee\n- Blazer Lin Naturel — estimation personnalisee\n- Sandales Dorees — estimation personnalisee\n\n**Best-sellers :**\n- Robe Elegance Noire — estimation personnalisee\n- Jean Slim Brut — estimation personnalisee\n- Sac Cuir Camel — estimation personnalisee\n\n**Code SPRING26** pour -20% sur les nouveautes !\n\nQuel article vous interesse ?",
     delay: 1500,
     quickReplies: [
       { label: "Nouveautes", value: "catalogue" },
@@ -148,7 +148,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   "panier abandonne": {
-    text: "J'ai remarque que vous avez des articles dans votre panier !\n\n**Votre panier ModaChic :**\n- Blazer Parisienne (M) — 149,00 EUR\n- Foulard Soie Bordeaux — 45,00 EUR\n\n**Total :** 194,00 EUR\n**Avec SPRING26 :** ~~194,00~~ **155,20 EUR** (-20%)\n\nVotre code expire dans **2 heures**. Voulez-vous finaliser votre commande ?",
+    text: "J'ai remarque que vous avez des articles dans votre panier !\n\n**Votre panier ModaChic :**\n- Blazer Parisienne (M) — estimation personnalisee\n- Foulard Soie Bordeaux — estimation personnalisee\n\n**Total :** estimation personnalisee\n**Avec SPRING26 :** ~~194,00~~ **estimation personnalisee** (-20%)\n\nVotre code expire dans **2 heures**. Voulez-vous finaliser votre commande ?",
     delay: 1600,
     quickReplies: [
       { label: "Finaliser la commande", value: "paiement" },
@@ -169,7 +169,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   wishlist: {
-    text: "Votre **liste de souhaits ModaChic** :\n\n1. Manteau Laine Camel — 229,00 EUR *(-50% vente flash !)*\n2. Bottines Chelsea Noires — 119,00 EUR\n3. Echarpe Cachemire Grise — 89,00 EUR\n\n**Alerte :** Le Manteau Laine Camel est en promo a **114,50 EUR** ! Plus que 3 en stock.\n\nVoulez-vous l'ajouter au panier ?",
+    text: "Votre **liste de souhaits ModaChic** :\n\n1. Manteau Laine Camel — estimation personnalisee *(-50% vente flash !)*\n2. Bottines Chelsea Noires — estimation personnalisee\n3. Echarpe Cachemire Grise — estimation personnalisee\n\n**Alerte :** Le Manteau Laine Camel est en promo a **estimation personnalisee** ! Plus que 3 en stock.\n\nVoulez-vous l'ajouter au panier ?",
     delay: 1300,
     quickReplies: [
       { label: "Ajouter au panier", value: "paiement" },

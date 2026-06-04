@@ -14,7 +14,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   membership: {
-    text: "Our **FitClub plans**:\n\n**Access** — 29.90 EUR/month\n- Weights room + cardio access\n- Hours: 6am-10pm\n- Changing rooms + showers\n\n**Premium** — 49.90 EUR/month\n- Unlimited 24/7 access\n- All group classes included\n- Sauna + steam room\n- 1 body assessment/quarter\n\n**Elite** — 79.90 EUR/month\n- Everything in Premium\n- 4 personal training sessions/month\n- Personalized nutrition plan\n- AI progress tracking\n\nNo contract required. Which plan interests you?",
+    text: "Our **FitClub plans**:\n\n**Access** — estimation personnalisee\n- Weights room + cardio access\n- Hours: 6am-10pm\n- Changing rooms + showers\n\n**Premium** — estimation personnalisee\n- Unlimited 24/7 access\n- All group classes included\n- Sauna + steam room\n- 1 body assessment/quarter\n\n**Elite** — estimation personnalisee\n- Everything in Premium\n- 4 personal training sessions/month\n- Personalized nutrition plan\n- AI progress tracking\n\nNo contract required. Which plan interests you?",
     delay: 2000,
     quickReplies: [
       { label: "Free trial", value: "free trial" },
@@ -87,7 +87,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   nutrition: {
-    text: "**FitClub AI Nutrition plan**:\n\nOur AI analyzes your profile and generates a personalized plan:\n\n**Example — Goal: Muscle gain**\n\n**Breakfast:** Scrambled eggs + oats + banana (520 kcal)\n**Snack:** Greek yogurt + almonds (280 kcal)\n**Lunch:** Grilled chicken + brown rice + vegetables (650 kcal)\n**Snack:** Protein shake + berries (320 kcal)\n**Dinner:** Salmon + sweet potato + broccoli (580 kcal)\n\n**Total:** 2,350 kcal | 180g protein\n\nIncluded in the **Elite** plan or as an add-on at **9.90 EUR/month**.\n\nWould you like your personalized plan?",
+    text: "**FitClub AI Nutrition plan**:\n\nOur AI analyzes your profile and generates a personalized plan:\n\n**Example — Goal: Muscle gain**\n\n**Breakfast:** Scrambled eggs + oats + banana (520 kcal)\n**Snack:** Greek yogurt + almonds (280 kcal)\n**Lunch:** Grilled chicken + brown rice + vegetables (650 kcal)\n**Snack:** Protein shake + berries (320 kcal)\n**Dinner:** Salmon + sweet potato + broccoli (580 kcal)\n\n**Total:** 2,350 kcal | 180g protein\n\nIncluded in the **Elite** plan or as an add-on at **estimation personnalisee**.\n\nWould you like your personalized plan?",
     delay: 2400,
     quickReplies: [
       { label: "My personal plan", value: "nutrition" },
@@ -150,7 +150,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   sauna: {
-    text: "**FitClub Wellness Area**:\n\nIncluded in **Premium** and **Elite** plans:\n\n- **Finnish sauna** — 80-90°C, 15-min sessions\n- **Steam room** — Eucalyptus vapor, ideal post-workout\n- **Sensory showers** — Alternating cold/warm water\n- **Relaxation lounge** — Sun loungers, complimentary herbal teas\n\n**Wellness hours:**\n- Monday-Friday: 8am - 9pm\n- Saturday-Sunday: 9am - 7pm\n\n**Benefits:** Muscle recovery, toxin elimination, deep relaxation.\n\nDrop-in access for Access members: **5 EUR/session**.",
+    text: "**FitClub Wellness Area**:\n\nIncluded in **Premium** and **Elite** plans:\n\n- **Finnish sauna** — 80-90°C, 15-min sessions\n- **Steam room** — Eucalyptus vapor, ideal post-workout\n- **Sensory showers** — Alternating cold/warm water\n- **Relaxation lounge** — Sun loungers, complimentary herbal teas\n\n**Wellness hours:**\n- Monday-Friday: 8am - 9pm\n- Saturday-Sunday: 9am - 7pm\n\n**Benefits:** Muscle recovery, toxin elimination, deep relaxation.\n\nDrop-in access for Access members: **estimation personnalisee**.",
     delay: 1800,
     quickReplies: [
       { label: "Upgrade to Premium", value: "membership" },
@@ -172,7 +172,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   freeze: {
-    text: "**FitClub membership freeze / pause**:\n\n**Conditions:**\n- Pause available after **3 months** of membership\n- Duration: **1 to 3 months** maximum\n- Freeze fee: **5 EUR/month**\n- Supporting document required: travel, injury, illness\n\n**To freeze your membership:**\n1. Send your supporting document here\n2. State the desired duration\n3. Confirmation within 24 hours\n\nYour membership resumes automatically on the planned date.\n\nWould you like to proceed?",
+    text: "**FitClub membership freeze / pause**:\n\n**Conditions:**\n- Pause available after **3 months** of membership\n- Duration: **1 to 3 months** maximum\n- Freeze fee: **estimation personnalisee**\n- Supporting document required: travel, injury, illness\n\n**To freeze your membership:**\n1. Send your supporting document here\n2. State the desired duration\n3. Confirmation within 24 hours\n\nYour membership resumes automatically on the planned date.\n\nWould you like to proceed?",
     delay: 1800,
     quickReplies: [
       { label: "Freeze 1 month", value: "freeze" },
@@ -183,7 +183,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   renewal: {
-    text: "**FitClub renewal**:\n\n**Your current membership:**\n- Plan: Premium (49.90 EUR/month)\n- Since: January 2026\n- Next payment: May 1st 2026\n\n**Annual renewal offer:**\n- **499 EUR/year** instead of 598.80 EUR (-17%)\n- Equivalent to **41.60 EUR/month**\n- 2 months free\n- Bonus coaching session each quarter\n\nRenewal is automatic unless cancelled **30 days** before the renewal date.",
+    text: "**FitClub renewal**:\n\n**Your current membership:**\n- Plan: Premium (estimation personnalisee)\n- Since: January 2026\n- Next payment: May 1st 2026\n\n**Annual renewal offer:**\n- **estimation personnalisee** instead of estimation personnalisee (-17%)\n- Equivalent to **estimation personnalisee**\n- 2 months free\n- Bonus coaching session each quarter\n\nRenewal is automatic unless cancelled **30 days** before the renewal date.",
     delay: 1800,
     quickReplies: [
       { label: "Switch to annual", value: "renewal" },

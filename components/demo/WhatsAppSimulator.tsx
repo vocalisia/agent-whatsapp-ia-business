@@ -223,7 +223,7 @@ export default function WhatsAppSimulator({ config }: { config: SimulatorConfig 
               return (
                 <div
                   key={msg.id}
-                  className={`flex items-end gap-1.5 ${isBot ? "justify-start" : "justify-end"} animate-[slideUp_0.3s_ease-out]`}
+                  className={`flex items-end gap-2 ${isBot ? "justify-start" : "justify-end"} animate-[slideUp_0.3s_ease-out]`}
                 >
                   {isBot && (
                     <div className="w-6 h-6 rounded-full bg-gradient-to-br from-wa to-emerald-400 flex items-center justify-center text-white text-[8px] font-bold flex-shrink-0 mb-1">

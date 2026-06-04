@@ -42,7 +42,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   fees: {
-    text: "**JurisAssist fee schedule**\n\n**Initial consultation** — Free (30 min)\nAssessment of your situation + action plan\n\n**Standard consultation** — £150 / hour\nIn-depth analysis, personalised advice\n\n**Simple matter package** — £800 - £1,500\nFormal notice letter, contract review\n\n**Litigation package** — £2,000 - £5,000\nCourt representation, negotiation\n\n**Business retainer** — Bespoke\nOngoing legal support\n\n**Legal aid** accepted subject to eligibility.\n\nAll fees are confirmed before any engagement.",
+    text: "**JurisAssist fee schedule**\n\n**Initial consultation** — Free (30 min)\nAssessment of your situation + action plan\n\n**Standard consultation** — estimation personnalisee\nIn-depth analysis, personalised advice\n\n**Simple matter package** — estimation personnalisee- estimation personnalisee\nFormal notice letter, contract review\n\n**Litigation package** — estimation personnalisee- estimation personnalisee\nCourt representation, negotiation\n\n**Business retainer** — Bespoke\nOngoing legal support\n\n**Legal aid** accepted subject to eligibility.\n\nAll fees are confirmed before any engagement.",
     delay: 2200,
     quickReplies: [
       { label: "First consultation", value: "consultation" },
@@ -92,7 +92,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "formal notice": {
-    text: "**Formal notice — Procedure**\n\nA formal notice is a letter requiring the recipient to act.\n\n**Steps:**\n1. Identify the dispute and legal basis\n2. Drafted by our legal team\n3. Sent by **recorded delivery**\n4. Response deadline: 8 to 15 days\n5. No response → legal action\n\n**Formal notice package:** £250\nIncludes: drafting + sending + follow-up\n\n**Amicable resolution rate: 65%**\n\nWould you like us to prepare your formal notice?",
+    text: "**Formal notice — Procedure**\n\nA formal notice is a letter requiring the recipient to act.\n\n**Steps:**\n1. Identify the dispute and legal basis\n2. Drafted by our legal team\n3. Sent by **recorded delivery**\n4. Response deadline: 8 to 15 days\n5. No response → legal action\n\n**Formal notice package:** estimation personnalisee\nIncludes: drafting + sending + follow-up\n\n**Amicable resolution rate: 65%**\n\nWould you like us to prepare your formal notice?",
     delay: 2000,
     quickReplies: [
       { label: "Yes, proceed", value: "consultation" },
@@ -102,7 +102,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   divorce: {
-    text: "**Divorce proceedings — Overview**\n\n**Uncontested divorce**\n- Duration: 2 to 4 months\n- Average cost: £1,500 - £3,000\n- Agreement on all: assets, children, maintenance\n- No court hearing required in most cases\n\n**Contested divorce**\n- Duration: 12 to 24 months\n- Application to the Family Court\n- Interim orders possible\n\n**Issues to resolve:**\n- Child custody + contact arrangements\n- Child maintenance\n- Spousal maintenance\n- Division of assets\n- Family home\n\nWould you like a confidential consultation?",
+    text: "**Divorce proceedings — Overview**\n\n**Uncontested divorce**\n- Duration: 2 to 4 months\n- Average cost: estimation personnalisee- estimation personnalisee\n- Agreement on all: assets, children, maintenance\n- No court hearing required in most cases\n\n**Contested divorce**\n- Duration: 12 to 24 months\n- Application to the Family Court\n- Interim orders possible\n\n**Issues to resolve:**\n- Child custody + contact arrangements\n- Child maintenance\n- Spousal maintenance\n- Division of assets\n- Family home\n\nWould you like a confidential consultation?",
     delay: 2400,
     quickReplies: [
       { label: "Divorce consultation", value: "consultation" },
@@ -112,7 +112,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "company creation": {
-    text: "**Company formation — Support**\n\n**Legal structures:**\n- **Ltd (Private Limited)** — Most common, flexible\n- **LLP** — Professional partnerships\n- **Sole trader** — Simplest structure\n- **PLC** — Large-scale projects\n- **CIC** — Community interest company\n\n**Our support:**\n1. Choosing the right structure\n2. Drafting the articles of association\n3. Companies House registration\n4. Shareholders' agreement (if needed)\n5. Founding contracts\n\n**Formation package:** from £600\nAverage timeline: 7 to 14 days.\n\nWhich structure interests you?",
+    text: "**Company formation — Support**\n\n**Legal structures:**\n- **Ltd (Private Limited)** — Most common, flexible\n- **LLP** — Professional partnerships\n- **Sole trader** — Simplest structure\n- **PLC** — Large-scale projects\n- **CIC** — Community interest company\n\n**Our support:**\n1. Choosing the right structure\n2. Drafting the articles of association\n3. Companies House registration\n4. Shareholders' agreement (if needed)\n5. Founding contracts\n\n**Formation package:** available after audit\nAverage timeline: 7 to 14 days.\n\nWhich structure interests you?",
     delay: 2200,
     quickReplies: [
       { label: "Ltd company", value: "company creation" },
@@ -132,7 +132,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   contract: {
-    text: "**Contract review and analysis**\n\nOur AI + solicitors analyse your contract:\n\n**What we check:**\n- Unfair or unbalanced clauses\n- Disproportionate obligations\n- Non-compete clauses\n- Termination conditions\n- Penalties and indemnities\n- Legal compliance\n\n**Contract types:**\n- Employment contracts (permanent, fixed-term, freelance)\n- Commercial agreements\n- Terms & conditions\n- Service contracts\n- Commercial lease\n\n**Review package:** £350\nTimeline: 48 working hours.\n\nSend your contract for analysis!",
+    text: "**Contract review and analysis**\n\nOur AI + solicitors analyse your contract:\n\n**What we check:**\n- Unfair or unbalanced clauses\n- Disproportionate obligations\n- Non-compete clauses\n- Termination conditions\n- Penalties and indemnities\n- Legal compliance\n\n**Contract types:**\n- Employment contracts (permanent, fixed-term, freelance)\n- Commercial agreements\n- Terms & conditions\n- Service contracts\n- Commercial lease\n\n**Review package:** estimation personnalisee\nTimeline: 48 working hours.\n\nSend your contract for analysis!",
     delay: 2000,
     quickReplies: [
       { label: "Send contract", value: "document photo" },
@@ -152,7 +152,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "legal aid": {
-    text: "**Legal Aid — Eligibility**\n\nLegal aid covers your solicitor's fees.\n\n**Means test (2026):**\n- **Full legal aid**: gross income < £12,475/year\n- **Partial legal aid**: gross income < £22,325/year\n\n**What is covered:**\n- Solicitor fees\n- Barrister fees\n- Expert fees\n- Court costs\n\n**How to apply:**\n1. Complete the legal aid application form\n2. Provide tax returns\n3. Provide proof of income\n4. Submit to the Legal Aid Agency or online\n\nResponse time: 1 to 3 months.\n\nWe help you build your application.",
+    text: "**Legal Aid — Eligibility**\n\nLegal aid covers your solicitor's fees.\n\n**Means test (2026):**\n- **Full legal aid**: gross income < estimation personnalisee\n- **Partial legal aid**: gross income < estimation personnalisee\n\n**What is covered:**\n- Solicitor fees\n- Barrister fees\n- Expert fees\n- Court costs\n\n**How to apply:**\n1. Complete the legal aid application form\n2. Provide tax returns\n3. Provide proof of income\n4. Submit to the Legal Aid Agency or online\n\nResponse time: 1 to 3 months.\n\nWe help you build your application.",
     delay: 2200,
     quickReplies: [
       { label: "Check eligibility", value: "legal aid" },

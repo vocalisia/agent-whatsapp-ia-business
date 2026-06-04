@@ -13,7 +13,7 @@ export const roiEn: EmailTemplate[] = [
 
 Took a quick look at ${company} — interesting positioning.
 
-One stat we keep hitting in your space: 47% of WhatsApp customer messages never get a reply. At €127 avg basket, that's ~€47K/year walking to the competitor who answers faster.
+One stat we keep hitting in your space: 47% of WhatsApp customer messages never get a reply. On a typical average basket, that is a measurable revenue leak toward the competitor who answers faster.
 
 We built a WhatsApp AI that replies in 8 seconds (voice, photos, docs), auto-qualifies BANT and fills the calendar. Live in 14 days.
 

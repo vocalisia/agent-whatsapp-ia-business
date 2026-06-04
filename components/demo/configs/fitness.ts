@@ -14,7 +14,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   abonnement: {
-    text: "Nos **formules FitClub** :\n\n**Access** — 29,90 EUR/mois\n- Acces salle musculation + cardio\n- Horaires : 6h-22h\n- Vestiaires + douches\n\n**Premium** — 49,90 EUR/mois\n- Acces illimite 24/7\n- Tous les cours collectifs inclus\n- Sauna + hammam\n- 1 bilan corporel/trimestre\n\n**Elite** — 79,90 EUR/mois\n- Tout Premium inclus\n- 4 seances coach personnel/mois\n- Plan nutrition personnalise\n- Suivi progression IA\n\nSans engagement. Quelle formule vous interesse ?",
+    text: "Nos **formules FitClub** :\n\n**Access** — estimation personnalisee\n- Acces salle musculation + cardio\n- Horaires : 6h-22h\n- Vestiaires + douches\n\n**Premium** — estimation personnalisee\n- Acces illimite 24/7\n- Tous les cours collectifs inclus\n- Sauna + hammam\n- 1 bilan corporel/trimestre\n\n**Elite** — estimation personnalisee\n- Tout Premium inclus\n- 4 seances coach personnel/mois\n- Plan nutrition personnalise\n- Suivi progression IA\n\nSans engagement. Quelle formule vous interesse ?",
     delay: 2000,
     quickReplies: [
       { label: "Essai gratuit", value: "essai gratuit" },
@@ -87,7 +87,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   nutrition: {
-    text: "**Plan nutrition IA FitClub** :\n\nNotre IA analyse votre profil et genere un plan personnalise :\n\n**Exemple — Objectif : Prise de masse**\n\n**Petit-dejeuner :** Oeufs brouilles + avoine + banane (520 kcal)\n**Collation :** Fromage blanc + amandes (280 kcal)\n**Dejeuner :** Poulet grille + riz complet + legumes (650 kcal)\n**Gouter :** Shake proteine + fruits rouges (320 kcal)\n**Diner :** Saumon + patate douce + brocoli (580 kcal)\n\n**Total :** 2 350 kcal | 180g proteines\n\nInclus dans la formule **Elite** ou en option a **9,90 EUR/mois**.\n\nVoulez-vous votre plan personnalise ?",
+    text: "**Plan nutrition IA FitClub** :\n\nNotre IA analyse votre profil et genere un plan personnalise :\n\n**Exemple — Objectif : Prise de masse**\n\n**Petit-dejeuner :** Oeufs brouilles + avoine + banane (520 kcal)\n**Collation :** Fromage blanc + amandes (280 kcal)\n**Dejeuner :** Poulet grille + riz complet + legumes (650 kcal)\n**Gouter :** Shake proteine + fruits rouges (320 kcal)\n**Diner :** Saumon + patate douce + brocoli (580 kcal)\n\n**Total :** 2 350 kcal | 180g proteines\n\nInclus dans la formule **Elite** ou en option a **estimation personnalisee**.\n\nVoulez-vous votre plan personnalise ?",
     delay: 2400,
     quickReplies: [
       { label: "Mon plan perso", value: "nutrition" },
@@ -150,7 +150,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   sauna: {
-    text: "**Espace Bien-etre FitClub** :\n\nInclus dans les formules **Premium** et **Elite** :\n\n- **Sauna finlandais** — 80-90C, sessions de 15 min\n- **Hammam** — Vapeur eucalyptus, ideal post-entrainement\n- **Douches sensorielles** — Eau froide/chaude alternee\n- **Espace detente** — Transats, tisanes offertes\n\n**Horaires bien-etre :**\n- Lundi-Vendredi : 8h - 21h\n- Samedi-Dimanche : 9h - 19h\n\n**Bienfaits :** Recuperation musculaire, elimination des toxines, relaxation profonde.\n\nAcces ponctuel pour les Access : **5 EUR/session**.",
+    text: "**Espace Bien-etre FitClub** :\n\nInclus dans les formules **Premium** et **Elite** :\n\n- **Sauna finlandais** — 80-90C, sessions de 15 min\n- **Hammam** — Vapeur eucalyptus, ideal post-entrainement\n- **Douches sensorielles** — Eau froide/chaude alternee\n- **Espace detente** — Transats, tisanes offertes\n\n**Horaires bien-etre :**\n- Lundi-Vendredi : 8h - 21h\n- Samedi-Dimanche : 9h - 19h\n\n**Bienfaits :** Recuperation musculaire, elimination des toxines, relaxation profonde.\n\nAcces ponctuel pour les Access : **estimation personnalisee**.",
     delay: 1800,
     quickReplies: [
       { label: "Passer en Premium", value: "abonnement" },
@@ -172,7 +172,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "gel": {
-    text: "**Gel / Pause d'abonnement FitClub** :\n\n**Conditions :**\n- Pause possible apres **3 mois** d'anciennete\n- Duree : **1 a 3 mois** maximum\n- Frais de gel : **5 EUR/mois**\n- Justificatif requis : voyage, blessure, maladie\n\n**Pour geler votre abonnement :**\n1. Envoyez votre justificatif ici\n2. Indiquez la duree souhaitee\n3. Confirmation sous 24h\n\nVotre abonnement reprend automatiquement a la date prevue.\n\nVoulez-vous proceder ?",
+    text: "**Gel / Pause d'abonnement FitClub** :\n\n**Conditions :**\n- Pause possible apres **3 mois** d'anciennete\n- Duree : **1 a 3 mois** maximum\n- Frais de gel : **estimation personnalisee**\n- Justificatif requis : voyage, blessure, maladie\n\n**Pour geler votre abonnement :**\n1. Envoyez votre justificatif ici\n2. Indiquez la duree souhaitee\n3. Confirmation sous 24h\n\nVotre abonnement reprend automatiquement a la date prevue.\n\nVoulez-vous proceder ?",
     delay: 1800,
     quickReplies: [
       { label: "Geler 1 mois", value: "gel" },
@@ -183,7 +183,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   renouvellement: {
-    text: "**Renouvellement FitClub** :\n\n**Votre abonnement actuel :**\n- Formule : Premium (49,90 EUR/mois)\n- Depuis : Janvier 2026\n- Prochain prelevement : 1er mai 2026\n\n**Offre de renouvellement annuel :**\n- **499 EUR/an** au lieu de 598,80 EUR (-17%)\n- Equivalent a **41,60 EUR/mois**\n- 2 mois offerts\n- Seance coach bonus chaque trimestre\n\nLe renouvellement est automatique sauf resiliation **30 jours** avant echeance.",
+    text: "**Renouvellement FitClub** :\n\n**Votre abonnement actuel :**\n- Formule : Premium (estimation personnalisee)\n- Depuis : Janvier 2026\n- Prochain prelevement : 1er mai 2026\n\n**Offre de renouvellement annuel :**\n- **estimation personnalisee** au lieu de estimation personnalisee (-17%)\n- Equivalent a **estimation personnalisee**\n- 2 mois offerts\n- Seance coach bonus chaque trimestre\n\nLe renouvellement est automatique sauf resiliation **30 jours** avant echeance.",
     delay: 1800,
     quickReplies: [
       { label: "Passer a l'annuel", value: "renouvellement" },

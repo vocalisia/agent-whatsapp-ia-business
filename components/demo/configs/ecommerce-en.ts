@@ -16,7 +16,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   "order tracking": {
-    text: "Sure! Here is the status of your last order:\n\n**Order #MC-78432**\n- Black Elegance Dress (M) — 89.90 EUR\n- Camel Leather Bag — 129.00 EUR\n\n**Status:** Out for delivery\n**Carrier:** Colissimo\n**Tracking no:** 8R12345678901\n**Estimated delivery:** Tomorrow before 6pm\n\nAnything else I can help with?",
+    text: "Sure! Here is the status of your last order:\n\n**Order #MC-78432**\n- Black Elegance Dress (M) — estimation personnalisee\n- Camel Leather Bag — estimation personnalisee\n\n**Status:** Out for delivery\n**Carrier:** Colissimo\n**Tracking no:** 8R12345678901\n**Estimated delivery:** Tomorrow before 6pm\n\nAnything else I can help with?",
     delay: 1500,
     quickReplies: [
       { label: "Change address", value: "delivery" },
@@ -49,7 +49,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   stock: {
-    text: "Checking availability for you...\n\nHere are our **best-sellers in stock**:\n\n- **Black Elegance Dress** — 89.90 EUR (S, M, L)\n- **Parisienne Blazer** — 149.00 EUR (M, L, XL)\n- **Raw Slim Jeans** — 69.90 EUR (36, 38, 40, 42)\n- **Ivory Cashmere Sweater** — 119.00 EUR (S, M) *last pieces!*\n\nWhich item interests you?",
+    text: "Checking availability for you...\n\nHere are our **best-sellers in stock**:\n\n- **Black Elegance Dress** — estimation personnalisee (S, M, L)\n- **Parisienne Blazer** — estimation personnalisee (M, L, XL)\n- **Raw Slim Jeans** — estimation personnalisee (36, 38, 40, 42)\n- **Ivory Cashmere Sweater** — estimation personnalisee (S, M) *last pieces!*\n\nWhich item interests you?",
     delay: 1200,
     quickReplies: [
       { label: "Elegance Dress", value: "catalogue" },
@@ -82,7 +82,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   delivery: {
-    text: "**ModaChic delivery options:**\n\n- **Standard** (3-5 days): Free from 49 EUR\n- **Express** (24h): 5.90 EUR\n- **Pick-up point** (2-4 days): Free from 29 EUR\n- **Same-day Paris**: 9.90 EUR (order before 2pm)\n\n**Zones:** Metropolitan France, Belgium, Switzerland, Luxembourg\n**Tracking:** SMS + email at every step\n\nIs your order currently in progress?",
+    text: "**ModaChic delivery options:**\n\n- **Standard** (3-5 days): Free available after audit\n- **Express** (24h): estimation personnalisee\n- **Pick-up point** (2-4 days): Free available after audit\n- **Same-day Paris**: estimation personnalisee (order before 2pm)\n\n**Zones:** Metropolitan France, Belgium, Switzerland, Luxembourg\n**Tracking:** SMS + email at every step\n\nIs your order currently in progress?",
     delay: 1300,
     quickReplies: [
       { label: "Track my order", value: "order tracking" },
@@ -93,7 +93,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   payment: {
-    text: "**Accepted payment methods:**\n\n- Credit/debit card (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Pay in **3 installments, interest-free** from 50 EUR\n- Bank transfer\n- ModaChic gift card\n\n**100% secure payment** (3D Secure, SSL encryption)\n\nNeed help completing your order?",
+    text: "**Accepted payment methods:**\n\n- Credit/debit card (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Pay in **3 installments, interest-free** available after audit\n- Bank transfer\n- ModaChic gift card\n\n**100% secure payment** (3D Secure, SSL encryption)\n\nNeed help completing your order?",
     delay: 1100,
     quickReplies: [
       { label: "Pay in 3 installments", value: "payment" },
@@ -104,7 +104,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   complaint: {
-    text: "I'm sorry for the inconvenience. Your satisfaction is our priority.\n\n**Your complaint has been logged:**\n- **Ref:** REC-MC-2026-04-1847\n- **Priority:** High\n- **Response time:** Within 2 hours maximum\n\nA senior advisor will take care of your case. In the meantime, may I offer you a **10 EUR voucher** as a gesture of goodwill?",
+    text: "I'm sorry for the inconvenience. Your satisfaction is our priority.\n\n**Your complaint has been logged:**\n- **Ref:** REC-MC-2026-04-1847\n- **Priority:** High\n- **Response time:** Within 2 hours maximum\n\nA senior advisor will take care of your case. In the meantime, may I offer you a **estimation personnalisee voucher** as a gesture of goodwill?",
     delay: 1600,
     quickReplies: [
       { label: "Accept voucher", value: "promo code" },
@@ -115,7 +115,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   "after-sales": {
-    text: "**ModaChic After-Sales Service:**\n\nOur support team is available **7 days a week, 8am to 10pm**.\n\nI can help you with:\n- Order tracking and modifications\n- Returns and exchanges\n- Quality issues\n- Billing and refunds\n- Loyalty program (your points: **2,450 pts** = 24.50 EUR)\n\nWhat would you like to do?",
+    text: "**ModaChic After-Sales Service:**\n\nOur support team is available **7 days a week, 8am to 10pm**.\n\nI can help you with:\n- Order tracking and modifications\n- Returns and exchanges\n- Quality issues\n- Billing and refunds\n- Loyalty program (your points: **2,450 pts** = estimation personnalisee)\n\nWhat would you like to do?",
     delay: 1200,
     quickReplies: [
       { label: "My loyalty points", value: "after-sales" },
@@ -137,7 +137,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   catalogue: {
-    text: "Discover our **ModaChic collections**:\n\n**Spring 2026 New Arrivals:**\n- Provence Floral Dress — 79.90 EUR\n- Natural Linen Blazer — 139.00 EUR\n- Gold Sandals — 59.90 EUR\n\n**Best-sellers:**\n- Black Elegance Dress — 89.90 EUR\n- Raw Slim Jeans — 69.90 EUR\n- Camel Leather Bag — 129.00 EUR\n\n**Code SPRING26** for -20% on new arrivals!\n\nWhich item interests you?",
+    text: "Discover our **ModaChic collections**:\n\n**Spring 2026 New Arrivals:**\n- Provence Floral Dress — estimation personnalisee\n- Natural Linen Blazer — estimation personnalisee\n- Gold Sandals — estimation personnalisee\n\n**Best-sellers:**\n- Black Elegance Dress — estimation personnalisee\n- Raw Slim Jeans — estimation personnalisee\n- Camel Leather Bag — estimation personnalisee\n\n**Code SPRING26** for -20% on new arrivals!\n\nWhich item interests you?",
     delay: 1500,
     quickReplies: [
       { label: "New arrivals", value: "catalogue" },
@@ -148,7 +148,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   "abandoned cart": {
-    text: "I noticed you have items in your cart!\n\n**Your ModaChic cart:**\n- Parisienne Blazer (M) — 149.00 EUR\n- Bordeaux Silk Scarf — 45.00 EUR\n\n**Total:** 194.00 EUR\n**With SPRING26:** ~~194.00~~ **155.20 EUR** (-20%)\n\nYour code expires in **2 hours**. Would you like to complete your order?",
+    text: "I noticed you have items in your cart!\n\n**Your ModaChic cart:**\n- Parisienne Blazer (M) — estimation personnalisee\n- Bordeaux Silk Scarf — estimation personnalisee\n\n**Total:** estimation personnalisee\n**With SPRING26:** ~~194.00~~ **estimation personnalisee** (-20%)\n\nYour code expires in **2 hours**. Would you like to complete your order?",
     delay: 1600,
     quickReplies: [
       { label: "Complete order", value: "payment" },
@@ -169,7 +169,7 @@ const ECOMMERCE_INTENTS = {
   },
 
   wishlist: {
-    text: "Your **ModaChic wishlist**:\n\n1. Camel Wool Coat — 229.00 EUR *(-50% flash sale!)*\n2. Black Chelsea Boots — 119.00 EUR\n3. Grey Cashmere Scarf — 89.00 EUR\n\n**Alert:** The Camel Wool Coat is on sale at **114.50 EUR**! Only 3 left in stock.\n\nWould you like to add it to your cart?",
+    text: "Your **ModaChic wishlist**:\n\n1. Camel Wool Coat — estimation personnalisee *(-50% flash sale!)*\n2. Black Chelsea Boots — estimation personnalisee\n3. Grey Cashmere Scarf — estimation personnalisee\n\n**Alert:** The Camel Wool Coat is on sale at **estimation personnalisee**! Only 3 left in stock.\n\nWould you like to add it to your cart?",
     delay: 1300,
     quickReplies: [
       { label: "Add to cart", value: "payment" },

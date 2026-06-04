@@ -14,7 +14,7 @@ const sectorIntentsNL: Record<string, BotResponse> = {
   },
 
   abonnement: {
-    text: "Onze **FitClub formules**:\n\n**Access** — 29,90 EUR/maand\n- Toegang gewichtszaal + cardio\n- Openingsuren: 6u-22u\n- Kleedkamers + douches\n\n**Premium** — 49,90 EUR/maand\n- Onbeperkte toegang 24/7\n- Alle groepslessen inbegrepen\n- Sauna + hammam\n- 1 lichaamsanalyse/kwartaal\n\n**Elite** — 79,90 EUR/maand\n- Alles van Premium inbegrepen\n- 4 personal coaching sessies/maand\n- Gepersonaliseerd voedingsplan\n- AI-voortgangsopvolging\n\nZonder verbintenis. Welke formule interesseert u?",
+    text: "Onze **FitClub formules**:\n\n**Access** — estimation personnalisee\n- Toegang gewichtszaal + cardio\n- Openingsuren: 6u-22u\n- Kleedkamers + douches\n\n**Premium** — estimation personnalisee\n- Onbeperkte toegang 24/7\n- Alle groepslessen inbegrepen\n- Sauna + hammam\n- 1 lichaamsanalyse/kwartaal\n\n**Elite** — estimation personnalisee\n- Alles van Premium inbegrepen\n- 4 personal coaching sessies/maand\n- Gepersonaliseerd voedingsplan\n- AI-voortgangsopvolging\n\nZonder verbintenis. Welke formule interesseert u?",
     delay: 2000,
     quickReplies: [
       { label: "Gratis proefdag", value: "gratis proefdag" },
@@ -87,7 +87,7 @@ const sectorIntentsNL: Record<string, BotResponse> = {
   },
 
   voeding: {
-    text: "**FitClub AI-voedingsplan**:\n\nOnze AI analyseert uw profiel en genereert een persoonlijk plan:\n\n**Voorbeeld — Doel: Spiermassa**\n\n**Ontbijt:** Roereieren + havermout + banaan (520 kcal)\n**Tussendoortje:** Kwark + amandelen (280 kcal)\n**Lunch:** Gegrilde kip + bruine rijst + groenten (650 kcal)\n**Namiddagsnack:** Eiwitshake + rood fruit (320 kcal)\n**Avondmaal:** Zalm + zoete aardappel + broccoli (580 kcal)\n\n**Totaal:** 2.350 kcal | 180g eiwitten\n\nInbegrepen in de **Elite** formule of als optie voor **9,90 EUR/maand**.\n\nWilt u uw persoonlijk plan?",
+    text: "**FitClub AI-voedingsplan**:\n\nOnze AI analyseert uw profiel en genereert een persoonlijk plan:\n\n**Voorbeeld — Doel: Spiermassa**\n\n**Ontbijt:** Roereieren + havermout + banaan (520 kcal)\n**Tussendoortje:** Kwark + amandelen (280 kcal)\n**Lunch:** Gegrilde kip + bruine rijst + groenten (650 kcal)\n**Namiddagsnack:** Eiwitshake + rood fruit (320 kcal)\n**Avondmaal:** Zalm + zoete aardappel + broccoli (580 kcal)\n\n**Totaal:** 2.350 kcal | 180g eiwitten\n\nInbegrepen in de **Elite** formule of als optie voor **estimation personnalisee**.\n\nWilt u uw persoonlijk plan?",
     delay: 2400,
     quickReplies: [
       { label: "Mijn persoonlijk plan", value: "voeding" },
@@ -150,7 +150,7 @@ const sectorIntentsNL: Record<string, BotResponse> = {
   },
 
   sauna: {
-    text: "**FitClub Welzijnsruimte**:\n\nInbegrepen in **Premium** en **Elite** formules:\n\n- **Finse sauna** — 80-90°C, sessies van 15 min\n- **Hammam** — Eucalyptusstoom, ideaal na training\n- **Sensorische douches** — Koud/warm wisselend water\n- **Ontspanningsruimte** — Ligstoelen, gratis kruidenthee\n\n**Welzijnsuren:**\n- Maandag-Vrijdag: 8u - 21u\n- Zaterdag-Zondag: 9u - 19u\n\n**Voordelen:** Spierherstel, afvoer van toxines, diepe ontspanning.\n\nLosse toegang voor Access: **5 EUR/sessie**.",
+    text: "**FitClub Welzijnsruimte**:\n\nInbegrepen in **Premium** en **Elite** formules:\n\n- **Finse sauna** — 80-90°C, sessies van 15 min\n- **Hammam** — Eucalyptusstoom, ideaal na training\n- **Sensorische douches** — Koud/warm wisselend water\n- **Ontspanningsruimte** — Ligstoelen, gratis kruidenthee\n\n**Welzijnsuren:**\n- Maandag-Vrijdag: 8u - 21u\n- Zaterdag-Zondag: 9u - 19u\n\n**Voordelen:** Spierherstel, afvoer van toxines, diepe ontspanning.\n\nLosse toegang voor Access: **estimation personnalisee**.",
     delay: 1800,
     quickReplies: [
       { label: "Naar Premium upgraden", value: "abonnement" },
@@ -172,7 +172,7 @@ const sectorIntentsNL: Record<string, BotResponse> = {
   },
 
   "bevriezing": {
-    text: "**FitClub abonnement bevriezen**:\n\n**Voorwaarden:**\n- Bevriezing mogelijk na **3 maanden** lidmaatschap\n- Duur: **1 tot 3 maanden** maximum\n- Bevriезingskosten: **5 EUR/maand**\n- Reden vereist: reis, blessure, ziekte\n\n**Om uw abonnement te bevriezen:**\n1. Stuur uw attest hier\n2. Geef de gewenste duur op\n3. Bevestiging binnen 24u\n\nUw abonnement hervat automatisch op de geplande datum.\n\nWilt u doorgaan?",
+    text: "**FitClub abonnement bevriezen**:\n\n**Voorwaarden:**\n- Bevriezing mogelijk na **3 maanden** lidmaatschap\n- Duur: **1 tot 3 maanden** maximum\n- Bevriезingskosten: **estimation personnalisee**\n- Reden vereist: reis, blessure, ziekte\n\n**Om uw abonnement te bevriezen:**\n1. Stuur uw attest hier\n2. Geef de gewenste duur op\n3. Bevestiging binnen 24u\n\nUw abonnement hervat automatisch op de geplande datum.\n\nWilt u doorgaan?",
     delay: 1800,
     quickReplies: [
       { label: "1 maand bevriezen", value: "bevriezing" },
@@ -183,7 +183,7 @@ const sectorIntentsNL: Record<string, BotResponse> = {
   },
 
   verlenging: {
-    text: "**FitClub verlenging**:\n\n**Uw huidige abonnement:**\n- Formule: Premium (49,90 EUR/maand)\n- Depuis: Januari 2026\n- Volgende afschrijving: 1 mei 2026\n\n**Jaarlijkse verlengingsaanbieding:**\n- **499 EUR/jaar** i.p.v. 598,80 EUR (-17%)\n- Equivalent aan **41,60 EUR/maand**\n- 2 maanden gratis\n- Bonus coachsessie elk kwartaal\n\nDe verlenging is automatisch tenzij u **30 dagen** voor de vervaldatum opzegt.",
+    text: "**FitClub verlenging**:\n\n**Uw huidige abonnement:**\n- Formule: Premium (estimation personnalisee)\n- Depuis: Januari 2026\n- Volgende afschrijving: 1 mei 2026\n\n**Jaarlijkse verlengingsaanbieding:**\n- **estimation personnalisee** i.p.v. estimation personnalisee (-17%)\n- Equivalent aan **estimation personnalisee**\n- 2 maanden gratis\n- Bonus coachsessie elk kwartaal\n\nDe verlenging is automatisch tenzij u **30 dagen** voor de vervaldatum opzegt.",
     delay: 1800,
     quickReplies: [
       { label: "Jaarlijks abonnement nemen", value: "verlenging" },

@@ -30,7 +30,7 @@ const SLIDES = [
       stats: [
         { value: "67%", label: "des clients n'achètent pas si la réponse dépasse 1h" },
         { value: "3×", label: "plus de ventes avec un suivi automatique immédiat" },
-        { value: "0€", label: "de coût humain une fois l'agent déployé" },
+        { value: "estimation personnalisee", label: "de coût humain une fois l'agent déployé" },
       ],
     },
   },
@@ -100,7 +100,7 @@ function ProgressBar({ progress }: { progress: number }) {
 
 // ── Slide renderers ────────────────────────────────────────────────────────
 function SlideContent({ slide, visible }: { slide: typeof SLIDES[0]; visible: boolean }) {
-  const base = `transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`;
+  const base = `transition-all duration-300 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`;
 
   if (slide.type === "agitate") {
     const c = slide.content as { eyebrow: string; stats: { value: string; label: string }[] };

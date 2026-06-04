@@ -40,7 +40,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   speisekarte: {
-    text: "Hier ist das **Tagesmenu**:\n\n**Vorspeisen:**\n- Butternusskürbissuppe, gerostete Haselnusse — 14 EUR\n- Lachs-Tartar, Avocado, Zitrusfruchte — 16 EUR\n- Burrata, Flaschentomaten, Pesto — 15 EUR\n\n**Hauptgerichte:**\n- Wolfsbarschfilet, Safranrisotto — 28 EUR\n- 7h-geschmorte Lammkeule, Trufelipuree — 32 EUR\n- Steinpilzrisotto mit 24-Monate-Parmesan — 24 EUR\n\n**Desserts:**\n- Schokoladenfondant mit flussigem Kern — 12 EUR\n- Tarte Tatin, Creme fraiche — 11 EUR\n- Affinierte Kaseplatte — 14 EUR\n\n**Komplettes Meni** (Vorspeise + Hauptgericht + Dessert): **45 EUR**",
+    text: "Hier ist das **Tagesmenu**:\n\n**Vorspeisen:**\n- Butternusskürbissuppe, gerostete Haselnusse — estimation personnalisee\n- Lachs-Tartar, Avocado, Zitrusfruchte — estimation personnalisee\n- Burrata, Flaschentomaten, Pesto — estimation personnalisee\n\n**Hauptgerichte:**\n- Wolfsbarschfilet, Safranrisotto — estimation personnalisee\n- 7h-geschmorte Lammkeule, Trufelipuree — estimation personnalisee\n- Steinpilzrisotto mit 24-Monate-Parmesan — estimation personnalisee\n\n**Desserts:**\n- Schokoladenfondant mit flussigem Kern — estimation personnalisee\n- Tarte Tatin, Creme fraiche — estimation personnalisee\n- Affinierte Kaseplatte — estimation personnalisee\n\n**Komplettes Meni** (Vorspeise + Hauptgericht + Dessert): **estimation personnalisee**",
     delay: 2400,
     quickReplies: [
       { label: "Weinkarte", value: "weinkarte" },
@@ -68,7 +68,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   lieferung: {
-    text: "Lieferoptionen:\n\n**Partnerplattformen:**\n- **Lieferando** — Lieferung 25-35 Min.\n- **Delivery Hero** — Lieferung 20-30 Min.\n- **Wolt** — Lieferung 30-40 Min.\n\n**Click & Collect:**\n- Hier bestellen, im Restaurant abholen\n- Fertig in 20 Min.\n- -10% auf Ihre Bestellung\n\n**Direktlieferung:**\n- Radius 5 km, Mindestbestellwert 30 EUR\n- Liefergebühr: 4,90 EUR\n- Kostenlos ab 60 EUR\n\nDie Karte zum Mitnehmen ist 7 Tage/Woche von 11:30 - 22:00 Uhr verfugbar.",
+    text: "Lieferoptionen:\n\n**Partnerplattformen:**\n- **Lieferando** — Lieferung 25-35 Min.\n- **Delivery Hero** — Lieferung 20-30 Min.\n- **Wolt** — Lieferung 30-40 Min.\n\n**Click & Collect:**\n- Hier bestellen, im Restaurant abholen\n- Fertig in 20 Min.\n- -10% auf Ihre Bestellung\n\n**Direktlieferung:**\n- Radius 5 km, Mindestbestellwert estimation personnalisee\n- Liefergebühr: estimation personnalisee\n- Kostenlos ab estimation personnalisee\n\nDie Karte zum Mitnehmen ist 7 Tage/Woche von 11:30 - 22:00 Uhr verfugbar.",
     delay: 2000,
     quickReplies: [
       { label: "Zum Mitnehmen bestellen", value: "bestellung" },
@@ -77,7 +77,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   bestellung: {
-    text: "Aufgabe Ihrer Bestellung zum Mitnehmen!\n\nHier unsere **Bestseller**:\n\n1. Gourmet-Truffelburger mit Pommes — 22 EUR\n2. Lachs-Poke-Bowl, Edamame, Avocado — 19 EUR\n3. Steinpilzrisotto (vegan moglich) — 21 EUR\n4. Caesar Salat mit gegrilltem Huhn — 17 EUR\n5. Rindfleisch-Tartar, Strohkartoffeln — 24 EUR\n\n**Mittagsmenu** (Hauptgericht + Getrank): 15,90 EUR\n\nNennen Sie Ihre Auswahl und ich berechne den Gesamtbetrag. Zahlung per Karte online oder vor Ort.",
+    text: "Aufgabe Ihrer Bestellung zum Mitnehmen!\n\nHier unsere **Bestseller**:\n\n1. Gourmet-Truffelburger mit Pommes — estimation personnalisee\n2. Lachs-Poke-Bowl, Edamame, Avocado — estimation personnalisee\n3. Steinpilzrisotto (vegan moglich) — estimation personnalisee\n4. Caesar Salat mit gegrilltem Huhn — estimation personnalisee\n5. Rindfleisch-Tartar, Strohkartoffeln — estimation personnalisee\n\n**Mittagsmenu** (Hauptgericht + Getrank): estimation personnalisee\n\nNennen Sie Ihre Auswahl und ich berechne den Gesamtbetrag. Zahlung per Karte online oder vor Ort.",
     delay: 2200,
     quickReplies: [
       { label: "Burger + Pommes", value: "bestellung bestatigen" },
@@ -87,7 +87,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   "bestellung bestatigen": {
-    text: "Bestellung aufgenommen!\n\n**Zusammenfassung:**\n- 1x Gourmet-Truffelburger — 22 EUR\n- 1x Pommes — inklusive\n\n**Gesamt:** 22,00 EUR\n\n**Abholung:** In 20 Minuten\n**Adresse:** Gastronomiestrasse 42, 80333 Munchen\n\nZahlungslink wird per WhatsApp gesendet.\nSie erhalten eine Benachrichtigung wenn es fertig ist!",
+    text: "Bestellung aufgenommen!\n\n**Zusammenfassung:**\n- 1x Gourmet-Truffelburger — estimation personnalisee\n- 1x Pommes — inklusive\n\n**Gesamt:** estimation personnalisee\n\n**Abholung:** In 20 Minuten\n**Adresse:** Gastronomiestrasse 42, 80333 Munchen\n\nZahlungslink wird per WhatsApp gesendet.\nSie erhalten eine Benachrichtigung wenn es fertig ist!",
     delay: 1800,
     quickReplies: [
       { label: "Danke!", value: "danke" },
@@ -112,7 +112,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   event: {
-    text: "Privatveranstaltungen im Gourmet IA:\n\n**Unsere Bereiche:**\n- **Privatsalon** — 8-16 Personen\n- **Gewolbesaal** — 20-40 Personen\n- **Privatisierte Terrasse** — 30-60 Personen\n- **Ganzes Restaurant** — bis zu 80 Personen\n\n**Anlasse:**\n- Geburtstage, Hochzeiten, Verlobungen\n- Seminare, Teambuilding\n- Geschaftsdinner\n\n**Inklusive:**\n- Maßgeschneidertes Menu vom Chef\n- Personalisierte Dekoration\n- Engagierter Service\n- DJ / Animation auf Anfrage\n\nBudget ab **65 EUR/Person**. Angebot in 24h.",
+    text: "Privatveranstaltungen im Gourmet IA:\n\n**Unsere Bereiche:**\n- **Privatsalon** — 8-16 Personen\n- **Gewolbesaal** — 20-40 Personen\n- **Privatisierte Terrasse** — 30-60 Personen\n- **Ganzes Restaurant** — bis zu 80 Personen\n\n**Anlasse:**\n- Geburtstage, Hochzeiten, Verlobungen\n- Seminare, Teambuilding\n- Geschaftsdinner\n\n**Inklusive:**\n- Maßgeschneidertes Menu vom Chef\n- Personalisierte Dekoration\n- Engagierter Service\n- DJ / Animation auf Anfrage\n\nBudget ab **estimation personnalisee**. Angebot in 24h.",
     delay: 2400,
     quickReplies: [
       { label: "Angebot anfragen", value: "termin" },
@@ -121,7 +121,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   treueprogramm: {
-    text: "Treueprogramm **Gourmet Club**:\n\n**Wie es funktioniert:**\n- 1 EUR ausgegeben = 1 Punkt\n- 100 Punkte = 10 EUR Nachlass\n\n**Mitgliedervorteile:**\n- Dessert bei Anmeldung geschenkt\n- -15% an Ihrem Geburtstag\n- Bevorzugter Zugang zu Privatveranstaltungen\n- Exklusive Verkostungen (Weine, Saisonmenus)\n- Bevorzugte Reservierung am Wochenende\n\n**Ihr aktuelles Guthaben:** Melden Sie sich an, um zu beginnen!\n\nKostenlose Anmeldung, direkt hier auf WhatsApp.",
+    text: "Treueprogramm **Gourmet Club**:\n\n**Wie es funktioniert:**\n- estimation personnalisee = 1 Punkt\n- 100 Punkte = estimation personnalisee Nachlass\n\n**Mitgliedervorteile:**\n- Dessert bei Anmeldung geschenkt\n- -15% an Ihrem Geburtstag\n- Bevorzugter Zugang zu Privatveranstaltungen\n- Exklusive Verkostungen (Weine, Saisonmenus)\n- Bevorzugte Reservierung am Wochenende\n\n**Ihr aktuelles Guthaben:** Melden Sie sich an, um zu beginnen!\n\nKostenlose Anmeldung, direkt hier auf WhatsApp.",
     delay: 2000,
     quickReplies: [
       { label: "Anmelden", value: "reservierung bestatigen" },
@@ -130,7 +130,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   weinkarte: {
-    text: "Unsere **Weinkarte**:\n\n**Weissweine:**\n- Chablis 1er Cru 2021 — 12 EUR / 48 EUR\n- Sancerre, Domaine Vacheron — 10 EUR / 42 EUR\n- Meursault 2020 — 16 EUR / 65 EUR\n\n**Rotweine:**\n- Saint-Emilion Grand Cru 2018 — 14 EUR / 58 EUR\n- Chateauneuf-du-Pape 2019 — 13 EUR / 52 EUR\n- Barolo DOCG 2017 — 18 EUR / 72 EUR\n\n**Champagner:**\n- Veuve Clicquot Brut — 75 EUR\n- Dom Perignon 2012 — 220 EUR\n- Ruinart Blanc de Blancs — 95 EUR\n\n**Speise-Wein-Begleitung:** Unser KI-Sommelier empfiehlt die perfekte Begleitung zu Ihrem Menu.",
+    text: "Unsere **Weinkarte**:\n\n**Weissweine:**\n- Chablis 1er Cru 2021 — estimation personnalisee value\n- Sancerre, Domaine Vacheron — estimation personnalisee value\n- Meursault 2020 — estimation personnalisee value\n\n**Rotweine:**\n- Saint-Emilion Grand Cru 2018 — estimation personnalisee value\n- Chateauneuf-du-Pape 2019 — estimation personnalisee value\n- Barolo DOCG 2017 — estimation personnalisee value\n\n**Champagner:**\n- Veuve Clicquot Brut — estimation personnalisee\n- Dom Perignon 2012 — estimation personnalisee\n- Ruinart Blanc de Blancs — estimation personnalisee\n\n**Speise-Wein-Begleitung:** Unser KI-Sommelier empfiehlt die perfekte Begleitung zu Ihrem Menu.",
     delay: 2200,
     quickReplies: [
       { label: "Begleitung zum Menu", value: "gerichtsfoto" },
@@ -139,7 +139,7 @@ const RESTAURANT_INTENTS_DE = {
     ],
   },
   vegetarisch: {
-    text: "Vegetarische & vegane Optionen:\n\n**Vegetarisch:**\n- Burrata, Flaschentomaten, Pesto — 15 EUR\n- Steinpilzrisotto mit Parmesan — 24 EUR\n- Selbstgemachte Gnocchi, Salbeibutter — 20 EUR\n- Dunne Saisongemisetarte — 18 EUR\n\n**Vegan:**\n- Tofu-Poke-Bowl, Edamame, Avocado — 19 EUR\n- Steinpilzrisotto (vegane Version) — 24 EUR\n- Buddha-Bowl Quinoa, Ofengemuse — 18 EUR\n- Hausgemachtes Fruchtssorbet — 9 EUR\n\n**Auf Anfrage:** Unser Chef passt jedes Gericht der Karte an. Bitte bei der Reservierung angeben!",
+    text: "Vegetarische & vegane Optionen:\n\n**Vegetarisch:**\n- Burrata, Flaschentomaten, Pesto — estimation personnalisee\n- Steinpilzrisotto mit Parmesan — estimation personnalisee\n- Selbstgemachte Gnocchi, Salbeibutter — estimation personnalisee\n- Dunne Saisongemisetarte — estimation personnalisee\n\n**Vegan:**\n- Tofu-Poke-Bowl, Edamame, Avocado — estimation personnalisee\n- Steinpilzrisotto (vegane Version) — estimation personnalisee\n- Buddha-Bowl Quinoa, Ofengemuse — estimation personnalisee\n- Hausgemachtes Fruchtssorbet — estimation personnalisee\n\n**Auf Anfrage:** Unser Chef passt jedes Gericht der Karte an. Bitte bei der Reservierung angeben!",
     delay: 2000,
     quickReplies: [
       { label: "Allergene?", value: "allergene" },

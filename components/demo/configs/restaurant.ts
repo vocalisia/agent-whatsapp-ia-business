@@ -42,7 +42,7 @@ const restaurantIntents = {
     ],
   },
   menu: {
-    text: "Voici le **menu du jour** :\n\n**Entrees :**\n- Veloute de butternut, noisettes torrefies — 14 EUR\n- Tartare de saumon, avocat, agrumes — 16 EUR\n- Burrata, tomates anciennes, pesto — 15 EUR\n\n**Plats :**\n- Filet de bar, risotto safrane — 28 EUR\n- Souris d'agneau confite 7h, puree truffee — 32 EUR\n- Risotto aux cepes et parmesan 24 mois — 24 EUR\n\n**Desserts :**\n- Fondant chocolat, coeur coulant — 12 EUR\n- Tarte tatin, creme fraiche — 11 EUR\n- Assiette de fromages affines — 14 EUR\n\n**Menu complet** (entree + plat + dessert) : **45 EUR**",
+    text: "Voici le **menu du jour** :\n\n**Entrees :**\n- Veloute de butternut, noisettes torrefies — estimation personnalisee\n- Tartare de saumon, avocat, agrumes — estimation personnalisee\n- Burrata, tomates anciennes, pesto — estimation personnalisee\n\n**Plats :**\n- Filet de bar, risotto safrane — estimation personnalisee\n- Souris d'agneau confite 7h, puree truffee — estimation personnalisee\n- Risotto aux cepes et parmesan 24 mois — estimation personnalisee\n\n**Desserts :**\n- Fondant chocolat, coeur coulant — estimation personnalisee\n- Tarte tatin, creme fraiche — estimation personnalisee\n- Assiette de fromages affines — estimation personnalisee\n\n**Menu complet** (entree + plat + dessert) : **estimation personnalisee**",
     delay: 2400,
     quickReplies: [
       { label: "Carte des vins", value: "carte vin" },
@@ -70,7 +70,7 @@ const restaurantIntents = {
     ],
   },
   livraison: {
-    text: "Options de livraison :\n\n**Plateformes partenaires :**\n- **Uber Eats** — Livraison 25-35 min\n- **Deliveroo** — Livraison 20-30 min\n- **Just Eat** — Livraison 30-40 min\n\n**Click & Collect :**\n- Commandez ici, retirez au restaurant\n- Pret en 20 min\n- -10% sur votre commande\n\n**Livraison directe :**\n- Rayon 5 km, minimum 30 EUR\n- Frais de livraison : 4,90 EUR\n- Gratuit au-dessus de 60 EUR\n\nLa carte a emporter est disponible 7j/7 de 11h30 a 22h.",
+    text: "Options de livraison :\n\n**Plateformes partenaires :**\n- **Uber Eats** — Livraison 25-35 min\n- **Deliveroo** — Livraison 20-30 min\n- **Just Eat** — Livraison 30-40 min\n\n**Click & Collect :**\n- Commandez ici, retirez au restaurant\n- Pret en 20 min\n- -10% sur votre commande\n\n**Livraison directe :**\n- Rayon 5 km, minimum estimation personnalisee\n- Frais de livraison : estimation personnalisee\n- Gratuit au-dessus de estimation personnalisee\n\nLa carte a emporter est disponible 7j/7 de 11h30 a 22h.",
     delay: 2000,
     quickReplies: [
       { label: "Commander a emporter", value: "commande" },
@@ -79,7 +79,7 @@ const restaurantIntents = {
     ],
   },
   commande: {
-    text: "Passons votre commande a emporter !\n\nVoici nos **best-sellers** :\n\n1. Burger gourmet truffe, frites maison — 22 EUR\n2. Poke bowl saumon, edamame, avocat — 19 EUR\n3. Risotto aux cepes (vegan possible) — 21 EUR\n4. Caesar salade poulet grille — 17 EUR\n5. Tartare de boeuf, frites allumettes — 24 EUR\n\n**Formule midi** (plat + boisson) : 15,90 EUR\n\nIndiquez vos choix et je calcule le total. Paiement par CB en ligne ou sur place.",
+    text: "Passons votre commande a emporter !\n\nVoici nos **best-sellers** :\n\n1. Burger gourmet truffe, frites maison — estimation personnalisee\n2. Poke bowl saumon, edamame, avocat — estimation personnalisee\n3. Risotto aux cepes (vegan possible) — estimation personnalisee\n4. Caesar salade poulet grille — estimation personnalisee\n5. Tartare de boeuf, frites allumettes — estimation personnalisee\n\n**Formule midi** (plat + boisson) : estimation personnalisee\n\nIndiquez vos choix et je calcule le total. Paiement par CB en ligne ou sur place.",
     delay: 2200,
     quickReplies: [
       { label: "Burger + frites", value: "confirmer commande" },
@@ -89,7 +89,7 @@ const restaurantIntents = {
     ],
   },
   "confirmer commande": {
-    text: "Commande enregistree !\n\n**Recapitulatif :**\n- 1x Burger gourmet truffe — 22 EUR\n- 1x Frites maison — incluses\n\n**Total :** 22,00 EUR\n\n**Retrait :** Dans 20 minutes\n**Adresse :** 42 rue de la Gastronomie, 75008 Paris\n\nLien de paiement envoye par WhatsApp.\nVous recevrez une notification quand c'est pret !",
+    text: "Commande enregistree !\n\n**Recapitulatif :**\n- 1x Burger gourmet truffe — estimation personnalisee\n- 1x Frites maison — incluses\n\n**Total :** estimation personnalisee\n\n**Retrait :** Dans 20 minutes\n**Adresse :** 42 rue de la Gastronomie, 75008 Paris\n\nLien de paiement envoye par WhatsApp.\nVous recevrez une notification quand c'est pret !",
     delay: 1800,
     quickReplies: [
       { label: "Merci !", value: "merci" },
@@ -114,7 +114,7 @@ const restaurantIntents = {
     ],
   },
   evenement: {
-    text: "Evenements prives au Gourmet IA :\n\n**Nos espaces :**\n- **Salon prive** — 8-16 personnes\n- **Salle voute** — 20-40 personnes\n- **Terrasse privatisee** — 30-60 personnes\n- **Restaurant complet** — jusqu'a 80 personnes\n\n**Occasions :**\n- Anniversaires, mariages, fiancailles\n- Seminaires, team building\n- Diners d'affaires\n\n**Inclus :**\n- Menu sur mesure par le Chef\n- Decoration personnalisee\n- Service dedie\n- DJ / animation sur demande\n\nBudget a partir de **65 EUR/personne**. Devis en 24h.",
+    text: "Evenements prives au Gourmet IA :\n\n**Nos espaces :**\n- **Salon prive** — 8-16 personnes\n- **Salle voute** — 20-40 personnes\n- **Terrasse privatisee** — 30-60 personnes\n- **Restaurant complet** — jusqu'a 80 personnes\n\n**Occasions :**\n- Anniversaires, mariages, fiancailles\n- Seminaires, team building\n- Diners d'affaires\n\n**Inclus :**\n- Menu sur mesure par le Chef\n- Decoration personnalisee\n- Service dedie\n- DJ / animation sur demande\n\nBudget a partir de **estimation personnalisee**. Devis en 24h.",
     delay: 2400,
     quickReplies: [
       { label: "Demander un devis", value: "rdv" },
@@ -123,7 +123,7 @@ const restaurantIntents = {
     ],
   },
   fidelite: {
-    text: "Programme fidelite **Gourmet Club** :\n\n**Comment ca marche :**\n- 1 EUR depense = 1 point\n- 100 points = 10 EUR de reduction\n\n**Avantages membres :**\n- Dessert offert a l'inscription\n- -15% le jour de votre anniversaire\n- Acces prioritaire aux soirees privees\n- Degustations exclusives (vins, menus saisonniers)\n- Reservation prioritaire le week-end\n\n**Votre solde actuel :** Inscrivez-vous pour commencer a cumuler !\n\nInscription gratuite, directement ici sur WhatsApp.",
+    text: "Programme fidelite **Gourmet Club** :\n\n**Comment ca marche :**\n- estimation personnalisee depense = 1 point\n- 100 points = estimation personnalisee de reduction\n\n**Avantages membres :**\n- Dessert offert a l'inscription\n- -15% le jour de votre anniversaire\n- Acces prioritaire aux soirees privees\n- Degustations exclusives (vins, menus saisonniers)\n- Reservation prioritaire le week-end\n\n**Votre solde actuel :** Inscrivez-vous pour commencer a cumuler !\n\nInscription gratuite, directement ici sur WhatsApp.",
     delay: 2000,
     quickReplies: [
       { label: "M'inscrire", value: "confirmer reservation" },
@@ -132,7 +132,7 @@ const restaurantIntents = {
     ],
   },
   "carte vin": {
-    text: "Notre **carte des vins** :\n\n**Blancs :**\n- Chablis 1er Cru 2021 — 12 EUR / 48 EUR\n- Sancerre, Domaine Vacheron — 10 EUR / 42 EUR\n- Meursault 2020 — 16 EUR / 65 EUR\n\n**Rouges :**\n- Saint-Emilion Grand Cru 2018 — 14 EUR / 58 EUR\n- Chateauneuf-du-Pape 2019 — 13 EUR / 52 EUR\n- Barolo DOCG 2017 — 18 EUR / 72 EUR\n\n**Champagnes :**\n- Veuve Clicquot Brut — 75 EUR\n- Dom Perignon 2012 — 220 EUR\n- Ruinart Blanc de Blancs — 95 EUR\n\n**Accord mets-vins :** Notre sommelier IA suggere l'accord parfait selon votre menu.",
+    text: "Notre **carte des vins** :\n\n**Blancs :**\n- Chablis 1er Cru 2021 — estimation personnalisee value\n- Sancerre, Domaine Vacheron — estimation personnalisee value\n- Meursault 2020 — estimation personnalisee value\n\n**Rouges :**\n- Saint-Emilion Grand Cru 2018 — estimation personnalisee value\n- Chateauneuf-du-Pape 2019 — estimation personnalisee value\n- Barolo DOCG 2017 — estimation personnalisee value\n\n**Champagnes :**\n- Veuve Clicquot Brut — estimation personnalisee\n- Dom Perignon 2012 — estimation personnalisee\n- Ruinart Blanc de Blancs — estimation personnalisee\n\n**Accord mets-vins :** Notre sommelier IA suggere l'accord parfait selon votre menu.",
     delay: 2200,
     quickReplies: [
       { label: "Accord avec le menu", value: "photo plat" },
@@ -141,7 +141,7 @@ const restaurantIntents = {
     ],
   },
   vegetarien: {
-    text: "Options vegetariennes & vegan :\n\n**Vegetarien :**\n- Burrata, tomates anciennes, pesto — 15 EUR\n- Risotto aux cepes, parmesan — 24 EUR\n- Gnocchis maison, sauce sauge beurre noisette — 20 EUR\n- Tarte fine legumes de saison — 18 EUR\n\n**Vegan :**\n- Poke bowl tofu, edamame, avocat — 19 EUR\n- Risotto aux cepes (version vegan) — 24 EUR\n- Buddha bowl quinoa, legumes rotis — 18 EUR\n- Sorbet fruits frais maison — 9 EUR\n\n**Sur demande :** Notre chef adapte tout plat de la carte. Precisez lors de la reservation !",
+    text: "Options vegetariennes & vegan :\n\n**Vegetarien :**\n- Burrata, tomates anciennes, pesto — estimation personnalisee\n- Risotto aux cepes, parmesan — estimation personnalisee\n- Gnocchis maison, sauce sauge beurre noisette — estimation personnalisee\n- Tarte fine legumes de saison — estimation personnalisee\n\n**Vegan :**\n- Poke bowl tofu, edamame, avocat — estimation personnalisee\n- Risotto aux cepes (version vegan) — estimation personnalisee\n- Buddha bowl quinoa, legumes rotis — estimation personnalisee\n- Sorbet fruits frais maison — estimation personnalisee\n\n**Sur demande :** Notre chef adapte tout plat de la carte. Precisez lors de la reservation !",
     delay: 2000,
     quickReplies: [
       { label: "Allergenes ?", value: "allergenes" },

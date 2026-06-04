@@ -2,8 +2,10 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+// v2026-05-26
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 const LOCALE_DIRS = ["en", "de", "nl"];
+const BLOCKED_PRICING_SLUG_RE = /(cost|pricing|kosten|prix|tarif)/i;
 
 export interface HowToStep {
   name: string;
@@ -58,7 +60,14 @@ export function getAllPosts(locale?: string): PostMeta[] {
 }
 
 export function getPostBySlug(slug: string, locale?: string): { meta: PostMeta; content: string } {
+  if (isBlockedPricingSlug(slug)) {
+    throw new Error(`Blocked pricing post: ${slug}`);
+  }
   return readPost(slug, locale);
+}
+
+export function isBlockedPricingSlug(slug: string): boolean {
+  return BLOCKED_PRICING_SLUG_RE.test(slug);
 }
 
 export function getAllSlugs(): string[] {
@@ -84,5 +93,5 @@ export function getAllSlugs(): string[] {
       });
   }
 
-  return [...rootSlugs, ...extra];
+  return [...rootSlugs, ...extra].filter((slug) => !isBlockedPricingSlug(slug));
 }

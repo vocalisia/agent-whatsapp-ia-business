@@ -67,7 +67,7 @@ export const VOCALIS_INTENTS_NL: Record<string, BotResponse> = {
     ],
   },
   telefonie: {
-    text: "Complete AI-telefonie:\n\n**Inkomende oproepen** — 24/7 auto-respons\n**Uitgaande oproepen** — Geautomatiseerd contact met prospects\n**Bulkoproepen** — Parallel volume\n\n**Functies:**\n- Antwoordapparaat-detectie + voicemail\n- Menselijke overdracht mid-call\n- DTMF (toetsen)\n- SIP/PBX-integratie\n- Geverifieerde caller ID\n- Instelbare max. duur (20-1200 sec)\n\nNummers NL, BE, US, UK, EU — vanaf 3 EUR/maand.",
+    text: "Complete AI-telefonie:\n\n**Inkomende oproepen** — 24/7 auto-respons\n**Uitgaande oproepen** — Geautomatiseerd contact met prospects\n**Bulkoproepen** — Parallel volume\n\n**Functies:**\n- Antwoordapparaat-detectie + voicemail\n- Menselijke overdracht mid-call\n- DTMF (toetsen)\n- SIP/PBX-integratie\n- Geverifieerde caller ID\n- Instelbare max. duur (20-1200 sec)\n\nNummers NL, BE, US, UK, EU — vanaf estimation personnalisee",
     delay: 2200,
     quickReplies: [
       { label: "SMS ook?", value: "sms" },

@@ -61,7 +61,7 @@ const MEDICAL_INTENTS_NL: Record<string, BotResponse> = {
     ],
   },
   teleconsultatie: {
-    text: "📹 **Teleconsultatie video**\n\nRaadpleeg een arts vanuit uw thuis:\n\n**Teleconsultatie beschikbaarheid:**\n• Dr. Jansen — Vandaag 17u, Morgen 9u\n• Dr. Bakker — Morgen 14u, 16u30\n\n**Verloop:**\n1️⃣ Reserveer een tijdslot\n2️⃣ Videolink verstuurd via WhatsApp 10 min voor aanvang\n3️⃣ Beveiligde consultatie (15-20 min)\n4️⃣ Recept + verslag verstuurd daarna\n\n**Tarief:** 25 EUR (sector 1) — Derdebetalersregeling mogelijk\n**Terugbetaling:** 70% ziekenfonds + aanvullend via mutualiteit\n\nWelk tijdslot past u?",
+    text: "📹 **Teleconsultatie video**\n\nRaadpleeg een arts vanuit uw thuis:\n\n**Teleconsultatie beschikbaarheid:**\n• Dr. Jansen — Vandaag 17u, Morgen 9u\n• Dr. Bakker — Morgen 14u, 16u30\n\n**Verloop:**\n1️⃣ Reserveer een tijdslot\n2️⃣ Videolink verstuurd via WhatsApp 10 min voor aanvang\n3️⃣ Beveiligde consultatie (15-20 min)\n4️⃣ Recept + verslag verstuurd daarna\n\n**Tarief:** estimation personnalisee (sector 1) — Derdebetalersregeling mogelijk\n**Terugbetaling:** 70% ziekenfonds + aanvullend via mutualiteit\n\nWelk tijdslot past u?",
     delay: 2200,
     quickReplies: [
       { label: "Dr. Jansen 17u", value: "afspraak bevestigen" },
@@ -100,7 +100,7 @@ const MEDICAL_INTENTS_NL: Record<string, BotResponse> = {
     ],
   },
   zorgpas: {
-    text: "💳 **Zorgpas & Ziekenfonds**\n\n**Uw zorgpas:**\n• Nr.: 1 85 12 75 XXX XXX XX\n• Status: ✅ Actief\n• Bijgewerkt: 12/2025\n\n**Terugbetalingen:**\n• Consultatie huisarts: 70% (25 EUR)\n• Specialist met verwijzing: 70%\n• Teleconsultatie: 70% (zelfde tarief)\n• Labo-analyses: 60-100%\n\n**Derdebetalersregeling:**\n• Actief op uw dossier\n• Geen voorschot ziekenfonds\n• Aanvullend mutualiteit op basis van contract\n\n💡 Denk eraan uw zorgpas elk kwartaal bij te werken bij de apotheek.",
+    text: "💳 **Zorgpas & Ziekenfonds**\n\n**Uw zorgpas:**\n• Nr.: 1 85 12 75 XXX XXX XX\n• Status: ✅ Actief\n• Bijgewerkt: 12/2025\n\n**Terugbetalingen:**\n• Consultatie huisarts: 70% (estimation personnalisee)\n• Specialist met verwijzing: 70%\n• Teleconsultatie: 70% (zelfde tarief)\n• Labo-analyses: 60-100%\n\n**Derdebetalersregeling:**\n• Actief op uw dossier\n• Geen voorschot ziekenfonds\n• Aanvullend mutualiteit op basis van contract\n\n💡 Denk eraan uw zorgpas elk kwartaal bij te werken bij de apotheek.",
     delay: 2000,
     quickReplies: [
       { label: "Afspraak maken", value: "afspraak maken" },
@@ -149,7 +149,7 @@ const MEDICAL_INTENTS_NL: Record<string, BotResponse> = {
     ],
   },
   "afspraak annuleren": {
-    text: "📅 **Afspraak annuleren / verzetten**\n\nUw komende afspraken:\n\n**1. Dr. Jansen** — Ma 21/04 om 09:00\n**2. Dr. Vermeer** — Di 29/04 om 15:00\n\n**Opties:**\n• ❌ **Annuleren** — Het tijdslot wordt vrijgegeven voor een andere patiënt\n• 🔄 **Verzetten** — Nieuw tijdslot kiezen\n\n⚠️ Annuleer **minstens 24u op voorhand**.\nBij meer dan 3 niet-verontschuldigde afwezigeden kan een vergoeding van 20 EUR worden aangerekend.\n\nWelke afspraak wilt u wijzigen?",
+    text: "📅 **Afspraak annuleren / verzetten**\n\nUw komende afspraken:\n\n**1. Dr. Jansen** — Ma 21/04 om 09:00\n**2. Dr. Vermeer** — Di 29/04 om 15:00\n\n**Opties:**\n• ❌ **Annuleren** — Het tijdslot wordt vrijgegeven voor een andere patiënt\n• 🔄 **Verzetten** — Nieuw tijdslot kiezen\n\n⚠️ Annuleer **minstens 24u op voorhand**.\nBij meer dan 3 niet-verontschuldigde afwezigeden kan een vergoeding van estimation personnalisee worden aangerekend.\n\nWelke afspraak wilt u wijzigen?",
     delay: 2000,
     quickReplies: [
       { label: "Dr. Jansen annuleren", value: "afspraak annuleren" },

@@ -528,7 +528,7 @@ export default async function AgentCommercialPage({ params }: { params: Promise<
                 { role: "client", text: l === "fr" ? "Je n'arrive pas à accéder à mon compte depuis ce matin" : l === "en" ? "I can't access my account since this morning" : l === "de" ? "Ich kann seit heute Morgen nicht auf mein Konto zugreifen" : "Ik kan sinds vanochtend niet bij mijn account" },
                 { role: "ai",    text: l === "fr" ? "Je suis désolé pour ce désagrément. Pouvez-vous me donner l'email associé à votre compte ? Je vais vérifier la situation immédiatement." : l === "en" ? "I'm sorry for the inconvenience. Could you give me the email linked to your account? I'll check the situation immediately." : l === "de" ? "Es tut mir leid für die Unannehmlichkeiten. Können Sie mir die mit Ihrem Konto verknüpfte E-Mail geben? Ich überprüfe die Situation sofort." : "Excuses voor het ongemak. Kunt u het e-mailadres van uw account geven? Ik controleer de situatie onmiddellijk." },
               ].map((m, i) => (
-                <div key={i} className={`flex mb-3 ${m.role === "client" ? "justify-end" : "justify-start"}`}>
+                <div key={i} className={`flex mb-12 ${m.role === "client" ? "justify-end" : "justify-start"}`}>
                   <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm ${m.role === "client" ? "bg-wa/20" : "bg-surface-2 border border-surface"}`}>{m.text}</div>
                 </div>
               ))}
@@ -546,7 +546,7 @@ export default async function AgentCommercialPage({ params }: { params: Promise<
                 { role: "client", text: "¿Cuáles son los plazos de entrega para España?" },
                 { role: "ai",    text: l === "fr" ? "Para España, ofrecemos:\n\n• Estándar: 5-7 días hábiles\n• Express: 2-3 días hábiles\n• Premium: próximo día laborable\n\n¿Qué opción prefiere?" : "Para España, ofrecemos:\n\n• Estándar: 5-7 días hábiles\n• Express: 2-3 días hábiles\n• Premium: próximo día laborable\n\n¿Qué opción prefiere?" },
               ].map((m, i) => (
-                <div key={i} className={`flex mb-3 ${m.role === "client" ? "justify-end" : "justify-start"}`}>
+                <div key={i} className={`flex mb-12 ${m.role === "client" ? "justify-end" : "justify-start"}`}>
                   <div className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm whitespace-pre-line ${m.role === "client" ? "bg-wa/20" : "bg-surface-2 border border-surface"}`}>{m.text}</div>
                 </div>
               ))}

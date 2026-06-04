@@ -1,90 +1,28 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import {
   Bot, ShoppingCart, GraduationCap, HeartPulse, Home, UtensilsCrossed,
   Stethoscope, Dumbbell, Car, Scale, Hotel, Play, ArrowRight,
 } from "lucide-react";
-import WhatsAppSimulatorPro from "@/components/demo/WhatsAppSimulatorPro";
 import type { SimulatorConfig } from "@/components/demo/WhatsAppSimulator";
 
-import { generalConfig } from "@/components/demo/configs/general";
-import { ecommerceConfig } from "@/components/demo/configs/ecommerce";
-import { coachConfig } from "@/components/demo/configs/coach";
-import { assuranceConfig } from "@/components/demo/configs/assurance";
-import { immobilierConfig } from "@/components/demo/configs/immobilier";
-import { restaurantConfig } from "@/components/demo/configs/restaurant";
-import { medicalConfig } from "@/components/demo/configs/medical";
-import { fitnessConfig } from "@/components/demo/configs/fitness";
-import { automobileConfig } from "@/components/demo/configs/automobile";
-import { juridiqueConfig } from "@/components/demo/configs/juridique";
-import { hotelConfig } from "@/components/demo/configs/hotel";
-
-import { generalConfigEN } from "@/components/demo/configs/general-en";
-import { ecommerceConfigEN } from "@/components/demo/configs/ecommerce-en";
-import { coachConfigEN } from "@/components/demo/configs/coach-en";
-import { assuranceConfigEN } from "@/components/demo/configs/assurance-en";
-import { immobilierConfigEN } from "@/components/demo/configs/immobilier-en";
-import { restaurantConfigEN } from "@/components/demo/configs/restaurant-en";
-import { medicalConfigEN } from "@/components/demo/configs/medical-en";
-import { fitnessConfigEN } from "@/components/demo/configs/fitness-en";
-import { automobileConfigEN } from "@/components/demo/configs/automobile-en";
-import { juridiqueConfigEN } from "@/components/demo/configs/juridique-en";
-import { hotelConfigEN } from "@/components/demo/configs/hotel-en";
-
-import { generalConfigDE } from "@/components/demo/configs/general-de";
-import { ecommerceConfigDE } from "@/components/demo/configs/ecommerce-de";
-import { coachConfigDE } from "@/components/demo/configs/coach-de";
-import { assuranceConfigDE } from "@/components/demo/configs/assurance-de";
-import { immobilierConfigDE } from "@/components/demo/configs/immobilier-de";
-import { restaurantConfigDE } from "@/components/demo/configs/restaurant-de";
-import { medicalConfigDE } from "@/components/demo/configs/medical-de";
-import { fitnessConfigDE } from "@/components/demo/configs/fitness-de";
-import { automobileConfigDE } from "@/components/demo/configs/automobile-de";
-import { juridiqueConfigDE } from "@/components/demo/configs/juridique-de";
-import { hotelConfigDE } from "@/components/demo/configs/hotel-de";
-
-import { generalConfigNL } from "@/components/demo/configs/general-nl";
-import { ecommerceConfigNL } from "@/components/demo/configs/ecommerce-nl";
-import { coachConfigNL } from "@/components/demo/configs/coach-nl";
-import { assuranceConfigNL } from "@/components/demo/configs/assurance-nl";
-import { immobilierConfigNL } from "@/components/demo/configs/immobilier-nl";
-import { restaurantConfigNL } from "@/components/demo/configs/restaurant-nl";
-import { medicalConfigNL } from "@/components/demo/configs/medical-nl";
-import { fitnessConfigNL } from "@/components/demo/configs/fitness-nl";
-import { automobileConfigNL } from "@/components/demo/configs/automobile-nl";
-import { juridiqueConfigNL } from "@/components/demo/configs/juridique-nl";
-import { hotelConfigNL } from "@/components/demo/configs/hotel-nl";
-
-type SectorMap = Record<string, SimulatorConfig>;
-
-const SECTOR_CONFIGS: Record<string, SectorMap> = {
-  fr: {
-    general: generalConfig, ecommerce: ecommerceConfig, coach: coachConfig,
-    assurance: assuranceConfig, immobilier: immobilierConfig, restaurant: restaurantConfig,
-    medical: medicalConfig, fitness: fitnessConfig, automobile: automobileConfig,
-    juridique: juridiqueConfig, hotel: hotelConfig,
-  },
-  en: {
-    general: generalConfigEN, ecommerce: ecommerceConfigEN, coach: coachConfigEN,
-    assurance: assuranceConfigEN, immobilier: immobilierConfigEN, restaurant: restaurantConfigEN,
-    medical: medicalConfigEN, fitness: fitnessConfigEN, automobile: automobileConfigEN,
-    juridique: juridiqueConfigEN, hotel: hotelConfigEN,
-  },
-  de: {
-    general: generalConfigDE, ecommerce: ecommerceConfigDE, coach: coachConfigDE,
-    assurance: assuranceConfigDE, immobilier: immobilierConfigDE, restaurant: restaurantConfigDE,
-    medical: medicalConfigDE, fitness: fitnessConfigDE, automobile: automobileConfigDE,
-    juridique: juridiqueConfigDE, hotel: hotelConfigDE,
-  },
-  nl: {
-    general: generalConfigNL, ecommerce: ecommerceConfigNL, coach: coachConfigNL,
-    assurance: assuranceConfigNL, immobilier: immobilierConfigNL, restaurant: restaurantConfigNL,
-    medical: medicalConfigNL, fitness: fitnessConfigNL, automobile: automobileConfigNL,
-    juridique: juridiqueConfigNL, hotel: hotelConfigNL,
-  },
-};
+// Defer the heavy Pro simulator to client-only render (it ships ~30KB minified + chat state)
+const WhatsAppSimulatorPro = dynamic(
+  () => import("@/components/demo/WhatsAppSimulatorPro"),
+  {
+    ssr: false,
+    loading: () => (
+      <div
+        className="rounded-3xl bg-surface border border-surface-3 animate-pulse"
+        style={{ aspectRatio: "9 / 16", maxWidth: 380, width: "100%" }}
+        aria-hidden="true"
+      />
+    ),
+  }
+);
 
 const SECTORS = [
   { key: "general", labelKey: "sectorGeneral", icon: Bot },
@@ -100,15 +38,69 @@ const SECTORS = [
   { key: "hotel", labelKey: "sectorHotel", icon: Hotel },
 ] as const;
 
+type SectorKey = (typeof SECTORS)[number]["key"];
+
+// Lazy loader: resolves the per-locale, per-sector config on demand.
+// This replaces 44 static top-level imports (~12K LOC, ~895KB unused JS in the main bundle).
+async function loadSectorConfig(locale: string, sector: SectorKey): Promise<SimulatorConfig> {
+  const suffix = locale === "fr" ? "" : `-${locale}`;
+  const exportSuffix = locale === "fr" ? "" : locale.toUpperCase();
+
+  switch (sector) {
+    case "general":
+      return (await import(`@/components/demo/configs/general${suffix}`))[`generalConfig${exportSuffix}`];
+    case "ecommerce":
+      return (await import(`@/components/demo/configs/ecommerce${suffix}`))[`ecommerceConfig${exportSuffix}`];
+    case "coach":
+      return (await import(`@/components/demo/configs/coach${suffix}`))[`coachConfig${exportSuffix}`];
+    case "assurance":
+      return (await import(`@/components/demo/configs/assurance${suffix}`))[`assuranceConfig${exportSuffix}`];
+    case "immobilier":
+      return (await import(`@/components/demo/configs/immobilier${suffix}`))[`immobilierConfig${exportSuffix}`];
+    case "restaurant":
+      return (await import(`@/components/demo/configs/restaurant${suffix}`))[`restaurantConfig${exportSuffix}`];
+    case "medical":
+      return (await import(`@/components/demo/configs/medical${suffix}`))[`medicalConfig${exportSuffix}`];
+    case "fitness":
+      return (await import(`@/components/demo/configs/fitness${suffix}`))[`fitnessConfig${exportSuffix}`];
+    case "automobile":
+      return (await import(`@/components/demo/configs/automobile${suffix}`))[`automobileConfig${exportSuffix}`];
+    case "juridique":
+      return (await import(`@/components/demo/configs/juridique${suffix}`))[`juridiqueConfig${exportSuffix}`];
+    case "hotel":
+      return (await import(`@/components/demo/configs/hotel${suffix}`))[`hotelConfig${exportSuffix}`];
+  }
+}
+
 export default function HeroSimulator() {
   const locale = useLocale();
   const t = useTranslations("demo");
-  const [activeSector, setActiveSector] = useState<string>("general");
-  const configs = SECTOR_CONFIGS[locale] ?? SECTOR_CONFIGS.fr;
-  const config = configs[activeSector] ?? configs.general;
+  const [activeSector, setActiveSector] = useState<SectorKey>("general");
+  const [config, setConfig] = useState<SimulatorConfig | null>(null);
+
+  // Load config when sector or locale changes. Initial load is deferred to the client
+  // so it never blocks the LCP h1 in the hero text column.
+  useEffect(() => {
+    let cancelled = false;
+    loadSectorConfig(locale, activeSector)
+      .then((cfg) => {
+        if (!cancelled) setConfig(cfg);
+      })
+      .catch(() => {
+        // Fallback: try French general so the simulator is never permanently empty
+        if (!cancelled && (locale !== "fr" || activeSector !== "general")) {
+          loadSectorConfig("fr", "general").then((cfg) => {
+            if (!cancelled) setConfig(cfg);
+          });
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [locale, activeSector]);
 
   return (
-    <div className="w-full" style={{ overflow: 'hidden' }}>
+    <div className="w-full" style={{ overflow: "hidden" }}>
       {/* Top CTA above phone */}
       <div className="flex justify-center mb-4">
         <Link
@@ -122,8 +114,8 @@ export default function HeroSimulator() {
       </div>
 
       {/* Mobile: horizontal scroll sectors */}
-      <div className="lg:hidden mb-4" style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
-        <div style={{ display: 'flex', gap: '8px', paddingBottom: '8px', width: 'max-content' }}>
+      <div className="lg:hidden mb-4" style={{ overflowX: "auto", WebkitOverflowScrolling: "touch" }}>
+        <div style={{ display: "flex", gap: "8px", paddingBottom: "8px", width: "max-content" }}>
           {SECTORS.map(({ key, labelKey, icon: Icon }) => (
             <button
               key={key}
@@ -162,10 +154,18 @@ export default function HeroSimulator() {
         </div>
 
         {/* Phone simulator */}
-        <div className="relative w-full max-w-md" style={{ overflow: 'hidden' }}>
+        <div className="relative w-full max-w-md" style={{ overflow: "hidden" }}>
           <div className="absolute -inset-4 bg-wa/10 rounded-[3rem] blur-3xl pointer-events-none" />
-          <div className="relative" style={{ maxWidth: '100%' }}>
-            <WhatsAppSimulatorPro config={config} sectorKey={activeSector} />
+          <div className="relative" style={{ maxWidth: "100%" }}>
+            {config ? (
+              <WhatsAppSimulatorPro config={config} sectorKey={activeSector} />
+            ) : (
+              <div
+                className="rounded-3xl bg-surface border border-surface-3 animate-pulse"
+                style={{ aspectRatio: "9 / 16", maxWidth: 380, width: "100%" }}
+                aria-hidden="true"
+              />
+            )}
           </div>
         </div>
       </div>

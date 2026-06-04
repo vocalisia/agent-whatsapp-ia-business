@@ -36,7 +36,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   honorare: {
-    text: "**Honorartabelle JurisAssist**\n\n**Erstgesprach** — Kostenlos (30 Min)\nEinschatzung Ihrer Situation + Maßnahmenplan\n\n**Standardberatung** — 150 EUR / Stunde\nVertiefte Analyse, personliche Beratung\n\n**Pauschalgebuhr einfach** — 800 - 1.500 EUR\nAbmahnschreiben, Vertragsprufung\n\n**Streitverfahren** — 2.000 - 5.000 EUR\nGerichtsvertretung, Verhandlung\n\n**Unternehmensabo** — Individuell\nDauerhafter Rechtsbeistand\n\n**Prozesskostenhilfe** wird je nach Berechtigung gewahrt.\n\nAlle Honorare werden vor Mandatserteilung mitgeteilt.",
+    text: "**Honorartabelle JurisAssist**\n\n**Erstgesprach** — Kostenlos (30 Min)\nEinschatzung Ihrer Situation + Maßnahmenplan\n\n**Standardberatung** — estimation personnalisee\nVertiefte Analyse, personliche Beratung\n\n**Pauschalgebuhr einfach** — 800 - estimation personnalisee\nAbmahnschreiben, Vertragsprufung\n\n**Streitverfahren** — 2.000 - estimation personnalisee\nGerichtsvertretung, Verhandlung\n\n**Unternehmensabo** — Individuell\nDauerhafter Rechtsbeistand\n\n**Prozesskostenhilfe** wird je nach Berechtigung gewahrt.\n\nAlle Honorare werden vor Mandatserteilung mitgeteilt.",
     delay: 2200,
     quickReplies: [
       { label: "Erstgesprach", value: "beratung" },
@@ -91,7 +91,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   abmahnung: {
-    text: "**Abmahnung — Verfahren**\n\nEine Abmahnung ist ein formelles Schreiben, das den Empfanger zur Handlung verpflichtet.\n\n**Schritte :**\n1. Streitigkeitsfeststellung und Rechtsgrundlage\n2. Entwurf durch unser Rechtsteam\n3. Versand per **Einschreiben mit Ruckschein**\n4. Antwortfrist : 8 bis 15 Tage\n5. Keine Antwort → Gerichtsverfahren\n\n**Pauschale Abmahnung :** 250 EUR\nInklusive : Entwurf + Versand + Verfolgung\n\n**Gutliche Einigungsquote : 65 %**\n\nSollen wir Ihre Abmahnung vorbereiten ?",
+    text: "**Abmahnung — Verfahren**\n\nEine Abmahnung ist ein formelles Schreiben, das den Empfanger zur Handlung verpflichtet.\n\n**Schritte :**\n1. Streitigkeitsfeststellung und Rechtsgrundlage\n2. Entwurf durch unser Rechtsteam\n3. Versand per **Einschreiben mit Ruckschein**\n4. Antwortfrist : 8 bis 15 Tage\n5. Keine Antwort → Gerichtsverfahren\n\n**Pauschale Abmahnung :** estimation personnalisee\nInklusive : Entwurf + Versand + Verfolgung\n\n**Gutliche Einigungsquote : 65 %**\n\nSollen wir Ihre Abmahnung vorbereiten ?",
     delay: 2000,
     quickReplies: [
       { label: "Ja, starten", value: "beratung" },
@@ -102,7 +102,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   scheidung: {
-    text: "**Scheidungsverfahren — Überblick**\n\n**Einvernehmliche Scheidung**\n- Dauer : 2 bis 4 Monate\n- Durchschnittliche Kosten : 1.500 - 3.000 EUR\n- Einigung uber alles : Vermogen, Kinder, Unterhalt\n- Beurkundung beim Notar (kein Richter)\n\n**Streitige Scheidung**\n- Dauer : 12 bis 24 Monate\n- Antrag beim Familiengericht\n- Vorlaufige Maßnahmen moglich\n\n**Zu regelnde Punkte :**\n- Sorgerecht + Umgangsrecht\n- Kindesunterhalt\n- Trennungsunterhalt\n- Vermogensaufteilung\n- Familienheim\n\nMochten Sie eine vertrauliche Beratung ?",
+    text: "**Scheidungsverfahren — Überblick**\n\n**Einvernehmliche Scheidung**\n- Dauer : 2 bis 4 Monate\n- Durchschnittliche Kosten : 1.500 - estimation personnalisee\n- Einigung uber alles : Vermogen, Kinder, Unterhalt\n- Beurkundung beim Notar (kein Richter)\n\n**Streitige Scheidung**\n- Dauer : 12 bis 24 Monate\n- Antrag beim Familiengericht\n- Vorlaufige Maßnahmen moglich\n\n**Zu regelnde Punkte :**\n- Sorgerecht + Umgangsrecht\n- Kindesunterhalt\n- Trennungsunterhalt\n- Vermogensaufteilung\n- Familienheim\n\nMochten Sie eine vertrauliche Beratung ?",
     delay: 2400,
     quickReplies: [
       { label: "Scheidungsberatung", value: "beratung" },
@@ -113,7 +113,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   unternehmensgrundung: {
-    text: "**Unternehmensgrundung — Begleitung**\n\n**Rechtsformen :**\n- **GmbH** — Sicherer Rahmen, beliebt in Deutschland\n- **UG** — Vereinfachte GmbH (ab 1 EUR Stammkapital)\n- **AG** — Fur Großprojekte\n- **GbR / OHG** — Personengesellschaften\n- **Einzelunternehmen** — Einfach und schnell\n\n**Unsere Begleitung :**\n1. Wahl der Rechtsform\n2. Satzungsentwurf\n3. Eintragung beim Handelsregister\n4. Gesellschaftervertrag (falls erforderlich)\n5. Grundungsvertrage\n\n**Grundungspaket :** ab 600 EUR\nDurchschnittliche Dauer : 7 bis 14 Tage.\n\nWelche Gesellschaftsform interessiert Sie ?",
+    text: "**Unternehmensgrundung — Begleitung**\n\n**Rechtsformen :**\n- **GmbH** — Sicherer Rahmen, beliebt in Deutschland\n- **UG** — Vereinfachte GmbH (ab estimation personnalisee Stammkapital)\n- **AG** — Fur Großprojekte\n- **GbR / OHG** — Personengesellschaften\n- **Einzelunternehmen** — Einfach und schnell\n\n**Unsere Begleitung :**\n1. Wahl der Rechtsform\n2. Satzungsentwurf\n3. Eintragung beim Handelsregister\n4. Gesellschaftervertrag (falls erforderlich)\n5. Grundungsvertrage\n\n**Grundungspaket :** ab estimation personnalisee\nDurchschnittliche Dauer : 7 bis 14 Tage.\n\nWelche Gesellschaftsform interessiert Sie ?",
     delay: 2200,
     quickReplies: [
       { label: "GmbH grunden", value: "unternehmensgrundung" },
@@ -135,7 +135,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   vertrag: {
-    text: "**Vertragsprufung und -analyse**\n\nUnsere KI + unsere Anwalte analysieren Ihren Vertrag :\n\n**Was wir prufen :**\n- Missbrauliche oder unausgewogene Klauseln\n- Unverhaltnis der Verpflichtungen\n- Wettbewerbsverbote\n- Kundigungsbedingungen\n- Vertragsstrafen und Schadensersatz\n- Rechtskonformitat\n\n**Vertragstypen :**\n- Arbeitsvertrag (unbefristet, befristet, freiberuflich)\n- Handelsvertrag\n- AGB / Datenschutzerkl.\n- Dienstleistungsvertrag\n- Gewerbemietvertrag\n\n**Prufungspauschale :** 350 EUR\nFrist : 48 Stunden (Werktage).\n\nSchicken Sie Ihren Vertrag zur Analyse !",
+    text: "**Vertragsprufung und -analyse**\n\nUnsere KI + unsere Anwalte analysieren Ihren Vertrag :\n\n**Was wir prufen :**\n- Missbrauliche oder unausgewogene Klauseln\n- Unverhaltnis der Verpflichtungen\n- Wettbewerbsverbote\n- Kundigungsbedingungen\n- Vertragsstrafen und Schadensersatz\n- Rechtskonformitat\n\n**Vertragstypen :**\n- Arbeitsvertrag (unbefristet, befristet, freiberuflich)\n- Handelsvertrag\n- AGB / Datenschutzerkl.\n- Dienstleistungsvertrag\n- Gewerbemietvertrag\n\n**Prufungspauschale :** estimation personnalisee\nFrist : 48 Stunden (Werktage).\n\nSchicken Sie Ihren Vertrag zur Analyse !",
     delay: 2000,
     quickReplies: [
       { label: "Vertrag einsenden", value: "dokumentenfoto" },
@@ -157,7 +157,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   prozesskostenhilfe: {
-    text: "**Prozesskostenhilfe (PKH) — Berechtigung**\n\nDie PKH ubernimmt Ihre Anwalts- und Gerichtskosten.\n\n**Einkommensgrenzen (2026) :**\n- **Vollstandige PKH** : Einkommen < 1.200 EUR/Monat\n- **Teilweise PKH** : Einkommen < 1.800 EUR/Monat\n\n**Was ubernommen wird :**\n- Anwaltshonorare\n- Gerichtsvollzieher\n- Sachverstandigenkosten\n- Gerichtskosten\n\n**Antragstellung :**\n1. Formular PKH-Antrag (beiFamiliengericht erhaltlich)\n2. Steuerbescheid\n3. Einkommensnachweise\n4. Einreichung beim Gericht oder online\n\nBearbeitungszeit : 1 bis 3 Monate.\n\nWir helfen Ihnen beim Zusammenstellen Ihrer Unterlagen.",
+    text: "**Prozesskostenhilfe (PKH) — Berechtigung**\n\nDie PKH ubernimmt Ihre Anwalts- und Gerichtskosten.\n\n**Einkommensgrenzen (2026) :**\n- **Vollstandige PKH** : Einkommen < estimation personnalisee\n- **Teilweise PKH** : Einkommen < estimation personnalisee\n\n**Was ubernommen wird :**\n- Anwaltshonorare\n- Gerichtsvollzieher\n- Sachverstandigenkosten\n- Gerichtskosten\n\n**Antragstellung :**\n1. Formular PKH-Antrag (beiFamiliengericht erhaltlich)\n2. Steuerbescheid\n3. Einkommensnachweise\n4. Einreichung beim Gericht oder online\n\nBearbeitungszeit : 1 bis 3 Monate.\n\nWir helfen Ihnen beim Zusammenstellen Ihrer Unterlagen.",
     delay: 2200,
     quickReplies: [
       { label: "Berechtigung prufen", value: "prozesskostenhilfe" },

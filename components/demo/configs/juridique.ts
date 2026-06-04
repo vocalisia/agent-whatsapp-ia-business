@@ -33,7 +33,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   honoraires: {
-    text: "**Grille tarifaire JurisAssist**\n\n**Consultation initiale** — Gratuite (30 min)\nEvaluation de votre situation + plan d'action\n\n**Consultation standard** — 150 EUR / heure\nAnalyse approfondie, conseil personnalise\n\n**Forfait dossier simple** — 800 - 1 500 EUR\nLettre de mise en demeure, relecture contrat\n\n**Forfait contentieux** — 2 000 - 5 000 EUR\nRepresentation tribunal, negociation\n\n**Abonnement entreprise** — Sur mesure\nAccompagnement juridique permanent\n\n**Aide juridictionnelle** acceptee selon eligibilite.\n\nTous les honoraires sont communiques avant engagement.",
+    text: "**Grille tarifaire JurisAssist**\n\n**Consultation initiale** — Gratuite (30 min)\nEvaluation de votre situation + plan d'action\n\n**Consultation standard** — estimation personnalisee\nAnalyse approfondie, conseil personnalise\n\n**Forfait dossier simple** — 800 - estimation personnalisee\nLettre de mise en demeure, relecture contrat\n\n**Forfait contentieux** — 2 000 - estimation personnalisee\nRepresentation tribunal, negociation\n\n**Abonnement entreprise** — Sur mesure\nAccompagnement juridique permanent\n\n**Aide juridictionnelle** acceptee selon eligibilite.\n\nTous les honoraires sont communiques avant engagement.",
     delay: 2200,
     quickReplies: [
       { label: "Premiere consultation", value: "consultation" },
@@ -83,7 +83,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "mise en demeure": {
-    text: "**Mise en demeure — Procedure**\n\nLa mise en demeure est un courrier formel obligeant le destinataire a agir.\n\n**Etapes :**\n1. Identification du litige et base legale\n2. Redaction par notre equipe juridique\n3. Envoi en **recommande avec AR**\n4. Delai de reponse : 8 a 15 jours\n5. Si pas de reponse → action en justice\n\n**Forfait mise en demeure :** 250 EUR\nInclut : redaction + envoi + suivi\n\n**Taux de resolution amiable : 65%**\n\nSouhaitez-vous qu'on prepare votre mise en demeure ?",
+    text: "**Mise en demeure — Procedure**\n\nLa mise en demeure est un courrier formel obligeant le destinataire a agir.\n\n**Etapes :**\n1. Identification du litige et base legale\n2. Redaction par notre equipe juridique\n3. Envoi en **recommande avec AR**\n4. Delai de reponse : 8 a 15 jours\n5. Si pas de reponse → action en justice\n\n**Forfait mise en demeure :** estimation personnalisee\nInclut : redaction + envoi + suivi\n\n**Taux de resolution amiable : 65%**\n\nSouhaitez-vous qu'on prepare votre mise en demeure ?",
     delay: 2000,
     quickReplies: [
       { label: "Oui, lancer", value: "consultation" },
@@ -93,7 +93,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   divorce: {
-    text: "**Procedure de divorce — Vue d'ensemble**\n\n**Divorce par consentement mutuel**\n- Duree : 2 a 4 mois\n- Cout moyen : 1 500 - 3 000 EUR\n- Accord sur tout : biens, enfants, pension\n- Enregistrement chez notaire (pas de juge)\n\n**Divorce contentieux**\n- Duree : 12 a 24 mois\n- Requete au juge aux affaires familiales\n- Mesures provisoires possibles\n\n**Points a regler :**\n- Garde des enfants + droit de visite\n- Pension alimentaire\n- Prestation compensatoire\n- Partage des biens\n- Logement familial\n\nSouhaitez-vous une consultation confidentielle ?",
+    text: "**Procedure de divorce — Vue d'ensemble**\n\n**Divorce par consentement mutuel**\n- Duree : 2 a 4 mois\n- Cout moyen : 1 500 - estimation personnalisee\n- Accord sur tout : biens, enfants, pension\n- Enregistrement chez notaire (pas de juge)\n\n**Divorce contentieux**\n- Duree : 12 a 24 mois\n- Requete au juge aux affaires familiales\n- Mesures provisoires possibles\n\n**Points a regler :**\n- Garde des enfants + droit de visite\n- Pension alimentaire\n- Prestation compensatoire\n- Partage des biens\n- Logement familial\n\nSouhaitez-vous une consultation confidentielle ?",
     delay: 2400,
     quickReplies: [
       { label: "Consultation divorce", value: "consultation" },
@@ -103,11 +103,11 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "creation entreprise": {
-    text: "**Creation d'entreprise — Accompagnement**\n\n**Formes juridiques :**\n- **SAS / SASU** — Flexibilite maximale\n- **SARL / EURL** — Cadre securise\n- **Micro-entreprise** — Simplicite\n- **SCI** — Gestion immobiliere\n- **SA** — Grands projets\n\n**Notre accompagnement :**\n1. Choix de la forme juridique\n2. Redaction des statuts\n3. Immatriculation au greffe\n4. Pacte d'associes (si necessaire)\n5. Contrats fondateurs\n\n**Forfait creation :** a partir de 600 EUR\nDelai moyen : 7 a 14 jours.\n\nQuelle structure vous interesse ?",
+    text: "**Creation d'entreprise — Accompagnement**\n\n**Formes juridiques :**\n- **SAS / SASU** — Flexibilite maximale\n- **SARL / valueL** — Cadre securise\n- **Micro-entreprise** — Simplicite\n- **SCI** — Gestion immobiliere\n- **SA** — Grands projets\n\n**Notre accompagnement :**\n1. Choix de la forme juridique\n2. Redaction des statuts\n3. Immatriculation au greffe\n4. Pacte d'associes (si necessaire)\n5. Contrats fondateurs\n\n**Forfait creation :** sur audit gratuit\nDelai moyen : 7 a 14 jours.\n\nQuelle structure vous interesse ?",
     delay: 2200,
     quickReplies: [
       { label: "SAS / SASU", value: "creation entreprise" },
-      { label: "SARL / EURL", value: "creation entreprise" },
+      { label: "SARL / valueL", value: "creation entreprise" },
       { label: "RDV creation", value: "consultation" },
       { label: "Honoraires", value: "honoraires" },
     ],
@@ -123,7 +123,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   contrat: {
-    text: "**Relecture et analyse de contrat**\n\nNotre IA + nos avocats analysent votre contrat :\n\n**Ce qu'on verifie :**\n- Clauses abusives ou desequilibrees\n- Obligations disproportionnees\n- Clauses de non-concurrence\n- Conditions de resiliation\n- Penalites et indemnites\n- Conformite legale\n\n**Types de contrats :**\n- Contrat de travail (CDI, CDD, freelance)\n- Contrat commercial\n- CGV / CGU\n- Contrat de prestation\n- Bail commercial\n\n**Forfait relecture :** 350 EUR\nDelai : 48h ouvrees.\n\nEnvoyez votre contrat pour analyse !",
+    text: "**Relecture et analyse de contrat**\n\nNotre IA + nos avocats analysent votre contrat :\n\n**Ce qu'on verifie :**\n- Clauses abusives ou desequilibrees\n- Obligations disproportionnees\n- Clauses de non-concurrence\n- Conditions de resiliation\n- Penalites et indemnites\n- Conformite legale\n\n**Types de contrats :**\n- Contrat de travail (CDI, CDD, freelance)\n- Contrat commercial\n- CGV / CGU\n- Contrat de prestation\n- Bail commercial\n\n**Forfait relecture :** estimation personnalisee\nDelai : 48h ouvrees.\n\nEnvoyez votre contrat pour analyse !",
     delay: 2000,
     quickReplies: [
       { label: "Envoyer contrat", value: "photo document" },
@@ -143,7 +143,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "aide juridictionnelle": {
-    text: "**Aide juridictionnelle — Eligibilite**\n\nL'aide juridictionnelle prend en charge vos frais d'avocat.\n\n**Conditions de ressources (2026) :**\n- **Aide totale** : revenus < 12 271 EUR/an\n- **Aide partielle** : revenus < 18 404 EUR/an\n\n**Ce qui est pris en charge :**\n- Honoraires d'avocat\n- Frais d'huissier\n- Frais d'expertise\n- Frais de justice\n\n**Comment faire la demande :**\n1. Formulaire Cerfa n°16146*03\n2. Avis d'imposition\n3. Justificatifs de ressources\n4. Depot au tribunal ou en ligne\n\nDelai de reponse : 1 a 3 mois.\n\nNous vous aidons a constituer votre dossier.",
+    text: "**Aide juridictionnelle — Eligibilite**\n\nL'aide juridictionnelle prend en charge vos frais d'avocat.\n\n**Conditions de ressources (2026) :**\n- **Aide totale** : revenus < estimation personnalisee\n- **Aide partielle** : revenus < estimation personnalisee\n\n**Ce qui est pris en charge :**\n- Honoraires d'avocat\n- Frais d'huissier\n- Frais d'expertise\n- Frais de justice\n\n**Comment faire la demande :**\n1. Formulaire Cerfa n°16146*03\n2. Avis d'imposition\n3. Justificatifs de ressources\n4. Depot au tribunal ou en ligne\n\nDelai de reponse : 1 a 3 mois.\n\nNous vous aidons a constituer votre dossier.",
     delay: 2200,
     quickReplies: [
       { label: "Verifier eligibilite", value: "aide juridictionnelle" },

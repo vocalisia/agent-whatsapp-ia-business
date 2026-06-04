@@ -223,12 +223,55 @@ export default async function IntegrationsPage({ params }: { params: Promise<{ l
       { "@type": "ListItem", "position": 2, "name": locale === "fr" ? "Intégrations" : locale === "de" ? "Integrationen" : locale === "nl" ? "Integraties" : "Integrations", "item": pageUrl },
     ],
   };
+  const howToJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": `${pageUrl}#howto`,
+    name: c.howTitle,
+    description: m.description,
+    step: c.howSteps.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: step.title,
+      text: step.desc,
+      url: pageUrl,
+    })),
+  };
+  const faqItems = [
+    {
+      q: locale === "fr" ? "Quels outils peuvent etre connectes a l'agent IA WhatsApp ?" : locale === "de" ? "Welche Tools koennen mit dem WhatsApp KI-Agent verbunden werden?" : locale === "nl" ? "Welke tools kunnen met de WhatsApp AI-agent worden gekoppeld?" : "Which tools can connect to the WhatsApp AI agent?",
+      a: c.categories.map((cat) => `${cat.name}: ${cat.tools.join(", ")}`).join(". "),
+    },
+    {
+      q: locale === "fr" ? "Combien de code faut-il pour connecter les integrations ?" : locale === "de" ? "Wie viel Code ist fuer die Integrationen erforderlich?" : locale === "nl" ? "Hoeveel code is nodig voor de integraties?" : "How much code is needed for integrations?",
+      a: (() => {
+        const codeStat = c.stats.find((s) => s.label.toLowerCase().includes("code"));
+        return codeStat ? `${codeStat.value} ${codeStat.label}` : "No custom code is required for standard connections.";
+      })(),
+    },
+    {
+      q: locale === "fr" ? "Comment valider une integration avant la mise en production ?" : locale === "de" ? "Wie wird eine Integration vor dem Livegang validiert?" : locale === "nl" ? "Hoe wordt een integratie gevalideerd voor livegang?" : "How is an integration validated before go-live?",
+      a: c.howSteps.map((step) => `${step.title}: ${step.desc}`).join(" "),
+    },
+  ];
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${pageUrl}#faq`,
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* Hero */}
       <div className="text-center mb-16">

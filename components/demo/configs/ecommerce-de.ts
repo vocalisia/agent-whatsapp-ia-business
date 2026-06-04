@@ -16,7 +16,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   "bestellung verfolgen": {
-    text: "Naturlich! Hier ist der Status Ihrer letzten Bestellung:\n\n**Bestellung #MC-78432**\n- Elegance Noir Kleid (M) — 89,90 EUR\n- Kamel-Ledertasche — 129,00 EUR\n\n**Status:** In Zustellung\n**Spediteur:** DHL\n**Sendungsnummer:** 8R12345678901\n**Voraussichtliche Lieferung:** Morgen vor 18 Uhr\n\nKann ich Ihnen noch anderweitig helfen?",
+    text: "Naturlich! Hier ist der Status Ihrer letzten Bestellung:\n\n**Bestellung #MC-78432**\n- Elegance Noir Kleid (M) — estimation personnalisee\n- Kamel-Ledertasche — estimation personnalisee\n\n**Status:** In Zustellung\n**Spediteur:** DHL\n**Sendungsnummer:** 8R12345678901\n**Voraussichtliche Lieferung:** Morgen vor 18 Uhr\n\nKann ich Ihnen noch anderweitig helfen?",
     delay: 1500,
     quickReplies: [
       { label: "Adresse andern", value: "lieferung" },
@@ -49,7 +49,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   lagerbestand: {
-    text: "Ich prufe die Verfugbarkeit fur Sie...\n\nHier sind die **meistverkauften Artikel auf Lager**:\n\n- **Elegance Noir Kleid** — 89,90 EUR (S, M, L)\n- **Blazer Parisienne** — 149,00 EUR (M, L, XL)\n- **Slim Jeans Raw** — 69,90 EUR (36, 38, 40, 42)\n- **Kaschmir Pullover Elfenbein** — 119,00 EUR (S, M) *Letzte Stuck!*\n\nFur welchen Artikel interessieren Sie sich?",
+    text: "Ich prufe die Verfugbarkeit fur Sie...\n\nHier sind die **meistverkauften Artikel auf Lager**:\n\n- **Elegance Noir Kleid** — estimation personnalisee (S, M, L)\n- **Blazer Parisienne** — estimation personnalisee (M, L, XL)\n- **Slim Jeans Raw** — estimation personnalisee (36, 38, 40, 42)\n- **Kaschmir Pullover Elfenbein** — estimation personnalisee (S, M) *Letzte Stuck!*\n\nFur welchen Artikel interessieren Sie sich?",
     delay: 1200,
     quickReplies: [
       { label: "Elegance Kleid", value: "katalog" },
@@ -82,7 +82,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   lieferung: {
-    text: "**Lieferoptionen bei ModaChic:**\n\n- **Standard** (3-5 Tage): Kostenlos ab 49 EUR\n- **Express** (24h): 5,90 EUR\n- **Paketshop** (2-4 Tage): Kostenlos ab 29 EUR\n- **Same-Day Munchen**: 9,90 EUR (Bestellung vor 14 Uhr)\n\n**Gebiete:** Deutschland, Osterreich, Schweiz, Liechtenstein\n**Tracking:** SMS + E-Mail bei jedem Schritt\n\nHaben Sie gerade eine laufende Bestellung?",
+    text: "**Lieferoptionen bei ModaChic:**\n\n- **Standard** (3-5 Tage): Kostenlos ab estimation personnalisee\n- **Express** (24h): estimation personnalisee\n- **Paketshop** (2-4 Tage): Kostenlos ab estimation personnalisee\n- **Same-Day Munchen**: estimation personnalisee (Bestellung vor 14 Uhr)\n\n**Gebiete:** Deutschland, Osterreich, Schweiz, Liechtenstein\n**Tracking:** SMS + E-Mail bei jedem Schritt\n\nHaben Sie gerade eine laufende Bestellung?",
     delay: 1300,
     quickReplies: [
       { label: "Bestellung verfolgen", value: "bestellung verfolgen" },
@@ -93,7 +93,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   zahlung: {
-    text: "**Akzeptierte Zahlungsmethoden:**\n\n- Kreditkarte (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Ratenzahlung **3x ohne Aufpreis** ab 50 EUR\n- Bankuberweisung\n- ModaChic Geschenkkarte\n\n**100% sichere Zahlung** (3D Secure, SSL-Verschlusselung)\n\nBenotigen Sie Hilfe beim Abschluss Ihrer Bestellung?",
+    text: "**Akzeptierte Zahlungsmethoden:**\n\n- Kreditkarte (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Ratenzahlung **3x ohne Aufpreis** ab estimation personnalisee\n- Bankuberweisung\n- ModaChic Geschenkkarte\n\n**100% sichere Zahlung** (3D Secure, SSL-Verschlusselung)\n\nBenotigen Sie Hilfe beim Abschluss Ihrer Bestellung?",
     delay: 1100,
     quickReplies: [
       { label: "3x zahlen", value: "zahlung" },
@@ -104,7 +104,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   reklamation: {
-    text: "Es tut mir leid fur die Unannehmlichkeiten. Ihre Zufriedenheit hat fur uns hochste Prioritat.\n\n**Ihre Reklamation wurde erfasst:**\n- **Ref.:** REC-MC-2026-04-1847\n- **Prioritat:** Hoch\n- **Antwortzeit:** Maximal 2 Stunden\n\nEin Senior-Berater wird sich um Ihren Fall kummern. In der Zwischenzeit darf ich Ihnen einen **10 EUR-Gutschein** als Geste anbieten?",
+    text: "Es tut mir leid fur die Unannehmlichkeiten. Ihre Zufriedenheit hat fur uns hochste Prioritat.\n\n**Ihre Reklamation wurde erfasst:**\n- **Ref.:** REC-MC-2026-04-1847\n- **Prioritat:** Hoch\n- **Antwortzeit:** Maximal 2 Stunden\n\nEin Senior-Berater wird sich um Ihren Fall kummern. In der Zwischenzeit darf ich Ihnen einen **estimation personnalisee** als Geste anbieten?",
     delay: 1600,
     quickReplies: [
       { label: "Gutschein annehmen", value: "aktionscode" },
@@ -115,7 +115,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   kundendienst: {
-    text: "**ModaChic Kundendienst:**\n\nUnser Kundenservice ist **7 Tage die Woche von 8 bis 22 Uhr** erreichbar.\n\nIch kann Ihnen helfen mit:\n- Bestellverfolgung und Anpassung\n- Rucksendungen und Umtausch\n- Qualitatsprobleme\n- Rechnungen und Ruckerstattungen\n- Treueprogramm (Ihre Punkte: **2.450 Pkt.** = 24,50 EUR)\n\nWas mochten Sie tun?",
+    text: "**ModaChic Kundendienst:**\n\nUnser Kundenservice ist **7 Tage die Woche von 8 bis 22 Uhr** erreichbar.\n\nIch kann Ihnen helfen mit:\n- Bestellverfolgung und Anpassung\n- Rucksendungen und Umtausch\n- Qualitatsprobleme\n- Rechnungen und Ruckerstattungen\n- Treueprogramm (Ihre Punkte: **2.450 Pkt.** = estimation personnalisee)\n\nWas mochten Sie tun?",
     delay: 1200,
     quickReplies: [
       { label: "Meine Treuepunkte", value: "kundendienst" },
@@ -137,7 +137,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   katalog: {
-    text: "Entdecken Sie unsere **ModaChic Kollektionen**:\n\n**Neuheiten Fruhling 2026:**\n- Provence Blumenkleid — 79,90 EUR\n- Naturleinen-Blazer — 139,00 EUR\n- Goldene Sandalen — 59,90 EUR\n\n**Bestseller:**\n- Elegance Noir Kleid — 89,90 EUR\n- Slim Jeans Raw — 69,90 EUR\n- Kamel-Ledertasche — 129,00 EUR\n\n**Code FRUHLING26** fur -20% auf Neuheiten!\n\nFur welchen Artikel interessieren Sie sich?",
+    text: "Entdecken Sie unsere **ModaChic Kollektionen**:\n\n**Neuheiten Fruhling 2026:**\n- Provence Blumenkleid — estimation personnalisee\n- Naturleinen-Blazer — estimation personnalisee\n- Goldene Sandalen — estimation personnalisee\n\n**Bestseller:**\n- Elegance Noir Kleid — estimation personnalisee\n- Slim Jeans Raw — estimation personnalisee\n- Kamel-Ledertasche — estimation personnalisee\n\n**Code FRUHLING26** fur -20% auf Neuheiten!\n\nFur welchen Artikel interessieren Sie sich?",
     delay: 1500,
     quickReplies: [
       { label: "Neuheiten", value: "katalog" },
@@ -148,7 +148,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   "verlassener warenkorb": {
-    text: "Ich habe bemerkt, dass Sie Artikel in Ihrem Warenkorb haben!\n\n**Ihr ModaChic Warenkorb:**\n- Blazer Parisienne (M) — 149,00 EUR\n- Bordeaux-Seidenschal — 45,00 EUR\n\n**Gesamt:** 194,00 EUR\n**Mit FRUHLING26:** ~~194,00~~ **155,20 EUR** (-20%)\n\nIhr Code lauft in **2 Stunden** ab. Mochten Sie die Bestellung abschliessen?",
+    text: "Ich habe bemerkt, dass Sie Artikel in Ihrem Warenkorb haben!\n\n**Ihr ModaChic Warenkorb:**\n- Blazer Parisienne (M) — estimation personnalisee\n- Bordeaux-Seidenschal — estimation personnalisee\n\n**Gesamt:** estimation personnalisee\n**Mit FRUHLING26:** ~~194,00~~ **estimation personnalisee** (-20%)\n\nIhr Code lauft in **2 Stunden** ab. Mochten Sie die Bestellung abschliessen?",
     delay: 1600,
     quickReplies: [
       { label: "Bestellung abschliessen", value: "zahlung" },
@@ -169,7 +169,7 @@ const ECOMMERCE_INTENTS_DE = {
   },
 
   wunschliste: {
-    text: "Ihre **ModaChic Wunschliste**:\n\n1. Wollmantel Kamel — 229,00 EUR *(- 50% Flash-Sale!)*\n2. Chelsea-Stiefeletten Schwarz — 119,00 EUR\n3. Grauer Kaschmirschal — 89,00 EUR\n\n**Hinweis:** Der Wollmantel Kamel ist im Angebot fur **114,50 EUR**! Noch 3 auf Lager.\n\nMochten Sie ihn in den Warenkorb legen?",
+    text: "Ihre **ModaChic Wunschliste**:\n\n1. Wollmantel Kamel — estimation personnalisee *(- 50% Flash-Sale!)*\n2. Chelsea-Stiefeletten Schwarz — estimation personnalisee\n3. Grauer Kaschmirschal — estimation personnalisee\n\n**Hinweis:** Der Wollmantel Kamel ist im Angebot fur **estimation personnalisee**! Noch 3 auf Lager.\n\nMochten Sie ihn in den Warenkorb legen?",
     delay: 1300,
     quickReplies: [
       { label: "In den Warenkorb", value: "zahlung" },

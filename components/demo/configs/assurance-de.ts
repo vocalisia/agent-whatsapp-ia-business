@@ -36,7 +36,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "schaden wasser": {
-    text: "**Wasserschaden - Schritt 2/4**\n\nFur die Bearbeitung Ihrer Meldung:\n\n1. Ursache des Lecks (Dach, Rohrleitung, Nachbar...)\n2. Betroffene Raume\n3. Schadensschatzung\n4. Gemeinsames Schadensprotokoll ausgefullt?\n\nVergessen Sie nicht, das **gemeinsame Schadensprotokoll** mit Ihrem Nachbarn auszufullen, falls zutreffend.\n\nIhr Hausratvertrag **HAU-7821** deckt Wasserschaden bis zu **15.000 EUR**.",
+    text: "**Wasserschaden - Schritt 2/4**\n\nFur die Bearbeitung Ihrer Meldung:\n\n1. Ursache des Lecks (Dach, Rohrleitung, Nachbar...)\n2. Betroffene Raume\n3. Schadensschatzung\n4. Gemeinsames Schadensprotokoll ausgefullt?\n\nVergessen Sie nicht, das **gemeinsame Schadensprotokoll** mit Ihrem Nachbarn auszufullen, falls zutreffend.\n\nIhr Hausratvertrag **HAU-7821** deckt Wasserschaden bis zu **estimation personnalisee**.",
     delay: 2000,
     quickReplies: [
       { label: "Foto senden", value: "foto schaden" },
@@ -46,7 +46,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "schaden feuer": {
-    text: "**Feuer - Dringende Meldung**\n\nWenn das Feuer noch brennt, rufen Sie sofort **112** an.\n\nSobald Sie in Sicherheit sind:\n1. Beruhren Sie nichts vor dem Gutachterbesuch\n2. Bewahren Sie beschadigte Gegenstande auf\n3. Fotografieren Sie alle Schaden\n\nIhr Vertrag deckt Brandschaden bis zu **150.000 EUR** (Neuwert).\n\nEin Gutachter wird innerhalb von **48 Stunden** entsandt.",
+    text: "**Feuer - Dringende Meldung**\n\nWenn das Feuer noch brennt, rufen Sie sofort **112** an.\n\nSobald Sie in Sicherheit sind:\n1. Beruhren Sie nichts vor dem Gutachterbesuch\n2. Bewahren Sie beschadigte Gegenstande auf\n3. Fotografieren Sie alle Schaden\n\nIhr Vertrag deckt Brandschaden bis zu **estimation personnalisee** (Neuwert).\n\nEin Gutachter wird innerhalb von **48 Stunden** entsandt.",
     delay: 2200,
     quickReplies: [
       { label: "Sofort-Assistance", value: "notfall" },
@@ -65,7 +65,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "foto schaden": {
-    text: "**KI-Fotoanalyse**\n\nSchicken Sie mir ein Foto des Schadens und unsere KI analysiert:\n\n• **Schadensart** automatisch erkannt\n• **Schweregrad** geschatzt (leicht / mittel / schwer)\n• **Reparaturkosten** geschatzt\n• **Deckung** anwendbar auf Ihren Vertrag\n\n---\n*Simulation:* Analyse lauft...\n\n**Ergebnis**:\n• Art: Heckstossstange-Aufprall\n• Schweregrad: Mittel\n• Schatzung: **1.200 - 1.800 EUR**\n• Anwendbare Selbstbeteiligung: **300 EUR**\n• Geschatzte Deckung: **900 - 1.500 EUR**\n\nMochten Sie diese Meldung bestatigen?",
+    text: "**KI-Fotoanalyse**\n\nSchicken Sie mir ein Foto des Schadens und unsere KI analysiert:\n\n• **Schadensart** automatisch erkannt\n• **Schweregrad** geschatzt (leicht / mittel / schwer)\n• **Reparaturkosten** geschatzt\n• **Deckung** anwendbar auf Ihren Vertrag\n\n---\n*Simulation:* Analyse lauft...\n\n**Ergebnis**:\n• Art: Heckstossstange-Aufprall\n• Schweregrad: Mittel\n• Schatzung: **1.200 - estimation personnalisee**\n• Anwendbare Selbstbeteiligung: **estimation personnalisee**\n• Geschatzte Deckung: **900 - estimation personnalisee**\n\nMochten Sie diese Meldung bestatigen?",
     delay: 3000,
     quickReplies: [
       { label: "Meldung bestatigen", value: "schaden melden" },
@@ -75,7 +75,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "vorgang verfolgen": {
-    text: "**Ihre laufenden Vorgange**\n\nHier der Status Ihrer laufenden Vorgange:\n\n**1. SCH-2026-03-6529** - Wasserschaden\n• Status: Gutachter entsandt\n• Gutachtertermin: 22.04.2026 um 10 Uhr\n• Schatzung: 3.200 EUR\n\n**2. SCH-2026-01-4102** - Glasbruch\n• Status: Abgeschlossen - Erstattet\n• Ausgezahlter Betrag: 450 EUR\n• Uberweisung: 18.02.2026\n\nFur einen bestimmten Vorgang senden Sie mir die **Referenznummer** (z.B.: SCH-2026-XXXX).",
+    text: "**Ihre laufenden Vorgange**\n\nHier der Status Ihrer laufenden Vorgange:\n\n**1. SCH-2026-03-6529** - Wasserschaden\n• Status: Gutachter entsandt\n• Gutachtertermin: 22.04.2026 um 10 Uhr\n• Schatzung: estimation personnalisee\n\n**2. SCH-2026-01-4102** - Glasbruch\n• Status: Abgeschlossen - Erstattet\n• Ausgezahlter Betrag: estimation personnalisee\n• Uberweisung: 18.02.2026\n\nFur einen bestimmten Vorgang senden Sie mir die **Referenznummer** (z.B.: SCH-2026-XXXX).",
     delay: 2500,
     quickReplies: [
       { label: "Details Vorgang 6529", value: "vorgang verfolgen" },
@@ -85,7 +85,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   angebot: {
-    text: "**Sofortangebot**\n\nFur welche Versicherungsart interessieren Sie sich?\n\nKFZ - Ab 28 EUR/Monat\nHausrat - Ab 12 EUR/Monat\nKranken / Zusatz - Ab 35 EUR/Monat\nBeruf / Haftpflicht - Ab 19 EUR/Monat\nReise - Ab 8 EUR/Reise\n\nIch berechne Ihren personlichen Tarif in 2 Minuten!",
+    text: "**Sofortangebot**\n\nFur welche Versicherungsart interessieren Sie sich?\n\nKFZ - Ab estimation personnalisee\nHausrat - Ab estimation personnalisee\nKranken / Zusatz - Ab estimation personnalisee\nBeruf / Haftpflicht - Ab estimation personnalisee\nReise - Ab estimation personnalisee\n\nIch berechne Ihren personlichen Tarif in 2 Minuten!",
     delay: 1800,
     quickReplies: [
       { label: "KFZ-Angebot", value: "angebot kfz" },
@@ -95,7 +95,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "angebot kfz": {
-    text: "**KFZ-Sofortangebot**\n\nFur die Berechnung Ihres Tarifs benotige ich:\n\n1. Marke und Modell des Fahrzeugs\n2. Erstzulassungsjahr\n3. Jahrliche Fahrleistung\n4. Fuherscheindatum\n5. Aktueller Schadenfreiheitsrabatt\n\n---\n*Simulation*:\n\n**Renault Clio V (2023)**\n• Teilkasko: **32 EUR/Monat**\n• Vollkasko: **48 EUR/Monat**\n• SF-Klasse 50% angewendet\n• Selbstbeteiligung: 300 EUR (TK) / 150 EUR (VK)\n\n*-15% bei Online-Abschluss!*",
+    text: "**KFZ-Sofortangebot**\n\nFur die Berechnung Ihres Tarifs benotige ich:\n\n1. Marke und Modell des Fahrzeugs\n2. Erstzulassungsjahr\n3. Jahrliche Fahrleistung\n4. Fuherscheindatum\n5. Aktueller Schadenfreiheitsrabatt\n\n---\n*Simulation*:\n\n**Renault Clio V (2023)**\n• Teilkasko: **estimation personnalisee**\n• Vollkasko: **estimation personnalisee**\n• SF-Klasse 50% angewendet\n• Selbstbeteiligung: estimation personnalisee (TK) / estimation personnalisee (VK)\n\n*-15% bei Online-Abschluss!*",
     delay: 2500,
     quickReplies: [
       { label: "Online abschliessen", value: "vertrag" },
@@ -105,7 +105,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "angebot hausrat": {
-    text: "**Hausrat-Sofortangebot**\n\nEinige Angaben fur Ihren Tarif:\n\n1. Typ (Wohnung / Haus)\n2. Flache in m2\n3. Anzahl Zimmer\n4. Eigentumer oder Mieter\n5. Alarmanlage?\n\n---\n*Simulation*: 3-Zimmer-Wohnung, 65m2, Mieter\n\n**Basis-Tarif**: 14 EUR/Monat\n**Komfort-Tarif**: 22 EUR/Monat\n**Premium-Tarif**: 31 EUR/Monat\n\nEnthaltene Leistungen: Wasserschaden, Feuer, Diebstahl, Haftpflicht.",
+    text: "**Hausrat-Sofortangebot**\n\nEinige Angaben fur Ihren Tarif:\n\n1. Typ (Wohnung / Haus)\n2. Flache in m2\n3. Anzahl Zimmer\n4. Eigentumer oder Mieter\n5. Alarmanlage?\n\n---\n*Simulation*: 3-Zimmer-Wohnung, 65m2, Mieter\n\n**Basis-Tarif**: estimation personnalisee\n**Komfort-Tarif**: estimation personnalisee\n**Premium-Tarif**: estimation personnalisee\n\nEnthaltene Leistungen: Wasserschaden, Feuer, Diebstahl, Haftpflicht.",
     delay: 2500,
     quickReplies: [
       { label: "Tarife vergleichen", value: "deckungsumfang" },
@@ -115,7 +115,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "angebot kranken": {
-    text: "**Kranken- / Zusatzversicherung**\n\nFur ein personliches Angebot:\n\n1. Anzahl der zu versichernden Personen\n2. Alter\n3. Berufsstatus (Angestellt, Selbstandig, Renter)\n4. Besondere Bedurfnisse (Zahn, Brille, Krankenhaus)\n\n---\n*Simulation*: 1 Erwachsener, 35 Jahre, Angestellt\n\n**Eco**: 38 EUR/Monat\n**Ausgewogen**: 55 EUR/Monat\n**Sorglos**: 79 EUR/Monat\n\nLeistungsbeginn innerhalb von 48h, keine Wartezeit.",
+    text: "**Kranken- / Zusatzversicherung**\n\nFur ein personliches Angebot:\n\n1. Anzahl der zu versichernden Personen\n2. Alter\n3. Berufsstatus (Angestellt, Selbstandig, Renter)\n4. Besondere Bedurfnisse (Zahn, Brille, Krankenhaus)\n\n---\n*Simulation*: 1 Erwachsener, 35 Jahre, Angestellt\n\n**Eco**: estimation personnalisee\n**Ausgewogen**: estimation personnalisee\n**Sorglos**: estimation personnalisee\n\nLeistungsbeginn innerhalb von 48h, keine Wartezeit.",
     delay: 2500,
     quickReplies: [
       { label: "Tarife vergleichen", value: "deckungsumfang" },
@@ -125,7 +125,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   "angebot beruf": {
-    text: "**Gewerbe- / Haftpflicht-Angebot**\n\nIhre Tatigkeit benotigt einen angepassten Schutz:\n\n1. Tatigkeitsart (Beratung, Handwerk, Handel...)\n2. Jahresumsatz\n3. Anzahl Mitarbeiter\n4. Gewunschte Deckungen\n\n---\n*Simulation*: IT-Berater, Umsatz 120.000 EUR, 1 Person\n\n**Berufshaftpflicht**: 22 EUR/Monat\n**BH + Cyber**: 38 EUR/Monat\n**Komplett-Paket**: 55 EUR/Monat\n\nSchutzen Sie Ihre Tatigkeit ab heute.",
+    text: "**Gewerbe- / Haftpflicht-Angebot**\n\nIhre Tatigkeit benotigt einen angepassten Schutz:\n\n1. Tatigkeitsart (Beratung, Handwerk, Handel...)\n2. Jahresumsatz\n3. Anzahl Mitarbeiter\n4. Gewunschte Deckungen\n\n---\n*Simulation*: IT-Berater, Umsatz estimation personnalisee, 1 Person\n\n**Berufshaftpflicht**: estimation personnalisee\n**BH + Cyber**: estimation personnalisee\n**Komplett-Paket**: estimation personnalisee\n\nSchutzen Sie Ihre Tatigkeit ab heute.",
     delay: 2500,
     quickReplies: [
       { label: "BH-Leistungen", value: "deckungsumfang" },
@@ -134,7 +134,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   vertrag: {
-    text: "**Ihre AssurPlus-Vertrage**\n\n**1. KFZ - Vollkasko** (Nr. AP-KFZ-782341)\n• Fahrzeug: Renault Clio V\n• Ablauf: 15.09.2026\n• Pramie: 576 EUR/Jahr (48 EUR/Monat)\n• SF-Klasse: 50%\n\n**2. Hausrat - Komfort** (Nr. AP-HAU-7821)\n• Adresse: Hauptstrasse 12, 10115 Berlin\n• Ablauf: 01.01.2027\n• Pramie: 264 EUR/Jahr (22 EUR/Monat)\n\nSie konnen Ihre Vertrage herunterladen oder online andern.",
+    text: "**Ihre AssurPlus-Vertrage**\n\n**1. KFZ - Vollkasko** (Nr. AP-KFZ-782341)\n• Fahrzeug: Renault Clio V\n• Ablauf: 15.09.2026\n• Pramie: estimation personnalisee (estimation personnalisee)\n• SF-Klasse: 50%\n\n**2. Hausrat - Komfort** (Nr. AP-HAU-7821)\n• Adresse: Hauptstrasse 12, 10115 Berlin\n• Ablauf: 01.01.2027\n• Pramie: estimation personnalisee (estimation personnalisee)\n\nSie konnen Ihre Vertrage herunterladen oder online andern.",
     delay: 2200,
     quickReplies: [
       { label: "Vertrag herunterladen", value: "vertrag" },
@@ -184,7 +184,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   zahlung: {
-    text: "**Zahlung & Falligkeiten**\n\n**Nachste Lastschrift**:\n• Datum: 01.05.2026\n• Betrag: **70 EUR** (KFZ 48 EUR + Hausrat 22 EUR)\n• Zahlungsmittel: Karte endend auf ****4521\n\n**Letzte Buchungen**:\n• 01.04.2026: 70 EUR\n• 01.03.2026: 70 EUR\n• 01.02.2026: 70 EUR\n\n**Optionen**:\n• Monatlich / Vierteljahrlich / Jahrlich\n• Lastschrift oder Kreditkarte\n• Ratenzahlung bei Zahlungsschwierigkeiten moglich",
+    text: "**Zahlung & Falligkeiten**\n\n**Nachste Lastschrift**:\n• Datum: 01.05.2026\n• Betrag: **estimation personnalisee** (KFZ estimation personnalisee + Hausrat estimation personnalisee)\n• Zahlungsmittel: Karte endend auf ****4521\n\n**Letzte Buchungen**:\n• 01.04.2026: estimation personnalisee\n• 01.03.2026: estimation personnalisee\n• 01.02.2026: estimation personnalisee\n\n**Optionen**:\n• Monatlich / Vierteljahrlich / Jahrlich\n• Lastschrift oder Kreditkarte\n• Ratenzahlung bei Zahlungsschwierigkeiten moglich",
     delay: 2000,
     quickReplies: [
       { label: "Zahlungsmittel andern", value: "vertrag andern" },
@@ -204,7 +204,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   deckungsumfang: {
-    text: "**Ihre Leistungen - Vollkasko-Vertrag**\n\n**Enthaltene Deckungen**:\n• Haftpflicht (unbegrenzt)\n• Kaskoschaden alle Unfalle\n• Diebstahl und Diebstahlversuch\n• Feuer und Explosion\n• Glasbruch\n• Naturkatastrophen\n• Rechtschutz (15.000 EUR)\n• Assistance ab 0 km\n\n**Obergrenzen**:\n• Sachschaden: **150.000 EUR**\n• Personenschaden: **Unbegrenzt**\n• Transportguter: **1.500 EUR**",
+    text: "**Ihre Leistungen - Vollkasko-Vertrag**\n\n**Enthaltene Deckungen**:\n• Haftpflicht (unbegrenzt)\n• Kaskoschaden alle Unfalle\n• Diebstahl und Diebstahlversuch\n• Feuer und Explosion\n• Glasbruch\n• Naturkatastrophen\n• Rechtschutz (estimation personnalisee)\n• Assistance ab 0 km\n\n**Obergrenzen**:\n• Sachschaden: **estimation personnalisee**\n• Personenschaden: **Unbegrenzt**\n• Transportguter: **estimation personnalisee**",
     delay: 2200,
     quickReplies: [
       { label: "Meine Selbstbeteiligung", value: "selbstbeteiligung" },
@@ -214,7 +214,7 @@ const ASSURANCE_INTENTS_DE = {
     ],
   },
   selbstbeteiligung: {
-    text: "**Selbstbeteiligung - Erklarung**\n\nDie Selbstbeteiligung ist der Betrag, den Sie im Schadenfall selbst tragen.\n\n**Ihre aktuellen Selbstbehalte**:\n\n**KFZ (Vollkasko)**:\n• Kaskoschaden: **150 EUR**\n• Diebstahl: **300 EUR**\n• Glasbruch: **0 EUR** (ohne Selbstbehalt)\n\n**Hausrat (Komfort)**:\n• Wasserschaden: **200 EUR**\n• Diebstahl: **300 EUR**\n• Naturkatastrophe: **380 EUR** (gesetzlich festgelegt)\n\n**Tipp**: Eine Erhohung der Selbstbeteiligung um 150 EUR kann Ihre Pramie um **10-15%** senken.",
+    text: "**Selbstbeteiligung - Erklarung**\n\nDie Selbstbeteiligung ist der Betrag, den Sie im Schadenfall selbst tragen.\n\n**Ihre aktuellen Selbstbehalte**:\n\n**KFZ (Vollkasko)**:\n• Kaskoschaden: **estimation personnalisee**\n• Diebstahl: **estimation personnalisee**\n• Glasbruch: **estimation personnalisee** (ohne Selbstbehalt)\n\n**Hausrat (Komfort)**:\n• Wasserschaden: **estimation personnalisee**\n• Diebstahl: **estimation personnalisee**\n• Naturkatastrophe: **estimation personnalisee** (gesetzlich festgelegt)\n\n**Tipp**: Eine Erhohung der Selbstbeteiligung um estimation personnalisee kann Ihre Pramie um **10-15%** senken.",
     delay: 2200,
     quickReplies: [
       { label: "Selbstbeteiligung andern", value: "vertrag andern" },

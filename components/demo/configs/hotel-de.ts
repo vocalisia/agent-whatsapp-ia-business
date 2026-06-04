@@ -25,7 +25,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   zimmer: {
-    text: "**Unsere Zimmerkategorien :**\n\n**Standard** — 28 m²\nQueen-Bett, Marmorbad, Minibar\nAb 180 EUR/Nacht\n\n**Superior** — 35 m²\nKingsize-Bett, Balkon, Gartenblick, Safe\nAb 260 EUR/Nacht\n\n**Junior-Suite** — 50 m²\nSeparates Wohnzimmer, Whirlpool-Badewanne, Panoramablick\nAb 420 EUR/Nacht\n\n**Prestige-Suite** — 75 m²\nPrivate Terrasse, Jacuzzi, Butler-Service\nAb 680 EUR/Nacht\n\n**Penthouse** — 120 m²\nDuplex, privater Pool, Koch auf Anfrage\nAuf Anfrage\n\nAlle Zimmer inkl. Fruhstuck, WLAN und Spa-Zugang.",
+    text: "**Unsere Zimmerkategorien :**\n\n**Standard** — 28 m²\nQueen-Bett, Marmorbad, Minibar\nAb estimation personnalisee\n\n**Superior** — 35 m²\nKingsize-Bett, Balkon, Gartenblick, Safe\nAb estimation personnalisee\n\n**Junior-Suite** — 50 m²\nSeparates Wohnzimmer, Whirlpool-Badewanne, Panoramablick\nAb estimation personnalisee\n\n**Prestige-Suite** — 75 m²\nPrivate Terrasse, Jacuzzi, Butler-Service\nAb estimation personnalisee\n\n**Penthouse** — 120 m²\nDuplex, privater Pool, Koch auf Anfrage\nAuf Anfrage\n\nAlle Zimmer inkl. Fruhstuck, WLAN und Spa-Zugang.",
     delay: 2400,
     quickReplies: [
       { label: "Suite reservieren", value: "buchung" },
@@ -36,7 +36,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   zimmerpreise: {
-    text: "**Preisstaffel nach Saison**\n\n| Zimmer | Nebensaison | Hochsaison | Feiertage |\n|--------|------------|------------|----------|\n| Standard | 180 EUR | 280 EUR | 350 EUR |\n| Superior | 260 EUR | 380 EUR | 480 EUR |\n| Junior-Suite | 420 EUR | 580 EUR | 720 EUR |\n| Prestige-Suite | 680 EUR | 900 EUR | 1.200 EUR |\n\n**Nebensaison :** Nov - Marz (ohne Feiertage)\n**Hochsaison :** April - Oktober\n**Feiertage :** Weihnachten, Silvester, Ostern\n\n**Sonderangebote :**\n- -15 % ab 5 Nachten\n- -10 % Fruhbucher (60 Tage vorher)\n- Hochzeitspaket verfugbar\n\nPreise pro Nacht, Fruhstuck inklusive.",
+    text: "**Preisstaffel nach Saison**\n\n| Zimmer | Nebensaison | Hochsaison | Feiertage |\n|--------|------------|------------|----------|\n| Standard | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Superior | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Junior-Suite | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Prestige-Suite | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n\n**Nebensaison :** Nov - Marz (ohne Feiertage)\n**Hochsaison :** April - Oktober\n**Feiertage :** Weihnachten, Silvester, Ostern\n\n**Sonderangebote :**\n- -15 % ab 5 Nachten\n- -10 % Fruhbucher (60 Tage vorher)\n- Hochzeitspaket verfugbar\n\nPreise pro Nacht, Fruhstuck inklusive.",
     delay: 2200,
     quickReplies: [
       { label: "Jetzt buchen", value: "buchung" },
@@ -47,7 +47,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "check in": {
-    text: "**Check-in-Informationen**\n\n**Standardzeiten :**\n- Check-in : ab **15:00 Uhr**\n- Gepackaufbewahrung ab 8:00 Uhr verfugbar\n\n**Fruher Check-in :**\n- 12:00 Uhr : +30 EUR (je nach Verfugbarkeit)\n- 10:00 Uhr : +60 EUR (je nach Verfugbarkeit)\n- Garantiert fur Prestige-Suiten\n\n**Express-Check-in per WhatsApp :**\n1. Senden Sie Ihr Ausweis-/Reisepassfoto\n2. Wir bereiten Ihren digitalen Schlussel vor\n3. Direkt aufs Zimmer !\n\n**Bei Ihrer Ankunft :**\n- Willkommensgetrank gratis\n- Vorstellung der Services\n- Interaktiver Hotelplan\n\nMochten Sie einen fruhen Check-in ?",
+    text: "**Check-in-Informationen**\n\n**Standardzeiten :**\n- Check-in : ab **15:00 Uhr**\n- Gepackaufbewahrung ab 8:00 Uhr verfugbar\n\n**Fruher Check-in :**\n- 12:00 Uhr : gain mesure (je nach Verfugbarkeit)\n- 10:00 Uhr : gain mesure (je nach Verfugbarkeit)\n- Garantiert fur Prestige-Suiten\n\n**Express-Check-in per WhatsApp :**\n1. Senden Sie Ihr Ausweis-/Reisepassfoto\n2. Wir bereiten Ihren digitalen Schlussel vor\n3. Direkt aufs Zimmer !\n\n**Bei Ihrer Ankunft :**\n- Willkommensgetrank gratis\n- Vorstellung der Services\n- Interaktiver Hotelplan\n\nMochten Sie einen fruhen Check-in ?",
     delay: 2000,
     quickReplies: [
       { label: "Fruher Check-in", value: "check in" },
@@ -58,7 +58,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "check out": {
-    text: "**Check-out-Informationen**\n\n**Standardzeiten :**\n- Check-out : bis **11:00 Uhr**\n- Express-Check-out : Schlussel abgeben, Rechnung per E-Mail\n\n**Spater Check-out :**\n- 13:00 Uhr : kostenlos (je nach Verfugbarkeit)\n- 15:00 Uhr : +50 EUR\n- 18:00 Uhr : +100 EUR (halber Tag)\n\n**Stornierungsbedingungen :**\n- Flexibel : kostenlose Stornierung 48 Stunden vorher\n- Nicht erstattungspfahig : -15 % auf den Preis\n\n**Am Abreisetag :**\n- Fruhstuck bis 10:30 Uhr\n- Kostenlose Gepackaufbewahrung\n- Flughafenshuttle auf Anfrage\n\nSpaten Check-out gewunscht ?",
+    text: "**Check-out-Informationen**\n\n**Standardzeiten :**\n- Check-out : bis **11:00 Uhr**\n- Express-Check-out : Schlussel abgeben, Rechnung per E-Mail\n\n**Spater Check-out :**\n- 13:00 Uhr : kostenlos (je nach Verfugbarkeit)\n- 15:00 Uhr : gain mesure\n- 18:00 Uhr : gain mesure (halber Tag)\n\n**Stornierungsbedingungen :**\n- Flexibel : kostenlose Stornierung 48 Stunden vorher\n- Nicht erstattungspfahig : -15 % auf den Preis\n\n**Am Abreisetag :**\n- Fruhstuck bis 10:30 Uhr\n- Kostenlose Gepackaufbewahrung\n- Flughafenshuttle auf Anfrage\n\nSpaten Check-out gewunscht ?",
     delay: 1800,
     quickReplies: [
       { label: "Spater Check-out", value: "check out" },
@@ -69,7 +69,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   spa: {
-    text: "**Spa & Wellness — HotelLux**\n\n**Entspannungsbereich** (fur Hotelgaste inklusive)\n- Beheiztes Hallenbad (28 °C)\n- Finnische Sauna + Dampfbad\n- Fitnessraum 24/7\n\n**Behandlungen auf Reservierung :**\n\n**Entspannungsmassage** — 60 Min — 120 EUR\n**Sportmassage** — 60 Min — 140 EUR\n**Premium-Gesichtspflege** — 75 Min — 150 EUR\n**Orientalisches Ritual** — 90 Min — 200 EUR\n**Parchen-Paket** — 120 Min — 350 EUR\n\n**Offnungszeiten :** 7:00 - 21:00 Uhr\n\nReservierung 24 Stunden im Voraus empfohlen.\n\nWelche Behandlung interessiert Sie ?",
+    text: "**Spa & Wellness — HotelLux**\n\n**Entspannungsbereich** (fur Hotelgaste inklusive)\n- Beheiztes Hallenbad (28 °C)\n- Finnische Sauna + Dampfbad\n- Fitnessraum 24/7\n\n**Behandlungen auf Reservierung :**\n\n**Entspannungsmassage** — 60 Min — estimation personnalisee\n**Sportmassage** — 60 Min — estimation personnalisee\n**Premium-Gesichtspflege** — 75 Min — estimation personnalisee\n**Orientalisches Ritual** — 90 Min — estimation personnalisee\n**Parchen-Paket** — 120 Min — estimation personnalisee\n\n**Offnungszeiten :** 7:00 - 21:00 Uhr\n\nReservierung 24 Stunden im Voraus empfohlen.\n\nWelche Behandlung interessiert Sie ?",
     delay: 2200,
     quickReplies: [
       { label: "Massage buchen", value: "spa" },
@@ -80,7 +80,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "hotel restaurant": {
-    text: "**Restaurant & Zimmerservice**\n\n**Das Gartenrestaurant** — Gourmetrestaurant\n- Fruhstuck : 7:00 - 10:30 Uhr (inklusive)\n- Mittagessen : 12:00 - 14:30 Uhr\n- Abendessen : 19:00 - 22:30 Uhr\n- Sterne-Koch, mediterrane Kuche\n\n**Die Terrassen-Bar** — Cocktails & Tapas\n- 11:00 - 00:00 Uhr\n- Happy Hour : 17:00 - 19:00 Uhr\n\n**Zimmerservice** — 24/7\n- Vollstandige Speisekarte auf dem Zimmer\n- Zuschlag : 8 EUR\n- Lieferung in 30 Min\n\n**Spezielle Menus :**\n- Vegetarisch / Vegan\n- Glutenfrei\n- Halal / Koscher (auf Anfrage 24 Std vorher)\n\nEinen Tisch reservieren ?",
+    text: "**Restaurant & Zimmerservice**\n\n**Das Gartenrestaurant** — Gourmetrestaurant\n- Fruhstuck : 7:00 - 10:30 Uhr (inklusive)\n- Mittagessen : 12:00 - 14:30 Uhr\n- Abendessen : 19:00 - 22:30 Uhr\n- Sterne-Koch, mediterrane Kuche\n\n**Die Terrassen-Bar** — Cocktails & Tapas\n- 11:00 - 00:00 Uhr\n- Happy Hour : 17:00 - 19:00 Uhr\n\n**Zimmerservice** — 24/7\n- Vollstandige Speisekarte auf dem Zimmer\n- Zuschlag : estimation personnalisee\n- Lieferung in 30 Min\n\n**Spezielle Menus :**\n- Vegetarisch / Vegan\n- Glutenfrei\n- Halal / Koscher (auf Anfrage 24 Std vorher)\n\nEinen Tisch reservieren ?",
     delay: 2200,
     quickReplies: [
       { label: "Abendessen buchen", value: "hotel restaurant" },
@@ -91,7 +91,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   ausfluege: {
-    text: "**Ausflugsangebote & lokale Aktivitaten**\n\n**Halbtag :**\n- Stadtfuhrung Altstadt — 45 EUR/Pers.\n- Lokale Weinverkostung — 60 EUR/Pers.\n- Panorama-Wanderung — 35 EUR/Pers.\n\n**Ganzer Tag :**\n- Kustenkreuzfahrt + Mittagessen — 120 EUR/Pers.\n- 4x4-Safari Hinterland — 95 EUR/Pers.\n- Lokaler Kochkurs — 80 EUR/Pers.\n\n**Premium-Erlebnisse :**\n- Hubschrauber-Kustenrundflug — 250 EUR/Pers.\n- Tauchen — 110 EUR/Pers.\n- Privates Yacht-Halbtags-Charter — 800 EUR (max. 4 Pers.)\n\nBuchung uber WhatsApp, Abfahrt vom Hotel.\n\nWelche Aktivitat interessiert Sie ?",
+    text: "**Ausflugsangebote & lokale Aktivitaten**\n\n**Halbtag :**\n- Stadtfuhrung Altstadt — estimation personnalisee\n- Lokale Weinverkostung — estimation personnalisee\n- Panorama-Wanderung — estimation personnalisee\n\n**Ganzer Tag :**\n- Kustenkreuzfahrt + Mittagessen — estimation personnalisee\n- 4x4-Safari Hinterland — estimation personnalisee\n- Lokaler Kochkurs — estimation personnalisee\n\n**Premium-Erlebnisse :**\n- Hubschrauber-Kustenrundflug — estimation personnalisee\n- Tauchen — estimation personnalisee\n- Privates Yacht-Halbtags-Charter — estimation personnalisee (max. 4 Pers.)\n\nBuchung uber WhatsApp, Abfahrt vom Hotel.\n\nWelche Aktivitat interessiert Sie ?",
     delay: 2200,
     quickReplies: [
       { label: "Kreuzfahrt", value: "ausfluege" },
@@ -102,7 +102,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   shuttle: {
-    text: "**Flughafen-Shuttle-Service**\n\n**Privattransfer :**\n- Limousine (1 - 3 Pers.) : 60 EUR\n- Van (4 - 7 Pers.) : 90 EUR\n- Minibus (8 - 15 Pers.) : 150 EUR\n\n**Durchschnittliche Fahrtzeit :** 25 Min (je nach Verkehr)\n\n**Buchung :**\n- Flug + Ankunftszeit angeben\n- Fahrer mit Namensschild erwartet Sie\n- Echtzeit-Flugverfolgung\n- Wasser und kuhle Tucher im Fahrzeug\n\n**Sammel-Shuttle :** 20 EUR/Pers.\n(Abfahrten jede Stunde 6 - 22 Uhr)\n\nMochten Sie einen Transfer buchen ?",
+    text: "**Flughafen-Shuttle-Service**\n\n**Privattransfer :**\n- Limousine (1 - 3 Pers.) : estimation personnalisee\n- Van (4 - 7 Pers.) : estimation personnalisee\n- Minibus (8 - 15 Pers.) : estimation personnalisee\n\n**Durchschnittliche Fahrtzeit :** 25 Min (je nach Verkehr)\n\n**Buchung :**\n- Flug + Ankunftszeit angeben\n- Fahrer mit Namensschild erwartet Sie\n- Echtzeit-Flugverfolgung\n- Wasser und kuhle Tucher im Fahrzeug\n\n**Sammel-Shuttle :** estimation personnalisee\n(Abfahrten jede Stunde 6 - 22 Uhr)\n\nMochten Sie einen Transfer buchen ?",
     delay: 1800,
     quickReplies: [
       { label: "Ankunfts-Shuttle", value: "shuttle" },
@@ -113,7 +113,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   parkplatz: {
-    text: "**Hotelparkplatz**\n\n**Gedeckter gesicherter Parkplatz :**\n- Hotelgaste : 20 EUR/Tag\n- Prestige-Suite / Penthouse : kostenlos\n- Valet-Parking verfugbar\n\n**Verfugbare Platze :** Echtzeit per WhatsApp\n\n**Ladestationen :**\n- 4 Tesla-Supercharger\n- 2 Universal-Ladestationen (Typ 2)\n- Kostenlos laden fur Hotelgaste\n\n**Außenparkplatz :** 10 EUR/Tag\n\nReservierung in der Hochsaison empfohlen.\n\nBenoten Sie einen Stellplatz ?",
+    text: "**Hotelparkplatz**\n\n**Gedeckter gesicherter Parkplatz :**\n- Hotelgaste : estimation personnalisee\n- Prestige-Suite / Penthouse : kostenlos\n- Valet-Parking verfugbar\n\n**Verfugbare Platze :** Echtzeit per WhatsApp\n\n**Ladestationen :**\n- 4 Tesla-Supercharger\n- 2 Universal-Ladestationen (Typ 2)\n- Kostenlos laden fur Hotelgaste\n\n**Außenparkplatz :** estimation personnalisee\n\nReservierung in der Hochsaison empfohlen.\n\nBenoten Sie einen Stellplatz ?",
     delay: 1600,
     quickReplies: [
       { label: "Platz reservieren", value: "parkplatz" },
@@ -124,7 +124,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   wlan: {
-    text: "**WLAN-Zugang — HotelLux**\n\n**Kostenloses WLAN im gesamten Hotel :**\n- Netzwerk : HotelLux-Guest\n- Passwort : wird beim Check-in mitgeteilt\n- Geschwindigkeit : 100 Mbit/s\n\n**Premium-WLAN** (in Suiten inklusive) :\n- Geschwindigkeit : 500 Mbit/s\n- Ideal fur 4K-Streaming, Videokonferenzen, Gaming\n- Aufpreis : 10 EUR/Tag (andere Zimmer)\n\n**Abdeckung :**\n- Zimmer, Lobby, Restaurant, Schwimmbad, Spa\n- Konferenzraum (dediziertes Netz)\n\nBenogen Sie Hilfe bei der Verbindung ?",
+    text: "**WLAN-Zugang — HotelLux**\n\n**Kostenloses WLAN im gesamten Hotel :**\n- Netzwerk : HotelLux-Guest\n- Passwort : wird beim Check-in mitgeteilt\n- Geschwindigkeit : 100 Mbit/s\n\n**Premium-WLAN** (in Suiten inklusive) :\n- Geschwindigkeit : 500 Mbit/s\n- Ideal fur 4K-Streaming, Videokonferenzen, Gaming\n- Aufpreis : estimation personnalisee (andere Zimmer)\n\n**Abdeckung :**\n- Zimmer, Lobby, Restaurant, Schwimmbad, Spa\n- Konferenzraum (dediziertes Netz)\n\nBenogen Sie Hilfe bei der Verbindung ?",
     delay: 1400,
     quickReplies: [
       { label: "Verbindungsproblem", value: "wlan" },
@@ -135,7 +135,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   haustiere: {
-    text: "**Haustierrichtlinien**\n\n**Haustiere willkommen !** (Hunde und Katzen)\n\n**Bedingungen :**\n- Aufpreis : 30 EUR/Nacht\n- Max. Gewicht : 15 kg\n- 1 Tier pro Zimmer\n- Aktueller Impfnachweis\n\n**Inklusive Services :**\n- Napf und Decke im Zimmer\n- Willkommens-Snack-Beutel\n- Liste nahegelegener Tierarzte\n- Spaziergang-Route um das Hotel\n\n**Einschrankungen :**\n- Tiere nicht im Restaurant und Spa erlaubt\n- Zugang zu Garten und Terrasse erlaubt\n\nReisen Sie mit einem Tier ?",
+    text: "**Haustierrichtlinien**\n\n**Haustiere willkommen !** (Hunde und Katzen)\n\n**Bedingungen :**\n- Aufpreis : estimation personnalisee\n- Max. Gewicht : 15 kg\n- 1 Tier pro Zimmer\n- Aktueller Impfnachweis\n\n**Inklusive Services :**\n- Napf und Decke im Zimmer\n- Willkommens-Snack-Beutel\n- Liste nahegelegener Tierarzte\n- Spaziergang-Route um das Hotel\n\n**Einschrankungen :**\n- Tiere nicht im Restaurant und Spa erlaubt\n- Zugang zu Garten und Terrasse erlaubt\n\nReisen Sie mit einem Tier ?",
     delay: 1800,
     quickReplies: [
       { label: "Mit Haustier buchen", value: "buchung" },
@@ -168,7 +168,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   gruppen: {
-    text: "**Gruppen & Veranstaltungen — HotelLux**\n\n**Seminare & Konferenzen :**\n- 3 Sale (20 bis 200 Personen)\n- Vollstandige AV-Ausstattung\n- Dediziertes Hochgeschwindigkeits-WLAN\n- Kaffeepausen + Mittagessen inklusive\n- Ab 85 EUR/Pers./Tag\n\n**Hochzeiten & Empfange :**\n- Panoramaterrasse (max. 150 Pers.)\n- Massgeschneidertes Degustationsmenu\n- Wedding-Planner-Partner\n- Paket ab 12.000 EUR\n\n**Reisegruppen :**\n- Sonderpreise ab 10 Zimmern\n- Lokaler Fuhrer inklusive\n- Personalisiertes Aktivitatsprogramm\n\nBriefing einsenden fur Angebot innerhalb von 24 Stunden.",
+    text: "**Gruppen & Veranstaltungen — HotelLux**\n\n**Seminare & Konferenzen :**\n- 3 Sale (20 bis 200 Personen)\n- Vollstandige AV-Ausstattung\n- Dediziertes Hochgeschwindigkeits-WLAN\n- Kaffeepausen + Mittagessen inklusive\n- Ab estimation personnalisee/Tag\n\n**Hochzeiten & Empfange :**\n- Panoramaterrasse (max. 150 Pers.)\n- Massgeschneidertes Degustationsmenu\n- Wedding-Planner-Partner\n- Paket ab estimation personnalisee\n\n**Reisegruppen :**\n- Sonderpreise ab 10 Zimmern\n- Lokaler Fuhrer inklusive\n- Personalisiertes Aktivitatsprogramm\n\nBriefing einsenden fur Angebot innerhalb von 24 Stunden.",
     delay: 2400,
     quickReplies: [
       { label: "Seminar-Angebot", value: "gruppen" },

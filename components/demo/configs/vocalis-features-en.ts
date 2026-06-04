@@ -67,7 +67,7 @@ export const VOCALIS_INTENTS_EN: Record<string, BotResponse> = {
     ],
   },
   telephony: {
-    text: "Complete AI telephony:\n\n**Inbound calls** — 24/7 auto-answer\n**Outbound calls** — Automated prospect outreach\n**Bulk calls** — Parallel volume\n\n**Features:**\n- Voicemail detection + voice message\n- Mid-call human transfer\n- DTMF (keypad tones)\n- SIP/PBX integration\n- Verified Caller ID\n- Configurable max duration (20-1200 sec)\n\nFR, US, UK, EU numbers — from 3$/month.",
+    text: "Complete AI telephony:\n\n**Inbound calls** — 24/7 auto-answer\n**Outbound calls** — Automated prospect outreach\n**Bulk calls** — Parallel volume\n\n**Features:**\n- Voicemail detection + voice message\n- Mid-call human transfer\n- DTMF (keypad tones)\n- SIP/PBX integration\n- Verified Caller ID\n- Configurable max duration (20-1200 sec)\n\nFR, US, UK, EU numbers — available after audit",
     delay: 2200,
     quickReplies: [
       { label: "SMS too?", value: "sms" },

@@ -36,7 +36,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "water claim": {
-    text: "**Water damage - Step 2/4**\n\nTo process your claim:\n\n1️⃣ Source of the leak (roof, pipe, neighbor...)\n2️⃣ Rooms affected\n3️⃣ Estimated damage\n4️⃣ Joint damage report completed?\n\n📝 Don't forget to complete a **joint damage report** with your neighbor if applicable.\n\nYour home policy **HAB-7821** covers water damage up to **15,000 EUR**.",
+    text: "**Water damage - Step 2/4**\n\nTo process your claim:\n\n1️⃣ Source of the leak (roof, pipe, neighbor...)\n2️⃣ Rooms affected\n3️⃣ Estimated damage\n4️⃣ Joint damage report completed?\n\n📝 Don't forget to complete a **joint damage report** with your neighbor if applicable.\n\nYour home policy **HAB-7821** covers water damage up to **estimation personnalisee**.",
     delay: 2000,
     quickReplies: [
       { label: "📷 Send photo", value: "claim photo" },
@@ -46,7 +46,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "fire claim": {
-    text: "**Fire - Emergency declaration**\n\n🚨 If the fire is ongoing, call **911** or **112** immediately.\n\nOnce you're safe:\n1️⃣ Do not touch anything before the expert inspection\n2️⃣ Keep damaged items\n3️⃣ Take photos of all damage\n\nYour policy covers fire damage up to **150,000 EUR** (replacement value).\n\nAn expert will be dispatched within **48 hours**.",
+    text: "**Fire - Emergency declaration**\n\n🚨 If the fire is ongoing, call **911** or **112** immediately.\n\nOnce you're safe:\n1️⃣ Do not touch anything before the expert inspection\n2️⃣ Keep damaged items\n3️⃣ Take photos of all damage\n\nYour policy covers fire damage up to **estimation personnalisee** (replacement value).\n\nAn expert will be dispatched within **48 hours**.",
     delay: 2200,
     quickReplies: [
       { label: "🆘 Emergency assistance", value: "emergency" },
@@ -65,7 +65,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "claim photo": {
-    text: "📷 **AI Photo Analysis**\n\nSend me a photo of the damage and our AI will analyze:\n\n• **Type of damage** automatically detected\n• **Severity** estimated (light / moderate / severe)\n• **Estimated repair cost**\n• **Coverage** applicable to your policy\n\n---\n*Simulation:* 🔍 Analyzing...\n\n✅ **Result**:\n• Type: Rear bumper impact\n• Severity: Moderate\n• Estimate: **1,200 EUR - 1,800 EUR**\n• Applicable excess: **300 EUR**\n• Estimated payout: **900 EUR - 1,500 EUR**\n\nWould you like to confirm this claim?",
+    text: "📷 **AI Photo Analysis**\n\nSend me a photo of the damage and our AI will analyze:\n\n• **Type of damage** automatically detected\n• **Severity** estimated (light / moderate / severe)\n• **Estimated repair cost**\n• **Coverage** applicable to your policy\n\n---\n*Simulation:* 🔍 Analyzing...\n\n✅ **Result**:\n• Type: Rear bumper impact\n• Severity: Moderate\n• Estimate: **estimation personnalisee,estimation personnalisee**\n• Applicable excess: **estimation personnalisee**\n• Estimated payout: **estimation personnalisee,estimation personnalisee**\n\nWould you like to confirm this claim?",
     delay: 3000,
     quickReplies: [
       { label: "✅ Confirm claim", value: "file claim" },
@@ -75,7 +75,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "file tracking": {
-    text: "📊 **Your files status**\n\nHere is the status of your ongoing files:\n\n**1. SIN-2026-03-6529** - Water damage\n• Status: 🟢 Expert dispatched\n• Expert appointment: 04/22/2026 at 10am\n• Estimate: 3,200 EUR\n\n**2. SIN-2026-01-4102** - Glass breakage\n• Status: ✅ Closed - Reimbursed\n• Amount paid: 450 EUR\n• Transfer date: 02/18/2026\n\nFor a specific file, send me the **reference number** (e.g., SIN-2026-XXXX).",
+    text: "📊 **Your files status**\n\nHere is the status of your ongoing files:\n\n**1. SIN-2026-03-6529** - Water damage\n• Status: 🟢 Expert dispatched\n• Expert appointment: 04/22/2026 at 10am\n• Estimate: estimation personnalisee\n\n**2. SIN-2026-01-4102** - Glass breakage\n• Status: ✅ Closed - Reimbursed\n• Amount paid: estimation personnalisee\n• Transfer date: 02/18/2026\n\nFor a specific file, send me the **reference number** (e.g., SIN-2026-XXXX).",
     delay: 2500,
     quickReplies: [
       { label: "Details file 6529", value: "file tracking" },
@@ -85,7 +85,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   quote: {
-    text: "💰 **Instant quote**\n\nWhich type of insurance are you interested in?\n\n🚗 **Auto** - From 28 EUR/month\n🏠 **Home** - From 12 EUR/month\n🏥 **Health** - From 35 EUR/month\n💼 **Professional / Liability** - From 19 EUR/month\n✈️ **Travel** - From 8 EUR/trip\n\nI calculate your personalized rate in 2 minutes!",
+    text: "💰 **Instant quote**\n\nWhich type of insurance are you interested in?\n\n🚗 **Auto** - available after audit\n🏠 **Home** - available after audit\n🏥 **Health** - available after audit\n💼 **Professional / Liability** - available after audit\n✈️ **Travel** - available after audit\n\nI calculate your personalized rate in 2 minutes!",
     delay: 1800,
     quickReplies: [
       { label: "🚗 Auto quote", value: "auto quote" },
@@ -95,7 +95,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "auto quote": {
-    text: "🚗 **Express Auto Quote**\n\nTo calculate your rate, I need:\n\n1️⃣ Vehicle make and model\n2️⃣ Year of first registration\n3️⃣ Annual mileage\n4️⃣ Date of driving license\n5️⃣ Current no-claims bonus\n\n---\n*Simulation*:\n\n✅ **Renault Clio V (2023)**\n• Third party +: **32 EUR/month**\n• Comprehensive: **48 EUR/month**\n• 0.50 bonus applied\n• Excess: 300 EUR (third party+) / 150 EUR (comprehensive)\n\n🌟 *-15% for online subscription!*",
+    text: "🚗 **Express Auto Quote**\n\nTo calculate your rate, I need:\n\n1️⃣ Vehicle make and model\n2️⃣ Year of first registration\n3️⃣ Annual mileage\n4️⃣ Date of driving license\n5️⃣ Current no-claims bonus\n\n---\n*Simulation*:\n\n✅ **Renault Clio V (2023)**\n• Third party +: **estimation personnalisee**\n• Comprehensive: **estimation personnalisee**\n• 0.50 bonus applied\n• Excess: estimation personnalisee (third party+) / estimation personnalisee (comprehensive)\n\n🌟 *-15% for online subscription!*",
     delay: 2500,
     quickReplies: [
       { label: "✅ Subscribe online", value: "policy" },
@@ -105,7 +105,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "home quote": {
-    text: "🏠 **Express Home Quote**\n\nA few details for your rate:\n\n1️⃣ Type (apartment / house)\n2️⃣ Area in m²\n3️⃣ Number of rooms\n4️⃣ Owner or tenant\n5️⃣ Alarm system?\n\n---\n*Simulation*: 3-room apartment, 65m², tenant\n\n✅ **Essential**: 14 EUR/month\n✅ **Comfort**: 22 EUR/month\n✅ **Premium**: 31 EUR/month\n\nIncluded coverage: water damage, fire, theft, liability.",
+    text: "🏠 **Express Home Quote**\n\nA few details for your rate:\n\n1️⃣ Type (apartment / house)\n2️⃣ Area in m²\n3️⃣ Number of rooms\n4️⃣ Owner or tenant\n5️⃣ Alarm system?\n\n---\n*Simulation*: 3-room apartment, 65m², tenant\n\n✅ **Essential**: estimation personnalisee\n✅ **Comfort**: estimation personnalisee\n✅ **Premium**: estimation personnalisee\n\nIncluded coverage: water damage, fire, theft, liability.",
     delay: 2500,
     quickReplies: [
       { label: "Compare plans", value: "coverage" },
@@ -115,7 +115,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "health quote": {
-    text: "🏥 **Health Insurance Quote**\n\nFor a personalized quote:\n\n1️⃣ Number of people to cover\n2️⃣ Age(s)\n3️⃣ Status (employee, self-employed, retired)\n4️⃣ Specific needs (optical, dental, hospital)\n\n---\n*Simulation*: 1 adult, 35 years old, employee\n\n✅ **Eco**: 38 EUR/month\n✅ **Balance**: 55 EUR/month\n✅ **Serenity**: 79 EUR/month\n\n🌟 Coverage starts within 48h, no waiting period.",
+    text: "🏥 **Health Insurance Quote**\n\nFor a personalized quote:\n\n1️⃣ Number of people to cover\n2️⃣ Age(s)\n3️⃣ Status (employee, self-employed, retired)\n4️⃣ Specific needs (optical, dental, hospital)\n\n---\n*Simulation*: 1 adult, 35 years old, employee\n\n✅ **Eco**: estimation personnalisee\n✅ **Balance**: estimation personnalisee\n✅ **Serenity**: estimation personnalisee\n\n🌟 Coverage starts within 48h, no waiting period.",
     delay: 2500,
     quickReplies: [
       { label: "Compare plans", value: "coverage" },
@@ -125,7 +125,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "pro quote": {
-    text: "💼 **Professional / Liability Insurance Quote**\n\nYour activity needs tailored coverage:\n\n1️⃣ Type of activity (consulting, construction, retail...)\n2️⃣ Annual revenue\n3️⃣ Number of employees\n4️⃣ Desired coverage\n\n---\n*Simulation*: IT Consultant, 120K EUR revenue, 1 person\n\n✅ **Liability only**: 22 EUR/month\n✅ **Liability + Cyber**: 38 EUR/month\n✅ **Complete Pack**: 55 EUR/month\n\nProtect your business today.",
+    text: "💼 **Professional / Liability Insurance Quote**\n\nYour activity needs tailored coverage:\n\n1️⃣ Type of activity (consulting, construction, retail...)\n2️⃣ Annual revenue\n3️⃣ Number of employees\n4️⃣ Desired coverage\n\n---\n*Simulation*: IT Consultant, 120K ?? revenue, 1 person\n\n✅ **Liability only**: estimation personnalisee\n✅ **Liability + Cyber**: estimation personnalisee\n✅ **Complete Pack**: estimation personnalisee\n\nProtect your business today.",
     delay: 2500,
     quickReplies: [
       { label: "Liability coverage", value: "coverage" },
@@ -134,7 +134,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   policy: {
-    text: "📄 **Your AssurPlus policies**\n\n**1. Auto - Comprehensive** (no. AP-AUT-782341)\n• Vehicle: Renault Clio V\n• Renewal: 09/15/2026\n• Premium: 576 EUR/year (48 EUR/month)\n• Bonus: 0.50\n\n**2. Home - Comfort** (no. AP-HAB-7821)\n• Address: 12 Lilac Street, London\n• Renewal: 01/01/2027\n• Premium: 264 EUR/year (22 EUR/month)\n\nYou can download your policies or modify them online.",
+    text: "📄 **Your AssurPlus policies**\n\n**1. Auto - Comprehensive** (no. AP-AUT-782341)\n• Vehicle: Renault Clio V\n• Renewal: 09/15/2026\n• Premium: estimation personnalisee (estimation personnalisee)\n• Bonus: 0.50\n\n**2. Home - Comfort** (no. AP-HAB-7821)\n• Address: 12 Lilac Street, London\n• Renewal: 01/01/2027\n• Premium: estimation personnalisee (estimation personnalisee)\n\nYou can download your policies or modify them online.",
     delay: 2200,
     quickReplies: [
       { label: "💾 Download policy", value: "policy" },
@@ -184,7 +184,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   payment: {
-    text: "💳 **Payment & Schedule**\n\n**Next payment**:\n• Date: 05/01/2026\n• Amount: **70 EUR** (auto 48 EUR + home 22 EUR)\n• Method: Card ending in ****4521\n\n**Recent history**:\n• 04/01/2026: 70 EUR ✅\n• 03/01/2026: 70 EUR ✅\n• 02/01/2026: 70 EUR ✅\n\n**Options**:\n• Monthly / Quarterly / Annual\n• Direct debit or card\n• Payment plan available if needed",
+    text: "💳 **Payment & Schedule**\n\n**Next payment**:\n• Date: 05/01/2026\n• Amount: **estimation personnalisee** (auto estimation personnalisee + home estimation personnalisee)\n• Method: Card ending in ****4521\n\n**Recent history**:\n• 04/01/2026: estimation personnalisee ✅\n• 03/01/2026: estimation personnalisee ✅\n• 02/01/2026: estimation personnalisee ✅\n\n**Options**:\n• Monthly / Quarterly / Annual\n• Direct debit or card\n• Payment plan available if needed",
     delay: 2000,
     quickReplies: [
       { label: "Change payment method", value: "policy modification" },
@@ -204,7 +204,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   coverage: {
-    text: "🛡️ **Your coverage - Comprehensive Policy**\n\n**Included coverages**:\n• ✅ Civil liability (unlimited)\n• ✅ All-accident damage\n• ✅ Theft and attempted theft\n• ✅ Fire and explosion\n• ✅ Glass breakage\n• ✅ Natural disaster\n• ✅ Legal protection (15,000 EUR)\n• ✅ Zero-km assistance\n\n**Limits**:\n• Material damage: **150,000 EUR**\n• Bodily injury: **Unlimited**\n• Transported items: **1,500 EUR**",
+    text: "🛡️ **Your coverage - Comprehensive Policy**\n\n**Included coverages**:\n• ✅ Civil liability (unlimited)\n• ✅ All-accident damage\n• ✅ Theft and attempted theft\n• ✅ Fire and explosion\n• ✅ Glass breakage\n• ✅ Natural disaster\n• ✅ Legal protection (estimation personnalisee)\n• ✅ Zero-km assistance\n\n**Limits**:\n• Material damage: **estimation personnalisee**\n• Bodily injury: **Unlimited**\n• Transported items: **estimation personnalisee**",
     delay: 2200,
     quickReplies: [
       { label: "My excess", value: "excess" },
@@ -214,7 +214,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   excess: {
-    text: "📊 **Excess - Explanation**\n\nThe excess is the amount you pay when you make a claim.\n\n**Your current excesses**:\n\n🚗 **Auto (Comprehensive)**:\n• Damage: **150 EUR**\n• Theft: **300 EUR**\n• Glass breakage: **0 EUR** (waived)\n\n🏠 **Home (Comfort)**:\n• Water damage: **200 EUR**\n• Theft: **300 EUR**\n• Natural disaster: **380 EUR** (fixed by decree)\n\n💡 **Tip**: Increasing your excess by 150 EUR can reduce your premium by **10-15%**.",
+    text: "📊 **Excess - Explanation**\n\nThe excess is the amount you pay when you make a claim.\n\n**Your current excesses**:\n\n🚗 **Auto (Comprehensive)**:\n• Damage: **estimation personnalisee**\n• Theft: **estimation personnalisee**\n• Glass breakage: **estimation personnalisee** (waived)\n\n🏠 **Home (Comfort)**:\n• Water damage: **estimation personnalisee**\n• Theft: **estimation personnalisee**\n• Natural disaster: **estimation personnalisee** (fixed by decree)\n\n💡 **Tip**: Increasing your excess by estimation personnalisee can reduce your premium by **10-15%**.",
     delay: 2200,
     quickReplies: [
       { label: "Change excess", value: "policy modification" },
@@ -264,7 +264,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "renewal template": {
-    text: "📩 **Meta Templates — Renewal reminders**\n\nPre-approved WhatsApp templates for insurance:\n\n**1. Policy renewal** (utility)\n> Hello {{name}}, your {{type}} policy expires on {{date}}. Renew in 1 click or contact your advisor.\n\n**2. Payment reminder** (utility)\n> {{first_name}}, your payment of {{amount}} EUR is scheduled for {{date}}. Please check your bank details.\n\n**3. Multi-policy offer** (marketing)\n> You're insured with us for auto — enjoy **-20%** on home! Get an instant quote here.\n\n**Benefits:**\n• Sent after the 24h WhatsApp window\n• Interactive buttons (Renew / Contact)\n• Dynamic variables from CRM\n• Open + click tracking",
+    text: "📩 **Meta Templates — Renewal reminders**\n\nPre-approved WhatsApp templates for insurance:\n\n**1. Policy renewal** (utility)\n> Hello {{name}}, your {{type}} policy expires on {{date}}. Renew in 1 click or contact your advisor.\n\n**2. Payment reminder** (utility)\n> {{first_name}}, your payment of {{amount}} ?? is scheduled for {{date}}. Please check your bank details.\n\n**3. Multi-policy offer** (marketing)\n> You're insured with us for auto — enjoy **-20%** on home! Get an instant quote here.\n\n**Benefits:**\n• Sent after the 24h WhatsApp window\n• Interactive buttons (Renew / Contact)\n• Dynamic variables from CRM\n• Open + click tracking",
     delay: 2400,
     quickReplies: [
       { label: "Meta templates", value: "templates" },

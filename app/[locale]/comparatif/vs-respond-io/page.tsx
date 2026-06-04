@@ -133,7 +133,7 @@ const t: Record<string, {
       { q: "Does Respond.io have comparable AI?", a: "Respond.io offers a basic AI module based on flows and templates. AgenticWhatsup uses GPT-4 and Claude trained on your data — a significant gap on voice, image and complex context understanding." },
       { q: "How long to deploy AgenticWhatsup?", a: "14 days on average for a live agent trained on your company, versus 4-8 weeks of enterprise setup for Respond.io." },
       { q: "Do you support multiple channels like Respond.io?", a: "No. We're deliberately WhatsApp-only. This focus enables features impossible on a generalist tool: voice, image vision, native brand personality." },
-      { q: "What's the average ROI?", a: "8× average ROI over 90 days measured with our clients. ROI depends on message volume and average order value — free audit to estimate on your case." },
+      { q: "What's the average ROI?", a: "8× average ROI over 90 days measured with our clients. ROI depends on message volume and average order ?? — free audit to estimate on your case." },
     ],
   },
   de: {

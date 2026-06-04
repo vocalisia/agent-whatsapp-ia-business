@@ -25,7 +25,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   kamers: {
-    text: "**Onze kamercategorieën :**\n\n**Klassiek** — 28m2\nQueenbed, marmeren badkamer, minibar\nVanaf 180 EUR/nacht\n\n**Superior** — 35m2\nKingbed, balkon, tuinzicht, kluis\nVanaf 260 EUR/nacht\n\n**Junior Suite** — 50m2\nAparte woonkamer, bad met bubbels, panoramisch uitzicht\nVanaf 420 EUR/nacht\n\n**Prestige Suite** — 75m2\nPrivéterras, jacuzzi, butler service\nVanaf 680 EUR/nacht\n\n**Penthouse** — 120m2\nDuplex, privézwembad, kok aan huis\nOp aanvraag\n\nAlle kamers inclusief ontbijt, wifi en spatoegang.",
+    text: "**Onze kamercategorieën :**\n\n**Klassiek** — 28m2\nQueenbed, marmeren badkamer, minibar\nVanaf estimation personnalisee\n\n**Superior** — 35m2\nKingbed, balkon, tuinzicht, kluis\nVanaf estimation personnalisee\n\n**Junior Suite** — 50m2\nAparte woonkamer, bad met bubbels, panoramisch uitzicht\nVanaf estimation personnalisee\n\n**Prestige Suite** — 75m2\nPrivéterras, jacuzzi, butler service\nVanaf estimation personnalisee\n\n**Penthouse** — 120m2\nDuplex, privézwembad, kok aan huis\nOp aanvraag\n\nAlle kamers inclusief ontbijt, wifi en spatoegang.",
     delay: 2400,
     quickReplies: [
       { label: "Suite reserveren", value: "reservering" },
@@ -36,7 +36,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   kamertarieven: {
-    text: "**Tariefoverzicht per seizoen**\n\n| Kamer | Laagseizoen | Hoogseizoen | Feestdagen |\n|-------|-------------|-------------|------------|\n| Klassiek | 180 EUR | 280 EUR | 350 EUR |\n| Superior | 260 EUR | 380 EUR | 480 EUR |\n| Junior Suite | 420 EUR | 580 EUR | 720 EUR |\n| Prestige Suite | 680 EUR | 900 EUR | 1 200 EUR |\n\n**Laagseizoen :** Nov - Maart (excl. feestdagen)\n**Hoogseizoen :** April - Oktober\n**Feestdagen :** Kerst, Nieuwjaar, Pasen\n\n**Speciale aanbiedingen :**\n- -15% bij 5+ nachten\n- -10% vroegboekkorting (60 dagen)\n- Huwelijksreis-pakket beschikbaar\n\nPrijzen per nacht, ontbijt inbegrepen.",
+    text: "**Tariefoverzicht per seizoen**\n\n| Kamer | Laagseizoen | Hoogseizoen | Feestdagen |\n|-------|-------------|-------------|------------|\n| Klassiek | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Superior | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Junior Suite | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Prestige Suite | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n\n**Laagseizoen :** Nov - Maart (excl. feestdagen)\n**Hoogseizoen :** April - Oktober\n**Feestdagen :** Kerst, Nieuwjaar, Pasen\n\n**Speciale aanbiedingen :**\n- -15% bij 5+ nachten\n- -10% vroegboekkorting (60 dagen)\n- Huwelijksreis-pakket beschikbaar\n\nPrijzen per nacht, ontbijt inbegrepen.",
     delay: 2200,
     quickReplies: [
       { label: "Nu reserveren", value: "reservering" },
@@ -47,7 +47,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "check-in": {
-    text: "**Check-in informatie**\n\n**Standaardtijden :**\n- Check-in : vanaf **15u00**\n- Bagageruimte beschikbaar vanaf 8u00\n\n**Vroege check-in :**\n- 12u00 : +30 EUR (naargelang beschikbaarheid)\n- 10u00 : +60 EUR (naargelang beschikbaarheid)\n- Gegarandeerd voor Prestige Suites\n\n**Express check-in via WhatsApp :**\n1. Stuur uw paspoort/identiteitskaart als foto\n2. Wij bereiden uw digitale sleutel voor\n3. Ga rechtstreeks naar uw kamer !\n\n**Bij aankomst :**\n- Welkomstdrankje gratis\n- Presentatie van de diensten\n- Interactief hotelplan\n\nWilt u een vroege check-in ?",
+    text: "**Check-in informatie**\n\n**Standaardtijden :**\n- Check-in : vanaf **15u00**\n- Bagageruimte beschikbaar vanaf 8u00\n\n**Vroege check-in :**\n- 12u00 : gain mesure (naargelang beschikbaarheid)\n- 10u00 : gain mesure (naargelang beschikbaarheid)\n- Gegarandeerd voor Prestige Suites\n\n**Express check-in via WhatsApp :**\n1. Stuur uw paspoort/identiteitskaart als foto\n2. Wij bereiden uw digitale sleutel voor\n3. Ga rechtstreeks naar uw kamer !\n\n**Bij aankomst :**\n- Welkomstdrankje gratis\n- Presentatie van de diensten\n- Interactief hotelplan\n\nWilt u een vroege check-in ?",
     delay: 2000,
     quickReplies: [
       { label: "Vroege check-in", value: "check-in" },
@@ -58,7 +58,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   "check-out": {
-    text: "**Check-out informatie**\n\n**Standaardtijden :**\n- Check-out : voor **11u00**\n- Express check-out : sleutel inleveren, factuur per e-mail\n\n**Late check-out :**\n- 13u00 : gratis (naargelang beschikbaarheid)\n- 15u00 : +50 EUR\n- 18u00 : +100 EUR (halve dag)\n\n**Annuleringsbeleid :**\n- Flexibel : gratis annulering 48u voor aankomst\n- Niet-terugbetaalbaar : -15% op het tarief\n\n**Op vertrekdag :**\n- Ontbijt geserveerd tot 10u30\n- Gratis bagageopslag\n- Luchthavenbus op aanvraag\n\nHeeft u een late check-out nodig ?",
+    text: "**Check-out informatie**\n\n**Standaardtijden :**\n- Check-out : voor **11u00**\n- Express check-out : sleutel inleveren, factuur per e-mail\n\n**Late check-out :**\n- 13u00 : gratis (naargelang beschikbaarheid)\n- 15u00 : gain mesure\n- 18u00 : gain mesure (halve dag)\n\n**Annuleringsbeleid :**\n- Flexibel : gratis annulering 48u voor aankomst\n- Niet-terugbetaalbaar : -15% op het tarief\n\n**Op vertrekdag :**\n- Ontbijt geserveerd tot 10u30\n- Gratis bagageopslag\n- Luchthavenbus op aanvraag\n\nHeeft u een late check-out nodig ?",
     delay: 1800,
     quickReplies: [
       { label: "Late check-out", value: "check-out" },
@@ -69,7 +69,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   spa: {
-    text: "**Spa & Wellness — HotelLux**\n\n**Ontspanningsruimte** (inbegrepen voor gasten)\n- Verwarmd binnenzwembad (28°C)\n- Finse sauna + hammam\n- Fitnessruimte 24/7\n\n**Behandelingen op reservering :**\n\n**Ontspanningsmassage** — 60 min — 120 EUR\n**Sportmassage** — 60 min — 140 EUR\n**Premium gezichtsbehandeling** — 75 min — 150 EUR\n**Oriëntaals ritueel** — 90 min — 200 EUR\n**Koppelspakket** — 120 min — 350 EUR\n\n**Openingstijden :** 7u00 - 21u00\n\nReservering aanbevolen 24u op voorhand.\n\nWelke behandeling interesseert u ?",
+    text: "**Spa & Wellness — HotelLux**\n\n**Ontspanningsruimte** (inbegrepen voor gasten)\n- Verwarmd binnenzwembad (28°C)\n- Finse sauna + hammam\n- Fitnessruimte 24/7\n\n**Behandelingen op reservering :**\n\n**Ontspanningsmassage** — 60 min — estimation personnalisee\n**Sportmassage** — 60 min — estimation personnalisee\n**Premium gezichtsbehandeling** — 75 min — estimation personnalisee\n**Oriëntaals ritueel** — 90 min — estimation personnalisee\n**Koppelspakket** — 120 min — estimation personnalisee\n\n**Openingstijden :** 7u00 - 21u00\n\nReservering aanbevolen 24u op voorhand.\n\nWelke behandeling interesseert u ?",
     delay: 2200,
     quickReplies: [
       { label: "Massage reserveren", value: "spa" },
@@ -80,7 +80,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   hotelrestaurant: {
-    text: "**Restaurant & Roomservice**\n\n**De Tuin** — Gastronomisch restaurant\n- Ontbijt : 7u00 - 10u30 (inbegrepen)\n- Lunch : 12u00 - 14u30\n- Diner : 19u00 - 22u30\n- Sterrenchef, mediterrane keuken\n\n**Het Terrasbar** — Cocktails & tapas\n- 11u00 - 00u00\n- Happy hour : 17u00 - 19u00\n\n**Roomservice** — 24u/24\n- Volledig menu op kamer\n- Toeslag : 8 EUR\n- Levering in 30 min\n\n**Speciale menu's :**\n- Vegetarisch / Vegan\n- Glutenvrij\n- Halal / Koosjer (op aanvraag 24u)\n\nEen tafel reserveren ?",
+    text: "**Restaurant & Roomservice**\n\n**De Tuin** — Gastronomisch restaurant\n- Ontbijt : 7u00 - 10u30 (inbegrepen)\n- Lunch : 12u00 - 14u30\n- Diner : 19u00 - 22u30\n- Sterrenchef, mediterrane keuken\n\n**Het Terrasbar** — Cocktails & tapas\n- 11u00 - 00u00\n- Happy hour : 17u00 - 19u00\n\n**Roomservice** — 24u/24\n- Volledig menu op kamer\n- Toeslag : estimation personnalisee\n- Levering in 30 min\n\n**Speciale menu's :**\n- Vegetarisch / Vegan\n- Glutenvrij\n- Halal / Koosjer (op aanvraag 24u)\n\nEen tafel reserveren ?",
     delay: 2200,
     quickReplies: [
       { label: "Diner reserveren", value: "hotelrestaurant" },
@@ -91,7 +91,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   uitstappen: {
-    text: "**Uitstappen & Lokale activiteiten**\n\n**Halve dag :**\n- Begeleide stadstour — 45 EUR/pers\n- Lokale wijnproeverij — 60 EUR/pers\n- Panoramische wandeling — 35 EUR/pers\n\n**Volledige dag :**\n- Kustcruise + lunch — 120 EUR/pers\n- 4x4 safari achterland — 95 EUR/pers\n- Lokale kookles — 80 EUR/pers\n\n**Premium ervaringen :**\n- Helikoptervlucht kustlijn — 250 EUR/pers\n- Duiken — 110 EUR/pers\n- Privéjacht halve dag — 800 EUR (max 4 pers)\n\nReservering via WhatsApp, vertrek vanuit het hotel.\n\nWelke activiteit spreekt u aan ?",
+    text: "**Uitstappen & Lokale activiteiten**\n\n**Halve dag :**\n- Begeleide stadstour — estimation personnalisee\n- Lokale wijnproeverij — estimation personnalisee\n- Panoramische wandeling — estimation personnalisee\n\n**Volledige dag :**\n- Kustcruise + lunch — estimation personnalisee\n- 4x4 safari achterland — estimation personnalisee\n- Lokale kookles — estimation personnalisee\n\n**Premium ervaringen :**\n- Helikoptervlucht kustlijn — estimation personnalisee\n- Duiken — estimation personnalisee\n- Privéjacht halve dag — estimation personnalisee (max 4 pers)\n\nReservering via WhatsApp, vertrek vanuit het hotel.\n\nWelke activiteit spreekt u aan ?",
     delay: 2200,
     quickReplies: [
       { label: "Cruise", value: "uitstappen" },
@@ -102,7 +102,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   shuttle: {
-    text: "**Luchthavenbus service**\n\n**Privétransfer :**\n- Berline (1-3 pers) : 60 EUR\n- Bestelwagen (4-7 pers) : 90 EUR\n- Minibus (8-15 pers) : 150 EUR\n\n**Gemiddelde rit :** 25 min (naargelang verkeer)\n\n**Reservering :**\n- Geef vlucht + aankomsttijd op\n- Chauffeur met naambord op u te wachten\n- Vluchtstatus in real-time gevolgd\n- Water en frisse handdoeken aan boord\n\n**Gedeelde bus :** 20 EUR/pers\n(Vertrekken elk uur van 6u tot 22u)\n\nWilt u een transfer reserveren ?",
+    text: "**Luchthavenbus service**\n\n**Privétransfer :**\n- Berline (1-3 pers) : estimation personnalisee\n- Bestelwagen (4-7 pers) : estimation personnalisee\n- Minibus (8-15 pers) : estimation personnalisee\n\n**Gemiddelde rit :** 25 min (naargelang verkeer)\n\n**Reservering :**\n- Geef vlucht + aankomsttijd op\n- Chauffeur met naambord op u te wachten\n- Vluchtstatus in real-time gevolgd\n- Water en frisse handdoeken aan boord\n\n**Gedeelde bus :** estimation personnalisee\n(Vertrekken elk uur van 6u tot 22u)\n\nWilt u een transfer reserveren ?",
     delay: 1800,
     quickReplies: [
       { label: "Aankomstbus", value: "shuttle" },
@@ -113,7 +113,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   parkeren: {
-    text: "**Hotelparking**\n\n**Beveiligde overdekte parking :**\n- Gasten : 20 EUR/dag\n- Prestige Suite / Penthouse : gratis\n- Valet parking beschikbaar\n\n**Beschikbare plaatsen :** real-time via WhatsApp\n\n**Laadpalen :**\n- 4 Tesla Superchargers\n- 2 universele laadpalen (Type 2)\n- Gratis opladen voor gasten\n\n**Buitenparking :** 10 EUR/dag\n\nReservering aanbevolen in hoogseizoen.\n\nHeeft u een parkeerplaats nodig ?",
+    text: "**Hotelparking**\n\n**Beveiligde overdekte parking :**\n- Gasten : estimation personnalisee\n- Prestige Suite / Penthouse : gratis\n- Valet parking beschikbaar\n\n**Beschikbare plaatsen :** real-time via WhatsApp\n\n**Laadpalen :**\n- 4 Tesla Superchargers\n- 2 universele laadpalen (Type 2)\n- Gratis opladen voor gasten\n\n**Buitenparking :** estimation personnalisee\n\nReservering aanbevolen in hoogseizoen.\n\nHeeft u een parkeerplaats nodig ?",
     delay: 1600,
     quickReplies: [
       { label: "Parkeerplaats reserveren", value: "parkeren" },
@@ -124,7 +124,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   wifi: {
-    text: "**Wifi-toegang — HotelLux**\n\n**Gratis wifi in het hele hotel :**\n- Netwerk : HotelLux-Guest\n- Wachtwoord : meegedeeld bij check-in\n- Snelheid : 100 Mbps\n\n**Premium Wifi** (inbegrepen in Suites) :\n- Snelheid : 500 Mbps\n- Ideaal voor 4K streaming, videobellen, gaming\n- Toeslag : 10 EUR/dag (andere kamers)\n\n**Dekking :**\n- Kamers, lobby, restaurant, zwembad, spa\n- Vergaderzaal (eigen netwerk)\n\nHulp nodig met de verbinding ?",
+    text: "**Wifi-toegang — HotelLux**\n\n**Gratis wifi in het hele hotel :**\n- Netwerk : HotelLux-Guest\n- Wachtwoord : meegedeeld bij check-in\n- Snelheid : 100 Mbps\n\n**Premium Wifi** (inbegrepen in Suites) :\n- Snelheid : 500 Mbps\n- Ideaal voor 4K streaming, videobellen, gaming\n- Toeslag : estimation personnalisee (andere kamers)\n\n**Dekking :**\n- Kamers, lobby, restaurant, zwembad, spa\n- Vergaderzaal (eigen netwerk)\n\nHulp nodig met de verbinding ?",
     delay: 1400,
     quickReplies: [
       { label: "Verbindingsprobleem", value: "wifi" },
@@ -135,7 +135,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   huisdieren: {
-    text: "**Huisdierenbeleid**\n\n**Huisdieren welkom !** (honden en katten)\n\n**Voorwaarden :**\n- Toeslag : 30 EUR/nacht\n- Max gewicht : 15 kg\n- 1 dier per kamer\n- Bijgewerkt vaccinatieboekje\n\n**Inbegrepen diensten :**\n- Voerbak en kussen op kamer\n- Welkomstsnackzakje\n- Lijst van nabijgelegen dierenartsen\n- Wandelroute rondom het hotel\n\n**Beperking :**\n- Dieren niet toegestaan in restaurant en spa\n- Toegang tuin en terras toegestaan\n\nReist u met een huisdier ?",
+    text: "**Huisdierenbeleid**\n\n**Huisdieren welkom !** (honden en katten)\n\n**Voorwaarden :**\n- Toeslag : estimation personnalisee\n- Max gewicht : 15 kg\n- 1 dier per kamer\n- Bijgewerkt vaccinatieboekje\n\n**Inbegrepen diensten :**\n- Voerbak en kussen op kamer\n- Welkomstsnackzakje\n- Lijst van nabijgelegen dierenartsen\n- Wandelroute rondom het hotel\n\n**Beperking :**\n- Dieren niet toegestaan in restaurant en spa\n- Toegang tuin en terras toegestaan\n\nReist u met een huisdier ?",
     delay: 1800,
     quickReplies: [
       { label: "Reserveren met huisdier", value: "reservering" },
@@ -168,7 +168,7 @@ const sectorIntents: Record<string, BotResponse> = {
   },
 
   groep: {
-    text: "**Groepen & Evenementen — HotelLux**\n\n**Seminaries & Conferenties :**\n- 3 zalen (20 tot 200 personen)\n- Volledig AV-materiaal\n- Dedicated hogesnelheidswifi\n- Koffiepauzes + lunch inbegrepen\n- Vanaf 85 EUR/pers/dag\n\n**Bruiloften & Recepties :**\n- Panoramisch terras (max 150 pers)\n- Deustatiemenu op maat\n- Partnertrouwplanner\n- Forfait vanaf 12 000 EUR\n\n**Toeristische groepen :**\n- Onderhandelde tarieven vanaf 10 kamers\n- Lokale gids inbegrepen\n- Gepersonaliseerd activiteitenprogramma\n\nStuur ons uw briefing voor een offerte binnen 24u.",
+    text: "**Groepen & Evenementen — HotelLux**\n\n**Seminaries & Conferenties :**\n- 3 zalen (20 tot 200 personen)\n- Volledig AV-materiaal\n- Dedicated hogesnelheidswifi\n- Koffiepauzes + lunch inbegrepen\n- Vanaf estimation personnalisee/dag\n\n**Bruiloften & Recepties :**\n- Panoramisch terras (max 150 pers)\n- Deustatiemenu op maat\n- Partnertrouwplanner\n- Forfait vanaf estimation personnalisee\n\n**Toeristische groepen :**\n- Onderhandelde tarieven vanaf 10 kamers\n- Lokale gids inbegrepen\n- Gepersonaliseerd activiteitenprogramma\n\nStuur ons uw briefing voor een offerte binnen 24u.",
     delay: 2400,
     quickReplies: [
       { label: "Seminarieofferte", value: "groep" },

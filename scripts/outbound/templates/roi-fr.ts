@@ -13,7 +13,7 @@ export const roiFr: EmailTemplate[] = [
 
 J'ai regardé ${company} rapidement — niche intéressante.
 
-Une stat qui revient sur vos concurrents : 47% des messages WhatsApp clients ne reçoivent jamais de réponse. À 127€ de panier moyen, ça fait ~47 000€/an qui s'envolent chez le concurrent qui répond plus vite.
+Une stat qui revient sur vos concurrents : 47% des messages WhatsApp clients ne reçoivent jamais de réponse. Sur un panier moyen typique, cela devient une fuite de chiffre d'affaires mesurable vers le concurrent qui répond plus vite.
 
 On a bâti une IA WhatsApp qui répond en 8 secondes (vocaux, photos, docs), qualifie les leads BANT en auto et remplit l'agenda. Déployée en 14 jours.
 

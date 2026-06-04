@@ -264,7 +264,7 @@ const ASSURANCE_INTENTS = {
     ],
   },
   "template relance": {
-    text: "\ud83d\udce9 **Templates Meta — Relance echeances**\n\nTemplates WhatsApp pre-approuves pour l'assurance :\n\n**1. Renouvellement police** (utility)\n> Bonjour {{nom}}, votre contrat {{type}} arrive a echeance le {{date}}. Renouvelez en 1 clic ou contactez votre conseiller.\n\n**2. Rappel paiement** (utility)\n> {{prenom}}, votre prelevement de {{montant}} EUR est prevu le {{date}}. Verifiez vos coordonnees bancaires.\n\n**3. Offre multi-contrats** (marketing)\n> Vous etes assure auto chez nous — profitez de **-20%** sur l'habitation ! Devis instantane ici.\n\n**Avantages :**\n\u2022 Envoi apres fenetre 24h WhatsApp\n\u2022 Boutons interactifs (Renouveler / Contacter)\n\u2022 Variables dynamiques depuis le CRM\n\u2022 Tracking ouverture + clic",
+    text: "\ud83d\udce9 **Templates Meta — Relance echeances**\n\nTemplates WhatsApp pre-approuves pour l'assurance :\n\n**1. Renouvellement police** (utility)\n> Bonjour {{nom}}, votre contrat {{type}} arrive a echeance le {{date}}. Renouvelez en 1 clic ou contactez votre conseiller.\n\n**2. Rappel paiement** (utility)\n> {{prenom}}, votre prelevement de {{montant}} ?? est prevu le {{date}}. Verifiez vos coordonnees bancaires.\n\n**3. Offre multi-contrats** (marketing)\n> Vous etes assure auto chez nous — profitez de **-20%** sur l'habitation ! Devis instantane ici.\n\n**Avantages :**\n\u2022 Envoi apres fenetre 24h WhatsApp\n\u2022 Boutons interactifs (Renouveler / Contacter)\n\u2022 Variables dynamiques depuis le CRM\n\u2022 Tracking ouverture + clic",
     delay: 2400,
     quickReplies: [
       { label: "Templates Meta", value: "templates" },

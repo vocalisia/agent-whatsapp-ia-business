@@ -67,7 +67,7 @@ export const VOCALIS_INTENTS_DE: Record<string, BotResponse> = {
     ],
   },
   telefonie: {
-    text: "Vollstandige KI-Telefonie:\n\n**Eingehende Anrufe** — 24/7 Auto-Antwort\n**Ausgehende Anrufe** — Automatisierte Prospektkontakte\n**Massenanrufe** — Paralleles Volumen\n\n**Funktionen:**\n- Anrufbeantworter-Erkennung + Sprachnachricht\n- Mid-Call-Weiterleitung an Mensch\n- DTMF (Tastenfeld)\n- SIP/PBX-Integration\n- Verifizierte Anrufer-ID\n- Konfigurierbare Max-Dauer (20-1200 Sek.)\n\nNummern DE, US, UK, EU — ab 3 EUR/Monat.",
+    text: "Vollstandige KI-Telefonie:\n\n**Eingehende Anrufe** — 24/7 Auto-Antwort\n**Ausgehende Anrufe** — Automatisierte Prospektkontakte\n**Massenanrufe** — Paralleles Volumen\n\n**Funktionen:**\n- Anrufbeantworter-Erkennung + Sprachnachricht\n- Mid-Call-Weiterleitung an Mensch\n- DTMF (Tastenfeld)\n- SIP/PBX-Integration\n- Verifizierte Anrufer-ID\n- Konfigurierbare Max-Dauer (20-1200 Sek.)\n\nNummern DE, US, UK, EU — ab estimation personnalisee",
     delay: 2200,
     quickReplies: [
       { label: "Auch SMS?", value: "sms" },

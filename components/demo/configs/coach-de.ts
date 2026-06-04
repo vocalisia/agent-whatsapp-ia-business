@@ -139,7 +139,7 @@ const COACH_INTENTS_DE = {
   },
 
   gruppencoaching: {
-    text: "Das **Gruppencoaching** ist ideal fur:\n\n**Unternehmensteams** (6-8 Personen)\n- Zusammenhalt und Kommunikation\n- Konfliktmanagement\n- Kollektive Fuhrung\n- Gemeinsame Ziele\n\n**Offene Gruppen** (6-8 Personen)\n- Beruflicher Wandel\n- Unternehmertum\n- Personliche Entwicklung\n\n**Format**: 8 Sitzungen a 90 Min. uber 2 Monate\n**Preis**: 890 CHF/Person\n**Bonus**: Private WhatsApp-Gemeinschaft der Gruppe\n\nNachste Staffel: **Mai 2026** - Begrenzte Platze!",
+    text: "Das **Gruppencoaching** ist ideal fur:\n\n**Unternehmensteams** (6-8 Personen)\n- Zusammenhalt und Kommunikation\n- Konfliktmanagement\n- Kollektive Fuhrung\n- Gemeinsame Ziele\n\n**Offene Gruppen** (6-8 Personen)\n- Beruflicher Wandel\n- Unternehmertum\n- Personliche Entwicklung\n\n**Format**: 8 Sitzungen a 90 Min. uber 2 Monate\n**Preis**: estimation personnalisee\n**Bonus**: Private WhatsApp-Gemeinschaft der Gruppe\n\nNachste Staffel: **Mai 2026** - Begrenzte Platze!",
     delay: 2000,
     quickReplies: [
       { label: "Fur Gruppe anmelden", value: "termin" },
@@ -149,7 +149,7 @@ const COACH_INTENTS_DE = {
   },
 
   einzelcoaching: {
-    text: "Das **Einzelcoaching** ist unser Flaggschiff-Programm:\n\n**Enthaltene Leistungen:**\n- 12 Sitzungen a 60 Min. (1/Woche)\n- Eingehende Erstanalyse\n- Personlicher Aktionsplan\n- WhatsApp-Begleitung zwischen den Sitzungen\n- Praxisleitfaden und Ubungen\n- Abschlussbilanz und Konsolidierungsplan\n\n**Fur wen?**\nBerufstatige im Wandel, Manager, Unternehmer, alle, die eine masgeschneiderte Begleitung wunschen.\n\n**Dauer**: 3 Monate\n**Preis**: 1.800 CHF\n\nBeginnen Sie mit einer kostenlosen Kennenlernsitzung!",
+    text: "Das **Einzelcoaching** ist unser Flaggschiff-Programm:\n\n**Enthaltene Leistungen:**\n- 12 Sitzungen a 60 Min. (1/Woche)\n- Eingehende Erstanalyse\n- Personlicher Aktionsplan\n- WhatsApp-Begleitung zwischen den Sitzungen\n- Praxisleitfaden und Ubungen\n- Abschlussbilanz und Konsolidierungsplan\n\n**Fur wen?**\nBerufstatige im Wandel, Manager, Unternehmer, alle, die eine masgeschneiderte Begleitung wunschen.\n\n**Dauer**: 3 Monate\n**Preis**: estimation personnalisee\n\nBeginnen Sie mit einer kostenlosen Kennenlernsitzung!",
     delay: 2000,
     quickReplies: [
       { label: "Kennenlernsitzung", value: "kennerlern sitzung" },
@@ -159,7 +159,7 @@ const COACH_INTENTS_DE = {
   },
 
   vip: {
-    text: "Das **VIP Intensiv**-Programm ist unser Premium-Angebot:\n\n**Enthaltene Leistungen:**\n- 20 Sitzungen a 60 Min.\n- **Unbegrenzter** WhatsApp-Zugang zu Ihrem Coach\n- Vollstandige psychometrische Bestandsaufnahme\n- Masgeschneiderter strategischer Plan\n- Exklusive Ressourcen (Masterclasses, Werkzeuge)\n- 2 Nachfolge-Sitzungen nach Programmabschluss\n- Prioritats-Support 7 Tage/Woche\n\n**Durchschnittliche Ergebnisse:**\n- +67% gemessenes Selbstvertrauen\n- +45% Produktivitat\n- 94% der Ziele erreicht\n\n**Dauer**: 6 Monate\n**Preis**: 4.500 CHF (4x Zahlung moglich)",
+    text: "Das **VIP Intensiv**-Programm ist unser Premium-Angebot:\n\n**Enthaltene Leistungen:**\n- 20 Sitzungen a 60 Min.\n- **Unbegrenzter** WhatsApp-Zugang zu Ihrem Coach\n- Vollstandige psychometrische Bestandsaufnahme\n- Masgeschneiderter strategischer Plan\n- Exklusive Ressourcen (Masterclasses, Werkzeuge)\n- 2 Nachfolge-Sitzungen nach Programmabschluss\n- Prioritats-Support 7 Tage/Woche\n\n**Durchschnittliche Ergebnisse:**\n- +67% gemessenes Selbstvertrauen\n- +45% Produktivitat\n- 94% der Ziele erreicht\n\n**Dauer**: 6 Monate\n**Preis**: estimation personnalisee (4x Zahlung moglich)",
     delay: 2200,
     quickReplies: [
       { label: "VIP buchen", value: "termin" },

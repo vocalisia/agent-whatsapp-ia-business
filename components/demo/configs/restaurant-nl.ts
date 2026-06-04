@@ -40,7 +40,7 @@ const restaurantIntentsNL = {
     ],
   },
   menu: {
-    text: "Hier is het **dagmenu**:\n\n**Voorgerechten:**\n- Pompoensoep met geroosterde hazelnoten — 14 EUR\n- Zalm tartaar, avocado, citrus — 16 EUR\n- Burrata, heirloom tomaten, pesto — 15 EUR\n\n**Hoofdgerechten:**\n- Zeebaarsfilet, safraanrisotto — 28 EUR\n- Lamsschouder 7u gestoofd, truffelmousseline — 32 EUR\n- Eekhoorntjesbrood risotto, 24 maanden Parmezaan — 24 EUR\n\n**Desserts:**\n- Chocolade fondant, vloeibaar hart — 12 EUR\n- Tarte tatin, verse room — 11 EUR\n- Selectie gerijpte kazen — 14 EUR\n\n**Compleet menu** (voor + hoofd + dessert): **45 EUR**",
+    text: "Hier is het **dagmenu**:\n\n**Voorgerechten:**\n- Pompoensoep met geroosterde hazelnoten — estimation personnalisee\n- Zalm tartaar, avocado, citrus — estimation personnalisee\n- Burrata, heirloom tomaten, pesto — estimation personnalisee\n\n**Hoofdgerechten:**\n- Zeebaarsfilet, safraanrisotto — estimation personnalisee\n- Lamsschouder 7u gestoofd, truffelmousseline — estimation personnalisee\n- Eekhoorntjesbrood risotto, 24 maanden Parmezaan — estimation personnalisee\n\n**Desserts:**\n- Chocolade fondant, vloeibaar hart — estimation personnalisee\n- Tarte tatin, verse room — estimation personnalisee\n- Selectie gerijpte kazen — estimation personnalisee\n\n**Compleet menu** (voor + hoofd + dessert): **estimation personnalisee**",
     delay: 2400,
     quickReplies: [
       { label: "Wijnkaart", value: "wijnkaart" },
@@ -68,7 +68,7 @@ const restaurantIntentsNL = {
     ],
   },
   afhalen: {
-    text: "Bezorg- en afhaalopties:\n\n**Partnerplatforms:**\n- **Uber Eats** — Levering 25-35 min\n- **Deliveroo** — Levering 20-30 min\n- **Takeaway** — Levering 30-40 min\n\n**Click & Collect:**\n- Hier bestellen, afhalen aan het restaurant\n- Klaar in 20 min\n- -10% op uw bestelling\n\n**Eigen bezorging:**\n- Straal 5 km, minimum 30 EUR\n- Bezorgkosten: 4,90 EUR\n- Gratis boven 60 EUR\n\nAfhaalkaart beschikbaar 7/7 van 11u30 tot 22u.",
+    text: "Bezorg- en afhaalopties:\n\n**Partnerplatforms:**\n- **Uber Eats** — Levering 25-35 min\n- **Deliveroo** — Levering 20-30 min\n- **Takeaway** — Levering 30-40 min\n\n**Click & Collect:**\n- Hier bestellen, afhalen aan het restaurant\n- Klaar in 20 min\n- -10% op uw bestelling\n\n**Eigen bezorging:**\n- Straal 5 km, minimum estimation personnalisee\n- Bezorgkosten: estimation personnalisee\n- Gratis boven estimation personnalisee\n\nAfhaalkaart beschikbaar 7/7 van 11u30 tot 22u.",
     delay: 2000,
     quickReplies: [
       { label: "Afhaalbestelling", value: "bestelling" },
@@ -77,7 +77,7 @@ const restaurantIntentsNL = {
     ],
   },
   bestelling: {
-    text: "Laten we uw afhaalbestelling plaatsen!\n\nOnze **best-sellers**:\n\n1. Gourmet truffelburger, huisgemaakte friet — 22 EUR\n2. Zalm poke bowl, edamame, avocado — 19 EUR\n3. Eekhoorntjesbroodrisotto (vegan mogelijk) — 21 EUR\n4. Caesar salade, gegrilde kip — 17 EUR\n5. Steak tartaar, dunne frieten — 24 EUR\n\n**Lunchformule** (hoofd + drank): 15,90 EUR\n\nGeef uw keuze op en ik bereken het totaal. Betaling via creditcard online of ter plaatse.",
+    text: "Laten we uw afhaalbestelling plaatsen!\n\nOnze **best-sellers**:\n\n1. Gourmet truffelburger, huisgemaakte friet — estimation personnalisee\n2. Zalm poke bowl, edamame, avocado — estimation personnalisee\n3. Eekhoorntjesbroodrisotto (vegan mogelijk) — estimation personnalisee\n4. Caesar salade, gegrilde kip — estimation personnalisee\n5. Steak tartaar, dunne frieten — estimation personnalisee\n\n**Lunchformule** (hoofd + drank): estimation personnalisee\n\nGeef uw keuze op en ik bereken het totaal. Betaling via creditcard online of ter plaatse.",
     delay: 2200,
     quickReplies: [
       { label: "Burger + friet", value: "bestelling bevestigen" },
@@ -87,7 +87,7 @@ const restaurantIntentsNL = {
     ],
   },
   "bestelling bevestigen": {
-    text: "Bestelling geregistreerd!\n\n**Overzicht:**\n- 1x Gourmet truffelburger — 22 EUR\n- 1x Huisgemaakte friet — inbegrepen\n\n**Totaal:** 22,00 EUR\n\n**Ophalen:** Over 20 minuten\n**Adres:** Gastronomielaan 42, 1000 Brussel\n\nBetalingslink verstuurd via WhatsApp.\nU krijgt een melding wanneer het klaar is!",
+    text: "Bestelling geregistreerd!\n\n**Overzicht:**\n- 1x Gourmet truffelburger — estimation personnalisee\n- 1x Huisgemaakte friet — inbegrepen\n\n**Totaal:** estimation personnalisee\n\n**Ophalen:** Over 20 minuten\n**Adres:** Gastronomielaan 42, 1000 Brussel\n\nBetalingslink verstuurd via WhatsApp.\nU krijgt een melding wanneer het klaar is!",
     delay: 1800,
     quickReplies: [
       { label: "Bedankt!", value: "bedankt" },
@@ -112,7 +112,7 @@ const restaurantIntentsNL = {
     ],
   },
   evenement: {
-    text: "Privé-evenementen bij Gourmet IA:\n\n**Onze ruimten:**\n- **Privésalon** — 8-16 personen\n- **Gewelfd zaaltje** — 20-40 personen\n- **Geprivatiseerd terras** — 30-60 personen\n- **Volledig restaurant** — tot 80 personen\n\n**Gelegenheden:**\n- Verjaardagen, huwelijken, verlovingen\n- Seminaries, teambuilding\n- Zakendiner\n\n**Inbegrepen:**\n- Maatwerksteker van de Chef\n- Gepersonaliseerde decoratie\n- Toegewijd bedieningsteam\n- DJ / animatie op aanvraag\n\nBudget vanaf **65 EUR/persoon**. Offerte binnen 24u.",
+    text: "Privé-evenementen bij Gourmet IA:\n\n**Onze ruimten:**\n- **Privésalon** — 8-16 personen\n- **Gewelfd zaaltje** — 20-40 personen\n- **Geprivatiseerd terras** — 30-60 personen\n- **Volledig restaurant** — tot 80 personen\n\n**Gelegenheden:**\n- Verjaardagen, huwelijken, verlovingen\n- Seminaries, teambuilding\n- Zakendiner\n\n**Inbegrepen:**\n- Maatwerksteker van de Chef\n- Gepersonaliseerde decoratie\n- Toegewijd bedieningsteam\n- DJ / animatie op aanvraag\n\nBudget vanaf **estimation personnalisee**. Offerte binnen 24u.",
     delay: 2400,
     quickReplies: [
       { label: "Offerte aanvragen", value: "afspraak" },
@@ -121,7 +121,7 @@ const restaurantIntentsNL = {
     ],
   },
   loyaliteit: {
-    text: "Loyaltyprogramma **Gourmet Club**:\n\n**Hoe werkt het:**\n- 1 EUR besteed = 1 punt\n- 100 punten = 10 EUR korting\n\n**Ledenvoordelen:**\n- Gratis dessert bij inschrijving\n- -15% op uw verjaardag\n- Prioriteitstoegang tot privé-avonden\n- Exclusieve proeverijen (wijnen, seizoensmenus)\n- Prioriteitsreservering in het weekend\n\n**Uw huidige saldo:** Schrijf u in om te beginnen sparen!\n\nGratis inschrijving, direct hier via WhatsApp.",
+    text: "Loyaltyprogramma **Gourmet Club**:\n\n**Hoe werkt het:**\n- estimation personnalisee besteed = 1 punt\n- 100 punten = estimation personnalisee korting\n\n**Ledenvoordelen:**\n- Gratis dessert bij inschrijving\n- -15% op uw verjaardag\n- Prioriteitstoegang tot privé-avonden\n- Exclusieve proeverijen (wijnen, seizoensmenus)\n- Prioriteitsreservering in het weekend\n\n**Uw huidige saldo:** Schrijf u in om te beginnen sparen!\n\nGratis inschrijving, direct hier via WhatsApp.",
     delay: 2000,
     quickReplies: [
       { label: "Inschrijven", value: "reservering bevestigen" },
@@ -130,7 +130,7 @@ const restaurantIntentsNL = {
     ],
   },
   wijnkaart: {
-    text: "Onze **wijnkaart**:\n\n**Witte wijnen:**\n- Chablis Premier Cru 2021 — 12 EUR / 48 EUR\n- Sancerre, Domaine Vacheron — 10 EUR / 42 EUR\n- Meursault 2020 — 16 EUR / 65 EUR\n\n**Rode wijnen:**\n- Saint-Émilion Grand Cru 2018 — 14 EUR / 58 EUR\n- Châteauneuf-du-Pape 2019 — 13 EUR / 52 EUR\n- Barolo DOCG 2017 — 18 EUR / 72 EUR\n\n**Champagnes:**\n- Veuve Clicquot Brut — 75 EUR\n- Dom Pérignon 2012 — 220 EUR\n- Ruinart Blanc de Blancs — 95 EUR\n\n**Gerechten-wijnbegeleiding:** Onze AI-sommelier stelt de perfecte combinatie voor op basis van uw menu.",
+    text: "Onze **wijnkaart**:\n\n**Witte wijnen:**\n- Chablis Premier Cru 2021 — estimation personnalisee value\n- Sancerre, Domaine Vacheron — estimation personnalisee value\n- Meursault 2020 — estimation personnalisee value\n\n**Rode wijnen:**\n- Saint-Émilion Grand Cru 2018 — estimation personnalisee value\n- Châteauneuf-du-Pape 2019 — estimation personnalisee value\n- Barolo DOCG 2017 — estimation personnalisee value\n\n**Champagnes:**\n- Veuve Clicquot Brut — estimation personnalisee\n- Dom Pérignon 2012 — estimation personnalisee\n- Ruinart Blanc de Blancs — estimation personnalisee\n\n**Gerechten-wijnbegeleiding:** Onze AI-sommelier stelt de perfecte combinatie voor op basis van uw menu.",
     delay: 2200,
     quickReplies: [
       { label: "Begeleiding bij menu", value: "gerecht foto" },
@@ -139,7 +139,7 @@ const restaurantIntentsNL = {
     ],
   },
   vegetarisch: {
-    text: "Vegetarische & veganistische opties:\n\n**Vegetarisch:**\n- Burrata, heirloom tomaten, pesto — 15 EUR\n- Eekhoorntjesbroodrisotto, Parmezaan — 24 EUR\n- Huisgemaakte gnocchi, salie-botersaus — 20 EUR\n- Dunne groententaart van het seizoen — 18 EUR\n\n**Veganistisch:**\n- Tofu poke bowl, edamame, avocado — 19 EUR\n- Eekhoorntjesbroodrisotto (veganistische versie) — 24 EUR\n- Buddha bowl quinoa, geroosterde groenten — 18 EUR\n- Huisgemaakt versenfruitsorbetijs — 9 EUR\n\n**Op aanvraag:** Onze chef past elk gerecht van de kaart aan. Vermeld het bij de reservering!",
+    text: "Vegetarische & veganistische opties:\n\n**Vegetarisch:**\n- Burrata, heirloom tomaten, pesto — estimation personnalisee\n- Eekhoorntjesbroodrisotto, Parmezaan — estimation personnalisee\n- Huisgemaakte gnocchi, salie-botersaus — estimation personnalisee\n- Dunne groententaart van het seizoen — estimation personnalisee\n\n**Veganistisch:**\n- Tofu poke bowl, edamame, avocado — estimation personnalisee\n- Eekhoorntjesbroodrisotto (veganistische versie) — estimation personnalisee\n- Buddha bowl quinoa, geroosterde groenten — estimation personnalisee\n- Huisgemaakt versenfruitsorbetijs — estimation personnalisee\n\n**Op aanvraag:** Onze chef past elk gerecht van de kaart aan. Vermeld het bij de reservering!",
     delay: 2000,
     quickReplies: [
       { label: "Allergenen?", value: "allergenen" },

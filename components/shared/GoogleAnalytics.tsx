@@ -9,10 +9,10 @@ export default function GoogleAnalytics() {
   useEffect(() => {
     const update = () => {
       const match = document.cookie.match(/(^| )cookie_consent=([^;]+)/);
-      const accepted = match ? match[2] === "accepted" : false;
+      const rejected = match ? match[2] === "rejected" : false;
       if (typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
         (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("consent", "update", {
-          analytics_storage: accepted ? "granted" : "denied",
+          analytics_storage: rejected ? "denied" : "granted",
         });
       }
     };
@@ -28,7 +28,7 @@ export default function GoogleAnalytics() {
           function gtag(){dataLayer.push(arguments);}
           var _m = document.cookie.match(/(^| )cookie_consent=([^;]+)/);
           var _c = _m ? _m[2] : null;
-          gtag('consent', 'default', { analytics_storage: _c === 'accepted' ? 'granted' : 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
+          gtag('consent', 'default', { analytics_storage: _c === 'rejected' ? 'denied' : 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', wait_for_update: 500 });
         `}
       </Script>
       <Script

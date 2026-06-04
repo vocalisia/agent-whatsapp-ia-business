@@ -61,7 +61,7 @@ const MEDICAL_INTENTS_DE: Record<string, BotResponse> = {
     ],
   },
   videosprechstunde: {
-    text: "**Video-Sprechstunde**\n\nKonsultieren Sie einen Arzt von zu Hause aus:\n\n**Verfugbare Videosprechstunden:**\n• Dr. Martin — Heute 17 Uhr, Morgen 9 Uhr\n• Dr. Faure — Morgen 14 Uhr, 16:30 Uhr\n\n**Ablauf:**\n1. Termin reservieren\n2. Video-Link per WhatsApp 10 Min. vorher gesendet\n3. Gesicherte Konsultation (15-20 Min.)\n4. Rezept + Bericht danach gesendet\n\n**Tarif:** 25 EUR (Kassenpatienten) — Direktabrechnung moglich\n**Erstattung:** 70% GKV + Zusatz-Krankenversicherung\n\nWelcher Termin passt Ihnen?",
+    text: "**Video-Sprechstunde**\n\nKonsultieren Sie einen Arzt von zu Hause aus:\n\n**Verfugbare Videosprechstunden:**\n• Dr. Martin — Heute 17 Uhr, Morgen 9 Uhr\n• Dr. Faure — Morgen 14 Uhr, 16:30 Uhr\n\n**Ablauf:**\n1. Termin reservieren\n2. Video-Link per WhatsApp 10 Min. vorher gesendet\n3. Gesicherte Konsultation (15-20 Min.)\n4. Rezept + Bericht danach gesendet\n\n**Tarif:** estimation personnalisee (Kassenpatienten) — Direktabrechnung moglich\n**Erstattung:** 70% GKV + Zusatz-Krankenversicherung\n\nWelcher Termin passt Ihnen?",
     delay: 2200,
     quickReplies: [
       { label: "Dr. Martin 17 Uhr", value: "termin bestatigen med" },
@@ -149,7 +149,7 @@ const MEDICAL_INTENTS_DE: Record<string, BotResponse> = {
     ],
   },
   "termin absagen": {
-    text: "**Termin absagen / verschieben**\n\nIhre nachsten Termine:\n\n**1. Dr. Martin** — Mo. 21.04 um 09:00 Uhr\n**2. Dr. Leroy** — Di. 29.04 um 15:00 Uhr\n\n**Optionen:**\n• Absagen — Der Termin wird fur andere Patienten freigegeben\n• Verschieben — Neuen Termin wahlen\n\nBitte sagen Sie **mindestens 24 Stunden vorher** ab.\nBei mehr als 3 unentschuldigten Abwesenheiten kann eine Gebuhr von 20 EUR erhoben werden.\n\nWelchen Termin mochten Sie andern?",
+    text: "**Termin absagen / verschieben**\n\nIhre nachsten Termine:\n\n**1. Dr. Martin** — Mo. 21.04 um 09:00 Uhr\n**2. Dr. Leroy** — Di. 29.04 um 15:00 Uhr\n\n**Optionen:**\n• Absagen — Der Termin wird fur andere Patienten freigegeben\n• Verschieben — Neuen Termin wahlen\n\nBitte sagen Sie **mindestens 24 Stunden vorher** ab.\nBei mehr als 3 unentschuldigten Abwesenheiten kann eine Gebuhr von estimation personnalisee erhoben werden.\n\nWelchen Termin mochten Sie andern?",
     delay: 2000,
     quickReplies: [
       { label: "Dr. Martin absagen", value: "termin absagen" },

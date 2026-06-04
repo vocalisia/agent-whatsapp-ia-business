@@ -15,7 +15,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   "immobilie suchen": {
-    text: "Perfekt, starten wir Ihre personliche Suche.\n\nUm Ihnen die besten Objekte vorzuschlagen, benotige ich einige Kriterien:\n\n**Budget:** Was ist Ihr Maximalbudget?\n**Typ:** Wohnung, Haus, Villa, Loft?\n**Flache:** Mindestens wieviel m2?\n**Lage:** Welche Stadt oder Viertel?\n**Zimmer:** Wie viele Zimmer?\n\nZum Beispiel: *\"3-Zimmer-Wohnung, 80m2, Hamburg Altona, Budget 450.000 EUR\"*",
+    text: "Perfekt, starten wir Ihre personliche Suche.\n\nUm Ihnen die besten Objekte vorzuschlagen, benotige ich einige Kriterien:\n\n**Budget:** Was ist Ihr Maximalbudget?\n**Typ:** Wohnung, Haus, Villa, Loft?\n**Flache:** Mindestens wieviel m2?\n**Lage:** Welche Stadt oder Viertel?\n**Zimmer:** Wie viele Zimmer?\n\nZum Beispiel: *\"3-Zimmer-Wohnung, 80m2, Hamburg Altona, Budget estimation personnalisee\"*",
     delay: 2000,
     quickReplies: [
       { label: "Wohnung < 400K", value: "verfugbarkeiten" },
@@ -54,7 +54,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   finanzierung: {
-    text: "**Immobilienkreditrechner**\n\nStandardparameter:\n- Zinssatz: 3,45% auf 25 Jahre\n- Empfohlenes Eigenkapital: Mind. 20%\n- Versicherung: 0,34%/Jahr\n\n**Beispiel fur 300.000 EUR:**\n- Monatliche Rate: 1.487 EUR / Monat\n- Gesamtkreditkosten: 146.100 EUR\n- Mindest-Eigenkapital: 60.000 EUR\n\n**Partnerbanken**: Commerzbank, Deutsche Bank, ING, Sparkasse\n\nNennen Sie Ihr Budget und ich simuliere fur Sie!",
+    text: "**Immobilienkreditrechner**\n\nStandardparameter:\n- Zinssatz: 3,45% auf 25 Jahre\n- Empfohlenes Eigenkapital: Mind. 20%\n- Versicherung: 0,34%/Jahr\n\n**Beispiel fur estimation personnalisee:**\n- Monatliche Rate: estimation personnalisee\n- Gesamtkreditkosten: estimation personnalisee\n- Mindest-Eigenkapital: estimation personnalisee\n\n**Partnerbanken**: Commerzbank, Deutsche Bank, ING, Sparkasse\n\nNennen Sie Ihr Budget und ich simuliere fur Sie!",
     delay: 2000,
     quickReplies: [
       { label: "250K simulieren", value: "finanzierung" },
@@ -94,7 +94,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   verfugbarkeiten: {
-    text: "**Verfugbare Objekte entsprechend Ihren Kriterien:**\n\n1. **3-Zi-Wohnung - Hamburg Altona** - 72m2\n   Preis: 485.000 EUR | 6.736 EUR/m2\n   2 SZ, Balkon, Keller, frisch renoviert\n\n2. **Haus 5-Zi - Hamburg Blankenese** - 130m2\n   Preis: 890.000 EUR | Garten 200m2\n   4 SZ, Garage, S-Bahn-nah\n\n3. **Studio - Hamburg Eimsbutteli** - 28m2\n   Preis: 245.000 EUR | ideal als Kapitalanlage\n   Mietrendite: 4,2%\n\n4. **Loft - Hamburg Hafencity** - 95m2\n   Preis: 520.000 EUR | Industriestil\n   Dachterrasse 30m2, Stellplatz\n\n5 weitere Objekte verfugbar. Welches interessiert Sie?",
+    text: "**Verfugbare Objekte entsprechend Ihren Kriterien:**\n\n1. **3-Zi-Wohnung - Hamburg Altona** - 72m2\n   Preis: estimation personnalisee | estimation personnalisee\n   2 SZ, Balkon, Keller, frisch renoviert\n\n2. **Haus 5-Zi - Hamburg Blankenese** - 130m2\n   Preis: estimation personnalisee | Garten 200m2\n   4 SZ, Garage, S-Bahn-nah\n\n3. **Studio - Hamburg Eimsbutteli** - 28m2\n   Preis: estimation personnalisee | ideal als Kapitalanlage\n   Mietrendite: 4,2%\n\n4. **Loft - Hamburg Hafencity** - 95m2\n   Preis: estimation personnalisee | Industriestil\n   Dachterrasse 30m2, Stellplatz\n\n5 weitere Objekte verfugbar. Welches interessiert Sie?",
     delay: 2200,
     quickReplies: [
       { label: "3-Zi-Wohnung ansehen", value: "besichtigung" },
@@ -124,7 +124,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   kapitalanlage: {
-    text: "**Kapitalanlage-Moglichkeiten**\n\n**Top 3 des Monats:**\n\n1. **Studio Hamburg Altona** - 22m2 - 195.000 EUR\n   Geschatzte Miete: 750 EUR/Monat\n   Bruttorendite: **4,6%**\n\n2. **2-Zi Hamburg Eimsbutteli** - 42m2 - 185.000 EUR\n   Geschatzte Miete: 680 EUR/Monat\n   Bruttorendite: **4,4%**\n\n3. **1-Zi Bremen** - 30m2 - 155.000 EUR\n   Geschatzte Miete: 580 EUR/Monat\n   Bruttorendite: **4,5%**\n\nWir analysieren: Rendite, Steueroptimierung, Wertsteigerung, Nachfrage.\n\nWelche Art von Kapitalanlage interessiert Sie?",
+    text: "**Kapitalanlage-Moglichkeiten**\n\n**Top 3 des Monats:**\n\n1. **Studio Hamburg Altona** - 22m2 - estimation personnalisee\n   Geschatzte Miete: estimation personnalisee\n   Bruttorendite: **4,6%**\n\n2. **2-Zi Hamburg Eimsbutteli** - 42m2 - estimation personnalisee\n   Geschatzte Miete: estimation personnalisee\n   Bruttorendite: **4,4%**\n\n3. **1-Zi Bremen** - 30m2 - estimation personnalisee\n   Geschatzte Miete: estimation personnalisee\n   Bruttorendite: **4,5%**\n\nWir analysieren: Rendite, Steueroptimierung, Wertsteigerung, Nachfrage.\n\nWelche Art von Kapitalanlage interessiert Sie?",
     delay: 2200,
     quickReplies: [
       { label: "Mobliert vermieten", value: "kapitalanlage" },
@@ -133,7 +133,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   mieten: {
-    text: "**Mietangebote**\n\nVerfugbare Mietobjekte:\n\n1. **2-Zi mobliert - Hamburg Mitte** - 45m2\n   Miete: 1.250 EUR/Monat inkl. NK\n   Frei ab 1. Mai\n\n2. **3-Zi leer - Hamburg Eppendorf** - 68m2\n   Miete: 950 EUR/Monat kalt\n   Sofort verfugbar\n\n3. **Studio - Hamburg Altona** - 25m2\n   Miete: 550 EUR/Monat inkl. NK\n   Frei ab 15. Mai\n\n**Mietbewerbung:** Letzte 3 Gehaltsabrechnungen, Steuerbescheid, Ausweis, Burge (oder Mieterscbutzbund).\n\nFur welches Objekt interessieren Sie sich?",
+    text: "**Mietangebote**\n\nVerfugbare Mietobjekte:\n\n1. **2-Zi mobliert - Hamburg Mitte** - 45m2\n   Miete: estimation personnalisee inkl. NK\n   Frei ab 1. Mai\n\n2. **3-Zi leer - Hamburg Eppendorf** - 68m2\n   Miete: estimation personnalisee kalt\n   Sofort verfugbar\n\n3. **Studio - Hamburg Altona** - 25m2\n   Miete: estimation personnalisee inkl. NK\n   Frei ab 15. Mai\n\n**Mietbewerbung:** Letzte 3 Gehaltsabrechnungen, Steuerbescheid, Ausweis, Burge (oder Mieterscbutzbund).\n\nFur welches Objekt interessieren Sie sich?",
     delay: 2000,
     quickReplies: [
       { label: "2-Zi besichtigen", value: "besichtigung" },
@@ -143,7 +143,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   energieausweis: {
-    text: "**Pflichtgutachten beim Immobilienverkauf**\n\n**Energieausweis (DEA)**:\n- Energieklassen A bis G (F und G = Energieschleudern)\n- Pflicht fur Kauf UND Vermietung\n- Gultigkeit: 10 Jahre\n\n**Weitere Pflichtgutachten:**\n- Asbest (vor 1995)\n- Blei (vor 1972)\n- Elektrik / Gas (> 15 Jahre)\n- Termiten (Risikogebiete)\n- Hochwasser (Risikogebiete)\n- Wohnflache (Wohnflachenberechnung)\n\n**Durchschnittliche Kosten Gesamtpaket:** 350 - 600 EUR\n\nUnsere Partnersachverstandigen intervenieren innerhalb von 48 Stunden.",
+    text: "**Pflichtgutachten beim Immobilienverkauf**\n\n**Energieausweis (DEA)**:\n- Energieklassen A bis G (F und G = Energieschleudern)\n- Pflicht fur Kauf UND Vermietung\n- Gultigkeit: 10 Jahre\n\n**Weitere Pflichtgutachten:**\n- Asbest (vor 1995)\n- Blei (vor 1972)\n- Elektrik / Gas (> 15 Jahre)\n- Termiten (Risikogebiete)\n- Hochwasser (Risikogebiete)\n- Wohnflache (Wohnflachenberechnung)\n\n**Durchschnittliche Kosten Gesamtpaket:** 350 - estimation personnalisee\n\nUnsere Partnersachverstandigen intervenieren innerhalb von 48 Stunden.",
     delay: 2000,
     quickReplies: [
       { label: "Gutachter-Termin", value: "makler termin" },
@@ -163,7 +163,7 @@ const IMMOBILIER_INTENTS_DE = {
     ],
   },
   nebenkosten: {
-    text: "**Aufschluss der Kaufnebenkosten**\n\n**Fur ein Objekt zu 400.000 EUR:**\n\n- **Grunderwerbsteuer**: ~24.000 EUR (6%)\n- **Notar- und Grundbuchkosten**: ~4.000 EUR (1%)\n- **Maklerprovision**: ~15.200 EUR (3,8%)\n  *(oft im ausgewiesenen Preis enthalten)*\n- **Finanzierungskosten**: ~2.000 EUR\n- **Sonstiges**: ~1.000 EUR\n\n**Gesamter Kapitalbedarf: ~446.000 EUR**\n\nNeubau = deutlich geringere Nebenkosten (~3,5% statt ~7%).",
+    text: "**Aufschluss der Kaufnebenkosten**\n\n**Fur ein Objekt zu estimation personnalisee:**\n\n- **Grunderwerbsteuer**: audit gratuit (6%)\n- **Notar- und Grundbuchkosten**: audit gratuit (1%)\n- **Maklerprovision**: audit gratuit (3,8%)\n  *(oft im ausgewiesenen Preis enthalten)*\n- **Finanzierungskosten**: audit gratuit\n- **Sonstiges**: audit gratuit\n\n**Gesamter Kapitalbedarf: audit gratuit**\n\nNeubau = deutlich geringere Nebenkosten (~3,5% statt ~7%).",
     delay: 2000,
     quickReplies: [
       { label: "Gesamtkredit simulieren", value: "finanzierung" },

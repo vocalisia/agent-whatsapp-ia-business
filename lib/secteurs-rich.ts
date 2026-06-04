@@ -55,7 +55,7 @@ export const SECTEUR_RICH: RichBySlug = {
         {
           heading: "Pourquoi le no-show coûte plus cher qu'on ne le pense",
           paragraphs: [
-            "Un créneau atelier non honoré coûte en moyenne 87 à 140€ en France selon le Syndicat National du Cycle et de la Moto (SNCM 2026) : main-d'œuvre payée, pont indisponible pour un autre client, conseil commercial mobilisé pour rien. Sur une concession 8 ponts qui subit 9 no-shows par semaine, c'est 36 000€ à 58 000€ de marge brute envolée par an.",
+            "Un créneau atelier non honoré coûte en moyenne 87 à estimation personnalisee en France selon le Syndicat National du Cycle et de la Moto (SNCM 2026) : main-d'œuvre payée, pont indisponible pour un autre client, conseil commercial mobilisé pour rien. Sur une concession 8 ponts qui subit 9 no-shows par semaine, c'est estimation personnalisee à estimation personnalisee de marge brute envolée par an.",
             "L'agent IA réduit ce no-show de 45% en envoyant trois rappels : confirmation immédiate, rappel J-1 à 18h avec bouton 'Confirmer / Reporter', dernier rappel J-0 à 8h. Si le client confirme, le créneau est verrouillé. S'il reporte, l'agent propose immédiatement les trois prochains créneaux libres et libère l'ancien pour la liste d'attente — automatiquement.",
           ],
         },
@@ -80,7 +80,7 @@ export const SECTEUR_RICH: RichBySlug = {
           { label: "Taux de RDV pris hors horaires", before: "0%", after: "34% du volume" },
           { label: "No-show atelier", before: "9% à 14%", after: "4,5% à 7%" },
           { label: "Relance CT (taux de re-RDV)", before: "4%", after: "18%" },
-          { label: "Coût par RDV qualifié", before: "12€ à 18€", after: "2,80€" },
+          { label: "Coût par RDV qualifié", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee" },
           { label: "Heures secrétariat / semaine", before: "22h", after: "6h (escalades uniquement)" },
         ],
       },
@@ -99,7 +99,7 @@ export const SECTEUR_RICH: RichBySlug = {
         },
         {
           q: "Combien ça coûte par rapport à un standard téléphonique ou un secrétariat externalisé ?",
-          a: "Un standard externalisé automobile coûte entre 800 et 1 800€/mois HT pour 250 à 400 RDV. AgenticWhatsup tourne entre 290 et 590€/mois selon le volume, avec un taux de prise de RDV 24/7 et zéro RDV manqué pour cause d'horaire. Le ROI est positif dès le premier mois pour 80% des garages — on chiffre votre cas précis lors de l'audit gratuit."
+          a: "Un standard externalisé automobile coûte entre 800 et estimation personnalisee HT pour 250 à 400 RDV. AgenticWhatsup tourne selon le volume et le perimetre valide en audit, avec un taux de prise de RDV 24/7 et zéro RDV manqué pour cause d'horaire. Le ROI est positif dès le premier mois pour 80% des garages — on chiffre votre cas précis lors de l'audit gratuit."
         },
         {
           q: "L'agent est-il conforme RGPD et aux exigences professionnelles automobiles ?",
@@ -136,7 +136,7 @@ export const SECTEUR_RICH: RichBySlug = {
           ],
           bullets: [
             "Avant la vente : qualification du prospect (objectif, niveau actuel, budget, urgence) en 8 à 12 échanges naturels, scoring automatique, escalade vers vous uniquement si lead chaud >70.",
-            "Pendant la vente : traitement des objections classiques (prix, timing, doute compétence, comparaison concurrent) avec vos vrais arguments, pas un script générique. Closing soft sur formation auto-administrée, transfert humain sur high-ticket >2 000€.",
+            "Pendant la vente : traitement des objections classiques (prix, timing, doute compétence, comparaison concurrent) avec vos vrais arguments, pas un script générique. Closing soft sur formation auto-administrée, transfert humain sur high-ticket >estimation personnalisee.",
             "Pendant l'onboarding : envoi automatique des accès, du planning des cours, du calendrier des lives, des ressources PDF. Réduit de 64% les tickets support 'comment j'accède à...'.",
             "Pendant la livraison : rappels de sessions de coaching à H-24 et H-2, check-in hebdo sur l'avancement objectif, détection des signaux d'abandon (3+ jours sans connexion, message d'auto-doute) → escalade prioritaire vers vous.",
           ],
@@ -180,8 +180,8 @@ export const SECTEUR_RICH: RichBySlug = {
           a: "Non si l'agent est entraîné sur votre voix. AgenticWhatsup ingère vos posts LinkedIn, vos emails de bienvenue, vos lives YouTube et 30 à 50 conversations DM réelles que vous fournissez pour calibrer le ton. Le résultat : 91% des prospects testés en aveugle ne savent pas distinguer l'agent d'un junior de votre équipe. Vous validez chaque réponse type avant le go-live."
         },
         {
-          q: "Je vends entre 800€ et 5 000€ — l'agent peut-il vraiment closer ce ticket ?",
-          a: "Oui jusqu'à 1 500€ environ en autonomie complète (paiement direct via lien Stripe envoyé par l'agent). Au-delà, l'agent qualifie, traite les objections initiales, et bascule automatiquement vers vous pour le call de closing — avec un brief écrit du prospect (besoin, budget validé, timing, objections résiduelles) prêt à l'emploi. Vous gagnez 35 à 50 minutes de découverte par appel."
+          q: "Je vends sur estimation personnalisee — l'agent peut-il vraiment closer ce ticket ?",
+          a: "Oui jusqu'à estimation personnalisee environ en autonomie complète (paiement direct via lien Stripe envoyé par l'agent). Au-delà, l'agent qualifie, traite les objections initiales, et bascule automatiquement vers vous pour le call de closing — avec un brief écrit du prospect (besoin, budget validé, timing, objections résiduelles) prêt à l'emploi. Vous gagnez 35 à 50 minutes de découverte par appel."
         },
         {
           q: "Comment l'agent gère-t-il les remboursements et les réclamations ?",
@@ -215,8 +215,8 @@ export const SECTEUR_RICH: RichBySlug = {
   education: {
     fr: {
       intro: [
-        "Un organisme de formation qui ne traite pas ses inscriptions sur WhatsApp en 2026 paie 3 à 5 fois trop cher chaque acquisition. La raison est simple : un prospect formation est en réflexion 12 à 26 jours, change d'avis 2 à 4 fois, et 67% de ses questions arrivent en dehors des horaires de bureau. Vos campagnes Google Ads attirent un visiteur à 14€, vos commerciaux le perdent en moins de 48h faute de relance.",
-        "L'agent IA WhatsApp d'AgenticWhatsup pour la formation traite trois leviers que ni votre CRM, ni votre standard, ni vos emails n'arrivent à couvrir simultanément : la qualification immédiate du candidat (financement CPF, OPCO, Pôle Emploi, perso), le suivi pédagogique sans surcharger votre équipe formateur, et la détection précoce des signaux d'abandon — qui coûtent en moyenne 740€ par apprenant à un organisme certifié Qualiopi.",
+        "Un organisme de formation qui ne traite pas ses inscriptions sur WhatsApp en 2026 paie 3 à 5 fois trop cher chaque acquisition. La raison est simple : un prospect formation est en réflexion 12 à 26 jours, change d'avis 2 à 4 fois, et 67% de ses questions arrivent en dehors des horaires de bureau. Vos campagnes Google Ads attirent un visiteur à estimation personnalisee, vos commerciaux le perdent en moins de 48h faute de relance.",
+        "L'agent IA WhatsApp d'AgenticWhatsup pour la formation traite trois leviers que ni votre CRM, ni votre standard, ni vos emails n'arrivent à couvrir simultanément : la qualification immédiate du candidat (financement CPF, OPCO, Pôle Emploi, perso), le suivi pédagogique sans surcharger votre équipe formateur, et la détection précoce des signaux d'abandon — qui coûtent en moyenne estimation personnalisee à un organisme certifié Qualiopi.",
       ],
       sections: [
         {
@@ -236,7 +236,7 @@ export const SECTEUR_RICH: RichBySlug = {
           heading: "Pourquoi 30% d'abandon n'est pas une fatalité",
           paragraphs: [
             "Le décrochage en formation suit toujours le même pattern : signal faible à J+8 (retard sur le premier exercice), signal moyen à J+15 (silence sur le forum / classe virtuelle), abandon effectif à J+22. Vos référents pédagogiques détectent typiquement le signal à J+18 — trop tard. L'agent IA détecte le décalage à J+8, alerte le référent, et propose au choix une intervention humaine ou un message de relance personnalisé.",
-            "Sur 9 OF déployés en France métropolitaine entre janvier et septembre 2025, le taux d'abandon avant fin de formation est passé de 31% (médiane sectorielle) à 12,4%. Pour un OF traitant 800 apprenants/an avec un coût d'abandon de 740€, l'économie annuelle est de 109 600€ — sur un investissement agent IA de 6 000 à 9 000€ annuels.",
+            "Sur 9 OF déployés en France métropolitaine entre janvier et septembre 2025, le taux d'abandon avant fin de formation est passé de 31% (médiane sectorielle) à 12,4%. Pour un OF traitant 800 apprenants/an avec un coût d'abandon de estimation personnalisee, l'économie annuelle est de estimation personnalisee — sur un investissement agent IA de 6 000 à estimation personnalisee",
           ],
         },
         {
@@ -261,7 +261,7 @@ export const SECTEUR_RICH: RichBySlug = {
           { label: "Taux conversion catalogue → inscription", before: "4% à 7%", after: "11% à 16%" },
           { label: "Taux d'abandon en cours de formation", before: "27% à 34%", after: "10% à 14%" },
           { label: "Détection signal d'abandon", before: "J+18", after: "J+8" },
-          { label: "Coût acquisition par apprenant inscrit", before: "180€ à 320€", after: "62€ à 110€" },
+          { label: "Coût acquisition par apprenant inscrit", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee à estimation personnalisee" },
           { label: "Heures équipe inscription / semaine", before: "32h", after: "9h" },
         ],
       },
@@ -284,7 +284,7 @@ export const SECTEUR_RICH: RichBySlug = {
         },
         {
           q: "Combien coûte un agent IA WhatsApp pour un organisme de formation ?",
-          a: "Forfait de base à partir de 290€/mois HT pour les OF traitant <500 apprenants/an, 590€/mois pour 500 à 2000 apprenants/an, sur-mesure au-delà. Pas de frais d'installation au-delà de la connexion API WhatsApp Business (gratuite via Meta). ROI typique mesuré à 14× sur 12 mois — détaillé pour votre cas dans l'audit gratuit."
+          a: "Forfait de base à partir de estimation personnalisee HT pour les OF traitant <500 apprenants/an, estimation personnalisee pour 500 à 2000 apprenants/an, sur-mesure au-delà. Pas de frais d'installation au-delà de la connexion API WhatsApp Business (gratuite via Meta). ROI typique mesuré à 14× sur 12 mois — détaillé pour votre cas dans l'audit gratuit."
         },
         {
           q: "Et si je veux que ce soit mon référent pédagogique qui choisisse les messages ?",
@@ -326,7 +326,7 @@ export const SECTEUR_RICH: RichBySlug = {
         {
           heading: "Pourquoi votre clerc ne devrait jamais répondre à un appel banal",
           paragraphs: [
-            "Le coût horaire chargé d'un clerc de notaire qualifié en France oscille entre 38 et 54€ TTC. Sur 142 appels/jour dont 92 sont strictement administratifs (prise de RDV, suivi dossier, demande de statut), votre office consacre entre 580€ et 820€ par jour à des tâches que n'importe quelle assistance numérique conforme peut absorber — soit 130 000 à 185 000€ par an pour un office moyen.",
+            "Le coût horaire chargé d'un clerc de notaire qualifié en France oscille entre 38 et estimation personnalisee TTC. Sur 142 appels/jour dont 92 sont strictement administratifs (prise de RDV, suivi dossier, demande de statut), votre office consacre sur estimation personnalisee à des tâches que n'importe quelle assistance numérique conforme peut absorber — soit 130 000 à estimation personnalisee pour un office moyen.",
             "L'agent IA AgenticWhatsup ne supprime pas votre clerc : il lui rend 22 heures par semaine pour faire ce que l'agent ne peut pas faire — préparer un acte complexe, accompagner un client en succession sensible, vérifier un titre de propriété ancien. Le clerc devient un actif stratégique, pas un standard téléphonique survalorisé.",
           ],
         },
@@ -376,7 +376,7 @@ export const SECTEUR_RICH: RichBySlug = {
         },
         {
           q: "Combien coûte un agent IA WhatsApp pour une étude notariale ?",
-          a: "Forfait à partir de 590€/mois HT pour les études de moins de 5 collaborateurs, 1 290€/mois pour 5 à 12 collaborateurs, sur-mesure au-delà. Pas de frais d'installation au-delà de la connexion API WhatsApp Business (gratuite Meta). ROI moyen mesuré à 9× sur 12 mois sur la base du temps clerc libéré — détaillé sur votre cas pendant l'audit gratuit."
+          a: "Forfait à partir de estimation personnalisee HT pour les études de moins de 5 collaborateurs, estimation personnalisee pour 5 à 12 collaborateurs, sur-mesure au-delà. Pas de frais d'installation au-delà de la connexion API WhatsApp Business (gratuite Meta). ROI moyen mesuré à 9× sur 12 mois sur la base du temps clerc libéré — détaillé sur votre cas pendant l'audit gratuit."
         },
         {
           q: "Que se passe-t-il en cas de panne technique côté Meta ou agent IA ?",
@@ -438,7 +438,7 @@ export const SECTEUR_RICH: RichBySlug = {
           { label: "Mandats exclusifs / 100 contacts vendeurs", before: "8", after: "19" },
           { label: "Leads perdus faute de relance", before: "62%", after: "14%" },
           { label: "Heures négociateur sur admin WhatsApp / sem", before: "11h", after: "2h30" },
-          { label: "Coût par visite qualifiée", before: "47€ à 89€", after: "12€ à 24€" },
+          { label: "Coût par visite qualifiée", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee à estimation personnalisee" },
         ],
       },
       faq: [
@@ -474,7 +474,7 @@ export const SECTEUR_RICH: RichBySlug = {
     fr: {
       intro: [
         "Un e-commerce qui abandonne son panier récupère en moyenne 8,7% des acheteurs par email de relance. Le même e-commerce sur WhatsApp en récupère 34 à 48%. La différence est mécanique : votre email de relance arrive quand la boîte de l'acheteur est déjà saturée ; votre message WhatsApp arrive sur le même écran que les SMS de sa banque et les messages de sa famille — 98% d'ouverture, lecture en moins de 4 minutes.",
-        "L'agent IA WhatsApp d'AgenticWhatsup pour l'e-commerce résout simultanément les trois hémorragies qui plombent la rentabilité : le panier abandonné non récupéré, les tickets SAV traités à 12€ pièce par un humain alors que 73% des questions sont identiques, et les clients inactifs qui partent sans que personne ne les relance. En -62% de coûts SAV et +34% de récupération de panier, le ROI se mesure au premier mois.",
+        "L'agent IA WhatsApp d'AgenticWhatsup pour l'e-commerce résout simultanément les trois hémorragies qui plombent la rentabilité : le panier abandonné non récupéré, les tickets SAV traités à estimation personnalisee pièce par un humain alors que 73% des questions sont identiques, et les clients inactifs qui partent sans que personne ne les relance. En -62% de coûts SAV et +34% de récupération de panier, le ROI se mesure au premier mois.",
       ],
       sections: [
         {
@@ -508,7 +508,7 @@ export const SECTEUR_RICH: RichBySlug = {
         title: "E-commerce sans agent vs avec agent IA WhatsApp",
         rows: [
           { label: "Taux récupération panier abandonné", before: "8,7%", after: "34% à 48%" },
-          { label: "Coût par ticket SAV", before: "11€ à 16€", after: "2,80€ à 4,20€" },
+          { label: "Coût par ticket SAV", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee à estimation personnalisee" },
           { label: "Délai réponse SAV", before: "6h à 18h", after: "<3 minutes" },
           { label: "Taux de ré-achat clients dormants", before: "3%", after: "18%" },
           { label: "Taux ouverture communication client", before: "22% (email)", after: "97% (WhatsApp)" },
@@ -547,7 +547,7 @@ export const SECTEUR_RICH: RichBySlug = {
   sante: {
     fr: {
       intro: [
-        "Un cabinet médical ou paramédical qui subit 20% de no-show par semaine perd entre 1 400 et 3 200€ de chiffre d'affaires hebdomadaire — des actes réalisés, payés, mais invisibles parce que le patient n'est pas venu. La solution la plus efficace connue à ce jour n'est pas le SMS de rappel (taux d'ouverture 47%), ni l'appel téléphonique (coût : 8 à 14 minutes de secrétaire). C'est WhatsApp : 98% d'ouverture, réponse en moins de 4 minutes, bouton 'Annuler / Reporter' en un tap.",
+        "Un cabinet médical ou paramédical qui subit 20% de no-show par semaine perd entre 1 400 et estimation personnalisee de chiffre d'affaires hebdomadaire — des actes réalisés, payés, mais invisibles parce que le patient n'est pas venu. La solution la plus efficace connue à ce jour n'est pas le SMS de rappel (taux d'ouverture 47%), ni l'appel téléphonique (coût : 8 à 14 minutes de secrétaire). C'est WhatsApp : 98% d'ouverture, réponse en moins de 4 minutes, bouton 'Annuler / Reporter' en un tap.",
         "L'agent IA WhatsApp d'AgenticWhatsup pour la santé réduit le no-show de 61% en moyenne sur 8 déploiements mesurés entre 2024 et 2025. Il gère la prise de RDV 24/7 (73% des demandes arrivent hors horaires), les rappels intelligents avec gestion des annulations, la collecte des documents (ordonnance, carte vitale, mutuelle), et la conformité HDS/RGPD pour les données de santé.",
       ],
       sections: [
@@ -649,7 +649,7 @@ export const SECTEUR_RICH: RichBySlug = {
         {
           heading: "Conformité et facturation : pièges à éviter",
           paragraphs: [
-            "Le secteur BTP est exposé à deux risques réglementaires spécifiques : les devis sans mention légale obligatoire, et les acomptes non protégés sur travaux >1 500€. L'agent AgenticWhatsup ne génère pas de devis contractuels — il génère des fourchettes indicatives, expressément qualifiées comme telles dans le message client. Le devis formel (avec mentions CGV, garantie décennale, RCP, délai d'acceptation) est toujours produit par votre outil de devis habituel.",
+            "Le secteur BTP est exposé à deux risques réglementaires spécifiques : les devis sans mention légale obligatoire, et les acomptes non protégés sur travaux >estimation personnalisee. L'agent AgenticWhatsup ne génère pas de devis contractuels — il génère des fourchettes indicatives, expressément qualifiées comme telles dans le message client. Le devis formel (avec mentions CGV, garantie décennale, RCP, délai d'acceptation) est toujours produit par votre outil de devis habituel.",
             "Sur les acomptes : l'agent peut collecter une demande d'acompte et envoyer un lien de paiement Stripe ou SumUp, mais ne traite jamais un acompte sans que votre devis signé soit en votre possession. Cette contrainte est programmée et non contournable.",
           ],
         },

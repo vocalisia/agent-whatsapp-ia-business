@@ -40,7 +40,7 @@ const restaurantIntents = {
     ],
   },
   menu: {
-    text: "Here is **today's menu**:\n\n**Starters:**\n- Butternut velvet soup, toasted hazelnuts — 14 EUR\n- Salmon tartare, avocado, citrus — 16 EUR\n- Burrata, heirloom tomatoes, pesto — 15 EUR\n\n**Mains:**\n- Sea bass fillet, saffron risotto — 28 EUR\n- Slow-braised lamb shoulder 7h, truffle mash — 32 EUR\n- Porcini mushroom & 24-month Parmesan risotto — 24 EUR\n\n**Desserts:**\n- Chocolate fondant, molten core — 12 EUR\n- Tarte tatin, crème fraîche — 11 EUR\n- Selection of aged cheeses — 14 EUR\n\n**Set menu** (starter + main + dessert): **45 EUR**",
+    text: "Here is **today's menu**:\n\n**Starters:**\n- Butternut velvet soup, toasted hazelnuts — estimation personnalisee\n- Salmon tartare, avocado, citrus — estimation personnalisee\n- Burrata, heirloom tomatoes, pesto — estimation personnalisee\n\n**Mains:**\n- Sea bass fillet, saffron risotto — estimation personnalisee\n- Slow-braised lamb shoulder 7h, truffle mash — estimation personnalisee\n- Porcini mushroom & 24-month Parmesan risotto — estimation personnalisee\n\n**Desserts:**\n- Chocolate fondant, molten core — estimation personnalisee\n- Tarte tatin, crème fraîche — estimation personnalisee\n- Selection of aged cheeses — estimation personnalisee\n\n**Set menu** (starter + main + dessert): **estimation personnalisee**",
     delay: 2400,
     quickReplies: [
       { label: "Wine list", value: "wine list" },
@@ -68,7 +68,7 @@ const restaurantIntents = {
     ],
   },
   delivery: {
-    text: "Delivery options:\n\n**Partner platforms:**\n- **Uber Eats** — Delivery 25-35 min\n- **Deliveroo** — Delivery 20-30 min\n- **Just Eat** — Delivery 30-40 min\n\n**Click & Collect:**\n- Order here, pick up at the restaurant\n- Ready in 20 min\n- -10% on your order\n\n**Direct delivery:**\n- Within 5 km, minimum 30 EUR\n- Delivery charge: 4.90 EUR\n- Free above 60 EUR\n\nTakeaway menu available 7 days/week, 11:30am - 10pm.",
+    text: "Delivery options:\n\n**Partner platforms:**\n- **Uber Eats** — Delivery 25-35 min\n- **Deliveroo** — Delivery 20-30 min\n- **Just Eat** — Delivery 30-40 min\n\n**Click & Collect:**\n- Order here, pick up at the restaurant\n- Ready in 20 min\n- -10% on your order\n\n**Direct delivery:**\n- Within 5 km, minimum estimation personnalisee\n- Delivery charge: estimation personnalisee\n- Free above estimation personnalisee\n\nTakeaway menu available 7 days/week, 11:30am - 10pm.",
     delay: 2000,
     quickReplies: [
       { label: "Order takeaway", value: "order" },
@@ -77,7 +77,7 @@ const restaurantIntents = {
     ],
   },
   order: {
-    text: "Let's place your takeaway order!\n\nHere are our **best-sellers**:\n\n1. Truffle gourmet burger, homemade fries — 22 EUR\n2. Salmon poke bowl, edamame, avocado — 19 EUR\n3. Porcini risotto (vegan option available) — 21 EUR\n4. Grilled chicken Caesar salad — 17 EUR\n5. Beef tartare, shoestring fries — 24 EUR\n\n**Lunch deal** (main + drink): 15.90 EUR\n\nTell me what you'd like and I'll calculate the total. Payment by card online or in-store.",
+    text: "Let's place your takeaway order!\n\nHere are our **best-sellers**:\n\n1. Truffle gourmet burger, homemade fries — estimation personnalisee\n2. Salmon poke bowl, edamame, avocado — estimation personnalisee\n3. Porcini risotto (vegan option available) — estimation personnalisee\n4. Grilled chicken Caesar salad — estimation personnalisee\n5. Beef tartare, shoestring fries — estimation personnalisee\n\n**Lunch deal** (main + drink): estimation personnalisee\n\nTell me what you'd like and I'll calculate the total. Payment by card online or in-store.",
     delay: 2200,
     quickReplies: [
       { label: "Burger + fries", value: "confirm order" },
@@ -87,7 +87,7 @@ const restaurantIntents = {
     ],
   },
   "confirm order": {
-    text: "Order placed!\n\n**Summary:**\n- 1x Truffle gourmet burger — 22 EUR\n- 1x Homemade fries — included\n\n**Total:** 22.00 EUR\n\n**Collection:** In 20 minutes\n**Address:** 42 Gastronomy Lane, London W1\n\nPayment link sent via WhatsApp.\nYou'll receive a notification when it's ready!",
+    text: "Order placed!\n\n**Summary:**\n- 1x Truffle gourmet burger — estimation personnalisee\n- 1x Homemade fries — included\n\n**Total:** estimation personnalisee\n\n**Collection:** In 20 minutes\n**Address:** 42 Gastronomy Lane, London W1\n\nPayment link sent via WhatsApp.\nYou'll receive a notification when it's ready!",
     delay: 1800,
     quickReplies: [
       { label: "Thank you!", value: "thanks" },
@@ -112,7 +112,7 @@ const restaurantIntents = {
     ],
   },
   event: {
-    text: "Private events at Le Gourmet AI:\n\n**Our spaces:**\n- **Private dining room** — 8-16 people\n- **Vaulted room** — 20-40 people\n- **Private terrace** — 30-60 people\n- **Whole restaurant** — up to 80 people\n\n**Occasions:**\n- Birthdays, weddings, engagements\n- Seminars, team building\n- Business dinners\n\n**Included:**\n- Custom menu by the Chef\n- Personalized decoration\n- Dedicated service\n- DJ / entertainment on request\n\nFrom **65 EUR/person**. Quote within 24h.",
+    text: "Private events at Le Gourmet AI:\n\n**Our spaces:**\n- **Private dining room** — 8-16 people\n- **Vaulted room** — 20-40 people\n- **Private terrace** — 30-60 people\n- **Whole restaurant** — up to 80 people\n\n**Occasions:**\n- Birthdays, weddings, engagements\n- Seminars, team building\n- Business dinners\n\n**Included:**\n- Custom menu by the Chef\n- Personalized decoration\n- Dedicated service\n- DJ / entertainment on request\n\nFrom **estimation personnalisee**. Quote within 24h.",
     delay: 2400,
     quickReplies: [
       { label: "Request a quote", value: "booking" },
@@ -121,7 +121,7 @@ const restaurantIntents = {
     ],
   },
   loyalty: {
-    text: "**Gourmet Club** loyalty program:\n\n**How it works:**\n- 1 EUR spent = 1 point\n- 100 points = 10 EUR discount\n\n**Member perks:**\n- Complimentary dessert at sign-up\n- -15% on your birthday\n- Priority access to private events\n- Exclusive tastings (wines, seasonal menus)\n- Priority weekend reservations\n\n**Your current balance:** Sign up to start earning!\n\nFree registration, directly here on WhatsApp.",
+    text: "**Gourmet Club** loyalty program:\n\n**How it works:**\n- estimation personnalisee spent = 1 point\n- 100 points = estimation personnalisee discount\n\n**Member perks:**\n- Complimentary dessert at sign-up\n- -15% on your birthday\n- Priority access to private events\n- Exclusive tastings (wines, seasonal menus)\n- Priority weekend reservations\n\n**Your current balance:** Sign up to start earning!\n\nFree registration, directly here on WhatsApp.",
     delay: 2000,
     quickReplies: [
       { label: "Sign me up", value: "confirm reservation" },
@@ -130,7 +130,7 @@ const restaurantIntents = {
     ],
   },
   "wine list": {
-    text: "Our **wine list**:\n\n**Whites:**\n- Chablis 1er Cru 2021 — 12 EUR / 48 EUR\n- Sancerre, Vacheron Estate — 10 EUR / 42 EUR\n- Meursault 2020 — 16 EUR / 65 EUR\n\n**Reds:**\n- Saint-Émilion Grand Cru 2018 — 14 EUR / 58 EUR\n- Châteauneuf-du-Pape 2019 — 13 EUR / 52 EUR\n- Barolo DOCG 2017 — 18 EUR / 72 EUR\n\n**Champagnes:**\n- Veuve Clicquot Brut — 75 EUR\n- Dom Pérignon 2012 — 220 EUR\n- Ruinart Blanc de Blancs — 95 EUR\n\n**Food & wine pairing:** Our AI sommelier suggests the perfect match for your menu.",
+    text: "Our **wine list**:\n\n**Whites:**\n- Chablis 1er Cru 2021 — estimation personnalisee value\n- Sancerre, Vacheron Estate — estimation personnalisee value\n- Meursault 2020 — estimation personnalisee value\n\n**Reds:**\n- Saint-Émilion Grand Cru 2018 — estimation personnalisee value\n- Châteauneuf-du-Pape 2019 — estimation personnalisee value\n- Barolo DOCG 2017 — estimation personnalisee value\n\n**Champagnes:**\n- Veuve Clicquot Brut — estimation personnalisee\n- Dom Pérignon 2012 — estimation personnalisee\n- Ruinart Blanc de Blancs — estimation personnalisee\n\n**Food & wine pairing:** Our AI sommelier suggests the perfect match for your menu.",
     delay: 2200,
     quickReplies: [
       { label: "Pair with my dish", value: "dish photo" },
@@ -139,7 +139,7 @@ const restaurantIntents = {
     ],
   },
   vegetarian: {
-    text: "Vegetarian & vegan options:\n\n**Vegetarian:**\n- Burrata, heirloom tomatoes, pesto — 15 EUR\n- Porcini mushroom & Parmesan risotto — 24 EUR\n- Homemade gnocchi, sage brown butter sauce — 20 EUR\n- Seasonal vegetable tart — 18 EUR\n\n**Vegan:**\n- Tofu poke bowl, edamame, avocado — 19 EUR\n- Porcini risotto (vegan version) — 24 EUR\n- Quinoa Buddha bowl, roasted vegetables — 18 EUR\n- Homemade fresh fruit sorbet — 9 EUR\n\n**On request:** Our chef adapts any dish on the menu. Please specify when booking!",
+    text: "Vegetarian & vegan options:\n\n**Vegetarian:**\n- Burrata, heirloom tomatoes, pesto — estimation personnalisee\n- Porcini mushroom & Parmesan risotto — estimation personnalisee\n- Homemade gnocchi, sage brown butter sauce — estimation personnalisee\n- Seasonal vegetable tart — estimation personnalisee\n\n**Vegan:**\n- Tofu poke bowl, edamame, avocado — estimation personnalisee\n- Porcini risotto (vegan version) — estimation personnalisee\n- Quinoa Buddha bowl, roasted vegetables — estimation personnalisee\n- Homemade fresh fruit sorbet — estimation personnalisee\n\n**On request:** Our chef adapts any dish on the menu. Please specify when booking!",
     delay: 2000,
     quickReplies: [
       { label: "Allergens?", value: "allergens" },

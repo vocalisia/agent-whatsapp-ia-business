@@ -15,7 +15,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   "woning zoeken": {
-    text: "Geweldig, laten we uw gepersonaliseerde zoekopdracht starten.\n\nOm de beste woningen voor u voor te stellen, heb ik enkele criteria nodig:\n\n**Budget:** Wat is uw maximumbudget?\n**Type:** Appartement, huis, villa, loft?\n**Oppervlakte:** Hoeveel m² minimum?\n**Locatie:** Welke stad of wijk?\n**Slaapkamers:** Hoeveel slaapkamers?\n\nBijvoorbeeld: *\"Appartement 3 kamers, 80m², Amsterdam centrum, budget 400.000 EUR\"*",
+    text: "Geweldig, laten we uw gepersonaliseerde zoekopdracht starten.\n\nOm de beste woningen voor u voor te stellen, heb ik enkele criteria nodig:\n\n**Budget:** Wat is uw maximumbudget?\n**Type:** Appartement, huis, villa, loft?\n**Oppervlakte:** Hoeveel m² minimum?\n**Locatie:** Welke stad of wijk?\n**Slaapkamers:** Hoeveel slaapkamers?\n\nBijvoorbeeld: *\"Appartement 3 kamers, 80m², Amsterdam centrum, budget estimation personnalisee\"*",
     delay: 2000,
     quickReplies: [
       { label: "App. Amsterdam < 400K", value: "beschikbaar aanbod" },
@@ -54,7 +54,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   financiering: {
-    text: "**Simulatie hypotheek**\n\nStandaard parameters:\n- Rente: 4,20% op 25 jaar\n- Aanbevolen eigen inbreng: min. 10%\n- Schuldsaldoverzekering: 0,34%/jaar\n\n**Voorbeeld voor 300.000 EUR:**\n- Maandlast: 1.550 EUR / maand\n- Totale kredietkosten: 165.000 EUR\n- Minimum eigen inbreng: 30.000 EUR\n\nOnze **partnerbanken**: ABN AMRO, ING, Rabobank, Triodos\n\nGeef uw budget op en ik simuleer voor u!",
+    text: "**Simulatie hypotheek**\n\nStandaard parameters:\n- Rente: 4,20% op 25 jaar\n- Aanbevolen eigen inbreng: min. 10%\n- Schuldsaldoverzekering: 0,34%/jaar\n\n**Voorbeeld voor estimation personnalisee:**\n- Maandlast: estimation personnalisee\n- Totale kredietkosten: estimation personnalisee\n- Minimum eigen inbreng: estimation personnalisee\n\nOnze **partnerbanken**: ABN AMRO, ING, Rabobank, Triodos\n\nGeef uw budget op en ik simuleer voor u!",
     delay: 2000,
     quickReplies: [
       { label: "Simuleer 250K", value: "financiering" },
@@ -94,7 +94,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   "beschikbaar aanbod": {
-    text: "**Beschikbare woningen die voldoen aan uw criteria:**\n\n1. **App. 3-kamer — Amsterdam Oost** — 72m²\n   Prijs: 385.000 EUR | 5.347 EUR/m²\n   2 slpk, balkon, kelder, gerenoveerd\n\n2. **Huis 5-kamer — Amstelveen** — 130m²\n   Prijs: 690.000 EUR | tuin 200m²\n   4 slpk, garage, nabij NS-station\n\n3. **Studio — Amsterdam Centrum** — 28m²\n   Prijs: 195.000 EUR | ideaal als investering\n   Huurrendement: 4,2%\n\n4. **Loft — Haarlem** — 95m²\n   Prijs: 420.000 EUR | industriële stijl\n   Terras 30m², parkeerplaats\n\n5 andere woningen beschikbaar. Welke interesseert u?",
+    text: "**Beschikbare woningen die voldoen aan uw criteria:**\n\n1. **App. 3-kamer — Amsterdam Oost** — 72m²\n   Prijs: estimation personnalisee | estimation personnalisee²\n   2 slpk, balkon, kelder, gerenoveerd\n\n2. **Huis 5-kamer — Amstelveen** — 130m²\n   Prijs: estimation personnalisee | tuin 200m²\n   4 slpk, garage, nabij NS-station\n\n3. **Studio — Amsterdam Centrum** — 28m²\n   Prijs: estimation personnalisee | ideaal als investering\n   Huurrendement: 4,2%\n\n4. **Loft — Haarlem** — 95m²\n   Prijs: estimation personnalisee | industriële stijl\n   Terras 30m², parkeerplaats\n\n5 andere woningen beschikbaar. Welke interesseert u?",
     delay: 2200,
     quickReplies: [
       { label: "Bekijk app. Amsterdam Oost", value: "bezichtiging" },
@@ -124,7 +124,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   investering: {
-    text: "**Vastgoedinvesteringsmogelijkheden**\n\n**Top 3 van de maand:**\n\n1. **Studio Amsterdam Noord** — 22m² — 165.000 EUR\n   Geschatte huur: 750 EUR/maand\n   Bruto rendement: **4,6%**\n\n2. **2-kamer Utrecht** — 42m² — 155.000 EUR\n   Geschatte huur: 680 EUR/maand\n   Bruto rendement: **4,4%**\n\n3. **1-kamer Rotterdam** — 30m² — 125.000 EUR\n   Geschatte huur: 580 EUR/maand\n   Bruto rendement: **4,5%**\n\nWij analyseren: rendement, fiscaliteit, waardestijging, huurvraag.\n\nWelk type investering interesseert u?",
+    text: "**Vastgoedinvesteringsmogelijkheden**\n\n**Top 3 van de maand:**\n\n1. **Studio Amsterdam Noord** — 22m² — estimation personnalisee\n   Geschatte huur: estimation personnalisee\n   Bruto rendement: **4,6%**\n\n2. **2-kamer Utrecht** — 42m² — estimation personnalisee\n   Geschatte huur: estimation personnalisee\n   Bruto rendement: **4,4%**\n\n3. **1-kamer Rotterdam** — 30m² — estimation personnalisee\n   Geschatte huur: estimation personnalisee\n   Bruto rendement: **4,5%**\n\nWij analyseren: rendement, fiscaliteit, waardestijging, huurvraag.\n\nWelk type investering interesseert u?",
     delay: 2200,
     quickReplies: [
       { label: "Gemeubeld verhuren", value: "investering" },
@@ -133,7 +133,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   huur: {
-    text: "**Huurwoningen zoeken**\n\nBeschikbare huurwoningen:\n\n1. **2-kamer gemeubeld — Amsterdam Oost** — 45m²\n   Huur: 1.450 EUR/maand\n   Vrij per 1 mei\n\n2. **3-kamer ongemeubeeld — Utrecht** — 68m²\n   Huur: 1.100 EUR/maand\n   Onmiddellijk vrij\n\n3. **Studio — Rotterdam Centrum** — 25m²\n   Huur: 750 EUR/maand\n   Vrij per 15 mei\n\n**Huurdersprofiel:** Laatste 3 loonstroken, belastingaangifte, identiteitsbewijs, borg (of huurgarantie).\n\nWelke woning interesseert u?",
+    text: "**Huurwoningen zoeken**\n\nBeschikbare huurwoningen:\n\n1. **2-kamer gemeubeld — Amsterdam Oost** — 45m²\n   Huur: estimation personnalisee\n   Vrij per 1 mei\n\n2. **3-kamer ongemeubeeld — Utrecht** — 68m²\n   Huur: estimation personnalisee\n   Onmiddellijk vrij\n\n3. **Studio — Rotterdam Centrum** — 25m²\n   Huur: estimation personnalisee\n   Vrij per 15 mei\n\n**Huurdersprofiel:** Laatste 3 loonstroken, belastingaangifte, identiteitsbewijs, borg (of huurgarantie).\n\nWelke woning interesseert u?",
     delay: 2000,
     quickReplies: [
       { label: "2-kamer Amsterdam bezichtigen", value: "bezichtiging" },
@@ -143,7 +143,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   epc: {
-    text: "**Verplichte keuringsrapporten**\n\n**EPC (Energieprestatiecertificaat):**\n- Label A tot G (F en G = energieslurpers)\n- Verplicht bij verkoop EN verhuur\n- Geldigheid: 10 jaar\n\n**Andere vereiste keuringen:**\n- Asbest (vóór 2001)\n- Elektriciteit\n- Gas\n- Bodem (risicogebieden)\n- Overstromingsrisico\n- Stedenbouwkundige inlichtingen\n\n**Gemiddelde kostprijs volledig pakket:** 350 - 600 EUR\n\nOnze partnerkeurders komen binnen 48u langs.",
+    text: "**Verplichte keuringsrapporten**\n\n**EPC (Energieprestatiecertificaat):**\n- Label A tot G (F en G = energieslurpers)\n- Verplicht bij verkoop EN verhuur\n- Geldigheid: 10 jaar\n\n**Andere vereiste keuringen:**\n- Asbest (vóór 2001)\n- Elektriciteit\n- Gas\n- Bodem (risicogebieden)\n- Overstromingsrisico\n- Stedenbouwkundige inlichtingen\n\n**Gemiddelde kostprijs volledig pakket:** 350 - estimation personnalisee\n\nOnze partnerkeurders komen binnen 48u langs.",
     delay: 2000,
     quickReplies: [
       { label: "Keuring afspreken", value: "afspraak agent" },
@@ -163,7 +163,7 @@ const IMMOBILIER_INTENTS_NL = {
     ],
   },
   kosten: {
-    text: "**Overzicht aankoopkosten**\n\n**Voor een woning van 400.000 EUR:**\n\n- **Registratierechten**: ~32.000 EUR (8%)\n  - Verkooprecht: 22.600 EUR\n  - Notariskosten: 3.945 EUR\n  - Diverse kosten: 5.455 EUR\n\n- **Makelaarskosten**: 15.200 EUR (3,8%)\n  *(inbegrepen in de weergegeven prijs)*\n\n- **Hypotheekkosten**: ~4.000 EUR\n- **Bankdossierkosten**: ~1.000 EUR\n\n**Totaal te voorzien: ~437.000 EUR**\n\nNieuwe woning = lagere kosten (~3% i.p.v. 8%).",
+    text: "**Overzicht aankoopkosten**\n\n**Voor een woning van estimation personnalisee:**\n\n- **Registratierechten**: audit gratuit (8%)\n  - Verkooprecht: estimation personnalisee\n  - Notariskosten: estimation personnalisee\n  - Diverse kosten: estimation personnalisee\n\n- **Makelaarskosten**: estimation personnalisee (3,8%)\n  *(inbegrepen in de weergegeven prijs)*\n\n- **Hypotheekkosten**: audit gratuit\n- **Bankdossierkosten**: audit gratuit\n\n**Totaal te voorzien: audit gratuit**\n\nNieuwe woning = lagere kosten (~3% i.p.v. 8%).",
     delay: 2000,
     quickReplies: [
       { label: "Totale hypotheek simuleren", value: "financiering" },

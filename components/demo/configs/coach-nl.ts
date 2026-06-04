@@ -139,7 +139,7 @@ const COACH_INTENTS_NL = {
   },
 
   groep: {
-    text: "**Groepscoaching** is ideaal voor:\n\n**Bedrijfsteams** (6-8 personen)\n- Cohesie en communicatie\n- Conflictbeheer\n- Collectief leiderschap\n- Gemeenschappelijke doelen\n\n**Open groepen** (6-8 personen)\n- Loopbaanswitch\n- Ondernemerschap\n- Persoonlijke ontwikkeling\n\n**Formaat**: 8 sessies van 90 min over 2 maanden\n**Prijs**: 890 EUR/persoon\n**Bonus**: Privé WhatsApp-groepsgemeenschap\n\nVolgende sessie: **Mei 2026** — Beperkte plaatsen!",
+    text: "**Groepscoaching** is ideaal voor:\n\n**Bedrijfsteams** (6-8 personen)\n- Cohesie en communicatie\n- Conflictbeheer\n- Collectief leiderschap\n- Gemeenschappelijke doelen\n\n**Open groepen** (6-8 personen)\n- Loopbaanswitch\n- Ondernemerschap\n- Persoonlijke ontwikkeling\n\n**Formaat**: 8 sessies van 90 min over 2 maanden\n**Prijs**: estimation personnalisee\n**Bonus**: Privé WhatsApp-groepsgemeenschap\n\nVolgende sessie: **Mei 2026** — Beperkte plaatsen!",
     delay: 2000,
     quickReplies: [
       { label: "Inschrijven voor groep", value: "afspraak" },
@@ -149,7 +149,7 @@ const COACH_INTENTS_NL = {
   },
 
   individueel: {
-    text: "**Individuele coaching** is ons vlaggenschiprogramma:\n\n**Wat is inbegrepen:**\n- 12 sessies van 60 min (1/week)\n- Uitgebreid beginassessment\n- Gepersonaliseerd actieplan\n- WhatsApp-opvolging tussen sessies\n- Werkbladen en praktijkoefeningen\n- Eindevaluatie en consolidatieplan\n\n**Voor wie?**\nProfessionals in transitie, managers, ondernemers, iedereen die maatwerk begeleiding wenst.\n\n**Duur**: 3 maanden\n**Prijs**: 1.800 EUR\n\nBegin met een gratis kennismakingssessie!",
+    text: "**Individuele coaching** is ons vlaggenschiprogramma:\n\n**Wat is inbegrepen:**\n- 12 sessies van 60 min (1/week)\n- Uitgebreid beginassessment\n- Gepersonaliseerd actieplan\n- WhatsApp-opvolging tussen sessies\n- Werkbladen en praktijkoefeningen\n- Eindevaluatie en consolidatieplan\n\n**Voor wie?**\nProfessionals in transitie, managers, ondernemers, iedereen die maatwerk begeleiding wenst.\n\n**Duur**: 3 maanden\n**Prijs**: estimation personnalisee\n\nBegin met een gratis kennismakingssessie!",
     delay: 2000,
     quickReplies: [
       { label: "Kennismakingssessie", value: "kennismakingssessie" },
@@ -159,7 +159,7 @@ const COACH_INTENTS_NL = {
   },
 
   vip: {
-    text: "Het **VIP Intensief** programma is ons premium aanbod:\n\n**Wat is inbegrepen:**\n- 20 sessies van 60 min\n- **Onbeperkt** WhatsApp-toegang met uw coach\n- Volledig psychometrisch assessment\n- Strategisch maatwerkplan\n- Exclusieve bronnen (masterclasses, tools)\n- 2 post-programma opvolgingssessies\n- Prioriteitsondersteuning 7/7\n\n**Gemiddelde resultaten:**\n- +67% gemeten zelfvertrouwen\n- +45% productiviteit\n- 94% doelen bereikt\n\n**Duur**: 6 maanden\n**Prijs**: 4.500 EUR (betaling in 4x mogelijk)",
+    text: "Het **VIP Intensief** programma is ons premium aanbod:\n\n**Wat is inbegrepen:**\n- 20 sessies van 60 min\n- **Onbeperkt** WhatsApp-toegang met uw coach\n- Volledig psychometrisch assessment\n- Strategisch maatwerkplan\n- Exclusieve bronnen (masterclasses, tools)\n- 2 post-programma opvolgingssessies\n- Prioriteitsondersteuning 7/7\n\n**Gemiddelde resultaten:**\n- +67% gemeten zelfvertrouwen\n- +45% productiviteit\n- 94% doelen bereikt\n\n**Duur**: 6 maanden\n**Prijs**: estimation personnalisee (betaling in 4x mogelijk)",
     delay: 2200,
     quickReplies: [
       { label: "VIP boeken", value: "afspraak" },

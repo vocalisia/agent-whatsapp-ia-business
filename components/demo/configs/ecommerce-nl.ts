@@ -16,7 +16,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   "bestelling volgen": {
-    text: "Natuurlijk! Hier is de status van uw laatste bestelling:\n\n**Bestelling #MC-78432**\n- Zwarte Elegance jurk (M) — 89,90 EUR\n- Kamellederen tas — 129,00 EUR\n\n**Status:** In bezorging\n**Vervoerder:** PostNL\n**Trackingnummer:** 8R12345678901\n**Geschatte levering:** Morgen voor 18u\n\nKan ik u nog ergens anders mee helpen?",
+    text: "Natuurlijk! Hier is de status van uw laatste bestelling:\n\n**Bestelling #MC-78432**\n- Zwarte Elegance jurk (M) — estimation personnalisee\n- Kamellederen tas — estimation personnalisee\n\n**Status:** In bezorging\n**Vervoerder:** PostNL\n**Trackingnummer:** 8R12345678901\n**Geschatte levering:** Morgen voor 18u\n\nKan ik u nog ergens anders mee helpen?",
     delay: 1500,
     quickReplies: [
       { label: "Adres wijzigen", value: "bezorging" },
@@ -49,7 +49,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   voorraad: {
-    text: "Ik controleer de beschikbaarheid voor u...\n\nHier zijn de **best-sellers op voorraad**:\n\n- **Zwarte Elegance jurk** — 89,90 EUR (S, M, L)\n- **Parijse blazer** — 149,00 EUR (M, L, XL)\n- **Slim raw denim** — 69,90 EUR (36, 38, 40, 42)\n- **Ivoorwitte kasjmier trui** — 119,00 EUR (S, M) *laatste stuks!*\n\nWelk artikel interesseert u?",
+    text: "Ik controleer de beschikbaarheid voor u...\n\nHier zijn de **best-sellers op voorraad**:\n\n- **Zwarte Elegance jurk** — estimation personnalisee (S, M, L)\n- **Parijse blazer** — estimation personnalisee (M, L, XL)\n- **Slim raw denim** — estimation personnalisee (36, 38, 40, 42)\n- **Ivoorwitte kasjmier trui** — estimation personnalisee (S, M) *laatste stuks!*\n\nWelk artikel interesseert u?",
     delay: 1200,
     quickReplies: [
       { label: "Elegance jurk", value: "catalogus" },
@@ -82,7 +82,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   bezorging: {
-    text: "**Bezorgopties van ModaChic:**\n\n- **Standaard** (3-5 dagen): Gratis vanaf 49 EUR\n- **Express** (24u): 5,90 EUR\n- **Afhaalpunt** (2-4 dagen): Gratis vanaf 29 EUR\n- **Same-day Amsterdam**: 9,90 EUR (bestelling voor 14u)\n\n**Zones:** Nederland, België, Zwitserland, Luxemburg\n**Tracking:** SMS + e-mail bij elke stap\n\nLoopt uw bestelling al?",
+    text: "**Bezorgopties van ModaChic:**\n\n- **Standaard** (3-5 dagen): Gratis vanaf estimation personnalisee\n- **Express** (24u): estimation personnalisee\n- **Afhaalpunt** (2-4 dagen): Gratis vanaf estimation personnalisee\n- **Same-day Amsterdam**: estimation personnalisee (bestelling voor 14u)\n\n**Zones:** Nederland, België, Zwitserland, Luxemburg\n**Tracking:** SMS + e-mail bij elke stap\n\nLoopt uw bestelling al?",
     delay: 1300,
     quickReplies: [
       { label: "Bestelling volgen", value: "bestelling volgen" },
@@ -93,7 +93,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   betaling: {
-    text: "**Geaccepteerde betaalmethoden:**\n\n- Bankkaart (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Betaling in **3 termijnen** zonder kosten vanaf 50 EUR\n- Bankoverschrijving\n- ModaChic cadeaukaart\n\n**100% veilige betaling** (3D Secure, SSL-versleuteling)\n\nHulp nodig bij het afronden van uw bestelling?",
+    text: "**Geaccepteerde betaalmethoden:**\n\n- Bankkaart (Visa, Mastercard, Amex)\n- PayPal\n- Apple Pay / Google Pay\n- Klarna — Betaling in **3 termijnen** zonder kosten vanaf estimation personnalisee\n- Bankoverschrijving\n- ModaChic cadeaukaart\n\n**100% veilige betaling** (3D Secure, SSL-versleuteling)\n\nHulp nodig bij het afronden van uw bestelling?",
     delay: 1100,
     quickReplies: [
       { label: "In 3 termijnen betalen", value: "betaling" },
@@ -104,7 +104,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   klacht: {
-    text: "Het spijt me voor dit ongemak. Uw tevredenheid is onze prioriteit.\n\n**Uw klacht is geregistreerd:**\n- **Ref:** REC-MC-2026-04-1847\n- **Prioriteit:** Hoog\n- **Reactietijd:** Binnen maximaal 2u\n\nEen senior adviseur neemt uw dossier over. Mag ik u in de tussentijd een **tegoedbon van 10 EUR** aanbieden als gebaar?",
+    text: "Het spijt me voor dit ongemak. Uw tevredenheid is onze prioriteit.\n\n**Uw klacht is geregistreerd:**\n- **Ref:** REC-MC-2026-04-1847\n- **Prioriteit:** Hoog\n- **Reactietijd:** Binnen maximaal 2u\n\nEen senior adviseur neemt uw dossier over. Mag ik u in de tussentijd een **tegoedbon van estimation personnalisee** aanbieden als gebaar?",
     delay: 1600,
     quickReplies: [
       { label: "Bon accepteren", value: "kortingscode" },
@@ -115,7 +115,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   klantenservice: {
-    text: "**ModaChic klantenservice:**\n\nOnze service is beschikbaar **7/7 van 8u tot 22u**.\n\nIk kan u helpen met:\n- Bestelling volgen en wijzigen\n- Retours en omruilingen\n- Kwaliteitsproblemen\n- Facturatie en terugbetalingen\n- Loyaltyprogramma (uw punten: **2.450 pts** = 24,50 EUR)\n\nWat wilt u doen?",
+    text: "**ModaChic klantenservice:**\n\nOnze service is beschikbaar **7/7 van 8u tot 22u**.\n\nIk kan u helpen met:\n- Bestelling volgen en wijzigen\n- Retours en omruilingen\n- Kwaliteitsproblemen\n- Facturatie en terugbetalingen\n- Loyaltyprogramma (uw punten: **2.450 pts** = estimation personnalisee)\n\nWat wilt u doen?",
     delay: 1200,
     quickReplies: [
       { label: "Mijn loyaltypunten", value: "klantenservice" },
@@ -137,7 +137,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   catalogus: {
-    text: "Ontdek onze **ModaChic collecties**:\n\n**Lente 2026 nieuwkomers:**\n- Bloemen Provence jurk — 79,90 EUR\n- Linnen naturel blazer — 139,00 EUR\n- Gouden sandalen — 59,90 EUR\n\n**Best-sellers:**\n- Zwarte Elegance jurk — 89,90 EUR\n- Slim raw denim — 69,90 EUR\n- Kamellederen tas — 129,00 EUR\n\n**Code LENTE26** voor -20% op nieuwkomers!\n\nWelk artikel interesseert u?",
+    text: "Ontdek onze **ModaChic collecties**:\n\n**Lente 2026 nieuwkomers:**\n- Bloemen Provence jurk — estimation personnalisee\n- Linnen naturel blazer — estimation personnalisee\n- Gouden sandalen — estimation personnalisee\n\n**Best-sellers:**\n- Zwarte Elegance jurk — estimation personnalisee\n- Slim raw denim — estimation personnalisee\n- Kamellederen tas — estimation personnalisee\n\n**Code LENTE26** voor -20% op nieuwkomers!\n\nWelk artikel interesseert u?",
     delay: 1500,
     quickReplies: [
       { label: "Nieuwkomers", value: "catalogus" },
@@ -148,7 +148,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   "verlaten winkelwagen": {
-    text: "Ik zie dat u nog artikelen in uw winkelwagen heeft!\n\n**Uw ModaChic winkelwagen:**\n- Parijse blazer (M) — 149,00 EUR\n- Bordeaux zijden sjaal — 45,00 EUR\n\n**Totaal:** 194,00 EUR\n**Met LENTE26:** ~~194,00~~ **155,20 EUR** (-20%)\n\nUw code verloopt over **2 uur**. Wilt u uw bestelling afronden?",
+    text: "Ik zie dat u nog artikelen in uw winkelwagen heeft!\n\n**Uw ModaChic winkelwagen:**\n- Parijse blazer (M) — estimation personnalisee\n- Bordeaux zijden sjaal — estimation personnalisee\n\n**Totaal:** estimation personnalisee\n**Met LENTE26:** ~~194,00~~ **estimation personnalisee** (-20%)\n\nUw code verloopt over **2 uur**. Wilt u uw bestelling afronden?",
     delay: 1600,
     quickReplies: [
       { label: "Bestelling afronden", value: "betaling" },
@@ -169,7 +169,7 @@ const ECOMMERCE_INTENTS_NL = {
   },
 
   verlanglijst: {
-    text: "Uw **ModaChic verlanglijst**:\n\n1. Kamelwollen jas — 229,00 EUR *(- 50% flash-sale!)*\n2. Zwarte Chelsea laarzen — 119,00 EUR\n3. Grijze kasjmier sjaal — 89,00 EUR\n\n**Melding:** De kamelwollen jas is in de aanbieding voor **114,50 EUR**! Nog slechts 3 op voorraad.\n\nWilt u hem aan uw winkelwagen toevoegen?",
+    text: "Uw **ModaChic verlanglijst**:\n\n1. Kamelwollen jas — estimation personnalisee *(- 50% flash-sale!)*\n2. Zwarte Chelsea laarzen — estimation personnalisee\n3. Grijze kasjmier sjaal — estimation personnalisee\n\n**Melding:** De kamelwollen jas is in de aanbieding voor **estimation personnalisee**! Nog slechts 3 op voorraad.\n\nWilt u hem aan uw winkelwagen toevoegen?",
     delay: 1300,
     quickReplies: [
       { label: "In winkelwagen", value: "betaling" },
