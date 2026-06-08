@@ -97,13 +97,15 @@
 
 a[href*="/contact"][class*="bg-wa"],
 a[href*="iclosed"][class*="bg-wa"],
-a[href*="app.iclosed.io"][class*="bg-wa"] {
+a[href*="app.iclosed.io"][class*="bg-wa"],
+.cta-pulse {
   animation: cta-pulse 2.2s ease-out infinite;
 }
 
 a[href*="/contact"][class*="bg-wa"]:hover,
 a[href*="iclosed"][class*="bg-wa"]:hover,
-a[href*="app.iclosed.io"][class*="bg-wa"]:hover {
+a[href*="app.iclosed.io"][class*="bg-wa"]:hover,
+.cta-pulse:hover {
   animation-play-state: paused;
 }
 

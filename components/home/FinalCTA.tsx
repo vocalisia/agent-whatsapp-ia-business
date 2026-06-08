@@ -49,7 +49,7 @@ export default function FinalCTA() {
               href={calLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-base sm:text-lg min-h-[52px] w-full sm:w-auto"
+              className="cta-pulse group inline-flex items-center justify-center gap-3 bg-wa hover:bg-wa-hover text-white font-bold px-8 py-4 rounded-2xl transition-all duration-300 glow-wa text-base sm:text-lg min-h-[52px] w-full sm:w-auto"
             >
               <Zap size={20} className="shrink-0" />
               {t("ctaPrimary")}

@@ -131,7 +131,7 @@
   "pricing": {
     "eyebrow": "Solutions",
     "title": "Une solution taillée pour vous",
-    "subtitle": "Chaque projet est unique. On analyse votre besoin pendant l'audit gratuit.",
+    "subtitle": "Chaque projet est unique. On analyse votre besoin pendant le rendez-vous.",
     "recommended": "RECOMMANDÉ",
     "ctaAudit": "Prendre RDV",
     "ctaSubtitle": "30 minutes · Sans engagement · Proposition sous 48h",
@@ -174,7 +174,7 @@
     "title2": "des clients",
     "title3": "à 3h du matin.",
     "subtitle": "30 minutes pour analyser vos besoins. Proposition sous 48h. Déploiement en 2–3 semaines.",
-    "ctaPrimary": "Réserver un diagnostic gratuit",
+    "ctaPrimary": "Prendre RDV",
     "ctaSecondary": "Écrire maintenant",
     "trust1": "Réponse sous 24h",
     "trust2": "Devis gratuit",
@@ -300,7 +300,7 @@
     "backToBlog": "Retour au blog",
     "reading": "de lecture",
     "ctaTitle": "Prêt à automatiser votre WhatsApp ?",
-    "ctaSubtitle": "Audit gratuit de 30 minutes — proposition sous 48h.",
+    "ctaSubtitle": "Rendez-vous de 30 minutes — proposition sous 48h.",
     "ctaButton": "Prendre RDV"
   },
   "services": {
@@ -310,7 +310,7 @@
       "howTitle": "Comment ça fonctionne",
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Prêt à qualifier vos leads automatiquement ?",
-      "ctaSubtitle": "Réservez un audit gratuit de 30 minutes — on analyse vos flux et on vous propose une solution sur-mesure sous 48h.",
+      "ctaSubtitle": "Prenez RDV 30 minutes — on analyse vos flux et on vous propose une solution sur-mesure sous 48h.",
       "ctaButton": "Prendre RDV",
       "features": [
         "Questionnaire de qualification automatique",
@@ -383,7 +383,7 @@
       "integrationsTitle": "Intégrations disponibles",
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Connectez WhatsApp à votre CRM",
-      "ctaSubtitle": "Dites-nous quel CRM vous utilisez et on vous montre exactement comment l'automatiser — audit gratuit de 30 minutes.",
+      "ctaSubtitle": "Dites-nous quel CRM vous utilisez et on vous montre exactement comment l'automatiser en rendez-vous de 30 minutes.",
       "ctaButton": "Prendre RDV",
       "features": [
         "Synchronisation bidirectionnelle avec HubSpot",
@@ -442,7 +442,7 @@
       "stepsTitle": "En 3 étapes",
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Automatisez vos prises de RDV",
-      "ctaSubtitle": "Déploiement en moins d'une semaine. Réservez un audit gratuit et on configure tout ensemble.",
+      "ctaSubtitle": "Déploiement en moins d'une semaine. Prenez RDV et on configure tout ensemble.",
       "ctaButton": "Prendre RDV",
       "features": [
         "Prise de RDV directement dans la conversation WhatsApp",
@@ -829,7 +829,7 @@
     "subtitle": "Choisissez votre secteur, discutez avec l'agent et observez les KPI en direct.",
     "trySuggestions": "Essayez",
     "convinced": "Convaincus ?",
-    "convincedDesc": "Audit gratuit 30 min — voyez l'agent sur VOTRE business.",
+    "convincedDesc": "Prendre RDV — voyez l'agent sur VOTRE business.",
     "freeAudit": "Prendre RDV",
     "detailedDemos": "Demos detaillees",
     "roiBadge": "Calculateur ROI",

@@ -90,7 +90,7 @@ export default function Hero() {
               href={calLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-5 py-3 rounded-2xl transition-all duration-300 glow-wa text-sm sm:text-base min-h-[48px] shrink-0"
+              className="cta-pulse group inline-flex items-center justify-center gap-2 bg-wa hover:bg-wa-hover text-white font-semibold px-5 py-3 rounded-2xl transition-all duration-300 glow-wa text-sm sm:text-base min-h-[48px] shrink-0"
             >
               <Zap size={18} className="group-hover:scale-110 transition-transform shrink-0" />
               {t("ctaAudit")}

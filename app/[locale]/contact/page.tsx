@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title: t("title"),
     description: t("subtitle"),
-    keywords: "audit gratuit agent IA WhatsApp, contact agenticwhatsup, prendre rendez-vous WhatsApp IA, demo agent whatsapp",
+    keywords: "prendre rendez-vous agent IA WhatsApp, contact agenticwhatsup, demo agent whatsapp",
     robots: { index: true, follow: true },
     alternates: {
       canonical: canonicalUrl,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t("subtitle"),
       url: canonicalUrl,
       siteName: "AgenticWhatsup",
-      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: "AgenticWhatsup — Audit gratuit 30 min" }],
+      images: [{ url: "https://agentic-whatsup.com/og-image.jpg", width: 1200, height: 630, alt: "AgenticWhatsup — Prendre RDV" }],
     },
     twitter: {
       card: "summary_large_image",
