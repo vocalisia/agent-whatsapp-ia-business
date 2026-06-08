@@ -4,7 +4,7 @@
     "tarifs": "Tarifs",
     "blog": "Blog",
     "contact": "Contact",
-    "audit": "Audit gratuit",
+    "audit": "Prendre RDV",
     "whatsapp": "WhatsApp",
     "secteurs": "Secteurs",
     "integrations": "Intégrations",
@@ -24,7 +24,7 @@
     "pillAudioDesc": "Transcrit les vocaux",
     "pillRgpd": "RGPD",
     "pillRgpdDesc": "Conforme & sécurisé",
-    "ctaAudit": "Audit gratuit",
+    "ctaAudit": "Prendre RDV",
     "ctaWhatsapp": "Écrire sur WhatsApp",
     "trustRgpd": "RGPD compliant",
     "trustDeployed": "Déployé en 2 semaines",
@@ -133,7 +133,7 @@
     "title": "Une solution taillée pour vous",
     "subtitle": "Chaque projet est unique. On analyse votre besoin pendant l'audit gratuit.",
     "recommended": "RECOMMANDÉ",
-    "ctaAudit": "Audit gratuit — 30 min",
+    "ctaAudit": "Prendre RDV",
     "ctaSubtitle": "30 minutes · Sans engagement · Proposition sous 48h",
     "plans": [
       {
@@ -301,7 +301,7 @@
     "reading": "de lecture",
     "ctaTitle": "Prêt à automatiser votre WhatsApp ?",
     "ctaSubtitle": "Audit gratuit de 30 minutes — proposition sous 48h.",
-    "ctaButton": "Réserver mon audit gratuit"
+    "ctaButton": "Prendre RDV"
   },
   "services": {
     "qualificationLeads": {
@@ -311,7 +311,7 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Prêt à qualifier vos leads automatiquement ?",
       "ctaSubtitle": "Réservez un audit gratuit de 30 minutes — on analyse vos flux et on vous propose une solution sur-mesure sous 48h.",
-      "ctaButton": "Réserver mon audit gratuit",
+      "ctaButton": "Prendre RDV",
       "features": [
         "Questionnaire de qualification automatique",
         "Scoring IA en temps réel selon vos critères",
@@ -346,7 +346,7 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Lancez votre première campagne WhatsApp",
       "ctaSubtitle": "On s'occupe de tout : rédaction des templates, validation Meta, segmentation et envoi. Démarrage en 1 à 2 semaines.",
-      "ctaButton": "Réserver mon audit gratuit",
+      "ctaButton": "Prendre RDV",
       "features": [
         "Templates Meta pré-approuvés pour vos envois",
         "Personnalisation dynamique (nom, entreprise, produit)",
@@ -384,7 +384,7 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Connectez WhatsApp à votre CRM",
       "ctaSubtitle": "Dites-nous quel CRM vous utilisez et on vous montre exactement comment l'automatiser — audit gratuit de 30 minutes.",
-      "ctaButton": "Réserver mon audit gratuit",
+      "ctaButton": "Prendre RDV",
       "features": [
         "Synchronisation bidirectionnelle avec HubSpot",
         "Création automatique de contacts et deals Salesforce",
@@ -443,7 +443,7 @@
       "includedTitle": "Ce qui est inclus",
       "ctaTitle": "Automatisez vos prises de RDV",
       "ctaSubtitle": "Déploiement en moins d'une semaine. Réservez un audit gratuit et on configure tout ensemble.",
-      "ctaButton": "Réserver mon audit gratuit",
+      "ctaButton": "Prendre RDV",
       "features": [
         "Prise de RDV directement dans la conversation WhatsApp",
         "Intégration Cal.com v2 — disponibilités en temps réel",
@@ -527,7 +527,7 @@
       "contentBody": "WhatsApp Business compte plus de 200 millions d'utilisateurs professionnels actifs. Pourtant, la grande majorité des entreprises gèrent encore leurs conversations manuellement — avec des temps de réponse de plusieurs heures et des leads perdus pendant la nuit.\n\nUn agent IA WhatsApp Business change la donne en automatisant trois cas d'usage critiques :\n\n**1. Qualification de leads automatique**\nL'agent engage chaque nouveau contact dès la première seconde : il pose les bonnes questions, identifie le besoin, et transfère les prospects qualifiés directement à votre équipe commerciale. Résultat : +42 % de leads qualifiés sans charge supplémentaire pour vos équipes.\n\n**2. Prise de RDV intelligente**\nGrâce à l'intégration Cal.com ou Google Calendar, votre agent IA WhatsApp Business propose des créneaux disponibles et confirme les rendez-vous en temps réel. Zéro appel téléphonique, zéro échange d'emails. Le client réserve directement depuis WhatsApp.\n\n**3. Service client 24h/24, 7j/7**\n70 % des messages WhatsApp Business arrivent hors des horaires de bureau. Un agent IA répond instantanément : questions fréquentes, suivi de commande, traitement de réclamations, analyse de photos et transcription de vocaux. Votre équipe ne gère que les cas complexes.\n\nLa mise en production d'un agent IA WhatsApp Business prend 2 à 3 semaines. Il s'intègre à votre CRM (HubSpot, Salesforce, Pipedrive) et respecte les contraintes RGPD."
     },
     "common": {
-      "auditGratuit": "Audit gratuit",
+      "auditGratuit": "Prendre RDV",
       "ecrireWhatsapp": "Écrire sur WhatsApp",
       "service": "Service"
     }
@@ -830,7 +830,7 @@
     "trySuggestions": "Essayez",
     "convinced": "Convaincus ?",
     "convincedDesc": "Audit gratuit 30 min — voyez l'agent sur VOTRE business.",
-    "freeAudit": "Audit gratuit",
+    "freeAudit": "Prendre RDV",
     "detailedDemos": "Demos detaillees",
     "roiBadge": "Calculateur ROI",
     "roiTitle": "Combien allez-vous",
@@ -841,7 +841,7 @@
     "platformHighlight": "et plus",
     "ctaTitle": "Pret a automatiser votre WhatsApp ?",
     "ctaSubtitle": "Setup en 48h. Formation incluse. Sans engagement.",
-    "ctaBook": "Reserver mon audit gratuit",
+    "ctaBook": "Prendre RDV",
     "ctaWhatsapp": "Nous ecrire sur WhatsApp",
     "sectorGeneral": "General",
     "sectorEcommerce": "E-Commerce",
@@ -859,7 +859,7 @@
     "suggestClone": "Clonage vocal ?",
     "suggestWhatsapp": "WhatsApp features",
     "suggestTelephony": "Telephonie IA",
-    "suggestPricing": "Audit gratuit",
+    "suggestPricing": "Prendre RDV",
     "suggestBooking": "Prendre un RDV",
     "demoLangNotice": ""
   },
@@ -905,7 +905,7 @@
     "equivalent": "Temps libéré équipe",
     "perPerson": "Pour d'autres tâches à valeur ajoutée",
     "withMessages": "Avec {count} messages/jour, vous liberez {savings} de valeur temps par mois",
-    "bookAudit": "Réserver mon audit gratuit",
+    "bookAudit": "Prendre RDV",
     "min": "min"
   },
   "simulator": {

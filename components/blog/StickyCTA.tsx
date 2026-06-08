@@ -4,7 +4,7 @@ import Link from "next/link";
 import { X, MessageCircle } from "lucide-react";
 
 const labels: Record<string, { title: string; button: string; sub: string }> = {
-  fr: { title: "Prêt à automatiser votre WhatsApp ?", button: "Audit gratuit 30 min", sub: "Réponse sous 24h — sans engagement" },
+  fr: { title: "Prêt à automatiser votre WhatsApp ?", button: "Prendre RDV", sub: "Réponse sous 24h — sans engagement" },
   en: { title: "Ready to automate your WhatsApp?", button: "Free 30-min audit", sub: "Reply within 24h — no commitment" },
   de: { title: "Bereit, Ihr WhatsApp zu automatisieren?", button: "Kostenloser 30-Min-Audit", sub: "Antwort innerhalb von 24h — unverbindlich" },
   nl: { title: "Klaar om uw WhatsApp te automatiseren?", button: "Gratis 30-min audit", sub: "Antwoord binnen 24u — vrijblijvend" },

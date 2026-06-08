@@ -70,7 +70,7 @@ const t: Record<string, {
     ],
     ctaTitle: "Convaincu ? Parlons de votre cas",
     ctaSubtitle: "Audit gratuit de 30 min — on vous montre ce que ferait l'agent sur votre volume de messages.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     faqTitle: "Questions fréquentes",
     faqs: [

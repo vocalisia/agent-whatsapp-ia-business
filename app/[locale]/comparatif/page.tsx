@@ -130,7 +130,7 @@ export default async function ComparatifPage({ params }: { params: Promise<{ loc
         <p className="text-slate-400 text-lg max-w-xl mx-auto mb-6">{h.subtitle}</p>
         <a href={calLink} target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-wa hover:bg-wa/90 text-white rounded-xl px-6 py-3 font-bold text-sm transition-colors">
-          <Calendar size={16} /> {locale === "fr" ? "Audit gratuit — 30 min" : locale === "de" ? "Kostenloses Audit — 30 Min" : locale === "nl" ? "Gratis audit — 30 min" : "Free audit — 30 min"}
+          <Calendar size={16} /> {locale === "fr" ? "Prendre RDV" : locale === "de" ? "Kostenloses Audit — 30 Min" : locale === "nl" ? "Gratis audit — 30 min" : "Free audit — 30 min"}
         </a>
       </div>
 

@@ -122,7 +122,7 @@ const t: Record<string, {
     ctaBadge: "Première campagne en 24h",
     ctaTitle: "Votre base clients mérite mieux que des emails",
     ctaSubtitle: "On configure votre premier segment et votre première campagne ensemble — résultats visibles en 48h.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     longIntro: [
       "Le Marketing Hub WhatsApp d'AgenticWhatsup n'est pas un outil de plus. C'est ce qui remplace 4 stacks marketing distinctes — Mailchimp, Klaviyo, Hootsuite, et votre tableur Excel de segmentation — par une seule console qui exploite le canal le plus lu au monde. 98% d'ouverture en moins de 10 minutes contre 18 à 22% pour vos campagnes email les mieux optimisées : la différence ne se discute pas, elle se mesure dans votre P&L.",

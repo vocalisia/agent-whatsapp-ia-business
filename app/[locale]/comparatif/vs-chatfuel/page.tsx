@@ -68,7 +68,7 @@ const t: Record<string, {
     ],
     ctaTitle: "Chatfuel est-il vraiment le bon choix pour votre WhatsApp ?",
     ctaSubtitle: "Audit gratuit 30 min — on compare objectivement les 2 solutions sur votre cas concret.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     faqTitle: "Questions fréquentes",
     faqs: [

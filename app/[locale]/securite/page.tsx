@@ -102,7 +102,7 @@ const t: Record<string, {
     ctaBadge: "Confiance & transparence",
     ctaTitle: "Des questions sur la sécurité ?",
     ctaSubtitle: "Notre équipe répond à toutes vos questions de conformité avant tout engagement.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
   },
   en: {

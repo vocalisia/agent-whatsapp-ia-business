@@ -69,7 +69,7 @@ const t: Record<string, {
     ],
     ctaTitle: "Votre WhatsApp mérite mieux qu'un chatbot",
     ctaSubtitle: "Audit gratuit 30 min — on vous montre la différence entre un flow SendPulse et un vrai agent IA.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     faqTitle: "Questions fréquentes",
     faqs: [

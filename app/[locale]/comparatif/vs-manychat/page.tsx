@@ -67,7 +67,7 @@ const t: Record<string, {
     ],
     ctaTitle: "WhatsApp est votre canal prioritaire ?",
     ctaSubtitle: "Audit gratuit de 30 min — on vous montre la différence concrète avec un agent IA dédié WhatsApp.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     faqTitle: "Questions fréquentes",
     faqs: [

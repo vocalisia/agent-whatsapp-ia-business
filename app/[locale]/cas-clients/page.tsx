@@ -119,7 +119,7 @@ const t: Record<string, {
     ctaBadge: "Résultats garantis",
     ctaTitle: "Quel résultat voulez-vous atteindre ?",
     ctaSubtitle: "30 minutes pour analyser votre situation et estimer votre ROI potentiel.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
   },
   en: {

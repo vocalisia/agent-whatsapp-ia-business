@@ -41,7 +41,7 @@ const t: Record<string, {
     ],
     ctaTitle: "Votre stack est compatible",
     ctaSubtitle: "98% de nos clients utilisent déjà au moins un outil de notre catalogue.",
-    ctaPrimary: "Audit gratuit — 30 min",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
   },
   en: {

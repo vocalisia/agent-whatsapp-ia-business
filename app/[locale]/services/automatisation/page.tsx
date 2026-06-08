@@ -107,7 +107,7 @@ const t: Record<string, {
     ctaBadge: "Opérationnel en 15 minutes",
     ctaTitle: "Votre premier workflow ce soir",
     ctaSubtitle: "On le configure ensemble pendant l'audit — vous le voyez fonctionner avant de signer.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
   },
   en: {

@@ -125,7 +125,7 @@ const labels: Record<string, { back: string; about: string; expertise: string; t
     expertise: "Expertise",
     topics: "Sujets traités",
     contact: "Me contacter",
-    auditCta: "Réservez un audit gratuit 30 min",
+    auditCta: "Prendre RDV",
     bioP1:
       "Laurent Duplat est directeur publication d'AgenticWhatsup et auteur de plus de 25 articles consacrés à l'agent IA WhatsApp Business. Depuis 2022, il accompagne PME, e-commerçants et professions libérales dans le déploiement d'agents conversationnels IA capables de comprendre les messages vocaux et d'analyser les photos envoyées par les clients sur WhatsApp.",
     bioP2:

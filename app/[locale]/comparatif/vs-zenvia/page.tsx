@@ -68,7 +68,7 @@ const t: Record<string, {
     ],
     ctaTitle: "Votre WhatsApp européen mérite un agent européen",
     ctaSubtitle: "Audit gratuit 30 min — on vous montre pourquoi la localisation et la conformité RGPD comptent.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     faqTitle: "Questions fréquentes",
     faqs: [

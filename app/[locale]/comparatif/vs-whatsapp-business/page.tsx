@@ -66,7 +66,7 @@ const t: Record<string, {
     ],
     ctaTitle: "Prêt à passer au niveau supérieur ?",
     ctaSubtitle: "Audit gratuit de 30 min — on vous montre exactement ce que ferait l'IA sur votre volume actuel.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
     faqTitle: "Questions fréquentes",
     faqs: [

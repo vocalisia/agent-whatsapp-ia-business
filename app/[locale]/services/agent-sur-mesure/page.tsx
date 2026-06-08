@@ -55,7 +55,7 @@ const t: Record<string, {
     ctaBadge: "Prêt en 14 jours",
     ctaTitle: "Parlons de votre projet",
     ctaSubtitle: "30 minutes pour comprendre vos besoins et vous proposer une architecture.",
-    ctaPrimary: "Prendre RDV — Audit gratuit",
+    ctaPrimary: "Prendre RDV",
     ctaSecondary: "Écrire sur WhatsApp",
   },
   en: {

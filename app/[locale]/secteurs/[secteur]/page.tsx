@@ -13,7 +13,7 @@ const backLabels: Record<string, string> = {
 };
 
 const ctaLabels: Record<string, { primary: string; secondary: string; badge: string }> = {
-  fr: { primary: "Audit gratuit — 30 min", secondary: "Écrire sur WhatsApp", badge: "Prêt en 2 semaines" },
+  fr: { primary: "Prendre RDV", secondary: "Écrire sur WhatsApp", badge: "Prêt en 2 semaines" },
   en: { primary: "Free audit — 30 min", secondary: "Write on WhatsApp", badge: "Ready in 2 weeks" },
   de: { primary: "Kostenloses Audit — 30 Min", secondary: "Auf WhatsApp schreiben", badge: "Bereit in 2 Wochen" },
   nl: { primary: "Gratis audit — 30 min", secondary: "Schrijf op WhatsApp", badge: "Klaar in 2 weken" },
