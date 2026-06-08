@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { PhoneMissed, Clock, ImageOff, TrendingDown } from "lucide-react";
 import { useTranslations } from "next-intl";
-import CalEmbed from "@/components/shared/CalEmbed";
 
 const icons = [PhoneMissed, ImageOff, Clock, TrendingDown];
 const statValues = ["73%", "4h", "70%", "40%"];
@@ -52,21 +51,6 @@ export default function ProblemSection() {
             );
           })}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 36 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-          className="mt-10 sm:mt-14 rounded-2xl overflow-hidden border border-wa/20 shadow-[0_0_40px_rgba(37,211,102,0.08)]"
-        >
-          <div className="bg-surface px-5 py-3 border-b border-surface-2 flex items-center gap-3">
-            <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
-            <span className="text-sm font-medium text-white">Choisissez votre créneau</span>
-            <span className="ml-auto text-xs text-slate-500">Powered by iClosed</span>
-          </div>
-          <CalEmbed />
-        </motion.div>
       </div>
     </section>
   );

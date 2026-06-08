@@ -6,6 +6,7 @@ import Hero from "@/components/home/Hero";
 // so they don't block the critical Hero rendering path. This trims ~895KB unused JS
 // from the initial bundle that PageSpeed flagged.
 const StatsSection = dynamic(() => import("@/components/home/StatsSection"));
+const BookingEmbedSection = dynamic(() => import("@/components/home/BookingEmbedSection"));
 const ProblemSection = dynamic(() => import("@/components/home/ProblemSection"));
 const FeaturesGrid = dynamic(() => import("@/components/home/FeaturesGrid"));
 const HowItWorks = dynamic(() => import("@/components/home/HowItWorks"));
@@ -300,6 +301,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       <Hero />
       <StatsSection />
+      <BookingEmbedSection />
       <ProblemSection />
       <FeaturesGrid />
       <HowItWorks />
