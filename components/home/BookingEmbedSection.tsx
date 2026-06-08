@@ -10,7 +10,7 @@ export default function BookingEmbedSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.55 }}
-        className="max-w-5xl mx-auto rounded-2xl overflow-hidden border border-wa/20 shadow-[0_0_40px_rgba(37,211,102,0.08)]"
+        className="max-w-7xl mx-auto rounded-2xl overflow-hidden border border-wa/20 shadow-[0_0_40px_rgba(37,211,102,0.08)]"
       >
         <div className="bg-surface px-5 py-3 border-b border-surface-2 flex items-center gap-3">
           <div className="w-2 h-2 bg-wa rounded-full animate-pulse" />
