@@ -3,10 +3,10 @@ import Link from "next/link";
 import { Calendar, MessageCircle, TrendingUp, Star } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
-  fr: { title: "Cas clients — Résultats mesurés avec l'agent IA WhatsApp | AgenticWhatsup", description: "Découvrez comment nos clients ont transformé leur business avec l'agent IA WhatsApp : +42% leads qualifiés, -68% abandons panier, 0 appel manqué. ROI moyen : 8×." },
-  en: { title: "Client cases — Measured results with the WhatsApp AI agent | AgenticWhatsup", description: "See how our clients transformed their business with the WhatsApp AI agent: +42% qualified leads, -68% cart abandonment, 0 missed calls. Average ROI: 8×." },
-  de: { title: "Kundenfälle — Gemessene Ergebnisse mit dem WhatsApp KI-Agent | AgenticWhatsup", description: "Erfahren Sie, wie unsere Kunden ihr Geschäft mit dem WhatsApp KI-Agent transformierten: +42% qualifizierte Leads, -68% Warenkorbabbrüche, 0 verpasste Anrufe." },
-  nl: { title: "Klantcases — Gemeten resultaten met de WhatsApp AI-agent | AgenticWhatsup", description: "Ontdek hoe onze klanten hun bedrijf hebben getransformeerd met de WhatsApp AI-agent: +42% gekwalificeerde leads, -68% winkelwagenontwerpingen, 0 gemiste oproepen." },
+  fr: { title: "Cas clients — résultats agent IA WhatsApp", description: "Découvrez comment nos clients ont transformé leur business avec l'agent IA WhatsApp : +42% leads qualifiés, -68% abandons panier, 0 appel manqué. ROI moyen : 8×." },
+  en: { title: "Client cases — WhatsApp AI agent results", description: "See how our clients transformed their business with the WhatsApp AI agent: +42% qualified leads, -68% cart abandonment, 0 missed calls. Average ROI: 8×." },
+  de: { title: "Kundenfälle — Ergebnisse mit WhatsApp KI", description: "Erfahren Sie, wie unsere Kunden ihr Geschäft mit dem WhatsApp KI-Agent transformierten: +42% qualifizierte Leads, -68% Warenkorbabbrüche, 0 verpasste Anrufe." },
+  nl: { title: "Klantcases — resultaten met WhatsApp AI", description: "Ontdek hoe onze klanten hun bedrijf hebben getransformeerd met de WhatsApp AI-agent: +42% gekwalificeerde leads, -68% winkelwagenontwerpingen, 0 gemiste oproepen." },
 };
 
 const t: Record<string, {

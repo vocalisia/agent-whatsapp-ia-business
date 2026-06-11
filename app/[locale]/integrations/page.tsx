@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Calendar, Zap } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
-  fr: { title: "Intégrations — Connectez l'agent IA WhatsApp à vos outils | AgenticWhatsup", description: "Connectez l'agent IA WhatsApp à votre CRM, e-commerce, agenda et 50+ outils. HubSpot, Shopify, Zapier, Google Calendar — configuration en moins de 24h." },
-  en: { title: "Integrations — Connect your WhatsApp AI Agent to your tools | AgenticWhatsup", description: "Connect the WhatsApp AI agent to your CRM, e-commerce, calendar and 50+ tools. HubSpot, Shopify, Zapier, Google Calendar — set up in under 24h." },
-  de: { title: "Integrationen — WhatsApp KI-Agent mit Ihren Tools verbinden | AgenticWhatsup", description: "Verbinden Sie den WhatsApp KI-Agent mit Ihrem CRM, E-Commerce, Kalender und 50+ Tools. HubSpot, Shopify, Zapier — Einrichtung in unter 24h." },
-  nl: { title: "Integraties — WhatsApp AI-agent verbinden met uw tools | AgenticWhatsup", description: "Verbind de WhatsApp AI-agent met uw CRM, e-commerce, agenda en 50+ tools. HubSpot, Shopify, Zapier, Google Calendar — configuratie in minder dan 24u." },
+  fr: { title: "Intégrations — agent IA WhatsApp et outils", description: "Connectez l'agent IA WhatsApp à votre CRM, e-commerce, agenda et 50+ outils. HubSpot, Shopify, Zapier, Google Calendar — configuration en moins de 24h." },
+  en: { title: "Integrations — WhatsApp AI agent and tools", description: "Connect the WhatsApp AI agent to your CRM, e-commerce, calendar and 50+ tools. HubSpot, Shopify, Zapier, Google Calendar — set up in under 24h." },
+  de: { title: "Integrationen — WhatsApp KI-Agent und Tools", description: "Verbinden Sie den WhatsApp KI-Agent mit Ihrem CRM, E-Commerce, Kalender und 50+ Tools. HubSpot, Shopify, Zapier — Einrichtung in unter 24h." },
+  nl: { title: "Integraties — WhatsApp AI-agent en tools", description: "Verbind de WhatsApp AI-agent met uw CRM, e-commerce, agenda en 50+ tools. HubSpot, Shopify, Zapier, Google Calendar — configuratie in minder dan 24u." },
 };
 
 const t: Record<string, {

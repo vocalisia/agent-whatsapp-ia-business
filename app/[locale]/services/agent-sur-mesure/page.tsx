@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Calendar, CheckCircle, MessageCircle } from "lucide-react";
 
 const meta: Record<string, { title: string; description: string }> = {
-  fr: { title: "Agent IA WhatsApp sur-mesure — Développé pour votre métier | AgenticWhatsup", description: "Un agent IA WhatsApp entièrement personnalisé pour votre entreprise : formation sur vos données, connexion à vos APIs, personnalité de marque. Déployé en 14 jours." },
-  en: { title: "Custom WhatsApp AI Agent — Built for your business | AgenticWhatsup", description: "A fully custom WhatsApp AI agent for your business: trained on your data, connected to your APIs, with your brand voice. Deployed in 14 days." },
-  de: { title: "Maßgeschneiderter WhatsApp KI-Agent — Für Ihr Unternehmen entwickelt | AgenticWhatsup", description: "Ein vollständig individueller WhatsApp KI-Agent für Ihr Unternehmen: auf Ihren Daten trainiert, mit Ihren APIs verbunden, in Ihrer Markensprache. In 14 Tagen bereit." },
-  nl: { title: "Maatwerk WhatsApp AI-agent — Gebouwd voor uw bedrijf | AgenticWhatsup", description: "Een volledig op maat gemaakte WhatsApp AI-agent voor uw bedrijf: getraind op uw gegevens, verbonden met uw API's, in uw merkstem. In 14 dagen live." },
+  fr: { title: "Agent IA WhatsApp sur mesure — métier", description: "Un agent IA WhatsApp entièrement personnalisé pour votre entreprise : formation sur vos données, connexion à vos APIs, personnalité de marque. Déployé en 14 jours." },
+  en: { title: "Custom WhatsApp AI agent — for your business", description: "A fully custom WhatsApp AI agent for your business: trained on your data, connected to your APIs, with your brand voice. Deployed in 14 days." },
+  de: { title: "Maßgeschneiderter WhatsApp KI-Agent", description: "Ein vollständig individueller WhatsApp KI-Agent für Ihr Unternehmen: auf Ihren Daten trainiert, mit Ihren APIs verbunden, in Ihrer Markensprache. In 14 Tagen bereit." },
+  nl: { title: "Maatwerk WhatsApp AI-agent voor uw bedrijf", description: "Een volledig op maat gemaakte WhatsApp AI-agent voor uw bedrijf: getraind op uw gegevens, verbonden met uw API's, in uw merkstem. In 14 dagen live." },
 };
 
 const t: Record<string, {

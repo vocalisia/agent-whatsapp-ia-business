@@ -3,10 +3,10 @@ import Link from "next/link";
 import { SECTEURS, getSecteurTranslation } from "@/lib/secteurs";
 
 const metaTitles: Record<string, string> = {
-  fr: "Secteurs — Agent IA WhatsApp par industrie | AgenticWhatsup",
-  en: "Industries — WhatsApp AI Agent by industry | AgenticWhatsup",
-  de: "Branchen — WhatsApp KI-Agent nach Branche | AgenticWhatsup",
-  nl: "Sectoren — WhatsApp AI-agent per sector | AgenticWhatsup",
+  fr: "Secteurs — agent IA WhatsApp par industrie",
+  en: "Industries — WhatsApp AI agent by industry",
+  de: "Branchen — WhatsApp KI-Agent nach Branche",
+  nl: "Sectoren — WhatsApp AI-agent per sector",
 };
 
 const metaDescriptions: Record<string, string> = {
