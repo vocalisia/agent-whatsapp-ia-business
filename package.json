@@ -10,7 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prebuild": "node scripts/seo-tag-guard.cjs"
+    "prebuild": "node scripts/check-ga4.mjs && node scripts/seo-tag-guard.cjs"
   },
   "dependencies": {
     "@vercel/speed-insights": "^2.0.0",
