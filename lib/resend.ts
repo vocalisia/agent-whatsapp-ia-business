@@ -8,4 +8,4 @@ export function getResend(): Resend {
   return new Resend(key);
 }
 
-export const TO_EMAIL = process.env.RESEND_TO_EMAIL ?? "contact@example.com";
+export const TO_EMAIL = "contact@vocalis.pro";

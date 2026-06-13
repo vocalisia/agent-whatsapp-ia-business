@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getResend } from "@/lib/resend";
+import { getResend, TO_EMAIL } from "@/lib/resend";
 
 // iClosed sends booking data as JSON webhook
 // We forward a beautiful VSL email to the client
@@ -125,6 +125,13 @@ export async function POST(req: NextRequest) {
       to: clientEmail,
       subject: `✅ Session confirmée — regardez cette vidéo avant notre appel`,
       html,
+    });
+    await resend.emails.send({
+      from: "AgenticWhatsup <noreply@resend.dev>",
+      to: TO_EMAIL,
+      replyTo: clientEmail,
+      subject: `Nouvelle session AgenticWhatsup — ${clientName}`,
+      html: `<h2>Nouvelle session réservée</h2><p><strong>Nom :</strong> ${clientName}</p><p><strong>Email :</strong> ${clientEmail}</p><p><strong>Date :</strong> ${formattedDate}</p>`,
     });
     return NextResponse.json({ success: true });
   } catch (err: unknown) {
