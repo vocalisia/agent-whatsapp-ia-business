@@ -14,12 +14,12 @@ const FinalCTA = dynamic(() => import("@/components/home/FinalCTA"));
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   fr: {
-    title: "Agent IA WhatsApp Business | AgenticWhatsup",
-    description: "Agent IA WhatsApp Business : qualifiez vos leads, prenez des RDV et assurez un service client 24/7 via WhatsApp. Vision IA, transcription vocale, déployé en 2-3 semaines.",
+    title: "WhatsUp AI : agent IA WhatsApp Business",
+    description: "WhatsUp AI et agent IA WhatsApp Business : qualifiez vos leads, prenez des RDV et assurez un service client via WhatsApp avec Vision IA et transcription vocale.",
   },
   en: {
-    title: "AI Agent for WhatsApp Business | AgenticWhatsup",
-    description: "AI agent for WhatsApp Business: qualify leads, book appointments, and deliver 24/7 customer service via WhatsApp. AI Vision, voice transcription, deployed in 2-3 weeks.",
+    title: "WhatsUp AI for WhatsApp Business",
+    description: "WhatsUp AI and WhatsApp Business AI agent: qualify leads, book appointments, and deliver customer service via WhatsApp with AI Vision and voice transcription.",
   },
   de: {
     title: "WhatsApp KI-Agent | Automatisieren Kundennachrichten 24/7",
