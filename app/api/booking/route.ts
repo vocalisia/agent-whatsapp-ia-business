@@ -121,13 +121,13 @@ export async function POST(req: NextRequest) {
   try {
     const resend = getResend();
     await resend.emails.send({
-      from: "AgenticWhatsup <noreply@resend.dev>",
+      from: "AgenticWhatsup <onboarding@resend.dev>",
       to: clientEmail,
       subject: `✅ Session confirmée — regardez cette vidéo avant notre appel`,
       html,
     });
     await resend.emails.send({
-      from: "AgenticWhatsup <noreply@resend.dev>",
+      from: "AgenticWhatsup <onboarding@resend.dev>",
       to: "contact@vocalis.pro",
       replyTo: clientEmail,
       subject: `Nouvelle session AgenticWhatsup — ${clientName}`,

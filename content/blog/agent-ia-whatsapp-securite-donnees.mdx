@@ -1,0 +1,104 @@
+---
+title: "Agent IA WhatsApp : sécurité des données"
+date: "2026-06-19"
+dateModified: "2026-06-19"
+description: "Checklist sécurité et gouvernance pour un agent IA WhatsApp : minimisation, accès, journalisation, données sensibles, CRM, conservation et droits des personnes."
+readTime: "10 min"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Cartographier les données"
+    text: "Identifier les messages, pièces, vocaux, images, champs CRM et historiques utilisés par l'agent."
+  - name: "Réduire le périmètre"
+    text: "Limiter les données traitées à ce qui est nécessaire pour répondre, router ou déclencher une action."
+  - name: "Sécuriser les accès"
+    text: "Définir les rôles, les journaux, les droits d'accès et les règles de reprise humaine."
+  - name: "Contrôler dans le temps"
+    text: "Revoir régulièrement les conversations, les erreurs, les durées de conservation et les demandes liées aux droits des personnes."
+---
+
+> **Réponse courte :** la sécurité d'un agent IA WhatsApp repose sur quatre réflexes : savoir quelles données entrent, limiter ce que l'agent utilise, tracer les actions utiles et prévoir une reprise humaine dès qu'une conversation devient sensible.
+
+## Pourquoi WhatsApp demande une vraie gouvernance
+
+WhatsApp reçoit souvent des informations très concrètes : identité, numéro, adresse, documents, photos, messages vocaux, situations personnelles, demandes urgentes. Un agent IA qui traite ces messages doit donc être cadré comme un système métier, pas comme un simple widget.
+
+Ce guide complète [WhatsApp IA, RGPD et AI Act](/fr/blog/whatsapp-ia-rgpd-ai-act-suisse), la page pilier [déployer un agent IA WhatsApp](/fr/blog/deployer-agent-ia-whatsapp-guide-operationnel) et le guide [escalade humaine](/fr/blog/agent-ia-whatsapp-escalade-humaine).
+
+## Checklist de sécurité
+
+| Sujet | Question à poser | Bonne pratique |
+|---|---|---|
+| Données entrantes | Que reçoit l'agent ? | cartographier texte, image, vocal, document |
+| Finalité | Pourquoi traiter cette donnée ? | rattacher chaque traitement à un usage clair |
+| Accès | Qui peut relire ou corriger ? | rôles et droits limités |
+| Conservation | Combien de temps garder ? | durée adaptée au besoin métier |
+| Escalade | Quand transférer ? | règles pour demandes sensibles |
+| Journalisation | Que tracer ? | action, source, responsable, correction |
+
+La CNIL rappelle que les chatbots peuvent traiter des données personnelles et qu'il faut tenir compte des droits et libertés des personnes. Le PFPDT suisse rappelle également que la loi suisse sur la protection des données s'applique aux traitements basés sur l'IA.
+
+## Minimisation : ne pas tout envoyer à l'agent
+
+Un agent IA performant n'a pas besoin de tout lire. Il doit recevoir le contexte utile, pas l'intégralité des systèmes internes.
+
+Exemples de minimisation :
+
+- masquer les champs inutiles dans le CRM ;
+- résumer un historique au lieu de l'envoyer en entier ;
+- exclure certaines pièces sensibles ;
+- demander confirmation avant action ;
+- éviter les réponses automatisées sur les sujets à risque ;
+- limiter les droits selon les équipes.
+
+Cette approche améliore la conformité et réduit les erreurs.
+
+## Données sensibles et demandes à risque
+
+Certaines conversations doivent être traitées avec prudence : santé, situation financière, litige, identité, documents officiels, conflit client, accès compte, enfant, salarié, candidature, assurance, juridique.
+
+Dans ces cas, l'agent peut :
+
+1. reconnaître la demande ;
+2. éviter de conclure trop vite ;
+3. demander une précision minimale ;
+4. proposer une reprise humaine ;
+5. journaliser la raison du transfert.
+
+L'article [agent IA WhatsApp service client](/fr/blog/agent-ia-whatsapp-service-client-cx) explique comment intégrer cette logique sans dégrader l'expérience client.
+
+## Sécuriser le CRM et les outils connectés
+
+Le risque ne vient pas seulement du message WhatsApp. Il vient aussi des outils reliés : CRM, agenda, ticketing, base documentaire, fichiers internes. Chaque intégration doit avoir un droit limité à son rôle.
+
+Un agent qui qualifie un lead n'a pas besoin de modifier tous les champs sensibles. Un agent support n'a pas besoin d'accéder à toutes les opportunités commerciales. Une règle simple : chaque action doit pouvoir être justifiée et relue.
+
+## Journalisation utile
+
+La journalisation ne doit pas devenir une accumulation illisible. Elle doit répondre à quatre questions :
+
+- quelle demande a été reçue ;
+- quelle source a été utilisée ;
+- quelle action a été proposée ou exécutée ;
+- qui a corrigé ou repris la conversation.
+
+Ces journaux servent à améliorer le système, vérifier la qualité et répondre aux demandes internes.
+
+Pour cadrer précisément les preuves à conserver sans stocker trop de données, consultez [journalisation agent IA WhatsApp](/fr/blog/journalisation-agent-ia-whatsapp) et [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp).
+
+## Questions fréquentes
+
+### Faut-il stocker toutes les conversations WhatsApp ?
+
+Non. Il faut définir une durée et une finalité. Certaines informations peuvent être résumées, supprimées ou exclues selon le contexte.
+
+### L'agent peut-il traiter des documents ou photos ?
+
+Oui, mais seulement avec un périmètre clair, des consignes de minimisation et une reprise humaine pour les cas sensibles.
+
+### Comment relier sécurité et performance ?
+
+Un agent mieux cadré répond souvent mieux : il sait ce qu'il peut utiliser, ce qu'il doit ignorer et quand transférer.
+
+### Quelle suite logique ?
+
+Un [audit gratuit de 30 minutes](/fr/contact) permet de cartographier données, accès, CRM, risques et règles de supervision.

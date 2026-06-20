@@ -69,6 +69,38 @@ const SECTEUR_DATES: Record<string, string> = {
 };
 
 const secteurSlugs = Object.keys(SECTEUR_DATES);
+const pillarBlogSlugs = new Set([
+  "automatisation-whatsapp-ecommerce",
+  "integrer-agent-ia-whatsapp-shopify",
+  "whatsapp-shopify-integration-panier-abandonne",
+  "whatsapp-shopify-integration-catalogue",
+  "whatsapp-shopify-integration-sav",
+  "agent-ia-whatsapp-ecommerce-suivi-commande",
+  "agent-ia-whatsapp-ecommerce-fidelisation",
+  "gouvernance-agent-ia-whatsapp",
+  "whatsapp-opt-in-stop-agent-ia",
+  "templates-whatsapp-business-agent-ia",
+  "qualite-numero-whatsapp-business-ia",
+  "supervision-humaine-agent-ia-whatsapp",
+  "journalisation-agent-ia-whatsapp",
+  "deployer-agent-ia-whatsapp-guide-operationnel",
+  "agent-ia-whatsapp-crm-pipeline-commercial",
+  "agent-ia-whatsapp-escalade-humaine",
+  "agent-ia-whatsapp-securite-donnees",
+  "agent-ia-whatsapp-kpi-tableau-bord",
+  "agent-ia-whatsapp-multi-sites-franchise",
+  "agent-ia-whatsapp-messages-vocaux-photos-documents",
+  "agent-ia-whatsapp-guide-business-2026",
+  "whatsapp-ia-rgpd-ai-act-suisse",
+  "agent-ia-whatsapp-service-client-cx",
+  "agent-ia-whatsapp-business",
+  "whatsup-ai-whatsapp-agent-2026",
+  "comment-fonctionne-agent-ia-whatsapp",
+  "whatsapp-business-api-cloud-vs-bsp",
+  "whatsapp-cloud-api-vs-agent-ia",
+  "rgpd-whatsapp-ia-guide",
+  "meilleurs-agents-ia-whatsapp-comparatif-2026",
+]);
 
 const pages = [
   { path: "", changeFrequency: "weekly" as const, priority: 1.0 },
@@ -132,14 +164,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Blog posts — lastModified from frontmatter date
+  // Blog posts - lastModified follows the editorial update date when available.
   for (const post of blogPosts) {
-    const lastModified = post.date ?? "2026-01-01";
+    const lastModified = post.dateModified ?? post.date ?? "2026-01-01";
     entries.push({
       url: `${BASE_URL}/fr/blog/${post.slug}`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: pillarBlogSlugs.has(post.slug) ? 0.85 : 0.7,
       alternates: {
         languages: buildAlternates(`/blog/${post.slug}`),
       },

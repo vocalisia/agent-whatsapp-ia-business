@@ -1,0 +1,111 @@
+---
+title: "Journalisation agent IA WhatsApp : preuves"
+date: "2026-06-20"
+dateModified: "2026-06-20"
+description: "Guide pour journaliser un agent IA WhatsApp sans excès : consentement, conversations, actions, sources, escalades, corrections, conservation et droits des personnes."
+readTime: "9 min"
+author: "Laurent Duplat"
+coverImage: "/images/blog/journalisation-agent-ia-whatsapp.jpg"
+coverImageAlt: "Écran d'audit et journalisation des actions d'un agent IA WhatsApp."
+howToSteps:
+  - name: "Définir les événements à tracer"
+    text: "Lister consentement, message reçu, réponse envoyée, source utilisée, action métier, escalade, correction humaine et retrait."
+  - name: "Limiter les données"
+    text: "Conserver les preuves utiles et éviter de stocker durablement les informations sensibles ou inutiles."
+  - name: "Relier les logs au CRM"
+    text: "Associer chaque événement au contact, à la conversation, au dossier et à la règle qui a déclenché l'action."
+  - name: "Prévoir l'accès et l'effacement"
+    text: "Pouvoir retrouver, exporter, corriger ou supprimer les données d'une personne selon les droits applicables."
+---
+
+> **Réponse courte :** la journalisation d'un agent IA WhatsApp doit prouver ce qui s'est passé sans conserver trop de données. Les logs utiles couvrent consentement, message, réponse, source, action, escalade, correction humaine et retrait.
+
+## Pourquoi journaliser un agent IA WhatsApp
+
+Un agent IA qui agit dans WhatsApp doit laisser une trace. Sans journalisation, impossible de comprendre pourquoi une réponse a été envoyée, quelle source a été utilisée, qui a repris la main ou pourquoi une séquence a continué après un STOP.
+
+Cette page complète [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp), [opt-in WhatsApp IA](/fr/blog/whatsapp-opt-in-stop-agent-ia), [supervision humaine WhatsApp IA](/fr/blog/supervision-humaine-agent-ia-whatsapp) et [sécurité données WhatsApp IA](/fr/blog/agent-ia-whatsapp-securite-donnees).
+
+## Les événements à tracer
+
+| Événement | Pourquoi le garder | Exemple |
+|---|---|---|
+| Opt-in | Prouver la base du contact | Formulaire, conversation entrante, demande client |
+| Préférence | Respecter les limites | Service accepté, marketing refusé |
+| Message entrant | Comprendre l'intention | Texte, vocal transcrit, photo, document |
+| Réponse envoyée | Auditer la qualité | Template, réponse IA, réponse humaine |
+| Source utilisée | Vérifier la réponse | FAQ, CRM, catalogue, politique interne |
+| Action métier | Suivre l'impact | Ticket, rendez-vous, lead, tâche |
+| Escalade | Justifier le transfert | Confiance faible, réclamation, donnée sensible |
+| Correction | Améliorer le système | Réponse modifiée par un humain |
+
+La journalisation n'est pas un prétexte pour tout garder. Elle doit servir la preuve, la qualité et les droits des personnes.
+
+## Conservation : garder moins, mais mieux
+
+La CNIL indique, dans ses conseils sur les chatbots, que les données doivent être conservées pendant la durée nécessaire à la finalité du traitement. Elle distingue les cas où les données peuvent être effacées à la fin de la conversation et les cas où une conservation plus longue se justifie, par exemple pour une réclamation.
+
+Traduction opérationnelle :
+
+- ne pas conserver les pièces sensibles sans raison ;
+- purger ou masquer ce qui n'est pas utile ;
+- séparer les logs techniques et les données personnelles ;
+- définir une durée par type de conversation ;
+- documenter les exceptions ;
+- permettre l'effacement ou la restriction quand le droit applicable l'exige.
+
+## Exemple de trace utile
+
+```text
+conversation_id: wa_...
+contact_id: crm_...
+source_opt_in: formulaire_contact
+intent: demande_rendez_vous
+message_type: texte
+response_mode: template_valide
+knowledge_source: agenda_crm
+action: proposition_creneau
+handover: false
+retention_policy: support_12_mois
+```
+
+Cette trace ne suffit pas à elle seule, mais elle donne déjà une base pour expliquer l'action.
+
+## Journaliser les erreurs
+
+Un bon système trace aussi :
+
+- réponse refusée par un humain ;
+- hallucination évitée ;
+- source manquante ;
+- escalade tardive ;
+- template mal choisi ;
+- STOP non compris ;
+- donnée sensible détectée ;
+- plainte ou signalement.
+
+Ces erreurs nourrissent l'amélioration. Elles permettent de corriger les règles, pas seulement de réécrire un prompt.
+
+## Droits des personnes
+
+Le [guide EDPB sur les droits des personnes](https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en) détaille notamment les droits d'accès, rectification, effacement, limitation, portabilité, opposition et certaines garanties contre les décisions entièrement automatisées.
+
+Pour un agent IA WhatsApp, cela implique un système capable de retrouver les conversations d'une personne, les préférences, les actions déclenchées et les suppressions demandées.
+
+## Questions fréquentes
+
+### Faut-il stocker toute la conversation ?
+
+Pas toujours. Il faut conserver ce qui est nécessaire à la finalité, à la qualité et à la preuve. Une conversation commerciale simple, une réclamation et une demande de suppression n'ont pas les mêmes besoins de conservation.
+
+### Les logs techniques suffisent-ils ?
+
+Non. Des logs techniques montrent qu'un appel API a eu lieu. Ils ne prouvent pas toujours pourquoi l'agent a répondu, quelle source a été utilisée ou quel consentement autorisait l'action.
+
+### Qui doit accéder aux journaux ?
+
+Uniquement les personnes qui en ont besoin : support, responsable du traitement, équipe qualité, DPO ou responsable opérationnel selon le contexte. Les accès doivent être limités et traçables.
+
+### Que lire ensuite ?
+
+Lisez [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp), [sécurité données WhatsApp IA](/fr/blog/agent-ia-whatsapp-securite-donnees) et [KPI agent IA WhatsApp](/fr/blog/agent-ia-whatsapp-kpi-tableau-bord).

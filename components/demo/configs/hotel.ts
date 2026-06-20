@@ -13,11 +13,11 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   reservation: {
-    text: "**Reservation de chambre**\n\nPour trouver la chambre ideale, indiquez :\n\n**Dates :** Arrivee et depart\n**Type :** Classique, Superieure, Suite, Prestige\n**Voyageurs :** Nombre d'adultes et enfants\n**Preferences :** Vue mer, etage eleve, lit king...\n\n**Exemple :** *\"Suite vue mer, 2 adultes, du 15 au 18 mai\"*\n\n**Avantage reservation WhatsApp :**\n- Meilleur tarif garanti\n- Upgrade gratuit selon dispo\n- Late check-out offert\n\nQuelles sont vos dates ?",
+    text: "**Reservation de chambre**\n\nPour trouver la chambre ideale, indiquez :\n\n**Dates :** Arrivee et depart\n**Type :** Classique, Superieure, Suite, Prestige\n**Voyageurs :** Nombre d'adultes et enfants\n**Preferences :** Vue mer, etage eleve, lit king...\n\n**Exemple :** *\"Suite vue mer, 2 adultes, du 15 au 18 mai\"*\n\n**Avantage reservation WhatsApp :**\n- Meilleure option proposée\n- Upgrade gratuit selon dispo\n- Late check-out offert\n\nQuelles sont vos dates ?",
     delay: 2000,
     quickReplies: [
       { label: "Voir les chambres", value: "chambres" },
-      { label: "Tarifs", value: "tarifs chambre" },
+      { label: "Cadrage", value: "conditions chambre" },
       { label: "Suite prestige", value: "chambres" },
       { label: "Groupe / evenement", value: "groupe" },
     ],
@@ -28,12 +28,12 @@ const sectorIntents: Record<string, BotResponse> = {
     quickReplies: [
       { label: "Reserver suite", value: "reservation" },
       { label: "Photo chambre", value: "photo chambre" },
-      { label: "Tarifs saison", value: "tarifs chambre" },
+      { label: "Disponibilités saison", value: "conditions chambre" },
       { label: "Services inclus", value: "conciergerie" },
     ],
   },
-  "tarifs chambre": {
-    text: "**Grille tarifaire par saison**\n\n| Chambre | Basse saison | Haute saison | Fetes |\n|---------|-------------|-------------|-------|\n| Classique | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Superieure | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Suite Junior | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Suite Prestige | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n\n**Basse saison :** Nov - Mars (hors fetes)\n**Haute saison :** Avril - Octobre\n**Fetes :** Noel, Nouvel An, Paques\n\n**Offres speciales :**\n- -15% pour 5+ nuits\n- -10% reservation anticipee (60j)\n- Package lune de miel disponible\n\nTarifs par nuit, petit-dejeuner inclus.",
+  "conditions chambre": {
+    text: "**Grille budgetaire par saison**\n\n| Chambre | Basse saison | Haute saison | Fetes |\n|---------|-------------|-------------|-------|\n| Classique | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Superieure | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Suite Junior | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n| Suite Prestige | estimation personnalisee | estimation personnalisee | estimation personnalisee |\n\n**Basse saison :** Nov - Mars (hors fetes)\n**Haute saison :** Avril - Octobre\n**Fetes :** Noel, Nouvel An, Paques\n\n**Offres speciales :**\n- -15% pour 5+ nuits\n- -10% reservation anticipee (60j)\n- Package lune de miel disponible\n\nCadrage par nuit, petit-dejeuner inclus.",
     delay: 2200,
     quickReplies: [
       { label: "Reserver maintenant", value: "reservation" },
@@ -53,7 +53,7 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "check out": {
-    text: "**Informations check-out**\n\n**Horaires standard :**\n- Check-out : avant **11h00**\n- Express check-out : deposez la cle, facture par email\n\n**Late check-out :**\n- 13h00 : gratuit (selon dispo)\n- 15h00 : gain mesure\n- 18h00 : gain mesure (demi-journee)\n\n**Politique d'annulation :**\n- Flexible : annulation gratuite 48h avant\n- Non-remboursable : -15% sur le tarif\n\n**Le jour du depart :**\n- Petit-dejeuner servi jusqu'a 10h30\n- Bagagerie gratuite\n- Navette aeroport sur demande\n\nBesoin d'un late check-out ?",
+    text: "**Informations check-out**\n\n**Horaires standard :**\n- Check-out : avant **11h00**\n- Express check-out : deposez la cle, facture par email\n\n**Late check-out :**\n- 13h00 : gratuit (selon dispo)\n- 15h00 : gain mesure\n- 18h00 : gain mesure (demi-journee)\n\n**Politique d'annulation :**\n- Flexible : annulation gratuite 48h avant\n- Non-remboursable : -15% sur le budget\n\n**Le jour du depart :**\n- Petit-dejeuner servi jusqu'a 10h30\n- Bagagerie gratuite\n- Navette aeroport sur demande\n\nBesoin d'un late check-out ?",
     delay: 1800,
     quickReplies: [
       { label: "Late check-out", value: "check out" },
@@ -133,11 +133,11 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   "photo chambre": {
-    text: "Envoyez-moi une **photo ou screenshot** de la chambre souhaitee et notre IA identifiera :\n\n- **Type de chambre** correspondant\n- **Disponibilite** en temps reel\n- **Tarif** pour vos dates\n- **Vue** (mer, jardin, ville)\n\nVous pouvez aussi envoyer une photo d'un autre hotel et on vous propose l'equivalent chez nous !\n\nEnvoyez votre image !",
+    text: "Envoyez-moi une **photo ou screenshot** de la chambre souhaitee et notre IA identifiera :\n\n- **Type de chambre** correspondant\n- **Disponibilite** en temps reel\n- **Cadrage** pour vos dates\n- **Vue** (mer, jardin, ville)\n\nVous pouvez aussi envoyer une photo d'un autre hotel et on vous propose l'equivalent chez nous !\n\nEnvoyez votre image !",
     delay: 1600,
     quickReplies: [
       { label: "Voir nos chambres", value: "chambres" },
-      { label: "Tarifs", value: "tarifs chambre" },
+      { label: "Cadrage", value: "conditions chambre" },
       { label: "Reserver", value: "reservation" },
       { label: "Visite virtuelle", value: "chambres" },
     ],
@@ -153,12 +153,12 @@ const sectorIntents: Record<string, BotResponse> = {
     ],
   },
   groupe: {
-    text: "**Groupes & Evenements — HotelLux**\n\n**Seminaires & Conferences :**\n- 3 salles (20 a 200 personnes)\n- Equipement AV complet\n- Wifi haut debit dedie\n- Pauses cafe + dejeuner inclus\n- sur audit gratuit/jour\n\n**Mariages & Receptions :**\n- Terrasse panoramique (150 pers max)\n- Menu degustation sur mesure\n- Wedding planner partenaire\n- Forfait sur audit gratuit\n\n**Groupes touristiques :**\n- Tarifs negocies des 10 chambres\n- Guide local inclus\n- Programme d'activites personnalise\n\nEnvoyez-nous votre brief pour un devis sous 24h.",
+    text: "**Groupes & Evenements — HotelLux**\n\n**Seminaires & Conferences :**\n- 3 salles (20 a 200 personnes)\n- Equipement AV complet\n- Wifi haut debit dedie\n- Pauses cafe + dejeuner inclus\n- cadrage sur audit\n\n**Mariages & Receptions :**\n- Terrasse panoramique (150 pers max)\n- Menu degustation sur mesure\n- Wedding planner partenaire\n- Cadrage sur audit gratuit\n\n**Groupes touristiques :**\n- Cadrage negocies des 10 chambres\n- Guide local inclus\n- Programme d'activites personnalise\n\nEnvoyez-nous votre brief pour un cadrage sous 24h.",
     delay: 2400,
     quickReplies: [
-      { label: "Devis seminaire", value: "groupe" },
-      { label: "Devis mariage", value: "groupe" },
-      { label: "Tarifs groupe", value: "tarifs chambre" },
+      { label: "Cadrage séminaire", value: "groupe" },
+      { label: "Cadrage mariage", value: "groupe" },
+      { label: "Cadrage groupe", value: "conditions chambre" },
       { label: "Visiter les salles", value: "conciergerie" },
     ],
   },
@@ -174,8 +174,8 @@ const sectorKeywords: Record<string, string[]> = {
     "chambre", "suite", "penthouse", "categorie", "type chambre",
     "classique", "superieure", "prestige",
   ],
-  "tarifs chambre": [
-    "tarif chambre", "prix nuit", "combien nuit", "cout chambre",
+  "conditions chambre": [
+    "budget chambre", "budget nuit", "combien nuit", "cout chambre",
     "saison", "promotion", "financement", "finance", "credit", "pret", "mensualite", "paiement", "payer", "facilite",
   ],
   "check in": [
@@ -231,7 +231,7 @@ const hotelFallback = createFallback([
   { label: "Reserver", value: "reservation" },
   { label: "Nos chambres", value: "chambres" },
   { label: "Spa", value: "spa" },
-  { label: "Tarifs Vocalis", value: "tarif" },
+  { label: "Audit Vocalis", value: "budget" },
 ]);
 
 const hotelConfig: SimulatorConfig = {

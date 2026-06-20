@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
   try {
     const resend = getResend();
     await resend.emails.send({
-      from: "WhatsAgentIA <noreply@resend.dev>",
+      from: "WhatsAgentIA <onboarding@resend.dev>",
       to: TO_EMAIL,
       subject: `Nouveau contact — ${name} (${company || "sans société"})`,
       html: `<h2>Nouveau message depuis le site</h2><p><strong>Nom :</strong> ${name}</p><p><strong>Email :</strong> ${email}</p><p><strong>Téléphone :</strong> ${phone || "non renseigné"}</p><p><strong>Société :</strong> ${company || "non renseignée"}</p><hr/><p><strong>Message :</strong></p><p>${message.replace(/\n/g, "<br>")}</p>`,

@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Leistungen",
-    "tarifs": "Preise",
+    "tarifs": "Audit",
     "blog": "Blog",
     "contact": "Kontakt",
     "audit": "Kostenloses Audit",
@@ -220,13 +220,13 @@
     "directContact": "Direktkontakt"
   },
   "tarifs": {
-    "eyebrow": "Pakete",
+    "eyebrow": "Audit",
     "title": "Jedes Projekt ist einzigartig",
-    "subtitle": "Keine starre Preisliste. Wir besprechen Ihre Anforderungen und schlagen die passende Lösung vor — nicht mehr, nicht weniger.",
+    "subtitle": "Wir besprechen Ihren Bedarf und empfehlen den passenden Umfang, nicht mehr und nicht weniger.",
     "recommended": "EMPFOHLEN",
     "plans": [
       {
-        "name": "Starter",
+        "name": "Umfang",
         "description": "KMU, die mit WhatsApp-Automatisierung starten.",
         "features": [
           "1 WhatsApp Business-Agent",
@@ -239,7 +239,7 @@
         ]
       },
       {
-        "name": "Pro",
+        "name": "Rollout",
         "description": "Die Komplettlösung für vollständige Automatisierung.",
         "features": [
           "Mehrere Gesprächsszenarien",
@@ -254,7 +254,7 @@
         ]
       },
       {
-        "name": "Enterprise",
+        "name": "Individuell",
         "description": "Massgeschneiderte Lösung für grosse Organisationen.",
         "features": [
           "Vollständig individuelle Architektur",
@@ -268,18 +268,18 @@
         ]
       }
     ],
-    "sessionEyebrow": "Strategiegespräch",
+    "sessionEyebrow": "Strategie-Session",
     "sessionTitle": "Strategiegespräch — Ihr WhatsApp-KI-Agent",
     "sessionSubtitle": "30 Minuten, um Ihre Abläufe zu analysieren, mögliche Automatisierungen zu identifizieren und Ihre Strategie zu definieren. Kostenlose Diagnose, unverbindlich.",
-    "faqTitle": "Häufig gestellte Fragen",
+    "faqTitle": "Häufige Fragen",
     "faqs": [
       {
-        "question": "Beinhalten die Preise die Einrichtung?",
-        "answer": "Ja. Jedes Angebot umfasst Entwicklung, WhatsApp Business-Konfiguration, Tests und vollständige Bereitstellung. Keine Überraschungen."
+        "question": "Ist die Umsetzung im Umfang enthalten?",
+        "answer": "Ja. Der Umfang beschreibt Entwicklung, WhatsApp-Business-Konfiguration, Tests und vollständigen Rollout."
       },
       {
-        "question": "Gibt es laufende Kosten?",
-        "answer": "Ja, ein monatliches Paket deckt Hosting, API-Aufrufe (LLM) und Wartung ab. Dieses Paket ist in unserem Angebot enthalten."
+        "question": "Gibt es Begleitung nach dem Start?",
+        "answer": "Ja. Die Begleitung umfasst Hosting, API-Aufrufe, Wartung und laufende Optimierung gemäß validiertem Umfang."
       },
       {
         "question": "Wie lange dauert die Inbetriebnahme?",
@@ -475,11 +475,11 @@
       "heroTitle": "Ihr WhatsApp Business KI-Agent,",
       "heroHighlight": "schlüsselfertig",
       "heroSubtitle": "Von der Bedarfsanalyse bis zur Inbetriebnahme — wir setzen Ihren WhatsApp KI-Agenten in 2 bis 3 Wochen ein. KI-Vision, Sprachtranskription, Terminbuchung, CRM-Integrationen.",
-      "pricingEyebrow": "Preise",
-      "pricingTitle": "Eine Investition, die zu Ihrem Unternehmen passt",
-      "pricingSubtitle": "Jedes Projekt ist einzigartig. Kontaktieren Sie uns für ein individuelles Angebot basierend auf Ihren Volumen und Integrationen.",
-      "pricingViewPlans": "Tarife ansehen",
-      "pricingRequestQuote": "Angebot anfordern",
+      "pricingEyebrow": "Audit",
+      "pricingTitle": "Ein Umfang passend zu Ihrem Unternehmen",
+      "pricingSubtitle": "Jedes Projekt ist anders. Kontaktieren Sie uns für ein individuelles Audit auf Basis Ihrer Volumen und Integrationen.",
+      "pricingViewPlans": "Umfang ansehen",
+      "pricingRequestQuote": "Audit anfragen",
       "faqEyebrow": "FAQ",
       "faqTitle": "Häufige Fragen zum WhatsApp KI-Agenten",
       "relatedEyebrow": "Verwandte Leistungen",

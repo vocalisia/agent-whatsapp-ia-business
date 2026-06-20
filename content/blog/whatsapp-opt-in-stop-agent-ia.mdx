@@ -1,0 +1,118 @@
+---
+title: "Opt-in WhatsApp IA : consentement et STOP"
+date: "2026-06-20"
+dateModified: "2026-06-20"
+description: "Guide pratique pour gérer opt-in, retrait, STOP, préférences marketing et droits des personnes dans un agent IA WhatsApp Business."
+readTime: "9 min"
+author: "Laurent Duplat"
+coverImage: "/images/blog/whatsapp-opt-in-stop-agent-ia.jpg"
+coverImageAlt: "Smartphone WhatsApp affichant une demande STOP et un poste de travail de consentement client."
+howToSteps:
+  - name: "Identifier l'origine du contact"
+    text: "Documenter si le contact vient d'un formulaire, d'une commande, d'une conversation entrante, d'un événement ou d'une campagne click-to-WhatsApp."
+  - name: "Séparer service et marketing"
+    text: "Distinguer les messages nécessaires à une demande en cours des relances ou campagnes qui exigent une préférence explicite."
+  - name: "Prévoir le retrait"
+    text: "Traiter STOP, désabonnement, opposition et demande de suppression comme des événements prioritaires, tracés et synchronisés au CRM."
+  - name: "Auditer les relances"
+    text: "Revoir chaque semaine les relances automatisées, plaintes, blocages, erreurs d'audience et demandes de reprise humaine."
+---
+
+> **Réponse courte :** l'opt-in WhatsApp IA doit prouver pourquoi un contact peut recevoir un message, pour quel usage, avec quel retrait possible. Le mot STOP, les préférences marketing et les droits RGPD doivent être compris par l'agent, tracés et synchronisés dans le CRM.
+
+## Pourquoi l'opt-in est une brique de gouvernance
+
+Un agent IA WhatsApp devient dangereux quand il sait relancer mais ne sait pas s'arrêter. La qualité du système ne dépend donc pas seulement du modèle : elle dépend aussi de la preuve de consentement, des préférences, du retrait et du respect du contexte.
+
+Cette page appartient au cocon [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp). Elle complète les guides [campagnes WhatsApp automation RGPD](/fr/blog/campagnes-whatsapp-automation-rgpd), [WhatsApp IA, RGPD et AI Act](/fr/blog/whatsapp-ia-rgpd-ai-act-suisse) et [templates WhatsApp Business](/fr/blog/templates-whatsapp-business-agent-ia).
+
+## Service, marketing et reprise de conversation
+
+Toutes les conversations WhatsApp ne se valent pas.
+
+| Cas | Exemple | Règle pratique |
+|---|---|---|
+| Service demandé | Confirmation de rendez-vous, suivi de commande, support ouvert | Répondre dans le cadre de la demande et garder une trace |
+| Marketing | Relance commerciale, annonce, campagne, réactivation | Exiger une préférence claire et une sortie simple |
+| Conversation entrante | Le client écrit d'abord | Répondre utilement, puis demander l'accord avant les relances futures |
+| Contact importé | Fichier CRM, salon, ancien client | Vérifier la base et éviter toute relance non attendue |
+
+La documentation officielle WhatsApp Business met en avant l'opt-in et les ressources de conformité dans son Developer Hub. Pour une équipe, cela signifie que l'agent doit lire les préférences avant d'envoyer, pas seulement après une plainte.
+
+## Ce que le CRM doit stocker
+
+Un CRM prêt pour WhatsApp IA doit garder des champs simples :
+
+- source de l'opt-in ;
+- date et canal d'obtention ;
+- périmètre autorisé : service, marketing, rendez-vous, support ;
+- langue préférée ;
+- statut STOP ou désabonné ;
+- dernière demande liée aux droits des personnes ;
+- preuve de l'information donnée au contact ;
+- propriétaire interne du contact.
+
+Sans ces champs, l'agent risque d'envoyer un bon message à la mauvaise personne, ou un message correct dans un contexte interdit.
+
+## Gérer STOP et les demandes équivalentes
+
+Un agent IA ne doit pas comprendre seulement “STOP”. Il doit reconnaître les variantes naturelles :
+
+- “arrêtez de m'écrire” ;
+- “supprimez mon numéro” ;
+- “je ne veux plus recevoir vos messages” ;
+- “unsubscribe” ;
+- “ne me relancez plus” ;
+- “effacez mes données”.
+
+Chaque message doit déclencher une action : marquer le contact, arrêter les séquences, informer l'utilisateur et, si nécessaire, ouvrir une tâche de vérification humaine.
+
+Le [guide EDPB sur les droits des personnes](https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en) rappelle qu'une personne peut demander l'effacement, la restriction, la rectification ou s'opposer au traitement, notamment en marketing direct.
+
+## Modèle de message sobre
+
+Un bon message de relance WhatsApp doit rester attendu et facile à quitter :
+
+```text
+Bonjour {{prenom}}, je reviens au sujet de votre demande {{sujet}}.
+Souhaitez-vous que je vous aide à finaliser la prochaine étape ?
+Répondez STOP si vous ne voulez plus recevoir ce type de message.
+```
+
+Ce format ne cherche pas à forcer l'interaction. Il rappelle le contexte, propose une aide et donne une sortie claire.
+
+## Les erreurs fréquentes
+
+### Transformer WhatsApp en email bis
+
+WhatsApp est plus direct qu'un email. Une campagne trop fréquente ou mal contextualisée abîme vite la confiance. L'agent doit privilégier moins de messages, mieux ciblés.
+
+### Mélanger consentement et intérêt commercial
+
+Un prospect intéressé par une demande précise n'a pas forcément accepté des campagnes futures. Le CRM doit séparer l'échange en cours et les messages marketing.
+
+### Oublier les préférences après transfert humain
+
+Si un agent humain reçoit un STOP mais que l'automatisation continue, le système perd sa crédibilité. Le retrait doit être global : agent IA, CRM, campagnes, séquences et outils connectés.
+
+### Ne pas tester les synonymes
+
+Les clients n'utilisent pas toujours le mot prévu. Le système doit comprendre les formulations naturelles, les fautes et les messages courts.
+
+## Questions fréquentes
+
+### Un opt-in verbal suffit-il ?
+
+Il peut être utile dans certains contextes, mais il doit être tracé. Le minimum opérationnel est de conserver la source, la date, le canal, le périmètre accepté et la personne ou le système qui l'a enregistré.
+
+### STOP doit-il bloquer toutes les conversations ?
+
+Il doit au minimum arrêter les messages non nécessaires et les campagnes. Pour une demande de support en cours, une réponse de clôture ou de confirmation peut rester pertinente, mais le système doit éviter les relances futures.
+
+### Peut-on relancer un ancien client ?
+
+Seulement si le contexte, la base juridique et la préférence de contact le permettent. La meilleure approche consiste à segmenter prudemment et à offrir une sortie claire dès le premier message.
+
+### Où relier cette page ?
+
+Reliez-la à la [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp), aux [templates WhatsApp Business](/fr/blog/templates-whatsapp-business-agent-ia), à la [qualité du numéro WhatsApp](/fr/blog/qualite-numero-whatsapp-business-ia) et au [guide RGPD WhatsApp IA](/fr/blog/rgpd-whatsapp-ia-guide).

@@ -47,15 +47,15 @@ export const SECTEUR_RICH: RichBySlug = {
           bullets: [
             "Prise de RDV atelier 24/7 avec vérification immatriculation, type d'opération et créneaux ouverts en temps réel — l'agent se branche sur Planity, GarageHub, Calendly ou votre outil DMS.",
             "Relance contrôle technique à J-60, J-30 et J-7 — taux de prise de RDV moyen 18% contre 4% en email-only, ROI mesuré à 12× sur 90 jours.",
-            "Devis réparation à partir de photos des dégâts (pare-choc, carrosserie, vitrage) — l'agent identifie la pièce, demande l'angle complémentaire si besoin, et envoie une fourchette tarifaire en moins de 4 minutes.",
+            "Pré-diagnostic réparation à partir de photos des dégàts (pare-choc, carrosserie, vitrage) — l'agent identifie la piéce, demande l'angle complémentaire si besoin, et prépare un dossier exploitable par votre conseiller.",
             "Suivi véhicule en temps réel : 'Votre Renault Clio est en cours de contrôle géométrie, fin estimée 16h30' — supprime 70% des appels entrants 'c'est prêt ?'.",
             "Campagnes de renouvellement (pneus hiver, climatisation, vidange) ciblées par modèle, kilométrage et historique d'achat — taux de conversion 3,2× supérieur aux SMS génériques.",
           ],
         },
         {
-          heading: "Pourquoi le no-show coûte plus cher qu'on ne le pense",
+          heading: "Pourquoi le no-show bloque plus qu'on ne le pense",
           paragraphs: [
-            "Un créneau atelier non honoré coûte en moyenne 87 à estimation personnalisee en France selon le Syndicat National du Cycle et de la Moto (SNCM 2026) : main-d'œuvre payée, pont indisponible pour un autre client, conseil commercial mobilisé pour rien. Sur une concession 8 ponts qui subit 9 no-shows par semaine, c'est estimation personnalisee à estimation personnalisee de marge brute envolée par an.",
+            "Un créneau atelier non honoré bloque de la main-d'œuvre, immobilise un pont et mobilise le conseil commercial pour rien. Sur une concession multi-ponts qui subit plusieurs no-shows par semaine, la perte opérationnelle se voit vite dans le planning et dans la marge.",
             "L'agent IA réduit ce no-show de 45% en envoyant trois rappels : confirmation immédiate, rappel J-1 à 18h avec bouton 'Confirmer / Reporter', dernier rappel J-0 à 8h. Si le client confirme, le créneau est verrouillé. S'il reporte, l'agent propose immédiatement les trois prochains créneaux libres et libère l'ancien pour la liste d'attente — automatiquement.",
           ],
         },
@@ -80,7 +80,7 @@ export const SECTEUR_RICH: RichBySlug = {
           { label: "Taux de RDV pris hors horaires", before: "0%", after: "34% du volume" },
           { label: "No-show atelier", before: "9% à 14%", after: "4,5% à 7%" },
           { label: "Relance CT (taux de re-RDV)", before: "4%", after: "18%" },
-          { label: "Coût par RDV qualifié", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee" },
+          { label: "Temps de traitement par RDV qualifié", before: "Long et manuel", after: "Court et tracé" },
           { label: "Heures secrétariat / semaine", before: "22h", after: "6h (escalades uniquement)" },
         ],
       },
@@ -91,15 +91,15 @@ export const SECTEUR_RICH: RichBySlug = {
         },
         {
           q: "L'agent peut-il vraiment estimer un devis à partir d'une photo ?",
-          a: "Oui — pour les dégâts visibles standards (pare-choc, aile, rétroviseur, vitrage, jante). L'agent identifie la pièce, demande un angle complémentaire si nécessaire, et envoie une fourchette de prix basée sur votre grille tarifaire. Pour des dégâts complexes (châssis, mécanique interne), l'agent prend automatiquement RDV en atelier pour devis humain. Précision moyenne mesurée : 87% sur 1 200 photos analysées."
+          a: "Oui — pour les dégàts visibles standards (pare-choc, aile, rétroviseur, vitrage, jante). L'agent identifie la piéce, demande un angle complémentaire si nécessaire, et prépare une estimation indicative basée sur vos régles métier. Pour des dégàts complexes (chàssis, mécanique interne), l'agent prend automatiquement RDV en atelier pour avis humain. Précision moyenne mesurée : 87% sur 1 200 photos analysées."
         },
         {
           q: "Que se passe-t-il quand un client veut absolument parler à un humain ?",
-          a: "L'agent détecte les signaux d'escalade en quelques échanges : énervement, demande explicite, sujet sensible (litige, garantie refusée, sinistre). Il bascule alors la conversation vers votre équipe sur le même fil WhatsApp — votre conseiller reprend la main avec tout l'historique. Le client ne refait jamais de doublon, ne recommence jamais à zéro."
+          a: "L'agent escalade immédiatement vers votre équipe avec le contexte complet : demande, historique, photos, urgence et prochain créneau possible. Il ne force jamais l'automatisation quand le client demande explicitement un humain."
         },
         {
-          q: "Combien ça coûte par rapport à un standard téléphonique ou un secrétariat externalisé ?",
-          a: "Un standard externalisé automobile coûte entre 800 et estimation personnalisee HT pour 250 à 400 RDV. AgenticWhatsup tourne selon le volume et le perimetre valide en audit, avec un taux de prise de RDV 24/7 et zéro RDV manqué pour cause d'horaire. Le ROI est positif dès le premier mois pour 80% des garages — on chiffre votre cas précis lors de l'audit gratuit."
+          q: "Comment comparer l'agent à un standard téléphonique ou un secrétariat externalisé ?",
+          a: "La comparaison se fait sur le volume de demandes, les horaires, le taux de RDV confirmé et la qualité du dossier transmis au conseiller. AgenticWhatsup se cadre selon le périmétre validé en audit, avec prise de RDV 24/7 et réduction des RDV manqués pour cause d'horaire. Le ROI de votre cas se chiffre pendant l'audit gratuit."
         },
         {
           q: "L'agent est-il conforme RGPD et aux exigences professionnelles automobiles ?",
@@ -112,7 +112,7 @@ export const SECTEUR_RICH: RichBySlug = {
       ],
       relatedLinks: [
         { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp (architecture, LLM, intégrations)" },
-        { href: "/fr/blog/combien-coute-agent-ia-whatsapp-2026", label: "Combien coûte un agent IA WhatsApp en 2026 — grille de prix réaliste" },
+        { href: "/fr/contact", label: "Audit gratuit 30 min pour cadrer votre agent IA WhatsApp" },
         { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : ce que la CNIL exige réellement" },
         { href: "/fr/blog/agent-ia-whatsapp-vs-chatbot", label: "Agent IA vs chatbot WhatsApp : la différence qui change le ROI" },
         { href: "/fr/services/prise-de-rdv", label: "Service prise de RDV automatique 24/7" },
@@ -126,7 +126,7 @@ export const SECTEUR_RICH: RichBySlug = {
     fr: {
       intro: [
         "Un infopreneur qui ne convertit pas sur WhatsApp aujourd'hui laisse partir 60 à 75% de son audience qualifiée. Le problème n'est jamais le trafic — c'est ce qui se passe entre 'j'ai liké votre post' et 'j'ai sorti la carte bleue'. Sur cette fenêtre de 24 à 72h, l'email perd 78% des prospects. WhatsApp en perd 14%. La différence se compte en abonnés, en formations vendues, en mastermind remplis.",
-        "L'agent IA WhatsApp d'AgenticWhatsup ne remplace ni le coach, ni l'expert, ni la relation humaine qui scelle la vente premium. Il remplace les 240 messages 'bonjour, c'est combien ?' que vous traitez chaque semaine, les 18 séances de coaching no-show par mois, les 47 prospects qui posent leur objection prix le dimanche soir et qu'aucun humain ne peut suivre. Pendant que vous coachez, l'agent vend. Pendant que vous dormez, l'agent qualifie.",
+        "C'est le test ultime d'un agent IA pour coach : un prospect demande le budget au troisiéme message. La majorité des agents répondent trop vite et perdent le contexte. L'agent AgenticWhatsup utilise un script à 4 étages : reformulation du besoin réel, ancrage valeur, proposition d'option, puis transfert humain si le cadrage le justifie.",
       ],
       sections: [
         {
@@ -136,9 +136,9 @@ export const SECTEUR_RICH: RichBySlug = {
           ],
           bullets: [
             "Avant la vente : qualification du prospect (objectif, niveau actuel, budget, urgence) en 8 à 12 échanges naturels, scoring automatique, escalade vers vous uniquement si lead chaud >70.",
-            "Pendant la vente : traitement des objections classiques (prix, timing, doute compétence, comparaison concurrent) avec vos vrais arguments, pas un script générique. Closing soft sur formation auto-administrée, transfert humain sur high-ticket >estimation personnalisee.",
+            "Pendant la vente : traitement des objections classiques (prix, timing, doute compétence, comparaison concurrent) avec vos vrais arguments, pas un script générique. Closing soft sur formation auto-administrée, transfert humain sur les offres complexes.",
             "Pendant l'onboarding : envoi automatique des accès, du planning des cours, du calendrier des lives, des ressources PDF. Réduit de 64% les tickets support 'comment j'accède à...'.",
-            "Pendant la livraison : rappels de sessions de coaching à H-24 et H-2, check-in hebdo sur l'avancement objectif, détection des signaux d'abandon (3+ jours sans connexion, message d'auto-doute) → escalade prioritaire vers vous.",
+            "L'agent IA WhatsApp d'AgenticWhatsup pour la formation traite trois leviers que ni votre CRM, ni votre standard, ni vos emails n'arrivent à couvrir simultanément : la qualification immédiate du candidat (financement CPF, OPCO, France Travail, personnel), le suivi pédagogique sans surcharger votre équipe formateur, et la détection précoce des signaux d'abandon.",
           ],
         },
         {
@@ -151,8 +151,8 @@ export const SECTEUR_RICH: RichBySlug = {
         {
           heading: "Comment l'agent traite l'objection prix sans casser la relation",
           paragraphs: [
-            "C'est le test ultime d'un agent IA pour coach : un prospect demande 'c'est combien ?' au troisième message. La majorité des agents répondent par le tarif brut → bounce immédiat dans 73% des cas. L'agent AgenticWhatsup utilise un script à 4 étages : reformulation du besoin réel (qu'est-ce qui vous a fait poser la question maintenant ?), ancrage valeur (rappel des résultats moyens en chiffres), proposition d'option (paiement étalé, garantie 30 jours, audit gratuit), puis prix.",
-            "Le résultat mesuré sur 14 coachs francophones (mai à octobre 2025) : taux de conversion sur l'objection prix multiplié par 2,4. Le tarif moyen vendu : +18% (plus de prospects acceptent l'offre haut de gamme quand l'agent ancre la valeur avant le prix).",
+            "C'est le test ultime d'un agent IA pour coach : un prospect demande le budget au troisiéme message. La majorité des agents répondent trop vite et perdent le contexte. L'agent AgenticWhatsup utilise un script à 4 étages : reformulation du besoin réel, ancrage valeur, proposition d'option, puis transfert humain si le cadrage le justifie.",
+            "Le résultat mesuré sur 14 coachs francophones (mai à octobre 2025) : taux de conversion sur l'objection prix multiplié par 2,4. Plus de prospects acceptent l'offre haut de gamme quand l'agent ancre la valeur avant la discussion commerciale.",
           ],
         },
         {
@@ -180,8 +180,8 @@ export const SECTEUR_RICH: RichBySlug = {
           a: "Non si l'agent est entraîné sur votre voix. AgenticWhatsup ingère vos posts LinkedIn, vos emails de bienvenue, vos lives YouTube et 30 à 50 conversations DM réelles que vous fournissez pour calibrer le ton. Le résultat : 91% des prospects testés en aveugle ne savent pas distinguer l'agent d'un junior de votre équipe. Vous validez chaque réponse type avant le go-live."
         },
         {
-          q: "Je vends sur estimation personnalisee — l'agent peut-il vraiment closer ce ticket ?",
-          a: "Oui jusqu'à estimation personnalisee environ en autonomie complète (paiement direct via lien Stripe envoyé par l'agent). Au-delà, l'agent qualifie, traite les objections initiales, et bascule automatiquement vers vous pour le call de closing — avec un brief écrit du prospect (besoin, budget validé, timing, objections résiduelles) prêt à l'emploi. Vous gagnez 35 à 50 minutes de découverte par appel."
+          q: "Je vends une offre premium — l'agent peut-il vraiment aider au closing ?",
+          a: "Oui, si le rôle de l'agent est cadré correctement. Il qualifie, traite les objections initiales, et bascule automatiquement vers vous pour le call de closing avec un brief écrit du prospect : besoin, budget validé, timing et objections résiduelles. Vous gagnez 35 à 50 minutes de découverte par appel."
         },
         {
           q: "Comment l'agent gère-t-il les remboursements et les réclamations ?",
@@ -215,8 +215,8 @@ export const SECTEUR_RICH: RichBySlug = {
   education: {
     fr: {
       intro: [
-        "Un organisme de formation qui ne traite pas ses inscriptions sur WhatsApp en 2026 paie 3 à 5 fois trop cher chaque acquisition. La raison est simple : un prospect formation est en réflexion 12 à 26 jours, change d'avis 2 à 4 fois, et 67% de ses questions arrivent en dehors des horaires de bureau. Vos campagnes Google Ads attirent un visiteur à estimation personnalisee, vos commerciaux le perdent en moins de 48h faute de relance.",
-        "L'agent IA WhatsApp d'AgenticWhatsup pour la formation traite trois leviers que ni votre CRM, ni votre standard, ni vos emails n'arrivent à couvrir simultanément : la qualification immédiate du candidat (financement CPF, OPCO, Pôle Emploi, perso), le suivi pédagogique sans surcharger votre équipe formateur, et la détection précoce des signaux d'abandon — qui coûtent en moyenne estimation personnalisee à un organisme certifié Qualiopi.",
+        "Un organisme de formation qui ne traite pas ses inscriptions sur WhatsApp en 2026 dégrade vite son acquisition. La raison est simple : un prospect formation est en réflexion 12 à 26 jours, change d'avis 2 à 4 fois, et 67% de ses questions arrivent en dehors des horaires de bureau. Vos campagnes attirent le visiteur, puis l'équipe commerciale peut le perdre en moins de 48h faute de relance.",
+        "L'agent IA WhatsApp d'AgenticWhatsup pour la formation traite trois leviers que ni votre CRM, ni votre standard, ni vos emails n'arrivent à couvrir simultanément : la qualification immédiate du candidat (financement CPF, OPCO, France Travail, personnel), le suivi pédagogique sans surcharger votre équipe formateur, et la détection précoce des signaux d'abandon.",
       ],
       sections: [
         {
@@ -236,7 +236,7 @@ export const SECTEUR_RICH: RichBySlug = {
           heading: "Pourquoi 30% d'abandon n'est pas une fatalité",
           paragraphs: [
             "Le décrochage en formation suit toujours le même pattern : signal faible à J+8 (retard sur le premier exercice), signal moyen à J+15 (silence sur le forum / classe virtuelle), abandon effectif à J+22. Vos référents pédagogiques détectent typiquement le signal à J+18 — trop tard. L'agent IA détecte le décalage à J+8, alerte le référent, et propose au choix une intervention humaine ou un message de relance personnalisé.",
-            "Sur 9 OF déployés en France métropolitaine entre janvier et septembre 2025, le taux d'abandon avant fin de formation est passé de 31% (médiane sectorielle) à 12,4%. Pour un OF traitant 800 apprenants/an avec un coût d'abandon de estimation personnalisee, l'économie annuelle est de estimation personnalisee — sur un investissement agent IA de 6 000 à estimation personnalisee",
+            "Sur 9 OF déployés en France métropolitaine entre janvier et septembre 2025, le taux d'abandon avant fin de formation est passé de 31% (médiane sectorielle) à 12,4%. Pour un OF avec un volume élevé d'apprenants, l'économie annuelle dépend du taux d'abandon, du modéle pédagogique et de la valeur moyenne d'une inscription.",
           ],
         },
         {
@@ -261,7 +261,7 @@ export const SECTEUR_RICH: RichBySlug = {
           { label: "Taux conversion catalogue → inscription", before: "4% à 7%", after: "11% à 16%" },
           { label: "Taux d'abandon en cours de formation", before: "27% à 34%", after: "10% à 14%" },
           { label: "Détection signal d'abandon", before: "J+18", after: "J+8" },
-          { label: "Coût acquisition par apprenant inscrit", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee à estimation personnalisee" },
+          { label: "Efficacité acquisition par apprenant inscrit", before: "Variable et peu tracée", after: "Mesurée par canal" },
           { label: "Heures équipe inscription / semaine", before: "32h", after: "9h" },
         ],
       },
@@ -283,8 +283,8 @@ export const SECTEUR_RICH: RichBySlug = {
           a: "L'agent gère nativement français, anglais, allemand et néerlandais. Détection automatique de la langue du candidat dès le premier message. Toutes les ressources (devis, programmes, attestations) peuvent être envoyées dans la langue de l'apprenant. Très utile pour les OF qui forment des clients étrangers en distanciel."
         },
         {
-          q: "Combien coûte un agent IA WhatsApp pour un organisme de formation ?",
-          a: "Forfait de base à partir de estimation personnalisee HT pour les OF traitant <500 apprenants/an, estimation personnalisee pour 500 à 2000 apprenants/an, sur-mesure au-delà. Pas de frais d'installation au-delà de la connexion API WhatsApp Business (gratuite via Meta). ROI typique mesuré à 14× sur 12 mois — détaillé pour votre cas dans l'audit gratuit."
+          q: "Comment cadrer un agent IA WhatsApp pour un organisme de formation ?",
+          a: "Le cadrage dépend du volume d'apprenants, des outils LMS/CRM, des flux CPF/OPCO, des langues et du niveau d'automatisation attendu. Le ROI et le périmétre sont détaillés pour votre cas dans l'audit gratuit."
         },
         {
           q: "Et si je veux que ce soit mon référent pédagogique qui choisisse les messages ?",
@@ -295,7 +295,7 @@ export const SECTEUR_RICH: RichBySlug = {
         { href: "/fr/blog/qualification-leads-whatsapp-b2b", label: "Qualification de leads sur WhatsApp : la méthode 8 questions" },
         { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp en 2026" },
         { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : ce que la CNIL exige réellement" },
-        { href: "/fr/blog/combien-coute-agent-ia-whatsapp-2026", label: "Combien coûte un agent IA WhatsApp en 2026" },
+        { href: "/fr/contact", label: "Audit gratuit 30 min pour cadrer votre agent IA WhatsApp" },
         { href: "/fr/services/qualification-leads", label: "Qualification automatique des candidats à la formation" },
         { href: "/fr/services/crm-automation", label: "Automation CRM pour organismes de formation" },
       ],
@@ -326,7 +326,7 @@ export const SECTEUR_RICH: RichBySlug = {
         {
           heading: "Pourquoi votre clerc ne devrait jamais répondre à un appel banal",
           paragraphs: [
-            "Le coût horaire chargé d'un clerc de notaire qualifié en France oscille entre 38 et estimation personnalisee TTC. Sur 142 appels/jour dont 92 sont strictement administratifs (prise de RDV, suivi dossier, demande de statut), votre office consacre sur estimation personnalisee à des tâches que n'importe quelle assistance numérique conforme peut absorber — soit 130 000 à estimation personnalisee pour un office moyen.",
+            "Le temps d'un clerc de notaire qualifié doit rester concentré sur les actes et les dossiers sensibles. Quand une large part des appels concerne la prise de RDV, le suivi dossier ou la demande de statut, votre office consacre trop de ressources à des tâches qu'une assistance numérique conforme peut absorber.",
             "L'agent IA AgenticWhatsup ne supprime pas votre clerc : il lui rend 22 heures par semaine pour faire ce que l'agent ne peut pas faire — préparer un acte complexe, accompagner un client en succession sensible, vérifier un titre de propriété ancien. Le clerc devient un actif stratégique, pas un standard téléphonique survalorisé.",
           ],
         },
@@ -375,8 +375,8 @@ export const SECTEUR_RICH: RichBySlug = {
           a: "L'agent IA est un canal complémentaire, pas un remplacement. Pour les clients sans WhatsApp, votre clerc continue de gérer en mode classique (téléphone, email, courrier). En pratique, sur les déploiements 2024-2025, 76% des clients adoptent WhatsApp dès la 1ère relance — y compris dans la tranche 65+ ans."
         },
         {
-          q: "Combien coûte un agent IA WhatsApp pour une étude notariale ?",
-          a: "Forfait à partir de estimation personnalisee HT pour les études de moins de 5 collaborateurs, estimation personnalisee pour 5 à 12 collaborateurs, sur-mesure au-delà. Pas de frais d'installation au-delà de la connexion API WhatsApp Business (gratuite Meta). ROI moyen mesuré à 9× sur 12 mois sur la base du temps clerc libéré — détaillé sur votre cas pendant l'audit gratuit."
+          q: "Comment cadrer un agent IA WhatsApp pour une étude notariale ?",
+          a: "Le périmètre dépend du nombre de collaborateurs, du volume d'appels administratifs, des outils dossier et du niveau de confidentialité attendu. Le ROI se calcule sur le temps clerc libéré et se détaille pendant l'audit gratuit."
         },
         {
           q: "Que se passe-t-il en cas de panne technique côté Meta ou agent IA ?",
@@ -386,7 +386,7 @@ export const SECTEUR_RICH: RichBySlug = {
       relatedLinks: [
         { href: "/fr/blog/comment-fonctionne-agent-ia-whatsapp", label: "Comment fonctionne un agent IA WhatsApp pour métier juridique" },
         { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : conformité notariale" },
-        { href: "/fr/blog/combien-coute-agent-ia-whatsapp-2026", label: "Combien coûte un agent IA WhatsApp en 2026" },
+        { href: "/fr/contact", label: "Audit gratuit 30 min pour cadrer votre agent IA WhatsApp" },
         { href: "/fr/blog/agent-ia-whatsapp-vs-chatbot", label: "Agent IA vs chatbot : pourquoi le notaire ne peut pas se contenter d'un bot" },
         { href: "/fr/services/prise-de-rdv", label: "Prise de RDV notariale automatisée 24/7" },
         { href: "/fr/services/qualification-leads", label: "Qualification de dossiers notariaux sur WhatsApp" },
@@ -438,7 +438,7 @@ export const SECTEUR_RICH: RichBySlug = {
           { label: "Mandats exclusifs / 100 contacts vendeurs", before: "8", after: "19" },
           { label: "Leads perdus faute de relance", before: "62%", after: "14%" },
           { label: "Heures négociateur sur admin WhatsApp / sem", before: "11h", after: "2h30" },
-          { label: "Coût par visite qualifiée", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee à estimation personnalisee" },
+          { label: "Temps pour obtenir une visite qualifiée", before: "Variable et manuel", after: "Court et tracé" },
         ],
       },
       faq: [
@@ -474,7 +474,7 @@ export const SECTEUR_RICH: RichBySlug = {
     fr: {
       intro: [
         "Un e-commerce qui abandonne son panier récupère en moyenne 8,7% des acheteurs par email de relance. Le même e-commerce sur WhatsApp en récupère 34 à 48%. La différence est mécanique : votre email de relance arrive quand la boîte de l'acheteur est déjà saturée ; votre message WhatsApp arrive sur le même écran que les SMS de sa banque et les messages de sa famille — 98% d'ouverture, lecture en moins de 4 minutes.",
-        "L'agent IA WhatsApp d'AgenticWhatsup pour l'e-commerce résout simultanément les trois hémorragies qui plombent la rentabilité : le panier abandonné non récupéré, les tickets SAV traités à estimation personnalisee pièce par un humain alors que 73% des questions sont identiques, et les clients inactifs qui partent sans que personne ne les relance. En -62% de coûts SAV et +34% de récupération de panier, le ROI se mesure au premier mois.",
+        "L'agent IA WhatsApp d'AgenticWhatsup pour l'e-commerce résout simultanément les trois hémorragies qui plombent la rentabilité : le panier abandonné non récupéré, les tickets SAV répétitifs traités par un humain alors que 73% des questions sont identiques, et les clients inactifs qui partent sans que personne ne les relance. En -62% de charge SAV et +34% de récupération de panier, le ROI se mesure au premier mois.",
       ],
       sections: [
         {
@@ -508,7 +508,7 @@ export const SECTEUR_RICH: RichBySlug = {
         title: "E-commerce sans agent vs avec agent IA WhatsApp",
         rows: [
           { label: "Taux récupération panier abandonné", before: "8,7%", after: "34% à 48%" },
-          { label: "Coût par ticket SAV", before: "estimation personnalisee à estimation personnalisee", after: "estimation personnalisee à estimation personnalisee" },
+          { label: "Charge par ticket SAV", before: "Élevée et manuelle", after: "Réduite et routée" },
           { label: "Délai réponse SAV", before: "6h à 18h", after: "<3 minutes" },
           { label: "Taux de ré-achat clients dormants", before: "3%", after: "18%" },
           { label: "Taux ouverture communication client", before: "22% (email)", after: "97% (WhatsApp)" },
@@ -547,7 +547,7 @@ export const SECTEUR_RICH: RichBySlug = {
   sante: {
     fr: {
       intro: [
-        "Un cabinet médical ou paramédical qui subit 20% de no-show par semaine perd entre 1 400 et estimation personnalisee de chiffre d'affaires hebdomadaire — des actes réalisés, payés, mais invisibles parce que le patient n'est pas venu. La solution la plus efficace connue à ce jour n'est pas le SMS de rappel (taux d'ouverture 47%), ni l'appel téléphonique (coût : 8 à 14 minutes de secrétaire). C'est WhatsApp : 98% d'ouverture, réponse en moins de 4 minutes, bouton 'Annuler / Reporter' en un tap.",
+        "Un cabinet médical ou paramédical qui subit 20% de no-show par semaine perd du chiffre d'affaires et désorganise son planning. La solution la plus efficace connue à ce jour n'est pas le SMS de rappel (taux d'ouverture 47%), ni l'appel téléphonique chronophage. C'est WhatsApp : 98% d'ouverture, réponse en moins de 4 minutes, bouton 'Annuler / Reporter' en un tap.",
         "L'agent IA WhatsApp d'AgenticWhatsup pour la santé réduit le no-show de 61% en moyenne sur 8 déploiements mesurés entre 2024 et 2025. Il gère la prise de RDV 24/7 (73% des demandes arrivent hors horaires), les rappels intelligents avec gestion des annulations, la collecte des documents (ordonnance, carte vitale, mutuelle), et la conformité HDS/RGPD pour les données de santé.",
       ],
       sections: [
@@ -634,7 +634,7 @@ export const SECTEUR_RICH: RichBySlug = {
           bullets: [
             "Qualification chantier 24/7 : type de travaux, surface, localisation, délai souhaité, budget approximatif, type de financement (particulier, pro, maître d'ouvrage). Scoring automatique — seuls les dossiers chauds remontent à votre commercial.",
             "Collecte photos chantier via WhatsApp : l'agent demande les photos de la pièce, de la façade, des points problématiques. Vision IA intégrée : analyse de l'état du mur (fissures, humidité, isolation dégradée), identification du type de charpente ou toiture, estimation des surfaces à partir des photos.",
-            "Génération de fourchette de devis automatique : basée sur vos grilles tarifaires, la surface estimée, et le type de travaux qualifié. Le client reçoit une fourchette réaliste en moins de 8 minutes — pendant que vos concurrents rappellent le lendemain.",
+            "Pré-cadrage indicatif du projet : basé sur vos régles métier, la surface estimée, et le type de travaux qualifié. Le client reçoit un cadrage clair en moins de 8 minutes — pendant que vos concurrents rappellent le lendemain.",
             "Relance prospects sans suite : séquence automatique J+3 / J+7 / J+21 — 'Avez-vous avancé dans votre projet de rénovation ?' — avec personnalisation du type de travaux et de la localisation.",
             "Suivi chantier client : notifications d'avancement ('La pose de la charpente est terminée, intervention couverture prévue mardi'), gestion des réclamations et photos de fin de travaux.",
           ],
@@ -649,7 +649,7 @@ export const SECTEUR_RICH: RichBySlug = {
         {
           heading: "Conformité et facturation : pièges à éviter",
           paragraphs: [
-            "Le secteur BTP est exposé à deux risques réglementaires spécifiques : les devis sans mention légale obligatoire, et les acomptes non protégés sur travaux >estimation personnalisee. L'agent AgenticWhatsup ne génère pas de devis contractuels — il génère des fourchettes indicatives, expressément qualifiées comme telles dans le message client. Le devis formel (avec mentions CGV, garantie décennale, RCP, délai d'acceptation) est toujours produit par votre outil de devis habituel.",
+            "Le secteur BTP est exposé à deux risques réglementaires spécifiques : les devis sans mention légale obligatoire et les acomptes non protégés. L'agent AgenticWhatsup ne génére pas de devis contractuels — il génére des cadrages indicatifs, expressément qualifiés comme tels dans le message client. Le devis formel (avec mentions CGV, garantie décennale, RCP, délai d'acceptation) est toujours produit par votre outil de devis habituel.",
             "Sur les acomptes : l'agent peut collecter une demande d'acompte et envoyer un lien de paiement Stripe ou SumUp, mais ne traite jamais un acompte sans que votre devis signé soit en votre possession. Cette contrainte est programmée et non contournable.",
           ],
         },
@@ -707,7 +707,7 @@ export const SECTEUR_RICH: RichBySlug = {
             "Les courtiers et assureurs qui déploient AgenticWhatsup identifient quatre scénarios représentant 78% du volume entrant. Chacun est personnalisable selon votre portefeuille, vos compagnies partenaires, et votre processus de souscription.",
           ],
           bullets: [
-            "Qualification prospect et devis automatique : l'agent collecte les données de tarification (profil conducteur pour auto, surface et DPE pour habitation, effectif et CA pour pro) et génère automatiquement un devis sur votre grille tarifaire ou via API compagnie. Délai moyen : 4 minutes 37 secondes.",
+            "Qualification prospect et pré-cadrage : l'agent collecte les données de cotation (profil conducteur pour auto, surface et DPE pour habitation, effectif et CA pour pro) et prépare automatiquement un dossier exploitable dans votre outil ou via API compagnie. Délai moyen : 4 minutes 37 secondes.",
             "Déclaration de sinistre guidée : l'agent accompagne l'assuré étape par étape (nature du sinistre, date, circonstances, tiers impliqués, photos des dégâts), crée automatiquement la déclaration dans votre outil de gestion (Filhet-Allard, Gestion 3000, April On, GSD), et ouvre le ticket sinistre. -71% d'appels entrants sur les sinistres courants.",
             "Relance devis non transformés : séquence automatique J+2 / J+7 / J+14 sur les devis envoyés sans réponse — 'Avez-vous eu le temps d'examiner votre devis MRH ?' — avec option de modification de garanties en direct sur WhatsApp.",
             "Renouvellement et fidélisation : 90 jours avant l'échéance, l'agent contacte l'assuré pour vérifier l'adéquation des garanties, propose un comparatif actualisé, et déclenche le renouvellement automatique si confirmation. Taux de rétention à l'échéance : +22%.",
@@ -724,7 +724,7 @@ export const SECTEUR_RICH: RichBySlug = {
           heading: "Conformité ACPR, DDA et traçabilité des échanges",
           paragraphs: [
             "La distribution d'assurance est réglementée par la Directive Distribution Assurance (DDA) et l'ACPR. Toute recommandation doit être documentée, tracée, et archivée. AgenticWhatsup archive l'intégralité des échanges WhatsApp, horodatés, dans un registre conforme DDA. La recommandation automatique est toujours précédée d'une collecte des besoins documentée (questionnaire IBA — Information sur les Besoins et Attentes).",
-            "L'agent ne souscrit jamais un contrat sans validation humaine pour les produits complexes (vie, prévoyance, épargne). Pour les produits simples à tarification automatique (auto, MRH, santé individuelle), la souscription peut être finalisée en autonomie avec signature électronique Yousign ou Universign envoyée via WhatsApp.",
+            "L'agent ne souscrit jamais un contrat sans validation humaine pour les produits complexes (vie, prévoyance, épargne). Pour les produits simples et à risque faible, la souscription peut étre finalisée uniquement si votre conformité l'autorise, avec signature électronique envoyée via WhatsApp.",
           ],
         },
       ],
@@ -742,7 +742,7 @@ export const SECTEUR_RICH: RichBySlug = {
       faq: [
         {
           q: "L'agent peut-il souscrire un contrat d'assurance en autonomie ?",
-          a: "Uniquement pour les produits à tarification automatique et risque faible (auto standard, MRH appartement, santé individuelle). La souscription se finalise par signature électronique envoyée via WhatsApp. Pour les produits complexes (vie, prévoyance, assurance emprunteur, RC pro), l'agent qualifie et transfère au conseiller avec un dossier complet — la souscription reste humaine.",
+          a: "L'agent ne souscrit jamais un contrat sans validation humaine pour les produits complexes (vie, prévoyance, épargne). Pour les produits simples et à risque faible, la souscription peut étre finalisée uniquement si votre conformité l'autorise, avec signature électronique envoyée via WhatsApp.",
         },
         {
           q: "Comment l'agent respecte-t-il les obligations DDA sur le recueil des besoins ?",

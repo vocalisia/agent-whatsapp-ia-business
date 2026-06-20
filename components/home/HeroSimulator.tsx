@@ -158,7 +158,7 @@ export default function HeroSimulator() {
           <div className="absolute -inset-4 bg-wa/10 rounded-[3rem] blur-3xl pointer-events-none" />
           <div className="relative" style={{ maxWidth: "100%" }}>
             {config ? (
-              <WhatsAppSimulatorPro config={config} sectorKey={activeSector} />
+              <WhatsAppSimulatorPro key={`${locale}-${activeSector}`} config={config} sectorKey={activeSector} />
             ) : (
               <div
                 className="rounded-3xl bg-surface border border-surface-3 animate-pulse"

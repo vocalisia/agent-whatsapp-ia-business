@@ -1,0 +1,149 @@
+---
+title: "WhatsApp IA, RGPD et AI Act : guide 2026"
+date: "2026-06-18"
+dateModified: "2026-06-18"
+description: "Guide pilier pour déployer un agent IA WhatsApp conforme : RGPD, CNIL, droits des personnes, transparence AI Act, LPD suisse, consentement, conservation et escalade humaine."
+readTime: "12 min"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Cartographier les données WhatsApp"
+    text: "Lister les messages, vocaux, images, documents, métadonnées, CRM et outils connectés avant de concevoir l'automatisation."
+  - name: "Définir la finalité et la base légale"
+    text: "Associer chaque traitement à un objectif précis : support, rendez-vous, qualification, suivi ou campagne, puis documenter la base légale."
+  - name: "Informer clairement l'utilisateur"
+    text: "Dire quand une IA intervient, expliquer les droits disponibles et proposer un accès humain simple."
+  - name: "Tester avec un pilote supervisé"
+    text: "Limiter le périmètre au départ, relire les réponses et corriger les scénarios avant de généraliser."
+---
+
+> **Réponse courte :** un agent IA WhatsApp conforme repose sur quatre piliers : utiliser l'API officielle, informer l'utilisateur, limiter les données traitées et garder une escalade humaine. En Europe, le RGPD et l'AI Act structurent la transparence ; en Suisse, la LPD s'applique déjà aux traitements basés sur l'IA.
+
+## Pourquoi la conformité doit venir avant l'automatisation
+
+WhatsApp est un canal intime. Les utilisateurs y envoient des photos, des vocaux, des informations personnelles, parfois même des données sensibles sans s'en rendre compte. Un agent IA WhatsApp peut donc améliorer le support, mais il peut aussi créer un risque si les règles ne sont pas posées avant la mise en production.
+
+La CNIL explique que les chatbots peuvent traiter des données personnelles même lorsqu'un utilisateur ne crée pas de compte, simplement parce qu'un historique de conversation ou un cookie de continuité peut exister. Pour un agent IA WhatsApp, cette logique est encore plus forte : le canal est conversationnel, contextuel et connecté à des outils métier.
+
+## Les données à cartographier
+
+Avant de parler modèle, prompt ou automatisation, il faut cartographier :
+
+- messages texte ;
+- messages vocaux et transcriptions ;
+- photos, captures d'écran, documents ;
+- numéros de téléphone ;
+- langue, pays, horaire, canal d'acquisition ;
+- consentement ou source du contact ;
+- fiche CRM et historique client ;
+- tickets support, commandes, rendez-vous ;
+- décisions prises par l'agent.
+
+Cette cartographie sert à répondre à trois questions : pourquoi traite-t-on la donnée, combien de temps la garde-t-on, qui peut y accéder ?
+
+## RGPD : les points non négociables
+
+### Information claire
+
+L'utilisateur doit comprendre qu'il parle à un système automatisé lorsque ce n'est pas évident. L'information doit être courte, compréhensible et placée au bon moment.
+
+### Finalité précise
+
+Un agent ne doit pas aspirer toute la conversation "au cas où". Il doit traiter ce qui est nécessaire pour répondre, qualifier, réserver, suivre ou transférer.
+
+### Droits des personnes
+
+Le [guide EDPB sur les droits des personnes](https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en) rappelle les droits d'accès, rectification, effacement et opposition. Dans WhatsApp, ces droits doivent devenir opérationnels : un message de retrait ou une demande d'effacement ne peut pas rester dans une boîte manuelle oubliée.
+
+### Minimisation
+
+Si une photo ou un vocal contient plus d'informations que nécessaire, l'agent doit extraire l'information utile et éviter la conservation excessive. Les données sensibles demandent une prudence particulière.
+
+## AI Act : la transparence devient structurante
+
+La Commission européenne a publié en juin 2026 un code de pratique lié aux obligations de transparence de l'AI Act. L'Article 50 vise notamment les obligations de transparence pour certains systèmes génératifs, avec une application indiquée à partir du 2 août 2026.
+
+Pour un agent IA WhatsApp, la traduction opérationnelle est simple :
+
+- ne pas faire passer l'agent pour un humain ;
+- expliquer le rôle de l'IA quand elle répond ou résume ;
+- garder une trace des règles de décision ;
+- éviter les réponses qui pourraient manipuler, tromper ou masquer l'origine automatisée ;
+- prévoir une reprise humaine.
+
+L'objectif n'est pas d'alourdir la conversation. C'est de rendre la relation compréhensible et vérifiable.
+
+## Suisse : LPD et IA
+
+Pour les entreprises suisses ou les activités à Genève, Lausanne, Vaud, Fribourg ou Neuchâtel, le cadre suisse compte aussi. Le PFPDT rappelle que la loi fédérale sur la protection des données, en vigueur depuis le 1er septembre 2023, est directement applicable aux traitements de données basés sur l'IA.
+
+Concrètement, un projet WhatsApp IA en Suisse doit prévoir :
+
+- transparence sur le traitement ;
+- proportionnalité ;
+- sécurité ;
+- documentation ;
+- autodétermination numérique ;
+- limitation des accès ;
+- conservation maîtrisée.
+
+À lire ensuite : [agent IA WhatsApp Suisse romande Genève](/fr/blog/agent-ia-whatsapp-suisse-romande-geneve).
+
+## Modèle de gouvernance recommandé
+
+Un projet solide a besoin d'une gouvernance simple :
+
+| Sujet | Décision à documenter |
+|---|---|
+| Finalité | Pourquoi l'agent répond-il ? |
+| Données | Quelles données sont lues, extraites, stockées ? |
+| Modèle | Quel système génère ou classe la réponse ? |
+| Supervision | Quand un humain relit-il ? |
+| Escalade | Quels sujets sont exclus de l'autonomie ? |
+| Conservation | Combien de temps garde-t-on les conversations ? |
+| Droits | Comment gérer opposition, accès, effacement ? |
+
+Le [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) donne aussi une grille utile pour penser confiance, risques, gouvernance et évaluation des systèmes IA, même pour une entreprise européenne qui ne dépend pas du droit américain.
+
+Pour transformer cette grille en contrôles opérationnels, utilisez la page [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp), puis détaillez [opt-in et STOP](/fr/blog/whatsapp-opt-in-stop-agent-ia), [supervision humaine](/fr/blog/supervision-humaine-agent-ia-whatsapp) et [journalisation](/fr/blog/journalisation-agent-ia-whatsapp).
+
+## Ce qu'il faut éviter
+
+- Automatiser toutes les conversations dès le premier jour.
+- Utiliser une API non officielle.
+- Laisser l'agent répondre sur des sujets juridiques, médicaux ou émotionnels sans escalade.
+- Stocker toutes les pièces jointes sans tri.
+- Envoyer des campagnes sans opt-in clair.
+- Promettre une conformité sans preuve documentaire.
+
+## Check-list de lancement conforme
+
+1. Les sources de contact sont documentées.
+2. Les finalités sont séparées : support, vente, suivi, campagne.
+3. Les messages d'information sont prêts.
+4. Les règles de transfert humain sont écrites.
+5. Les données sensibles sont minimisées.
+6. La conservation est définie.
+7. Le registre interne ou la documentation projet est à jour.
+8. Un pilote supervisé valide les réponses avant généralisation.
+
+## Questions fréquentes
+
+## Un agent IA WhatsApp doit-il dire qu'il est une IA ?
+
+Oui lorsque l'utilisateur pourrait croire qu'il parle à un humain. La transparence doit être simple, visible et compatible avec une conversation naturelle.
+
+## Peut-on utiliser des vocaux WhatsApp dans un agent IA ?
+
+Oui, mais la transcription doit avoir une finalité claire, une conservation limitée et une sécurité adaptée. Les vocaux peuvent contenir des informations sensibles non prévues.
+
+## Le RGPD bloque-t-il les agents IA WhatsApp ?
+
+Non. Il impose de concevoir le système proprement : finalité, minimisation, information, droits, sécurité et responsabilité.
+
+## La Suisse suit-elle les mêmes règles que l'Union européenne ?
+
+La Suisse a son propre cadre, mais le PFPDT rappelle que la LPD s'applique aux traitements IA. Les entreprises suisses exposées au marché européen doivent aussi regarder l'AI Act et le RGPD selon leurs cas d'usage.
+
+## Quelle est la prochaine étape ?
+
+Avant de déployer, faites vérifier vos flux WhatsApp, vos données et vos règles d'escalade. Vous pouvez demander un [audit gratuit de 30 minutes](/fr/contact) pour cadrer le périmètre, les contraintes et les prochaines étapes.

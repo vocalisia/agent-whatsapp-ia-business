@@ -1,0 +1,122 @@
+---
+title: "Templates WhatsApp Business : agent IA fiable"
+date: "2026-06-20"
+dateModified: "2026-06-20"
+description: "Méthode pour écrire, valider et piloter les templates WhatsApp Business utilisés par un agent IA : contexte, personnalisation, conformité, qualité et escalade."
+readTime: "9 min"
+author: "Laurent Duplat"
+coverImage: "/images/blog/templates-whatsapp-business-agent-ia.jpg"
+coverImageAlt: "Écran de validation de templates WhatsApp Business pour un agent IA."
+howToSteps:
+  - name: "Lister les intentions sortantes"
+    text: "Identifier les rappels, confirmations, relances, suivis et demandes de précision que l'agent doit envoyer hors conversation active."
+  - name: "Écrire des templates contextualisés"
+    text: "Chaque template doit rappeler la raison du contact, rester utile et éviter toute promesse agressive."
+  - name: "Limiter la personnalisation IA"
+    text: "Utiliser l'IA pour adapter des variables validées, pas pour inventer une offre ou modifier la conformité du message."
+  - name: "Mesurer les retours"
+    text: "Suivre réponses, blocages, désabonnements, escalades et corrections humaines par famille de template."
+---
+
+> **Réponse courte :** un template WhatsApp Business pour agent IA doit être court, contextualisé, vérifiable et facile à interrompre. L'IA peut aider à choisir le bon template ou remplir des variables contrôlées, mais elle ne doit pas improviser une campagne hors cadre.
+
+## Le rôle des templates dans un agent IA WhatsApp
+
+Un agent IA WhatsApp ne répond pas seulement aux messages entrants. Il peut aussi envoyer une confirmation, un rappel, une demande de document, une relance de rendez-vous ou un suivi de dossier. Dans ces cas, les templates deviennent la frontière entre automatisation utile et message intrusif.
+
+Cette page est reliée au cocon [gouvernance agent IA WhatsApp](/fr/blog/gouvernance-agent-ia-whatsapp), au guide [opt-in WhatsApp IA](/fr/blog/whatsapp-opt-in-stop-agent-ia) et à la page [qualité du numéro WhatsApp](/fr/blog/qualite-numero-whatsapp-business-ia).
+
+## Les quatre familles de templates utiles
+
+| Famille | Objectif | Exemple de contexte |
+|---|---|---|
+| Confirmation | Rassurer après une action | Rendez-vous, demande reçue, dossier ouvert |
+| Précision | Obtenir une information manquante | Pièce jointe, créneau, référence, photo |
+| Relance | Reprendre une conversation attendue | Devis demandé, panier, rendez-vous à confirmer |
+| Service | Informer sans vendre | Statut de commande, changement d'horaire, suivi support |
+
+La [WhatsApp Business Platform](https://whatsappbusiness.com/developers/developer-hub/) fournit les ressources techniques pour construire sur l'API officielle, intégrer les webhooks et gérer les politiques de messagerie. Le contenu des templates doit rester aligné avec cette logique : messages attendus, utiles et de qualité.
+
+## Un template n'est pas un prompt libre
+
+L'erreur fréquente consiste à laisser l'IA écrire un message sortant complet à partir d'un objectif commercial. C'est trop risqué. La meilleure approche :
+
+1. L'équipe rédige le template.
+2. La conformité valide la famille de message.
+3. L'IA choisit le template selon l'intention.
+4. L'IA remplit seulement des variables autorisées.
+5. Le système bloque si une variable manque ou semble incohérente.
+
+Exemple sobre :
+
+```text
+Bonjour {{prenom}}, votre demande concernant {{sujet}} est bien reçue.
+Il nous manque {{information_manquante}} pour avancer.
+Vous pouvez répondre ici, ou demander à parler à une personne de l'équipe.
+```
+
+## Variables autorisées et variables à risque
+
+Variables généralement utiles :
+
+- prénom ;
+- sujet de la demande ;
+- créneau confirmé ;
+- référence de dossier ;
+- nom de l'agence ou du conseiller ;
+- lien vers une page utile ;
+- pièce manquante.
+
+Variables à encadrer :
+
+- niveau d'urgence ;
+- score de lead ;
+- recommandation commerciale ;
+- statut sensible ;
+- déduction issue d'une photo ou d'un document ;
+- réponse à une réclamation.
+
+Quand une variable peut modifier la perception du client ou créer une promesse, elle doit être validée ou transférée à un humain.
+
+## Qualité, spam et retours négatifs
+
+Meta explique, dans sa page de [policy enforcement WhatsApp Business Platform](https://developers.facebook.com/docs/whatsapp/overview/policy-enforcement), que les comptes qui violent les politiques ou reçoivent trop de retours négatifs peuvent être restreints. Les templates doivent donc être pilotés par qualité, pas par volume.
+
+Indicateurs à suivre :
+
+- taux de réponse utile ;
+- taux de STOP ou désabonnement ;
+- blocages et signalements ;
+- escalades liées au template ;
+- refus ou incompréhension du message ;
+- temps avant réponse humaine.
+
+Un template qui génère beaucoup de réponses négatives doit être suspendu, pas seulement réécrit par l'IA.
+
+## Checklist avant d'activer un template
+
+- Le contact comprend pourquoi il reçoit ce message.
+- Le message ne contient pas de promesse invérifiable.
+- Les variables sont limitées et contrôlées.
+- Le retrait est possible si le message est marketing.
+- L'agent sait quoi faire si le contact répond.
+- Le CRM garde une trace du template envoyé.
+- Une personne peut reprendre la main.
+
+## Questions fréquentes
+
+### L'IA peut-elle personnaliser les templates ?
+
+Oui, mais dans un cadre. Elle peut choisir une formulation validée ou remplir des variables vérifiées. Elle ne doit pas inventer une offre, un engagement ou une condition métier.
+
+### Combien de templates faut-il prévoir ?
+
+Commencez par les intentions les plus fréquentes : confirmation, rappel, précision manquante, suivi support et relance demandée. Il vaut mieux quelques templates solides qu'une bibliothèque impossible à maintenir.
+
+### Que faire si un template génère des STOP ?
+
+Le suspendre, analyser l'audience, le contexte et la promesse, puis le réactiver seulement si le message devient attendu et utile.
+
+### Quels articles lire ensuite ?
+
+Lisez [opt-in WhatsApp IA](/fr/blog/whatsapp-opt-in-stop-agent-ia), [qualité numéro WhatsApp](/fr/blog/qualite-numero-whatsapp-business-ia) et [journalisation agent IA WhatsApp](/fr/blog/journalisation-agent-ia-whatsapp).

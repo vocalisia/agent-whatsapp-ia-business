@@ -12,6 +12,7 @@ import {
   ArrowLeft,
   Smile,
 } from "lucide-react";
+import { sanitizeBotResponse, sanitizeQuickReplies, sanitizeSimulatorCopy } from "./publicCopy";
 
 /* ─── Public types ─── */
 
@@ -108,13 +109,13 @@ export default function WhatsAppSimulator({ config }: { config: SimulatorConfig 
     {
       id: "welcome",
       from: "bot",
-      text: config.welcomeMessage,
+      text: sanitizeSimulatorCopy(config.welcomeMessage),
       time: getTimestamp(),
     },
   ]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [quickReplies, setQuickReplies] = useState<QuickReply[]>(config.initialQuickReplies);
+  const [quickReplies, setQuickReplies] = useState<QuickReply[]>(sanitizeQuickReplies(config.initialQuickReplies));
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -132,7 +133,7 @@ export default function WhatsAppSimulator({ config }: { config: SimulatorConfig 
       const userMsg: ChatMessage = {
         id: `user-${Date.now()}`,
         from: "user",
-        text: text.trim(),
+        text: sanitizeSimulatorCopy(text.trim()),
         time: getTimestamp(),
       };
 
@@ -141,7 +142,7 @@ export default function WhatsAppSimulator({ config }: { config: SimulatorConfig 
       setQuickReplies([]);
       setIsTyping(true);
 
-      const response = findBotResponse(text, config);
+      const response = sanitizeBotResponse(findBotResponse(text, config));
 
       setTimeout(() => {
         setIsTyping(false);

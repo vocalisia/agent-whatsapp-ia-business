@@ -91,7 +91,7 @@ const t: Record<string, {
     segmentTitle: "Exemples de segments prêts à l'emploi",
     segments: [
       { label: "🔥 Clients chauds", desc: "A interagi avec l'agent cette semaine sans acheter" },
-      { label: "💎 VIP", desc: "Panier moyen > estimation personnalisee + 3 achats ou plus" },
+      { label: "💎 VIP", desc: "Panier élevé, forte récurrence et 3 achats ou plus" },
       { label: "😴 Dormants", desc: "Aucun achat depuis 60 jours" },
       { label: "🆕 Nouveaux", desc: "Premier achat il y a moins de 7 jours" },
       { label: "🔄 Fidèles", desc: "5+ achats sur les 12 derniers mois" },
@@ -132,8 +132,8 @@ const t: Record<string, {
       {
         heading: "Comment fonctionne réellement le broadcast WhatsApp en 2026",
         paragraphs: [
-          "Le broadcast WhatsApp est encadré par Meta via la WhatsApp Business API officielle (à ne pas confondre avec la version gratuite WhatsApp Business). Trois règles déterminent ce que vous pouvez ou ne pouvez pas envoyer : (1) tout message marketing exige un opt-in explicite tracé, (2) toute campagne utilise un template pré-validé par Meta sous 24-48h, (3) le coût par conversation marketing est facturé sur estimation personnalisee selon le pays.",
-          "AgenticWhatsup gère intégralement cette mécanique : capture du consentement RGPD au premier message entrant, soumission automatique des templates à Meta, optimisation des coûts par segmentation fine. Sur une base de 10 000 contacts, une campagne broadcast complète (création, envoi, suivi) coûte typiquement sur estimation personnalisee — vs estimation personnalisee minimum pour la même portée Facebook Ads avec un taux de conversion 3 à 5× inférieur.",
+          "Le broadcast WhatsApp est encadré par Meta via la WhatsApp Business API officielle (à ne pas confondre avec l'application WhatsApp Business). Trois règles déterminent ce que vous pouvez ou ne pouvez pas envoyer : tout message marketing exige un opt-in explicite tracé, chaque campagne utilise un template pré-validé par Meta, et le budget dépend du pays, du volume et du type de conversation.",
+          "AgenticWhatsup gère intégralement cette mécanique : capture du consentement RGPD au premier message entrant, soumission automatique des templates à Meta, segmentation fine et suivi des performances. Le cadrage budgétaire se fait pendant l'audit, avec une estimation adaptée à votre base et à vos objectifs.",
         ],
       },
       {
@@ -143,7 +143,7 @@ const t: Record<string, {
         ],
         bullets: [
           "Hot leads : interaction agent <7 jours sans achat — taux de conversion campagne 18 à 24%",
-          "VIP : LTV >estimation personnalisee, panier moyen >estimation personnalisee — meilleur segment pour offres premium et early access",
+          "VIP : forte valeur client, panier élevé et récurrence — meilleur segment pour offres premium et early access",
           "Dormants 30j : aucune interaction depuis 30 jours — taux de réactivation 11 à 17%",
           "Dormants 90j+ : à traiter par séquence de réveil 3 messages, sinon coût acquisition supérieur",
           "Fans : 5+ achats sur 12 mois, NPS >8 — meilleur segment pour parrainage et UGC",
@@ -182,7 +182,7 @@ const t: Record<string, {
     faqTitle: "Questions fréquentes sur le Marketing Hub WhatsApp",
     faq: [
       { q: "WhatsApp ne va-t-il pas me bannir si j'envoie en masse ?", a: "Non, à condition d'utiliser la WhatsApp Business API officielle (Meta) avec opt-in explicite tracé et templates pré-validés. AgenticWhatsup gère intégralement cette conformité — aucun de nos 200+ clients n'a été banni en 18 mois. La règle d'or : on ne contacte jamais quelqu'un qui n'a pas explicitement consenti, et chaque message respecte les guidelines Meta." },
-      { q: "Combien coûte une campagne broadcast à 10 000 contacts ?", a: "sur estimation personnalisee inclus selon le pays et le type de message (text only, rich avec image/vidéo, ou template avec boutons CTA). Le coût Meta par conversation marketing varie de estimation personnalisee (pays low-cost) à estimation personnalisee (US, UK). À comparer aux estimation personnalisee+ minimum pour Facebook Ads à portée équivalente, avec un taux de conversion 3 à 5 fois supérieur sur WhatsApp." },
+      { q: "Comment cadrer le budget d'une campagne broadcast ?", a: "Le budget dépend du pays, du volume, du type de message, du niveau de segmentation et des outils à connecter. L'audit gratuit permet d'estimer le scénario utile sans afficher de grille publique ni promettre une fourchette générique." },
       { q: "Puis-je importer ma base existante depuis Mailchimp / Klaviyo / HubSpot ?", a: "Oui, par CSV en quelques minutes. Pour les imports >5 000 contacts, l'agent demande automatiquement à chaque contact de re-confirmer son opt-in WhatsApp via un premier message conformité — c'est obligatoire RGPD et Meta. Taux d'opt-in observé : 38 à 62% selon la qualité de votre base. Les non-opt-in restent dans votre Mailchimp." },
       { q: "Quel ROI mesuré sur le Marketing Hub WhatsApp ?", a: "ROI moyen 12× à 24× sur 12 mois pour les e-commerces (basé sur 47 déploiements 2024-2025). Pour les services BtoB, ROI 8× à 14× via segmentation pipe et campagnes nurture. Le payback se fait typiquement à 30-45 jours pour les bases >5 000 contacts. Audit gratuit de 30 min pour calculer le ROI sur votre cas précis." },
       { q: "L'A/B testing fonctionne vraiment sur WhatsApp ?", a: "Oui, et c'est l'un des leviers les plus sous-exploités. AgenticWhatsup envoie chaque variante à un échantillon (typiquement 10% de la base par variante), mesure le taux de clic et de réponse pendant la fenêtre que vous définissez (1-12h), puis envoie automatiquement la variante gagnante au reste. Gain mesuré sur les meilleures campagnes : taux de réponse +47% vs envoi sans test." },
@@ -193,7 +193,7 @@ const t: Record<string, {
       { href: "/fr/blog/whatsapp-marketing-ia-campagnes-automatisees", label: "Marketing IA WhatsApp : guide complet des campagnes automatisées" },
       { href: "/fr/blog/whatsapp-vs-email-marketing-2026", label: "WhatsApp vs Email marketing en 2026 : le verdict chiffré" },
       { href: "/fr/blog/automatisation-whatsapp-ecommerce", label: "Automatisation WhatsApp e-commerce : 8 scénarios qui rapportent" },
-      { href: "/fr/blog/combien-coute-agent-ia-whatsapp-2026", label: "Combien coûte un agent IA WhatsApp en 2026" },
+      { href: "/fr/contact", label: "Audit gratuit 30 min pour cadrer votre projet WhatsApp IA" },
       { href: "/fr/blog/rgpd-whatsapp-ia-guide", label: "RGPD et WhatsApp IA : ce que la CNIL exige réellement" },
       { href: "/fr/blog/agent-ia-whatsapp-vs-chatbot", label: "Agent IA vs chatbot WhatsApp : la différence qui change le ROI" },
     ],
@@ -262,7 +262,7 @@ const t: Record<string, {
     segmentTitle: "Ready-to-use segment examples",
     segments: [
       { label: "🔥 Hot leads", desc: "Interacted with the agent this week without buying" },
-      { label: "💎 VIP", desc: "Average basket > estimation personnalisee+ 3 or more purchases" },
+      { label: "💎 VIP", desc: "High average basket, repeat behaviour and 3 or more purchases" },
       { label: "😴 Dormant", desc: "No purchase in 60 days" },
       { label: "🆕 New", desc: "First purchase less than 7 days ago" },
       { label: "🔄 Loyal", desc: "5+ purchases in the last 12 months" },
@@ -303,8 +303,8 @@ const t: Record<string, {
       {
         heading: "How WhatsApp broadcast actually works in 2026",
         paragraphs: [
-          "WhatsApp broadcast is regulated by Meta via the official WhatsApp Business API (not to be confused with the free WhatsApp Business app). Three rules determine what you can and cannot send: (1) any marketing message requires a tracked, explicit opt-in, (2) every campaign uses a Meta-pre-approved template (24-48h validation), (3) cost per marketing conversation ranges available after auditto estimation personnaliseedepending on country.",
-          "AgenticWhatsup handles this mechanic end-to-end: GDPR-compliant consent capture on first inbound message, automatic template submission to Meta, cost optimisation via fine-grained segmentation. On a 10,000-contact base, a full broadcast campaign (creation, send, tracking) typically costs estimation personnalisee-estimation personnalisee— vs estimation personnalisee+ minimum for the same Facebook Ads reach with conversion rates 3 to 5 times lower.",
+          "WhatsApp broadcast is regulated by Meta via the official WhatsApp Business API. Three rules determine what you can and cannot send: every marketing message requires tracked explicit opt-in, every campaign uses a Meta-pre-approved template, and the operating budget depends on country, volume and conversation type.",
+          "AgenticWhatsup handles this mechanic end-to-end: GDPR-compliant consent capture on first inbound message, automatic template submission to Meta, fine-grained segmentation and performance tracking. Budget framing happens during the audit, based on your customer base and business objective.",
         ],
       },
       {
@@ -314,7 +314,7 @@ const t: Record<string, {
         ],
         bullets: [
           "Hot leads: agent interaction <7 days without purchase — campaign conversion rate 18-24%",
-          "VIP: LTV >estimation personnaliseeaverage basket >estimation personnalisee— best segment for premium offers and early access",
+          "VIP: high customer value, high basket and repeat purchase behaviour — best segment for premium offers and early access",
           "30-day dormant: no interaction in 30 days — reactivation rate 11-17%",
           "90-day+ dormant: handle with a 3-message wake-up sequence, otherwise CAC exceeds value",
           "Fans: 5+ purchases in 12 months, NPS >8 — best segment for referrals and UGC",
@@ -353,7 +353,7 @@ const t: Record<string, {
     faqTitle: "WhatsApp Marketing Hub frequently asked questions",
     faq: [
       { q: "Won't WhatsApp ban me if I send in bulk?", a: "No, provided you use the official WhatsApp Business API (Meta) with tracked explicit opt-in and pre-validated templates. AgenticWhatsup handles this compliance end-to-end — none of our 200+ clients have been banned in 18 months. Golden rule: never contact someone who hasn't explicitly consented, and every message respects Meta's guidelines." },
-      { q: "How much does a 10,000-contact broadcast campaign cost?", a: "Between estimation personnaliseeand estimation personnaliseeall-inclusive depending on country and message type (text only, rich with image/video, or template with CTA buttons). Meta cost per marketing conversation ranges available after audit(low-cost markets) to estimation personnalisee(US, UK). Compare to estimation personnalisee+ minimum for Facebook Ads at equivalent reach, with conversion rates 3 to 5 times higher on WhatsApp." },
+      { q: "How should I frame a broadcast campaign budget?", a: "Budget depends on country, volume, message type, segmentation depth and connected tools. The free audit estimates the useful scenario for your business without publishing generic public pricing." },
       { q: "Can I import my existing base from Mailchimp / Klaviyo / HubSpot?", a: "Yes, via CSV in minutes. For imports >5,000 contacts, the agent automatically asks each contact to re-confirm WhatsApp opt-in via a first compliance message — this is mandatory under GDPR and Meta. Observed opt-in rate: 38 to 62% depending on base quality. Non-opt-ins remain in your Mailchimp." },
       { q: "What ROI is measured on the WhatsApp Marketing Hub?", a: "Average ROI 12× to 24× over 12 months for e-commerce (based on 47 deployments 2024-2025). For B2B services, ROI 8× to 14× via pipeline segmentation and nurture campaigns. Payback typically at 30-45 days for bases >5,000 contacts. Free 30-min audit to calculate ROI on your specific case." },
       { q: "Does A/B testing actually work on WhatsApp?", a: "Yes, and it's one of the most under-exploited levers. AgenticWhatsup sends each variant to a sample (typically 10% of base per variant), measures click and response rate during the window you define (1-12h), then automatically sends the winning variant to the rest. Measured gain on best campaigns: response rate +47% vs no-test send." },
@@ -364,7 +364,7 @@ const t: Record<string, {
       { href: "/en/blog/whatsapp-marketing-ai-automated-campaigns", label: "WhatsApp AI Marketing: complete guide to automated campaigns" },
       { href: "/en/blog/whatsapp-vs-email-marketing-2026", label: "WhatsApp vs Email marketing in 2026: the data-driven verdict" },
       { href: "/en/blog/whatsapp-automation-ecommerce", label: "WhatsApp e-commerce automation: 8 scenarios that pay" },
-      { href: "/en/blog/whatsapp-ai-agent-cost-2026", label: "How much does a WhatsApp AI agent cost in 2026" },
+      { href: "/en/contact", label: "Book a free audit to frame your WhatsApp AI project" },
       { href: "/en/blog/gdpr-whatsapp-ai-guide", label: "GDPR and WhatsApp AI: what the ICO actually requires" },
       { href: "/en/blog/whatsapp-ai-agent-vs-chatbot", label: "WhatsApp AI agent vs chatbot: the difference that changes ROI" },
     ],
@@ -433,7 +433,7 @@ const t: Record<string, {
     segmentTitle: "Gebrauchsfertige Segmentbeispiele",
     segments: [
       { label: "🔥 Heiße Leads", desc: "Diese Woche mit Agent interagiert, ohne zu kaufen" },
-      { label: "💎 VIP", desc: "Durchschnittlicher Warenkorb > estimation personnalisee + 3 oder mehr Käufe" },
+      { label: "💎 VIP", desc: "Hoher Warenkorb, Wiederkäufe und 3 oder mehr Käufe" },
       { label: "😴 Ruhend", desc: "Kein Kauf in 60 Tagen" },
       { label: "🆕 Neu", desc: "Erster Kauf vor weniger als 7 Tagen" },
       { label: "🔄 Treu", desc: "5+ Käufe in den letzten 12 Monaten" },
@@ -531,7 +531,7 @@ const t: Record<string, {
     segmentTitle: "Kant-en-klare segmentvoorbeelden",
     segments: [
       { label: "🔥 Warme leads", desc: "Deze week interactie met agent zonder te kopen" },
-      { label: "💎 VIP", desc: "Gemiddeld winkelwagenbedrag > estimation personnalisee+ 3 of meer aankopen" },
+      { label: "💎 VIP", desc: "Hoge gemiddelde winkelwagen, herhaalaankopen en 3 of meer aankopen" },
       { label: "😴 Slapend", desc: "Geen aankoop in 60 dagen" },
       { label: "🆕 Nieuw", desc: "Eerste aankoop minder dan 7 dagen geleden" },
       { label: "🔄 Trouw", desc: "5+ aankopen in de afgelopen 12 maanden" },

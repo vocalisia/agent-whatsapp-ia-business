@@ -1,0 +1,111 @@
+---
+title: "Agent IA WhatsApp CRM : pipeline commercial"
+date: "2026-06-19"
+dateModified: "2026-06-19"
+description: "Méthode pour connecter un agent IA WhatsApp au CRM, qualifier les demandes, enrichir le pipeline commercial et garder une donnée exploitable par les équipes."
+readTime: "10 min"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Définir les champs CRM utiles"
+    text: "Lister les informations nécessaires pour qualifier une demande sans surcharger la conversation."
+  - name: "Relier chaque intention à une action"
+    text: "Associer les demandes WhatsApp à une création de lead, une mise à jour de fiche, une tâche, un rendez-vous ou un ticket."
+  - name: "Prévoir la reprise humaine"
+    text: "Router les échanges complexes vers la bonne équipe avec résumé, contexte et prochaine action recommandée."
+  - name: "Auditer la qualité de donnée"
+    text: "Contrôler régulièrement les fiches créées ou enrichies pour éviter les doublons, champs vides et statuts incohérents."
+---
+
+> **Réponse courte :** un agent IA WhatsApp connecté au CRM sert à transformer une conversation en donnée commerciale exploitable. Il ne doit pas seulement répondre vite : il doit qualifier, enrichir, router et documenter le pipeline sans créer de bruit pour les équipes.
+
+## Pourquoi le CRM change tout
+
+Sans CRM, WhatsApp reste une boîte de réception. Avec un CRM propre, WhatsApp devient un canal commercial pilotable : chaque demande peut être reliée à une fiche, une opportunité, un statut, une source, un responsable et une prochaine action.
+
+Ce guide appartient au cocon [déployer un agent IA WhatsApp](/fr/blog/deployer-agent-ia-whatsapp-guide-operationnel). Il complète la page service [CRM automation](/fr/services/crm-automation) et l'article [qualification de leads WhatsApp B2B](/fr/blog/qualification-leads-whatsapp-b2b).
+
+## Les champs à capturer sans alourdir l'échange
+
+L'agent ne doit pas transformer WhatsApp en formulaire interminable. Il doit poser les bonnes questions au bon moment.
+
+| Information | Pourquoi elle compte | Exemple d'usage |
+|---|---|---|
+| Identité | reconnaître ou créer la fiche | nom, entreprise, canal d'origine |
+| Besoin | qualifier l'intention | support, achat, rendez-vous, suivi |
+| Priorité | router correctement | urgent, standard, à rappeler |
+| Contexte | éviter la répétition | historique, produit, dossier |
+| Prochaine étape | faire avancer le pipeline | tâche, rendez-vous, transfert |
+
+Le bon agent complète progressivement ces champs. Si une donnée existe déjà dans le CRM, il ne la redemande pas. Si elle manque, il pose une question naturelle.
+
+## Pipeline commercial : les statuts utiles
+
+Pour un usage commercial, les statuts doivent rester simples :
+
+1. Nouveau message reçu.
+2. Demande comprise.
+3. Qualification en cours.
+4. Contact prêt pour action humaine.
+5. Rendez-vous ou suite confirmée.
+6. Non prioritaire ou hors périmètre.
+
+Chaque statut doit pouvoir être expliqué par l'historique de conversation. C'est important pour la confiance interne : une équipe commerciale doit comprendre pourquoi un lead est dans une colonne donnée.
+
+## Quand l'agent doit créer une fiche
+
+L'agent crée ou enrichit une fiche quand il dispose d'un minimum de contexte fiable : identité, demande, canal, consentement opérationnel et action attendue. S'il manque une information critique, il peut poser une question courte ou passer la main.
+
+À lire ensuite : [escalade humaine WhatsApp IA](/fr/blog/agent-ia-whatsapp-escalade-humaine), car le CRM ne remplace jamais le jugement humain dans les cas sensibles.
+
+## Synchronisation et déduplication
+
+Un risque classique consiste à créer plusieurs fiches pour la même personne. Il faut donc prévoir une règle de rapprochement : numéro WhatsApp, adresse email si fournie, nom d'entreprise, identifiant client ou référence de dossier.
+
+L'agent peut proposer une fusion, mais la fusion automatique doit rester prudente. Une erreur de rapprochement peut mélanger deux historiques clients et dégrader la relation.
+
+## Ce que l'agent doit écrire dans le CRM
+
+Le résumé doit être court, actionnable et relisible :
+
+```text
+Demande : souhaite automatiser les réponses WhatsApp de son équipe commerciale.
+Contexte : reçoit beaucoup de messages hors horaires et perd des demandes.
+Informations collectées : secteur, taille d'équipe, CRM actuel, urgence.
+Prochaine action : proposer un audit et préparer questions sur intégrations.
+Niveau de confiance : bon, mais validation humaine recommandée.
+```
+
+Ce format évite les notes longues et floues. Il aide l'équipe à reprendre la conversation sans tout relire.
+
+## Mesurer la qualité CRM
+
+Un tableau de bord utile suit :
+
+- fiches créées ;
+- fiches enrichies ;
+- doublons détectés ;
+- champs essentiels complétés ;
+- conversations routées ;
+- reprises humaines ;
+- suites confirmées ;
+- erreurs corrigées.
+
+Le guide [KPI agent IA WhatsApp](/fr/blog/agent-ia-whatsapp-kpi-tableau-bord) détaille ces indicateurs.
+
+## Questions fréquentes
+
+### L'agent doit-il écrire directement dans le CRM ?
+
+Oui, si les règles sont cadrées. Pour les champs critiques, il peut proposer une mise à jour et demander validation humaine.
+
+### Quel CRM connecter en premier ?
+
+Le CRM utilisé chaque jour par l'équipe. Une intégration parfaite à un outil peu consulté a moins de valeur qu'une intégration simple dans l'outil réellement utilisé.
+
+### Comment éviter une donnée CRM sale ?
+
+Avec des champs limités, des règles de déduplication, des résumés courts, des contrôles humains et une revue régulière.
+
+### Quelle suite logique ?
+
+Commencez par un [audit gratuit de 30 minutes](/fr/contact) pour cartographier vos conversations WhatsApp, votre CRM et votre pipeline.

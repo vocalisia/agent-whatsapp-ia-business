@@ -9,7 +9,7 @@ const GENERAL_INTENTS = {
       { label: "Comment ca marche ?", value: "comment ca marche" },
       { label: "WhatsApp features", value: "whatsapp features" },
       { label: "Telephonie IA", value: "telephonie" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
     ],
   },
   salut: {
@@ -18,7 +18,7 @@ const GENERAL_INTENTS = {
     quickReplies: [
       { label: "Fonctionnalites", value: "comment ca marche" },
       { label: "Clonage vocal", value: "clonage vocal" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
     ],
   },
   "comment ca marche": {
@@ -28,7 +28,7 @@ const GENERAL_INTENTS = {
       { label: "Flow Builder ?", value: "flow builder" },
       { label: "Clonage vocal", value: "clonage vocal" },
       { label: "Automatisation", value: "automatisation" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
     ],
   },
   photo: {
@@ -36,7 +36,7 @@ const GENERAL_INTENTS = {
     delay: 1800,
     quickReplies: [
       { label: "Vocal aussi ?", value: "vocal" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
     ],
   },
   demo: {
@@ -62,7 +62,7 @@ const GENERAL_INTENTS = {
     delay: 2000,
     quickReplies: [
       { label: "Prendre RDV", value: "rdv" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
     ],
   },
   financement: {
@@ -99,7 +99,7 @@ export const generalConfig: SimulatorConfig = {
     { label: "WhatsApp features", value: "whatsapp features" },
     { label: "Telephonie IA", value: "telephonie" },
     { label: "Clonage vocal", value: "clonage vocal" },
-    { label: "Tarifs", value: "tarif" },
+    { label: "Cadrage", value: "budget" },
   ],
   intents: merged.intents,
   keywords: merged.keywords,
@@ -107,6 +107,6 @@ export const generalConfig: SimulatorConfig = {
     { label: "Comment ca marche ?", value: "comment ca marche" },
     { label: "WhatsApp features", value: "whatsapp features" },
     { label: "Telephonie IA", value: "telephonie" },
-    { label: "Tarifs", value: "tarif" },
+    { label: "Cadrage", value: "budget" },
   ]),
 };

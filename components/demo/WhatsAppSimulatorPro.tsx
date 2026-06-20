@@ -6,16 +6,14 @@ import {
   CheckCheck,
   Camera,
   Mic,
-  Paperclip,
   Phone,
   Video,
   MoreVertical,
   ArrowLeft,
   Smile,
-  Globe,
-  PartyPopper,
 } from "lucide-react";
 import type { SimulatorConfig, QuickReply } from "./WhatsAppSimulator";
+import { sanitizeBotResponse, sanitizeQuickReplies, sanitizeSimulatorCopy } from "./publicCopy";
 
 /* ─── Sector photos ─── */
 
@@ -94,7 +92,7 @@ interface SectorVoice {
 const SECTOR_VOICES: Record<string, SectorVoice[]> = {
   general: [
     { transcript: "Bonjour, je voudrais en savoir plus sur vos agents IA WhatsApp", triggerText: "comment ca marche", duration: "0:04" },
-    { transcript: "Quels sont vos tarifs pour une PME de 10 personnes ?", triggerText: "tarif", duration: "0:03" },
+    { transcript: "Comment cadrer un agent pour une PME de 10 personnes ?", triggerText: "budget", duration: "0:03" },
     { transcript: "Est-ce que vous pouvez cloner ma voix pour l'agent ?", triggerText: "clonage vocal", duration: "0:03" },
   ],
   ecommerce: [
@@ -109,7 +107,7 @@ const SECTOR_VOICES: Record<string, SectorVoice[]> = {
   ],
   assurance: [
     { transcript: "J'ai eu un accident de voiture ce matin, comment declarer le sinistre ?", triggerText: "declarer sinistre", duration: "0:05" },
-    { transcript: "Je voudrais un devis pour mon assurance habitation", triggerText: "devis", duration: "0:03" },
+    { transcript: "Je voudrais cadrer mon assurance habitation", triggerText: "devis", duration: "0:03" },
     { transcript: "Ou en est mon dossier de sinistre numero SIN-2026-04 ?", triggerText: "suivi dossier", duration: "0:04" },
   ],
   immobilier: [
@@ -128,7 +126,7 @@ const SECTOR_VOICES: Record<string, SectorVoice[]> = {
     { transcript: "Est-ce que la teleconsultation est possible ce soir ?", triggerText: "teleconsultation", duration: "0:03" },
   ],
   fitness: [
-    { transcript: "Quels abonnements proposez-vous et a quel prix ?", triggerText: "abonnement", duration: "0:03" },
+    { transcript: "Quels abonnements proposez-vous selon mon objectif ?", triggerText: "abonnement", duration: "0:03" },
     { transcript: "Je voudrais essayer votre salle, vous avez un essai gratuit ?", triggerText: "essai gratuit", duration: "0:04" },
     { transcript: "J'aimerais prendre un coach personnel pour perdre du poids", triggerText: "coach", duration: "0:04" },
   ],
@@ -185,8 +183,8 @@ const SCORE_KEYWORDS: Record<string, number> = {
   rdv: 25, reserver: 25, book: 25, reservation: 25, "prendre rdv": 25,
   confirmer: 30, lundi: 28, mardi: 28, mercredi: 28, jeudi: 28, vendredi: 28,
   achat: 22, acheter: 22, commander: 22, souscrire: 22, inscription: 20,
-  // Pricing interest
-  tarif: 15, prix: 15, combien: 15, pricing: 15, financement: 15, simulation: 12,
+  // Budget framing interest
+  budget: 15, combien: 15, cadrage: 15, financement: 15, simulation: 12,
   // Feature interest
   demo: 10, essai: 10, tester: 10, telephonie: 10, clonage: 10, vocal: 10,
   scoring: 10, automatisation: 8, integration: 8, crm: 10,
@@ -273,10 +271,10 @@ function Confetti({ active }: { active: boolean }) {
   if (!active) return null;
   const particles = Array.from({ length: 30 }, (_, i) => ({
     id: i,
-    left: Math.random() * 100,
-    delay: Math.random() * 0.5,
+    left: (i * 37) % 100,
+    delay: (i % 6) * 0.08,
     color: ["#25D366", "#6366F1", "#F59E0B", "#EF4444", "#10B981"][i % 5],
-    size: 4 + Math.random() * 6,
+    size: 4 + (i % 5),
   }));
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-50">
@@ -341,11 +339,11 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
   const tSim = useTranslations("simulator");
   const defaultLang = locale.toUpperCase();
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: "welcome", from: "bot", text: config.welcomeMessage, time: getTimestamp() },
+    { id: "welcome", from: "bot", text: sanitizeSimulatorCopy(config.welcomeMessage), time: getTimestamp() },
   ]);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
-  const [quickReplies, setQuickReplies] = useState<QuickReply[]>(config.initialQuickReplies);
+  const [quickReplies, setQuickReplies] = useState<QuickReply[]>(sanitizeQuickReplies(config.initialQuickReplies));
   const [lastResponseMs, setLastResponseMs] = useState(0);
   const [showConfetti, setShowConfetti] = useState(false);
   const [totalScore, setTotalScore] = useState(10);
@@ -354,18 +352,6 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
   const [showVoicePicker, setShowVoicePicker] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   const typingStartRef = useRef(0);
-
-  // Reset on config change
-  useEffect(() => {
-    setMessages([{ id: "welcome", from: "bot", text: config.welcomeMessage, time: getTimestamp() }]);
-    setQuickReplies(config.initialQuickReplies);
-    setInput("");
-    setIsTyping(false);
-    setLastResponseMs(0);
-    setShowConfetti(false);
-    setTotalScore(10);
-    setMsgCount(1);
-  }, [config]);
 
   useEffect(() => {
     const container = chatContainerRef.current;
@@ -404,7 +390,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       const userMsg: ChatMessage = {
         id: `user-${Date.now()}`,
         from: "user",
-        text: text.trim(),
+        text: sanitizeSimulatorCopy(text.trim()),
         time: getTimestamp(),
       };
 
@@ -431,7 +417,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       });
       onEvent?.({ type: "typing_start" });
 
-      const response = findBotResponse(text, config);
+      const response = sanitizeBotResponse(findBotResponse(text, config));
 
       setTimeout(() => {
         const responseTime = Date.now() - typingStartRef.current;
@@ -466,7 +452,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
         onEvent?.({ type: "typing_end" });
       }, response.delay);
     },
-    [isTyping, config, onEvent, playSound, triggerConfetti, msgCount, totalScore]
+    [isTyping, config, onEvent, playSound, triggerConfetti, msgCount, totalScore, defaultLang]
   );
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -483,7 +469,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
     const voiceMsg: ChatMessage = {
       id: `user-voice-${Date.now()}`,
       from: "user",
-      text: voice.transcript,
+      text: sanitizeSimulatorCopy(voice.transcript),
       time: getTimestamp(),
       isVocal: true,
       vocalDuration: voice.duration,
@@ -504,7 +490,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
     onEvent?.({ type: "user_message", messageCount: newCount, leadScore: newScore, sentiment, language: lang });
     onEvent?.({ type: "typing_start" });
 
-    const response = findBotResponse(voice.triggerText, config);
+    const response = sanitizeBotResponse(findBotResponse(voice.triggerText, config));
 
     setTimeout(() => {
       const responseTime = Date.now() - typingStartRef.current;
@@ -514,7 +500,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       const botMsg: ChatMessage = {
         id: `bot-${Date.now()}`,
         from: "bot",
-        text: "**" + tSim("voiceTranscribed") + ":**\n\"" + voice.transcript + "\"\n\n" + response.text,
+        text: "**" + tSim("voiceTranscribed") + ":**\n\"" + sanitizeSimulatorCopy(voice.transcript) + "\"\n\n" + response.text,
         time: getTimestamp(),
       };
       const finalCount = newCount + 1;
@@ -528,7 +514,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       onEvent?.({ type: "bot_response", responseTimeMs: responseTime, messageCount: finalCount, leadScore: newScore });
       onEvent?.({ type: "typing_end" });
     }, response.delay + 800); // +800ms for "transcription" effect
-  }, [isTyping, config, onEvent, playSound, triggerConfetti, msgCount, totalScore]);
+  }, [isTyping, config, onEvent, playSound, triggerConfetti, msgCount, totalScore, defaultLang, tSim]);
 
   /* ─── Photo picker ─── */
   const sendPhoto = useCallback((photo: SectorPhoto) => {
@@ -557,7 +543,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
     onEvent?.({ type: "user_message", messageCount: newCount, leadScore: newScore, sentiment: "neutral", language: defaultLang });
     onEvent?.({ type: "typing_start" });
 
-    const response = findBotResponse(photo.triggerText, config);
+    const response = sanitizeBotResponse(findBotResponse(photo.triggerText, config));
 
     setTimeout(() => {
       const responseTime = Date.now() - typingStartRef.current;
@@ -581,7 +567,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
       onEvent?.({ type: "bot_response", responseTimeMs: responseTime, messageCount: finalCount, leadScore: newScore });
       onEvent?.({ type: "typing_end" });
     }, response.delay);
-  }, [isTyping, config, onEvent, playSound, triggerConfetti, msgCount, totalScore]);
+  }, [isTyping, config, onEvent, playSound, triggerConfetti, msgCount, totalScore, defaultLang]);
 
   const currentPhotos = SECTOR_PHOTOS[sectorKey] ?? SECTOR_PHOTOS.general;
   const currentVoices = SECTOR_VOICES[sectorKey] ?? SECTOR_VOICES.general;
@@ -782,7 +768,7 @@ export default function WhatsAppSimulatorPro({ config, onEvent, selectedSector, 
                           <div key={i} className="w-0.5 bg-wa/50 rounded-full" style={{ height: `${3 + Math.sin(i * 0.7) * 4 + Math.random() * 2}px` }} />
                         ))}
                       </div>
-                      <span className="text-[10px] text-slate-400 line-clamp-1">&ldquo;{voice.transcript}&rdquo;</span>
+                      <span className="text-[10px] text-slate-400 line-clamp-1">&ldquo;{sanitizeSimulatorCopy(voice.transcript)}&rdquo;</span>
                     </div>
                     <span className="text-[9px] text-slate-500 flex-shrink-0">{voice.duration}</span>
                   </button>

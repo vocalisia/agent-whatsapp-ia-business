@@ -19,7 +19,7 @@ const COACH_INTENTS = {
     text: "Voici nos **3 programmes de coaching** :\n\n**1. Individuel** - Accompagnement 1-to-1 personnalise\n12 seances de 60 min sur 3 mois\nSuivi WhatsApp entre les seances\n\n**2. Groupe** - Dynamique collective (6-8 personnes)\n8 seances de 90 min sur 2 mois\nCommunaute privee d'entraide\n\n**3. VIP Intensif** - Transformation acceleree\n20 seances + acces illimite WhatsApp\nPlan d'action sur-mesure + ressources exclusives\n\nQuel programme vous interesse ?",
     delay: 2000,
     quickReplies: [
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
       { label: "Programme individuel", value: "individuel" },
       { label: "Programme VIP", value: "vip" },
       { label: "Coaching groupe", value: "groupe" },
@@ -122,7 +122,7 @@ const COACH_INTENTS = {
     text: "**Questions frequentes** :\n\n**Combien de temps dure un coaching ?**\n2 a 6 mois selon le programme choisi.\n\n**En visio ou en presentiel ?**\nLes deux ! Visio Zoom ou en cabinet a Geneve.\n\n**Confidentialite ?**\n100% confidentiel. Conversations chiffrees, RGPD conforme.\n\n**Resultats garantis ?**\n92% de nos clients atteignent leurs objectifs. Satisfaction ou prolongation gratuite.\n\n**Annulation ?**\nFlexible, reprogrammation jusqu'a 24h avant.\n\nUne autre question ?",
     delay: 2000,
     quickReplies: [
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
       { label: "Temoignages", value: "temoignages" },
       { label: "Reserver", value: "rdv" },
     ],
@@ -132,24 +132,24 @@ const COACH_INTENTS = {
     text: "Nous proposons plusieurs **options de paiement** :\n\n**Paiement unique** - Le plus avantageux\nVirement, carte bancaire ou Twint\n\n**Paiement en 2 fois** - Sans frais\n50% a l'inscription + 50% a mi-parcours\n\n**Paiement en 3 fois** - Sans frais\n33% a l'inscription + 2 echeances mensuelles\n\n**Paiement en 4 fois** - Sans frais\n25% a l'inscription + 3 echeances mensuelles\n\nFacture professionnelle fournie (deductible si formation).\nNote de frais possible pour les entreprises.",
     delay: 1800,
     quickReplies: [
-      { label: "Tarifs detailles", value: "tarif" },
+      { label: "Cadrage détaillé", value: "budget" },
       { label: "Reserver", value: "rdv" },
       { label: "Deductible ?", value: "deductible" },
     ],
   },
 
   groupe: {
-    text: "Le **coaching de groupe** est ideal pour :\n\n**Equipes en entreprise** (6-8 personnes)\n- Cohesion et communication\n- Gestion des conflits\n- Leadership collectif\n- Objectifs communs\n\n**Groupes ouverts** (6-8 personnes)\n- Reconversion professionnelle\n- Entrepreneuriat\n- Developpement personnel\n\n**Format** : 8 seances de 90 min sur 2 mois\n**Tarif** : estimation personnalisee\n**Bonus** : Communaute WhatsApp privee du groupe\n\nProchaine session : **Mai 2026** - Places limitees !",
+    text: "Le **coaching de groupe** est ideal pour :\n\n**Equipes en entreprise** (6-8 personnes)\n- Cohesion et communication\n- Gestion des conflits\n- Leadership collectif\n- Objectifs communs\n\n**Groupes ouverts** (6-8 personnes)\n- Reconversion professionnelle\n- Entrepreneuriat\n- Developpement personnel\n\n**Format** : 8 seances de 90 min sur 2 mois\n**Cadrage** : pendant la séance découverte\n**Bonus** : Communaute WhatsApp privee du groupe\n\nProchaine session : **Mai 2026** - Places limitees !",
     delay: 2000,
     quickReplies: [
       { label: "S'inscrire au groupe", value: "rdv" },
       { label: "Coaching individuel", value: "individuel" },
-      { label: "Tarifs entreprise", value: "tarif" },
+      { label: "Cadrage entreprise", value: "budget" },
     ],
   },
 
   individuel: {
-    text: "Le **coaching individuel** est notre programme phare :\n\n**Ce qui est inclus :**\n- 12 seances de 60 min (1/semaine)\n- Bilan initial approfondi\n- Plan d'action personnalise\n- Suivi WhatsApp entre les seances\n- Fiches et exercices pratiques\n- Bilan final et plan de consolidation\n\n**Pour qui ?**\nProfessionnels en transition, managers, entrepreneurs, toute personne souhaitant un accompagnement sur-mesure.\n\n**Duree** : 3 mois\n**Tarif** : estimation personnalisee\n\nCommencez par une seance decouverte gratuite !",
+    text: "Le **coaching individuel** est notre programme phare :\n\n**Ce qui est inclus :**\n- 12 seances de 60 min (1/semaine)\n- Bilan initial approfondi\n- Plan d'action personnalise\n- Suivi WhatsApp entre les seances\n- Fiches et exercices pratiques\n- Bilan final et plan de consolidation\n\n**Pour qui ?**\nProfessionnels en transition, managers, entrepreneurs, toute personne souhaitant un accompagnement sur-mesure.\n\n**Duree** : 3 mois\n**Cadrage** : pendant la séance découverte\n\nCommencez par une seance decouverte gratuite !",
     delay: 2000,
     quickReplies: [
       { label: "Seance decouverte", value: "seance decouverte" },
@@ -159,7 +159,7 @@ const COACH_INTENTS = {
   },
 
   vip: {
-    text: "Le programme **VIP Intensif** est notre offre premium :\n\n**Ce qui est inclus :**\n- 20 seances de 60 min\n- Acces WhatsApp **illimite** avec votre coach\n- Bilan psychometrique complet\n- Plan strategique sur-mesure\n- Ressources exclusives (masterclasses, outils)\n- 2 seances de suivi post-programme\n- Support prioritaire 7j/7\n\n**Resultats moyens :**\n- +67% de confiance mesuree\n- +45% de productivite\n- 94% d'objectifs atteints\n\n**Duree** : 6 mois\n**Tarif** : estimation personnalisee (paiement en 4x possible)",
+    text: "Le programme **VIP Intensif** est notre offre premium :\n\n**Ce qui est inclus :**\n- 20 seances de 60 min\n- Acces WhatsApp **illimite** avec votre coach\n- Bilan psychometrique complet\n- Plan strategique sur-mesure\n- Ressources exclusives (masterclasses, outils)\n- 2 seances de suivi post-programme\n- Support prioritaire 7j/7\n\n**Resultats moyens :**\n- +67% de confiance mesuree\n- +45% de productivite\n- 94% d'objectifs atteints\n\n**Duree** : 6 mois\n**Cadrage** : pendant la séance découverte (modalités discutées en séance découverte)",
     delay: 2200,
     quickReplies: [
       { label: "Reserver VIP", value: "rdv" },
@@ -176,7 +176,7 @@ const COACH_INTENTS = {
     quickReplies: [
       { label: "WhatsApp features", value: "whatsapp features" },
       { label: "Scoring leads", value: "scoring" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
       { label: "Prendre RDV", value: "rdv" },
     ],
   },
@@ -188,17 +188,17 @@ const COACH_INTENTS = {
       { label: "Clonage vocal", value: "clonage vocal" },
       { label: "Telephonie IA", value: "telephonie" },
       { label: "Calendrier", value: "calendrier" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
     ],
   },
 
   "widget site": {
-    text: "**Widget web pour site de coaching** :\n\nIntegrez un assistant IA directement sur votre site :\n\n**Fonctionnalites :**\n- **Chat textuel** pour questions rapides\n- **Appel vocal** depuis le navigateur\n- **Bilan interactif** directement dans le widget\n- **Prise de RDV** sans quitter la page\n- **Capture lead** automatique dans le CRM\n\n**Installation :**\n1 snippet JS avant `</body>` — 2 minutes chrono\n\n**Resultats :**\n- **+45% de conversion** visiteur → lead\n- **-70% de bounce rate** sur page tarifs\n- Disponible 24/7 meme quand vous etes en seance\n\nPersonnalisable aux couleurs de votre marque.",
+    text: "**Widget web pour site de coaching** :\n\nIntegrez un assistant IA directement sur votre site :\n\n**Fonctionnalites :**\n- **Chat textuel** pour questions rapides\n- **Appel vocal** depuis le navigateur\n- **Bilan interactif** directement dans le widget\n- **Prise de RDV** sans quitter la page\n- **Capture lead** automatique dans le CRM\n\n**Installation :**\n1 snippet JS avant `</body>` — 2 minutes chrono\n\n**Resultats :**\n- **+45% de conversion** visiteur → lead\n- **-70% de bounce rate** sur page programme\n- Disponible 24/7 meme quand vous etes en seance\n\nPersonnalisable aux couleurs de votre marque.",
     delay: 2200,
     quickReplies: [
       { label: "Widget details", value: "widget" },
       { label: "Automatisation", value: "automatisation" },
-      { label: "Tarifs", value: "tarif" },
+      { label: "Cadrage", value: "budget" },
       { label: "Prendre RDV", value: "rdv" },
     ],
   },
@@ -236,7 +236,7 @@ export const coachConfig: SimulatorConfig = {
   initialQuickReplies: [
     { label: "Programmes", value: "programmes" },
     { label: "Seance decouverte", value: "seance decouverte" },
-    { label: "Tarifs", value: "tarif" },
+    { label: "Cadrage", value: "budget" },
     { label: "Bilan gratuit", value: "bilan gratuit" },
   ],
   intents: merged.intents,
@@ -245,7 +245,7 @@ export const coachConfig: SimulatorConfig = {
     { label: "Programmes", value: "programmes" },
     { label: "Seance decouverte", value: "seance decouverte" },
     { label: "Bilan gratuit", value: "bilan gratuit" },
-    { label: "Tarifs", value: "tarif" },
+    { label: "Cadrage", value: "budget" },
   ]),
 };
 

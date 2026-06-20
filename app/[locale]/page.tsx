@@ -18,16 +18,16 @@ const pageMeta: Record<string, { title: string; description: string }> = {
     description: "WhatsUp AI et agent IA WhatsApp Business : qualifiez vos leads, prenez des RDV et assurez un service client via WhatsApp avec Vision IA et transcription vocale.",
   },
   en: {
-    title: "WhatsUp AI for WhatsApp Business",
-    description: "WhatsUp AI and WhatsApp Business AI agent: qualify leads, book appointments, and deliver customer service via WhatsApp with AI Vision and voice transcription.",
+    title: "WhatsApp AI Agent for Business | WhatsUp AI",
+    description: "WhatsApp AI agent for business: qualify leads, book appointments and answer customers via WhatsApp with AI Vision, voice transcription and CRM handoff.",
   },
   de: {
-    title: "WhatsApp KI-Agent | Automatisieren Kundennachrichten 24/7",
-    description: "Der einzige WhatsApp KI-Agent, der Sprachnachrichten versteht und Fotos analysiert. Antworten automatisieren, Leads qualifizieren, Termine buchen — 24/7.",
+    title: "WhatsApp KI Chatbot für Kundenservice",
+    description: "WhatsApp KI Chatbot und Agent für Kundenservice: Sprachnachrichten verstehen, Fotos analysieren, Leads qualifizieren und Termine buchen.",
   },
   nl: {
-    title: "WhatsApp AI-agent | Automatiseer uw klantberichten 24/7",
-    description: "De enige WhatsApp AI-agent die spraakberichten begrijpt en foto's van uw klanten analyseert. Automatiseer antwoorden, kwalificeer leads, boek afspraken.",
+    title: "AI chatbot voor WhatsApp Business",
+    description: "AI chatbot voor WhatsApp Business: automatiseer antwoorden, kwalificeer leads, begrijp spraakberichten en koppel gesprekken aan uw CRM.",
   },
 };
 
@@ -76,7 +76,7 @@ const organizationJsonLd = {
     "@type": "ImageObject",
     "url": "https://agentic-whatsup.com/icon.svg"
   },
-  "description": "The only WhatsApp AI agent that understands voice messages and analyzes customer photos. Automate replies, qualify leads, book appointments 24/7.",
+  "description": "WhatsApp AI agent for business teams: understand voice messages, analyze customer photos, automate replies, qualify leads and book appointments.",
   "areaServed": ["FR", "BE", "CH", "LU", "GB", "DE", "NL"],
   "founder": {
     "@type": "Person",

@@ -81,7 +81,7 @@ const capabilities = [
 const suggestedPhrases = [
   "Bonjour, quels sont vos programmes ?",
   "Je cherche un coaching individuel",
-  "Combien ça coûte ?",
+  "Comment choisir le bon programme ?",
   "Je veux réserver une séance découverte",
   "Avez-vous des témoignages ?",
   "Comment fonctionne votre méthode ?",

@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Services",
-    "tarifs": "Tarifs",
+    "tarifs": "Audit",
     "blog": "Blog",
     "contact": "Contact",
     "audit": "Prendre RDV",
@@ -220,13 +220,13 @@
     "directContact": "Contact direct"
   },
   "tarifs": {
-    "eyebrow": "Formules",
+    "eyebrow": "Audit",
     "title": "Chaque projet est unique",
-    "subtitle": "Pas de grille tarifaire figée. On discute de vos besoins et on vous propose la solution exacte — ni plus, ni moins.",
+    "subtitle": "On discute de vos besoins et on propose le périmètre exact, ni plus ni moins.",
     "recommended": "RECOMMANDÉ",
     "plans": [
       {
-        "name": "Starter",
+        "name": "Cadrage",
         "description": "PME qui débutent l'automatisation WhatsApp.",
         "features": [
           "1 agent WhatsApp Business",
@@ -239,7 +239,7 @@
         ]
       },
       {
-        "name": "Pro",
+        "name": "Déploiement",
         "description": "La solution complète pour tout automatiser.",
         "features": [
           "Multi-scénarios de conversation",
@@ -254,7 +254,7 @@
         ]
       },
       {
-        "name": "Enterprise",
+        "name": "Sur mesure",
         "description": "Solution sur-mesure pour les grandes organisations.",
         "features": [
           "Architecture entièrement sur-mesure",
@@ -274,12 +274,12 @@
     "faqTitle": "Questions fréquentes",
     "faqs": [
       {
-        "question": "Les tarifs incluent-ils la mise en place ?",
-        "answer": "Oui. Chaque devis inclut le développement, la configuration WhatsApp Business, les tests et le déploiement complet. Pas de surprise."
+        "question": "La mise en place est-elle incluse dans le cadrage ?",
+        "answer": "Oui. Le cadrage précise le développement, la configuration WhatsApp Business, les tests et le déploiement complet."
       },
       {
-        "question": "Y a-t-il des frais récurrents ?",
-        "answer": "Oui, un forfait mensuel couvre l'hébergement, les appels API (LLM) et la maintenance. Ce forfait est inclus dans notre proposition."
+        "question": "Y a-t-il un accompagnement après lancement ?",
+        "answer": "Oui. L’accompagnement couvre l’hébergement, les appels API, la maintenance et l’amélioration continue selon le périmètre validé."
       },
       {
         "question": "Quel est le délai de mise en production ?",
@@ -475,11 +475,11 @@
       "heroTitle": "Agent IA WhatsApp Business :",
       "heroHighlight": "votre guide complet 2026",
       "heroSubtitle": "Découvrez comment un agent IA WhatsApp Business transforme la qualification de leads, la prise de RDV et le service client 24/7 — déployé en 2 à 3 semaines.",
-      "pricingEyebrow": "Tarifs",
-      "pricingTitle": "Un investissement adapté à votre activité",
-      "pricingSubtitle": "Chaque projet est différent. Contactez-nous pour un devis personnalisé basé sur vos volumes et vos intégrations.",
-      "pricingViewPlans": "Voir les formules",
-      "pricingRequestQuote": "Demander un devis",
+      "pricingEyebrow": "Audit",
+      "pricingTitle": "Un cadrage adapté à votre activité",
+      "pricingSubtitle": "Chaque projet est différent. Contactez-nous pour un audit personnalisé basé sur vos volumes et vos intégrations.",
+      "pricingViewPlans": "Voir le cadrage",
+      "pricingRequestQuote": "Demander un audit",
       "faqEyebrow": "FAQ",
       "faqTitle": "FAQ — Agent IA WhatsApp Business",
       "relatedEyebrow": "Services associés",

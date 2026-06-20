@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
@@ -240,6 +240,7 @@ export default function DemoPageClient() {
             {/* Center: Simulator */}
             <div className="flex justify-center">
               <WhatsAppSimulatorPro
+                key={`${locale}-${activeSector}`}
                 config={activeConfig}
                 onEvent={handleEvent}
                 selectedSector={t(SECTORS.find((s) => s.key === activeSector)?.labelKey ?? 'sectorGeneral')}

@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Diensten",
-    "tarifs": "Prijzen",
+    "tarifs": "Audit",
     "blog": "Blog",
     "contact": "Contact",
     "audit": "Gratis audit",
@@ -220,13 +220,13 @@
     "directContact": "Direct contact"
   },
   "tarifs": {
-    "eyebrow": "Abonnementen",
+    "eyebrow": "Audit",
     "title": "Elk project is uniek",
-    "subtitle": "Geen vaste prijslijst. We bespreken uw behoeften en stellen de exacte oplossing voor — niet meer, niet minder.",
+    "subtitle": "We bespreken uw behoeften en adviseren de exacte scope, niet meer en niet minder.",
     "recommended": "AANBEVOLEN",
     "plans": [
       {
-        "name": "Starter",
+        "name": "Scope",
         "description": "KMO's die beginnen met WhatsApp-automatisering.",
         "features": [
           "1 WhatsApp Business-agent",
@@ -239,7 +239,7 @@
         ]
       },
       {
-        "name": "Pro",
+        "name": "Implementatie",
         "description": "De complete oplossing om alles te automatiseren.",
         "features": [
           "Meerdere gespreksscenario's",
@@ -254,7 +254,7 @@
         ]
       },
       {
-        "name": "Enterprise",
+        "name": "Op maat",
         "description": "Maatwerkooplossing voor grote organisaties.",
         "features": [
           "Volledig op maat gemaakte architectuur",
@@ -274,12 +274,12 @@
     "faqTitle": "Veelgestelde vragen",
     "faqs": [
       {
-        "question": "Is de installatie inbegrepen in de prijs?",
-        "answer": "Ja. Elke offerte omvat de ontwikkeling, WhatsApp Business-configuratie, testen en volledige implementatie. Geen verrassingen."
+        "question": "Is implementatie inbegrepen in de scope?",
+        "answer": "Ja. De scope beschrijft ontwikkeling, WhatsApp Business-configuratie, tests en volledige livegang."
       },
       {
-        "question": "Zijn er terugkerende kosten?",
-        "answer": "Ja, een maandelijks pakket dekt hosting, API-aanroepen (LLM) en onderhoud. Dit pakket is inbegrepen in ons voorstel."
+        "question": "Is er begeleiding na lancering?",
+        "answer": "Ja. Begeleiding omvat hosting, API-calls, onderhoud en continue verbetering volgens de gevalideerde scope."
       },
       {
         "question": "Wat is de doorlooptijd naar productie?",
@@ -475,11 +475,11 @@
       "heroTitle": "Uw WhatsApp Business AI-agent,",
       "heroHighlight": "kant-en-klaar",
       "heroSubtitle": "Van behoefteanalyse tot productie — wij zetten uw WhatsApp AI-agent in 2 tot 3 weken in. AI Vision, spraaktranscriptie, afsprakenboeking, CRM-integraties.",
-      "pricingEyebrow": "Prijzen",
-      "pricingTitle": "Een investering op maat van uw bedrijf",
-      "pricingSubtitle": "Elk project is uniek. Neem contact met ons op voor een gepersonaliseerde offerte op basis van uw volumes en integraties.",
-      "pricingViewPlans": "Bekijk formules",
-      "pricingRequestQuote": "Offerte aanvragen",
+      "pricingEyebrow": "Audit",
+      "pricingTitle": "Een scope op maat van uw bedrijf",
+      "pricingSubtitle": "Elk project is anders. Neem contact met ons op voor een persoonlijke audit op basis van uw volumes en integraties.",
+      "pricingViewPlans": "Scope bekijken",
+      "pricingRequestQuote": "Audit aanvragen",
       "faqEyebrow": "FAQ",
       "faqTitle": "Veelgestelde vragen over de WhatsApp AI-agent",
       "relatedEyebrow": "Gerelateerde diensten",

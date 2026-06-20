@@ -1,0 +1,99 @@
+---
+title: "Agent IA WhatsApp : vocaux, photos, documents"
+date: "2026-06-19"
+dateModified: "2026-06-19"
+description: "Guide pour gérer les messages vocaux, photos, captures et documents avec un agent IA WhatsApp : transcription, vision, extraction, confirmation et escalade humaine."
+readTime: "10 min"
+author: "Laurent Duplat"
+howToSteps:
+  - name: "Classer les formats reçus"
+    text: "Séparer texte, vocal, photo, capture, document et pièce jointe pour comprendre les vrais usages clients."
+  - name: "Définir ce que l'agent peut extraire"
+    text: "Limiter l'analyse aux informations utiles : intention, référence, statut, besoin, urgence ou élément à confirmer."
+  - name: "Demander confirmation"
+    text: "Faire valider les informations extraites avant toute action métier sensible."
+  - name: "Escalader les cas ambigus"
+    text: "Transférer à une personne humaine quand le média est illisible, sensible ou contradictoire."
+---
+
+> **Réponse courte :** les clients n'écrivent pas toujours des messages propres. Ils envoient des vocaux, photos, captures, documents et phrases incomplètes. Un agent IA WhatsApp utile doit analyser ces formats, extraire l'information utile, demander confirmation et passer la main si le contexte est risqué.
+
+## Pourquoi les formats changent le périmètre
+
+Un chatbot classique fonctionne surtout avec du texte prévisible. WhatsApp, lui, est un canal vivant : un client peut envoyer une photo de produit, une capture d'écran, un vocal rapide, une facture, un document, une adresse ou une référence écrite à la main.
+
+Ce guide relie les articles [transcription vocale WhatsApp IA](/fr/blog/transcription-vocale-whatsapp-ia), [agent WhatsApp vision IA](/fr/blog/agent-whatsapp-vision-ia), [analyser photos clients IA WhatsApp](/fr/blog/analyser-photos-clients-ia-whatsapp) et la page pilier [déployer un agent IA WhatsApp](/fr/blog/deployer-agent-ia-whatsapp-guide-operationnel).
+
+## Les formats à distinguer
+
+| Format | Ce que l'agent peut faire | Point de vigilance |
+|---|---|---|
+| Vocal | transcrire et résumer | accent, bruit, intention implicite |
+| Photo | repérer un objet ou une anomalie visible | qualité, contexte absent |
+| Capture | lire une erreur ou une interface | données affichées |
+| Document | extraire une référence ou une demande | contenu sensible |
+| Texte court | poser la bonne question suivante | ambiguïté |
+
+Le piège consiste à traiter tous les formats comme du texte. Un vocal peut contenir une émotion. Une photo peut manquer de contexte. Un document peut contenir des informations à protéger.
+
+## Transcription vocale
+
+La transcription n'est qu'une étape. L'agent doit ensuite comprendre l'intention, résumer l'échange et demander confirmation si nécessaire.
+
+Exemple :
+
+```text
+Message vocal transcrit : "Bonjour, je vous ai envoyé les infos hier, je veux savoir si c'est bon pour demain."
+Intention : suivi de dossier ou rendez-vous.
+Action prudente : demander la référence ou vérifier le CRM avant réponse.
+```
+
+À lire ensuite : [transcription vocale WhatsApp IA](/fr/blog/transcription-vocale-whatsapp-ia).
+
+## Analyse d'image
+
+La vision IA peut aider à lire une capture, reconnaître un document, comprendre une photo produit ou détecter une anomalie visible. Mais elle ne doit pas inventer ce qu'elle ne voit pas.
+
+Bonne pratique :
+
+1. décrire ce qui est visible ;
+2. extraire l'information utile ;
+3. indiquer les incertitudes ;
+4. demander confirmation ;
+5. escalader si l'image est sensible.
+
+À lire ensuite : [agent WhatsApp vision IA](/fr/blog/agent-whatsapp-vision-ia).
+
+## Documents et sécurité
+
+Les documents doivent être traités avec prudence. Un agent peut repérer une référence ou résumer une demande, mais il doit éviter d'exposer ou de réutiliser inutilement des données personnelles.
+
+Le guide [sécurité données WhatsApp IA](/fr/blog/agent-ia-whatsapp-securite-donnees) détaille la minimisation, les droits d'accès et les règles de journalisation.
+
+## Confirmation avant action
+
+Quand l'agent extrait une information d'un média, il doit souvent la reformuler :
+
+```text
+Je comprends que votre demande concerne le dossier mentionné dans la capture et que vous souhaitez une confirmation de statut. Je vérifie avec les informations disponibles ; si un élément manque, je transmets à l'équipe.
+```
+
+Cette confirmation évite les erreurs d'interprétation.
+
+## Questions fréquentes
+
+### Un agent IA peut-il comprendre un vocal WhatsApp ?
+
+Oui, si la transcription est correctement intégrée et si l'agent reçoit des consignes pour résumer, clarifier et transférer les cas incertains.
+
+### Peut-il analyser une photo client ?
+
+Oui, mais l'analyse doit rester limitée à ce qui est visible et utile. Les cas sensibles doivent être repris par une personne.
+
+### Les documents doivent-ils être stockés ?
+
+Pas automatiquement. Il faut définir ce qui doit être conservé, résumé, exclu ou transféré selon le besoin métier.
+
+### Quelle suite logique ?
+
+Un [audit gratuit de 30 minutes](/fr/contact) permet d'identifier vos formats WhatsApp réels : texte, vocaux, photos, captures et documents.

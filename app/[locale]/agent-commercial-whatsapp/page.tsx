@@ -123,7 +123,7 @@ export default async function AgentCommercialPage({ params }: { params: Promise<
       { icon: "globe", title: "Multilingue natif", desc: "Plus de 50 langues comprises et parlées instantanément. Français, anglais, néerlandais, allemand, arabe, et bien plus." },
       { icon: "zap", title: "Réponse en moins de 2 secondes", desc: "Vos clients n'attendent plus. Chaque message reçoit une réponse personnalisée en temps réel." },
       { icon: "users", title: "Collaboration humain-IA", desc: "L'agent escalade intelligemment vers vos équipes quand la situation l'exige. L'humain garde le contrôle." },
-      { icon: "brain", title: "Connaissance de votre business", desc: "Entraîné sur vos produits, vos tarifs, vos procédures et votre ton de marque. Il parle comme vous." },
+      { icon: "brain", title: "Connaissance de votre business", desc: "Entraîné sur vos produits, vos offres, vos procédures et votre ton de marque. Il parle comme vous." },
       { icon: "chart", title: "Analytics et performance", desc: "Métriques en temps réel : taux de résolution, sentiment client, sujets fréquents, taux de conversion." },
     ],
     en: [
@@ -226,7 +226,7 @@ export default async function AgentCommercialPage({ params }: { params: Promise<
     fr: [
       { cat: "Ventes & Marketing", items: ["Recommandations produits personnalisées", "Génération de devis automatique", "Traitement et suivi des commandes", "Upsell & cross-sell intelligent", "Campagnes promotionnelles ciblées"] },
       { cat: "Service Client", items: ["Dépannage guidé pas à pas", "Gestion de compte client", "Traitement retours & remboursements", "Suivi garanties & SAV", "Escalade intelligente vers humain"] },
-      { cat: "Information & Conseil", items: ["Fiches produit détaillées", "Tarification en temps réel", "Horaires et localisation", "Délais de livraison", "FAQ personnalisées"] },
+      { cat: "Information & Conseil", items: ["Fiches produit détaillées", "Cadrageication en temps réel", "Horaires et localisation", "Délais de livraison", "FAQ personnalisées"] },
       { cat: "Génération de Leads", items: ["Collecte automatique de contacts", "Scoring et qualification BANT", "Planification de démonstrations", "Nurturing automatisé", "Transfert CRM instantané"] },
       { cat: "Gestion des RDV", items: ["Calendrier et disponibilités live", "Confirmations automatiques", "Reprogrammation facile", "Rappels multi-canaux", "Réduction des no-shows"] },
       { cat: "Solutions Avancées", items: ["Workflows personnalisés", "Intégration CRM & ERP", "Analyse d'images & vocaux", "Mémoire conversationnelle", "Multi-agents coordonnés"] },

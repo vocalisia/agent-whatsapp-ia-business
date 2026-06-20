@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Services",
-    "tarifs": "Pricing",
+    "tarifs": "Audit",
     "blog": "Blog",
     "contact": "Contact",
     "audit": "Free audit",
@@ -220,13 +220,13 @@
     "directContact": "Direct contact"
   },
   "tarifs": {
-    "eyebrow": "Plans",
+    "eyebrow": "Audit",
     "title": "Every project is unique",
-    "subtitle": "No fixed price list. We discuss your needs and propose the exact solution — no more, no less.",
+    "subtitle": "We discuss your needs and recommend the exact scope, no more and no less.",
     "recommended": "RECOMMENDED",
     "plans": [
       {
-        "name": "Starter",
+        "name": "Scope",
         "description": "SMBs starting with WhatsApp automation.",
         "features": [
           "1 WhatsApp Business agent",
@@ -239,7 +239,7 @@
         ]
       },
       {
-        "name": "Pro",
+        "name": "Deployment",
         "description": "The complete solution to automate everything.",
         "features": [
           "Multiple conversation scenarios",
@@ -254,7 +254,7 @@
         ]
       },
       {
-        "name": "Enterprise",
+        "name": "Custom",
         "description": "Custom solution for large organizations.",
         "features": [
           "Fully custom architecture",
@@ -268,18 +268,18 @@
         ]
       }
     ],
-    "sessionEyebrow": "Strategic session",
+    "sessionEyebrow": "Strategy session",
     "sessionTitle": "Strategic Session — Your WhatsApp AI Agent",
     "sessionSubtitle": "30 minutes to analyze your flows, identify possible automations and define your strategy. Free diagnostic, no commitment.",
     "faqTitle": "Frequently asked questions",
     "faqs": [
       {
-        "question": "Do prices include setup?",
-        "answer": "Yes. Every quote includes development, WhatsApp Business configuration, testing and full deployment. No surprises."
+        "question": "Is implementation included in the scope?",
+        "answer": "Yes. The scope covers development, WhatsApp Business configuration, testing and full deployment."
       },
       {
-        "question": "Are there recurring fees?",
-        "answer": "Yes, a monthly plan covers hosting, API calls (LLM) and maintenance. This plan is included in our proposal."
+        "question": "Is there support after launch?",
+        "answer": "Yes. Support covers hosting, API calls, maintenance and continuous improvement according to the validated scope."
       },
       {
         "question": "What is the time to production?",
@@ -475,11 +475,11 @@
       "heroTitle": "AI Agent for WhatsApp Business:",
       "heroHighlight": "your complete guide 2026",
       "heroSubtitle": "Discover how an AI agent for WhatsApp Business transforms lead qualification, appointment booking, and 24/7 customer service — deployed in 2 to 3 weeks.",
-      "pricingEyebrow": "Pricing",
-      "pricingTitle": "An investment tailored to your business",
-      "pricingSubtitle": "Every project is different. Contact us for a personalized quote based on your volumes and integrations.",
-      "pricingViewPlans": "View plans",
-      "pricingRequestQuote": "Request a quote",
+      "pricingEyebrow": "Audit",
+      "pricingTitle": "A scope tailored to your business",
+      "pricingSubtitle": "Every project is different. Contact us for a personalised audit based on your volumes and integrations.",
+      "pricingViewPlans": "View scope",
+      "pricingRequestQuote": "Request an audit",
       "faqEyebrow": "FAQ",
       "faqTitle": "FAQ — AI Agent for WhatsApp Business",
       "relatedEyebrow": "Related services",

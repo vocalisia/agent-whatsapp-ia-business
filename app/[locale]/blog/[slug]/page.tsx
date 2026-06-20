@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { getAllSlugs, getAllPosts, getPostBySlug, isBlockedPricingSlug } from "@/lib/mdx";
 import { normalizeBlogMarkdownHref } from "@/lib/normalize-blog-href";
+import {
+  articleSeoLabels,
+  getArticleClusterLinks,
+  getArticleSources,
+  sanitizeSeoText,
+  toBlogLocale,
+} from "@/lib/blog-seo";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
 import type { MDXRemoteProps } from "next-mdx-remote/rsc";
@@ -31,6 +38,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       };
     }
     const { meta } = getPostBySlug(slug, locale);
+    const coverImage = meta.coverImage ?? "/og-image.jpg";
+    const absoluteCoverImage = /^https?:\/\//i.test(coverImage)
+      ? coverImage
+      : `https://agentic-whatsup.com${coverImage.startsWith("/") ? coverImage : `/${coverImage}`}`;
     return {
       title: meta.title,
       description: meta.description,
@@ -49,7 +60,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         description: meta.description,
         type: "article",
         publishedTime: meta.date,
+        modifiedTime: meta.dateModified ?? meta.date,
         authors: meta.author ? [meta.author] : ["AgenticWhatsup"],
+        images: [{ url: absoluteCoverImage, alt: meta.coverImageAlt ?? meta.title }],
       },
     };
   } catch {
@@ -60,8 +73,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
   const { slug, locale } = await params;
   if (isBlockedPricingSlug(slug)) {
-    notFound();
+    permanentRedirect(`/${locale}/contact`);
   }
+  const blogLocale = toBlogLocale(locale);
   const t = await getTranslations({ locale, namespace: "blog" });
   const allPosts = getAllPosts(locale);
 
@@ -90,6 +104,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       const out = normalizeBlogMarkdownHref(href, locale, {
         sameOriginHosts: ["agentic-whatsup.com"],
       });
+      const blogMatch = out.match(/^\/[a-z]{2}\/blog\/([^/?#]+)/i);
+      if (blogMatch && isBlockedPricingSlug(decodeURIComponent(blogMatch[1]))) {
+        return (
+          <Link href={`/${locale}/contact`} className="text-wa hover:underline">
+            {children}
+          </Link>
+        );
+      }
       const linkClass = "text-wa hover:underline";
       if (/^https?:\/\//i.test(out)) {
         return (
@@ -107,6 +129,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   };
 
   const canonicalUrl = `https://agentic-whatsup.com/${locale}/blog/${slug}`;
+  const coverImage = post.meta.coverImage ?? "/og-image.jpg";
+  const absoluteCoverImage = /^https?:\/\//i.test(coverImage)
+    ? coverImage
+    : `https://agentic-whatsup.com${coverImage.startsWith("/") ? coverImage : `/${coverImage}`}`;
+  const coverImageAlt = post.meta.coverImageAlt ?? post.meta.title;
+  const articleSources = getArticleSources(post.meta, post.content, blogLocale);
+  const clusterLinks = getArticleClusterLinks(post.meta, allPosts, blogLocale);
+  const seoLabels = articleSeoLabels[blogLocale];
   const authorName = post.meta.author && post.meta.author !== "AgenticWhatsup"
     ? post.meta.author
     : "Laurent Duplat";
@@ -147,7 +177,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       "@id": canonicalUrl,
     },
     url: canonicalUrl,
-    image: "https://agentic-whatsup.com/og-image.jpg",
+    image: absoluteCoverImage,
+    citation: articleSources.map((source) => source.url),
+    about: [
+      { "@type": "Thing", name: "WhatsApp Business" },
+      { "@type": "Thing", name: "Agent IA WhatsApp" },
+      { "@type": "Thing", name: "Automatisation conversationnelle" },
+    ],
     speakable: {
       "@type": "SpeakableSpecification",
       cssSelector: ["h1", "h2", ".article-intro", ".article-summary"],
@@ -156,14 +192,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   // Auto-detect FAQ from MDX content (## Question? followed by answer).
   function stripMd(s: string): string {
-    return s
-      .replace(/^#{1,6}\s+/gm, "")
-      .replace(/\*\*([^*]+)\*\*/g, "estimation personnalisee")
-      .replace(/\*([^*]+)\*/g, "estimation personnalisee")
-      .replace(/`([^`]+)`/g, "estimation personnalisee")
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, "estimation personnalisee")
-      .replace(/\s+/g, " ")
-      .trim();
+    return sanitizeSeoText(s);
   }
   const md = post.content || "";
   const faqPairs: { question: string; answer: string }[] = (() => {
@@ -248,8 +277,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       </Link>
 
       {/* Cover */}
-      <div className="h-48 rounded-2xl bg-gradient-to-br from-wa/20 via-surface to-indigo-500/15 border border-surface-2 flex items-center justify-center px-8 mb-8">
-        <p className="text-white font-bold text-xl text-center leading-snug">{post.meta.title}</p>
+      <div className="mb-8 overflow-hidden rounded-2xl border border-surface-2 bg-surface">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={coverImage}
+          alt={coverImageAlt}
+          className="block h-auto w-full object-cover"
+          loading="eager"
+        />
       </div>
 
       {/* Meta */}
@@ -277,6 +312,46 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <div className="prose prose-invert max-w-none">
         <MDXRemote source={post.content} components={mdxComponents} />
+      </div>
+
+      <div className="prose prose-invert max-w-none mt-12">
+        <h2>{seoLabels.trustTitle}</h2>
+        <ul>
+          {seoLabels.trustBullets.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+
+        {articleSources.length > 0 && (
+          <>
+            <h2>{seoLabels.sourcesTitle}</h2>
+            <ul>
+              {articleSources.map((source) => (
+                <li key={source.key}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">
+                    {source.title}
+                  </a>{" "}
+                  <span className="text-slate-400">
+                    ({seoLabels.sourceKind[source.kind]}) - {source.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {clusterLinks.length > 0 && (
+          <>
+            <h2>{seoLabels.nextTitle}</h2>
+            <ul>
+              {clusterLinks.map((link) => (
+                <li key={link.slug}>
+                  <Link href={link.href}>{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
       </div>
 
       {/* CTA fin d'article */}

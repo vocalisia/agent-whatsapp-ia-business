@@ -6,7 +6,6 @@ import {
   MessageSquare,
   Zap,
   Target,
-  Coins,
   Heart,
   Globe,
 } from "lucide-react";
@@ -239,12 +238,10 @@ function ComparisonSection({
   messageCount,
   lastResponseTime,
   leadScore,
-  conversationCost,
 }: {
   messageCount: number;
   lastResponseTime: number;
   leadScore: number;
-  conversationCost: number;
 }) {
   const t = useTranslations("dashboard");
   const responseFormatted =
@@ -292,8 +289,8 @@ function ComparisonSection({
             { value: `${responseRate}%`, label: t("responseRate") },
             { value: `${leadsQualified} ${t("qualifiedLeads")}`, label: "" },
             {
-              value: `${conversationCost.toFixed(2)}\u20AC/${t("conv")}`,
-              label: "",
+              value: `${Math.min(100, responseRate + Math.round(leadScore / 5))}%`,
+              label: t("conv"),
             },
           ].map((item, i) => (
             <div
@@ -321,25 +318,14 @@ export default function LiveDashboard({
   messageCount,
   lastResponseTime,
   leadScore,
-  conversationCost,
   sentiment,
   languageDetected,
   isTyping,
 }: DashboardProps) {
   const t = useTranslations("dashboard");
   const animatedCount = useAnimatedValue(messageCount);
-  const animatedCost = useAnimatedValue(conversationCost);
-  const prevCountRef = useRef(messageCount);
-  const [recentUpdate, setRecentUpdate] = useState(false);
-
-  useEffect(() => {
-    if (messageCount !== prevCountRef.current) {
-      prevCountRef.current = messageCount;
-      setRecentUpdate(true);
-      const timer = setTimeout(() => setRecentUpdate(false), 1200);
-      return () => clearTimeout(timer);
-    }
-  }, [messageCount]);
+  const animatedImpact = useAnimatedValue(Math.min(100, leadScore + messageCount * 3));
+  const recentUpdate = messageCount > 1;
 
   return (
     <div className="w-full max-w-xs space-y-2.5">
@@ -393,15 +379,15 @@ export default function LiveDashboard({
         <LeadScoreRing score={leadScore} />
       </KpiCard>
 
-      {/* Cost */}
+      {/* Conversation impact */}
       <KpiCard
-        icon={<Coins size={16} className="text-amber-400" />}
+        icon={<Zap size={16} className="text-amber-400" />}
         label={t("cost").toUpperCase()}
         highlight={recentUpdate}
       >
         <div className="flex items-baseline gap-2">
           <span className="text-lg font-bold text-white tabular-nums">
-            {animatedCost.toFixed(2)}&euro;
+            {Math.round(animatedImpact)}%
           </span>
           <span className="text-[10px] text-red-400/60 line-through">
             {t("vsHuman")}
@@ -435,7 +421,6 @@ export default function LiveDashboard({
         messageCount={messageCount}
         lastResponseTime={lastResponseTime}
         leadScore={leadScore}
-        conversationCost={conversationCost}
       />
 
       {/* Inline keyframes */}
