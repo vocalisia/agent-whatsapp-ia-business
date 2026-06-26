@@ -20,6 +20,8 @@ const nextConfig: NextConfig = {
       { source: "/en/tarifs", destination: "/en/contact", permanent: true },
       { source: "/de/tarifs", destination: "/de/contact", permanent: true },
       { source: "/nl/tarifs", destination: "/nl/contact", permanent: true },
+      // Locale service indexes are legacy crawl targets; send them to the canonical service page.
+      { source: "/:locale(fr|en|de|nl)/services", destination: "/:locale/services/agent-ia-whatsapp", permanent: true },
       // Ghost pages without locale prefix (legacy URLs Google still indexes)
       { source: "/blog/:slug*", destination: "/fr/blog/:slug*", permanent: true },
       { source: "/blog", destination: "/fr/blog", permanent: true },

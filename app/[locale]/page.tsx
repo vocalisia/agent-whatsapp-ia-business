@@ -50,93 +50,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "AgenticWhatsup",
-  "url": "https://agentic-whatsup.com",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://agentic-whatsup.com/fr/blog?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-};
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@id": "https://agentic-whatsup.com/#organization",
-  "@type": "Organization",
-  "name": "AgenticWhatsup",
-  "url": "https://agentic-whatsup.com",
-  "email": "contact@agentic-whatsup.com",
-  "logo": {
-    "@type": "ImageObject",
-    "url": "https://agentic-whatsup.com/icon.svg"
-  },
-  "description": "WhatsApp AI agent for business teams: understand voice messages, analyze customer photos, automate replies, qualify leads and book appointments.",
-  "areaServed": ["FR", "BE", "CH", "LU", "GB", "DE", "NL"],
-  "founder": {
-    "@type": "Person",
-    "@id": "https://agentic-whatsup.com/#founder",
-    "name": "Richard Cohen",
-    "sameAs": "https://www.linkedin.com/in/richard-cohen-vault369/"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/agentic-whatsup",
-    "https://twitter.com/agenticwhatsup",
-    "https://vocalis.pro",
-    "https://seo-true.com",
-    "https://trustly-ai.com",
-    "https://master-seller.fr",
-    "https://tesla-mag.ch"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "contact@agentic-whatsup.com",
-    "contactType": "customer support",
-    "availableLanguage": ["French", "English", "German", "Dutch"]
-  }
-};
-
-const softwareAppJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "@id": "https://agentic-whatsup.com/#app",
-  "name": "Agentic WhatsApp",
-  "url": "https://agentic-whatsup.com",
-  "applicationCategory": "BusinessApplication",
-  "applicationSubCategory": "CustomerServiceApplication",
-  "operatingSystem": "Web",
-  "description": "Agent IA pour WhatsApp Business — automatisation des réponses et qualification de leads",
-  "inLanguage": ["fr", "en", "de", "nl"],
-  "featureList": [
-    "Voice message understanding",
-    "Photo analysis",
-    "Lead qualification",
-    "Appointment booking",
-    "24/7 automation",
-    "Multilingual support (FR, EN, DE, NL)"
-  ],
-  "publisher": {
-    "@id": "https://agentic-whatsup.com/#organization"
-  }
-};
-
-const aggregateRatingJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "AgenticWhatsup",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "ratingCount": "47",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
-};
 
 function buildBreadcrumb(locale: string) {
   return {
@@ -292,11 +205,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
       <Hero />

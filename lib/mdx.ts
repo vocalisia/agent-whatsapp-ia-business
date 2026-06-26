@@ -5,7 +5,7 @@ import matter from "gray-matter";
 // v2026-05-26
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 const LOCALE_DIRS = ["en", "de", "nl"];
-const BLOCKED_PRICING_SLUG_RE = /(cost|pricing|price|kosten|prix|tarif|aio|llm-seo)/i;
+const BLOCKED_PRICING_SLUG_RE = /(cost|pricing|price|kosten|prix|tarif|combien|cout|coute|co[uû]t|aio|llm-seo)/i;
 
 export interface HowToStep {
   name: string;
