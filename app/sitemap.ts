@@ -1,10 +1,10 @@
 import { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/mdx";
+import { BLOG_LOCALES, getAllPosts, getPostLocales } from "@/lib/mdx";
 
 const BASE_URL = "https://agentic-whatsup.com";
-const locales = ["fr", "en", "de", "nl"];
+const locales = BLOG_LOCALES;
 
-// Stable dates per static page â€” avoids Google interpreting daily regeneration as manipulation
+// Stable dates per static page - avoids Google interpreting daily regeneration as manipulation
 const STATIC_DATES: Record<string, string> = {
   "":                                      "2026-06-03",
   "/demo":                                 "2026-06-03",
@@ -44,7 +44,7 @@ const STATIC_DATES: Record<string, string> = {
   "/auteur/laurent-duplat":                "2026-06-03",
 };
 
-// Secteur pages â€” spread over a realistic creation window
+// Secteur pages - spread over a realistic creation window
 const SECTEUR_DATES: Record<string, string> = {
   "immobilier":           "2025-09-05",
   "ecommerce":            "2025-09-08",
@@ -104,6 +104,7 @@ const pillarBlogSlugs = new Set([
   "voice-agent-ia-qualite-kpi",
   "agent-vocal-ia-securite-authentification",
   "agent-vocal-ia-vocalis-whatsapp",
+  "agent-ia-whatsapp-france-guide-2026",
   "automatisation-whatsapp-ecommerce",
   "integrer-agent-ia-whatsapp-shopify",
   "whatsapp-shopify-integration-panier-abandonne",
@@ -177,57 +178,74 @@ const pages = [
 
 /** Build the hreflang alternates map for a given path segment (e.g. "/fr/blog/foo") */
 function buildAlternates(path: string): Record<string, string> {
-  return Object.fromEntries(
-    locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`])
-  );
+  return {
+    ...Object.fromEntries(
+      locales.map((locale) => [locale, `${BASE_URL}/${locale}${path}`])
+    ),
+    "x-default": `${BASE_URL}/fr${path}`,
+  };
+}
+
+function buildBlogAlternates(slug: string): Record<string, string> {
+  const postLocales = getPostLocales(slug);
+  const fallbackLocale = postLocales.includes("fr") ? "fr" : postLocales[0];
+  return {
+    ...Object.fromEntries(
+      postLocales.map((locale) => [locale, `${BASE_URL}/${locale}/blog/${slug}`])
+    ),
+    ...(fallbackLocale ? { "x-default": `${BASE_URL}/${fallbackLocale}/blog/${slug}` } : {}),
+  };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use FR locale to read frontmatter dates (FR is the canonical/root locale)
-  const blogPosts = getAllPosts("fr");
-
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages â€” one entry per page, all locales as alternates
+  // Static pages - one entry per page, all locales as alternates
   for (const page of pages) {
     const lastModified = STATIC_DATES[page.path] ?? "2025-06-01";
-    entries.push({
-      url: `${BASE_URL}/fr${page.path}`,
-      lastModified,
-      changeFrequency: page.changeFrequency,
-      priority: page.priority,
-      alternates: {
-        languages: buildAlternates(page.path),
-      },
-    });
+    for (const locale of locales) {
+      entries.push({
+        url: `${BASE_URL}/${locale}${page.path}`,
+        lastModified,
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
+        alternates: {
+          languages: buildAlternates(page.path),
+        },
+      });
+    }
   }
 
   // Blog posts - lastModified follows the editorial update date when available.
-  for (const post of blogPosts) {
-    const lastModified = post.dateModified ?? post.date ?? "2026-01-01";
-    entries.push({
-      url: `${BASE_URL}/fr/blog/${post.slug}`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: pillarBlogSlugs.has(post.slug) ? 0.85 : 0.7,
-      alternates: {
-        languages: buildAlternates(`/blog/${post.slug}`),
-      },
-    });
+  for (const locale of locales) {
+    for (const post of getAllPosts(locale)) {
+      const lastModified = post.dateModified ?? post.date ?? "2026-01-01";
+      entries.push({
+        url: `${BASE_URL}/${locale}/blog/${post.slug}`,
+        lastModified,
+        changeFrequency: "monthly",
+        priority: pillarBlogSlugs.has(post.slug) ? 0.85 : 0.7,
+        alternates: {
+          languages: buildBlogAlternates(post.slug),
+        },
+      });
+    }
   }
 
-  // Secteur pages â€” one entry per secteur, all locales as alternates
+  // Secteur pages - one entry per secteur, all locales as alternates
   for (const secteur of secteurSlugs) {
     const lastModified = SECTEUR_DATES[secteur] ?? "2025-10-01";
-    entries.push({
-      url: `${BASE_URL}/fr/secteurs/${secteur}`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.75,
-      alternates: {
-        languages: buildAlternates(`/secteurs/${secteur}`),
-      },
-    });
+    for (const locale of locales) {
+      entries.push({
+        url: `${BASE_URL}/${locale}/secteurs/${secteur}`,
+        lastModified,
+        changeFrequency: "monthly",
+        priority: 0.75,
+        alternates: {
+          languages: buildAlternates(`/secteurs/${secteur}`),
+        },
+      });
+    }
   }
 
   return entries;

@@ -161,6 +161,70 @@ Sous-cocon voix, agent vocal IA et telephonie:
 - https://agentic-whatsup.com/fr/blog/agent-vocal-ia-securite-authentification
 - https://agentic-whatsup.com/fr/blog/agent-vocal-ia-vocalis-whatsapp
 
+Sous-cocon WhatsApp business API, chatbot, automation, Shopify, Twilio, BSP et team inbox:
+- https://agentic-whatsup.com/fr/blog/whatsapp-business-api-guide-entreprise-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-business-api-webhooks-templates-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-business-api-crm-conformite-2026
+- https://agentic-whatsup.com/fr/blog/chatbot-whatsapp-guide-entreprise-2026
+- https://agentic-whatsup.com/fr/blog/chatbot-whatsapp-service-client-2026
+- https://agentic-whatsup.com/fr/blog/chatbot-whatsapp-escalade-humaine-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-marketing-automation-playbook-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-marketing-automation-opt-in-segmentation
+- https://agentic-whatsup.com/fr/blog/whatsapp-marketing-automation-mesure-qualite
+- https://agentic-whatsup.com/fr/blog/whatsapp-ai-agent-guide-operations-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-ai-agent-architecture-crm-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-ai-agent-supervision-qualite-2026
+- https://agentic-whatsup.com/fr/blog/no-code-whatsapp-chatbot-guide-2026
+- https://agentic-whatsup.com/fr/blog/no-code-whatsapp-chatbot-limites-agent-ia
+- https://agentic-whatsup.com/fr/blog/no-code-whatsapp-chatbot-workflows-n8n
+- https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-guide-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-commandes-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-sav-retours-2026
+- https://agentic-whatsup.com/fr/blog/twilio-whatsapp-cadrage-budget-2026
+- https://agentic-whatsup.com/fr/blog/twilio-whatsapp-api-bsp-2026
+- https://agentic-whatsup.com/fr/blog/twilio-whatsapp-migration-sans-surprise
+- https://agentic-whatsup.com/fr/blog/whatsapp-ai-assistant-guide-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-ai-assistant-support-client-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-ai-assistant-crm-multilingue
+- https://agentic-whatsup.com/fr/blog/whatsapp-business-solution-provider-guide-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-business-solution-provider-europe-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-business-solution-provider-migration-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-team-inbox-guide-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-team-inbox-routage-sla-2026
+- https://agentic-whatsup.com/fr/blog/whatsapp-team-inbox-agent-ia-supervision
+
+Sous-cocon voix, agent vocal IA et telephonie:
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-guide-entreprise-2026
+- https://agentic-whatsup.com/fr/blog/assistant-vocal-ia-service-client
+- https://agentic-whatsup.com/fr/blog/voice-agent-ia-definition-usages
+- https://agentic-whatsup.com/fr/blog/agent-telephonique-ia-pme
+- https://agentic-whatsup.com/fr/blog/agent-vocal-entreprise-standard-telephonique
+- https://agentic-whatsup.com/fr/blog/chatbot-vocal-ia-vs-agent-vocal
+- https://agentic-whatsup.com/fr/blog/solution-agent-vocal-ia-choisir
+- https://agentic-whatsup.com/fr/blog/agent-vocal-pme-guide
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-whatsapp-message-vocal
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-crm-rdv
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-appels-entrants
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-appels-sortants
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-recouvrement-relance
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-sante-rdv
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-immobilier-qualification
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-ecommerce-sav
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-assurance-courtier
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-centre-appel
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-transcription-resume
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-rgpd-cnil
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-voicebot-vs-ivr
+- https://agentic-whatsup.com/fr/blog/assistant-vocal-ia-commerce-local
+- https://agentic-whatsup.com/fr/blog/agent-telephonique-ia-multilingue
+- https://agentic-whatsup.com/fr/blog/agent-vocal-entreprise-supervision
+- https://agentic-whatsup.com/fr/blog/chatbot-vocal-ia-base-connaissance
+- https://agentic-whatsup.com/fr/blog/solution-agent-vocal-ia-integration
+- https://agentic-whatsup.com/fr/blog/agent-vocal-pme-standard-virtuel
+- https://agentic-whatsup.com/fr/blog/voice-agent-ia-qualite-kpi
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-securite-authentification
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-vocalis-whatsapp
+
 Intentions couvertes:
 - Comprendre la difference entre application WhatsApp Business, chatbot a regles, assistant IA et agent IA connecte.
 - Choisir l'architecture officielle: Meta WhatsApp Business Platform, Cloud API, webhooks, templates, routage humain.
@@ -169,6 +233,7 @@ Intentions couvertes:
 - Deployer un agent IA WhatsApp avec CRM, escalade humaine, securite, KPI, medias clients et reseaux multi-sites.
 - Gouverner l'agent IA WhatsApp: consentement, templates, supervision humaine, qualite du numero, journalisation et preuves.
 - Automatiser WhatsApp en e-commerce: Shopify, catalogue, panier abandonne, suivi commande, SAV, fidelisation et preference client.
+- Relier l'agent vocal IA, l'assistant vocal IA, le voice agent IA, l'agent telephonique IA, le chatbot vocal IA et les vocaux WhatsApp a un parcours client supervise.
 
 ## Sources de rÃ©fÃ©rence
 

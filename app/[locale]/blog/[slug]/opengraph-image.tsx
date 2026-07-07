@@ -1,19 +1,21 @@
 import { ImageResponse } from "next/og";
-import { getPostBySlug, getAllSlugs } from "@/lib/mdx";
+import { BLOG_LOCALES, getPostBySlug, getLocalizedSlugs } from "@/lib/mdx";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  return BLOG_LOCALES.flatMap((locale) =>
+    getLocalizedSlugs(locale).map((slug) => ({ locale, slug }))
+  );
 }
 
-export default async function OgImage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+export default async function OgImage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
   let title = "AgenticWhatsup — Blog";
   let description = "Agent IA WhatsApp";
   try {
-    const { meta } = getPostBySlug(slug);
+    const { meta } = getPostBySlug(slug, locale);
     title = meta.title;
     description = meta.description;
   } catch {

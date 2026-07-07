@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
-import { getAllSlugs, getAllPosts, getPostBySlug, isBlockedPricingSlug } from "@/lib/mdx";
+import {
+  BLOG_LOCALES,
+  getAllPosts,
+  getLocalizedSlugs,
+  getPostBySlug,
+  getPostLocales,
+  isBlockedPricingSlug,
+} from "@/lib/mdx";
 import { normalizeBlogMarkdownHref } from "@/lib/normalize-blog-href";
 import {
   articleSeoLabels,
@@ -18,9 +25,20 @@ import StickyCTA from "@/components/blog/StickyCTA";
 import RelatedArticles from "@/components/blog/RelatedArticles";
 
 export async function generateStaticParams() {
-  const slugs = getAllSlugs();
-  const locales = ["fr", "en", "de", "nl"];
-  return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
+  return BLOG_LOCALES.flatMap((locale) =>
+    getLocalizedSlugs(locale).map((slug) => ({ locale, slug }))
+  );
+}
+
+function getBlogLanguageAlternates(slug: string): Record<string, string> {
+  const postLocales = getPostLocales(slug);
+  const fallbackLocale = postLocales.includes("fr") ? "fr" : postLocales[0];
+  return {
+    ...Object.fromEntries(
+      postLocales.map((locale) => [locale, `https://agentic-whatsup.com/${locale}/blog/${slug}`])
+    ),
+    ...(fallbackLocale ? { "x-default": `https://agentic-whatsup.com/${fallbackLocale}/blog/${slug}` } : {}),
+  };
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string; locale: string }> }): Promise<Metadata> {
@@ -37,6 +55,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         },
       };
     }
+    const postLocales = getPostLocales(slug);
+    if (!postLocales.includes(locale as (typeof BLOG_LOCALES)[number])) {
+      const fallbackLocale = postLocales.includes("fr") ? "fr" : postLocales[0];
+      return {
+        robots: {
+          index: false,
+          follow: true,
+        },
+        alternates: fallbackLocale
+          ? {
+              canonical: `https://agentic-whatsup.com/${fallbackLocale}/blog/${slug}`,
+              languages: getBlogLanguageAlternates(slug),
+            }
+          : undefined,
+      };
+    }
     const { meta } = getPostBySlug(slug, locale);
     const coverImage = meta.coverImage ?? "/og-image.jpg";
     const absoluteCoverImage = /^https?:\/\//i.test(coverImage)
@@ -47,13 +81,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       description: meta.description,
       alternates: {
         canonical: `https://agentic-whatsup.com/${locale}/blog/${slug}`,
-        languages: {
-          fr: `https://agentic-whatsup.com/fr/blog/${slug}`,
-          en: `https://agentic-whatsup.com/en/blog/${slug}`,
-          de: `https://agentic-whatsup.com/de/blog/${slug}`,
-          nl: `https://agentic-whatsup.com/nl/blog/${slug}`,
-          "x-default": `https://agentic-whatsup.com/fr/blog/${slug}`,
-        },
+        languages: getBlogLanguageAlternates(slug),
       },
       openGraph: {
         title: meta.title,
@@ -74,6 +102,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug, locale } = await params;
   if (isBlockedPricingSlug(slug)) {
     permanentRedirect(`/${locale}/contact`);
+  }
+  const postLocales = getPostLocales(slug);
+  if (!postLocales.includes(locale as (typeof BLOG_LOCALES)[number])) {
+    const fallbackLocale = postLocales.includes("fr") ? "fr" : postLocales[0];
+    if (fallbackLocale) {
+      permanentRedirect(`/${fallbackLocale}/blog/${slug}`);
+    }
+    notFound();
   }
   const blogLocale = toBlogLocale(locale);
   const t = await getTranslations({ locale, namespace: "blog" });

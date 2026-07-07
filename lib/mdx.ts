@@ -5,6 +5,8 @@ import matter from "gray-matter";
 // v2026-05-26
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 const LOCALE_DIRS = ["en", "de", "nl"];
+export const BLOG_LOCALES = ["fr", "en", "de", "nl"] as const;
+export type BlogLocale = (typeof BLOG_LOCALES)[number];
 const BLOCKED_PRICING_SLUG_RE = /(cost|pricing|price|kosten|prix|tarif|combien|cout|coute|co[uû]t|aio|llm-seo)/i;
 
 export interface HowToStep {
@@ -63,8 +65,10 @@ function repairMojibake(value: string): string {
 }
 
 function sanitizePublicArticleMarkdown(value: string): string {
+  const twilioPricingKeyword = "__TWILIO_WHATSAPP_PRICING_KEYWORD__";
   let clean = value
     .replace(/[\uFEFF]/g, "")
+    .replace(/\btwilio whatsapp pricing\b/gi, `twilio whatsapp ${twilioPricingKeyword}`)
     .replace(/\b(?:EUR|USD|GBP|CHF)\s*[\d][\d\s.,]*(?:\s*(?:HT|TTC|\/\s?mois|par mois|per month|\/mo))?/gi, "cadrage sur audit")
     .replace(/[$€£]\s*[\d][\d\s.,]*(?:\s*(?:HT|TTC|\/\s?mois|par mois|per month|\/mo))?/gi, "cadrage sur audit")
     .replace(/[\d][\d\s.,]*\s*(?:€|EUR|CHF|USD|GBP|dollars?|euros?|francs suisses?|francs|£)(?:\s*(?:HT|TTC|\/\s?mois|par mois|per month|\/mo))?/gi, "cadrage sur audit")
@@ -94,7 +98,20 @@ function sanitizePublicArticleMarkdown(value: string): string {
     .replace(/les LLM à relier les sujets par usage metier, pas seulement par mot-cle/g, "les assistants IA à comprendre les liens entre les usages métier")
     .replace(/Ce contenu est relie au cluster WhatsApp AI.*$/gim, "");
 
+  clean = clean.replace(new RegExp(twilioPricingKeyword, "g"), "pricing");
+
   return clean;
+}
+
+function normalizeBlogLocale(locale?: string): BlogLocale {
+  return BLOG_LOCALES.includes(locale as BlogLocale) ? (locale as BlogLocale) : "fr";
+}
+
+function getPostFilePath(slug: string, locale?: string): string {
+  const blogLocale = normalizeBlogLocale(locale);
+  return blogLocale === "fr"
+    ? path.join(BLOG_DIR, `${slug}.mdx`)
+    : path.join(BLOG_DIR, blogLocale, `${slug}.mdx`);
 }
 
 function readPost(slug: string, locale?: string): { meta: PostMeta; content: string } {
@@ -119,7 +136,7 @@ function readPost(slug: string, locale?: string): { meta: PostMeta; content: str
 }
 
 export function getAllPosts(locale?: string): PostMeta[] {
-  const slugs = getAllSlugs();
+  const slugs = locale ? getLocalizedSlugs(locale) : getAllSlugs();
   return slugs
     .map((slug) => {
       try {
@@ -137,11 +154,33 @@ export function getPostBySlug(slug: string, locale?: string): { meta: PostMeta; 
   if (isBlockedPricingSlug(slug)) {
     throw new Error(`Blocked pricing post: ${slug}`);
   }
+  if (locale && !hasLocalizedPost(slug, locale)) {
+    throw new Error(`Localized post not found: ${locale}/${slug}`);
+  }
   return readPost(slug, locale);
 }
 
 export function isBlockedPricingSlug(slug: string): boolean {
   return BLOCKED_PRICING_SLUG_RE.test(slug);
+}
+
+export function hasLocalizedPost(slug: string, locale?: string): boolean {
+  return !isBlockedPricingSlug(slug) && fs.existsSync(getPostFilePath(slug, locale));
+}
+
+export function getPostLocales(slug: string): BlogLocale[] {
+  return BLOG_LOCALES.filter((locale) => hasLocalizedPost(slug, locale));
+}
+
+export function getLocalizedSlugs(locale?: string): string[] {
+  const blogLocale = normalizeBlogLocale(locale);
+  const dir = blogLocale === "fr" ? BLOG_DIR : path.join(BLOG_DIR, blogLocale);
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".mdx"))
+    .map((f) => f.replace(/\.mdx$/, ""))
+    .filter((slug) => !isBlockedPricingSlug(slug));
 }
 
 export function getAllSlugs(): string[] {
