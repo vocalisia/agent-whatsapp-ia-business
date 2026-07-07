@@ -166,8 +166,6 @@ howToSteps:
     text: "Relire un échantillon, suivre corrections, escalades, délais, erreurs et satisfaction conversationnelle."
 ---
 
-![{title}]({image})
-
 > **En bref :** {intent.capitalize()}. Le bon projet ne consiste pas à remplacer les humains par une voix automatique ; il consiste à capter la demande, vérifier la source, préparer l'action utile et transférer dès que le contexte le demande.
 
 ## Réponse courte
@@ -287,9 +285,9 @@ def photo_scenes() -> dict[str, tuple[int, str]]:
             104000 + index * 31,
             (
                 "RAW photorealistic editorial photo, "
-                f"{photo}, modern European business environment, natural daylight, smartphone in foreground "
-                "with soft green messaging or call glow, professional headset, laptop screen heavily blurred and unreadable, "
-                "realistic hands with normal anatomy, premium documentary business photography, shallow depth of field, "
+                f"{photo}, modern European business environment, natural daylight, crisp editorial composition, "
+                "professional headset and phone hardware clearly visible, clean monitor graphics with abstract waveforms only, "
+                "realistic anatomy, premium documentary business photography, sharp focus across the main subject, "
                 "no logos, no brand marks, no readable text, no numbers, no currency, no watermark"
             ),
         )
@@ -366,16 +364,26 @@ def mammouth_request(prompt: str, retries: int = 3) -> bytes:
 def save_mammouth_cover(image_bytes: bytes, slug: str) -> None:
     from io import BytesIO
 
-    from PIL import Image, ImageEnhance
+    from PIL import Image, ImageEnhance, ImageFilter
 
     out_path = IMG_DIR / f"{slug}.jpg"
     IMG_DIR.mkdir(parents=True, exist_ok=True)
     image = Image.open(BytesIO(image_bytes)).convert("RGB")
+    target_ratio = 16 / 9
+    width, height = image.size
+    if width / height > target_ratio:
+        new_width = int(height * target_ratio)
+        left = (width - new_width) // 2
+        image = image.crop((left, 0, left + new_width, height))
+    elif width / height < target_ratio:
+        new_height = int(width / target_ratio)
+        top = (height - new_height) // 2
+        image = image.crop((0, top, width, top + new_height))
     image = image.resize((1600, 900), Image.Resampling.LANCZOS)
-    image = ImageEnhance.Color(image).enhance(0.96)
-    image = ImageEnhance.Contrast(image).enhance(1.04)
-    image = ImageEnhance.Sharpness(image).enhance(1.04)
-    image.save(out_path, "JPEG", quality=90, optimize=True, progressive=True)
+    image = ImageEnhance.Color(image).enhance(0.98)
+    image = ImageEnhance.Contrast(image).enhance(1.06)
+    image = image.filter(ImageFilter.UnsharpMask(radius=1.2, percent=115, threshold=3))
+    image.save(out_path, "JPEG", quality=93, optimize=True, progressive=True)
     print(f"Wrote {out_path.name} ({out_path.stat().st_size // 1024} KB)")
 
 
@@ -383,7 +391,7 @@ def pollinations_request(prompt: str, seed: int, retries: int = 3) -> bytes:
     encoded = quote(prompt[:1800])
     url = (
         "https://image.pollinations.ai/prompt/"
-        f"{encoded}?width=1600&height=900&seed={seed}&model=flux&nologo=true&enhance=true"
+        f"{encoded}?width=1920&height=1080&seed={seed}&model=flux&nologo=true&enhance=true"
     )
     last_error = ""
     for attempt in range(1, retries + 1):
@@ -430,7 +438,8 @@ def generate_pollinations_photos(selected: list[str] | None = None) -> None:
         seed, scene = scenes[slug]
         prompt = (
             f"{scene}. Unique custom photorealistic editorial hero photo for this one article on agentic-whatsup.com. "
-            "Natural lens realism, no text overlay, no letters, no numbers, no logos, no watermark, no currency, no UI text."
+            "Natural lens realism, crisp focus, clean documentary composition, no artificial blur, no stock-photo grin, "
+            "no text overlay, no letters, no numbers, no logos, no watermark, no currency, no UI text, no deformed hands."
         )
         print(f"[{index}/{len(slugs)}] Generating fallback cover for {slug}...")
         save_mammouth_cover(pollinations_request(prompt, seed), slug)
