@@ -4,7 +4,7 @@ import { getAllPosts } from "@/lib/mdx";
 const BASE_URL = "https://agentic-whatsup.com";
 const locales = ["fr", "en", "de", "nl"];
 
-// Stable dates per static page — avoids Google interpreting daily regeneration as manipulation
+// Stable dates per static page â€” avoids Google interpreting daily regeneration as manipulation
 const STATIC_DATES: Record<string, string> = {
   "":                                      "2026-06-03",
   "/demo":                                 "2026-06-03",
@@ -44,7 +44,7 @@ const STATIC_DATES: Record<string, string> = {
   "/auteur/laurent-duplat":                "2026-06-03",
 };
 
-// Secteur pages — spread over a realistic creation window
+// Secteur pages â€” spread over a realistic creation window
 const SECTEUR_DATES: Record<string, string> = {
   "immobilier":           "2025-09-05",
   "ecommerce":            "2025-09-08",
@@ -104,6 +104,36 @@ const pillarBlogSlugs = new Set([
   "echeancier-client-promesse-paiement",
   "relance-facture-impayee-artisan",
   "agent-ia-whatsapp-recouvrement-creance",
+  "agent-vocal-ia-guide-entreprise-2026",
+  "assistant-vocal-ia-service-client",
+  "voice-agent-ia-definition-usages",
+  "agent-telephonique-ia-pme",
+  "agent-vocal-entreprise-standard-telephonique",
+  "chatbot-vocal-ia-vs-agent-vocal",
+  "solution-agent-vocal-ia-choisir",
+  "agent-vocal-pme-guide",
+  "agent-vocal-ia-whatsapp-message-vocal",
+  "agent-vocal-ia-crm-rdv",
+  "agent-vocal-ia-appels-entrants",
+  "agent-vocal-ia-appels-sortants",
+  "agent-vocal-ia-recouvrement-relance",
+  "agent-vocal-ia-sante-rdv",
+  "agent-vocal-ia-immobilier-qualification",
+  "agent-vocal-ia-ecommerce-sav",
+  "agent-vocal-ia-assurance-courtier",
+  "agent-vocal-ia-centre-appel",
+  "agent-vocal-ia-transcription-resume",
+  "agent-vocal-ia-rgpd-cnil",
+  "agent-vocal-ia-voicebot-vs-ivr",
+  "assistant-vocal-ia-commerce-local",
+  "agent-telephonique-ia-multilingue",
+  "agent-vocal-entreprise-supervision",
+  "chatbot-vocal-ia-base-connaissance",
+  "solution-agent-vocal-ia-integration",
+  "agent-vocal-pme-standard-virtuel",
+  "voice-agent-ia-qualite-kpi",
+  "agent-vocal-ia-securite-authentification",
+  "agent-vocal-ia-vocalis-whatsapp",
   "automatisation-whatsapp-ecommerce",
   "integrer-agent-ia-whatsapp-shopify",
   "whatsapp-shopify-integration-panier-abandonne",
@@ -188,7 +218,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const entries: MetadataRoute.Sitemap = [];
 
-  // Static pages — one entry per page, all locales as alternates
+  // Static pages â€” one entry per page, all locales as alternates
   for (const page of pages) {
     const lastModified = STATIC_DATES[page.path] ?? "2025-06-01";
     entries.push({
@@ -216,7 +246,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Secteur pages — one entry per secteur, all locales as alternates
+  // Secteur pages â€” one entry per secteur, all locales as alternates
   for (const secteur of secteurSlugs) {
     const lastModified = SECTEUR_DATES[secteur] ?? "2025-10-01";
     entries.push({

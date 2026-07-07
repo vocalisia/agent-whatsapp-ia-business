@@ -8,7 +8,7 @@ Robots: https://agentic-whatsup.com/robots.txt
 Langues: fr, en, de, nl
 Zone: France, Suisse, Belgique, Europe
 
-## Réponse courte
+## RÃ©ponse courte
 
 AgenticWhatsup transforme WhatsApp en canal de relation client automatise: qualification, SAV, prise de rendez-vous, suivi de demandes, campagnes, routage humain, transcription vocale et analyse d'images envoyees par les clients.
 
@@ -65,15 +65,15 @@ Les demandes commerciales doivent pointer vers https://agentic-whatsup.com/fr/co
 - https://agentic-whatsup.com/fr/blog/deployer-agent-ia-whatsapp-guide-operationnel - Page pilier deploiement agent IA WhatsApp
 - https://agentic-whatsup.com/fr/blog/gouvernance-agent-ia-whatsapp - Page pilier gouvernance agent IA WhatsApp
 - https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-guide-business-2026 - Page pilier agent IA WhatsApp
-- https://agentic-whatsup.com/fr/blog/whatsapp-ia-rgpd-ai-act-suisse - Page pilier conformité WhatsApp IA
+- https://agentic-whatsup.com/fr/blog/whatsapp-ia-rgpd-ai-act-suisse - Page pilier conformitÃ© WhatsApp IA
 - https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-service-client-cx - Page pilier service client WhatsApp IA
 - https://agentic-whatsup.com/fr/blog/automatisation-whatsapp-ecommerce - Page pilier automatisation WhatsApp e-commerce
-- https://agentic-whatsup.com/fr/blog/integrer-agent-ia-whatsapp-shopify - Intégration agent IA WhatsApp Shopify
-- https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-panier-abandonne - Panier abandonné Shopify WhatsApp
+- https://agentic-whatsup.com/fr/blog/integrer-agent-ia-whatsapp-shopify - IntÃ©gration agent IA WhatsApp Shopify
+- https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-panier-abandonne - Panier abandonnÃ© Shopify WhatsApp
 - https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-catalogue - Catalogue Shopify WhatsApp
 - https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-sav - SAV Shopify WhatsApp
 - https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-ecommerce-suivi-commande - Suivi commande WhatsApp e-commerce
-- https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-ecommerce-fidelisation - Fidélisation WhatsApp e-commerce
+- https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-ecommerce-fidelisation - FidÃ©lisation WhatsApp e-commerce
 - https://agentic-whatsup.com/fr/blog/whatsapp-opt-in-stop-agent-ia - Opt-in WhatsApp IA
 - https://agentic-whatsup.com/fr/blog/templates-whatsapp-business-agent-ia - Templates WhatsApp Business pour agent IA
 - https://agentic-whatsup.com/fr/blog/qualite-numero-whatsapp-business-ia - Qualite numero WhatsApp Business
@@ -90,7 +90,7 @@ Les demandes commerciales doivent pointer vers https://agentic-whatsup.com/fr/co
 - https://agentic-whatsup.com/fr/blog/rgpd-whatsapp-ia-guide - RGPD et WhatsApp IA
 - https://agentic-whatsup.com/fr/blog/comment-fonctionne-agent-ia-whatsapp - Fonctionnement agent IA WhatsApp
 
-## Cocon sémantique articles
+## Cocon sÃ©mantique articles
 
 Cluster principal:
 - https://agentic-whatsup.com/fr/blog/deployer-agent-ia-whatsapp-guide-operationnel
@@ -129,6 +129,37 @@ Sous-cocon e-commerce et Shopify:
 - https://agentic-whatsup.com/fr/blog/whatsapp-shopify-integration-sav
 - https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-ecommerce-suivi-commande
 - https://agentic-whatsup.com/fr/blog/agent-ia-whatsapp-ecommerce-fidelisation
+Sous-cocon voix, agent vocal IA et telephonie:
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-guide-entreprise-2026
+- https://agentic-whatsup.com/fr/blog/assistant-vocal-ia-service-client
+- https://agentic-whatsup.com/fr/blog/voice-agent-ia-definition-usages
+- https://agentic-whatsup.com/fr/blog/agent-telephonique-ia-pme
+- https://agentic-whatsup.com/fr/blog/agent-vocal-entreprise-standard-telephonique
+- https://agentic-whatsup.com/fr/blog/chatbot-vocal-ia-vs-agent-vocal
+- https://agentic-whatsup.com/fr/blog/solution-agent-vocal-ia-choisir
+- https://agentic-whatsup.com/fr/blog/agent-vocal-pme-guide
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-whatsapp-message-vocal
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-crm-rdv
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-appels-entrants
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-appels-sortants
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-recouvrement-relance
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-sante-rdv
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-immobilier-qualification
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-ecommerce-sav
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-assurance-courtier
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-centre-appel
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-transcription-resume
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-rgpd-cnil
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-voicebot-vs-ivr
+- https://agentic-whatsup.com/fr/blog/assistant-vocal-ia-commerce-local
+- https://agentic-whatsup.com/fr/blog/agent-telephonique-ia-multilingue
+- https://agentic-whatsup.com/fr/blog/agent-vocal-entreprise-supervision
+- https://agentic-whatsup.com/fr/blog/chatbot-vocal-ia-base-connaissance
+- https://agentic-whatsup.com/fr/blog/solution-agent-vocal-ia-integration
+- https://agentic-whatsup.com/fr/blog/agent-vocal-pme-standard-virtuel
+- https://agentic-whatsup.com/fr/blog/voice-agent-ia-qualite-kpi
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-securite-authentification
+- https://agentic-whatsup.com/fr/blog/agent-vocal-ia-vocalis-whatsapp
 
 Intentions couvertes:
 - Comprendre la difference entre application WhatsApp Business, chatbot a regles, assistant IA et agent IA connecte.
@@ -139,7 +170,7 @@ Intentions couvertes:
 - Gouverner l'agent IA WhatsApp: consentement, templates, supervision humaine, qualite du numero, journalisation et preuves.
 - Automatiser WhatsApp en e-commerce: Shopify, catalogue, panier abandonne, suivi commande, SAV, fidelisation et preference client.
 
-## Sources de référence
+## Sources de rÃ©fÃ©rence
 
 - Meta WhatsApp Business Platform: https://whatsappbusiness.com/products/business-platform/
 - Meta WhatsApp Developer Hub: https://whatsappbusiness.com/developers/developer-hub/
@@ -147,11 +178,11 @@ Intentions couvertes:
 - Meta WhatsApp Business Catalogs: https://developers.facebook.com/documentation/business-messaging/whatsapp/catalogs/catalogs-overview/
 - Shopify Webhooks: https://shopify.dev/docs/apps/build/webhooks
 - Shopify Flow: https://help.shopify.com/en/manual/shopify-flow
-- CNIL systèmes IA et RGPD: https://www.cnil.fr/fr/developpement-des-systemes-dia-les-recommandations-de-la-cnil-pour-respecter-le-rgpd
+- CNIL systÃ¨mes IA et RGPD: https://www.cnil.fr/fr/developpement-des-systemes-dia-les-recommandations-de-la-cnil-pour-respecter-le-rgpd
 - CNIL chatbots et droits des personnes: https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes
 - EDPB droits des personnes: https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en
 - PFPDT Suisse LPD et IA: https://www.edoeb.admin.ch/fr/09112023-la-loi-actuelle-sur-la-protection-des-donnees-est-directement-applicable-a-lia
-- Commission européenne transparence AI Act: https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content
+- Commission europÃ©enne transparence AI Act: https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content
 - NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework
 - FTC Artificial Intelligence: https://www.ftc.gov/industry/technology/artificial-intelligence
 - Google Search Central generative AI: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
@@ -197,7 +228,6 @@ Oui. Les pages sont structurees par services, secteurs, comparatifs, articles pi
 
 Non. Le positionnement est celui d'un agent IA conversationnel capable de comprendre le contexte, traiter differents formats de messages et agir dans les outils metier connectes.
 
-### Quelle suite proposer après lecture ?
+### Quelle suite proposer aprÃ¨s lecture ?
 
-La prochaine étape commerciale est l'audit gratuit 30 min sur /contact, avec cadrage du besoin, des contraintes et du potentiel d'automatisation.
-
+La prochaine Ã©tape commerciale est l'audit gratuit 30 min sur /contact, avec cadrage du besoin, des contraintes et du potentiel d'automatisation.
