@@ -24,6 +24,8 @@ const nextConfig: NextConfig = {
       { source: "/en/tarifs", destination: "/en/contact", permanent: true },
       { source: "/de/tarifs", destination: "/de/contact", permanent: true },
       { source: "/nl/tarifs", destination: "/nl/contact", permanent: true },
+      // Consolidate the legacy English duplicate onto the canonical comparison.
+      { source: "/en/blog/meilleurs-agents-ia-whatsapp-comparatif-2026", destination: "/en/blog/best-whatsapp-ai-agents-comparison-2026", permanent: true },
       // Locale service indexes are legacy crawl targets; send them to the canonical service page.
       { source: "/:locale(fr|en|de|nl)/services", destination: "/:locale/services/agent-ia-whatsapp", permanent: true },
       // Ghost pages without locale prefix (legacy URLs Google still indexes)
