@@ -72,6 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: m.title,
     description: m.description,
     alternates: {
+      canonical: `/${locale}/cookies`,
       languages: { fr: "/fr/cookies", en: "/en/cookies", de: "/de/cookies", nl: "/nl/cookies" },
     },
   };
