@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import WhatsAppSimulator from "@/components/demo/WhatsAppSimulator";
 import automobileConfig from "@/components/demo/configs/automobile";
+import { buildAlternates } from "@/lib/seo";
 import {
   Car,
   Calendar,
@@ -42,7 +43,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const meta = pageMeta[locale] ?? pageMeta.fr;
-  return { title: meta.title, description: meta.description };
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: buildAlternates(locale, "/demo/automobile"),
+  };
 }
 
 const capabilities = [

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Calendar, Mic, Users, Eye, TrendingUp, Zap } from "lucide-react";
 import StrategyLanding, { type LandingCopy } from "@/components/landing/StrategyLanding";
+import { buildAlternates } from "@/lib/seo";
 
 type Locale = "fr" | "en" | "de" | "nl";
 
@@ -319,14 +320,7 @@ export async function generateMetadata({
     title: META[key].title,
     description: META[key].description,
     robots: { index: false, follow: false },
-    alternates: {
-      languages: {
-        fr: "/fr/strategy-call",
-        en: "/en/strategy-call",
-        de: "/de/strategy-call",
-        nl: "/nl/strategy-call",
-      },
-    },
+    alternates: buildAlternates(locale, "/strategy-call"),
     openGraph: {
       title: META[key].title,
       description: META[key].description,

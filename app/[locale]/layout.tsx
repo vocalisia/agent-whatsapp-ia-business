@@ -270,14 +270,6 @@ export default async function LocaleLayout({
                 "availability": "https://schema.org/InStock",
                 "url": "https://agentic-whatsup.com/fr/contact",
               },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "bestRating": "5",
-                "worstRating": "1",
-                "ratingCount": "47",
-                "reviewCount": "12",
-              },
               "featureList": [
                 "Vision IA pour analyse photos clients",
                 "Transcription vocale temps réel (Whisper / GPT-4o Audio)",

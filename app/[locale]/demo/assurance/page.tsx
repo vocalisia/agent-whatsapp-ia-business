@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import WhatsAppSimulator from "@/components/demo/WhatsAppSimulator";
 import assuranceConfig from "@/components/demo/configs/assurance";
+import { buildAlternates } from "@/lib/seo";
 import {
   FileText,
   Camera,
@@ -43,7 +44,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const meta = pageMeta[locale] ?? pageMeta.fr;
-  return { title: meta.title, description: meta.description };
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: buildAlternates(locale, "/demo/assurance"),
+  };
 }
 
 const capabilities = [

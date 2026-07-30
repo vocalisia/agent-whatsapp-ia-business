@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import WhatsAppSimulator from "@/components/demo/WhatsAppSimulator";
 import hotelConfig from "@/components/demo/configs/hotel";
+import { buildAlternates } from "@/lib/seo";
 import {
   Hotel,
   Calendar,
@@ -43,7 +44,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const meta = pageMeta[locale] ?? pageMeta.fr;
-  return { title: meta.title, description: meta.description };
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: buildAlternates(locale, "/demo/hotel"),
+  };
 }
 
 const capabilities = [
