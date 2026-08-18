@@ -63,7 +63,7 @@ export default function MobileNav() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
+  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222";
 
   const close = useCallback(() => {
     setOpen(false);

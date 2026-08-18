@@ -319,7 +319,8 @@ export default async function LocaleLayout({
             href="https://wa.me/41799394222"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Contacter via WhatsApp"
+            aria-label="Nous contacter sur WhatsApp au +41 79 939 42 22"
+            data-whatsapp-floating="true"
             className="wa-float-btn"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="36" height="36" fill="white">
