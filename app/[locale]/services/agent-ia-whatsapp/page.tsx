@@ -50,7 +50,7 @@ export default async function ServiceAgentIAWhatsAppPage({ params }: { params: P
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
 
-  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER;
+  const waNumber = process.env.NEXT_PUBLIC_WA_NUMBER || "41799394222";
   const calLink = process.env.NEXT_PUBLIC_CAL_LINK || `/${locale}/contact`;
 
   const faqItems = t.raw("agentIa.faqItems") as Array<{ question: string; answer: string }>;
