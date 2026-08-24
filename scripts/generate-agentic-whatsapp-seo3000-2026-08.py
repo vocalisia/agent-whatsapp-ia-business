@@ -506,7 +506,14 @@ def main():
         path = BLOG / f"{topic['slug']}.mdx"
         if path.exists() and not args.force:
             raise SystemExit(f"Refusing to overwrite existing article: {path.name}")
-        path.write_text(distinguish_long_paragraphs(article(topic), topic), encoding="utf-8", newline="\n")
+        # The MDX template is indented for readability in this Python file.  Remove
+        # that shared four-space baseline before writing: frontmatter delimiters must
+        # start in column zero or gray-matter renders the whole article as code.
+        content = re.sub(r"(?m)^ {4}", "", distinguish_long_paragraphs(article(topic), topic))
+        # Interpolated YAML step bodies do not inherit the surrounding template
+        # indentation, so restore their required nesting after baseline removal.
+        content = re.sub(r"(?m)^text:", "    text:", content)
+        path.write_text(content, encoding="utf-8", newline="\n")
         print(path.name)
 
 
