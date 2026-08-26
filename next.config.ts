@@ -53,6 +53,12 @@ const nextConfig: NextConfig = {
       // English/DE/NL legal slug aliases
       { source: "/:locale(en|de|nl)/legal", destination: "/:locale/mentions-legales", permanent: true },
       { source: "/:locale(en|de|nl)/privacy-policy", destination: "/:locale/politique-confidentialite", permanent: true },
+      // 2026-08-26 — anciens slugs "questions-*" indexes par Google mais morts (404).
+      // Cibles verifiees 200 en direct le 26/08. Meme locale : aucune redirection inter-langue.
+      { source: "/fr/blog/questions-twilio-whatsapp-budget", destination: "/fr/blog/twilio-whatsapp-cadrage-budget-2026", permanent: true },
+      { source: "/fr/blog/questions-whatsapp-business-solution-provider", destination: "/fr/blog/whatsapp-business-solution-provider-choisir", permanent: true },
+      { source: "/fr/blog/questions-whatsapp-team-inbox", destination: "/fr/blog/whatsapp-team-inbox-ia", permanent: true },
+      { source: "/fr/blog/questions-whatsapp-ai-assistant", destination: "/fr/blog/whatsapp-ai-assistant", permanent: true },
     ];
   },
 };
