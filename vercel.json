@@ -2,8 +2,143 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "www.agentic-whatsup.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.agentic-whatsup.com"
+        }
+      ],
       "destination": "https://agentic-whatsup.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-ai-assistant",
+      "destination": "/en/blog/whatsapp-ai-assistant",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-ai-assistant/",
+      "destination": "/en/blog/whatsapp-ai-assistant",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-ai-agent",
+      "destination": "/en/blog/whatsapp-ai-agent-qualification-leads",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-ai-agent/",
+      "destination": "/en/blog/whatsapp-ai-agent-qualification-leads",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-no-code-whatsapp-chatbot",
+      "destination": "/en/blog/how-to-build-whatsapp-chatbot",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-no-code-whatsapp-chatbot/",
+      "destination": "/en/blog/how-to-build-whatsapp-chatbot",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-business-api-2026",
+      "destination": "/en/blog/ai-in-whatsapp-business-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-business-api-2026/",
+      "destination": "/en/blog/ai-in-whatsapp-business-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-business-api-2026",
+      "destination": "/nl/blog/ai-in-whatsapp-business-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-business-api-2026/",
+      "destination": "/nl/blog/ai-in-whatsapp-business-guide-2026",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-marketing-automation",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-marketing-automation/",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/questions-whatsapp-business-solution-provider",
+      "destination": "/de/blog",
+      "permanent": true
+    },
+    {
+      "source": "/de/blog/questions-whatsapp-business-solution-provider/",
+      "destination": "/de/blog",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-twilio-whatsapp-budget",
+      "destination": "/en/blog",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-twilio-whatsapp-budget/",
+      "destination": "/en/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-twilio-whatsapp-budget",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-twilio-whatsapp-budget/",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-business-solution-provider",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-business-solution-provider/",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-business-solution-provider",
+      "destination": "/en/blog",
+      "permanent": true
+    },
+    {
+      "source": "/en/blog/questions-whatsapp-business-solution-provider/",
+      "destination": "/en/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-chatbot-whatsapp-pme",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-chatbot-whatsapp-pme/",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-team-inbox",
+      "destination": "/nl/blog",
+      "permanent": true
+    },
+    {
+      "source": "/nl/blog/questions-whatsapp-team-inbox/",
+      "destination": "/nl/blog",
       "permanent": true
     }
   ],
@@ -11,47 +146,80 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
       ]
     },
     {
       "source": "/_next/static/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/_next/image(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/:path*.(woff|woff2|ttf|otf|eot)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/:path*.(jpg|jpeg|png|gif|svg|webp|avif|ico)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/:path*.(js|css|mjs)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/icon.svg",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
       ]
     }
   ]
