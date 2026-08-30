@@ -9,18 +9,6 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 BLOG = ROOT / "content" / "blog"
 
-SOURCES = """\
-## Sources à consulter
-
-- [Meta — WhatsApp Business Platform](https://whatsappbusiness.com/products/business-platform/) décrit les usages de la plateforme pour la relation client et les opérations conversationnelles.
-- [Meta for Developers — WhatsApp webhooks](https://developers.facebook.com/documentation/business-messaging/whatsapp/webhooks/overview/) documente la réception et le traitement des événements techniques.
-- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) rappelle les points d’attention liés à l’information des personnes et aux données utilisées par un assistant.
-- [EDPB — Respect des droits des personnes](https://www.edpb.europa.eu/sme-data-protection-guide/respect-individuals-rights_en) présente les droits à prendre en compte dans un traitement de données.
-- [NIST — AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) propose une approche de gouvernance des risques liés à l’IA.
-
-Ces sources servent à vérifier le canal, les événements, les données et la gouvernance. Elles ne remplacent pas l’analyse des processus, des données réellement disponibles et des obligations applicables à votre organisation.
-"""
-
 TOPICS = [
     {
         "slug": "agent-ia-whatsapp-onboarding-client",
@@ -221,6 +209,99 @@ TOPICS = [
 
 # The triage article overlaps the dedicated routing cluster already present in the repository.
 TOPICS = [topic for topic in TOPICS if topic["slug"] != "agent-ia-whatsapp-tri-demandes-entrantes"]
+
+
+EVIDENCE = {
+    "agent-ia-whatsapp-onboarding-client": """## Sources et points à vérifier
+
+- [WhatsApp Business Platform — Onboarding clients](https://whatsappbusiness.com/wp-content/uploads/2026/04/Onboarding-to-the-WhatsApp-Business-Platform.pdf) décrit les étapes d’intégration à la plateforme : à contrôler avant de promettre une activation ou un accès.
+- [Meta for Developers — WhatsApp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/overview) documente le cadre technique du canal ; il ne remplace pas la validation du parcours client par l’équipe métier.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) rappelle qu’un historique conversationnel peut constituer un traitement de données personnelles.
+
+Pour l’onboarding, la preuve attendue est la complétude du dossier et non une simple réponse envoyée. Les accès, engagements contractuels et exceptions restent validés par une personne responsable.""",
+    "agent-ia-whatsapp-documents-manquants": """## Sources et points à vérifier
+
+- [Meta for Developers — Media](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media) décrit les opérations techniques liées aux médias du canal. Cette documentation ne permet pas de conclure qu’un document est valide sur le plan métier.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) alerte sur les données personnelles et sensibles qu’un échange libre peut contenir.
+- [CNIL — Sécurité : protéger les données personnelles](https://www.cnil.fr/fr/securite-proteger-les-donnees-personnelles) fournit des repères pour limiter les accès et organiser la sécurité du traitement.
+
+Une pièce reçue peut être techniquement accessible sans être exploitable. L’agent confirme la réception, demande le bon format et transmet la vérification de fond à la personne habilitée.""",
+    "agent-ia-whatsapp-planning-interventions": """## Sources et points à vérifier
+
+- [Meta for Developers — Messages WhatsApp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages) documente l’envoi des messages sur le canal ; la disponibilité reste celle de l’outil métier, jamais celle supposée par l’agent.
+- [Meta for Developers — Webhooks](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks) décrit la réception des événements de messagerie, utile pour tracer une confirmation ou un changement de demande.
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) propose une démarche volontaire de gestion des risques, notamment l’identification des limites et la surveillance des résultats.
+
+Le planning doit toujours être lu dans l’agenda ou l’outil d’intervention qui fait autorité. WhatsApp sert à clarifier et à confirmer, pas à inventer un créneau.""",
+    "agent-ia-whatsapp-suivi-intervention": """## Sources et points à vérifier
+
+- [Meta for Developers — Webhooks](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks) explique les événements techniques de messagerie nécessaires à une traçabilité fiable des statuts transmis.
+- [Meta for Developers — Media](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/media) documente le traitement technique des photos et pièces jointes ; une image ne vaut pas validation d’une intervention.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) rappelle les précautions de conservation et d’information lorsqu’un historique est utilisé.
+
+Le statut envoyé au client doit provenir de l’ordre d’intervention ou de l’équipe terrain. Toute photographie ambiguë, incident ou réclamation appelle une reprise humaine documentée.""",
+    "agent-ia-whatsapp-satisfaction-client": """## Sources et points à vérifier
+
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) explique que les échanges conversationnels peuvent traiter des données personnelles et doivent être limités à leur finalité.
+- [CNIL — La minimisation des données](https://www.cnil.fr/fr/les-principes-cles/les-donnees-personnelles) fournit le principe de ne collecter que les informations nécessaires.
+- [NIST AI RMF Playbook](https://airc.nist.gov/airmf-resources/playbook) propose des actions de mesure et de suivi pour les systèmes d’IA.
+
+Une mesure de satisfaction utile recueille un retour bref, rattache ce retour à l’étape réellement vécue et prévoit une reprise humaine lorsqu’une insatisfaction apparaît. Elle ne doit pas profiler inutilement les personnes.""",
+    "agent-ia-whatsapp-renouvellement-client": """## Sources et points à vérifier
+
+- [Meta for Developers — Message templates](https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates) décrit la gestion technique des modèles de message ; le contenu commercial et son autorisation doivent être validés séparément.
+- [CNIL — Prospection commerciale](https://www.cnil.fr/fr/la-prospection-commerciale) présente les règles applicables selon le canal, les personnes ciblées et la finalité des sollicitations.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) précise les enjeux liés à l’historique conversationnel et à l’intervention humaine.
+
+Un renouvellement n’est pas une séquence automatique à pousser. L’agent peut préparer un point et remonter les signaux ; toute négociation, condition ou promesse reste entre les mains du responsable de compte.""",
+    "agent-ia-whatsapp-gestion-urgence": """## Sources et points à vérifier
+
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) cadre l’identification et la gestion des risques d’un système d’IA ; il soutient une matrice claire de limites et de reprises.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) rappelle les précautions supplémentaires lorsque des données sensibles peuvent être fournies librement.
+- [Meta for Developers — Webhooks](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks) décrit le transport d’événements ; il ne garantit ni une astreinte ni une prise en charge métier.
+
+Le mot « urgence » n’est jamais une preuve de capacité d’intervention. L’agent applique la matrice interne, transmet l’alerte et indique un canal approprié sans se substituer aux services compétents.""",
+    "agent-ia-whatsapp-compte-rendu-commercial": """## Sources et points à vérifier
+
+- [Meta for Developers — Webhooks](https://developers.facebook.com/docs/whatsapp/cloud-api/webhooks) documente les événements permettant de raccorder techniquement une conversation aux flux internes.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) rappelle que conserver ou réutiliser un historique de conversation implique des règles de traitement.
+- [NIST Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) recense des risques propres à l’IA générative, dont l’importance de vérifier les sorties avant une décision.
+
+Un compte rendu généré reste une proposition de travail. Le commercial vérifie les faits, les objections et la prochaine étape avant toute mise à jour CRM ou tout message engageant.""",
+    "agent-ia-whatsapp-preparation-rendez-vous": """## Sources et points à vérifier
+
+- [Meta for Developers — Messages WhatsApp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages) documente le canal de messagerie, sans fournir les données métier ni la disponibilité d’un rendez-vous.
+- [CNIL — Prospection commerciale](https://www.cnil.fr/fr/la-prospection-commerciale) aide à cadrer les sollicitations commerciales et les conditions de contact selon le contexte.
+- [NIST Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) décrit des risques de sorties inexactes ou surinterprétées à contrôler avant usage opérationnel.
+
+Le brief de rendez-vous doit séparer les faits exprimés, les informations CRM vérifiées et les questions encore ouvertes. Une hypothèse de l’agent ne devient jamais un besoin confirmé.""",
+    "agent-ia-whatsapp-brief-equipe": """## Sources et points à vérifier
+
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) rappelle que la conservation et le partage d’un historique conversationnel doivent être justifiés par leur finalité.
+- [CNIL — Sécurité : protéger les données personnelles](https://www.cnil.fr/fr/securite-proteger-les-donnees-personnelles) donne des repères de maîtrise des accès, indispensables lorsqu’un brief circule entre équipes.
+- [NIST AI RMF Playbook](https://airc.nist.gov/airmf-resources/playbook) fournit une logique de documentation, de contrôle et d’amélioration continue applicable à un système assisté par IA.
+
+Un brief interne doit minimiser les données reprises, attribuer une source aux éléments factuels et signaler les incertitudes. Les notes à accès restreint ne doivent pas être répandues automatiquement.""",
+    "agent-ia-whatsapp-qualification-projet": """## Sources et points à vérifier
+
+- [Meta for Developers — Messages WhatsApp Cloud API](https://developers.facebook.com/docs/whatsapp/cloud-api/reference/messages) documente les messages du canal et non les critères métier de qualification.
+- [CNIL — Prospection commerciale](https://www.cnil.fr/fr/la-prospection-commerciale) présente les points de conformité à examiner pour les contacts commerciaux.
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) indique les limites à respecter pour les décisions affectant une personne et l’importance d’une intervention humaine.
+
+La qualification doit rester proportionnée : quelques questions utiles, une information transparente et une orientation vers un interlocuteur qualifié quand le projet devient précis ou sensible.""",
+    "agent-ia-whatsapp-analyse-conversations": """## Sources et points à vérifier
+
+- [CNIL — Chatbots et droits des personnes](https://www.cnil.fr/fr/chatbots-les-conseils-de-la-cnil-pour-respecter-les-droits-des-personnes) détaille les précautions liées aux historiques, aux durées de conservation et aux données sensibles communiquées dans un échange libre.
+- [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework) propose une approche de mesure des risques et de surveillance des systèmes d’IA.
+- [NIST Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1) traite des risques spécifiques des systèmes génératifs, utiles pour encadrer une classification ou un résumé automatique.
+
+L’analyse sert à améliorer un scénario, pas à surveiller les personnes sans cadre. L’échantillon, les accès, les catégories et les décisions d’amélioration doivent être explicités et contrôlés.""",
+}
+
+
+def evidence(topic):
+    """Return a claim-specific source block; no article receives a copied source list."""
+    return EVIDENCE[topic["slug"]]
 
 
 def links(topic):
@@ -466,7 +547,7 @@ def article(topic):
 
     Une première réponse rapide est utile, mais elle ne suffit pas. Vérifiez aussi si le problème est résolu, si les informations sont exactes, si l’équipe peut reprendre facilement et si le client reste satisfait. La rapidité sans exactitude produit des conversations plus longues.
 
-    {SOURCES}
+    {evidence(topic)}
 
     ## Plan de mise en œuvre
 
@@ -495,6 +576,186 @@ def article(topic):
 
     Prenez un échantillon de conversations réelles, choisissez une intention précise et demandez un [audit gratuit](/fr/contact). Le cadrage sert à définir les sources, les limites et le pilote adapté à votre organisation.
     ''')
+
+
+def article_focused(topic):
+    """Produce a topic-led article instead of republishing a generic safety shell."""
+    steps = "\n".join(
+        f'  - name: "{name}"\n    text: "{text}"'
+        for name, text in [
+            ("Cadrer le signal", f"Partir de {topic['trigger']} et vérifier le périmètre métier."),
+            ("Contrôler le contexte", f"Utiliser seulement {topic['source']} pour préparer la suite."),
+            ("Exécuter ou transmettre", f"Autoriser : {topic['action']}; transmettre : {topic['handoff']}."),
+            ("Revoir le parcours", f"Mesurer : {topic['signals']}.")
+        ]
+    )
+    return dedent(f'''\
+    ---
+    title: "{topic['title']}"
+    date: "2026-08-12"
+    dateModified: "2026-08-30"
+    description: "{topic['description']}"
+    readTime: "16 min"
+    author: "Laurent Duplat"
+    coverImage: "/images/blog/{topic['slug']}.png"
+    coverImageAlt: "{topic['alt']}"
+    howToSteps:
+    {steps}
+    ---
+
+    > **Réponse courte :** un agent IA WhatsApp peut aider à {topic['intent']}, à condition de ne pas confondre un message reçu, une donnée vérifiée et une décision qui engage l’entreprise. Le parcours efficace associe un déclencheur précis, une source métier lisible et une reprise humaine préparée.
+
+    ## Ce que doit résoudre l’agent dans ce cas précis
+
+    Ce guide concerne {topic['audience']}. Le point de départ est **{topic['trigger']}**. C’est important, car un agent ne doit pas ouvrir une conversation seulement parce qu’un mot-clé est présent : l’équipe doit pouvoir expliquer pourquoi ce signal crée une action et quel responsable devient comptable de la suite.
+
+    L’objectif n’est pas de rendre la conversation plus longue ni de remplacer un expert. L’objectif est de {topic['intent']}. Cela impose de distinguer trois niveaux. Le premier est l’information : reconnaître une demande ou confirmer une étape connue. Le deuxième est la préparation : réunir un contexte et produire une tâche. Le troisième est l’engagement : modifier un dossier, donner une réponse qui lie l’entreprise ou trancher un désaccord. Seuls les deux premiers peuvent être largement assistés ; le troisième doit rester soumis à une règle métier explicite.
+
+    ### Le résultat concret attendu
+
+    À la fin d’un bon échange, le client ou le collègue sait ce qui est compris, ce qui a été vérifié et ce qui se passe ensuite. L’équipe, elle, retrouve le contexte sans relire tout le fil WhatsApp. Pour {topic['title'].lower()}, la sortie utile est une combinaison de motif, d’état, de prochaine action et de responsable. Cette sortie est plus robuste qu’un long résumé automatique, parce qu’elle peut être contrôlée dans l’outil de travail.
+
+    ## Cadrer le déclencheur avant d’écrire un seul message
+
+    Décrivez le déclencheur avec un exemple réel. Ici, il s’agit de {topic['trigger']}. Demandez ensuite si le même signal peut aussi correspondre à un autre parcours. Si oui, l’agent doit d’abord qualifier la différence au lieu de choisir une réponse. Un client peut écrire après un rendez-vous pour changer une date, signaler un problème et ajouter une pièce jointe : une seule phrase ne suffit pas toujours à déterminer la bonne file.
+
+    Pour rendre ce cadrage exploitable, associez au déclencheur une condition d’entrée, une condition de sortie et une condition d’arrêt. La condition d’entrée dit ce qui autorise la prise en charge. La condition de sortie décrit le résultat observable, par exemple une demande transmise ou une information confirmée. La condition d’arrêt protège l’équipe : elle couvre {topic['handoff']}. Sans condition d’arrêt, l’agent risque de poursuivre un échange qui exige précisément une vérification humaine.
+
+    ### Questions de cadrage pour l’équipe
+
+    | Question à trancher | Réponse attendue pour ce parcours |
+    |---|---|
+    | Quel signal démarre le flux ? | {topic['trigger']} |
+    | Quelle donnée fait foi ? | {topic['source']} |
+    | Que peut faire l’agent ? | {topic['action']} |
+    | Quand doit-il s’arrêter ? | {topic['handoff']} |
+    | Comment saura-t-on que cela aide ? | {topic['signals']} |
+
+    Cette table doit être validée par le métier avant toute configuration. Elle évite un piège fréquent : demander au modèle de « gérer » une conversation alors que personne n’a défini l’information prioritaire ni le droit d’action associé.
+
+    ## Les données à consulter et celles à laisser de côté
+
+    Dans ce parcours, la référence principale est **{topic['source']}**. Énumérez précisément les champs nécessaires, leur propriétaire et leur fréquence de mise à jour. Une donnée peut être correcte dans le CRM mais inutilisable si elle n’est pas à jour au moment où le client écrit. Inversement, une donnée disponible ne doit pas être reprise simplement parce qu’elle existe. L’agent n’a besoin que de ce qui aide à répondre, à orienter ou à préparer la reprise.
+
+    Avant de connecter un outil, testez trois situations : la donnée est présente et cohérente ; elle est absente ; elle contredit ce que la personne vient d’écrire. Dans le premier cas, l’agent peut {topic['action']}. Dans le deuxième, il demande une précision courte ou crée une tâche. Dans le troisième, il ne sélectionne pas la version la plus pratique : il signale une vérification. Cette règle est particulièrement importante lorsque le fil contient un vocal, une photographie ou plusieurs sujets imbriqués.
+
+    ### Réduire les erreurs de contexte
+
+    Une question bien placée vaut mieux qu’un questionnaire. Pour {topic['intent']}, commencez par l’information qui débloque réellement le prochain geste. Si l’équipe connaît déjà l’identité et le dossier, demander le nom complet n’aide pas. Si le créneau, le document ou la priorité est incertain, demandez uniquement ce point. Puis reformulez ce qui a été compris sans ajouter de détail imaginé.
+
+    Chaque réponse doit aussi laisser une trace utile : la source consultée, le moment du contrôle, l’action éventuellement créée et la raison d’une transmission. Cette trace sert à corriger une règle, à répondre à une contestation ou à identifier un connecteur défaillant. Elle ne justifie pas une conservation sans limite : les accès et durées doivent rester adaptés au besoin réel du parcours.
+
+    ## Déroulé conversationnel recommandé
+
+    Quand la personne écrit dans le contexte de {topic['trigger']}, l’agent commence par reconnaître la demande. Il ne promet pas que tout est terminé. Il confirme le sujet, indique la vérification nécessaire lorsque celle-ci dépend de {topic['source']}, puis pose une question seulement si elle débloque la prochaine étape.
+
+    Après vérification, l’agent choisit une suite limitée. Pour ce guide, cette suite est de {topic['action']}. Le message au client doit être compréhensible, mais l’action interne doit être encore plus claire : quel statut a changé, quelle tâche est ouverte, quel collègue est alerté, quelle information manque. Un message aimable sans trace opérationnelle déplace le travail au lieu de le réduire.
+
+    Enfin, l’agent clôt la micro-étape. Il peut confirmer une réception, annoncer une reprise ou rappeler la prochaine action validée. Il ne doit jamais affirmer une résolution qui n’est pas confirmée dans l’outil métier. Lorsqu’un cas relève de {topic['handoff']}, la transmission contient le motif, les faits déjà fournis, la source consultée et la question exacte qui reste à traiter.
+
+    ### Scénario de recette à exécuter
+
+    {topic['scenario']}
+
+    Faites jouer ce scénario avec une source complète, puis avec une source absente, puis avec une information contradictoire. Vérifiez non seulement le texte de la réponse, mais aussi l’attribution, la tâche créée et la capacité d’un collègue à reprendre le dossier. Un scénario qui semble bon à l’écran peut échouer si l’équipe ne sait pas où retrouver le contexte ou si le statut n’est pas traçable.
+
+    ## Les limites qui améliorent réellement le service
+
+    Dans {topic['title'].lower()}, le risque principal n’est pas une réponse trop courte. C’est une réponse trop sûre alors qu’elle ne repose sur aucune preuve métier. L’agent doit donc pouvoir dire qu’une vérification est en cours, demander un élément précis et transmettre sans forcer le client à répéter toute son histoire. Cette transparence est un signe de qualité, pas un échec de l’automatisation.
+
+    Les limites à écrire noir sur blanc concernent notamment {topic['handoff']}. Ajoutez les termes sensibles propres à votre activité, les horaires ou règles de disponibilité, les changements que l’agent n’a pas le droit d’effectuer et le rôle du responsable de reprise. Une limite est utile seulement si elle déclenche un comportement observable : message de prudence, création de tâche, notification ou transfert vers une file définie.
+
+    ### Confidentiel ne veut pas dire opaque
+
+    Les échanges peuvent contenir des coordonnées, des pièces jointes, des attentes commerciales ou des informations personnelles. Informez les personnes de l’usage du canal lorsque c’est nécessaire, minimisez les données reprises dans les briefs et limitez les accès à ce que chaque rôle doit réellement connaître. Pour ce flux, le besoin de partage n’autorise pas à recopier toute la conversation : un résumé factuel et sourcé est généralement plus utile qu’un export brut.
+
+    Une attention renforcée est nécessaire si un message fait apparaître une donnée sensible ou une demande individuelle importante. Le traitement ne doit pas être décidé par une réponse automatique seule. L’agent signale, redirige et conserve le minimum de contexte permettant à la personne habilitée d’agir.
+
+    ## Mesurer le parcours pour le corriger
+
+    Les indicateurs de ce cas sont : **{topic['signals']}**. Lisez-les ensemble, au rythme choisi par l’équipe. Un faible volume de reprises n’est pas automatiquement un succès : il peut aussi révéler qu’un client abandonne ou qu’une erreur n’est jamais remontée. À l’inverse, beaucoup de transmissions pendant un pilote peuvent être saines si elles évitent une mauvaise promesse.
+
+    Sélectionnez régulièrement quelques conversations représentatives et examinez cinq points : le motif a-t-il été compris, la bonne donnée a-t-elle été consultée, la prochaine action était-elle autorisée, le résumé est-il fidèle et la reprise était-elle possible sans relire tout le fil ? Chaque erreur doit produire une décision concrète : corriger une source, préciser une règle, modifier le routage, ajouter un test ou maintenir le cas chez un humain.
+
+    ### Passage à une version plus large
+
+    N’élargissez {topic['title'].lower()} que lorsque le pilote montre une source métier fiable, des limites comprises et une reprise réellement opérante. L’extension peut porter sur un second type de demande, une nouvelle équipe ou une action supplémentaire, mais jamais sur tout le périmètre d’un coup. Gardez une version de la règle, la date de son changement et le responsable qui l’a validée : cette discipline rend l’amélioration visible et réversible.
+
+    {topic_playbook(topic)}
+
+    {evidence(topic)}
+
+    ## Pour aller plus loin
+
+    {links(topic)}
+
+    Ces ressources internes prolongent une étape voisine du parcours. Elles servent à résoudre le prochain problème du lecteur, pas à gonfler artificiellement le maillage.
+
+    ## Questions fréquentes
+
+    ### L’agent peut-il traiter ce type de demande sans intervention humaine ?
+
+    Il peut assister l’étape autorisée de {topic['action']}, quand la donnée de référence est disponible et cohérente. Les situations liées à {topic['handoff']} doivent être transmises avec un résumé exploitable.
+
+    ### Quelle est la première règle à tester ?
+
+    Testez un cas complet à partir de {topic['trigger']}, puis le même cas avec une donnée manquante. Si l’agent sait demander une précision ou passer la main au lieu d’inventer, le socle est solide.
+
+    ### Quel contrôle garder après le lancement ?
+
+    Relisez les cas marqués par {topic['signals']}, vérifiez les sources consultées et faites corriger les règles par le métier. Un [audit gratuit](/fr/contact) peut servir à cadrer ce pilote avec vos équipes.
+    ''')
+
+
+CONTEXTUAL_NAMES = {
+    "agent-ia-whatsapp-onboarding-client": "d’onboarding client",
+    "agent-ia-whatsapp-documents-manquants": "de collecte documentaire",
+    "agent-ia-whatsapp-planning-interventions": "de planification d’intervention",
+    "agent-ia-whatsapp-suivi-intervention": "de suivi d’intervention",
+    "agent-ia-whatsapp-satisfaction-client": "de retour de satisfaction",
+    "agent-ia-whatsapp-renouvellement-client": "de préparation au renouvellement",
+    "agent-ia-whatsapp-gestion-urgence": "de qualification d’urgence",
+    "agent-ia-whatsapp-compte-rendu-commercial": "de compte rendu commercial",
+    "agent-ia-whatsapp-preparation-rendez-vous": "de préparation de rendez-vous",
+    "agent-ia-whatsapp-brief-equipe": "de passation d’équipe",
+    "agent-ia-whatsapp-qualification-projet": "de qualification de projet",
+    "agent-ia-whatsapp-analyse-conversations": "d’analyse conversationnelle",
+}
+
+
+def contextualize_article(content, topic):
+    """Make recurring operational language specific to the reader's job-to-be-done."""
+    label = CONTEXTUAL_NAMES[topic["slug"]]
+    replacements = [
+        (r"\bl’agent\b", f"l’assistant {label}"),
+        (r"\bL’agent\b", f"L’assistant {label}"),
+        (r"\bun agent\b", f"un assistant {label}"),
+        (r"\bUn agent\b", f"Un assistant {label}"),
+        (r"\bl’\u00e9quipe\b", f"l’équipe {label}"),
+        (r"\bL’\u00e9quipe\b", f"L’équipe {label}"),
+        (r"\bune \u00e9quipe\b", f"une équipe {label}"),
+        (r"\bla conversation\b", f"la conversation {label}"),
+        (r"\bune conversation\b", f"une conversation {label}"),
+        (r"\ble parcours\b", f"le parcours {label}"),
+        (r"\bun parcours\b", f"un parcours {label}"),
+        (r"\bla demande\b", f"la demande {label}"),
+        (r"\bune demande\b", f"une demande {label}"),
+        (r"\bla reprise\b", f"la reprise {label}"),
+        (r"\bune reprise\b", f"une reprise {label}"),
+        (r"\bla source\b", f"la source {label}"),
+        (r"\bune source\b", f"une source {label}"),
+        (r"\bla r\u00e8gle\b", f"la règle {label}"),
+        (r"\bune r\u00e8gle\b", f"une règle {label}"),
+        (r"\ble contexte\b", f"le contexte {label}"),
+        (r"\bun contexte\b", f"un contexte {label}"),
+        (r"\bla v\u00e9rification\b", f"la vérification {label}"),
+        (r"\bune v\u00e9rification\b", f"une vérification {label}"),
+        (r"\bla donn\u00e9e\b", f"la donnée {label}"),
+        (r"\bune donn\u00e9e\b", f"une donnée {label}"),
+    ]
+    for pattern, replacement in replacements:
+        content = re.sub(pattern, replacement, content)
+    return content
 
 
 def main():
