@@ -51,10 +51,18 @@ export function proxy(request: Parameters<typeof handleI18nRouting>[0]) {
 
   const response = handleI18nRouting(request);
 
-  // Convert 307 to 308 for permanent redirects
   if (response.status === 307) {
     const location = response.headers.get("location");
     if (location) {
+      // The bare root redirect depends on Accept-Language (fr/de/en, default fr),
+      // so it stays temporary and declares the negotiation header for caches.
+      if (request.nextUrl.pathname === "/") {
+        return NextResponse.redirect(location, {
+          status: 307,
+          headers: { Vary: "Accept-Language" },
+        });
+      }
+      // Convert 307 to 308 for permanent redirects
       return NextResponse.redirect(location, { status: 308 });
     }
   }
