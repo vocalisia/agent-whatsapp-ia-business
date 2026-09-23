@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { notFound } from "next/navigation";
+import CourseSubscribeForm from "@/components/course/CourseSubscribeForm";
 
 const COURSE_URL = "https://agentic-whatsup.com/fr/formation-claude-code";
 const ORDER_BY_WHATSAPP =
@@ -195,6 +196,7 @@ export default async function ClaudeCodeTrainingPage({
   }
 
   const checkoutUrl = getCheckoutUrl();
+  const waitlistEnabled = Boolean(process.env.RESEND_API_KEY && process.env.RESEND_AUDIENCE_ID);
   const purchaseUrl = checkoutUrl ?? ORDER_BY_WHATSAPP;
   const purchaseLabel = checkoutUrl
     ? "S'inscrire à la formation — 297 €"
@@ -397,6 +399,12 @@ export default async function ClaudeCodeTrainingPage({
             </p>
           </aside>
         </section>
+
+        {waitlistEnabled && (
+          <section className="mx-auto max-w-3xl px-5 pb-20 sm:px-8">
+            <CourseSubscribeForm />
+          </section>
+        )}
 
         <section className="border-y border-slate-200 bg-slate-50 py-20 text-slate-900">
           <div className="mx-auto max-w-5xl px-5 sm:px-8">
