@@ -28,53 +28,105 @@ type Module = {
 const modules: Module[] = [
   {
     number: "01",
-    title: "Préparer un terrain de travail propre",
-    outcome: "Vous savez ce qu'une IA peut consulter, modifier ou ne doit jamais voir.",
+    title: "Fondations : installer et cadrer Claude Code",
+    outcome: "Vous partez d'un environnement sain et d'un premier projet utile.",
     description:
-      "Dossier de travail, Git, sauvegardes, secrets, objectifs et critères d'acceptation : le cadre qui évite de confondre vitesse et précipitation.",
+      "Installation, authentification, dossier de travail, Git et critères d'acceptation : les bases pour transformer une idée en livrable contrôlable.",
   },
   {
     number: "02",
-    title: "Installer et démarrer sans prendre de raccourci risqué",
-    outcome: "Vous obtenez votre premier environnement fonctionnel et vérifié.",
+    title: "Permissions et zones de travail",
+    outcome: "Vous savez ce qu'une IA peut consulter, modifier ou ne doit jamais voir.",
     description:
-      "Installation, authentification, diagnostic et lecture des demandes de permission. On apprend à autoriser avec intention, pas à tout contourner.",
+      "Permissions, secrets, sauvegardes et projets de test : accélérer sans normaliser les accès illimités ni exposer vos données.",
   },
   {
     number: "03",
-    title: "Briefer Claude Code comme un responsable opérationnel",
-    outcome: "Vos demandes deviennent testables, délimitées et réutilisables.",
+    title: "Instructions de projet et Skills",
+    outcome: "Vous transformez vos méthodes métier en consignes et capacités réutilisables.",
     description:
-      "Contexte utile, livrable attendu, contraintes, sources fiables et définition du fini : une méthode de brief qui réduit les aller-retours.",
+      "Contexte de projet, brief testable et skills ciblés : moins de conversations répétées, plus de méthodes que votre équipe peut réemployer.",
   },
   {
     number: "04",
-    title: "Faire avancer un projet par petites livraisons",
-    outcome: "Vous transformez une idée en séquence : analyser, planifier, modifier, vérifier.",
+    title: "Automatiser les opérations récurrentes",
+    outcome: "Vous repérez les tâches qui méritent d'être automatisées en premier.",
     description:
-      "Découpage, revue de diff, tests et retour arrière. L'IA accélère l'exécution ; vous gardez la décision et le contrôle qualité.",
+      "Rapports, préparation de contenus, contrôles de fichiers et documentation : choisir un workflow fréquent, réversible et réellement utile.",
   },
   {
     number: "05",
-    title: "Appliquer la méthode à vos opérations",
-    outcome: "Vous identifiez les premières tâches à internaliser sans promettre l'impossible.",
+    title: "Commandes et boucles de contrôle",
+    outcome: "Vous pilotez une séquence : analyser, planifier, modifier, vérifier.",
     description:
-      "Exemples guidés pour documenter un processus, analyser un fichier, préparer un contenu ou améliorer un outil interne, avec validation humaine.",
+      "Découpage, revue de diff, tests et retour arrière : l'IA accélère l'exécution tandis que vous gardez la décision et le contrôle qualité.",
   },
   {
     number: "06",
-    title: "Créer un système qui reste fiable",
-    outcome: "Vous disposez d'une checklist pour déployer, mesurer et maintenir vos workflows.",
+    title: "Acquisition et campagnes Meta",
+    outcome: "Vous préparez des hypothèses de campagne à faire valider avant de dépenser.",
     description:
-      "Journal des décisions, droits minimaux, vérifications avant mise en ligne et points de reprise : votre autonomie ne repose plus sur un prompt isolé.",
+      "Angles, variantes de messages, créas, pages et tableau d'apprentissage : organiser des tests, mesurer et corriger sans déléguer la réflexion.",
+  },
+  {
+    number: "07",
+    title: "SEO, données structurées et visibilité IA",
+    outcome: "Vous mettez en place un système éditorial fondé sur des sources et des contrôles.",
+    description:
+      "Briefs éditoriaux, vérifications techniques, maillage et données structurées : améliorer un contenu utile sans promettre une position ou un trafic fictifs.",
+  },
+  {
+    number: "08",
+    title: "Transformer une expertise en formats vidéo",
+    outcome: "Vous créez une chaîne de production réutilisable, de l'idée à la relecture.",
+    description:
+      "Scripts, découpages, sous-titres et listes de contrôle : accélérer la préparation de formats courts tout en gardant une validation éditoriale humaine.",
+  },
+  {
+    number: "09",
+    title: "Prototyper une offre ou un e-commerce",
+    outcome: "Vous savez cadrer un MVP commercial avant de connecter des paiements ou des données réelles.",
+    description:
+      "Catalogue, pages, parcours et critères de recette : construire une première version, vérifier l'expérience et traiter conformité, paiement et support comme des sujets distincts.",
+  },
+  {
+    number: "10",
+    title: "Ressources et système de mise à jour",
+    outcome: "Vous maintenez vos workflows à mesure que les outils et vos processus changent.",
+    description:
+      "Bibliothèque de modèles, journal des décisions, veille officielle et revue périodique : votre autonomie ne repose plus sur un prompt isolé.",
   },
 ];
 
 const included = [
-  "6 modules progressifs avec exercices d'application",
+  "10 modules progressifs avec exercices d'application",
   "Canevas de brief, checklist de revue et modèles de consignes",
   "Guide de sécurité : secrets, permissions, sauvegardes et validation",
   "Mises à jour du programme pendant la période de lancement",
+];
+
+const delegationFriction = [
+  {
+    task: "Une évolution de site ou d'outil",
+    current: "Un aller-retour, un devis, un délai, puis une nouvelle dépendance pour la moindre correction.",
+    course: "Vous savez cadrer le changement, le faire produire sur un périmètre limité et le vérifier avant de le publier.",
+  },
+  {
+    task: "Une nouvelle campagne ou un nouveau contenu",
+    current: "Il faut réunir stratégie, textes, créas, page et mesure avant même de pouvoir apprendre ce qui fonctionne.",
+    course: "Vous préparez une première version complète et des hypothèses de test que votre équipe ou un expert peut valider.",
+  },
+  {
+    task: "Une opération interne répétitive",
+    current: "Le besoin reste dans une liste de tâches parce qu'il paraît trop petit pour un prestataire et trop technique pour l'équipe.",
+    course: "Vous repérez un workflow réversible, documentez les règles et construisez un premier système de contrôle.",
+  },
+];
+
+const rightForYou = [
+  "Vous dirigez une activité et souhaitez que les petites idées deviennent des livrables, pas des tickets qui s'accumulent.",
+  "Vous travaillez déjà avec des prestataires, mais voulez reprendre les tâches de préparation, de contrôle et d'itération au quotidien.",
+  "Vous n'êtes pas développeur et ne cherchez pas à le devenir : vous voulez piloter, vérifier et décider avec plus d'autonomie.",
 ];
 
 const objections = [
@@ -124,7 +176,7 @@ export async function generateMetadata({
     openGraph: {
       title: "Claude Code en pratique : reprendre la main sur vos workflows IA",
       description:
-        "Six modules pour cadrer, piloter et vérifier des livrables avec Claude Code, avec une méthode centrée sur la sécurité et le contrôle qualité.",
+        "Dix modules pour cadrer, piloter et vérifier des livrables avec Claude Code, avec une méthode centrée sur la sécurité et le contrôle qualité.",
       type: "website",
       url: COURSE_URL,
     },
@@ -186,15 +238,15 @@ export default async function ClaudeCodeTrainingPage({
           <div className="max-w-3xl">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-300/10 px-4 py-2 text-sm font-semibold text-emerald-200">
               <Sparkles size={16} aria-hidden="true" />
-              Formation Claude Code · en français
+              Formation Claude Code · 10 modules · en français
             </p>
             <h1 className="max-w-3xl text-4xl font-black leading-[1.06] tracking-tight text-white sm:text-6xl">
-              Faites avancer vos projets avec Claude Code, sans céder le contrôle de votre entreprise.
+              Internalisez vos projets numériques avec Claude Code, sans céder le contrôle de votre entreprise.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
-              Une méthode opérationnelle pour cadrer une demande, obtenir un livrable vérifiable et
-              décider ce qui peut être automatisé — sans devoir devenir développeur ni donner un accès
-              illimité à vos outils.
+              Du site aux automatisations, de l’acquisition à la production de contenu : une méthode
+              opérationnelle pour cadrer une demande, obtenir un livrable vérifiable et décider ce qui
+              mérite réellement d’être automatisé — sans devenir développeur ni donner un accès illimité à vos outils.
             </p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
@@ -226,7 +278,7 @@ export default async function ClaudeCodeTrainingPage({
         <div className="mx-auto grid max-w-6xl gap-6 px-5 py-8 sm:grid-cols-3 sm:px-8">
           {[
             ["Pour qui", "Dirigeants et indépendants non techniques"],
-            ["Format", "6 modules, exercices et modèles de travail"],
+            ["Format", "10 modules, exercices et modèles de travail"],
             ["Approche", "Périmètre limité, revue humaine, traces utiles"],
           ].map(([label, value]) => (
             <div key={label} className="border-l border-emerald-300/40 pl-4">
@@ -238,6 +290,28 @@ export default async function ClaudeCodeTrainingPage({
       </section>
 
       <div>
+        <section className="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+          <p className="text-sm font-bold uppercase tracking-[0.15em] text-emerald-300">La dépendance qui ralentit tout</p>
+          <h2 className="mt-4 max-w-4xl text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Une idée rentable ne devrait pas attendre une chaîne de devis pour devenir un premier test.
+          </h2>
+          <p className="mt-5 max-w-3xl leading-7 text-slate-300">
+            L’objectif n’est pas d’éliminer les experts. C’est de reprendre les micro-décisions, les premières versions et les contrôles qui immobilisent votre équipe entre deux interventions externes.
+          </p>
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {delegationFriction.map((item) => (
+              <article key={item.task} className="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+                <h3 className="text-lg font-bold text-white">{item.task}</h3>
+                <p className="mt-4 text-sm leading-6 text-slate-400">Aujourd’hui : {item.current}</p>
+                <p className="mt-4 border-t border-slate-800 pt-4 text-sm leading-6 text-emerald-100">Avec la méthode : {item.course}</p>
+              </article>
+            ))}
+          </div>
+          <p className="mt-8 max-w-3xl text-lg font-semibold leading-8 text-white">
+            À 297 €, la formation doit vous rendre capable de livrer et contrôler une première tâche utile — pas de vous promettre une entreprise sans humains.
+          </p>
+        </section>
+
         <section className="mx-auto max-w-4xl px-5 py-20 sm:px-8">
           <p className="text-sm font-bold uppercase tracking-[0.15em] text-emerald-300">Le vrai problème</p>
           <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
@@ -265,7 +339,7 @@ export default async function ClaudeCodeTrainingPage({
           <div className="mx-auto max-w-6xl px-5 sm:px-8">
             <p className="text-sm font-bold uppercase tracking-[0.15em] text-emerald-700">Le programme</p>
             <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-tight sm:text-4xl">
-              Six étapes pour passer de l’intention à un workflow que vous savez contrôler.
+              Dix modules pour passer de l’intention à des projets numériques que vous savez contrôler.
             </h2>
             <div className="mt-12 grid gap-5 md:grid-cols-2">
               {modules.map((module) => (
@@ -322,6 +396,23 @@ export default async function ClaudeCodeTrainingPage({
                 : "Vous recevez les modalités avant toute décision de paiement."}
             </p>
           </aside>
+        </section>
+
+        <section className="border-y border-slate-200 bg-slate-50 py-20 text-slate-900">
+          <div className="mx-auto max-w-5xl px-5 sm:px-8">
+            <p className="text-sm font-bold uppercase tracking-[0.15em] text-emerald-700">Cette formation est faite pour vous si…</p>
+            <h2 className="mt-4 max-w-3xl text-3xl font-extrabold tracking-tight sm:text-4xl">
+               Vous voulez redevenir l’opérateur de vos projets, sans jouer à l’expert dans les domaines qui exigent une vraie expertise.
+            </h2>
+            <ul className="mt-10 grid gap-5 md:grid-cols-3">
+              {rightForYou.map((item) => (
+                <li key={item} className="rounded-2xl border border-slate-200 bg-white p-6 leading-7 text-slate-700 shadow-sm">
+                  <Check className="mb-4 text-emerald-700" size={24} aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section className="border-y border-slate-800 bg-slate-900 py-20">

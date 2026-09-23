@@ -2,7 +2,7 @@
 title: "Claude Code en pratique — guide de production du programme"
 status: "brouillon de formation"
 audience: "Dirigeants et indépendants non techniques"
-format: "6 modules avec exercices, modèles et revue humaine"
+format: "10 modules avec exercices, modèles et revue humaine"
 price: "297 EUR"
 ---
 
@@ -25,9 +25,9 @@ démonstrations originales, testées dans un projet de démonstration ne contena
 La formation ne promet pas que l'IA remplace un développeur, un juriste, un responsable sécurité ou
 une validation humaine. Elle apprend à piloter une contribution de l'IA de façon traçable.
 
-## Module 1 — Préparer un terrain de travail propre
+## Module 1 — Fondations : installer et cadrer Claude Code
 
-**Objectif :** créer un espace de test distinct d'un environnement de production.
+**Objectif :** installer Claude Code dans un espace de test distinct d'un environnement de production.
 
 - Identifier les données, répertoires et services hors périmètre.
 - Créer ou vérifier un dépôt Git et une sauvegarde récupérable.
@@ -37,29 +37,28 @@ une validation humaine. Elle apprend à piloter une contribution de l'IA de faç
 **Exercice :** transformer une demande vague (« améliore mon site ») en une mission limitée comprenant
 une page concernée, un résultat attendu et une méthode de vérification.
 
-**Livrable :** fiche de cadrage d'une page.
+**Livrable :** environnement de démonstration et fiche de cadrage d'une page.
 
-## Module 2 — Installer et démarrer sans raccourci risqué
+## Module 2 — Permissions et zones de travail
 
-**Objectif :** installer et diagnostiquer Claude Code selon la documentation officielle en vigueur.
+**Objectif :** choisir un périmètre de permissions adapté au risque de chaque tâche.
 
-- Vérifier le système, Node.js et le terminal disponibles.
-- Installer puis lancer `claude doctor` pour vérifier l'installation.
-- Comprendre l'authentification et les coûts associés au compte choisi.
 - Lire chaque permission demandée et garder le périmètre minimal.
+- Distinguer environnement de test, outils de production et données confidentielles.
+- Documenter les actions autorisées, les actions interdites et le responsable de validation.
 
 **Point de sécurité :** le programme ne normalise pas le contournement généralisé des permissions.
 Toute option qui les ignore ne peut être étudiée que dans un environnement isolé, sans secrets ni
 données réelles, avec une explication de son impact.
 
-**Exercice :** installer Claude Code dans un dossier de démonstration et établir une liste des actions
+**Exercice :** établir une liste des actions
 autorisées ou interdites pour cet exercice.
 
-**Livrable :** check-list d'environnement.
+**Livrable :** matrice de permissions et check-list d'environnement.
 
-## Module 3 — Écrire un brief opérable
+## Module 3 — Instructions de projet et Skills
 
-**Objectif :** transformer une intention métier en consigne vérifiable.
+**Objectif :** transformer une intention métier en consigne vérifiable et réutilisable.
 
 Le modèle de brief contient :
 
@@ -73,9 +72,22 @@ Le modèle de brief contient :
 **Exercice :** rédiger deux versions d'un même brief, l'une vague et l'autre testable, puis comparer
 les résultats obtenus.
 
-**Livrable :** bibliothèque initiale de trois briefs réutilisables.
+**Livrable :** bibliothèque initiale de trois briefs et d'un skill ciblé.
 
-## Module 4 — Livrer par petites étapes
+## Module 4 — Automatiser les opérations récurrentes
+
+**Objectif :** choisir une tâche fréquente, réversible et mesurable à automatiser en premier.
+
+- Cartographier un processus avant de choisir un outil.
+- Évaluer chaque tâche selon sa fréquence, son impact, ses données et son besoin de validation humaine.
+- Construire un premier workflow de préparation, contrôle ou documentation.
+
+**Exercice :** évaluer cinq tâches et choisir un premier cas d'usage qui peut être testé sans données
+clients ni action irréversible.
+
+**Livrable :** matrice de priorisation et premier workflow documenté.
+
+## Module 5 — Commandes et boucles de contrôle
 
 **Objectif :** installer une boucle fiable : comprendre, proposer, modifier, vérifier.
 
@@ -89,26 +101,57 @@ les résultats obtenus.
 
 **Livrable :** check-list de revue de livraison.
 
-## Module 5 — Sélectionner les premiers cas d'usage
+## Module 6 — Acquisition et campagnes Meta
 
-**Objectif :** choisir une tâche qui vaut l'effort sans dépendre de promesses spectaculaires.
+**Objectif :** produire et évaluer des hypothèses de campagne sans confondre contenu généré et résultat commercial.
 
-Les premiers cas d'usage doivent être fréquents, réversibles, mesurables et peu sensibles. Exemples :
+- Construire un brief d'offre, des angles, des variantes de messages et une matrice de créas.
+- Préparer une page de destination avec critères de validation.
+- Définir l'hypothèse, la mesure et le seuil de décision avant de dépenser.
 
-- structurer une documentation interne ;
-- contrôler la cohérence d'un fichier de contenu ;
-- produire une première version d'une page à faire relire ;
-- analyser un échantillon de données anonymisées ;
-- préparer une liste de contrôles pour une équipe.
+**Exercice :** préparer un plan de test de campagne sans lancer de publicité ni formuler de promesse de performance.
 
-**Exercice :** évaluer cinq tâches selon valeur, risque, réversibilité, données utilisées et besoin de
-validation humaine.
+**Livrable :** dossier de test d'acquisition prêt à faire valider.
 
-**Livrable :** matrice de priorisation des cas d'usage.
+## Module 7 — SEO, données structurées et visibilité IA
 
-## Module 6 — Maintenir un workflow fiable
+**Objectif :** construire un système éditorial qui part de sources et d'intentions réelles.
 
-**Objectif :** ne pas dépendre d'une conversation isolée ou d'un réglage opaque.
+- Définir une cible, une intention, une source de preuve et une réponse utile.
+- Contrôler les bases techniques : structure de page, liens, métadonnées et données structurées pertinentes.
+- Faire relire les affirmations avant publication et mesurer des signaux réels, sans promettre un classement.
+
+**Exercice :** transformer une question client en brief éditorial sourcé, puis préparer sa grille de relecture.
+
+**Livrable :** brief SEO/GEO et check-list de publication.
+
+## Module 8 — Transformer une expertise en formats vidéo
+
+**Objectif :** organiser une chaîne de préparation pour les contenus courts sans automatiser la responsabilité éditoriale.
+
+- Extraire les idées d'une matière source autorisée.
+- Préparer script, découpage, sous-titres, descriptions et listes de contrôle.
+- Prévoir une relecture humaine du fond, de l'image et des droits utilisés.
+
+**Exercice :** décliner une expertise documentée en une série de trois scripts courts.
+
+**Livrable :** kit de production vidéo et grille de validation.
+
+## Module 9 — Prototyper une offre ou un e-commerce
+
+**Objectif :** concevoir un MVP commercial avant de brancher un paiement, des données clients ou une campagne.
+
+- Définir catalogue, pages, parcours, messages transactionnels et support.
+- Distinguer maquette, environnement de recette et environnement de production.
+- Vérifier les obligations de paiement, de confidentialité, de taxes et de service client avec les responsables compétents.
+
+**Exercice :** rédiger les critères de recette d'un parcours d'achat fictif, sans données réelles ni paiement actif.
+
+**Livrable :** cahier de recette d'un MVP commercial.
+
+## Module 10 — Ressources et système de mise à jour
+
+**Objectif :** maintenir les méthodes de travail quand les outils, les permissions et les processus évoluent.
 
 - Documenter les instructions de projet et leurs propriétaires.
 - Réviser les droits et les intégrations à fréquence définie.

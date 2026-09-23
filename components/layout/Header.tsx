@@ -160,6 +160,14 @@ export default function Header() {
               </div>
             )}
           </div>
+          {locale === "fr" && (
+            <Link
+              href="/fr/formation-claude-code"
+              className="text-emerald-300 hover:text-emerald-200 transition-colors text-sm font-semibold"
+            >
+              Formation Claude Code
+            </Link>
+          )}
           {links.map((l) => (
             <Link
               key={l.href}

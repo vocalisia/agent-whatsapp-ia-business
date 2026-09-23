@@ -128,6 +128,15 @@ export default function MobileNav() {
           <nav className="flex-1 overflow-y-auto overscroll-contain px-5 pt-4 pb-8">
             {/* Primary CTAs top */}
             <div className="flex flex-col gap-2.5 mb-5">
+              {locale === "fr" && (
+                <Link
+                  href="/fr/formation-claude-code"
+                  onClick={close}
+                  className="flex items-center justify-center gap-2 border border-emerald-400/50 text-emerald-200 font-semibold px-5 py-3.5 rounded-xl text-[15px]"
+                >
+                  Formation Claude Code
+                </Link>
+              )}
               <Link
                 href={`/${locale}/demo`}
                 onClick={close}
