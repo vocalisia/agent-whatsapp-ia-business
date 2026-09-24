@@ -50,6 +50,17 @@ const nextConfig: NextConfig = {
       { source: "/social", destination: "/fr/social", permanent: true },
       { source: "/agent-commercial-whatsapp", destination: "/fr/agent-commercial-whatsapp", permanent: true },
       { source: "/contact", destination: "/fr/contact", permanent: true },
+      // Former question-format blog slugs still referenced by Google: redirect only to the equivalent live article.
+      { source: "/:locale(fr|en|de|nl)/blog/questions-twilio-whatsapp-budget", destination: "/:locale/blog/twilio-whatsapp-cadrage-budget-2026", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-business-solution-provider", destination: "/:locale/blog/whatsapp-business-solution-provider-choisir", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-team-inbox", destination: "/:locale/blog/whatsapp-team-inbox-ia", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-ai-assistant", destination: "/:locale/blog/whatsapp-ai-assistant", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-no-code-whatsapp-chatbot", destination: "/:locale/blog/no-code-whatsapp-chatbot-guide-2026", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-ai-agent", destination: "/:locale/blog/whatsapp-ai-agent-guide-operations-2026", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-chatbot-whatsapp-pme", destination: "/:locale/blog/chatbot-whatsapp-pme-2026", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-marketing-automation", destination: "/:locale/blog/whatsapp-marketing-automation-playbook-2026", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-business-api-2026", destination: "/:locale/blog/whatsapp-business-api-guide-entreprise-2026", permanent: true },
+      { source: "/:locale(fr|en|de|nl)/blog/questions-whatsapp-shopify-integration", destination: "/:locale/blog/whatsapp-shopify-integration-guide-2026", permanent: true },
       // English/DE/NL legal slug aliases
       { source: "/:locale(en|de|nl)/legal", destination: "/:locale/mentions-legales", permanent: true },
       { source: "/:locale(en|de|nl)/privacy-policy", destination: "/:locale/politique-confidentialite", permanent: true },
